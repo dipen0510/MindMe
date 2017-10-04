@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LoginViewController.h
 //  MindMe
 //
 //  Created by Dipen Sekhsaria on 04/10/17.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface LoginViewController : UIViewController
 
-
+@property (weak, nonatomic) IBOutlet UIButton *joinUsButton;
 @end
-
