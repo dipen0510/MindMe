@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4A019B61F850F0200E311B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019B51F850F0200E311B7 /* main.m */; };
+		D4A019B91F850F0200E311B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019B81F850F0200E311B7 /* AppDelegate.m */; };
+		D4A019BC1F850F0200E311B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019BB1F850F0200E311B7 /* ViewController.m */; };
+		D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A019BD1F850F0200E311B7 /* Main.storyboard */; };
+		D4A019C11F850F0200E311B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4A019C01F850F0200E311B7 /* Assets.xcassets */; };
+		D4A019C41F850F0200E311B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A019C21F850F0200E311B7 /* LaunchScreen.storyboard */; };
+		D4A019CF1F850F0200E311B7 /* MindMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019CE1F850F0200E311B7 /* MindMeTests.m */; };
+		D4A019DA1F850F0200E311B7 /* MindMeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019D91F850F0200E311B7 /* MindMeUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4A019CB1F850F0200E311B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4A019A91F850F0200E311B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4A019B01F850F0200E311B7;
+			remoteInfo = MindMe;
+		};
+		D4A019D61F850F0200E311B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4A019A91F850F0200E311B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4A019B01F850F0200E311B7;
+			remoteInfo = MindMe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D4A019B11F850F0200E311B7 /* MindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A019B51F850F0200E311B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4A019B71F850F0200E311B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D4A019B81F850F0200E311B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D4A019BA1F850F0200E311B7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D4A019BB1F850F0200E311B7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D4A019BE1F850F0200E311B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4A019C01F850F0200E311B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4A019C31F850F0200E311B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4A019C51F850F0200E311B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4A019CA1F850F0200E311B7 /* MindMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A019CE1F850F0200E311B7 /* MindMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MindMeTests.m; sourceTree = "<group>"; };
+		D4A019D01F850F0200E311B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4A019D51F850F0200E311B7 /* MindMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A019D91F850F0200E311B7 /* MindMeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MindMeUITests.m; sourceTree = "<group>"; };
+		D4A019DB1F850F0200E311B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4A019AE1F850F0200E311B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4A019C71F850F0200E311B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4A019D21F850F0200E311B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4A019A81F850F0200E311B7 = {
+			isa = PBXGroup;
+			children = (
+				D4A019B31F850F0200E311B7 /* MindMe */,
+				D4A019CD1F850F0200E311B7 /* MindMeTests */,
+				D4A019D81F850F0200E311B7 /* MindMeUITests */,
+				D4A019B21F850F0200E311B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4A019B21F850F0200E311B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4A019B11F850F0200E311B7 /* MindMe.app */,
+				D4A019CA1F850F0200E311B7 /* MindMeTests.xctest */,
+				D4A019D51F850F0200E311B7 /* MindMeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4A019B31F850F0200E311B7 /* MindMe */ = {
+			isa = PBXGroup;
+			children = (
+				D4A019B71F850F0200E311B7 /* AppDelegate.h */,
+				D4A019B81F850F0200E311B7 /* AppDelegate.m */,
+				D4A019BA1F850F0200E311B7 /* ViewController.h */,
+				D4A019BB1F850F0200E311B7 /* ViewController.m */,
+				D4A019BD1F850F0200E311B7 /* Main.storyboard */,
+				D4A019C01F850F0200E311B7 /* Assets.xcassets */,
+				D4A019C21F850F0200E311B7 /* LaunchScreen.storyboard */,
+				D4A019C51F850F0200E311B7 /* Info.plist */,
+				D4A019B41F850F0200E311B7 /* Supporting Files */,
+			);
+			path = MindMe;
+			sourceTree = "<group>";
+		};
+		D4A019B41F850F0200E311B7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4A019B51F850F0200E311B7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4A019CD1F850F0200E311B7 /* MindMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4A019CE1F850F0200E311B7 /* MindMeTests.m */,
+				D4A019D01F850F0200E311B7 /* Info.plist */,
+			);
+			path = MindMeTests;
+			sourceTree = "<group>";
+		};
+		D4A019D81F850F0200E311B7 /* MindMeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D4A019D91F850F0200E311B7 /* MindMeUITests.m */,
+				D4A019DB1F850F0200E311B7 /* Info.plist */,
+			);
+			path = MindMeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4A019B01F850F0200E311B7 /* MindMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4A019DE1F850F0200E311B7 /* Build configuration list for PBXNativeTarget "MindMe" */;
+			buildPhases = (
+				D4A019AD1F850F0200E311B7 /* Sources */,
+				D4A019AE1F850F0200E311B7 /* Frameworks */,
+				D4A019AF1F850F0200E311B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MindMe;
+			productName = MindMe;
+			productReference = D4A019B11F850F0200E311B7 /* MindMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4A019C91F850F0200E311B7 /* MindMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4A019E11F850F0200E311B7 /* Build configuration list for PBXNativeTarget "MindMeTests" */;
+			buildPhases = (
+				D4A019C61F850F0200E311B7 /* Sources */,
+				D4A019C71F850F0200E311B7 /* Frameworks */,
+				D4A019C81F850F0200E311B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4A019CC1F850F0200E311B7 /* PBXTargetDependency */,
+			);
+			name = MindMeTests;
+			productName = MindMeTests;
+			productReference = D4A019CA1F850F0200E311B7 /* MindMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D4A019D41F850F0200E311B7 /* MindMeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4A019E41F850F0200E311B7 /* Build configuration list for PBXNativeTarget "MindMeUITests" */;
+			buildPhases = (
+				D4A019D11F850F0200E311B7 /* Sources */,
+				D4A019D21F850F0200E311B7 /* Frameworks */,
+				D4A019D31F850F0200E311B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4A019D71F850F0200E311B7 /* PBXTargetDependency */,
+			);
+			name = MindMeUITests;
+			productName = MindMeUITests;
+			productReference = D4A019D51F850F0200E311B7 /* MindMeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4A019A91F850F0200E311B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Stardeep;
+				TargetAttributes = {
+					D4A019B01F850F0200E311B7 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Manual;
+					};
+					D4A019C91F850F0200E311B7 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D4A019B01F850F0200E311B7;
+					};
+					D4A019D41F850F0200E311B7 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D4A019B01F850F0200E311B7;
+					};
+				};
+			};
+			buildConfigurationList = D4A019AC1F850F0200E311B7 /* Build configuration list for PBXProject "MindMe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4A019A81F850F0200E311B7;
+			productRefGroup = D4A019B21F850F0200E311B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4A019B01F850F0200E311B7 /* MindMe */,
+				D4A019C91F850F0200E311B7 /* MindMeTests */,
+				D4A019D41F850F0200E311B7 /* MindMeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4A019AF1F850F0200E311B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A019C41F850F0200E311B7 /* LaunchScreen.storyboard in Resources */,
+				D4A019C11F850F0200E311B7 /* Assets.xcassets in Resources */,
+				D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4A019C81F850F0200E311B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4A019D31F850F0200E311B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4A019AD1F850F0200E311B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A019BC1F850F0200E311B7 /* ViewController.m in Sources */,
+				D4A019B91F850F0200E311B7 /* AppDelegate.m in Sources */,
+				D4A019B61F850F0200E311B7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4A019C61F850F0200E311B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A019CF1F850F0200E311B7 /* MindMeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4A019D11F850F0200E311B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A019DA1F850F0200E311B7 /* MindMeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4A019CC1F850F0200E311B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4A019B01F850F0200E311B7 /* MindMe */;
+			targetProxy = D4A019CB1F850F0200E311B7 /* PBXContainerItemProxy */;
+		};
+		D4A019D71F850F0200E311B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4A019B01F850F0200E311B7 /* MindMe */;
+			targetProxy = D4A019D61F850F0200E311B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4A019BD1F850F0200E311B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4A019BE1F850F0200E311B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4A019C21F850F0200E311B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4A019C31F850F0200E311B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4A019DC1F850F0200E311B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D4A019DD1F850F0200E311B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4A019DF1F850F0200E311B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = MindMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.MindMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		D4A019E01F850F0200E311B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = MindMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.MindMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+		D4A019E21F850F0200E311B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MindMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.MindMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindMe.app/MindMe";
+			};
+			name = Debug;
+		};
+		D4A019E31F850F0200E311B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MindMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.MindMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindMe.app/MindMe";
+			};
+			name = Release;
+		};
+		D4A019E51F850F0200E311B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MindMeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.MindMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MindMe;
+			};
+			name = Debug;
+		};
+		D4A019E61F850F0200E311B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MindMeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.MindMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MindMe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4A019AC1F850F0200E311B7 /* Build configuration list for PBXProject "MindMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4A019DC1F850F0200E311B7 /* Debug */,
+				D4A019DD1F850F0200E311B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4A019DE1F850F0200E311B7 /* Build configuration list for PBXNativeTarget "MindMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4A019DF1F850F0200E311B7 /* Debug */,
+				D4A019E01F850F0200E311B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D4A019E11F850F0200E311B7 /* Build configuration list for PBXNativeTarget "MindMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4A019E21F850F0200E311B7 /* Debug */,
+				D4A019E31F850F0200E311B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D4A019E41F850F0200E311B7 /* Build configuration list for PBXNativeTarget "MindMeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4A019E51F850F0200E311B7 /* Debug */,
+				D4A019E61F850F0200E311B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4A019A91F850F0200E311B7 /* Project object */;
+}
