@@ -16,6 +16,9 @@
 		D4A019DA1F850F0200E311B7 /* MindMeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019D91F850F0200E311B7 /* MindMeUITests.m */; };
 		D4A019E91F85386C00E311B7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019E81F85386C00E311B7 /* LoginViewController.m */; };
 		D4A019EC1F85482800E311B7 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019EB1F85482800E311B7 /* RegisterViewController.m */; };
+		D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AD692A1F93363B009D57A7 /* AdsHomeViewController.m */; };
+		D4AD692F1F933668009D57A7 /* AdsHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */; };
+		D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,11 @@
 		D4A019E81F85386C00E311B7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D4A019EA1F85482800E311B7 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		D4A019EB1F85482800E311B7 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		D4AD69291F93363B009D57A7 /* AdsHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsHomeViewController.h; sourceTree = "<group>"; };
+		D4AD692A1F93363B009D57A7 /* AdsHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsHomeViewController.m; sourceTree = "<group>"; };
+		D4AD692C1F933668009D57A7 /* AdsHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsHomeTableViewCell.h; sourceTree = "<group>"; };
+		D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsHomeTableViewCell.m; sourceTree = "<group>"; };
+		D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdsHomeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,7 @@
 		D4A019B31F850F0200E311B7 /* MindMe */ = {
 			isa = PBXGroup;
 			children = (
+				D4AD69271F9335FA009D57A7 /* Custom Controls */,
 				D4A019B71F850F0200E311B7 /* AppDelegate.h */,
 				D4A019B81F850F0200E311B7 /* AppDelegate.m */,
 				D4A019BD1F850F0200E311B7 /* Main.storyboard */,
@@ -115,6 +124,8 @@
 				D4A019E81F85386C00E311B7 /* LoginViewController.m */,
 				D4A019EA1F85482800E311B7 /* RegisterViewController.h */,
 				D4A019EB1F85482800E311B7 /* RegisterViewController.m */,
+				D4AD69291F93363B009D57A7 /* AdsHomeViewController.h */,
+				D4AD692A1F93363B009D57A7 /* AdsHomeViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -143,6 +154,24 @@
 				D4A019DB1F850F0200E311B7 /* Info.plist */,
 			);
 			path = MindMeUITests;
+			sourceTree = "<group>";
+		};
+		D4AD69271F9335FA009D57A7 /* Custom Controls */ = {
+			isa = PBXGroup;
+			children = (
+				D4AD69281F9335FA009D57A7 /* Cells */,
+			);
+			path = "Custom Controls";
+			sourceTree = "<group>";
+		};
+		D4AD69281F9335FA009D57A7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D4AD692C1F933668009D57A7 /* AdsHomeTableViewCell.h */,
+				D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */,
+				D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4A019C41F850F0200E311B7 /* LaunchScreen.storyboard in Resources */,
+				D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */,
 				D4A019C11F850F0200E311B7 /* Assets.xcassets in Resources */,
 				D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */,
 			);
@@ -279,8 +309,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4A019E91F85386C00E311B7 /* LoginViewController.m in Sources */,
+				D4AD692F1F933668009D57A7 /* AdsHomeTableViewCell.m in Sources */,
 				D4A019B91F850F0200E311B7 /* AppDelegate.m in Sources */,
 				D4A019B61F850F0200E311B7 /* main.m in Sources */,
+				D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */,
 				D4A019EC1F85482800E311B7 /* RegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,6 +555,7 @@
 				D4A019E01F850F0200E311B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4A019E11F850F0200E311B7 /* Build configuration list for PBXNativeTarget "MindMeTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +564,7 @@
 				D4A019E31F850F0200E311B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4A019E41F850F0200E311B7 /* Build configuration list for PBXNativeTarget "MindMeUITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +573,7 @@
 				D4A019E61F850F0200E311B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
