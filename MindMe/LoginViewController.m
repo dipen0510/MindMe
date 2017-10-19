@@ -24,12 +24,6 @@
 
 - (void) setupInitialUI {
     
-    _joinUsButton.layer.cornerRadius = (_joinUsButton.frame.size.height)/2.;
-    _joinUsButton.layer.masksToBounds = YES;
-    _joinUsButton.layer.borderColor = [UIColor whiteColor].CGColor;
-    _joinUsButton.layer.borderWidth = 1.0;
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {

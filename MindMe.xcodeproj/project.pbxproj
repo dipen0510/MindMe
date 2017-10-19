@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D43143C51F98E02B00FE0406 /* VisbyRoundCF-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143BD1F98E02B00FE0406 /* VisbyRoundCF-Medium.otf */; };
+		D43143C61F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143BE1F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf */; };
+		D43143C71F98E02B00FE0406 /* VisbyRoundCF-DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143BF1F98E02B00FE0406 /* VisbyRoundCF-DemiBold.otf */; };
+		D43143C81F98E02B00FE0406 /* VisbyRoundCF-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C01F98E02B00FE0406 /* VisbyRoundCF-Light.otf */; };
+		D43143C91F98E02B00FE0406 /* VisbyRoundCF-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C11F98E02B00FE0406 /* VisbyRoundCF-ExtraBold.otf */; };
+		D43143CA1F98E02B00FE0406 /* VisbyRoundCF-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C21F98E02B00FE0406 /* VisbyRoundCF-ExtraLight.otf */; };
+		D43143CB1F98E02B00FE0406 /* VisbyRoundCF-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C31F98E02B00FE0406 /* VisbyRoundCF-Regular.otf */; };
+		D43143CC1F98E02B00FE0406 /* VisbyRoundCF-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C41F98E02B00FE0406 /* VisbyRoundCF-Bold.otf */; };
 		D4A019B61F850F0200E311B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019B51F850F0200E311B7 /* main.m */; };
 		D4A019B91F850F0200E311B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019B81F850F0200E311B7 /* AppDelegate.m */; };
 		D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A019BD1F850F0200E311B7 /* Main.storyboard */; };
@@ -39,6 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D43143BD1F98E02B00FE0406 /* VisbyRoundCF-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-Medium.otf"; sourceTree = "<group>"; };
+		D43143BE1F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-Heavy.otf"; sourceTree = "<group>"; };
+		D43143BF1F98E02B00FE0406 /* VisbyRoundCF-DemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-DemiBold.otf"; sourceTree = "<group>"; };
+		D43143C01F98E02B00FE0406 /* VisbyRoundCF-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-Light.otf"; sourceTree = "<group>"; };
+		D43143C11F98E02B00FE0406 /* VisbyRoundCF-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-ExtraBold.otf"; sourceTree = "<group>"; };
+		D43143C21F98E02B00FE0406 /* VisbyRoundCF-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-ExtraLight.otf"; sourceTree = "<group>"; };
+		D43143C31F98E02B00FE0406 /* VisbyRoundCF-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-Regular.otf"; sourceTree = "<group>"; };
+		D43143C41F98E02B00FE0406 /* VisbyRoundCF-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-Bold.otf"; sourceTree = "<group>"; };
 		D4A019B11F850F0200E311B7 /* MindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A019B51F850F0200E311B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4A019B71F850F0200E311B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,6 +105,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D43143BC1F98E02B00FE0406 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D43143BD1F98E02B00FE0406 /* VisbyRoundCF-Medium.otf */,
+				D43143BE1F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf */,
+				D43143BF1F98E02B00FE0406 /* VisbyRoundCF-DemiBold.otf */,
+				D43143C01F98E02B00FE0406 /* VisbyRoundCF-Light.otf */,
+				D43143C11F98E02B00FE0406 /* VisbyRoundCF-ExtraBold.otf */,
+				D43143C21F98E02B00FE0406 /* VisbyRoundCF-ExtraLight.otf */,
+				D43143C31F98E02B00FE0406 /* VisbyRoundCF-Regular.otf */,
+				D43143C41F98E02B00FE0406 /* VisbyRoundCF-Bold.otf */,
+			);
+			name = Resources;
+			path = "Custom Controls/Resources";
+			sourceTree = "<group>";
+		};
 		D4A019A81F850F0200E311B7 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +151,7 @@
 				D4A019C01F850F0200E311B7 /* Assets.xcassets */,
 				D4A019C21F850F0200E311B7 /* LaunchScreen.storyboard */,
 				D4A019C51F850F0200E311B7 /* Info.plist */,
+				D43143BC1F98E02B00FE0406 /* Resources */,
 				D4A019B41F850F0200E311B7 /* Supporting Files */,
 				D4A019E71F85386C00E311B7 /* LoginViewController.h */,
 				D4A019E81F85386C00E311B7 /* LoginViewController.m */,
@@ -280,8 +313,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43143C81F98E02B00FE0406 /* VisbyRoundCF-Light.otf in Resources */,
+				D43143CA1F98E02B00FE0406 /* VisbyRoundCF-ExtraLight.otf in Resources */,
+				D43143C51F98E02B00FE0406 /* VisbyRoundCF-Medium.otf in Resources */,
+				D43143C91F98E02B00FE0406 /* VisbyRoundCF-ExtraBold.otf in Resources */,
+				D43143CC1F98E02B00FE0406 /* VisbyRoundCF-Bold.otf in Resources */,
 				D4A019C41F850F0200E311B7 /* LaunchScreen.storyboard in Resources */,
+				D43143CB1F98E02B00FE0406 /* VisbyRoundCF-Regular.otf in Resources */,
 				D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */,
+				D43143C71F98E02B00FE0406 /* VisbyRoundCF-DemiBold.otf in Resources */,
+				D43143C61F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf in Resources */,
 				D4A019C11F850F0200E311B7 /* Assets.xcassets in Resources */,
 				D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */,
 			);

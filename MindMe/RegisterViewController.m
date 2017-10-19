@@ -48,9 +48,9 @@
     
 }
 
-- (IBAction)tncButtonTapped:(id)sender {
+- (IBAction)signInButtonTapped:(id)sender {
     
-    _tncButton.selected = !_tncButton.isSelected;
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 

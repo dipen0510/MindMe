@@ -12,11 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *careGiverButton;
 @property (weak, nonatomic) IBOutlet UIButton *careNeededButton;
-@property (weak, nonatomic) IBOutlet UIButton *tncButton;
 
 
 - (IBAction)careGiverButtonTapped:(id)sender;
 - (IBAction)careNeededButtonTapped:(id)sender;
-- (IBAction)tncButtonTapped:(id)sender;
+- (IBAction)signInButtonTapped:(id)sender;
 
 @end
