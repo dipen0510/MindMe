@@ -17,6 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self setupInitialUI];
+    
+}
+
+- (void) setupInitialUI {
+    
+    _firstNameLabelTopConstraint.constant = (90./568.)*[UIScreen mainScreen].bounds.size.height;
+    
 }
 
 - (void)didReceiveMemoryWarning {

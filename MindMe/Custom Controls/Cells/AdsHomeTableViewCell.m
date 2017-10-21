@@ -18,8 +18,8 @@
     _containerView.layer.masksToBounds = NO;
     _containerView.layer.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.7].CGColor;
     _containerView.layer.shadowOffset = CGSizeMake(0.0f, 1.0f);
-    _containerView.layer.shadowOpacity = 0.15f;
-    _containerView.layer.shadowRadius = 8.0;
+    _containerView.layer.shadowOpacity = 0.4f;
+    _containerView.layer.shadowRadius = 2.0;
     
 }
 
