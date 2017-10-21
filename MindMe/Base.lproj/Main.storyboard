@@ -92,7 +92,7 @@
                                 </constraints>
                                 <state key="normal" image="login_button"/>
                                 <connections>
-                                    <segue destination="Hai-AU-Qxt" kind="show" id="tnE-hI-v1Q"/>
+                                    <segue destination="8Q6-MX-foE" kind="show" id="y07-qH-bre"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCT-31-k05">
@@ -103,7 +103,7 @@
                                 </constraints>
                                 <state key="normal" image="login_fb"/>
                                 <connections>
-                                    <segue destination="Hai-AU-Qxt" kind="show" id="HyM-pp-es1"/>
+                                    <segue destination="8Q6-MX-foE" kind="show" id="IIN-EW-j29"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYa-Ya-Vfa">
@@ -334,7 +334,7 @@
                                 </constraints>
                                 <state key="normal" image="register_button"/>
                                 <connections>
-                                    <segue destination="Hai-AU-Qxt" kind="show" id="4rI-Nj-Hze"/>
+                                    <segue destination="8Q6-MX-foE" kind="show" id="QF0-ZY-AdE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5w-GI-vCA">
@@ -345,7 +345,7 @@
                                 </constraints>
                                 <state key="normal" image="register_fb_button"/>
                                 <connections>
-                                    <segue destination="Hai-AU-Qxt" kind="show" id="8Or-O4-Hqk"/>
+                                    <segue destination="8Q6-MX-foE" kind="show" id="LXc-0C-pYA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a Caregiver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="x16-Aa-ugF">
@@ -532,6 +532,40 @@
             </objects>
             <point key="canvasLocation" x="1039.2" y="35.532233883058474"/>
         </scene>
+        <!--Side Menu Controller-->
+        <scene sceneID="ZkN-AQ-JfL">
+            <objects>
+                <viewController storyboardIdentifier="LGSideMenuController" id="8Q6-MX-foE" customClass="LGSideMenuController" sceneMemberID="viewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="leftViewPresentationStyle">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="leftViewWidth">
+                            <real key="value" value="275"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="leftViewCoverColor">
+                            <color key="value" red="0.159" green="0.28466475009999997" blue="0.38037025930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="rootViewLayerShadowRadius">
+                            <real key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="rootViewLayerShadowColor">
+                            <color key="value" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="rightViewCoverColor">
+                            <color key="value" red="0.159" green="0.28466475009999997" blue="0.38037025930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="image" keyPath="leftViewBackgroundImage" value="imageLeft"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="Hai-AU-Qxt" kind="custom" identifier="root" customClass="LGSideMenuSegue" id="UqU-op-mlY"/>
+                        <segue destination="qVC-Iy-dpG" kind="custom" identifier="left" customClass="LGSideMenuSegue" id="79f-aD-RBU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uIX-wE-XgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3847" y="36"/>
+        </scene>
         <!--Ads Home View Controller-->
         <scene sceneID="1FZ-Pb-5oQ">
             <objects>
@@ -569,6 +603,9 @@
                                             <constraint firstAttribute="height" constant="25" id="M6t-6j-82V"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="ic_menu_bar"/>
+                                        <connections>
+                                            <action selector="menuButtonTapped:" destination="Hai-AU-Qxt" eventType="touchUpInside" id="OQp-NM-1t6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15940248966217041" green="0.28466475009918213" blue="0.38037025928497314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -749,7 +786,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lI4-HV-yas" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3749.5999999999999" y="35.532233883058474"/>
+            <point key="canvasLocation" x="4906" y="36"/>
+        </scene>
+        <!--Side Menu View Controller-->
+        <scene sceneID="ex1-47-QV7">
+            <objects>
+                <viewController id="qVC-Iy-dpG" customClass="SideMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qDg-mM-W8y"/>
+                        <viewControllerLayoutGuide type="bottom" id="rVf-zs-1Tn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fMl-py-37r">
+                        <rect key="frame" x="0.0" y="0.0" width="275" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VFZ-gq-jQs">
+                                <rect key="frame" x="0.0" y="100" width="275" height="467"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qVC-Iy-dpG" id="EK7-mF-WOd"/>
+                                    <outlet property="delegate" destination="qVC-Iy-dpG" id="Fax-7z-Bi3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="VFZ-gq-jQs" firstAttribute="leading" secondItem="fMl-py-37r" secondAttribute="leading" id="79S-gd-qLE"/>
+                            <constraint firstItem="VFZ-gq-jQs" firstAttribute="centerY" secondItem="fMl-py-37r" secondAttribute="centerY" id="JtK-Hv-BqX"/>
+                            <constraint firstItem="rVf-zs-1Tn" firstAttribute="top" secondItem="VFZ-gq-jQs" secondAttribute="bottom" constant="100" id="KR1-X9-6y1"/>
+                            <constraint firstItem="VFZ-gq-jQs" firstAttribute="centerX" secondItem="fMl-py-37r" secondAttribute="centerX" id="oty-xB-T0P"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="275" height="667"/>
+                    <connections>
+                        <outlet property="sideMenuTableView" destination="VFZ-gq-jQs" id="hO2-1N-sM9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Elh-XV-HMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3845.5999999999999" y="796.55172413793105"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0or-Pv-VAk">
@@ -782,6 +857,7 @@
         <image name="ic_menu_bar" width="96" height="96"/>
         <image name="ic_search" width="96" height="96"/>
         <image name="ic_star" width="69" height="69"/>
+        <image name="imageLeft" width="1000" height="1000"/>
         <image name="login_button" width="462" height="155"/>
         <image name="login_fb" width="505" height="184"/>
         <image name="login_page_background" width="1242" height="2208"/>
@@ -792,6 +868,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="jcl-G8-9uc"/>
-        <segue reference="tnE-hI-v1Q"/>
+        <segue reference="y07-qH-bre"/>
     </inferredMetricsTieBreakers>
 </document>

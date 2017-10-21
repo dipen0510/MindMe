@@ -15,6 +15,16 @@
 		D43143CA1F98E02B00FE0406 /* VisbyRoundCF-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C21F98E02B00FE0406 /* VisbyRoundCF-ExtraLight.otf */; };
 		D43143CB1F98E02B00FE0406 /* VisbyRoundCF-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C31F98E02B00FE0406 /* VisbyRoundCF-Regular.otf */; };
 		D43143CC1F98E02B00FE0406 /* VisbyRoundCF-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C41F98E02B00FE0406 /* VisbyRoundCF-Bold.otf */; };
+		D48EE4B31F9B2A2C00CB43A0 /* LGSideMenuHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4AA1F9B2A2C00CB43A0 /* LGSideMenuHelper.m */; };
+		D48EE4B41F9B2A2C00CB43A0 /* LGSideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4AC1F9B2A2C00CB43A0 /* LGSideMenuView.m */; };
+		D48EE4B51F9B2A2C00CB43A0 /* LGSideMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4AD1F9B2A2C00CB43A0 /* LGSideMenuSegue.m */; };
+		D48EE4B61F9B2A2C00CB43A0 /* LGSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4AE1F9B2A2C00CB43A0 /* LGSideMenuController.m */; };
+		D48EE4B71F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4AF1F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.m */; };
+		D48EE4B81F9B2A2C00CB43A0 /* UIViewController+LGSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4B01F9B2A2C00CB43A0 /* UIViewController+LGSideMenuController.m */; };
+		D48EE4B91F9B2A2C00CB43A0 /* LGSideMenuBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4B21F9B2A2C00CB43A0 /* LGSideMenuBorderView.m */; };
+		D48EE4BF1F9B382C00CB43A0 /* SideMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4BD1F9B382C00CB43A0 /* SideMenuTableViewCell.m */; };
+		D48EE4C01F9B382C00CB43A0 /* SideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48EE4BE1F9B382C00CB43A0 /* SideMenuTableViewCell.xib */; };
+		D48EE4C31F9B383C00CB43A0 /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4C21F9B383C00CB43A0 /* SideMenuViewController.m */; };
 		D4A019B61F850F0200E311B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019B51F850F0200E311B7 /* main.m */; };
 		D4A019B91F850F0200E311B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019B81F850F0200E311B7 /* AppDelegate.m */; };
 		D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A019BD1F850F0200E311B7 /* Main.storyboard */; };
@@ -55,6 +65,25 @@
 		D43143C21F98E02B00FE0406 /* VisbyRoundCF-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-ExtraLight.otf"; sourceTree = "<group>"; };
 		D43143C31F98E02B00FE0406 /* VisbyRoundCF-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-Regular.otf"; sourceTree = "<group>"; };
 		D43143C41F98E02B00FE0406 /* VisbyRoundCF-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-Bold.otf"; sourceTree = "<group>"; };
+		D48EE4A51F9B2A2C00CB43A0 /* LGSideMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuSegue.h; sourceTree = "<group>"; };
+		D48EE4A61F9B2A2C00CB43A0 /* LGSideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuView.h; sourceTree = "<group>"; };
+		D48EE4A71F9B2A2C00CB43A0 /* LGSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuController.h; sourceTree = "<group>"; };
+		D48EE4A81F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuGesturesHandler.h; sourceTree = "<group>"; };
+		D48EE4A91F9B2A2C00CB43A0 /* LGSideMenuBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuBorderView.h; sourceTree = "<group>"; };
+		D48EE4AA1F9B2A2C00CB43A0 /* LGSideMenuHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuHelper.m; sourceTree = "<group>"; };
+		D48EE4AB1F9B2A2C00CB43A0 /* UIViewController+LGSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LGSideMenuController.h"; sourceTree = "<group>"; };
+		D48EE4AC1F9B2A2C00CB43A0 /* LGSideMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuView.m; sourceTree = "<group>"; };
+		D48EE4AD1F9B2A2C00CB43A0 /* LGSideMenuSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuSegue.m; sourceTree = "<group>"; };
+		D48EE4AE1F9B2A2C00CB43A0 /* LGSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuController.m; sourceTree = "<group>"; };
+		D48EE4AF1F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuGesturesHandler.m; sourceTree = "<group>"; };
+		D48EE4B01F9B2A2C00CB43A0 /* UIViewController+LGSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LGSideMenuController.m"; sourceTree = "<group>"; };
+		D48EE4B11F9B2A2C00CB43A0 /* LGSideMenuHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuHelper.h; sourceTree = "<group>"; };
+		D48EE4B21F9B2A2C00CB43A0 /* LGSideMenuBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuBorderView.m; sourceTree = "<group>"; };
+		D48EE4BC1F9B382C00CB43A0 /* SideMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuTableViewCell.h; sourceTree = "<group>"; };
+		D48EE4BD1F9B382C00CB43A0 /* SideMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuTableViewCell.m; sourceTree = "<group>"; };
+		D48EE4BE1F9B382C00CB43A0 /* SideMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuTableViewCell.xib; sourceTree = "<group>"; };
+		D48EE4C11F9B383C00CB43A0 /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
+		D48EE4C21F9B383C00CB43A0 /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
 		D4A019B11F850F0200E311B7 /* MindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A019B51F850F0200E311B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4A019B71F850F0200E311B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,8 +146,36 @@
 				D43143C31F98E02B00FE0406 /* VisbyRoundCF-Regular.otf */,
 				D43143C41F98E02B00FE0406 /* VisbyRoundCF-Bold.otf */,
 			);
-			name = Resources;
-			path = "Custom Controls/Resources";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D48EE4A31F9B2A2400CB43A0 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				D48EE4A41F9B2A2C00CB43A0 /* LGSideMenuController */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		D48EE4A41F9B2A2C00CB43A0 /* LGSideMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				D48EE4A51F9B2A2C00CB43A0 /* LGSideMenuSegue.h */,
+				D48EE4A61F9B2A2C00CB43A0 /* LGSideMenuView.h */,
+				D48EE4A71F9B2A2C00CB43A0 /* LGSideMenuController.h */,
+				D48EE4A81F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.h */,
+				D48EE4A91F9B2A2C00CB43A0 /* LGSideMenuBorderView.h */,
+				D48EE4AA1F9B2A2C00CB43A0 /* LGSideMenuHelper.m */,
+				D48EE4AB1F9B2A2C00CB43A0 /* UIViewController+LGSideMenuController.h */,
+				D48EE4AC1F9B2A2C00CB43A0 /* LGSideMenuView.m */,
+				D48EE4AD1F9B2A2C00CB43A0 /* LGSideMenuSegue.m */,
+				D48EE4AE1F9B2A2C00CB43A0 /* LGSideMenuController.m */,
+				D48EE4AF1F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.m */,
+				D48EE4B01F9B2A2C00CB43A0 /* UIViewController+LGSideMenuController.m */,
+				D48EE4B11F9B2A2C00CB43A0 /* LGSideMenuHelper.h */,
+				D48EE4B21F9B2A2C00CB43A0 /* LGSideMenuBorderView.m */,
+			);
+			path = LGSideMenuController;
 			sourceTree = "<group>";
 		};
 		D4A019A81F850F0200E311B7 = {
@@ -151,6 +208,7 @@
 				D4A019C01F850F0200E311B7 /* Assets.xcassets */,
 				D4A019C21F850F0200E311B7 /* LaunchScreen.storyboard */,
 				D4A019C51F850F0200E311B7 /* Info.plist */,
+				D48EE4A31F9B2A2400CB43A0 /* Library */,
 				D43143BC1F98E02B00FE0406 /* Resources */,
 				D4A019B41F850F0200E311B7 /* Supporting Files */,
 				D4A019E71F85386C00E311B7 /* LoginViewController.h */,
@@ -159,6 +217,8 @@
 				D4A019EB1F85482800E311B7 /* RegisterViewController.m */,
 				D4AD69291F93363B009D57A7 /* AdsHomeViewController.h */,
 				D4AD692A1F93363B009D57A7 /* AdsHomeViewController.m */,
+				D48EE4C11F9B383C00CB43A0 /* SideMenuViewController.h */,
+				D48EE4C21F9B383C00CB43A0 /* SideMenuViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -203,6 +263,9 @@
 				D4AD692C1F933668009D57A7 /* AdsHomeTableViewCell.h */,
 				D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */,
 				D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */,
+				D48EE4BC1F9B382C00CB43A0 /* SideMenuTableViewCell.h */,
+				D48EE4BD1F9B382C00CB43A0 /* SideMenuTableViewCell.m */,
+				D48EE4BE1F9B382C00CB43A0 /* SideMenuTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -321,6 +384,7 @@
 				D4A019C41F850F0200E311B7 /* LaunchScreen.storyboard in Resources */,
 				D43143CB1F98E02B00FE0406 /* VisbyRoundCF-Regular.otf in Resources */,
 				D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */,
+				D48EE4C01F9B382C00CB43A0 /* SideMenuTableViewCell.xib in Resources */,
 				D43143C71F98E02B00FE0406 /* VisbyRoundCF-DemiBold.otf in Resources */,
 				D43143C61F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf in Resources */,
 				D4A019C11F850F0200E311B7 /* Assets.xcassets in Resources */,
@@ -349,12 +413,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D48EE4C31F9B383C00CB43A0 /* SideMenuViewController.m in Sources */,
 				D4A019E91F85386C00E311B7 /* LoginViewController.m in Sources */,
+				D48EE4B51F9B2A2C00CB43A0 /* LGSideMenuSegue.m in Sources */,
 				D4AD692F1F933668009D57A7 /* AdsHomeTableViewCell.m in Sources */,
 				D4A019B91F850F0200E311B7 /* AppDelegate.m in Sources */,
+				D48EE4B41F9B2A2C00CB43A0 /* LGSideMenuView.m in Sources */,
 				D4A019B61F850F0200E311B7 /* main.m in Sources */,
+				D48EE4B61F9B2A2C00CB43A0 /* LGSideMenuController.m in Sources */,
 				D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */,
+				D48EE4B91F9B2A2C00CB43A0 /* LGSideMenuBorderView.m in Sources */,
+				D48EE4B31F9B2A2C00CB43A0 /* LGSideMenuHelper.m in Sources */,
+				D48EE4B71F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.m in Sources */,
 				D4A019EC1F85482800E311B7 /* RegisterViewController.m in Sources */,
+				D48EE4B81F9B2A2C00CB43A0 /* UIViewController+LGSideMenuController.m in Sources */,
+				D48EE4BF1F9B382C00CB43A0 /* SideMenuTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

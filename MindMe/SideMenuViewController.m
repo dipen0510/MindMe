@@ -1,23 +1,27 @@
 //
-//  AdsHomeViewController.m
+//  SideMenuViewController.m
 //  MindMe
 //
-//  Created by Dipen Sekhsaria on 15/10/17.
+//  Created by Dipen Sekhsaria on 21/10/17.
 //  Copyright © 2017 Stardeep. All rights reserved.
 //
 
-#import "AdsHomeViewController.h"
-#import "AdsHomeTableViewCell.h"
+#import "SideMenuViewController.h"
+#import "SideMenuTableViewCell.h"
 
-@interface AdsHomeViewController ()
+@interface SideMenuViewController ()
 
 @end
 
-@implementation AdsHomeViewController
+@implementation SideMenuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    menuItemsArray=[[NSArray alloc]initWithObjects:@"Profile", @"My ADs", @"Search", @"Information", @"News", @"Contact", nil];
+    menuImageArray = [[NSArray alloc]initWithObjects:@"ic_avatar",@"my_ads_icon",@"ic_search",@"info_icon",@"news_icon",@"ic_email",nil];
+    
     
 }
 
@@ -37,19 +41,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 5;
+    return menuItemsArray.count;
     
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"AdsHomeTableViewCell";
-    AdsHomeTableViewCell *cell = (AdsHomeTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"SideMenuTableViewCell";
+    SideMenuTableViewCell *cell = (SideMenuTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
         // Load the top-level objects from the custom cell XIB.
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"AdsHomeTableViewCell" owner:self options:nil];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"SideMenuTableViewCell" owner:self options:nil];
         // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
         cell = [topLevelObjects objectAtIndex:0];
     }
@@ -72,18 +76,20 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return 200;
+    return 70;
     
 }
 
 
-- (void) populateContentForAdsCell:(AdsHomeTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
+- (void) populateContentForAdsCell:(SideMenuTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
     
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.backgroundColor = [UIColor clearColor];
+    cell.menuImage.image = [UIImage imageNamed:[menuImageArray objectAtIndex:indexPath.row]];
+    cell.menuTitle.text = [menuItemsArray objectAtIndex:indexPath.row];
     
 }
-
 
 /*
 #pragma mark - Navigation
@@ -95,9 +101,4 @@
 }
 */
 
-- (IBAction)menuButtonTapped:(id)sender {
-    
-    [self.sideMenuController showLeftViewAnimated];
-    
-}
 @end
