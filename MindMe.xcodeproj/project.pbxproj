@@ -25,6 +25,8 @@
 		D48EE4BF1F9B382C00CB43A0 /* SideMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4BD1F9B382C00CB43A0 /* SideMenuTableViewCell.m */; };
 		D48EE4C01F9B382C00CB43A0 /* SideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48EE4BE1F9B382C00CB43A0 /* SideMenuTableViewCell.xib */; };
 		D48EE4C31F9B383C00CB43A0 /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4C21F9B383C00CB43A0 /* SideMenuViewController.m */; };
+		D49BFE871F9C6C39000D6638 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D49BFE861F9C6C39000D6638 /* EditProfileViewController.m */; };
+		D49BFE8B1F9C6F60000D6638 /* SharedClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D49BFE891F9C6F60000D6638 /* SharedClass.m */; };
 		D4A019B61F850F0200E311B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019B51F850F0200E311B7 /* main.m */; };
 		D4A019B91F850F0200E311B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019B81F850F0200E311B7 /* AppDelegate.m */; };
 		D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A019BD1F850F0200E311B7 /* Main.storyboard */; };
@@ -84,6 +86,11 @@
 		D48EE4BE1F9B382C00CB43A0 /* SideMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuTableViewCell.xib; sourceTree = "<group>"; };
 		D48EE4C11F9B383C00CB43A0 /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
 		D48EE4C21F9B383C00CB43A0 /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
+		D49BFE851F9C6C39000D6638 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
+		D49BFE861F9C6C39000D6638 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
+		D49BFE891F9C6F60000D6638 /* SharedClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedClass.m; sourceTree = "<group>"; };
+		D49BFE8A1F9C6F60000D6638 /* SharedClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedClass.h; sourceTree = "<group>"; };
+		D49BFE8C1F9C7143000D6638 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		D4A019B11F850F0200E311B7 /* MindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A019B51F850F0200E311B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4A019B71F850F0200E311B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -178,6 +185,15 @@
 			path = LGSideMenuController;
 			sourceTree = "<group>";
 		};
+		D49BFE881F9C6F60000D6638 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D49BFE8A1F9C6F60000D6638 /* SharedClass.h */,
+				D49BFE891F9C6F60000D6638 /* SharedClass.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		D4A019A81F850F0200E311B7 = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +224,7 @@
 				D4A019C01F850F0200E311B7 /* Assets.xcassets */,
 				D4A019C21F850F0200E311B7 /* LaunchScreen.storyboard */,
 				D4A019C51F850F0200E311B7 /* Info.plist */,
+				D49BFE881F9C6F60000D6638 /* Helpers */,
 				D48EE4A31F9B2A2400CB43A0 /* Library */,
 				D43143BC1F98E02B00FE0406 /* Resources */,
 				D4A019B41F850F0200E311B7 /* Supporting Files */,
@@ -219,6 +236,8 @@
 				D4AD692A1F93363B009D57A7 /* AdsHomeViewController.m */,
 				D48EE4C11F9B383C00CB43A0 /* SideMenuViewController.h */,
 				D48EE4C21F9B383C00CB43A0 /* SideMenuViewController.m */,
+				D49BFE851F9C6C39000D6638 /* EditProfileViewController.h */,
+				D49BFE861F9C6C39000D6638 /* EditProfileViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -227,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				D4A019B51F850F0200E311B7 /* main.m */,
+				D49BFE8C1F9C7143000D6638 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -421,10 +441,12 @@
 				D48EE4B41F9B2A2C00CB43A0 /* LGSideMenuView.m in Sources */,
 				D4A019B61F850F0200E311B7 /* main.m in Sources */,
 				D48EE4B61F9B2A2C00CB43A0 /* LGSideMenuController.m in Sources */,
+				D49BFE8B1F9C6F60000D6638 /* SharedClass.m in Sources */,
 				D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */,
 				D48EE4B91F9B2A2C00CB43A0 /* LGSideMenuBorderView.m in Sources */,
 				D48EE4B31F9B2A2C00CB43A0 /* LGSideMenuHelper.m in Sources */,
 				D48EE4B71F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.m in Sources */,
+				D49BFE871F9C6C39000D6638 /* EditProfileViewController.m in Sources */,
 				D4A019EC1F85482800E311B7 /* RegisterViewController.m in Sources */,
 				D48EE4B81F9B2A2C00CB43A0 /* UIViewController+LGSideMenuController.m in Sources */,
 				D48EE4BF1F9B382C00CB43A0 /* SideMenuTableViewCell.m in Sources */,
@@ -578,6 +600,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Swapnil Harkanth (CZA6DXR72T)";
 				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = MindMe/PrefixHeader.pch;
 				INFOPLIST_FILE = MindMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -594,6 +617,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Swapnil Harkanth (CZA6DXR72T)";
 				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = MindMe/PrefixHeader.pch;
 				INFOPLIST_FILE = MindMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
