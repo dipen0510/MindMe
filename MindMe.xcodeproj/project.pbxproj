@@ -27,6 +27,8 @@
 		D48EE4C31F9B383C00CB43A0 /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4C21F9B383C00CB43A0 /* SideMenuViewController.m */; };
 		D49BFE871F9C6C39000D6638 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D49BFE861F9C6C39000D6638 /* EditProfileViewController.m */; };
 		D49BFE8B1F9C6F60000D6638 /* SharedClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D49BFE891F9C6F60000D6638 /* SharedClass.m */; };
+		D49BFE901F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D49BFE8E1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.m */; };
+		D49BFE911F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D49BFE8F1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.xib */; };
 		D4A019B61F850F0200E311B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019B51F850F0200E311B7 /* main.m */; };
 		D4A019B91F850F0200E311B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019B81F850F0200E311B7 /* AppDelegate.m */; };
 		D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A019BD1F850F0200E311B7 /* Main.storyboard */; };
@@ -91,6 +93,9 @@
 		D49BFE891F9C6F60000D6638 /* SharedClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedClass.m; sourceTree = "<group>"; };
 		D49BFE8A1F9C6F60000D6638 /* SharedClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedClass.h; sourceTree = "<group>"; };
 		D49BFE8C1F9C7143000D6638 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D49BFE8D1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileActivitiesCollectionViewCell.h; sourceTree = "<group>"; };
+		D49BFE8E1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileActivitiesCollectionViewCell.m; sourceTree = "<group>"; };
+		D49BFE8F1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileActivitiesCollectionViewCell.xib; sourceTree = "<group>"; };
 		D4A019B11F850F0200E311B7 /* MindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A019B51F850F0200E311B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4A019B71F850F0200E311B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -286,6 +291,9 @@
 				D48EE4BC1F9B382C00CB43A0 /* SideMenuTableViewCell.h */,
 				D48EE4BD1F9B382C00CB43A0 /* SideMenuTableViewCell.m */,
 				D48EE4BE1F9B382C00CB43A0 /* SideMenuTableViewCell.xib */,
+				D49BFE8D1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.h */,
+				D49BFE8E1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.m */,
+				D49BFE8F1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -397,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D43143C81F98E02B00FE0406 /* VisbyRoundCF-Light.otf in Resources */,
+				D49BFE911F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.xib in Resources */,
 				D43143CA1F98E02B00FE0406 /* VisbyRoundCF-ExtraLight.otf in Resources */,
 				D43143C51F98E02B00FE0406 /* VisbyRoundCF-Medium.otf in Resources */,
 				D43143C91F98E02B00FE0406 /* VisbyRoundCF-ExtraBold.otf in Resources */,
@@ -444,6 +453,7 @@
 				D49BFE8B1F9C6F60000D6638 /* SharedClass.m in Sources */,
 				D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */,
 				D48EE4B91F9B2A2C00CB43A0 /* LGSideMenuBorderView.m in Sources */,
+				D49BFE901F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.m in Sources */,
 				D48EE4B31F9B2A2C00CB43A0 /* LGSideMenuHelper.m in Sources */,
 				D48EE4B71F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.m in Sources */,
 				D49BFE871F9C6C39000D6638 /* EditProfileViewController.m in Sources */,

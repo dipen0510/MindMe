@@ -246,6 +246,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="containerView" destination="gBX-lr-rRz" id="Koo-8X-3lP"/>
+                <outlet property="profileImgView" destination="0G2-n3-lEo" id="vuV-KQ-fvJ"/>
             </connections>
             <point key="canvasLocation" x="35" y="49.5"/>
         </tableViewCell>

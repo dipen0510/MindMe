@@ -7,6 +7,7 @@
 //
 
 #import "EditProfileViewController.h"
+#import "ProfileActivitiesCollectionViewCell.h"
 
 @interface EditProfileViewController ()
 
@@ -32,6 +33,9 @@
     _cancelButton.layer.borderWidth = 1.0;
     _cancelButton.layer.borderColor = _cancelButton.titleLabel.textColor.CGColor;
     
+    [self.activitiesCollectionView registerNib:[UINib nibWithNibName:@"ProfileActivitiesCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileActivitiesCollectionViewCell"];
+    [self.servicesCollectionView registerNib:[UINib nibWithNibName:@"ProfileActivitiesCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileActivitiesCollectionViewCell"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,6 +56,57 @@
 - (IBAction)menuButtonTapped:(id)sender {
     
     [self.sideMenuController showLeftViewAnimated];
+    
+}
+
+#pragma mark - CollectionView Datasource
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return 3;
+    
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"ProfileActivitiesCollectionViewCell";
+    ProfileActivitiesCollectionViewCell *cell = (ProfileActivitiesCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    if (cell == nil) {
+        // Load the top-level objects from the custom cell XIB.
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ProfileActivitiesCollectionViewCell" owner:self options:nil];
+        // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
+        cell = [topLevelObjects objectAtIndex:0];
+    }
+    
+    [self populateContentForCell:cell atIndexPath:indexPath];
+    
+    return cell;
+    
+}
+
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return CGSizeMake(100.,44.);
+    
+}
+
+#pragma mark - CollectionView Delegates
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    
+}
+
+
+#pragma mark - Populate Content
+
+- (void) populateContentForCell:(ProfileActivitiesCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
+    
+    
     
 }
 

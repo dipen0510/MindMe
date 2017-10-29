@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditProfileViewController : UIViewController
+@interface EditProfileViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UICollectionView *activitiesCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *servicesCollectionView;
 
 - (IBAction)menuButtonTapped:(id)sender;
 

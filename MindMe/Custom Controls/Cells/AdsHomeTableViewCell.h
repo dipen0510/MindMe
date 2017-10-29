@@ -11,5 +11,6 @@
 @interface AdsHomeTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImgView;
 
 @end
