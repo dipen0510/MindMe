@@ -29,6 +29,8 @@
 		D49BFE8B1F9C6F60000D6638 /* SharedClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D49BFE891F9C6F60000D6638 /* SharedClass.m */; };
 		D49BFE901F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D49BFE8E1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.m */; };
 		D49BFE911F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D49BFE8F1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.xib */; };
+		D49D78CF1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D49D78CD1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.m */; };
+		D49D78D01FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D49D78CE1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.xib */; };
 		D4A019B61F850F0200E311B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019B51F850F0200E311B7 /* main.m */; };
 		D4A019B91F850F0200E311B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019B81F850F0200E311B7 /* AppDelegate.m */; };
 		D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A019BD1F850F0200E311B7 /* Main.storyboard */; };
@@ -96,6 +98,9 @@
 		D49BFE8D1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileActivitiesCollectionViewCell.h; sourceTree = "<group>"; };
 		D49BFE8E1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileActivitiesCollectionViewCell.m; sourceTree = "<group>"; };
 		D49BFE8F1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileActivitiesCollectionViewCell.xib; sourceTree = "<group>"; };
+		D49D78CC1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileAvailabilityCollectionViewCell.h; sourceTree = "<group>"; };
+		D49D78CD1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileAvailabilityCollectionViewCell.m; sourceTree = "<group>"; };
+		D49D78CE1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileAvailabilityCollectionViewCell.xib; sourceTree = "<group>"; };
 		D4A019B11F850F0200E311B7 /* MindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A019B51F850F0200E311B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4A019B71F850F0200E311B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -294,6 +299,9 @@
 				D49BFE8D1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.h */,
 				D49BFE8E1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.m */,
 				D49BFE8F1F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.xib */,
+				D49D78CC1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.h */,
+				D49D78CD1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.m */,
+				D49D78CE1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -409,6 +417,7 @@
 				D43143CA1F98E02B00FE0406 /* VisbyRoundCF-ExtraLight.otf in Resources */,
 				D43143C51F98E02B00FE0406 /* VisbyRoundCF-Medium.otf in Resources */,
 				D43143C91F98E02B00FE0406 /* VisbyRoundCF-ExtraBold.otf in Resources */,
+				D49D78D01FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.xib in Resources */,
 				D43143CC1F98E02B00FE0406 /* VisbyRoundCF-Bold.otf in Resources */,
 				D4A019C41F850F0200E311B7 /* LaunchScreen.storyboard in Resources */,
 				D43143CB1F98E02B00FE0406 /* VisbyRoundCF-Regular.otf in Resources */,
@@ -446,6 +455,7 @@
 				D4A019E91F85386C00E311B7 /* LoginViewController.m in Sources */,
 				D48EE4B51F9B2A2C00CB43A0 /* LGSideMenuSegue.m in Sources */,
 				D4AD692F1F933668009D57A7 /* AdsHomeTableViewCell.m in Sources */,
+				D49D78CF1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.m in Sources */,
 				D4A019B91F850F0200E311B7 /* AppDelegate.m in Sources */,
 				D48EE4B41F9B2A2C00CB43A0 /* LGSideMenuView.m in Sources */,
 				D4A019B61F850F0200E311B7 /* main.m in Sources */,
