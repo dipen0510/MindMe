@@ -39,7 +39,9 @@
     [self.servicesCollectionView registerNib:[UINib nibWithNibName:@"ProfileActivitiesCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileActivitiesCollectionViewCell"];
     [self.availabilityCollectionView registerNib:[UINib nibWithNibName:@"ProfileAvailabilityCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileAvailabilityCollectionViewCell"];
     
-    [_contentScrollView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)]];
+    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    tapGesture.cancelsTouchesInView = NO;
+    [_contentScrollView addGestureRecognizer:tapGesture];
     
 }
 
@@ -129,14 +131,27 @@
     if (collectionView == _availabilityCollectionView) {
         
         if (indexPath.row%8 == 0) {
-            return CGSizeMake(90.,collectionView.frame.size.height/6.);
+            return CGSizeMake(75.,collectionView.frame.size.height/6.);
         }
         
-        return CGSizeMake((collectionView.frame.size.width - 90.)/7.,collectionView.frame.size.height/6.);
+        return CGSizeMake((((345./375.)*[UIScreen mainScreen].bounds.size.width) - 75.)/7.,collectionView.frame.size.height/6.);
     }
     
     return CGSizeMake(100.,44.);
     
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(0, 0, 0, 0); // top, left, bottom, right
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    
+    return 0.0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 0.0;
 }
 
 #pragma mark - CollectionView Delegates

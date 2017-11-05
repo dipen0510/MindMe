@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImgView;
+@property (weak, nonatomic) IBOutlet UIImageView *drivingLicenseImgView;
 
 @end

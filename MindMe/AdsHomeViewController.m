@@ -8,8 +8,11 @@
 
 #import "AdsHomeViewController.h"
 #import "AdsHomeTableViewCell.h"
+#import "DrivingLicenseInfoViewController.h"
 
-@interface AdsHomeViewController ()
+@interface AdsHomeViewController () {
+    DrivingLicenseInfoViewController *drivingInfoViewController;
+}
 
 @end
 
@@ -82,6 +85,9 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
+    cell.drivingLicenseImgView.userInteractionEnabled = YES;
+    [cell.drivingLicenseImgView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(drivingLicenseImgViewTapped)]];
+    
 }
 
 
@@ -100,4 +106,17 @@
     [self.sideMenuController showLeftViewAnimated];
     
 }
+
+#pragma mark - Driving License Info Helpers
+
+- (void) drivingLicenseImgViewTapped {
+    
+    drivingInfoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DrivingLicenseInfoViewController"];
+    drivingInfoViewController.view.frame = self.view.bounds;
+    [self.view addSubview:drivingInfoViewController.view];
+    
+}
+
+
+
 @end
