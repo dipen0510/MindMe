@@ -81,6 +81,11 @@
         [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
         
     }
+    else if (indexPath.row == 5) {
+        
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ContactUsViewController" forSideMenuController:self.sideMenuController];
+        
+    }
     
     
     

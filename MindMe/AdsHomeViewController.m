@@ -70,6 +70,8 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    [self performSegueWithIdentifier:@"showAdsDetailSegue" sender:nil];
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
