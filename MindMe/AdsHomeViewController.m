@@ -9,9 +9,12 @@
 #import "AdsHomeViewController.h"
 #import "AdsHomeTableViewCell.h"
 #import "DrivingLicenseInfoViewController.h"
+#import "FilterViewController.h"
 
 @interface AdsHomeViewController () {
     DrivingLicenseInfoViewController *drivingInfoViewController;
+    FilterViewController* filterViewController;
+    UIView* blackBgView;
 }
 
 @end
@@ -106,6 +109,32 @@
 - (IBAction)menuButtonTapped:(id)sender {
     
     [self.sideMenuController showLeftViewAnimated];
+    
+}
+
+- (IBAction)filterButtonTapped:(id)sender {
+    
+    filterViewController = [[FilterViewController alloc] init];
+    filterViewController.view.frame = CGRectMake(20, 100, [UIScreen mainScreen].bounds.size.width - 40, [UIScreen mainScreen].bounds.size.height - 140);
+    [filterViewController.applyButton addTarget:self action:@selector(closeFilterView) forControlEvents:UIControlEventTouchUpInside];
+    
+    blackBgView = [[UIView alloc] initWithFrame:self.view.frame];
+    blackBgView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.7];
+    blackBgView.userInteractionEnabled = YES;
+    [blackBgView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeFilterView)]];
+    
+    [self addChildViewController:filterViewController];
+    [filterViewController didMoveToParentViewController:self];
+    
+    [self.view addSubview:blackBgView];
+    [self.view addSubview:filterViewController.view];
+    
+}
+
+- (void) closeFilterView {
+    
+    [filterViewController.view removeFromSuperview];
+    [blackBgView removeFromSuperview];
     
 }
 

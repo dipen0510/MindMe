@@ -15,4 +15,7 @@
     // Initialization code
 }
 
+- (IBAction)availabilityButtonTapped:(id)sender {
+    _availabilityButton.selected = !_availabilityButton.isSelected;
+}
 @end

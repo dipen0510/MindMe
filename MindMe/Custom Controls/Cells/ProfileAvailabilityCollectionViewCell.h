@@ -11,5 +11,7 @@
 @interface ProfileAvailabilityCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *availabilityLabel;
+@property (weak, nonatomic) IBOutlet UIButton *availabilityButton;
+- (IBAction)availabilityButtonTapped:(id)sender;
 
 @end

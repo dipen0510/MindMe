@@ -11,5 +11,6 @@
 @interface AdsHomeViewController : UIViewController
 
 - (IBAction)menuButtonTapped:(id)sender;
+- (IBAction)filterButtonTapped:(id)sender;
 
 @end

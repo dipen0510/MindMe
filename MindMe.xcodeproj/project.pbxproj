@@ -11,6 +11,11 @@
 		D415586F1FB42E6B0031E23F /* tmpAdsHome.png in Resources */ = {isa = PBXBuildFile; fileRef = D415586E1FB42E6B0031E23F /* tmpAdsHome.png */; };
 		D41558721FB461A60031E23F /* AdsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41558711FB461A60031E23F /* AdsDetailViewController.m */; };
 		D41558751FB4E9590031E23F /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41558741FB4E9590031E23F /* ChangePasswordViewController.m */; };
+		D420BFE01FB5CD7A0071E30A /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D420BFDE1FB5CD7A0071E30A /* FilterViewController.m */; };
+		D420BFE11FB5CD7A0071E30A /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D420BFDF1FB5CD7A0071E30A /* FilterViewController.xib */; };
+		D420BFE61FB817F50071E30A /* TTRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D420BFE41FB817F50071E30A /* TTRangeSlider.m */; };
+		D420BFEA1FB82DD60071E30A /* FilterMiscTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D420BFE81FB82DD60071E30A /* FilterMiscTableViewCell.m */; };
+		D420BFEB1FB82DD60071E30A /* FilterMiscTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D420BFE91FB82DD60071E30A /* FilterMiscTableViewCell.xib */; };
 		D43143C51F98E02B00FE0406 /* VisbyRoundCF-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143BD1F98E02B00FE0406 /* VisbyRoundCF-Medium.otf */; };
 		D43143C61F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143BE1F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf */; };
 		D43143C71F98E02B00FE0406 /* VisbyRoundCF-DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143BF1F98E02B00FE0406 /* VisbyRoundCF-DemiBold.otf */; };
@@ -75,6 +80,15 @@
 		D41558711FB461A60031E23F /* AdsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsDetailViewController.m; sourceTree = "<group>"; };
 		D41558731FB4E9590031E23F /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
 		D41558741FB4E9590031E23F /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		D420BFDD1FB5CD7A0071E30A /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
+		D420BFDE1FB5CD7A0071E30A /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
+		D420BFDF1FB5CD7A0071E30A /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
+		D420BFE31FB817F50071E30A /* TTRangeSliderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRangeSliderDelegate.h; sourceTree = "<group>"; };
+		D420BFE41FB817F50071E30A /* TTRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRangeSlider.m; sourceTree = "<group>"; };
+		D420BFE51FB817F50071E30A /* TTRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRangeSlider.h; sourceTree = "<group>"; };
+		D420BFE71FB82DD60071E30A /* FilterMiscTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterMiscTableViewCell.h; sourceTree = "<group>"; };
+		D420BFE81FB82DD60071E30A /* FilterMiscTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterMiscTableViewCell.m; sourceTree = "<group>"; };
+		D420BFE91FB82DD60071E30A /* FilterMiscTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterMiscTableViewCell.xib; sourceTree = "<group>"; };
 		D43143BD1F98E02B00FE0406 /* VisbyRoundCF-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-Medium.otf"; sourceTree = "<group>"; };
 		D43143BE1F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-Heavy.otf"; sourceTree = "<group>"; };
 		D43143BF1F98E02B00FE0406 /* VisbyRoundCF-DemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-DemiBold.otf"; sourceTree = "<group>"; };
@@ -165,6 +179,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D420BFE21FB817F50071E30A /* TTRangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				D420BFE31FB817F50071E30A /* TTRangeSliderDelegate.h */,
+				D420BFE41FB817F50071E30A /* TTRangeSlider.m */,
+				D420BFE51FB817F50071E30A /* TTRangeSlider.h */,
+			);
+			name = TTRangeSlider;
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		D43143BC1F98E02B00FE0406 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +209,7 @@
 		D48EE4A31F9B2A2400CB43A0 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D420BFE21FB817F50071E30A /* TTRangeSlider */,
 				D48EE4A41F9B2A2C00CB43A0 /* LGSideMenuController */,
 			);
 			path = Library;
@@ -306,6 +332,9 @@
 			isa = PBXGroup;
 			children = (
 				D4AD69281F9335FA009D57A7 /* Cells */,
+				D420BFDD1FB5CD7A0071E30A /* FilterViewController.h */,
+				D420BFDE1FB5CD7A0071E30A /* FilterViewController.m */,
+				D420BFDF1FB5CD7A0071E30A /* FilterViewController.xib */,
 			);
 			path = "Custom Controls";
 			sourceTree = "<group>";
@@ -325,6 +354,9 @@
 				D49D78CC1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.h */,
 				D49D78CD1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.m */,
 				D49D78CE1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.xib */,
+				D420BFE71FB82DD60071E30A /* FilterMiscTableViewCell.h */,
+				D420BFE81FB82DD60071E30A /* FilterMiscTableViewCell.m */,
+				D420BFE91FB82DD60071E30A /* FilterMiscTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -445,12 +477,14 @@
 				D43143CC1F98E02B00FE0406 /* VisbyRoundCF-Bold.otf in Resources */,
 				D4A019C41F850F0200E311B7 /* LaunchScreen.storyboard in Resources */,
 				D43143CB1F98E02B00FE0406 /* VisbyRoundCF-Regular.otf in Resources */,
+				D420BFE11FB5CD7A0071E30A /* FilterViewController.xib in Resources */,
 				D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */,
 				D48EE4C01F9B382C00CB43A0 /* SideMenuTableViewCell.xib in Resources */,
 				D43143C71F98E02B00FE0406 /* VisbyRoundCF-DemiBold.otf in Resources */,
 				D43143C61F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf in Resources */,
 				D4A019C11F850F0200E311B7 /* Assets.xcassets in Resources */,
 				D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */,
+				D420BFEB1FB82DD60071E30A /* FilterMiscTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +517,7 @@
 				D4AD692F1F933668009D57A7 /* AdsHomeTableViewCell.m in Sources */,
 				D49D78CF1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.m in Sources */,
 				D4A019B91F850F0200E311B7 /* AppDelegate.m in Sources */,
+				D420BFE61FB817F50071E30A /* TTRangeSlider.m in Sources */,
 				D48EE4B41F9B2A2C00CB43A0 /* LGSideMenuView.m in Sources */,
 				D4A019B61F850F0200E311B7 /* main.m in Sources */,
 				D48EE4B61F9B2A2C00CB43A0 /* LGSideMenuController.m in Sources */,
@@ -495,8 +530,10 @@
 				D48EE4B71F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.m in Sources */,
 				D41558751FB4E9590031E23F /* ChangePasswordViewController.m in Sources */,
 				D49BFE871F9C6C39000D6638 /* EditProfileViewController.m in Sources */,
+				D420BFEA1FB82DD60071E30A /* FilterMiscTableViewCell.m in Sources */,
 				D4A019EC1F85482800E311B7 /* RegisterViewController.m in Sources */,
 				D48EE4B81F9B2A2C00CB43A0 /* UIViewController+LGSideMenuController.m in Sources */,
+				D420BFE01FB5CD7A0071E30A /* FilterViewController.m in Sources */,
 				D48EE4BF1F9B382C00CB43A0 /* SideMenuTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
