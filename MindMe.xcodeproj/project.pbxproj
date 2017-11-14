@@ -25,6 +25,9 @@
 		D43143CB1F98E02B00FE0406 /* VisbyRoundCF-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C31F98E02B00FE0406 /* VisbyRoundCF-Regular.otf */; };
 		D43143CC1F98E02B00FE0406 /* VisbyRoundCF-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C41F98E02B00FE0406 /* VisbyRoundCF-Bold.otf */; };
 		D43EE8CE1FB30AF100BE7E08 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43EE8CD1FB30AF100BE7E08 /* ContactUsViewController.m */; };
+		D4736B4C1FBB05B7004A51A2 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B4B1FBB05B7004A51A2 /* TTTAttributedLabel.m */; };
+		D4736B4F1FBB0B2A004A51A2 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B4E1FBB0B2A004A51A2 /* PrivacyPolicyViewController.m */; };
+		D4736B521FBB1015004A51A2 /* TnCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B511FBB1015004A51A2 /* TnCViewController.m */; };
 		D48EE4B31F9B2A2C00CB43A0 /* LGSideMenuHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4AA1F9B2A2C00CB43A0 /* LGSideMenuHelper.m */; };
 		D48EE4B41F9B2A2C00CB43A0 /* LGSideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4AC1F9B2A2C00CB43A0 /* LGSideMenuView.m */; };
 		D48EE4B51F9B2A2C00CB43A0 /* LGSideMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4AD1F9B2A2C00CB43A0 /* LGSideMenuSegue.m */; };
@@ -99,6 +102,12 @@
 		D43143C41F98E02B00FE0406 /* VisbyRoundCF-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-Bold.otf"; sourceTree = "<group>"; };
 		D43EE8CC1FB30AF100BE7E08 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
 		D43EE8CD1FB30AF100BE7E08 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
+		D4736B4A1FBB05B7004A51A2 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		D4736B4B1FBB05B7004A51A2 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		D4736B4D1FBB0B2A004A51A2 /* PrivacyPolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicyViewController.h; sourceTree = "<group>"; };
+		D4736B4E1FBB0B2A004A51A2 /* PrivacyPolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyPolicyViewController.m; sourceTree = "<group>"; };
+		D4736B501FBB1015004A51A2 /* TnCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TnCViewController.h; sourceTree = "<group>"; };
+		D4736B511FBB1015004A51A2 /* TnCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TnCViewController.m; sourceTree = "<group>"; };
 		D48EE4A51F9B2A2C00CB43A0 /* LGSideMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuSegue.h; sourceTree = "<group>"; };
 		D48EE4A61F9B2A2C00CB43A0 /* LGSideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuView.h; sourceTree = "<group>"; };
 		D48EE4A71F9B2A2C00CB43A0 /* LGSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuController.h; sourceTree = "<group>"; };
@@ -206,9 +215,20 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D4736B491FBB05B7004A51A2 /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				D4736B4A1FBB05B7004A51A2 /* TTTAttributedLabel.h */,
+				D4736B4B1FBB05B7004A51A2 /* TTTAttributedLabel.m */,
+			);
+			name = TTTAttributedLabel;
+			path = ../TTTAttributedLabel;
+			sourceTree = "<group>";
+		};
 		D48EE4A31F9B2A2400CB43A0 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D4736B491FBB05B7004A51A2 /* TTTAttributedLabel */,
 				D420BFE21FB817F50071E30A /* TTRangeSlider */,
 				D48EE4A41F9B2A2C00CB43A0 /* LGSideMenuController */,
 			);
@@ -297,6 +317,10 @@
 				D40CDD6E1FAEE89100213855 /* DrivingLicenseInfoViewController.m */,
 				D43EE8CC1FB30AF100BE7E08 /* ContactUsViewController.h */,
 				D43EE8CD1FB30AF100BE7E08 /* ContactUsViewController.m */,
+				D4736B4D1FBB0B2A004A51A2 /* PrivacyPolicyViewController.h */,
+				D4736B4E1FBB0B2A004A51A2 /* PrivacyPolicyViewController.m */,
+				D4736B501FBB1015004A51A2 /* TnCViewController.h */,
+				D4736B511FBB1015004A51A2 /* TnCViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -526,7 +550,10 @@
 				D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */,
 				D48EE4B91F9B2A2C00CB43A0 /* LGSideMenuBorderView.m in Sources */,
 				D49BFE901F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.m in Sources */,
+				D4736B4F1FBB0B2A004A51A2 /* PrivacyPolicyViewController.m in Sources */,
+				D4736B4C1FBB05B7004A51A2 /* TTTAttributedLabel.m in Sources */,
 				D48EE4B31F9B2A2C00CB43A0 /* LGSideMenuHelper.m in Sources */,
+				D4736B521FBB1015004A51A2 /* TnCViewController.m in Sources */,
 				D48EE4B71F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.m in Sources */,
 				D41558751FB4E9590031E23F /* ChangePasswordViewController.m in Sources */,
 				D49BFE871F9C6C39000D6638 /* EditProfileViewController.m in Sources */,

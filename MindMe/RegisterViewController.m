@@ -26,6 +26,12 @@
     
     _firstNameLabelTopConstraint.constant = (90./568.)*[UIScreen mainScreen].bounds.size.height;
     
+    NSRange range = [self.legalLabel.text rangeOfString:NSLocalizedString(@"Terms of Services", nil)];
+    [self.legalLabel addLinkToURL:[NSURL URLWithString:@"action://ToS"] withRange:range];
+    NSRange range1 = [self.legalLabel.text rangeOfString:NSLocalizedString(@"Privacy Policy", nil)];
+    [self.legalLabel addLinkToURL:[NSURL URLWithString:@"action://PP"] withRange:range1];
+    self.legalLabel.delegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,4 +74,26 @@
     [self.view endEditing:YES];
     
 }
+
+#pragma mark - TTTAttributedLabel Delegate
+
+- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url {
+    
+    if ([[url scheme] hasPrefix:@"action"]) {
+        
+        if ([[url host] hasPrefix:@"ToS"]) {
+            
+            NSLog(@"ToS");
+            [self performSegueWithIdentifier:@"showToSSegue" sender:nil];
+            
+        } else if ([[url host] hasPrefix:@"PP"]) {
+            
+            NSLog(@"PP");
+            [self performSegueWithIdentifier:@"showPrivacySegue" sender:nil];
+            
+        }
+        
+    }
+}
+
 @end

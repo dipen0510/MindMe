@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TTTAttributedLabel.h"
 
-@interface RegisterViewController : UIViewController
+@interface RegisterViewController : UIViewController <TTTAttributedLabelDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *careGiverButton;
 @property (weak, nonatomic) IBOutlet UIButton *careNeededButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *firstNameLabelTopConstraint;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *legalLabel;
 
 
 - (IBAction)careGiverButtonTapped:(id)sender;
