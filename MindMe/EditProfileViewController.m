@@ -76,6 +76,23 @@
     
 }
 
+- (IBAction)maleButtonTapped:(id)sender {
+    _maleButton.selected = YES;
+    _femaleButton.selected = NO;
+}
+
+- (IBAction)femaleButtonTapped:(id)sender {
+    _maleButton.selected = NO;
+    _femaleButton.selected = YES;
+}
+
+- (IBAction)miscOptionButtonTapped:(id)sender {
+    
+    UIButton* tappedButton = (UIButton *)sender;
+    tappedButton.selected = !tappedButton.isSelected;
+    
+}
+
 #pragma mark - CollectionView Datasource
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

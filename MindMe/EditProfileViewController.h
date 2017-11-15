@@ -20,7 +20,12 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *servicesCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *availabilityCollectionView;
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
+@property (weak, nonatomic) IBOutlet UIButton *maleButton;
+@property (weak, nonatomic) IBOutlet UIButton *femaleButton;
 
 - (IBAction)menuButtonTapped:(id)sender;
+- (IBAction)maleButtonTapped:(id)sender;
+- (IBAction)femaleButtonTapped:(id)sender;
+- (IBAction)miscOptionButtonTapped:(id)sender;
 
 @end

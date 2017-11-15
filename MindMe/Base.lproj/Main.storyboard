@@ -1232,7 +1232,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIVACY POLICY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhV-SY-4Fw">
-                                <rect key="frame" x="126.5" y="104" width="122.5" height="19"/>
+                                <rect key="frame" x="127" y="104" width="122.5" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1302,7 +1302,7 @@ We may send emails to existing customers or prospective customers who have enqui
                         <viewControllerLayoutGuide type="bottom" id="Apn-ay-sy0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mUK-8g-awf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1712"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2R-G8-xLM">
@@ -1338,16 +1338,23 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fab-Rq-uAK">
-                                <rect key="frame" x="0.0" y="84" width="375" height="1628"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="1016"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homelogin" translatesAutoresizingMaskIntoConstraints="NO" id="chs-qS-Cfo">
-                                        <rect key="frame" x="46" y="40" width="282" height="282.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDZ-5s-Qbm">
+                                        <rect key="frame" x="16" y="58" width="343" height="1"/>
+                                        <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="chs-qS-Cfo" secondAttribute="height" multiplier="1:1" id="dbg-EG-hLz"/>
+                                            <constraint firstAttribute="height" constant="1" id="PAs-CC-sO2"/>
                                         </constraints>
-                                    </imageView>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PERSONAL DETAILS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFT-Yj-PQ0">
+                                        <rect key="frame" x="111" y="20" width="154" height="21"/>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
+                                        <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="IGNALY" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0RV-wt-g9W">
-                                        <rect key="frame" x="70" y="365.5" width="61" height="20"/>
+                                        <rect key="frame" x="70" y="89" width="61" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="6UW-MV-wcp"/>
                                         </constraints>
@@ -1356,21 +1363,21 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_avator_orng" translatesAutoresizingMaskIntoConstraints="NO" id="b7P-23-34n">
-                                        <rect key="frame" x="37" y="365.5" width="20" height="20"/>
+                                        <rect key="frame" x="37" y="89" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="h56-Zo-vAl"/>
                                             <constraint firstAttribute="height" constant="20" id="tQy-ak-9ym"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lDb-in-A2I">
-                                        <rect key="frame" x="32" y="393.5" width="343" height="1"/>
+                                        <rect key="frame" x="32" y="117" width="343" height="1"/>
                                         <color key="backgroundColor" red="0.89390325546264648" green="0.89803808927536011" blue="0.90205961465835571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="tbE-Ph-AUa"/>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="JOSEFINA" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yWm-gl-BGH">
-                                        <rect key="frame" x="70" y="418.5" width="80" height="20"/>
+                                        <rect key="frame" x="70" y="142" width="80" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="B86-3X-hWe"/>
                                         </constraints>
@@ -1379,90 +1386,21 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3P-di-CeV">
-                                        <rect key="frame" x="32" y="446.5" width="343" height="1"/>
+                                        <rect key="frame" x="32" y="170" width="343" height="1"/>
                                         <color key="backgroundColor" red="0.89390325546264648" green="0.89803808927536011" blue="0.90205961465835571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="S2C-Pn-Ldf"/>
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_avator_orng" translatesAutoresizingMaskIntoConstraints="NO" id="96K-H1-gwc">
-                                        <rect key="frame" x="37" y="418.5" width="20" height="20"/>
+                                        <rect key="frame" x="37" y="142" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="RJl-8j-84c"/>
                                             <constraint firstAttribute="width" constant="20" id="SVu-Ww-0ts"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Castleknock, Ireland" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZIL-sK-pu3">
-                                        <rect key="frame" x="70" y="471.5" width="158" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="zLj-vX-Rdc"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlJ-68-21U">
-                                        <rect key="frame" x="32" y="499.5" width="343" height="1"/>
-                                        <color key="backgroundColor" red="0.89390325546264648" green="0.89803808927536011" blue="0.90205961465835571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="WGD-Bi-Hck"/>
-                                        </constraints>
-                                    </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_location" translatesAutoresizingMaskIntoConstraints="NO" id="Kuz-j0-6o9">
-                                        <rect key="frame" x="37" y="471.5" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="7rb-Si-6ND"/>
-                                            <constraint firstAttribute="width" constant="20" id="P8o-ml-WKd"/>
-                                        </constraints>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAW-eP-1Jv">
-                                        <rect key="frame" x="32" y="552.5" width="343" height="1"/>
-                                        <color key="backgroundColor" red="0.89390325546264648" green="0.89803808927536011" blue="0.90205961465835571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="aUy-An-h7V"/>
-                                        </constraints>
-                                    </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_age" translatesAutoresizingMaskIntoConstraints="NO" id="CmW-6X-l6N">
-                                        <rect key="frame" x="37" y="524.5" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="XFy-wp-Yv5"/>
-                                            <constraint firstAttribute="width" constant="20" id="gBw-86-UJC"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="44 years" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ugg-Q7-AnU">
-                                        <rect key="frame" x="70" y="524.5" width="70" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="bgg-tw-374"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ArX-Pw-hwz">
-                                        <rect key="frame" x="32" y="605.5" width="343" height="1"/>
-                                        <color key="backgroundColor" red="0.89390325546264648" green="0.89803808927536011" blue="0.90205961465835571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="4ES-1H-MoV"/>
-                                        </constraints>
-                                    </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Negotiable" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DiT-gf-47B">
-                                        <rect key="frame" x="70" y="577.5" width="88" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="6Rj-rc-uMa"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_pay" translatesAutoresizingMaskIntoConstraints="NO" id="ala-Q9-NOz">
-                                        <rect key="frame" x="37" y="577.5" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="9LC-j1-h6p"/>
-                                            <constraint firstAttribute="width" constant="20" id="gT9-xg-Z7C"/>
-                                        </constraints>
-                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+91 9004500123" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yg4-hq-TBV">
-                                        <rect key="frame" x="70" y="630.5" width="124" height="20"/>
+                                        <rect key="frame" x="70" y="195" width="124" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="8IM-R1-N6P"/>
                                         </constraints>
@@ -1471,21 +1409,21 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKa-Ix-jCf">
-                                        <rect key="frame" x="32" y="658.5" width="343" height="1"/>
+                                        <rect key="frame" x="32" y="223" width="343" height="1"/>
                                         <color key="backgroundColor" red="0.89390325546264648" green="0.89803808927536011" blue="0.90205961465835571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="fgo-Ix-zjp"/>
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_phone" translatesAutoresizingMaskIntoConstraints="NO" id="Egr-5b-dnE">
-                                        <rect key="frame" x="37" y="630.5" width="20" height="20"/>
+                                        <rect key="frame" x="37" y="195" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="RVy-Ek-tVf"/>
                                             <constraint firstAttribute="height" constant="20" id="tvx-X7-8QM"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Childcare" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9f8-0B-sqL">
-                                        <rect key="frame" x="70" y="683.5" width="77" height="20"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="JOSEFINA@gmail.com" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9f8-0B-sqL">
+                                        <rect key="frame" x="70" y="248" width="175" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="i6y-oh-Ux9"/>
                                         </constraints>
@@ -1493,31 +1431,22 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_categories" translatesAutoresizingMaskIntoConstraints="NO" id="EWo-k9-Kr5">
-                                        <rect key="frame" x="37" y="683.5" width="20" height="20"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_pay_card" translatesAutoresizingMaskIntoConstraints="NO" id="EWo-k9-Kr5">
+                                        <rect key="frame" x="37" y="248" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="haw-We-GQ1"/>
                                             <constraint firstAttribute="height" constant="20" id="iCI-O3-ihG"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7y-AZ-6Cq">
-                                        <rect key="frame" x="32" y="711.5" width="343" height="1"/>
+                                        <rect key="frame" x="32" y="276" width="343" height="1"/>
                                         <color key="backgroundColor" red="0.89390325546264648" green="0.89803808927536011" blue="0.90205961465835571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Y35-Ok-ikA"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4 years" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lZk-9C-aHb">
-                                        <rect key="frame" x="146" y="736.5" width="61" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="fgO-xK-paI"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Experience" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ylR-pN-yto">
-                                        <rect key="frame" x="37" y="736.5" width="93" height="20"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Gender" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ylR-pN-yto">
+                                        <rect key="frame" x="37" y="301" width="65" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="yj8-Xr-Nc1"/>
                                         </constraints>
@@ -1525,337 +1454,347 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8V-0A-xlo">
-                                        <rect key="frame" x="32" y="764.5" width="343" height="1"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nuQ-Oi-t6e">
+                                        <rect key="frame" x="32" y="383" width="343" height="1"/>
                                         <color key="backgroundColor" red="0.89390325550000005" green="0.89803808929999995" blue="0.90205961469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="Uvp-xz-adl"/>
+                                            <constraint firstAttribute="height" constant="1" id="Azb-Ts-yR4"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Description" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7jI-6g-W6S">
-                                        <rect key="frame" x="37" y="789.5" width="94" height="20"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Region" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b1Z-c0-T3a">
+                                        <rect key="frame" x="37" y="404" width="59" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="buj-Js-w0f"/>
+                                            <constraint firstAttribute="height" constant="20" id="vsK-rY-tSd"/>
                                         </constraints>
                                         <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yTa-XG-SUe">
-                                        <rect key="frame" x="37" y="808.5" width="310" height="49"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select your region" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffy-q6-pMB">
+                                        <rect key="frame" x="55" y="440" width="136" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="49" id="vtN-h0-4Xk"/>
+                                            <constraint firstAttribute="height" constant="20" id="614-dV-1Ua"/>
                                         </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="I have taken care of a Spanish child, in India for 9 months. I am responsible.">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="14" name="VisbyRoundCF-Regular"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9p-oj-5Pe">
-                                        <rect key="frame" x="32" y="869.5" width="343" height="1"/>
+                                        <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Imv-ve-kDd">
+                                        <rect key="frame" x="32" y="468" width="343" height="1"/>
                                         <color key="backgroundColor" red="0.89390325550000005" green="0.89803808929999995" blue="0.90205961469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="SJi-TD-K0c"/>
+                                            <constraint firstAttribute="height" constant="1" id="od8-sL-Kpq"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Activities" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAh-iA-ylI">
-                                        <rect key="frame" x="37" y="894.5" width="76" height="20"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="City" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F5p-zE-wuY">
+                                        <rect key="frame" x="37" y="489" width="49" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="T16-bv-nkj"/>
+                                            <constraint firstAttribute="height" constant="20" id="FNU-18-Ai5"/>
                                         </constraints>
                                         <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LwG-rU-2aF">
-                                        <rect key="frame" x="32" y="984.5" width="343" height="1"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Dublin" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zOa-MX-INL">
+                                        <rect key="frame" x="55" y="525" width="49" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="91D-jo-G7G"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sie-vA-46f">
+                                        <rect key="frame" x="32" y="553" width="343" height="1"/>
                                         <color key="backgroundColor" red="0.89390325550000005" green="0.89803808929999995" blue="0.90205961469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="kgK-ni-6l4"/>
+                                            <constraint firstAttribute="height" constant="1" id="Tjc-MJ-boQ"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I48-wm-NUf">
-                                        <rect key="frame" x="32" y="1099.5" width="343" height="1"/>
-                                        <color key="backgroundColor" red="0.89390325550000005" green="0.89803808929999995" blue="0.90205961469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Address" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="juw-Vd-b25">
+                                        <rect key="frame" x="37" y="574" width="69" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="Gxu-8z-zca"/>
-                                        </constraints>
-                                    </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Services" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EKZ-Cd-4oA">
-                                        <rect key="frame" x="37" y="1009.5" width="71" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="Jij-bu-I4Z"/>
+                                            <constraint firstAttribute="height" constant="20" id="qA6-KQ-ZmW"/>
                                         </constraints>
                                         <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nX7-Sd-RbV">
-                                        <rect key="frame" x="32" y="1214.5" width="343" height="1"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Shankil, Dublin 18" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZB-sp-lnm">
+                                        <rect key="frame" x="55" y="610" width="125" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="VBt-0d-dNG"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTk-oe-eOa">
+                                        <rect key="frame" x="32" y="638" width="343" height="1"/>
                                         <color key="backgroundColor" red="0.89390325550000005" green="0.89803808929999995" blue="0.90205961469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="KJF-VG-q0W"/>
+                                            <constraint firstAttribute="height" constant="1" id="to2-2J-2IT"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Upload Documents" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V6w-qW-1Vq">
-                                        <rect key="frame" x="37" y="1124.5" width="157" height="20"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="EIR Code" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gM1-lS-vXo">
+                                        <rect key="frame" x="37" y="659" width="74" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="Aft-uG-64G"/>
+                                            <constraint firstAttribute="height" constant="20" id="DKn-UH-GXf"/>
                                         </constraints>
                                         <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Availability" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vPU-rm-vCD">
-                                        <rect key="frame" x="32" y="1239.5" width="90" height="20"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="D18P922" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gS8-IA-T7d">
+                                        <rect key="frame" x="55" y="695" width="63" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="KfC-5M-dgb"/>
+                                            <constraint firstAttribute="height" constant="20" id="pxk-9O-pqh"/>
                                         </constraints>
-                                        <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
+                                        <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnj-R9-FM7">
+                                        <rect key="frame" x="32" y="723" width="343" height="1"/>
+                                        <color key="backgroundColor" red="0.89390325550000005" green="0.89803808929999995" blue="0.90205961469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="tcI-cL-Fub"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y6q-5E-hwP">
+                                        <rect key="frame" x="90" y="341" width="36" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19" id="Eiy-dE-fAm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="16"/>
+                                        <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPn-PX-56S">
+                                        <rect key="frame" x="57" y="338" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="E3V-X6-kZL"/>
+                                            <constraint firstAttribute="width" constant="25" id="ozV-Nu-Iw6"/>
+                                        </constraints>
+                                        <state key="normal" image="unchecked"/>
+                                        <state key="selected" image="checked"/>
+                                        <connections>
+                                            <action selector="careNeededButtonTapped:" destination="3Aj-jd-xlR" eventType="touchUpInside" id="hNc-T9-taM"/>
+                                            <action selector="maleButtonTapped:" destination="lC9-Cc-YIE" eventType="touchUpInside" id="2JL-zs-ute"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Female" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="a4K-zn-pRO">
+                                        <rect key="frame" x="207" y="341" width="55" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19" id="XOU-HN-eAI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="16"/>
+                                        <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2s-5L-8wz">
+                                        <rect key="frame" x="174" y="338" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="dZT-Y1-6aI"/>
+                                            <constraint firstAttribute="height" constant="25" id="hin-k6-tNp"/>
+                                        </constraints>
+                                        <state key="normal" image="unchecked"/>
+                                        <state key="selected" image="checked"/>
+                                        <connections>
+                                            <action selector="careGiverButtonTapped:" destination="3Aj-jd-xlR" eventType="touchUpInside" id="uo5-Zu-3zy"/>
+                                            <action selector="femaleButtonTapped:" destination="lC9-Cc-YIE" eventType="touchUpInside" id="Sra-sc-mcb"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGK-nt-opT">
-                                        <rect key="frame" x="37" y="1583.5" width="137.5" height="45"/>
+                                        <rect key="frame" x="37" y="911" width="138" height="45"/>
                                         <color key="backgroundColor" red="0.9930158257484436" green="0.53866952657699585" blue="0.030994832515716553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="zdh-Zg-IAe"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="17"/>
-                                        <state key="normal" title="Done">
+                                        <state key="normal" title="Update">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbK-tk-laz">
-                                        <rect key="frame" x="200.5" y="1583.5" width="137.5" height="45"/>
+                                        <rect key="frame" x="201" y="911" width="138" height="45"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="17"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" red="0.33709710836410522" green="0.34114208817481995" blue="0.34525841474533081" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWM-wf-ifa">
-                                        <rect key="frame" x="184.5" y="1564.5" width="6" height="80"/>
+                                        <rect key="frame" x="185" y="884" width="6" height="80"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="6" id="TRK-LZ-vLp"/>
                                             <constraint firstAttribute="height" constant="80" id="bW8-Ac-Mf2"/>
                                         </constraints>
                                     </view>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1xd-jz-qMo">
-                                        <rect key="frame" x="37" y="923" width="270" height="44"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receive promotions by email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="SZ4-Kq-sBt">
+                                        <rect key="frame" x="80" y="759" width="211" height="19"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="vB7-c9-iaL"/>
+                                            <constraint firstAttribute="height" constant="19" id="jXm-Sv-29t"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CLN-Zw-wDW">
-                                            <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="A66-VE-I2R">
-                                                <rect key="frame" x="0.0" y="-3" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </view>
-                                            </collectionViewCell>
-                                        </cells>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="16"/>
+                                        <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPg-7b-OYD">
+                                        <rect key="frame" x="47" y="756" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="0Dh-8G-lE2"/>
+                                            <constraint firstAttribute="width" constant="25" id="eHG-Tb-aa7"/>
+                                        </constraints>
+                                        <state key="normal" image="unchecked"/>
+                                        <state key="selected" image="checked"/>
                                         <connections>
-                                            <outlet property="dataSource" destination="lC9-Cc-YIE" id="hIF-Nu-UxB"/>
-                                            <outlet property="delegate" destination="lC9-Cc-YIE" id="Xmh-0R-1ek"/>
+                                            <action selector="careNeededButtonTapped:" destination="3Aj-jd-xlR" eventType="touchUpInside" id="Ou4-LX-6aM"/>
+                                            <action selector="miscOptionButtonTapped:" destination="lC9-Cc-YIE" eventType="touchUpInside" id="mMP-q1-Qx9"/>
                                         </connections>
-                                    </collectionView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDc-Dt-1rK">
-                                        <rect key="frame" x="323" y="931" width="36" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="FDc-Dt-1rK" secondAttribute="height" multiplier="9:8" id="Q5s-Vu-KCf"/>
-                                        </constraints>
-                                        <state key="normal" image="add_btn"/>
                                     </button>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M0A-sb-ttd">
-                                        <rect key="frame" x="37" y="1038" width="270" height="44"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receive carer alerts by email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="lbp-n8-a9b">
+                                        <rect key="frame" x="80" y="804" width="211" height="19"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="UrX-sX-jj3"/>
+                                            <constraint firstAttribute="height" constant="19" id="vnr-JA-6KA"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qpR-MZ-ehu">
-                                            <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LPb-X9-Ksr">
-                                                <rect key="frame" x="0.0" y="-3" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </view>
-                                            </collectionViewCell>
-                                        </cells>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="16"/>
+                                        <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qy9-0k-dyh">
+                                        <rect key="frame" x="47" y="801" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="3a7-8x-QDv"/>
+                                            <constraint firstAttribute="height" constant="25" id="PEk-5B-ujK"/>
+                                        </constraints>
+                                        <state key="normal" image="unchecked"/>
+                                        <state key="selected" image="checked"/>
                                         <connections>
-                                            <outlet property="dataSource" destination="lC9-Cc-YIE" id="IAC-7V-rBs"/>
-                                            <outlet property="delegate" destination="lC9-Cc-YIE" id="THG-KW-PEk"/>
+                                            <action selector="careNeededButtonTapped:" destination="3Aj-jd-xlR" eventType="touchUpInside" id="2F5-km-9Um"/>
+                                            <action selector="miscOptionButtonTapped:" destination="lC9-Cc-YIE" eventType="touchUpInside" id="Zhp-3m-f9M"/>
                                         </connections>
-                                    </collectionView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NO3-TO-pQC">
-                                        <rect key="frame" x="323" y="1046" width="36" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="NO3-TO-pQC" secondAttribute="height" multiplier="9:8" id="u5P-FM-OM2"/>
-                                        </constraints>
-                                        <state key="normal" image="add_btn"/>
                                     </button>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6oQ-Ss-IcD">
-                                        <rect key="frame" x="16" y="1276" width="345" height="273"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="RfP-4y-Dt6">
-                                            <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="T9n-Hz-VBQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </view>
-                                            </collectionViewCell>
-                                        </cells>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agree with Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="hpH-qX-GqN">
+                                        <rect key="frame" x="80" y="849" width="225" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19" id="TOb-Eg-QNr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="16"/>
+                                        <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1o-L6-Smz">
+                                        <rect key="frame" x="47" y="846" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="BpL-9F-Fsi"/>
+                                            <constraint firstAttribute="height" constant="25" id="unw-ew-7SE"/>
+                                        </constraints>
+                                        <state key="normal" image="unchecked"/>
+                                        <state key="selected" image="checked"/>
                                         <connections>
-                                            <outlet property="dataSource" destination="lC9-Cc-YIE" id="H0R-og-TfU"/>
-                                            <outlet property="delegate" destination="lC9-Cc-YIE" id="GTu-VJ-5yb"/>
+                                            <action selector="careNeededButtonTapped:" destination="3Aj-jd-xlR" eventType="touchUpInside" id="byZ-w6-K4C"/>
+                                            <action selector="miscOptionButtonTapped:" destination="lC9-Cc-YIE" eventType="touchUpInside" id="XAK-qH-e43"/>
                                         </connections>
-                                    </collectionView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzR-Ac-KBC">
-                                        <rect key="frame" x="323" y="1163" width="36" height="32"/>
-                                        <state key="normal" image="add_btn"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="DiT-gf-47B" firstAttribute="leading" secondItem="ala-Q9-NOz" secondAttribute="trailing" constant="13" id="1WI-us-ku0"/>
-                                    <constraint firstItem="lZk-9C-aHb" firstAttribute="top" secondItem="Q7y-AZ-6Cq" secondAttribute="bottom" constant="24" id="2UT-D8-sdZ"/>
-                                    <constraint firstItem="Ugg-Q7-AnU" firstAttribute="top" secondItem="DlJ-68-21U" secondAttribute="bottom" constant="24" id="2bF-vW-8Tb"/>
+                                    <constraint firstItem="b1Z-c0-T3a" firstAttribute="leading" secondItem="ylR-pN-yto" secondAttribute="leading" id="1Aw-ZQ-yQD"/>
+                                    <constraint firstItem="zOa-MX-INL" firstAttribute="leading" secondItem="ffy-q6-pMB" secondAttribute="leading" id="2Z3-y7-rVR"/>
                                     <constraint firstAttribute="trailing" secondItem="0RV-wt-g9W" secondAttribute="trailing" id="2pQ-2h-ck5"/>
-                                    <constraint firstItem="ArX-Pw-hwz" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="32" id="3eT-I3-j9x"/>
+                                    <constraint firstItem="Imv-ve-kDd" firstAttribute="leading" secondItem="Q7y-AZ-6Cq" secondAttribute="leading" id="3dk-UE-oVu"/>
+                                    <constraint firstItem="hpH-qX-GqN" firstAttribute="centerY" secondItem="t1o-L6-Smz" secondAttribute="centerY" id="3kH-DC-Xit"/>
                                     <constraint firstItem="hKa-Ix-jCf" firstAttribute="top" secondItem="Egr-5b-dnE" secondAttribute="bottom" constant="8" id="3nc-XE-dCt"/>
-                                    <constraint firstItem="I48-wm-NUf" firstAttribute="leading" secondItem="i9p-oj-5Pe" secondAttribute="leading" id="4Ax-wW-RR3"/>
-                                    <constraint firstItem="LwG-rU-2aF" firstAttribute="leading" secondItem="i9p-oj-5Pe" secondAttribute="leading" id="4Hm-xy-D20"/>
-                                    <constraint firstItem="chs-qS-Cfo" firstAttribute="top" secondItem="fab-Rq-uAK" secondAttribute="top" constant="40" id="4b6-wB-cYB"/>
                                     <constraint firstItem="kbK-tk-laz" firstAttribute="leading" secondItem="iWM-wf-ifa" secondAttribute="trailing" constant="10" id="590-nO-yfB"/>
-                                    <constraint firstItem="i9p-oj-5Pe" firstAttribute="top" secondItem="7jI-6g-W6S" secondAttribute="bottom" constant="60" id="5WF-X3-mHP"/>
-                                    <constraint firstItem="yg4-hq-TBV" firstAttribute="top" secondItem="ArX-Pw-hwz" secondAttribute="bottom" constant="24" id="6Pz-mD-BQ5"/>
-                                    <constraint firstItem="JzR-Ac-KBC" firstAttribute="width" secondItem="NO3-TO-pQC" secondAttribute="width" id="6ub-9k-Fx0"/>
-                                    <constraint firstItem="Kuz-j0-6o9" firstAttribute="top" secondItem="X3P-di-CeV" secondAttribute="bottom" constant="24" id="73n-rq-Owb"/>
-                                    <constraint firstItem="DiT-gf-47B" firstAttribute="top" secondItem="WAW-eP-1Jv" secondAttribute="bottom" constant="24" id="7eb-bD-1z6"/>
-                                    <constraint firstItem="yTa-XG-SUe" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="7ep-SW-wsv"/>
+                                    <constraint firstItem="hnj-R9-FM7" firstAttribute="width" secondItem="Sie-vA-46f" secondAttribute="width" id="5BE-oP-BjV"/>
+                                    <constraint firstItem="qy9-0k-dyh" firstAttribute="leading" secondItem="CPg-7b-OYD" secondAttribute="leading" id="5gz-g1-7Z8"/>
+                                    <constraint firstItem="juw-Vd-b25" firstAttribute="leading" secondItem="F5p-zE-wuY" secondAttribute="leading" id="6D7-ft-b5q"/>
+                                    <constraint firstItem="b1Z-c0-T3a" firstAttribute="top" secondItem="nuQ-Oi-t6e" secondAttribute="bottom" constant="20" id="6qI-gh-n1K"/>
                                     <constraint firstItem="Egr-5b-dnE" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="87M-Ci-zjw"/>
-                                    <constraint firstItem="JzR-Ac-KBC" firstAttribute="trailing" secondItem="NO3-TO-pQC" secondAttribute="trailing" id="8MU-im-Bpa"/>
-                                    <constraint firstItem="CmW-6X-l6N" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="8WY-Qz-lh4"/>
-                                    <constraint firstItem="Ugg-Q7-AnU" firstAttribute="leading" secondItem="CmW-6X-l6N" secondAttribute="trailing" constant="13" id="9Fp-wY-q7J"/>
+                                    <constraint firstItem="gS8-IA-T7d" firstAttribute="leading" secondItem="zOa-MX-INL" secondAttribute="leading" id="90q-tX-Rdr"/>
                                     <constraint firstItem="X3P-di-CeV" firstAttribute="top" secondItem="96K-H1-gwc" secondAttribute="bottom" constant="8" id="9Jp-Xf-tLc"/>
-                                    <constraint firstItem="eAh-iA-ylI" firstAttribute="top" secondItem="i9p-oj-5Pe" secondAttribute="bottom" constant="24" id="9NG-mg-5fx"/>
-                                    <constraint firstItem="Q7y-AZ-6Cq" firstAttribute="trailing" secondItem="DlJ-68-21U" secondAttribute="trailing" id="A0R-1w-aFp"/>
+                                    <constraint firstItem="ffy-q6-pMB" firstAttribute="top" secondItem="b1Z-c0-T3a" secondAttribute="bottom" constant="16" id="9Kl-0N-uAE"/>
+                                    <constraint firstItem="t1o-L6-Smz" firstAttribute="top" secondItem="qy9-0k-dyh" secondAttribute="bottom" constant="20" id="9lr-fn-gQ9"/>
+                                    <constraint firstItem="yg4-hq-TBV" firstAttribute="top" secondItem="X3P-di-CeV" secondAttribute="bottom" constant="24" id="AGh-TQ-y8u"/>
                                     <constraint firstItem="96K-H1-gwc" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="Aa3-IS-Etu"/>
-                                    <constraint firstItem="DlJ-68-21U" firstAttribute="trailing" secondItem="X3P-di-CeV" secondAttribute="trailing" id="Asz-Uw-Nhf"/>
                                     <constraint firstItem="yWm-gl-BGH" firstAttribute="leading" secondItem="96K-H1-gwc" secondAttribute="trailing" constant="13" id="BVD-4H-v3C"/>
                                     <constraint firstItem="kbK-tk-laz" firstAttribute="width" secondItem="eGK-nt-opT" secondAttribute="width" id="CBX-co-6Q7"/>
-                                    <constraint firstItem="JzR-Ac-KBC" firstAttribute="top" secondItem="I48-wm-NUf" secondAttribute="bottom" constant="62.5" id="Caw-v0-PVg"/>
-                                    <constraint firstItem="NO3-TO-pQC" firstAttribute="top" secondItem="LwG-rU-2aF" secondAttribute="bottom" constant="60.5" id="DU6-40-hT3"/>
+                                    <constraint firstItem="lbp-n8-a9b" firstAttribute="centerY" secondItem="qy9-0k-dyh" secondAttribute="centerY" id="DTd-F5-7HB"/>
                                     <constraint firstItem="96K-H1-gwc" firstAttribute="top" secondItem="lDb-in-A2I" secondAttribute="bottom" constant="24" id="Dj5-vd-gwt"/>
                                     <constraint firstItem="9f8-0B-sqL" firstAttribute="leading" secondItem="EWo-k9-Kr5" secondAttribute="trailing" constant="13" id="Dph-bm-iHx"/>
-                                    <constraint firstItem="i9p-oj-5Pe" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="32" id="Ehe-CK-Pv0"/>
-                                    <constraint firstItem="eAh-iA-ylI" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="Epx-A0-Eu7"/>
+                                    <constraint firstItem="zOa-MX-INL" firstAttribute="top" secondItem="F5p-zE-wuY" secondAttribute="bottom" constant="16" id="DzB-P9-HCf"/>
                                     <constraint firstItem="kbK-tk-laz" firstAttribute="height" secondItem="eGK-nt-opT" secondAttribute="height" id="F2s-o3-QfJ"/>
+                                    <constraint firstItem="Sie-vA-46f" firstAttribute="leading" secondItem="Imv-ve-kDd" secondAttribute="leading" id="F8V-OT-Qfr"/>
+                                    <constraint firstItem="CPg-7b-OYD" firstAttribute="leading" secondItem="kPn-PX-56S" secondAttribute="leading" constant="-10" id="FCD-Rw-yjC"/>
                                     <constraint firstItem="iWM-wf-ifa" firstAttribute="centerX" secondItem="fab-Rq-uAK" secondAttribute="centerX" id="FFd-b2-Hbm"/>
-                                    <constraint firstItem="0RV-wt-g9W" firstAttribute="top" secondItem="chs-qS-Cfo" secondAttribute="bottom" constant="43" id="Frn-QP-aiR"/>
-                                    <constraint firstItem="6oQ-Ss-IcD" firstAttribute="top" secondItem="vPU-rm-vCD" secondAttribute="bottom" constant="16" id="GDG-tC-gcM"/>
-                                    <constraint firstItem="lZk-9C-aHb" firstAttribute="leading" secondItem="ylR-pN-yto" secondAttribute="trailing" constant="16" id="Hg1-o4-shk"/>
-                                    <constraint firstItem="LwG-rU-2aF" firstAttribute="top" secondItem="eAh-iA-ylI" secondAttribute="bottom" constant="70" id="Hks-IC-FXu"/>
-                                    <constraint firstItem="ZIL-sK-pu3" firstAttribute="leading" secondItem="Kuz-j0-6o9" secondAttribute="trailing" constant="13" id="KQQ-1a-qNv"/>
+                                    <constraint firstItem="SDZ-5s-Qbm" firstAttribute="centerX" secondItem="fab-Rq-uAK" secondAttribute="centerX" id="Ggk-mH-ZY5"/>
+                                    <constraint firstItem="Imv-ve-kDd" firstAttribute="top" secondItem="ffy-q6-pMB" secondAttribute="bottom" constant="8" id="I32-da-iat"/>
+                                    <constraint firstItem="SZ4-Kq-sBt" firstAttribute="centerY" secondItem="CPg-7b-OYD" secondAttribute="centerY" id="IP4-FW-cj3"/>
+                                    <constraint firstItem="yFT-Yj-PQ0" firstAttribute="top" secondItem="fab-Rq-uAK" secondAttribute="top" constant="20" id="IZb-Kc-8ee"/>
+                                    <constraint firstItem="kPn-PX-56S" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="57" id="IfQ-pr-37G"/>
+                                    <constraint firstItem="k2s-5L-8wz" firstAttribute="leading" secondItem="Y6q-5E-hwP" secondAttribute="trailing" constant="48" id="Ivv-nz-8bX"/>
+                                    <constraint firstItem="a4K-zn-pRO" firstAttribute="top" secondItem="Y6q-5E-hwP" secondAttribute="top" id="JFL-KA-FUw"/>
+                                    <constraint firstItem="b7P-23-34n" firstAttribute="top" secondItem="SDZ-5s-Qbm" secondAttribute="bottom" constant="30" id="JUt-XS-flI"/>
                                     <constraint firstItem="yWm-gl-BGH" firstAttribute="top" secondItem="lDb-in-A2I" secondAttribute="bottom" constant="24" id="KV3-3T-OGS"/>
+                                    <constraint firstItem="qy9-0k-dyh" firstAttribute="top" secondItem="CPg-7b-OYD" secondAttribute="bottom" constant="20" id="KWn-lR-qSs"/>
+                                    <constraint firstItem="Y6q-5E-hwP" firstAttribute="leading" secondItem="kPn-PX-56S" secondAttribute="trailing" constant="8" id="Kbb-CB-ueP"/>
                                     <constraint firstItem="Q7y-AZ-6Cq" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="32" id="Khz-a2-94N"/>
                                     <constraint firstItem="iWM-wf-ifa" firstAttribute="leading" secondItem="eGK-nt-opT" secondAttribute="trailing" constant="10" id="Krz-h0-nZu"/>
-                                    <constraint firstItem="JzR-Ac-KBC" firstAttribute="height" secondItem="NO3-TO-pQC" secondAttribute="height" id="LSp-Wg-SEh"/>
-                                    <constraint firstItem="FDc-Dt-1rK" firstAttribute="top" secondItem="i9p-oj-5Pe" secondAttribute="bottom" constant="60.5" id="Mba-nS-fvL"/>
-                                    <constraint firstItem="ArX-Pw-hwz" firstAttribute="trailing" secondItem="DlJ-68-21U" secondAttribute="trailing" id="Md3-qW-mR7"/>
-                                    <constraint firstItem="1xd-jz-qMo" firstAttribute="top" secondItem="eAh-iA-ylI" secondAttribute="bottom" constant="8.5" id="N4n-Co-Cfq"/>
-                                    <constraint firstItem="M0A-sb-ttd" firstAttribute="top" secondItem="EKZ-Cd-4oA" secondAttribute="bottom" constant="8.5" id="N6h-06-d9P"/>
-                                    <constraint firstItem="ala-Q9-NOz" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="NKJ-8E-Cns"/>
-                                    <constraint firstItem="iWM-wf-ifa" firstAttribute="top" secondItem="6oQ-Ss-IcD" secondAttribute="bottom" constant="16" id="NWJ-5g-yjY"/>
-                                    <constraint firstItem="7jI-6g-W6S" firstAttribute="top" secondItem="f8V-0A-xlo" secondAttribute="bottom" constant="24" id="Neb-RM-aWl"/>
+                                    <constraint firstItem="Imv-ve-kDd" firstAttribute="width" secondItem="Q7y-AZ-6Cq" secondAttribute="width" id="L0V-GH-jtH"/>
+                                    <constraint firstItem="kPn-PX-56S" firstAttribute="top" secondItem="ylR-pN-yto" secondAttribute="bottom" constant="17" id="Lsf-CO-XSw"/>
+                                    <constraint firstItem="Sie-vA-46f" firstAttribute="top" secondItem="zOa-MX-INL" secondAttribute="bottom" constant="8" id="MI9-Cy-dXx"/>
                                     <constraint firstItem="EWo-k9-Kr5" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="Nsm-vI-xiy"/>
-                                    <constraint firstItem="f8V-0A-xlo" firstAttribute="trailing" secondItem="Q7y-AZ-6Cq" secondAttribute="trailing" id="OFB-cS-aJG"/>
-                                    <constraint firstItem="EKZ-Cd-4oA" firstAttribute="top" secondItem="LwG-rU-2aF" secondAttribute="bottom" constant="24" id="PZw-os-LJO"/>
-                                    <constraint firstItem="DlJ-68-21U" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="32" id="Q1K-Jl-y0l"/>
-                                    <constraint firstItem="f8V-0A-xlo" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="32" id="Rao-Ca-o1s"/>
+                                    <constraint firstItem="F5p-zE-wuY" firstAttribute="leading" secondItem="b1Z-c0-T3a" secondAttribute="leading" id="P16-AE-tS7"/>
+                                    <constraint firstItem="k2s-5L-8wz" firstAttribute="top" secondItem="kPn-PX-56S" secondAttribute="top" id="Pyw-Wt-dIa"/>
                                     <constraint firstItem="eGK-nt-opT" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="Smy-2K-c6b"/>
                                     <constraint firstItem="0RV-wt-g9W" firstAttribute="leading" secondItem="b7P-23-34n" secondAttribute="trailing" constant="13" id="Spn-nA-rhf"/>
-                                    <constraint firstItem="WAW-eP-1Jv" firstAttribute="trailing" secondItem="DlJ-68-21U" secondAttribute="trailing" id="TeT-hO-Nzp"/>
-                                    <constraint firstItem="vPU-rm-vCD" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="32" id="Tgo-RD-Bgi"/>
-                                    <constraint firstItem="LwG-rU-2aF" firstAttribute="trailing" secondItem="i9p-oj-5Pe" secondAttribute="trailing" id="Twf-fH-nxu"/>
-                                    <constraint firstItem="CmW-6X-l6N" firstAttribute="top" secondItem="DlJ-68-21U" secondAttribute="bottom" constant="24" id="U28-f6-o3Z"/>
-                                    <constraint firstItem="NO3-TO-pQC" firstAttribute="leading" secondItem="M0A-sb-ttd" secondAttribute="trailing" constant="16" id="U7y-sh-7Vd"/>
+                                    <constraint firstItem="Y6q-5E-hwP" firstAttribute="centerY" secondItem="kPn-PX-56S" secondAttribute="centerY" id="Tbd-p5-agS"/>
                                     <constraint firstItem="yg4-hq-TBV" firstAttribute="leading" secondItem="Egr-5b-dnE" secondAttribute="trailing" constant="13" id="VMX-3Z-98u"/>
-                                    <constraint firstItem="7jI-6g-W6S" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="Vfk-nT-xLG"/>
-                                    <constraint firstItem="Egr-5b-dnE" firstAttribute="top" secondItem="ArX-Pw-hwz" secondAttribute="bottom" constant="24" id="Wqe-yD-Vj8"/>
-                                    <constraint firstItem="i9p-oj-5Pe" firstAttribute="trailing" secondItem="f8V-0A-xlo" secondAttribute="trailing" id="X8b-yK-QH3"/>
+                                    <constraint firstItem="hnj-R9-FM7" firstAttribute="top" secondItem="gS8-IA-T7d" secondAttribute="bottom" constant="8" id="Whu-Sk-Nif"/>
+                                    <constraint firstItem="nuQ-Oi-t6e" firstAttribute="top" secondItem="k2s-5L-8wz" secondAttribute="bottom" constant="20" id="Xla-fa-phG"/>
                                     <constraint firstItem="Q7y-AZ-6Cq" firstAttribute="top" secondItem="EWo-k9-Kr5" secondAttribute="bottom" constant="8" id="Xvd-ws-wwk"/>
-                                    <constraint firstItem="f8V-0A-xlo" firstAttribute="top" secondItem="ylR-pN-yto" secondAttribute="bottom" constant="8" id="Zdw-Al-wHJ"/>
-                                    <constraint firstItem="M0A-sb-ttd" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="a7b-Oa-ys4"/>
-                                    <constraint firstItem="M0A-sb-ttd" firstAttribute="width" secondItem="1xd-jz-qMo" secondAttribute="width" id="aGf-Fn-7t4"/>
-                                    <constraint firstItem="WAW-eP-1Jv" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="32" id="bXy-JW-9cE"/>
-                                    <constraint firstItem="vPU-rm-vCD" firstAttribute="top" secondItem="nX7-Sd-RbV" secondAttribute="bottom" constant="24" id="crr-9r-TUe"/>
-                                    <constraint firstItem="NO3-TO-pQC" firstAttribute="width" secondItem="NO3-TO-pQC" secondAttribute="height" multiplier="9:8" id="d0X-YS-QTe"/>
-                                    <constraint firstItem="nX7-Sd-RbV" firstAttribute="top" secondItem="V6w-qW-1Vq" secondAttribute="bottom" constant="70" id="eA7-NT-Wc5"/>
+                                    <constraint firstItem="nuQ-Oi-t6e" firstAttribute="width" secondItem="Q7y-AZ-6Cq" secondAttribute="width" id="Zd9-2k-eLh"/>
+                                    <constraint firstItem="hnj-R9-FM7" firstAttribute="leading" secondItem="Sie-vA-46f" secondAttribute="leading" id="Zk3-r4-hFf"/>
+                                    <constraint firstItem="hKa-Ix-jCf" firstAttribute="width" secondItem="X3P-di-CeV" secondAttribute="width" id="b2W-a6-fws"/>
+                                    <constraint firstItem="gS8-IA-T7d" firstAttribute="top" secondItem="gM1-lS-vXo" secondAttribute="bottom" constant="16" id="cQ6-24-t1P"/>
+                                    <constraint firstItem="MTk-oe-eOa" firstAttribute="leading" secondItem="Sie-vA-46f" secondAttribute="leading" id="d44-5d-see"/>
                                     <constraint firstItem="lDb-in-A2I" firstAttribute="top" secondItem="b7P-23-34n" secondAttribute="bottom" constant="8" id="fF5-KM-B9s"/>
-                                    <constraint firstItem="yTa-XG-SUe" firstAttribute="top" secondItem="f8V-0A-xlo" secondAttribute="bottom" constant="43" id="gDk-b7-KBC"/>
-                                    <constraint firstItem="I48-wm-NUf" firstAttribute="top" secondItem="EKZ-Cd-4oA" secondAttribute="bottom" constant="70" id="j4z-fP-gss"/>
-                                    <constraint firstItem="WAW-eP-1Jv" firstAttribute="top" secondItem="CmW-6X-l6N" secondAttribute="bottom" constant="8" id="jdr-Xt-VnW"/>
+                                    <constraint firstItem="Egr-5b-dnE" firstAttribute="top" secondItem="X3P-di-CeV" secondAttribute="bottom" constant="24" id="fMf-nn-eus"/>
+                                    <constraint firstItem="MTk-oe-eOa" firstAttribute="top" secondItem="xZB-sp-lnm" secondAttribute="bottom" constant="8" id="ftZ-gW-U2g"/>
+                                    <constraint firstItem="Sie-vA-46f" firstAttribute="width" secondItem="Imv-ve-kDd" secondAttribute="width" id="gEI-Qo-oyU"/>
+                                    <constraint firstItem="juw-Vd-b25" firstAttribute="top" secondItem="Sie-vA-46f" secondAttribute="bottom" constant="20" id="hU8-Fd-7cS"/>
+                                    <constraint firstItem="gM1-lS-vXo" firstAttribute="top" secondItem="MTk-oe-eOa" secondAttribute="bottom" constant="20" id="i6m-Nc-GVm"/>
+                                    <constraint firstItem="ffy-q6-pMB" firstAttribute="leading" secondItem="9f8-0B-sqL" secondAttribute="leading" constant="-15" id="isp-kq-iyo"/>
+                                    <constraint firstItem="lbp-n8-a9b" firstAttribute="leading" secondItem="qy9-0k-dyh" secondAttribute="trailing" constant="8" id="k7U-Ov-Tck"/>
                                     <constraint firstItem="ylR-pN-yto" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="kKP-AO-GHB"/>
-                                    <constraint firstItem="hKa-Ix-jCf" firstAttribute="trailing" secondItem="DlJ-68-21U" secondAttribute="trailing" id="llu-ef-MRB"/>
-                                    <constraint firstItem="1xd-jz-qMo" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="mF2-i1-Wry"/>
+                                    <constraint firstItem="eGK-nt-opT" firstAttribute="top" secondItem="t1o-L6-Smz" secondAttribute="bottom" constant="40" id="ka1-5F-i6N"/>
+                                    <constraint firstItem="Q7y-AZ-6Cq" firstAttribute="width" secondItem="hKa-Ix-jCf" secondAttribute="width" id="kqp-fC-LIT"/>
+                                    <constraint firstItem="xZB-sp-lnm" firstAttribute="leading" secondItem="zOa-MX-INL" secondAttribute="leading" id="l7n-eZ-v5b"/>
                                     <constraint firstItem="hKa-Ix-jCf" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="32" id="mfP-2j-iwE"/>
-                                    <constraint firstItem="V6w-qW-1Vq" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="nfY-fC-Dl5"/>
+                                    <constraint firstItem="nuQ-Oi-t6e" firstAttribute="leading" secondItem="Q7y-AZ-6Cq" secondAttribute="leading" id="mjm-3z-G1b"/>
+                                    <constraint firstItem="a4K-zn-pRO" firstAttribute="leading" secondItem="k2s-5L-8wz" secondAttribute="trailing" constant="8" id="nTa-al-Qua"/>
+                                    <constraint firstItem="SZ4-Kq-sBt" firstAttribute="leading" secondItem="CPg-7b-OYD" secondAttribute="trailing" constant="8" id="na9-dj-5GK"/>
                                     <constraint firstItem="EWo-k9-Kr5" firstAttribute="top" secondItem="hKa-Ix-jCf" secondAttribute="bottom" constant="24" id="o50-0J-6YW"/>
-                                    <constraint firstItem="EKZ-Cd-4oA" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="ocF-pW-6OA"/>
-                                    <constraint firstItem="DlJ-68-21U" firstAttribute="top" secondItem="Kuz-j0-6o9" secondAttribute="bottom" constant="8" id="pHG-6e-LSH"/>
-                                    <constraint firstItem="chs-qS-Cfo" firstAttribute="centerX" secondItem="fab-Rq-uAK" secondAttribute="centerX" id="pfR-dQ-boj"/>
-                                    <constraint firstItem="eGK-nt-opT" firstAttribute="top" secondItem="vPU-rm-vCD" secondAttribute="bottom" constant="324" id="qAE-GB-cSD"/>
-                                    <constraint firstItem="ala-Q9-NOz" firstAttribute="top" secondItem="WAW-eP-1Jv" secondAttribute="bottom" constant="24" id="rdN-3q-hfb"/>
-                                    <constraint firstItem="6oQ-Ss-IcD" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="16" id="sab-lV-BJc"/>
+                                    <constraint firstItem="gM1-lS-vXo" firstAttribute="leading" secondItem="F5p-zE-wuY" secondAttribute="leading" id="ohg-XW-HdP"/>
+                                    <constraint firstItem="iWM-wf-ifa" firstAttribute="top" secondItem="hpH-qX-GqN" secondAttribute="bottom" constant="16" id="ptv-dt-HIv"/>
+                                    <constraint firstItem="xZB-sp-lnm" firstAttribute="top" secondItem="juw-Vd-b25" secondAttribute="bottom" constant="16" id="rKj-fK-UnR"/>
                                     <constraint firstAttribute="bottom" secondItem="iWM-wf-ifa" secondAttribute="bottom" constant="16" id="uDz-Ha-pRT"/>
                                     <constraint firstItem="b7P-23-34n" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="uJK-E5-c9m"/>
-                                    <constraint firstItem="nX7-Sd-RbV" firstAttribute="leading" secondItem="i9p-oj-5Pe" secondAttribute="leading" id="vAu-5i-YpX"/>
                                     <constraint firstItem="ylR-pN-yto" firstAttribute="top" secondItem="Q7y-AZ-6Cq" secondAttribute="bottom" constant="24" id="vIT-Ad-g58"/>
-                                    <constraint firstItem="nX7-Sd-RbV" firstAttribute="trailing" secondItem="i9p-oj-5Pe" secondAttribute="trailing" id="vPk-Oj-MOQ"/>
-                                    <constraint firstItem="V6w-qW-1Vq" firstAttribute="top" secondItem="I48-wm-NUf" secondAttribute="bottom" constant="24" id="vTm-Vp-w0T"/>
-                                    <constraint firstItem="NO3-TO-pQC" firstAttribute="width" secondItem="FDc-Dt-1rK" secondAttribute="width" id="vha-Co-350"/>
+                                    <constraint firstItem="MTk-oe-eOa" firstAttribute="width" secondItem="Sie-vA-46f" secondAttribute="width" id="weH-z1-efP"/>
                                     <constraint firstItem="X3P-di-CeV" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="32" id="wsQ-TJ-IJo"/>
                                     <constraint firstItem="X3P-di-CeV" firstAttribute="trailing" secondItem="lDb-in-A2I" secondAttribute="trailing" id="xGS-BK-b3P"/>
-                                    <constraint firstItem="Kuz-j0-6o9" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="37" id="xJy-fC-6hJ"/>
-                                    <constraint firstItem="ZIL-sK-pu3" firstAttribute="top" secondItem="X3P-di-CeV" secondAttribute="bottom" constant="24" id="xN1-2O-gFg"/>
-                                    <constraint firstItem="ArX-Pw-hwz" firstAttribute="top" secondItem="ala-Q9-NOz" secondAttribute="bottom" constant="8" id="xbL-P0-Fff"/>
                                     <constraint firstItem="lDb-in-A2I" firstAttribute="leading" secondItem="fab-Rq-uAK" secondAttribute="leading" constant="32" id="xgQ-gZ-wg6"/>
                                     <constraint firstItem="0RV-wt-g9W" firstAttribute="top" secondItem="b7P-23-34n" secondAttribute="top" id="yCh-7U-Rwv"/>
-                                    <constraint firstItem="I48-wm-NUf" firstAttribute="trailing" secondItem="i9p-oj-5Pe" secondAttribute="trailing" id="yRK-j3-Ygh"/>
-                                    <constraint firstItem="FDc-Dt-1rK" firstAttribute="leading" secondItem="1xd-jz-qMo" secondAttribute="trailing" constant="16" id="z6A-Yb-BVp"/>
+                                    <constraint firstItem="hpH-qX-GqN" firstAttribute="leading" secondItem="t1o-L6-Smz" secondAttribute="trailing" constant="8" id="yWP-9B-Tk7"/>
+                                    <constraint firstItem="CPg-7b-OYD" firstAttribute="top" secondItem="hnj-R9-FM7" secondAttribute="bottom" constant="32" id="yc0-Vd-4LJ"/>
+                                    <constraint firstItem="F5p-zE-wuY" firstAttribute="top" secondItem="Imv-ve-kDd" secondAttribute="bottom" constant="20" id="yyH-hx-6HE"/>
+                                    <constraint firstItem="yFT-Yj-PQ0" firstAttribute="centerX" secondItem="fab-Rq-uAK" secondAttribute="centerX" id="yyy-42-OAD"/>
                                     <constraint firstItem="kbK-tk-laz" firstAttribute="top" secondItem="eGK-nt-opT" secondAttribute="top" id="zD5-hO-1zg"/>
-                                    <constraint firstAttribute="bottom" secondItem="eGK-nt-opT" secondAttribute="bottom" constant="32" id="zWz-AX-8wb"/>
+                                    <constraint firstItem="t1o-L6-Smz" firstAttribute="leading" secondItem="CPg-7b-OYD" secondAttribute="leading" id="zPf-Ha-X5M"/>
+                                    <constraint firstItem="SDZ-5s-Qbm" firstAttribute="top" secondItem="yFT-Yj-PQ0" secondAttribute="bottom" constant="17" id="zbv-Ho-cHP"/>
+                                    <constraint firstItem="lDb-in-A2I" firstAttribute="width" secondItem="SDZ-5s-Qbm" secondAttribute="width" id="zgg-n3-y2V"/>
                                     <constraint firstItem="9f8-0B-sqL" firstAttribute="top" secondItem="hKa-Ix-jCf" secondAttribute="bottom" constant="24" id="zpc-1M-OJB"/>
                                 </constraints>
                             </scrollView>
@@ -1865,27 +1804,21 @@ We may send emails to existing customers or prospective customers who have enqui
                             <constraint firstItem="g2R-G8-xLM" firstAttribute="leading" secondItem="mUK-8g-awf" secondAttribute="leading" id="2i3-Gn-5rD"/>
                             <constraint firstItem="Apn-ay-sy0" firstAttribute="top" secondItem="fab-Rq-uAK" secondAttribute="bottom" id="3qw-dq-bv4"/>
                             <constraint firstItem="g2R-G8-xLM" firstAttribute="top" secondItem="mUK-8g-awf" secondAttribute="top" id="8Po-cz-EGy"/>
-                            <constraint firstItem="yTa-XG-SUe" firstAttribute="width" secondItem="mUK-8g-awf" secondAttribute="width" multiplier="310/375" id="HA5-sq-KC8"/>
-                            <constraint firstItem="6oQ-Ss-IcD" firstAttribute="width" secondItem="mUK-8g-awf" secondAttribute="width" multiplier="345/375" id="QOI-pu-X9d"/>
                             <constraint firstAttribute="trailing" secondItem="g2R-G8-xLM" secondAttribute="trailing" id="bvU-T9-R5i"/>
-                            <constraint firstItem="FDc-Dt-1rK" firstAttribute="width" secondItem="mUK-8g-awf" secondAttribute="width" multiplier="36/375" id="c93-LF-g52"/>
                             <constraint firstAttribute="trailing" secondItem="fab-Rq-uAK" secondAttribute="trailing" id="fMp-Cc-9D0"/>
                             <constraint firstItem="X3P-di-CeV" firstAttribute="width" secondItem="mUK-8g-awf" secondAttribute="width" multiplier="343/375" id="g0h-HA-Kaj"/>
                             <constraint firstItem="fab-Rq-uAK" firstAttribute="top" secondItem="g2R-G8-xLM" secondAttribute="bottom" id="gCm-8D-Fpb"/>
                             <constraint firstItem="fab-Rq-uAK" firstAttribute="leading" secondItem="mUK-8g-awf" secondAttribute="leading" id="nB5-7m-M7P"/>
-                            <constraint firstItem="1xd-jz-qMo" firstAttribute="width" secondItem="mUK-8g-awf" secondAttribute="width" multiplier="270/375" id="yEX-Vd-sJS"/>
-                            <constraint firstItem="chs-qS-Cfo" firstAttribute="height" secondItem="mUK-8g-awf" secondAttribute="height" multiplier="110/667" id="zTl-tz-uuU"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1712"/>
+                    <size key="freeformSize" width="375" height="1100"/>
                     <connections>
-                        <outlet property="activitiesCollectionView" destination="1xd-jz-qMo" id="M3d-Av-Iyv"/>
-                        <outlet property="availabilityCollectionView" destination="6oQ-Ss-IcD" id="ghV-k3-fcS"/>
                         <outlet property="cancelButton" destination="kbK-tk-laz" id="J7A-h5-6na"/>
                         <outlet property="contentScrollView" destination="fab-Rq-uAK" id="RBs-kD-6So"/>
                         <outlet property="doneButton" destination="eGK-nt-opT" id="s5u-9o-WLu"/>
-                        <outlet property="servicesCollectionView" destination="M0A-sb-ttd" id="pcX-7A-60a"/>
+                        <outlet property="femaleButton" destination="k2s-5L-8wz" id="ohd-gi-hgV"/>
+                        <outlet property="maleButton" destination="kPn-PX-56S" id="cuD-Wi-O2O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59W-Fk-zJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2855,7 +2788,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a password of at least 5 characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-dk-e66">
-                                <rect key="frame" x="45" y="297" width="286.5" height="16"/>
+                                <rect key="frame" x="44.5" y="297" width="286.5" height="16"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -3017,7 +2950,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">http://www.SeniorAndElderlyCare.ie.acts as an online portal to introduce Care Seeker or Care providers to each other. When you enter into a contract for the supply of services and/or any goods with a Care Seeker or a Care Provider advertised on our site, the contract will be between the Care Seeker and the Care Provider.</mutableString>
+                                        <string key="content">http://www.SeniorAndElderlyCare.ie.acts as an online portal to introduce Care Seeker or Care providers to each other. When you enter into a contract for the supply of services and/or any goods with a Care Seeker or a Care Provider advertised on our site, the contract will be between the Care Seeker and the Care Provider.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3070,7 +3003,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">2.1 You need to register with us as a member (Member) in order to participate in the Services. A Member can be a care Provider (a person or organisation offering babysitting, elderly care, pet care, childminding, nanny care, nursery, private tutoring, midwifery or maternity nursing services) or a Care Seeker. Care Providers can advertise their services via our site and Care Seekers can search directories on our site to find a local Care Provider. </mutableString>
+                                        <string key="content">2.1 You need to register with us as a member (Member) in order to participate in the Services. A Member can be a care Provider (a person or organisation offering babysitting, elderly care, pet care, childminding, nanny care, nursery, private tutoring, midwifery or maternity nursing services) or a Care Seeker. Care Providers can advertise their services via our site and Care Seekers can search directories on our site to find a local Care Provider. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3094,7 +3027,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">2.2 Our site and our Services are only intended for use by people resident in the Republic Of Ireland and Northern Ireland and are not available to persons outside the these jurisdictions. By applying to be a Member, you warrant that you are based in the Republic Of Ireland or Northern Ireland and you are at least 18 years old. You agree that you will not create multiple accounts with us. We do not accept applications from care agencies without prior consent. </mutableString>
+                                        <string key="content">2.2 Our site and our Services are only intended for use by people resident in the Republic Of Ireland and Northern Ireland and are not available to persons outside the these jurisdictions. By applying to be a Member, you warrant that you are based in the Republic Of Ireland or Northern Ireland and you are at least 18 years old. You agree that you will not create multiple accounts with us. We do not accept applications from care agencies without prior consent. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3190,7 +3123,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">2.6 If you choose to become a bronze, silver, gold or platinum member, your membership subscription will either be for a minimum duration of a one month period, three-month, six months or a twelve-month period. Your membership/subscription will automatically renew for successive periods of the same duration (that is, for a further month, three months, six months, or twelve months, as applicable) unless and until either party gives to the other not less than 7 days notice prior to the next renewal date that it does not wish to continue the subscription / membership and/or the contract between us is otherwise terminated in accordance with these Conditions. We reserve the right to suspend/terminate your membership earlier in accordance with the provisions of clause 13 below. </mutableString>
+                                        <string key="content">2.6 If you choose to become a bronze, silver, gold or platinum member, your membership subscription will either be for a minimum duration of a one month period, three-month, six months or a twelve-month period. Your membership/subscription will automatically renew for successive periods of the same duration (that is, for a further month, three months, six months, or twelve months, as applicable) unless and until either party gives to the other not less than 7 days notice prior to the next renewal date that it does not wish to continue the subscription / membership and/or the contract between us is otherwise terminated in accordance with these Conditions. We reserve the right to suspend/terminate your membership earlier in accordance with the provisions of clause 13 below. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3214,7 +3147,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">2.7 Until we or you have given the not less than 7 days prior notice to terminate your subscription/ membership at or before the next renewal date, and/or the contract between us is otherwise terminated in accordance with these Conditions, you shall remain liable for the Membership Fee due on any automatic renewals at the then current rate. Subscriptions must be cancelled by you online via our contact us page. </mutableString>
+                                        <string key="content">2.7 Until we or you have given the not less than 7 days prior notice to terminate your subscription/ membership at or before the next renewal date, and/or the contract between us is otherwise terminated in accordance with these Conditions, you shall remain liable for the Membership Fee due on any automatic renewals at the then current rate. Subscriptions must be cancelled by you online via our contact us page. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3261,7 +3194,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">2.9 Unlimited mail as referenced in our Gold membership plans refers to unlimited use of mail sent from Parents to caregivers in the normal interaction between Parent and Caregiver. Unlimited mail does not include bulk emailing whether personal or business. Bulk emailing is considered spam emailing and can result in account suspension.</mutableString>
+                                        <string key="content">2.9 Unlimited mail as referenced in our Gold membership plans refers to unlimited use of mail sent from Parents to caregivers in the normal interaction between Parent and Caregiver. Unlimited mail does not include bulk emailing whether personal or business. Bulk emailing is considered spam emailing and can result in account suspension.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3313,7 +3246,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.offers various Services to help its users find, coordinate, and maintain quality care. The Services we offer include, among others: We enable individuals seeking care services (such as child care, senior care, special needs, pet care, tutoring and housekeeping services) and corporate care providers seeking individual care providers to hire (such as child centers, in-home care agencies, and senior living facilities) (each "Care Seekers") to post jobs on the Site, and we enable individuals and entities who provide care services ("Care Providers") to post profiles on the Site and apply to jobs. We provide search functionality on the Site to allow Care Seekers and individual Care Providers to narrow the pool of Care Seekers or Care Providers they are interested in meeting based on their needs and preferences, and we provide a communications platform that allows Care Seekers and Care Providers to communicate without sharing contact information. We may provide a directory of entity Care Providers such as child care centers, family child care centers, nanny agencies, au pairs agencies, summer camps, tutoring centers, in-home care agencies, senior care housing companies and housekeepers that users may contact or request information from. The Site enables Registered Users to communicate and share information with other Registered Users who share a common interest or bond. Our Services continue to grow and change. Please refer to our Site for further information about the Services we provide.  3.1. Limitations of our Services We offer a variety of Services to help our users find, coordinate, and maintain care for their families. However, we do not employ any Care Providers. Care Seekers are the potential employers of Care Providers and are responsible for compliance with all applicable employment and other laws in connection with any employment relationship they establish (such as applicable payroll, tax and minimum wage laws). We neither refer or recommend Care Seekers or Care Providers nor make any representations about the suitability, reliability, timeliness, and accuracy of the services provided by Care Providers or the integrity, responsibility or actions of Care Seekers or Care Providers whether in public, private or offline interactions. Care Seeker and Care Provider content is user generated, and we do not control or vet user generated content for accuracy. http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.does not assume any responsibility for the accuracy or reliability of any information provided by Care Providers or Care Seekers on or off these WebSites.  3.2. User Responsibilities Any screening of a Care Seeker or Care Provider and his, her or its information by http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.is limited and should not be taken as complete, accurate, up-to-date or conclusive of the individual's or entity's suitability as an employer or care provider. Registered Users are solely responsible for interviewing, performing background and reference checks on, verifying information provided by, and selecting an appropriate Care Seeker or Care Provider for themselves or their family. Each Care Seeker is responsible for complying with all applicable employment and other laws in connection with any employment relationship they establish, including verifying the age of the Care Provider they select as well as that Care Provider's eligibility to work in the Republic of Ireland.  3.3 We at http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.are not a party to the contractual relationship between the Care Seeker and Care provider (whether an oral, written or other contract). It is up to you to ensure that you are satisfied of the suitability of any engagement, to confirm the identity and the status of those involved and to check any credentials and we shall have no input or liability in that respect.  3.4 You acknowledge and agree that in making the site and any adverts or profiles placed by you available via the site we are not acting as an agent of any visitors to our website or as an agent of any Care seeker or Care provider  3.5 We do not assume any responsibility for services provided by or between Care seeker or Care provider or any other third party suppliers or any statements made by them and we make no representations or warranties, whether express or implied, about the suitability or quality of any services or goods which appear on our site or any statements made about them (including, but not limited to, any profiles or Care seeker' reviews of Care providers). In addition, we take no steps to verify the identity of any Care seeker or Care provider, any statement made about them or any relevant qualifications or experience.  3.6 We do not endorse any comments, opinions or reviews made by anyone on our site and we do not review their accuracy or content, but we reserve the right to remove any comments, opinions, reviews or other materials from our site which we believe do not comply with our acceptable use policy Without prejudice to the generality of the above:  (a) where you are a Care Provider, you will be solely responsible for the engagement of a Care Seeker on terms acceptable to you, for verification of its identity, qualifications, credentials and experience and for all necessary direction, supervision and control;  (b) Where you are a Care Provider, you acknowledge that we do not guarantee any recruitment or engagement of you by a Care Seeker and you must satisfy yourself of the suitability of any engagement and any arrangements between you.  3.7 We may also provide links on our site to the websites of other companies, whether affiliated with us or not. We cannot give any undertaking that products or services you purchase from third party sellers through our site, or from companies to whose website we have provided a link on our site, will be of satisfactory quality, and any such warranties are disclaimed by us absolutely. This disclaimer does not affect your statutory rights against the third party seller.  3.8 Nothing in these Conditions shall be deemed to constitute a partnership or an employment relationship between you and us, nor will anything be deemed to constitute one party the agent of the other for any purpose.  3.9 You shall indemnify us against all costs, claims, damages, losses and expenses arising as a result of any claim or action suffered by us in the event:  (a) That we are held to be acting as your agent in performing our obligations or any Services under these Conditions;  (b) Of any breach by you of these Conditions;  (c) Of any dispute between any Care seeker or Care provider.</mutableString>
+                                        <string key="content">http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.offers various Services to help its users find, coordinate, and maintain quality care. The Services we offer include, among others: We enable individuals seeking care services (such as child care, senior care, special needs, pet care, tutoring and housekeeping services) and corporate care providers seeking individual care providers to hire (such as child centers, in-home care agencies, and senior living facilities) (each "Care Seekers") to post jobs on the Site, and we enable individuals and entities who provide care services ("Care Providers") to post profiles on the Site and apply to jobs. We provide search functionality on the Site to allow Care Seekers and individual Care Providers to narrow the pool of Care Seekers or Care Providers they are interested in meeting based on their needs and preferences, and we provide a communications platform that allows Care Seekers and Care Providers to communicate without sharing contact information. We may provide a directory of entity Care Providers such as child care centers, family child care centers, nanny agencies, au pairs agencies, summer camps, tutoring centers, in-home care agencies, senior care housing companies and housekeepers that users may contact or request information from. The Site enables Registered Users to communicate and share information with other Registered Users who share a common interest or bond. Our Services continue to grow and change. Please refer to our Site for further information about the Services we provide.  3.1. Limitations of our Services We offer a variety of Services to help our users find, coordinate, and maintain care for their families. However, we do not employ any Care Providers. Care Seekers are the potential employers of Care Providers and are responsible for compliance with all applicable employment and other laws in connection with any employment relationship they establish (such as applicable payroll, tax and minimum wage laws). We neither refer or recommend Care Seekers or Care Providers nor make any representations about the suitability, reliability, timeliness, and accuracy of the services provided by Care Providers or the integrity, responsibility or actions of Care Seekers or Care Providers whether in public, private or offline interactions. Care Seeker and Care Provider content is user generated, and we do not control or vet user generated content for accuracy. http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.does not assume any responsibility for the accuracy or reliability of any information provided by Care Providers or Care Seekers on or off these WebSites.  3.2. User Responsibilities Any screening of a Care Seeker or Care Provider and his, her or its information by http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.is limited and should not be taken as complete, accurate, up-to-date or conclusive of the individual's or entity's suitability as an employer or care provider. Registered Users are solely responsible for interviewing, performing background and reference checks on, verifying information provided by, and selecting an appropriate Care Seeker or Care Provider for themselves or their family. Each Care Seeker is responsible for complying with all applicable employment and other laws in connection with any employment relationship they establish, including verifying the age of the Care Provider they select as well as that Care Provider's eligibility to work in the Republic of Ireland.  3.3 We at http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.are not a party to the contractual relationship between the Care Seeker and Care provider (whether an oral, written or other contract). It is up to you to ensure that you are satisfied of the suitability of any engagement, to confirm the identity and the status of those involved and to check any credentials and we shall have no input or liability in that respect.  3.4 You acknowledge and agree that in making the site and any adverts or profiles placed by you available via the site we are not acting as an agent of any visitors to our website or as an agent of any Care seeker or Care provider  3.5 We do not assume any responsibility for services provided by or between Care seeker or Care provider or any other third party suppliers or any statements made by them and we make no representations or warranties, whether express or implied, about the suitability or quality of any services or goods which appear on our site or any statements made about them (including, but not limited to, any profiles or Care seeker' reviews of Care providers). In addition, we take no steps to verify the identity of any Care seeker or Care provider, any statement made about them or any relevant qualifications or experience.  3.6 We do not endorse any comments, opinions or reviews made by anyone on our site and we do not review their accuracy or content, but we reserve the right to remove any comments, opinions, reviews or other materials from our site which we believe do not comply with our acceptable use policy Without prejudice to the generality of the above:  (a) where you are a Care Provider, you will be solely responsible for the engagement of a Care Seeker on terms acceptable to you, for verification of its identity, qualifications, credentials and experience and for all necessary direction, supervision and control;  (b) Where you are a Care Provider, you acknowledge that we do not guarantee any recruitment or engagement of you by a Care Seeker and you must satisfy yourself of the suitability of any engagement and any arrangements between you.  3.7 We may also provide links on our site to the websites of other companies, whether affiliated with us or not. We cannot give any undertaking that products or services you purchase from third party sellers through our site, or from companies to whose website we have provided a link on our site, will be of satisfactory quality, and any such warranties are disclaimed by us absolutely. This disclaimer does not affect your statutory rights against the third party seller.  3.8 Nothing in these Conditions shall be deemed to constitute a partnership or an employment relationship between you and us, nor will anything be deemed to constitute one party the agent of the other for any purpose.  3.9 You shall indemnify us against all costs, claims, damages, losses and expenses arising as a result of any claim or action suffered by us in the event:  (a) That we are held to be acting as your agent in performing our obligations or any Services under these Conditions;  (b) Of any breach by you of these Conditions;  (c) Of any dispute between any Care seeker or Care provider.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -3364,7 +3297,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">4.1 Any rights regarding cancellation and refunds will be at our sole discretion and no such refunds will be given where you have breached these Conditions.  4.2 You are informed that you have a period of seven working days starting from the time of your first purchase on the Website to obtain a full refund of your purchase. However, this right is lost should you access and or use the element of the service you purchased. This right only applies to your first payment and not to subsequent auto-renewed subscriptions.</mutableString>
+                                        <string key="content">4.1 Any rights regarding cancellation and refunds will be at our sole discretion and no such refunds will be given where you have breached these Conditions.  4.2 You are informed that you have a period of seven working days starting from the time of your first purchase on the Website to obtain a full refund of your purchase. However, this right is lost should you access and or use the element of the service you purchased. This right only applies to your first payment and not to subsequent auto-renewed subscriptions.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -3415,7 +3348,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">5.1 Access to our site is permitted on a temporary basis and we reserve the right to withdraw or amend the service we provide on our site without notice (see below). We will not be liable if for any reason our site is unavailable at any time or for any period.  5.2 From time to time, we may restrict access to some parts of our site, or our entire site, to users who have registered with us.  5.3 If you choose, or you are provided with, a user identification code, password or any other piece of information as part of our security procedures, you must treat such information as confidential, and you must not disclose it to any third party. We have the right to disable any user identification code or password, whether chosen by you or allocated by us, at any time, if in our opinion you have failed to comply with any of the provisions of these Conditions.  5.4 When using our site, you must comply with the provisions of our acceptable use policy set out in clauses 10 to 12 inclusive.</mutableString>
+                                        <string key="content">5.1 Access to our site is permitted on a temporary basis and we reserve the right to withdraw or amend the service we provide on our site without notice (see below). We will not be liable if for any reason our site is unavailable at any time or for any period.  5.2 From time to time, we may restrict access to some parts of our site, or our entire site, to users who have registered with us.  5.3 If you choose, or you are provided with, a user identification code, password or any other piece of information as part of our security procedures, you must treat such information as confidential, and you must not disclose it to any third party. We have the right to disable any user identification code or password, whether chosen by you or allocated by us, at any time, if in our opinion you have failed to comply with any of the provisions of these Conditions.  5.4 When using our site, you must comply with the provisions of our acceptable use policy set out in clauses 10 to 12 inclusive.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -3477,7 +3410,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">6.1 You warrant that you shall comply with the requirements of the Data Protection Act and any other relevant legal requirements in respect of data protection.  6.2 You agree to indemnify us against any loss; damages, costs and expenses (including reasonable legal fees and costs) incurred by us a result of your breach of the above warranty.  6.3 We process information about you in accordance with our privacy policy. By using our site, you consent to such processing and you warrant that all data provided by you is accurate and complete.</mutableString>
+                                        <string key="content">6.1 You warrant that you shall comply with the requirements of the Data Protection Act and any other relevant legal requirements in respect of data protection.  6.2 You agree to indemnify us against any loss; damages, costs and expenses (including reasonable legal fees and costs) incurred by us a result of your breach of the above warranty.  6.3 We process information about you in accordance with our privacy policy. By using our site, you consent to such processing and you warrant that all data provided by you is accurate and complete.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -3528,7 +3461,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">7.1 We are the owner or the licensee of all intellectual property rights in our site, and in the material published on it. Those works are protected by copyright laws and treaties around the world. All such rights are reserved.  7.2 You must not use any part of the materials on our site for commercial purposes without obtaining a licence to do so from us or our licensors.  7.3 http://www.mindme.ie is a trade mark and a domain name owned us.</mutableString>
+                                        <string key="content">7.1 We are the owner or the licensee of all intellectual property rights in our site, and in the material published on it. Those works are protected by copyright laws and treaties around the world. All such rights are reserved.  7.2 You must not use any part of the materials on our site for commercial purposes without obtaining a licence to do so from us or our licensors.  7.3 http://www.mindme.ie is a trade mark and a domain name owned us.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -3579,7 +3512,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">8.1 Commentary and other materials posted on our site are for guidance purposes only. We therefore disclaim all liability and responsibility arising from any reliance placed on such materials by any visitor to our site, or by anyone who may be informed of any of its contents. You must make all appropriate investigations before entering into an engagement with a Care seeker or Care provider  8.2 We aim to update our site regularly, and may change the content at any time. If the need arises, we may suspend access to our site, or close it indefinitely. Any of the material on our site may be out of date at any given time, and we are under no obligation to verify or update such material.  8.3 Any information is provided for your personal use and it must not be used for any further commercial purpose, such as the resale or further distribution to a wider audience.</mutableString>
+                                        <string key="content">8.1 Commentary and other materials posted on our site are for guidance purposes only. We therefore disclaim all liability and responsibility arising from any reliance placed on such materials by any visitor to our site, or by anyone who may be informed of any of its contents. You must make all appropriate investigations before entering into an engagement with a Care seeker or Care provider  8.2 We aim to update our site regularly, and may change the content at any time. If the need arises, we may suspend access to our site, or close it indefinitely. Any of the material on our site may be out of date at any given time, and we are under no obligation to verify or update such material.  8.3 Any information is provided for your personal use and it must not be used for any further commercial purpose, such as the resale or further distribution to a wider audience.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -3630,7 +3563,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">9.1 The material displayed on our site is provided without any guarantees, conditions or warranties as to its accuracy. To the extent permitted by law, we and third parties connected to us hereby expressly exclude:  (a) all conditions, warranties and other terms which might otherwise be implied by statute, common law or the law of equity.  (b) any liability for any direct, indirect or consequential loss or damage incurred by any user in connection with the Services, our site or in connection with the use, inability to use, or results of the use of our site, any websites linked to it and any materials posted on it, including, without limitation any liability for loss of income or revenue; loss of business; loss of profits or contracts; loss of anticipated savings; loss of data; loss of goodwill; wasted management or office time; and for any other loss or damage of any kind, however arising and whether caused by tort (including negligence), breach of contract or otherwise, even if foreseeable.  9.2 This does not affect our liability for death or personal injury arising from our negligence, nor our liability for fraudulent misrepresentation or misrepresentation as to a fundamental matter, nor any other liability which cannot be excluded or limited under applicable law.  9.3 Subject to clauses 9.1, 9.2 and 9.4, the Company's aggregate liability in respect of claims based on events arising out of or in connection with the Services, these Conditions or any collateral contract, whether in contract or tort (including negligence) or otherwise, shall in no circumstances exceed the total charges paid by you for Membership Fees in the calendar year in which the claim arises.  9.4 We will not be liable for any loss or damage caused by a distributed denial-of-service attack, viruses or other technologically harmful material that may infect your computer equipment, computer programs, data or other proprietary material due to your use of our site or to your downloading of any material posted on it, or on any website linked to it.</mutableString>
+                                        <string key="content">9.1 The material displayed on our site is provided without any guarantees, conditions or warranties as to its accuracy. To the extent permitted by law, we and third parties connected to us hereby expressly exclude:  (a) all conditions, warranties and other terms which might otherwise be implied by statute, common law or the law of equity.  (b) any liability for any direct, indirect or consequential loss or damage incurred by any user in connection with the Services, our site or in connection with the use, inability to use, or results of the use of our site, any websites linked to it and any materials posted on it, including, without limitation any liability for loss of income or revenue; loss of business; loss of profits or contracts; loss of anticipated savings; loss of data; loss of goodwill; wasted management or office time; and for any other loss or damage of any kind, however arising and whether caused by tort (including negligence), breach of contract or otherwise, even if foreseeable.  9.2 This does not affect our liability for death or personal injury arising from our negligence, nor our liability for fraudulent misrepresentation or misrepresentation as to a fundamental matter, nor any other liability which cannot be excluded or limited under applicable law.  9.3 Subject to clauses 9.1, 9.2 and 9.4, the Company's aggregate liability in respect of claims based on events arising out of or in connection with the Services, these Conditions or any collateral contract, whether in contract or tort (including negligence) or otherwise, shall in no circumstances exceed the total charges paid by you for Membership Fees in the calendar year in which the claim arises.  9.4 We will not be liable for any loss or damage caused by a distributed denial-of-service attack, viruses or other technologically harmful material that may infect your computer equipment, computer programs, data or other proprietary material due to your use of our site or to your downloading of any material posted on it, or on any website linked to it.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -3681,7 +3614,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">10.1 Whenever you make use of a feature that allows you to upload material to our site, or to make contact with other users of our site, you must comply with the acceptable use policy set out in clauses 10 to 12 inclusive. You warrant that any such contributions (Contributions) do comply with that policy, and you indemnify us for any breach of that warranty.  10.2 Any material you upload to our site will be considered non-proprietary and we have the right to use, copy, distribute and disclose to third parties any such material in accordance with these Conditions and our Privacy Policy. We also have the right to disclose your identity to any third party who is claiming that any material posted or uploaded by you to our site constitutes a violation of their intellectual property or other rights.  10.3 We will not be responsible, or liable to any third party, for the content or accuracy of any materials posted by you or any other user of our site.  10.4 Contributions must be accurate (where they state facts), be genuinely held (where they state opinions) and comply with applicable law in the Republic of Ireland and in any country from which they are posted.  10.5 Contributions must not:  (a) Contain any material which is defamatory of any person;  (b) Contain any material which is obscene, offensive, hateful or inflammatory;  (c) Promote sexually explicit material;  (d) Promote violence.  (e) Promote discrimination based on race, sex, religion, nationality, disability, sexual orientation or age;  (f) Infringe any copyright, database right or trade mark of any other person;  (g) Be likely to deceive any person;  (h) Be made in breach of any legal duty owed to a third party, such as a contractual duty or a duty of confidence;  (I) promote any illegal activity;  (j) Be threatening, abuse or invade another's privacy, or cause annoyance, inconvenience or needless anxiety; (K) Be likely to harass, upset, embarrass alarm or annoy any other person;  (l) Be used to impersonate any person, or to misrepresent your identity or affiliation with any person;  (m) Give the impression that they emanate from us, if this is not the case; or  (n) Advocate, promote or assist any unlawful act such as (by way of example only) copyright infringement or computer misuse.  (o) contain any direct contact details including email addresses, phone numbers, web addresses, facebook pages or similar unless it is expressly stated that they are allowed.  10.6 We have the right to remove any material or posting you make on our site if, in our opinion, such material does not comply with our acceptable use policy set out in clauses 10 to 12 inclusive or as we believe in our sole discretion is prudent or necessary to minimise or eliminate our potential liability.  10.7 You shall be responsible for the accuracy and completeness of your Contributions and for ensuring that that they are current and up to date.  10.8 We have no obligation to you, and undertake no responsibility, to review your Contributions (including user-generated content) to determine whether they may result in any liability to any third party.  10.9 You shall indemnify us against all damages, losses and expenses arising as a result of any action or claim that any material posted, or linked to, our site by you constitutes a breach of our acceptable use policy set out in clauses 10 to 12 inclusive.</mutableString>
+                                        <string key="content">10.1 Whenever you make use of a feature that allows you to upload material to our site, or to make contact with other users of our site, you must comply with the acceptable use policy set out in clauses 10 to 12 inclusive. You warrant that any such contributions (Contributions) do comply with that policy, and you indemnify us for any breach of that warranty.  10.2 Any material you upload to our site will be considered non-proprietary and we have the right to use, copy, distribute and disclose to third parties any such material in accordance with these Conditions and our Privacy Policy. We also have the right to disclose your identity to any third party who is claiming that any material posted or uploaded by you to our site constitutes a violation of their intellectual property or other rights.  10.3 We will not be responsible, or liable to any third party, for the content or accuracy of any materials posted by you or any other user of our site.  10.4 Contributions must be accurate (where they state facts), be genuinely held (where they state opinions) and comply with applicable law in the Republic of Ireland and in any country from which they are posted.  10.5 Contributions must not:  (a) Contain any material which is defamatory of any person;  (b) Contain any material which is obscene, offensive, hateful or inflammatory;  (c) Promote sexually explicit material;  (d) Promote violence.  (e) Promote discrimination based on race, sex, religion, nationality, disability, sexual orientation or age;  (f) Infringe any copyright, database right or trade mark of any other person;  (g) Be likely to deceive any person;  (h) Be made in breach of any legal duty owed to a third party, such as a contractual duty or a duty of confidence;  (I) promote any illegal activity;  (j) Be threatening, abuse or invade another's privacy, or cause annoyance, inconvenience or needless anxiety; (K) Be likely to harass, upset, embarrass alarm or annoy any other person;  (l) Be used to impersonate any person, or to misrepresent your identity or affiliation with any person;  (m) Give the impression that they emanate from us, if this is not the case; or  (n) Advocate, promote or assist any unlawful act such as (by way of example only) copyright infringement or computer misuse.  (o) contain any direct contact details including email addresses, phone numbers, web addresses, facebook pages or similar unless it is expressly stated that they are allowed.  10.6 We have the right to remove any material or posting you make on our site if, in our opinion, such material does not comply with our acceptable use policy set out in clauses 10 to 12 inclusive or as we believe in our sole discretion is prudent or necessary to minimise or eliminate our potential liability.  10.7 You shall be responsible for the accuracy and completeness of your Contributions and for ensuring that that they are current and up to date.  10.8 We have no obligation to you, and undertake no responsibility, to review your Contributions (including user-generated content) to determine whether they may result in any liability to any third party.  10.9 You shall indemnify us against all damages, losses and expenses arising as a result of any action or claim that any material posted, or linked to, our site by you constitutes a breach of our acceptable use policy set out in clauses 10 to 12 inclusive.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -3732,7 +3665,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">11.1 You may use our site only for lawful purposes. You may not use our site:  (a) In any way that breaches any applicable local, national or international law or regulation;  (b) In any way that is unlawful or fraudulent, or has any unlawful or fraudulent purpose or effect;  (c) For the purpose of harming or attempting to harm minors in any way;  (d) To send, knowingly receive, upload, download, use or re-use any material which does not comply with our acceptable use policy as set out in clauses 10 to 12 inclusive;  (e) To transmit or procure the sending of, any unsolicited or unauthorised advertising or promotional material or any other form of similar solicitation (spam);  (f) To knowingly transmit any data, send or upload any material that contains viruses, Trojan horses, worms, time-bombs, keystroke loggers, spyware, adware or any other harmful programs or similar computer code designed to adversely affect the operation of any computer software or hardware.  11.2 You also agree not to access without authority, interfere with, damage or disrupt:  (a) Any part of our site;  (b) Any equipment or network on which our site is stored;  (c) Any software used in the provision of our site; or  (d) Any equipment or network or software owned or used by any third party.</mutableString>
+                                        <string key="content">11.1 You may use our site only for lawful purposes. You may not use our site:  (a) In any way that breaches any applicable local, national or international law or regulation;  (b) In any way that is unlawful or fraudulent, or has any unlawful or fraudulent purpose or effect;  (c) For the purpose of harming or attempting to harm minors in any way;  (d) To send, knowingly receive, upload, download, use or re-use any material which does not comply with our acceptable use policy as set out in clauses 10 to 12 inclusive;  (e) To transmit or procure the sending of, any unsolicited or unauthorised advertising or promotional material or any other form of similar solicitation (spam);  (f) To knowingly transmit any data, send or upload any material that contains viruses, Trojan horses, worms, time-bombs, keystroke loggers, spyware, adware or any other harmful programs or similar computer code designed to adversely affect the operation of any computer software or hardware.  11.2 You also agree not to access without authority, interfere with, damage or disrupt:  (a) Any part of our site;  (b) Any equipment or network on which our site is stored;  (c) Any software used in the provision of our site; or  (d) Any equipment or network or software owned or used by any third party.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -3783,7 +3716,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">12.1 We may from time to time provide interactive services on our site, including, without limitation, chat rooms and bulletin boards (Interactive Services). Where we do provide any Interactive Service, we will provide clear information to you about the kind of service offered, if it is moderated and what form of moderation is used (including whether it is human or technical).  12.2 We will do our best to assess any possible risks for users (and in particular, for children) from third parties when they use any Interactive Service provided on our site, and we will decide in each case whether it is appropriate to use moderation of the relevant service (including what kind of moderation to use) in the light of those risks. However, we are under no obligation to oversee, monitor or moderate any Interactive Service we provide on our site, and we expressly exclude our liability for any loss or damage arising from the use of any Interactive Service by a user in contravention of our content standards, whether the service is moderated or not.</mutableString>
+                                        <string key="content">12.1 We may from time to time provide interactive services on our site, including, without limitation, chat rooms and bulletin boards (Interactive Services). Where we do provide any Interactive Service, we will provide clear information to you about the kind of service offered, if it is moderated and what form of moderation is used (including whether it is human or technical).  12.2 We will do our best to assess any possible risks for users (and in particular, for children) from third parties when they use any Interactive Service provided on our site, and we will decide in each case whether it is appropriate to use moderation of the relevant service (including what kind of moderation to use) in the light of those risks. However, we are under no obligation to oversee, monitor or moderate any Interactive Service we provide on our site, and we expressly exclude our liability for any loss or damage arising from the use of any Interactive Service by a user in contravention of our content standards, whether the service is moderated or not.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -3834,7 +3767,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">13.1 We will determine, in our discretion, whether there has been a breach of these Conditions through your use of our site. When a breach of these Conditions has occurred, we may take such action as we deem appropriate.  13.2 Failure to comply with these Conditions may result in our taking all or any of the following actions:  (a) Immediate, temporary or permanent withdrawal of your membership and the right to use our site;  (b) Immediate, temporary or permanent removal of any posting or material uploaded by you to our site;  (c) Issue of a warning to you;  (d) Legal proceedings against you for reimbursement of all costs on an indemnity basis (including, but not limited to, reasonable administrative and legal costs) resulting from the breach;  (e) Further legal action against you; or  (f) Disclosure of such information to law enforcement authorities as we reasonably feel is necessary.  13.3 We exclude liability for actions taken in response to breaches of these Conditions. The responses described above are not limited, and we may take any other action we reasonably deem appropriate.  13.4 You are responsible for cancelling your membership subscription and/or closing your account when you no longer require our services. Hiding your profile from public view will not cancel your subscription or close your account. To cancel your membership subscription and/or close your account goes to Help and Membership on your members menu</mutableString>
+                                        <string key="content">13.1 We will determine, in our discretion, whether there has been a breach of these Conditions through your use of our site. When a breach of these Conditions has occurred, we may take such action as we deem appropriate.  13.2 Failure to comply with these Conditions may result in our taking all or any of the following actions:  (a) Immediate, temporary or permanent withdrawal of your membership and the right to use our site;  (b) Immediate, temporary or permanent removal of any posting or material uploaded by you to our site;  (c) Issue of a warning to you;  (d) Legal proceedings against you for reimbursement of all costs on an indemnity basis (including, but not limited to, reasonable administrative and legal costs) resulting from the breach;  (e) Further legal action against you; or  (f) Disclosure of such information to law enforcement authorities as we reasonably feel is necessary.  13.3 We exclude liability for actions taken in response to breaches of these Conditions. The responses described above are not limited, and we may take any other action we reasonably deem appropriate.  13.4 You are responsible for cancelling your membership subscription and/or closing your account when you no longer require our services. Hiding your profile from public view will not cancel your subscription or close your account. To cancel your membership subscription and/or close your account goes to Help and Membership on your members menu</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -3900,7 +3833,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">14.1 You may link to our home page, or any other public page on our website, provided you do so in a way that is fair and legal and does not damage our reputation or take advantage of it, but you must not establish a link in such a way as to suggest any form of association, approval or endorsement on our part where none exists. You must not establish a link from any website that is not owned by you.  14.2 Our site must not be framed on any other site, nor may you create a link to any part of our site other than the home page. We reserve the right to withdraw linking permission without notice. The website from which you are linking must comply in all respects with the content standards set out above.  14.3 If you wish to make any use of material on our site other than that set out above, please address your request to us via our website contact page  14.4 Where our site contains links to other sites and resources provided by third parties, these links are provided for your information only. We have no control over the contents of those sites or resources, and accept no responsibility for them or for any loss or damage that may arise from your use of them.</mutableString>
+                                        <string key="content">14.1 You may link to our home page, or any other public page on our website, provided you do so in a way that is fair and legal and does not damage our reputation or take advantage of it, but you must not establish a link in such a way as to suggest any form of association, approval or endorsement on our part where none exists. You must not establish a link from any website that is not owned by you.  14.2 Our site must not be framed on any other site, nor may you create a link to any part of our site other than the home page. We reserve the right to withdraw linking permission without notice. The website from which you are linking must comply in all respects with the content standards set out above.  14.3 If you wish to make any use of material on our site other than that set out above, please address your request to us via our website contact page  14.4 Where our site contains links to other sites and resources provided by third parties, these links are provided for your information only. We have no control over the contents of those sites or resources, and accept no responsibility for them or for any loss or damage that may arise from your use of them.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -3955,7 +3888,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Applicable laws require that some of the information or communications we send to you should be in writing. When using our site, you accept that communication with us will be mainly electronic. We will contact you by e-mail or provide you with information by posting notices on our website. For contractual purposes, you agree to this electronic means of communication and you acknowledge that all contracts, notices, information and other communications that we provide to you electronically comply with any legal requirement that such communications be in writing. This condition does not affect your statutory rights.</mutableString>
+                                        <string key="content">Applicable laws require that some of the information or communications we send to you should be in writing. When using our site, you accept that communication with us will be mainly electronic. We will contact you by e-mail or provide you with information by posting notices on our website. For contractual purposes, you agree to this electronic means of communication and you acknowledge that all contracts, notices, information and other communications that we provide to you electronically comply with any legal requirement that such communications be in writing. This condition does not affect your statutory rights.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -4010,7 +3943,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">All notices given by you to us must be given to http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie 93 Upper Georges Street, Dun Laoghaire, Co Dublin. We may give notice to you at either the e-mail or postal address you provide to us when you join or placing an order, or in any of the ways specified in clause15 above. Notice will be deemed received and properly served immediately when posted on our website, 24 hours after an e-mail is sent, or three days after the date of posting of any letter. In proving the service of any notice, it will be sufficient to prove, in the case of a letter, that such letter was properly addressed, stamped and placed in the post and, in the case of an e-mail, that such e-mail was sent to the specified e-mail address of the addressee.</mutableString>
+                                        <string key="content">All notices given by you to us must be given to http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie 93 Upper Georges Street, Dun Laoghaire, Co Dublin. We may give notice to you at either the e-mail or postal address you provide to us when you join or placing an order, or in any of the ways specified in clause15 above. Notice will be deemed received and properly served immediately when posted on our website, 24 hours after an e-mail is sent, or three days after the date of posting of any letter. In proving the service of any notice, it will be sufficient to prove, in the case of a letter, that such letter was properly addressed, stamped and placed in the post and, in the case of an e-mail, that such e-mail was sent to the specified e-mail address of the addressee.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -4065,7 +3998,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">17.1 These Conditions are binding on you and us and on our respective successors and assignees.  17.2 You may not transfer, assign, charge or otherwise dispose of any of your rights or obligations arising under these Conditions without our prior written consent.  17.3 We may transfer, assign, charge, sub-contract or otherwise dispose of any of our rights or obligations arising under these Conditions at any time.</mutableString>
+                                        <string key="content">17.1 These Conditions are binding on you and us and on our respective successors and assignees.  17.2 You may not transfer, assign, charge or otherwise dispose of any of your rights or obligations arising under these Conditions without our prior written consent.  17.3 We may transfer, assign, charge, sub-contract or otherwise dispose of any of our rights or obligations arising under these Conditions at any time.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -4120,7 +4053,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">18.1 We will not be liable or responsible for any failure to perform, or delay in performance of, any of our obligations under these Conditions that is caused by events outside our reasonable control (Force Majeure Event).  18.2 A Force Majeure Event includes any act, event, non-happening, omission or accident beyond our reasonable control and includes in particular (without limitation) the following: strikes, lock-outs or other industrial action; civil commotion, riot, invasion, terrorist attack or threat of terrorist attack, war (whether declared or not) or threat or preparation for war; fire, explosion, storm, flood, earthquake, subsidence, epidemic or other natural disaster; impossibility of the use of railways, shipping, aircraft, motor transport or other means of public or private transport; impossibility of the use of public or private telecommunications networks; and the acts, decrees, legislation, regulations or restrictions of any government.</mutableString>
+                                        <string key="content">18.1 We will not be liable or responsible for any failure to perform, or delay in performance of, any of our obligations under these Conditions that is caused by events outside our reasonable control (Force Majeure Event).  18.2 A Force Majeure Event includes any act, event, non-happening, omission or accident beyond our reasonable control and includes in particular (without limitation) the following: strikes, lock-outs or other industrial action; civil commotion, riot, invasion, terrorist attack or threat of terrorist attack, war (whether declared or not) or threat or preparation for war; fire, explosion, storm, flood, earthquake, subsidence, epidemic or other natural disaster; impossibility of the use of railways, shipping, aircraft, motor transport or other means of public or private transport; impossibility of the use of public or private telecommunications networks; and the acts, decrees, legislation, regulations or restrictions of any government.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -4175,7 +4108,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">19.1 If we fail at any time to insist upon strict performance of any of your obligations under these Conditions, or if we fail to exercise any of the rights or remedies to which we are entitled, this will not constitute a waiver of such rights or remedies and will not relieve you from compliance with such obligations. A waiver by us of any default will not constitute a waiver of any subsequent default.  19.2 No waiver by us of any of these Conditions will be effective unless it is expressly stated to be a waiver and is communicated to you in writing in accordance with clause 15 above.</mutableString>
+                                        <string key="content">19.1 If we fail at any time to insist upon strict performance of any of your obligations under these Conditions, or if we fail to exercise any of the rights or remedies to which we are entitled, this will not constitute a waiver of such rights or remedies and will not relieve you from compliance with such obligations. A waiver by us of any default will not constitute a waiver of any subsequent default.  19.2 No waiver by us of any of these Conditions will be effective unless it is expressly stated to be a waiver and is communicated to you in writing in accordance with clause 15 above.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -4230,7 +4163,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">If any of these terms and Conditions or any provisions of a Contract are determined by any competent authority to be invalid, unlawful or unenforceable to any extent, such term, condition or provision will to that extent be severed from the remaining terms, conditions and provisions which will continue to be valid to the fullest extent permitted by law.</mutableString>
+                                        <string key="content">If any of these terms and Conditions or any provisions of a Contract are determined by any competent authority to be invalid, unlawful or unenforceable to any extent, such term, condition or provision will to that extent be severed from the remaining terms, conditions and provisions which will continue to be valid to the fullest extent permitted by law.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -4285,7 +4218,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">21.1 These Conditions and any document expressly referred to in them constitute the whole agreement between us and supersede all previous discussions, correspondence, negotiations, previous arrangement, understanding or agreement between us relating to their subject matter.  21.2 We each acknowledge that neither of us relies on, or will have any remedies in respect of, any representation or warranty (whether made innocently or negligently) that is not set out in these Conditions or the documents referred to in them.  21.3 Each of us agrees that our only liability in respect of those representations and warranties that are set out in this agreement (whether made innocently or negligently) will be for breach of contract.  21.4 Nothing in this clause limits or excludes any liability for fraud.</mutableString>
+                                        <string key="content">21.1 These Conditions and any document expressly referred to in them constitute the whole agreement between us and supersede all previous discussions, correspondence, negotiations, previous arrangement, understanding or agreement between us relating to their subject matter.  21.2 We each acknowledge that neither of us relies on, or will have any remedies in respect of, any representation or warranty (whether made innocently or negligently) that is not set out in these Conditions or the documents referred to in them.  21.3 Each of us agrees that our only liability in respect of those representations and warranties that are set out in this agreement (whether made innocently or negligently) will be for breach of contract.  21.4 Nothing in this clause limits or excludes any liability for fraud.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -4340,7 +4273,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">22.1 We have the right to revise and amend these Conditions from time to time to reflect changes in market conditions affecting our business, changes in technology, changes in payment methods, changes in relevant laws and regulatory requirements and changes in our system's capabilities.  22.2 You will be subject to the latest Conditions in force at the time that you become a Member or which are in force at the time you login to our website or when your membership is automatically renewed in accordance with clause 2.7 above, unless any change to these Conditions is required to be made by law or governmental authority.</mutableString>
+                                        <string key="content">22.1 We have the right to revise and amend these Conditions from time to time to reflect changes in market conditions affecting our business, changes in technology, changes in payment methods, changes in relevant laws and regulatory requirements and changes in our system's capabilities.  22.2 You will be subject to the latest Conditions in force at the time that you become a Member or which are in force at the time you login to our website or when your membership is automatically renewed in accordance with clause 2.7 above, unless any change to these Conditions is required to be made by law or governmental authority.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -4395,7 +4328,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">23.1 These Conditions and any dispute or claim arising out of or in connection with them or their subject matter or formation (including non-contractual disputes or claims) will be governed by law and will be subject to the non-exclusive jurisdiction of the courts of the Republic Of Ireland.</mutableString>
+                                        <string key="content">23.1 These Conditions and any dispute or claim arising out of or in connection with them or their subject matter or formation (including non-contractual disputes or claims) will be governed by law and will be subject to the non-exclusive jurisdiction of the courts of the Republic Of Ireland.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -4558,7 +4491,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">26.1 Members of the Website are permitted to search for Candidates. In order for Employers or other Members alike to contact Candidates on the Website the Employers will need to have an up to date paid for account (Subscription).  26.2 Employers can post on the Website, their need for and any roles they may have available to Candidates for free. In order for an Employer to access a reply from a Candidate; a valid Subscription is required.  26.3 In order to avoid interruption/disruption to your use of the Website; Subscriptions are made subject to automatic renewals. Should you wish to cancel your automatic renewal you may do so by contacting us via the Website. http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie. PAID MEMBERSHIP SUBSCRIPTIONS WILL CONTINUE INDEFINITELY UNTIL CANCELLED BY THE USER. AFTER YOUR INITIAL SUBSCRIPTION COMMITMENT PERIOD, AND AGAIN AFTER ANY SUBSEQUENT SUBSCRIPTION PERIOD, YOUR SUBSCRIPTION WILL AUTOMATICALLY RENEW FOR AN ADDITIONAL EQUIVALENT PERIOD AS THE SUBSCRIPTION TERM YOU ORIGINALLY SELECTED AND AT THE SUBSCRIPTION RATE AND FREQUENCY DISCLOSED TO YOU ON THE SITE WHEN YOU ORIGINALLY SUBSCRIBED, UNLESS OTHERWISE PROVIDED AT THE TIME YOU SUBSCRIBED. IF YOU SIGN UP FOR A PAYMENT PLAN THAT ALLOWS YOU TO BE CHARGED MONTHLY OVER THE SUBSCRIPTION PERIOD AND YOU DECIDE TO CANCEL YOUR SUBSCRIPTION DURING THE SUBSCRIPTION PERIOD, YOU ACKNOWLEDGE AND AGREE THAT YOU WILL CONTINUE TO BE BILLED FOR THE SUBSCRIPTION ON A MONTHLY BASIS UNTIL ITS ORIGINALLY SCHEDULED EXPIRATION DATE.</mutableString>
+                                        <string key="content">26.1 Members of the Website are permitted to search for Candidates. In order for Employers or other Members alike to contact Candidates on the Website the Employers will need to have an up to date paid for account (Subscription).  26.2 Employers can post on the Website, their need for and any roles they may have available to Candidates for free. In order for an Employer to access a reply from a Candidate; a valid Subscription is required.  26.3 In order to avoid interruption/disruption to your use of the Website; Subscriptions are made subject to automatic renewals. Should you wish to cancel your automatic renewal you may do so by contacting us via the Website. http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie. PAID MEMBERSHIP SUBSCRIPTIONS WILL CONTINUE INDEFINITELY UNTIL CANCELLED BY THE USER. AFTER YOUR INITIAL SUBSCRIPTION COMMITMENT PERIOD, AND AGAIN AFTER ANY SUBSEQUENT SUBSCRIPTION PERIOD, YOUR SUBSCRIPTION WILL AUTOMATICALLY RENEW FOR AN ADDITIONAL EQUIVALENT PERIOD AS THE SUBSCRIPTION TERM YOU ORIGINALLY SELECTED AND AT THE SUBSCRIPTION RATE AND FREQUENCY DISCLOSED TO YOU ON THE SITE WHEN YOU ORIGINALLY SUBSCRIBED, UNLESS OTHERWISE PROVIDED AT THE TIME YOU SUBSCRIBED. IF YOU SIGN UP FOR A PAYMENT PLAN THAT ALLOWS YOU TO BE CHARGED MONTHLY OVER THE SUBSCRIPTION PERIOD AND YOU DECIDE TO CANCEL YOUR SUBSCRIPTION DURING THE SUBSCRIPTION PERIOD, YOU ACKNOWLEDGE AND AGREE THAT YOU WILL CONTINUE TO BE BILLED FOR THE SUBSCRIPTION ON A MONTHLY BASIS UNTIL ITS ORIGINALLY SCHEDULED EXPIRATION DATE.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
@@ -4600,7 +4533,6 @@ Cg
         </scene>
     </scenes>
     <resources>
-        <image name="add_btn" width="90" height="80"/>
         <image name="checked" width="76" height="76"/>
         <image name="credit-card" width="512" height="512"/>
         <image name="fb_logo" width="66" height="66"/>
@@ -4608,19 +4540,16 @@ Cg
         <image name="headline_mind_me" width="556" height="88"/>
         <image name="home_screen_bg" width="1242" height="2208"/>
         <image name="homelogin" width="253" height="260"/>
-        <image name="ic_age" width="96" height="96"/>
         <image name="ic_avatar" width="96" height="96"/>
         <image name="ic_avator_orng" width="96" height="96"/>
         <image name="ic_car" width="96" height="96"/>
-        <image name="ic_categories" width="96" height="96"/>
         <image name="ic_cross" width="96" height="96"/>
         <image name="ic_email" width="96" height="96"/>
         <image name="ic_filter" width="96" height="96"/>
         <image name="ic_green_correct" width="96" height="96"/>
         <image name="ic_key" width="96" height="96"/>
-        <image name="ic_location" width="96" height="96"/>
         <image name="ic_menu_bar" width="96" height="96"/>
-        <image name="ic_pay" width="96" height="96"/>
+        <image name="ic_pay_card" width="96" height="96"/>
         <image name="ic_phone" width="96" height="96"/>
         <image name="ic_search" width="96" height="96"/>
         <image name="ic_star" width="69" height="69"/>
