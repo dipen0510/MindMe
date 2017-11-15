@@ -25,6 +25,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self setupInitialUI];
+    
+}
+
+- (void) setupInitialUI {
+    
+    _favoritesView.userInteractionEnabled = YES;
+    [_favoritesView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(favoritesViewTapped)]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -128,6 +137,12 @@
     
     [self.view addSubview:blackBgView];
     [self.view addSubview:filterViewController.view];
+    
+}
+
+- (void) favoritesViewTapped {
+    
+    [self performSegueWithIdentifier:@"showFavoritesSegue" sender:nil];
     
 }
 

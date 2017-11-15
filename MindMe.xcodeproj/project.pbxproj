@@ -28,6 +28,9 @@
 		D4736B4C1FBB05B7004A51A2 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B4B1FBB05B7004A51A2 /* TTTAttributedLabel.m */; };
 		D4736B4F1FBB0B2A004A51A2 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B4E1FBB0B2A004A51A2 /* PrivacyPolicyViewController.m */; };
 		D4736B521FBB1015004A51A2 /* TnCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B511FBB1015004A51A2 /* TnCViewController.m */; };
+		D4736B551FBC50A3004A51A2 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B541FBC50A3004A51A2 /* FavoritesViewController.m */; };
+		D4736B591FBC60B6004A51A2 /* FavoritesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B571FBC60B6004A51A2 /* FavoritesTableViewCell.m */; };
+		D4736B5A1FBC60B6004A51A2 /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4736B581FBC60B6004A51A2 /* FavoritesTableViewCell.xib */; };
 		D48EE4B31F9B2A2C00CB43A0 /* LGSideMenuHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4AA1F9B2A2C00CB43A0 /* LGSideMenuHelper.m */; };
 		D48EE4B41F9B2A2C00CB43A0 /* LGSideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4AC1F9B2A2C00CB43A0 /* LGSideMenuView.m */; };
 		D48EE4B51F9B2A2C00CB43A0 /* LGSideMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4AD1F9B2A2C00CB43A0 /* LGSideMenuSegue.m */; };
@@ -108,6 +111,11 @@
 		D4736B4E1FBB0B2A004A51A2 /* PrivacyPolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyPolicyViewController.m; sourceTree = "<group>"; };
 		D4736B501FBB1015004A51A2 /* TnCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TnCViewController.h; sourceTree = "<group>"; };
 		D4736B511FBB1015004A51A2 /* TnCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TnCViewController.m; sourceTree = "<group>"; };
+		D4736B531FBC50A3004A51A2 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		D4736B541FBC50A3004A51A2 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		D4736B561FBC60B6004A51A2 /* FavoritesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesTableViewCell.h; sourceTree = "<group>"; };
+		D4736B571FBC60B6004A51A2 /* FavoritesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesTableViewCell.m; sourceTree = "<group>"; };
+		D4736B581FBC60B6004A51A2 /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
 		D48EE4A51F9B2A2C00CB43A0 /* LGSideMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuSegue.h; sourceTree = "<group>"; };
 		D48EE4A61F9B2A2C00CB43A0 /* LGSideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuView.h; sourceTree = "<group>"; };
 		D48EE4A71F9B2A2C00CB43A0 /* LGSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuController.h; sourceTree = "<group>"; };
@@ -321,6 +329,8 @@
 				D4736B4E1FBB0B2A004A51A2 /* PrivacyPolicyViewController.m */,
 				D4736B501FBB1015004A51A2 /* TnCViewController.h */,
 				D4736B511FBB1015004A51A2 /* TnCViewController.m */,
+				D4736B531FBC50A3004A51A2 /* FavoritesViewController.h */,
+				D4736B541FBC50A3004A51A2 /* FavoritesViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -381,6 +391,9 @@
 				D420BFE71FB82DD60071E30A /* FilterMiscTableViewCell.h */,
 				D420BFE81FB82DD60071E30A /* FilterMiscTableViewCell.m */,
 				D420BFE91FB82DD60071E30A /* FilterMiscTableViewCell.xib */,
+				D4736B561FBC60B6004A51A2 /* FavoritesTableViewCell.h */,
+				D4736B571FBC60B6004A51A2 /* FavoritesTableViewCell.m */,
+				D4736B581FBC60B6004A51A2 /* FavoritesTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -508,6 +521,7 @@
 				D43143C61F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf in Resources */,
 				D4A019C11F850F0200E311B7 /* Assets.xcassets in Resources */,
 				D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */,
+				D4736B5A1FBC60B6004A51A2 /* FavoritesTableViewCell.xib in Resources */,
 				D420BFEB1FB82DD60071E30A /* FilterMiscTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +567,8 @@
 				D4736B4F1FBB0B2A004A51A2 /* PrivacyPolicyViewController.m in Sources */,
 				D4736B4C1FBB05B7004A51A2 /* TTTAttributedLabel.m in Sources */,
 				D48EE4B31F9B2A2C00CB43A0 /* LGSideMenuHelper.m in Sources */,
+				D4736B551FBC50A3004A51A2 /* FavoritesViewController.m in Sources */,
+				D4736B591FBC60B6004A51A2 /* FavoritesTableViewCell.m in Sources */,
 				D4736B521FBB1015004A51A2 /* TnCViewController.m in Sources */,
 				D48EE4B71F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.m in Sources */,
 				D41558751FB4E9590031E23F /* ChangePasswordViewController.m in Sources */,

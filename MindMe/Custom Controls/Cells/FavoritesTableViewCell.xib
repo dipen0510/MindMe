@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="17A365" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="VisbyRoundCF-DemiBold.otf">
+            <string>VisbyRoundCF-DemiBold</string>
+        </array>
+        <array key="VisbyRoundCF-Regular.otf">
+            <string>VisbyRoundCF-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoritesTableViewCell" rowHeight="200" id="kkZ-mD-0tX" customClass="FavoritesTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kkZ-mD-0tX" id="orh-Ux-zYZ">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="169.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAE-I0-Cwp">
+                        <rect key="frame" x="16" y="8" width="368" height="153.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby_pic" translatesAutoresizingMaskIntoConstraints="NO" id="5D3-3x-IGj">
+                                <rect key="frame" x="8" y="8" width="92" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5D3-3x-IGj" secondAttribute="height" multiplier="1:1" id="3OD-9J-As3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IGNALY JOSEFINA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="0ch-sf-PdE">
+                                <rect key="frame" x="108" y="8" width="137" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="QAu-mK-bKJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKI-VT-N0M">
+                                <rect key="frame" x="108" y="34" width="252" height="1"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="pXP-Au-PDy"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_eu" translatesAutoresizingMaskIntoConstraints="NO" id="lCB-E8-RUE">
+                                <rect key="frame" x="16" y="108" width="25.5" height="25.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lCB-E8-RUE" secondAttribute="height" multiplier="1:1" id="5QQ-X9-QUZ"/>
+                                    <constraint firstAttribute="width" constant="25.5" id="TFm-sW-7eA"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_car" translatesAutoresizingMaskIntoConstraints="NO" id="FZn-Ci-pc7">
+                                <rect key="frame" x="42" y="108" width="25.5" height="25.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FZn-Ci-pc7" secondAttribute="height" multiplier="1:1" id="F8X-YI-aAb"/>
+                                    <constraint firstAttribute="width" constant="25.5" id="Mgx-FF-4ye"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="G91-d7-yja">
+                                <rect key="frame" x="108" y="52" width="252" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XRA-KM-0P7"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="I have taken care of a Spanish child in Germany for 9 months. I like children, I am responsible...">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Login : 7th August 2017" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ob4-2q-nkn">
+                                <rect key="frame" x="249" y="8" width="111" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="vHv-av-eKE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmF-9c-sat">
+                                <rect key="frame" x="297" y="104" width="63" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="6mt-KI-Kh8"/>
+                                    <constraint firstAttribute="width" constant="63" id="yIz-aE-kBT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="10"/>
+                                <state key="normal" title="View More">
+                                    <color key="titleColor" red="0.90487152339999999" green="0.57823377850000002" blue="0.28885307910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_cv" translatesAutoresizingMaskIntoConstraints="NO" id="yNY-GR-DTL">
+                                <rect key="frame" x="71.5" y="111" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yNY-GR-DTL" secondAttribute="height" multiplier="1:1" id="6ur-aQ-dEG"/>
+                                    <constraint firstAttribute="width" constant="18" id="Y7Y-qH-K2v"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_liked" translatesAutoresizingMaskIntoConstraints="NO" id="QQp-Mk-ob2">
+                                <rect key="frame" x="336" y="124" width="21" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="21" id="fEE-2i-xdo"/>
+                                    <constraint firstAttribute="height" constant="21" id="gts-4T-N0V"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yNY-GR-DTL" firstAttribute="centerY" secondItem="FZn-Ci-pc7" secondAttribute="centerY" id="3dL-O5-hOc"/>
+                            <constraint firstAttribute="bottom" secondItem="QQp-Mk-ob2" secondAttribute="bottom" constant="8.5" id="4uo-K9-gYS"/>
+                            <constraint firstItem="0ch-sf-PdE" firstAttribute="leading" secondItem="5D3-3x-IGj" secondAttribute="trailing" constant="8" id="6ps-VS-wVk"/>
+                            <constraint firstItem="5D3-3x-IGj" firstAttribute="top" secondItem="KAE-I0-Cwp" secondAttribute="top" constant="8" id="8i6-ch-Ioi"/>
+                            <constraint firstItem="0ch-sf-PdE" firstAttribute="top" secondItem="KAE-I0-Cwp" secondAttribute="top" constant="8" id="8tG-3X-Wua"/>
+                            <constraint firstItem="FZn-Ci-pc7" firstAttribute="leading" secondItem="lCB-E8-RUE" secondAttribute="trailing" constant="0.5" id="Bv6-7y-QCd"/>
+                            <constraint firstItem="G91-d7-yja" firstAttribute="top" secondItem="VKI-VT-N0M" secondAttribute="bottom" constant="17" id="EpM-7C-S1g"/>
+                            <constraint firstItem="VKI-VT-N0M" firstAttribute="leading" secondItem="0ch-sf-PdE" secondAttribute="leading" id="EqB-d0-HVK"/>
+                            <constraint firstItem="5D3-3x-IGj" firstAttribute="leading" secondItem="KAE-I0-Cwp" secondAttribute="leading" constant="8" id="NcP-Rd-dwH"/>
+                            <constraint firstItem="FZn-Ci-pc7" firstAttribute="centerX" secondItem="5D3-3x-IGj" secondAttribute="centerX" id="Ovl-GH-t2P"/>
+                            <constraint firstItem="OmF-9c-sat" firstAttribute="trailing" secondItem="G91-d7-yja" secondAttribute="trailing" id="Wkz-MN-2KK"/>
+                            <constraint firstItem="QQp-Mk-ob2" firstAttribute="trailing" secondItem="OmF-9c-sat" secondAttribute="trailing" constant="-3" id="ZOm-qq-NnE"/>
+                            <constraint firstItem="FZn-Ci-pc7" firstAttribute="top" secondItem="5D3-3x-IGj" secondAttribute="bottom" constant="8" id="aXy-li-1fE"/>
+                            <constraint firstItem="VKI-VT-N0M" firstAttribute="top" secondItem="0ch-sf-PdE" secondAttribute="bottom" constant="8" id="cNe-dm-Xpz"/>
+                            <constraint firstItem="Ob4-2q-nkn" firstAttribute="top" secondItem="KAE-I0-Cwp" secondAttribute="top" constant="8" id="hXQ-9u-zdj"/>
+                            <constraint firstItem="yNY-GR-DTL" firstAttribute="leading" secondItem="FZn-Ci-pc7" secondAttribute="trailing" constant="4" id="hny-vG-JKd"/>
+                            <constraint firstAttribute="trailing" secondItem="VKI-VT-N0M" secondAttribute="trailing" constant="8" id="p5L-Cu-IVU"/>
+                            <constraint firstItem="lCB-E8-RUE" firstAttribute="top" secondItem="5D3-3x-IGj" secondAttribute="bottom" constant="8" id="pt5-dP-huD"/>
+                            <constraint firstItem="5D3-3x-IGj" firstAttribute="width" secondItem="KAE-I0-Cwp" secondAttribute="width" multiplier="0.25" id="vm3-e2-sFC"/>
+                            <constraint firstItem="OmF-9c-sat" firstAttribute="top" secondItem="G91-d7-yja" secondAttribute="bottom" constant="12" id="vu5-TT-FNh"/>
+                            <constraint firstItem="Ob4-2q-nkn" firstAttribute="leading" secondItem="0ch-sf-PdE" secondAttribute="trailing" constant="4" id="wMO-ty-qYP"/>
+                            <constraint firstItem="Ob4-2q-nkn" firstAttribute="trailing" secondItem="G91-d7-yja" secondAttribute="trailing" id="xnH-CG-vMP"/>
+                            <constraint firstItem="G91-d7-yja" firstAttribute="leading" secondItem="0ch-sf-PdE" secondAttribute="leading" id="yQD-z0-mco"/>
+                            <constraint firstAttribute="trailing" secondItem="Ob4-2q-nkn" secondAttribute="trailing" constant="8" id="zip-Rv-oA7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="KAE-I0-Cwp" secondAttribute="bottom" constant="8" id="9Tf-8p-DhV"/>
+                    <constraint firstAttribute="trailing" secondItem="KAE-I0-Cwp" secondAttribute="trailing" constant="16" id="RcW-tk-WOG"/>
+                    <constraint firstItem="KAE-I0-Cwp" firstAttribute="leading" secondItem="orh-Ux-zYZ" secondAttribute="leading" constant="16" id="fvR-rM-98O"/>
+                    <constraint firstItem="KAE-I0-Cwp" firstAttribute="top" secondItem="orh-Ux-zYZ" secondAttribute="top" constant="8" id="yIE-Sh-kkY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="containerView" destination="KAE-I0-Cwp" id="VZ5-aY-w7b"/>
+                <outlet property="drivingLicenseImgView" destination="FZn-Ci-pc7" id="yIR-3r-hRy"/>
+                <outlet property="profileImgView" destination="5D3-3x-IGj" id="zbN-xh-hna"/>
+            </connections>
+            <point key="canvasLocation" x="-27" y="41"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="baby_pic" width="253" height="250"/>
+        <image name="ic_car" width="96" height="96"/>
+        <image name="ic_cv" width="96" height="96"/>
+        <image name="ic_eu" width="96" height="96"/>
+        <image name="ic_liked" width="96" height="96"/>
+    </resources>
+</document>
