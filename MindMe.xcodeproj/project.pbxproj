@@ -66,6 +66,7 @@
 		D4F05F231FBDC02D002024F6 /* AdvertsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F05F211FBDC02D002024F6 /* AdvertsTableViewCell.xib */; };
 		D4F05F261FBDC35A002024F6 /* AdvertsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F251FBDC35A002024F6 /* AdvertsViewController.m */; };
 		D4F05F291FBDD18B002024F6 /* FeaturedCarerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F281FBDD18B002024F6 /* FeaturedCarerViewController.m */; };
+		D4F05F2C1FBDDC88002024F6 /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F2B1FBDDC88002024F6 /* PaymentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +189,8 @@
 		D4F05F251FBDC35A002024F6 /* AdvertsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertsViewController.m; sourceTree = "<group>"; };
 		D4F05F271FBDD18B002024F6 /* FeaturedCarerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedCarerViewController.h; sourceTree = "<group>"; };
 		D4F05F281FBDD18B002024F6 /* FeaturedCarerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedCarerViewController.m; sourceTree = "<group>"; };
+		D4F05F2A1FBDDC88002024F6 /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
+		D4F05F2B1FBDDC88002024F6 /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +358,8 @@
 				D4F05F251FBDC35A002024F6 /* AdvertsViewController.m */,
 				D4F05F271FBDD18B002024F6 /* FeaturedCarerViewController.h */,
 				D4F05F281FBDD18B002024F6 /* FeaturedCarerViewController.m */,
+				D4F05F2A1FBDDC88002024F6 /* PaymentViewController.h */,
+				D4F05F2B1FBDDC88002024F6 /* PaymentViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -601,6 +606,7 @@
 				D4F05F221FBDC02D002024F6 /* AdvertsTableViewCell.m in Sources */,
 				D48EE4B41F9B2A2C00CB43A0 /* LGSideMenuView.m in Sources */,
 				D4A019B61F850F0200E311B7 /* main.m in Sources */,
+				D4F05F2C1FBDDC88002024F6 /* PaymentViewController.m in Sources */,
 				D48EE4B61F9B2A2C00CB43A0 /* LGSideMenuController.m in Sources */,
 				D49BFE8B1F9C6F60000D6638 /* SharedClass.m in Sources */,
 				D4F05F171FBD67E8002024F6 /* STCollapseTableView.m in Sources */,
