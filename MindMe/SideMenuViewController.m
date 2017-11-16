@@ -153,23 +153,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.row == 0 && indexPath.section == 0) {
-        
-        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
-        
-    }
-    else if (indexPath.row == 1 && indexPath.section == 0) {
-        
-        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
-        
-    }
-    else if (indexPath.section == 1) {
-        
-        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
-        
-    }
+//    if (indexPath.row == 0 && indexPath.section == 0) {
+//        
+//        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
+//        
+//    }
+//    else if (indexPath.row == 1 && indexPath.section == 0) {
+//        
+//        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
+//        
+//    }
+//    else if (indexPath.section == 1) {
+//        
+//        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+//        
+//    }
     
     
 }
@@ -210,6 +210,9 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.backgroundColor = [UIColor clearColor];
+    cell.userInteractionEnabled = YES;
+    cell.tag = (indexPath.section*100) + indexPath.row;
+    [cell addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(childCellTapped:)]];
     
     switch (indexPath.section) {
         case 0:
@@ -245,6 +248,31 @@
         default:
             break;
     }
+    
+}
+
+- (void) childCellTapped:(UITapGestureRecognizer *)gesture {
+    
+    int tag = (int)gesture.view.tag;
+    
+    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:(tag%100) inSection:(tag/100)];
+    
+    if (indexPath.row == 0 && indexPath.section == 0) {
+        
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
+        
+    }
+    else if (indexPath.row == 1 && indexPath.section == 0) {
+        
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
+        
+    }
+    else if (indexPath.section == 1) {
+        
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+        
+    }
+    
     
 }
 
