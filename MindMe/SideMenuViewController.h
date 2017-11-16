@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STCollapseTableView.h"
 
 @interface SideMenuViewController : UIViewController {
     NSArray *menuItemsArray;
     NSArray *menuImageArray;
+    NSMutableArray* sectionArr;
+    NSInteger lastOpenedIndex;
 }
 
-@property (weak, nonatomic) IBOutlet UITableView *sideMenuTableView;
+@property (weak, nonatomic) IBOutlet STCollapseTableView *sideMenuTableView;
 @end
