@@ -62,6 +62,9 @@
 		D4F05F171FBD67E8002024F6 /* STCollapseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F151FBD67E8002024F6 /* STCollapseTableView.m */; };
 		D4F05F1C1FBD8F16002024F6 /* SideMenuSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F1B1FBD8F16002024F6 /* SideMenuSectionView.m */; };
 		D4F05F1E1FBD8F20002024F6 /* SideMenuSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F05F1D1FBD8F20002024F6 /* SideMenuSectionView.xib */; };
+		D4F05F221FBDC02D002024F6 /* AdvertsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F201FBDC02D002024F6 /* AdvertsTableViewCell.m */; };
+		D4F05F231FBDC02D002024F6 /* AdvertsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F05F211FBDC02D002024F6 /* AdvertsTableViewCell.xib */; };
+		D4F05F261FBDC35A002024F6 /* AdvertsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F251FBDC35A002024F6 /* AdvertsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +180,11 @@
 		D4F05F1A1FBD8F16002024F6 /* SideMenuSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuSectionView.h; sourceTree = "<group>"; };
 		D4F05F1B1FBD8F16002024F6 /* SideMenuSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuSectionView.m; sourceTree = "<group>"; };
 		D4F05F1D1FBD8F20002024F6 /* SideMenuSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuSectionView.xib; sourceTree = "<group>"; };
+		D4F05F1F1FBDC02D002024F6 /* AdvertsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertsTableViewCell.h; sourceTree = "<group>"; };
+		D4F05F201FBDC02D002024F6 /* AdvertsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertsTableViewCell.m; sourceTree = "<group>"; };
+		D4F05F211FBDC02D002024F6 /* AdvertsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvertsTableViewCell.xib; sourceTree = "<group>"; };
+		D4F05F241FBDC35A002024F6 /* AdvertsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertsViewController.h; sourceTree = "<group>"; };
+		D4F05F251FBDC35A002024F6 /* AdvertsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +348,8 @@
 				D4736B511FBB1015004A51A2 /* TnCViewController.m */,
 				D4736B531FBC50A3004A51A2 /* FavoritesViewController.h */,
 				D4736B541FBC50A3004A51A2 /* FavoritesViewController.m */,
+				D4F05F241FBDC35A002024F6 /* AdvertsViewController.h */,
+				D4F05F251FBDC35A002024F6 /* AdvertsViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -406,6 +416,9 @@
 				D4736B561FBC60B6004A51A2 /* FavoritesTableViewCell.h */,
 				D4736B571FBC60B6004A51A2 /* FavoritesTableViewCell.m */,
 				D4736B581FBC60B6004A51A2 /* FavoritesTableViewCell.xib */,
+				D4F05F1F1FBDC02D002024F6 /* AdvertsTableViewCell.h */,
+				D4F05F201FBDC02D002024F6 /* AdvertsTableViewCell.m */,
+				D4F05F211FBDC02D002024F6 /* AdvertsTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -537,6 +550,7 @@
 				D43143CB1F98E02B00FE0406 /* VisbyRoundCF-Regular.otf in Resources */,
 				D4F05F1E1FBD8F20002024F6 /* SideMenuSectionView.xib in Resources */,
 				D420BFE11FB5CD7A0071E30A /* FilterViewController.xib in Resources */,
+				D4F05F231FBDC02D002024F6 /* AdvertsTableViewCell.xib in Resources */,
 				D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */,
 				D48EE4C01F9B382C00CB43A0 /* SideMenuTableViewCell.xib in Resources */,
 				D43143C71F98E02B00FE0406 /* VisbyRoundCF-DemiBold.otf in Resources */,
@@ -578,6 +592,7 @@
 				D49D78CF1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.m in Sources */,
 				D4A019B91F850F0200E311B7 /* AppDelegate.m in Sources */,
 				D420BFE61FB817F50071E30A /* TTRangeSlider.m in Sources */,
+				D4F05F221FBDC02D002024F6 /* AdvertsTableViewCell.m in Sources */,
 				D48EE4B41F9B2A2C00CB43A0 /* LGSideMenuView.m in Sources */,
 				D4A019B61F850F0200E311B7 /* main.m in Sources */,
 				D48EE4B61F9B2A2C00CB43A0 /* LGSideMenuController.m in Sources */,
@@ -593,6 +608,7 @@
 				D4736B551FBC50A3004A51A2 /* FavoritesViewController.m in Sources */,
 				D4736B591FBC60B6004A51A2 /* FavoritesTableViewCell.m in Sources */,
 				D4F05F1C1FBD8F16002024F6 /* SideMenuSectionView.m in Sources */,
+				D4F05F261FBDC35A002024F6 /* AdvertsViewController.m in Sources */,
 				D4736B521FBB1015004A51A2 /* TnCViewController.m in Sources */,
 				D48EE4B71F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.m in Sources */,
 				D41558751FB4E9590031E23F /* ChangePasswordViewController.m in Sources */,

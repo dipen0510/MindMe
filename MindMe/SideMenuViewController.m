@@ -155,6 +155,11 @@
         [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
         
     }
+    else if (indexPath.row == 1 && indexPath.section == 0) {
+        
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
+        
+    }
     else if (indexPath.section == 1) {
         
         [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
