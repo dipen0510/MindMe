@@ -126,7 +126,12 @@
     
     lastOpenedIndex = section;
     
-    if (section == 4) {
+    if (section == 2) {
+        
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FeaturedCarerViewController" forSideMenuController:self.sideMenuController];
+        
+    }
+    else if (section == 4) {
         
         [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ContactUsViewController" forSideMenuController:self.sideMenuController];
         
@@ -190,6 +195,10 @@
     }
     else {
         header.chevronImgView.hidden = YES;
+    }
+    
+    if (section == 2) {
+        header.menuTitle.textColor = [UIColor colorWithRed:253./255. green:137./255. blue:8./155. alpha:1.0];
     }
     
     return header;

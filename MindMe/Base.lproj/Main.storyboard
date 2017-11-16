@@ -4851,6 +4851,127 @@ Cg
             </objects>
             <point key="canvasLocation" x="2782" y="1489"/>
         </scene>
+        <!--Featured Carer View Controller-->
+        <scene sceneID="oan-6Y-CPH">
+            <objects>
+                <viewController storyboardIdentifier="FeaturedCarerViewController" id="rW7-fN-MsL" customClass="FeaturedCarerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VRg-4I-27a"/>
+                        <viewControllerLayoutGuide type="bottom" id="qYN-2V-vCp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o9P-ub-XVN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTb-PB-HmY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headline_mind_me" translatesAutoresizingMaskIntoConstraints="NO" id="5Mt-Y6-tDq">
+                                        <rect key="frame" x="135" y="44" width="105" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="Uzp-NE-275"/>
+                                            <constraint firstAttribute="width" secondItem="5Mt-Y6-tDq" secondAttribute="height" multiplier="105:17" id="nMP-MS-bHC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2p-iS-D5Y">
+                                        <rect key="frame" x="22" y="40" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="6Jv-se-1tx"/>
+                                            <constraint firstAttribute="height" constant="25" id="ZbV-J4-6hs"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="ic_menu_bar"/>
+                                        <connections>
+                                            <action selector="menuButtonTapped:" destination="8SV-V7-r04" eventType="touchUpInside" id="2Si-Qi-hQM"/>
+                                            <action selector="menuButtonTapped:" destination="Hai-AU-Qxt" eventType="touchUpInside" id="Zzb-1f-Ubr"/>
+                                            <action selector="menuButtonTapped:" destination="rW7-fN-MsL" eventType="touchUpInside" id="rYk-7E-To7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.15940248970000001" green="0.28466475009999997" blue="0.38037025930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="GOC-Th-Ikv"/>
+                                    <constraint firstItem="5Mt-Y6-tDq" firstAttribute="centerX" secondItem="YTb-PB-HmY" secondAttribute="centerX" id="aPk-lf-erS"/>
+                                    <constraint firstItem="b2p-iS-D5Y" firstAttribute="leading" secondItem="YTb-PB-HmY" secondAttribute="leading" constant="22" id="fVe-05-QQI"/>
+                                    <constraint firstAttribute="bottom" secondItem="5Mt-Y6-tDq" secondAttribute="bottom" constant="23" id="tbk-ow-X4o"/>
+                                    <constraint firstAttribute="bottom" secondItem="b2p-iS-D5Y" secondAttribute="bottom" constant="19" id="wUK-0K-pOm"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BE A FEATURED CARER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dku-5C-3Sl">
+                                <rect key="frame" x="102.5" y="104" width="170" height="19"/>
+                                <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
+                                <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rl2-X0-73z">
+                                <rect key="frame" x="16" y="140" width="343" height="1"/>
+                                <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="H9U-ea-Ae1"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2rb-dd-uY0">
+                                <rect key="frame" x="16" y="149" width="343" height="428"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">MindMe.ie complies with the principles of the Data Protection Act 1998 when dealing with all data received from visitors to the site. We only hold the data necessary to offer services provided on our website namely to allow users of the service to buy and sell and also message one another. We also keep user data to allow us to contact you in the advent of account withdrawal or new passwords being provided.
+
+We only hold personal data for as long as necessary. Once data is no longer needed it is deleted from our files. If you delete your account then all your personal data will be deleted too.
+
+For administrative reasons email subscription data may be passed to and stored securely with third party service providers located outside the EEA (European Economic Area).
+We regularly email news and information updates to those customers who have specifically subscribed to our email service. All subscription emails sent by us contain clear information on how to unsubscribe from our email service.
+We never sell, rent or exchange mailing lists.
+We may however share commercial and technical data with our partners where a customer has accessed and used our website. This data would not be personal data but would be anonymised In accordance with the Privacy and Electronic Communications (EC Directive) Regulations 2003, we never send bulk unsolicited emails, (popularly known as Spam) to email addresses.
+
+We may send emails to existing customers or prospective customers who have enquired or registered with us, regarding products or services directly provided by us.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAA-RK-wmC">
+                                <rect key="frame" x="67.5" y="607" width="240" height="40"/>
+                                <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DTS-P1-GMJ"/>
+                                    <constraint firstAttribute="width" constant="240" id="tbI-27-WwO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="17"/>
+                                <state key="normal" title="Become a Featured Carer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YTb-PB-HmY" secondAttribute="trailing" id="2Wm-b6-kPk"/>
+                            <constraint firstItem="KAA-RK-wmC" firstAttribute="centerX" secondItem="o9P-ub-XVN" secondAttribute="centerX" id="45X-Pv-riG"/>
+                            <constraint firstItem="Dku-5C-3Sl" firstAttribute="top" secondItem="YTb-PB-HmY" secondAttribute="bottom" constant="20" id="63w-L2-YMI"/>
+                            <constraint firstItem="qYN-2V-vCp" firstAttribute="top" secondItem="KAA-RK-wmC" secondAttribute="bottom" constant="20" id="7u2-Gy-Emw"/>
+                            <constraint firstItem="YTb-PB-HmY" firstAttribute="leading" secondItem="o9P-ub-XVN" secondAttribute="leading" id="81r-G2-jby"/>
+                            <constraint firstItem="rl2-X0-73z" firstAttribute="top" secondItem="Dku-5C-3Sl" secondAttribute="bottom" constant="17" id="Bc4-7K-CKB"/>
+                            <constraint firstItem="2rb-dd-uY0" firstAttribute="trailing" secondItem="rl2-X0-73z" secondAttribute="trailing" id="EGo-gX-6NN"/>
+                            <constraint firstItem="rl2-X0-73z" firstAttribute="leading" secondItem="o9P-ub-XVN" secondAttribute="leading" constant="16" id="Fgo-If-KWY"/>
+                            <constraint firstItem="2rb-dd-uY0" firstAttribute="top" secondItem="rl2-X0-73z" secondAttribute="bottom" constant="8" id="SEW-ba-43a"/>
+                            <constraint firstItem="qYN-2V-vCp" firstAttribute="top" secondItem="2rb-dd-uY0" secondAttribute="bottom" constant="90" id="V41-6E-87F"/>
+                            <constraint firstAttribute="trailing" secondItem="rl2-X0-73z" secondAttribute="trailing" constant="16" id="iWU-w7-yFF"/>
+                            <constraint firstItem="2rb-dd-uY0" firstAttribute="leading" secondItem="rl2-X0-73z" secondAttribute="leading" id="iom-Vy-Lbl"/>
+                            <constraint firstItem="Dku-5C-3Sl" firstAttribute="centerX" secondItem="o9P-ub-XVN" secondAttribute="centerX" id="jp1-Bu-dil"/>
+                            <constraint firstItem="YTb-PB-HmY" firstAttribute="top" secondItem="o9P-ub-XVN" secondAttribute="top" id="ocN-hv-GI1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="becomeFeaturedButton" destination="KAA-RK-wmC" id="INa-OO-OHv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H4z-pu-rtX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7601" y="-675"/>
+        </scene>
     </scenes>
     <resources>
         <image name="checked" width="76" height="76"/>
