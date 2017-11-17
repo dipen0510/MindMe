@@ -67,6 +67,9 @@
 		D4F05F261FBDC35A002024F6 /* AdvertsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F251FBDC35A002024F6 /* AdvertsViewController.m */; };
 		D4F05F291FBDD18B002024F6 /* FeaturedCarerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F281FBDD18B002024F6 /* FeaturedCarerViewController.m */; };
 		D4F05F2C1FBDDC88002024F6 /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F2B1FBDDC88002024F6 /* PaymentViewController.m */; };
+		D4F05F301FBDE5CD002024F6 /* FeaturedAdsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F2E1FBDE5CC002024F6 /* FeaturedAdsTableViewCell.m */; };
+		D4F05F311FBDE5CD002024F6 /* FeaturedAdsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F05F2F1FBDE5CD002024F6 /* FeaturedAdsTableViewCell.xib */; };
+		D4F05F341FBEE4EE002024F6 /* FeaturedAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F331FBEE4EE002024F6 /* FeaturedAdsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +194,11 @@
 		D4F05F281FBDD18B002024F6 /* FeaturedCarerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedCarerViewController.m; sourceTree = "<group>"; };
 		D4F05F2A1FBDDC88002024F6 /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
 		D4F05F2B1FBDDC88002024F6 /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
+		D4F05F2D1FBDE5CC002024F6 /* FeaturedAdsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedAdsTableViewCell.h; sourceTree = "<group>"; };
+		D4F05F2E1FBDE5CC002024F6 /* FeaturedAdsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedAdsTableViewCell.m; sourceTree = "<group>"; };
+		D4F05F2F1FBDE5CD002024F6 /* FeaturedAdsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeaturedAdsTableViewCell.xib; sourceTree = "<group>"; };
+		D4F05F321FBEE4EE002024F6 /* FeaturedAdsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedAdsViewController.h; sourceTree = "<group>"; };
+		D4F05F331FBEE4EE002024F6 /* FeaturedAdsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedAdsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +368,8 @@
 				D4F05F281FBDD18B002024F6 /* FeaturedCarerViewController.m */,
 				D4F05F2A1FBDDC88002024F6 /* PaymentViewController.h */,
 				D4F05F2B1FBDDC88002024F6 /* PaymentViewController.m */,
+				D4F05F321FBEE4EE002024F6 /* FeaturedAdsViewController.h */,
+				D4F05F331FBEE4EE002024F6 /* FeaturedAdsViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -429,6 +439,9 @@
 				D4F05F1F1FBDC02D002024F6 /* AdvertsTableViewCell.h */,
 				D4F05F201FBDC02D002024F6 /* AdvertsTableViewCell.m */,
 				D4F05F211FBDC02D002024F6 /* AdvertsTableViewCell.xib */,
+				D4F05F2D1FBDE5CC002024F6 /* FeaturedAdsTableViewCell.h */,
+				D4F05F2E1FBDE5CC002024F6 /* FeaturedAdsTableViewCell.m */,
+				D4F05F2F1FBDE5CD002024F6 /* FeaturedAdsTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -564,6 +577,7 @@
 				D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */,
 				D48EE4C01F9B382C00CB43A0 /* SideMenuTableViewCell.xib in Resources */,
 				D43143C71F98E02B00FE0406 /* VisbyRoundCF-DemiBold.otf in Resources */,
+				D4F05F311FBDE5CD002024F6 /* FeaturedAdsTableViewCell.xib in Resources */,
 				D43143C61F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf in Resources */,
 				D4A019C11F850F0200E311B7 /* Assets.xcassets in Resources */,
 				D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */,
@@ -609,6 +623,7 @@
 				D4F05F2C1FBDDC88002024F6 /* PaymentViewController.m in Sources */,
 				D48EE4B61F9B2A2C00CB43A0 /* LGSideMenuController.m in Sources */,
 				D49BFE8B1F9C6F60000D6638 /* SharedClass.m in Sources */,
+				D4F05F301FBDE5CD002024F6 /* FeaturedAdsTableViewCell.m in Sources */,
 				D4F05F171FBD67E8002024F6 /* STCollapseTableView.m in Sources */,
 				D40CDD6F1FAEE89100213855 /* DrivingLicenseInfoViewController.m in Sources */,
 				D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */,
@@ -625,6 +640,7 @@
 				D48EE4B71F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.m in Sources */,
 				D41558751FB4E9590031E23F /* ChangePasswordViewController.m in Sources */,
 				D49BFE871F9C6C39000D6638 /* EditProfileViewController.m in Sources */,
+				D4F05F341FBEE4EE002024F6 /* FeaturedAdsViewController.m in Sources */,
 				D420BFEA1FB82DD60071E30A /* FilterMiscTableViewCell.m in Sources */,
 				D4A019EC1F85482800E311B7 /* RegisterViewController.m in Sources */,
 				D48EE4B81F9B2A2C00CB43A0 /* UIViewController+LGSideMenuController.m in Sources */,

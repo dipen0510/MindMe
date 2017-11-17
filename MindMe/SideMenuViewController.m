@@ -269,7 +269,13 @@
     }
     else if (indexPath.section == 1) {
         
-        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+        if (indexPath.row == 1) {
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FeaturedAdsViewController" forSideMenuController:self.sideMenuController];
+        }
+        else {
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+        }
+        
         
     }
     

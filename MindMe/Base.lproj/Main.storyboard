@@ -1202,7 +1202,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIKED CARE PROVIDERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuX-6v-qTx">
-                                <rect key="frame" x="99.5" y="104" width="176" height="19"/>
+                                <rect key="frame" x="100" y="104" width="176" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1283,7 +1283,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADVERT CONTROL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2t-34-g3B">
-                                <rect key="frame" x="117.5" y="104" width="139.5" height="19"/>
+                                <rect key="frame" x="118" y="104" width="139.5" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1296,7 +1296,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Jill Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkx-y5-Eqe">
-                                <rect key="frame" x="16" y="160" width="88" height="21"/>
+                                <rect key="frame" x="16" y="160" width="88" height="20"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1552,7 +1552,7 @@ Cg
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIVACY POLICY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhV-SY-4Fw">
-                                <rect key="frame" x="127" y="104" width="122.5" height="19"/>
+                                <rect key="frame" x="126.5" y="104" width="122.5" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2977,13 +2977,84 @@ We may send emails to existing customers or prospective customers who have enqui
             </objects>
             <point key="canvasLocation" x="6805.6000000000004" y="1164.9175412293855"/>
         </scene>
+        <!--Featured Ads View Controller-->
+        <scene sceneID="WG5-sr-5t4">
+            <objects>
+                <viewController storyboardIdentifier="FeaturedAdsViewController" id="3nZ-Pd-mfm" customClass="FeaturedAdsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LdR-jT-2vs"/>
+                        <viewControllerLayoutGuide type="bottom" id="ioG-US-9lp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IsJ-Gq-58p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfF-FA-idA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headline_mind_me" translatesAutoresizingMaskIntoConstraints="NO" id="Ee6-Kp-H8v">
+                                        <rect key="frame" x="135" y="44" width="105" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="Px1-ec-A52"/>
+                                            <constraint firstAttribute="width" secondItem="Ee6-Kp-H8v" secondAttribute="height" multiplier="105:17" id="Z5e-Ep-iRX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZE-Db-dfE">
+                                        <rect key="frame" x="22" y="40" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="Gfi-IW-uns"/>
+                                            <constraint firstAttribute="height" constant="25" id="ohA-Nw-Zo7"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="ic_menu_bar"/>
+                                        <connections>
+                                            <action selector="menuButtonTapped:" destination="3nZ-Pd-mfm" eventType="touchUpInside" id="6h2-MQ-QXs"/>
+                                            <action selector="menuButtonTapped:" destination="1yn-np-7Rc" eventType="touchUpInside" id="YEv-wa-HWh"/>
+                                            <action selector="menuButtonTapped:" destination="Hai-AU-Qxt" eventType="touchUpInside" id="tYb-af-qbV"/>
+                                            <action selector="menuButtonTapped:" destination="8SV-V7-r04" eventType="touchUpInside" id="yq3-qQ-lhP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.15940248970000001" green="0.28466475009999997" blue="0.38037025930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ee6-Kp-H8v" secondAttribute="bottom" constant="23" id="0vQ-nu-sSC"/>
+                                    <constraint firstAttribute="height" constant="84" id="14f-ao-F3m"/>
+                                    <constraint firstItem="rZE-Db-dfE" firstAttribute="leading" secondItem="sfF-FA-idA" secondAttribute="leading" constant="22" id="De9-qx-Eei"/>
+                                    <constraint firstAttribute="bottom" secondItem="rZE-Db-dfE" secondAttribute="bottom" constant="19" id="mqh-1i-7dm"/>
+                                    <constraint firstItem="Ee6-Kp-H8v" firstAttribute="centerX" secondItem="sfF-FA-idA" secondAttribute="centerX" id="soE-Dd-bJ5"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SVL-Hc-g4j">
+                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3nZ-Pd-mfm" id="Bzc-Gt-zks"/>
+                                    <outlet property="delegate" destination="3nZ-Pd-mfm" id="GPg-lT-da2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ioG-US-9lp" firstAttribute="top" secondItem="SVL-Hc-g4j" secondAttribute="bottom" id="7Z5-44-gPj"/>
+                            <constraint firstItem="SVL-Hc-g4j" firstAttribute="leading" secondItem="IsJ-Gq-58p" secondAttribute="leading" id="Aes-Im-ui4"/>
+                            <constraint firstItem="sfF-FA-idA" firstAttribute="top" secondItem="IsJ-Gq-58p" secondAttribute="top" id="I8C-9E-ZNA"/>
+                            <constraint firstAttribute="trailing" secondItem="SVL-Hc-g4j" secondAttribute="trailing" id="PXZ-Lw-UtN"/>
+                            <constraint firstItem="SVL-Hc-g4j" firstAttribute="top" secondItem="sfF-FA-idA" secondAttribute="bottom" id="RDv-f7-q8K"/>
+                            <constraint firstAttribute="trailing" secondItem="sfF-FA-idA" secondAttribute="trailing" id="hiZ-aL-9sV"/>
+                            <constraint firstItem="sfF-FA-idA" firstAttribute="leading" secondItem="IsJ-Gq-58p" secondAttribute="leading" id="o4V-KJ-PA4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B0B-Ww-WIv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7600.8000000000002" y="789.35532233883066"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="0or-Pv-VAk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yhj-ON-ojt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yAc-9C-3no">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yAc-9C-3no">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3002,7 +3073,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wg9-Nn-sTY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="etA-fm-vvl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="etA-fm-vvl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3108,7 +3179,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a password of at least 5 characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-dk-e66">
-                                <rect key="frame" x="44.5" y="297" width="286.5" height="16"/>
+                                <rect key="frame" x="45" y="297" width="286.5" height="16"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -5023,7 +5094,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAYMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJE-Fa-2fH">
-                                <rect key="frame" x="152.5" y="104" width="71" height="19"/>
+                                <rect key="frame" x="152" y="104" width="71" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
