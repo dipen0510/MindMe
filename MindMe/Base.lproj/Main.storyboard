@@ -409,7 +409,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="52.5" y="490" width="270" height="32"/>
+                                <rect key="frame" x="52.5" y="490" width="270" height="31"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">By pressing Sign Up you agree with the
@@ -1465,6 +1465,80 @@ Cg
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lX-T2-kC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7600.8000000000002" y="35.532233883058474"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RYj-IG-JVd">
+            <objects>
+                <viewController storyboardIdentifier="FAQViewController" id="8iG-78-er4" customClass="FAQViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ENW-3l-O2b"/>
+                        <viewControllerLayoutGuide type="bottom" id="fXg-sf-fK3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KUr-gw-B5l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJm-dZ-rm8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headline_mind_me" translatesAutoresizingMaskIntoConstraints="NO" id="ubl-Qp-01g">
+                                        <rect key="frame" x="135" y="44" width="105" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ubl-Qp-01g" secondAttribute="height" multiplier="105:17" id="1O4-UP-kkZ"/>
+                                            <constraint firstAttribute="height" constant="17" id="M5M-mQ-Aw4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agV-au-2Mi">
+                                        <rect key="frame" x="22" y="40" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="4IK-h2-GdJ"/>
+                                            <constraint firstAttribute="width" constant="25" id="C0T-03-GGr"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="ic_menu_bar"/>
+                                        <connections>
+                                            <action selector="menuButtonTapped:" destination="rW7-fN-MsL" eventType="touchUpInside" id="9cj-Le-K2o"/>
+                                            <action selector="menuButtonTapped:" destination="8SV-V7-r04" eventType="touchUpInside" id="U3U-ZG-0Gk"/>
+                                            <action selector="menuButtonTapped:" destination="Hai-AU-Qxt" eventType="touchUpInside" id="nDJ-5v-r40"/>
+                                            <action selector="menuButtonTapped:" destination="8iG-78-er4" eventType="touchUpInside" id="tEU-Qt-D79"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.15940248970000001" green="0.28466475009999997" blue="0.38037025930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="2e7-Zx-kdg"/>
+                                    <constraint firstAttribute="bottom" secondItem="ubl-Qp-01g" secondAttribute="bottom" constant="23" id="4Kz-aR-iAn"/>
+                                    <constraint firstItem="ubl-Qp-01g" firstAttribute="centerX" secondItem="CJm-dZ-rm8" secondAttribute="centerX" id="9By-e9-jFu"/>
+                                    <constraint firstItem="agV-au-2Mi" firstAttribute="leading" secondItem="CJm-dZ-rm8" secondAttribute="leading" constant="22" id="g9p-Yg-tKB"/>
+                                    <constraint firstAttribute="bottom" secondItem="agV-au-2Mi" secondAttribute="bottom" constant="19" id="hSO-BI-TEV"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="duZ-QN-EYu" customClass="STCollapseTableView">
+                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8iG-78-er4" id="E3Q-49-aeG"/>
+                                    <outlet property="delegate" destination="8iG-78-er4" id="cn7-Ov-42F"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fXg-sf-fK3" firstAttribute="top" secondItem="duZ-QN-EYu" secondAttribute="bottom" id="4il-Dd-pfq"/>
+                            <constraint firstAttribute="trailing" secondItem="duZ-QN-EYu" secondAttribute="trailing" id="8uw-MP-C6O"/>
+                            <constraint firstAttribute="trailing" secondItem="CJm-dZ-rm8" secondAttribute="trailing" id="97U-sU-CaT"/>
+                            <constraint firstItem="CJm-dZ-rm8" firstAttribute="leading" secondItem="KUr-gw-B5l" secondAttribute="leading" id="C4c-DU-3jf"/>
+                            <constraint firstItem="CJm-dZ-rm8" firstAttribute="top" secondItem="KUr-gw-B5l" secondAttribute="top" id="Uek-8W-GsF"/>
+                            <constraint firstItem="duZ-QN-EYu" firstAttribute="top" secondItem="CJm-dZ-rm8" secondAttribute="bottom" id="qTe-n8-Cfm"/>
+                            <constraint firstItem="duZ-QN-EYu" firstAttribute="leading" secondItem="KUr-gw-B5l" secondAttribute="leading" id="qoY-lj-S3a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faqTableView" destination="duZ-QN-EYu" id="jvM-GE-suo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FzZ-nH-aYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8474" y="48"/>
         </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="ex1-47-QV7">

@@ -70,6 +70,11 @@
 		D4F05F301FBDE5CD002024F6 /* FeaturedAdsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F2E1FBDE5CC002024F6 /* FeaturedAdsTableViewCell.m */; };
 		D4F05F311FBDE5CD002024F6 /* FeaturedAdsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F05F2F1FBDE5CD002024F6 /* FeaturedAdsTableViewCell.xib */; };
 		D4F05F341FBEE4EE002024F6 /* FeaturedAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F331FBEE4EE002024F6 /* FeaturedAdsViewController.m */; };
+		D4F05F371FBEFBBE002024F6 /* FAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F361FBEFBBE002024F6 /* FAQViewController.m */; };
+		D4F05F391FBEFD47002024F6 /* FAQSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F05F381FBEFD47002024F6 /* FAQSectionView.xib */; };
+		D4F05F3C1FBEFD65002024F6 /* FAQSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F3B1FBEFD65002024F6 /* FAQSectionView.m */; };
+		D4F05F401FBF055E002024F6 /* FAQTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F3E1FBF055E002024F6 /* FAQTableViewCell.m */; };
+		D4F05F411FBF055E002024F6 /* FAQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F05F3F1FBF055E002024F6 /* FAQTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +204,14 @@
 		D4F05F2F1FBDE5CD002024F6 /* FeaturedAdsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeaturedAdsTableViewCell.xib; sourceTree = "<group>"; };
 		D4F05F321FBEE4EE002024F6 /* FeaturedAdsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturedAdsViewController.h; sourceTree = "<group>"; };
 		D4F05F331FBEE4EE002024F6 /* FeaturedAdsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturedAdsViewController.m; sourceTree = "<group>"; };
+		D4F05F351FBEFBBE002024F6 /* FAQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQViewController.h; sourceTree = "<group>"; };
+		D4F05F361FBEFBBE002024F6 /* FAQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQViewController.m; sourceTree = "<group>"; };
+		D4F05F381FBEFD47002024F6 /* FAQSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQSectionView.xib; sourceTree = "<group>"; };
+		D4F05F3A1FBEFD65002024F6 /* FAQSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQSectionView.h; sourceTree = "<group>"; };
+		D4F05F3B1FBEFD65002024F6 /* FAQSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQSectionView.m; sourceTree = "<group>"; };
+		D4F05F3D1FBF055E002024F6 /* FAQTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQTableViewCell.h; sourceTree = "<group>"; };
+		D4F05F3E1FBF055E002024F6 /* FAQTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQTableViewCell.m; sourceTree = "<group>"; };
+		D4F05F3F1FBF055E002024F6 /* FAQTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +383,8 @@
 				D4F05F2B1FBDDC88002024F6 /* PaymentViewController.m */,
 				D4F05F321FBEE4EE002024F6 /* FeaturedAdsViewController.h */,
 				D4F05F331FBEE4EE002024F6 /* FeaturedAdsViewController.m */,
+				D4F05F351FBEFBBE002024F6 /* FAQViewController.h */,
+				D4F05F361FBEFBBE002024F6 /* FAQViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -411,6 +426,9 @@
 				D4F05F1A1FBD8F16002024F6 /* SideMenuSectionView.h */,
 				D4F05F1B1FBD8F16002024F6 /* SideMenuSectionView.m */,
 				D4F05F1D1FBD8F20002024F6 /* SideMenuSectionView.xib */,
+				D4F05F3A1FBEFD65002024F6 /* FAQSectionView.h */,
+				D4F05F3B1FBEFD65002024F6 /* FAQSectionView.m */,
+				D4F05F381FBEFD47002024F6 /* FAQSectionView.xib */,
 			);
 			path = "Custom Controls";
 			sourceTree = "<group>";
@@ -442,6 +460,9 @@
 				D4F05F2D1FBDE5CC002024F6 /* FeaturedAdsTableViewCell.h */,
 				D4F05F2E1FBDE5CC002024F6 /* FeaturedAdsTableViewCell.m */,
 				D4F05F2F1FBDE5CD002024F6 /* FeaturedAdsTableViewCell.xib */,
+				D4F05F3D1FBF055E002024F6 /* FAQTableViewCell.h */,
+				D4F05F3E1FBF055E002024F6 /* FAQTableViewCell.m */,
+				D4F05F3F1FBF055E002024F6 /* FAQTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -568,6 +589,7 @@
 				D43143C51F98E02B00FE0406 /* VisbyRoundCF-Medium.otf in Resources */,
 				D43143C91F98E02B00FE0406 /* VisbyRoundCF-ExtraBold.otf in Resources */,
 				D49D78D01FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.xib in Resources */,
+				D4F05F391FBEFD47002024F6 /* FAQSectionView.xib in Resources */,
 				D43143CC1F98E02B00FE0406 /* VisbyRoundCF-Bold.otf in Resources */,
 				D4A019C41F850F0200E311B7 /* LaunchScreen.storyboard in Resources */,
 				D43143CB1F98E02B00FE0406 /* VisbyRoundCF-Regular.otf in Resources */,
@@ -576,6 +598,7 @@
 				D4F05F231FBDC02D002024F6 /* AdvertsTableViewCell.xib in Resources */,
 				D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */,
 				D48EE4C01F9B382C00CB43A0 /* SideMenuTableViewCell.xib in Resources */,
+				D4F05F411FBF055E002024F6 /* FAQTableViewCell.xib in Resources */,
 				D43143C71F98E02B00FE0406 /* VisbyRoundCF-DemiBold.otf in Resources */,
 				D4F05F311FBDE5CD002024F6 /* FeaturedAdsTableViewCell.xib in Resources */,
 				D43143C61F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf in Resources */,
@@ -612,7 +635,9 @@
 				D48EE4C31F9B383C00CB43A0 /* SideMenuViewController.m in Sources */,
 				D4A019E91F85386C00E311B7 /* LoginViewController.m in Sources */,
 				D4F05F291FBDD18B002024F6 /* FeaturedCarerViewController.m in Sources */,
+				D4F05F371FBEFBBE002024F6 /* FAQViewController.m in Sources */,
 				D48EE4B51F9B2A2C00CB43A0 /* LGSideMenuSegue.m in Sources */,
+				D4F05F3C1FBEFD65002024F6 /* FAQSectionView.m in Sources */,
 				D4AD692F1F933668009D57A7 /* AdsHomeTableViewCell.m in Sources */,
 				D49D78CF1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.m in Sources */,
 				D4A019B91F850F0200E311B7 /* AppDelegate.m in Sources */,
@@ -645,6 +670,7 @@
 				D4A019EC1F85482800E311B7 /* RegisterViewController.m in Sources */,
 				D48EE4B81F9B2A2C00CB43A0 /* UIViewController+LGSideMenuController.m in Sources */,
 				D420BFE01FB5CD7A0071E30A /* FilterViewController.m in Sources */,
+				D4F05F401FBF055E002024F6 /* FAQTableViewCell.m in Sources */,
 				D48EE4BF1F9B382C00CB43A0 /* SideMenuTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

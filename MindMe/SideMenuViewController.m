@@ -278,6 +278,11 @@
         
         
     }
+    else if (indexPath.row == 0 && indexPath.section == 3) {
+        
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FAQViewController" forSideMenuController:self.sideMenuController];
+        
+    }
     
     
 }
