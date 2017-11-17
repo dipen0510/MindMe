@@ -23,7 +23,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
     [self setupInitialUI];
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    _faqTableView.delegate1 = nil;
+    _faqTableView.delegate = nil;
+    _faqTableView = nil;
     
 }
 
