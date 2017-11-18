@@ -76,6 +76,9 @@
 		D4F05F401FBF055E002024F6 /* FAQTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F3E1FBF055E002024F6 /* FAQTableViewCell.m */; };
 		D4F05F411FBF055E002024F6 /* FAQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F05F3F1FBF055E002024F6 /* FAQTableViewCell.xib */; };
 		D4F05F441FBF3D39002024F6 /* BuyPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F431FBF3D39002024F6 /* BuyPlanViewController.m */; };
+		D4F05F481FBFFBB9002024F6 /* CreateAdvertsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F461FBFFBB9002024F6 /* CreateAdvertsCollectionViewCell.m */; };
+		D4F05F491FBFFBB9002024F6 /* CreateAdvertsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F05F471FBFFBB9002024F6 /* CreateAdvertsCollectionViewCell.xib */; };
+		D4F05F4C1FBFFD99002024F6 /* ChooseCareTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F4B1FBFFD99002024F6 /* ChooseCareTypeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -215,6 +218,11 @@
 		D4F05F3F1FBF055E002024F6 /* FAQTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQTableViewCell.xib; sourceTree = "<group>"; };
 		D4F05F421FBF3D39002024F6 /* BuyPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyPlanViewController.h; sourceTree = "<group>"; };
 		D4F05F431FBF3D39002024F6 /* BuyPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyPlanViewController.m; sourceTree = "<group>"; };
+		D4F05F451FBFFBB9002024F6 /* CreateAdvertsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAdvertsCollectionViewCell.h; sourceTree = "<group>"; };
+		D4F05F461FBFFBB9002024F6 /* CreateAdvertsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAdvertsCollectionViewCell.m; sourceTree = "<group>"; };
+		D4F05F471FBFFBB9002024F6 /* CreateAdvertsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateAdvertsCollectionViewCell.xib; sourceTree = "<group>"; };
+		D4F05F4A1FBFFD99002024F6 /* ChooseCareTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseCareTypeViewController.h; sourceTree = "<group>"; };
+		D4F05F4B1FBFFD99002024F6 /* ChooseCareTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseCareTypeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +398,8 @@
 				D4F05F361FBEFBBE002024F6 /* FAQViewController.m */,
 				D4F05F421FBF3D39002024F6 /* BuyPlanViewController.h */,
 				D4F05F431FBF3D39002024F6 /* BuyPlanViewController.m */,
+				D4F05F4A1FBFFD99002024F6 /* ChooseCareTypeViewController.h */,
+				D4F05F4B1FBFFD99002024F6 /* ChooseCareTypeViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -468,6 +478,9 @@
 				D4F05F3D1FBF055E002024F6 /* FAQTableViewCell.h */,
 				D4F05F3E1FBF055E002024F6 /* FAQTableViewCell.m */,
 				D4F05F3F1FBF055E002024F6 /* FAQTableViewCell.xib */,
+				D4F05F451FBFFBB9002024F6 /* CreateAdvertsCollectionViewCell.h */,
+				D4F05F461FBFFBB9002024F6 /* CreateAdvertsCollectionViewCell.m */,
+				D4F05F471FBFFBB9002024F6 /* CreateAdvertsCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -611,6 +624,7 @@
 				D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */,
 				D4736B5A1FBC60B6004A51A2 /* FavoritesTableViewCell.xib in Resources */,
 				D420BFEB1FB82DD60071E30A /* FilterMiscTableViewCell.xib in Resources */,
+				D4F05F491FBFFBB9002024F6 /* CreateAdvertsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,8 +683,10 @@
 				D4736B521FBB1015004A51A2 /* TnCViewController.m in Sources */,
 				D48EE4B71F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.m in Sources */,
 				D41558751FB4E9590031E23F /* ChangePasswordViewController.m in Sources */,
+				D4F05F4C1FBFFD99002024F6 /* ChooseCareTypeViewController.m in Sources */,
 				D49BFE871F9C6C39000D6638 /* EditProfileViewController.m in Sources */,
 				D4F05F441FBF3D39002024F6 /* BuyPlanViewController.m in Sources */,
+				D4F05F481FBFFBB9002024F6 /* CreateAdvertsCollectionViewCell.m in Sources */,
 				D4F05F341FBEE4EE002024F6 /* FeaturedAdsViewController.m in Sources */,
 				D420BFEA1FB82DD60071E30A /* FilterMiscTableViewCell.m in Sources */,
 				D4A019EC1F85482800E311B7 /* RegisterViewController.m in Sources */,
