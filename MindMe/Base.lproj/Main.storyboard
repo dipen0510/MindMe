@@ -2532,7 +2532,6 @@ Cg
                                         <state key="normal" image="add_btn"/>
                                         <connections>
                                             <action selector="addButtonTapped:" destination="2Ee-H5-kde" eventType="touchUpInside" id="qqd-4d-XRO"/>
-                                            <action selector="addLanguagesButtonTapped:" destination="AH4-6F-Px0" eventType="touchUpInside" id="uVb-ZR-Ynx"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2654,6 +2653,7 @@ Cg
                         <outlet property="seventhCollectionView" destination="fZm-Z8-JnY" id="0Yu-qV-bLs"/>
                         <outlet property="sixthCollectionView" destination="KwU-1F-Xse" id="C4M-Yc-fYm"/>
                         <outlet property="thirdCollectionView" destination="F2U-F5-yXq" id="QUF-5v-ZIw"/>
+                        <segue destination="1pa-YR-ITw" kind="presentation" identifier="showUploadDocSegue" id="CTT-AK-ZAd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajB-DM-Fhq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2819,6 +2819,143 @@ Cg
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n6Y-vZ-UIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9334" y="889"/>
+        </scene>
+        <!--Upload Documents View Controller-->
+        <scene sceneID="6yJ-zV-7A2">
+            <objects>
+                <viewController storyboardIdentifier="UploadDocumentsViewController" id="1pa-YR-ITw" customClass="UploadDocumentsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oBb-sq-KMH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bdd-r5-Nvw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ka8-MN-rgX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OcJ-fJ-5dN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headline_mind_me" translatesAutoresizingMaskIntoConstraints="NO" id="jnc-ex-VL4">
+                                        <rect key="frame" x="135" y="44" width="105" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="CHM-vP-7I5"/>
+                                            <constraint firstAttribute="width" secondItem="jnc-ex-VL4" secondAttribute="height" multiplier="105:17" id="U58-Of-uY7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRV-pu-odX">
+                                        <rect key="frame" x="8" y="37" width="61" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="LCg-YK-KHT"/>
+                                            <constraint firstAttribute="width" constant="61" id="cVh-bj-G50"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="15"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="T7W-9q-owI" eventType="touchUpInside" id="6sF-Qj-hFF"/>
+                                            <action selector="backButtonTapped:" destination="1pa-YR-ITw" eventType="touchUpInside" id="Qbu-uU-KAa"/>
+                                            <action selector="backButtonTapped:" destination="hmz-cn-QTg" eventType="touchUpInside" id="Zgd-bx-G1S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.15940248970000001" green="0.28466475009999997" blue="0.38037025930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="jnc-ex-VL4" firstAttribute="centerX" secondItem="OcJ-fJ-5dN" secondAttribute="centerX" id="Bid-EB-f6Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="jnc-ex-VL4" secondAttribute="bottom" constant="23" id="XRc-BF-iOJ"/>
+                                    <constraint firstItem="NRV-pu-odX" firstAttribute="top" secondItem="OcJ-fJ-5dN" secondAttribute="top" constant="37" id="c1y-OR-uRB"/>
+                                    <constraint firstAttribute="height" constant="84" id="ivD-2h-22B"/>
+                                    <constraint firstItem="NRV-pu-odX" firstAttribute="leading" secondItem="OcJ-fJ-5dN" secondAttribute="leading" constant="8" id="z4C-So-iJd"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPLOAD YOUR DOCUMENTS HERE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lty-cd-12X">
+                                <rect key="frame" x="61.5" y="104" width="252.5" height="19"/>
+                                <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
+                                <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZG-4d-6Ep">
+                                <rect key="frame" x="16" y="140" width="343" height="1"/>
+                                <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="fYu-pk-BSb"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpf-Ln-Emt">
+                                <rect key="frame" x="109" y="181" width="157" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Rpf-Ln-Emt" secondAttribute="height" multiplier="157:160" id="DAh-Ne-DXT"/>
+                                </constraints>
+                                <state key="normal" image="document_img"/>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WKm-sR-IFq">
+                                <rect key="frame" x="117" y="381" width="140" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="MsC-4s-Pw6"/>
+                                    <constraint firstAttribute="width" constant="140" id="P9F-wT-012"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KbO-nd-XkG">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Kjl-m7-Hp6">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="1pa-YR-ITw" id="fge-Yd-pGI"/>
+                                    <outlet property="delegate" destination="1pa-YR-ITw" id="IIg-oz-lVL"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikm-Z0-ShP">
+                                <rect key="frame" x="117" y="612" width="140.5" height="35"/>
+                                <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="UEe-Bm-yPV"/>
+                                    <constraint firstAttribute="width" constant="140.5" id="oRY-XZ-nCy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="17"/>
+                                <state key="normal" title="Upload">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WKm-sR-IFq" firstAttribute="top" secondItem="Rpf-Ln-Emt" secondAttribute="bottom" constant="40" id="3Bc-LU-uki"/>
+                            <constraint firstItem="ikm-Z0-ShP" firstAttribute="centerX" secondItem="ka8-MN-rgX" secondAttribute="centerX" id="3vl-t6-vf5"/>
+                            <constraint firstItem="WKm-sR-IFq" firstAttribute="centerX" secondItem="ka8-MN-rgX" secondAttribute="centerX" id="AfC-qF-bqr"/>
+                            <constraint firstItem="Rpf-Ln-Emt" firstAttribute="top" secondItem="nZG-4d-6Ep" secondAttribute="bottom" constant="40" id="FI4-VQ-6Wr"/>
+                            <constraint firstItem="nZG-4d-6Ep" firstAttribute="top" secondItem="lty-cd-12X" secondAttribute="bottom" constant="17" id="I0o-qw-25D"/>
+                            <constraint firstItem="OcJ-fJ-5dN" firstAttribute="top" secondItem="ka8-MN-rgX" secondAttribute="top" id="I5d-s6-eio"/>
+                            <constraint firstItem="lty-cd-12X" firstAttribute="centerX" secondItem="ka8-MN-rgX" secondAttribute="centerX" id="O6k-Py-U1e"/>
+                            <constraint firstAttribute="trailing" secondItem="nZG-4d-6Ep" secondAttribute="trailing" constant="16" id="OhG-LX-qAC"/>
+                            <constraint firstAttribute="trailing" secondItem="OcJ-fJ-5dN" secondAttribute="trailing" id="RKX-DE-hPf"/>
+                            <constraint firstItem="lty-cd-12X" firstAttribute="top" secondItem="OcJ-fJ-5dN" secondAttribute="bottom" constant="20" id="SP5-Ab-Nch"/>
+                            <constraint firstItem="nZG-4d-6Ep" firstAttribute="leading" secondItem="ka8-MN-rgX" secondAttribute="leading" constant="16" id="eEw-yD-C3t"/>
+                            <constraint firstItem="Rpf-Ln-Emt" firstAttribute="height" secondItem="ka8-MN-rgX" secondAttribute="height" multiplier="160/667" id="h45-6j-CvK"/>
+                            <constraint firstItem="Bdd-r5-Nvw" firstAttribute="top" secondItem="ikm-Z0-ShP" secondAttribute="bottom" constant="20" id="nnF-Ek-BoJ"/>
+                            <constraint firstItem="Rpf-Ln-Emt" firstAttribute="centerX" secondItem="ka8-MN-rgX" secondAttribute="centerX" id="v94-ZF-sKs"/>
+                            <constraint firstItem="OcJ-fJ-5dN" firstAttribute="leading" secondItem="ka8-MN-rgX" secondAttribute="leading" id="yOi-mD-fp4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="documentsCollectionView" destination="WKm-sR-IFq" id="OCg-b3-aDF"/>
+                        <outlet property="uploadButton" destination="ikm-Z0-ShP" id="reS-Y2-JXl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RKf-sZ-yrq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10232" y="1660"/>
         </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="ex1-47-QV7">
@@ -7237,6 +7374,7 @@ We may send emails to existing customers or prospective customers who have enqui
         <image name="baby_pic" width="253" height="250"/>
         <image name="checked" width="76" height="76"/>
         <image name="credit-card" width="512" height="512"/>
+        <image name="document_img" width="382" height="388"/>
         <image name="fb_logo" width="66" height="66"/>
         <image name="forgot_password_bg" width="1080" height="1920"/>
         <image name="headline_mind_me" width="556" height="88"/>

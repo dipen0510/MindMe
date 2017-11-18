@@ -12,6 +12,9 @@
 		D4041AF51FC031AD001F312E /* AdvertPDFCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041AF31FC031AD001F312E /* AdvertPDFCollectionViewCell.m */; };
 		D4041AF61FC031AD001F312E /* AdvertPDFCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4041AF41FC031AD001F312E /* AdvertPDFCollectionViewCell.xib */; };
 		D4041AF91FC0C209001F312E /* SelectLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041AF81FC0C209001F312E /* SelectLanguageViewController.m */; };
+		D4041AFD1FC0C601001F312E /* UploadDocumentsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041AFB1FC0C601001F312E /* UploadDocumentsCollectionViewCell.m */; };
+		D4041AFE1FC0C601001F312E /* UploadDocumentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4041AFC1FC0C601001F312E /* UploadDocumentsCollectionViewCell.xib */; };
+		D4041B011FC0C7FF001F312E /* UploadDocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041B001FC0C7FF001F312E /* UploadDocumentsViewController.m */; };
 		D40CDD6F1FAEE89100213855 /* DrivingLicenseInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40CDD6E1FAEE89100213855 /* DrivingLicenseInfoViewController.m */; };
 		D415586F1FB42E6B0031E23F /* tmpAdsHome.png in Resources */ = {isa = PBXBuildFile; fileRef = D415586E1FB42E6B0031E23F /* tmpAdsHome.png */; };
 		D41558721FB461A60031E23F /* AdsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41558711FB461A60031E23F /* AdsDetailViewController.m */; };
@@ -113,6 +116,11 @@
 		D4041AF41FC031AD001F312E /* AdvertPDFCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvertPDFCollectionViewCell.xib; sourceTree = "<group>"; };
 		D4041AF71FC0C209001F312E /* SelectLanguageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectLanguageViewController.h; sourceTree = "<group>"; };
 		D4041AF81FC0C209001F312E /* SelectLanguageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectLanguageViewController.m; sourceTree = "<group>"; };
+		D4041AFA1FC0C601001F312E /* UploadDocumentsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDocumentsCollectionViewCell.h; sourceTree = "<group>"; };
+		D4041AFB1FC0C601001F312E /* UploadDocumentsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDocumentsCollectionViewCell.m; sourceTree = "<group>"; };
+		D4041AFC1FC0C601001F312E /* UploadDocumentsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadDocumentsCollectionViewCell.xib; sourceTree = "<group>"; };
+		D4041AFF1FC0C7FF001F312E /* UploadDocumentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDocumentsViewController.h; sourceTree = "<group>"; };
+		D4041B001FC0C7FF001F312E /* UploadDocumentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDocumentsViewController.m; sourceTree = "<group>"; };
 		D40CDD6D1FAEE89100213855 /* DrivingLicenseInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrivingLicenseInfoViewController.h; sourceTree = "<group>"; };
 		D40CDD6E1FAEE89100213855 /* DrivingLicenseInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrivingLicenseInfoViewController.m; sourceTree = "<group>"; };
 		D415586E1FB42E6B0031E23F /* tmpAdsHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmpAdsHome.png; sourceTree = "<group>"; };
@@ -420,6 +428,8 @@
 				D4041AF01FC0232C001F312E /* YourAdvertViewController.m */,
 				D4041AF71FC0C209001F312E /* SelectLanguageViewController.h */,
 				D4041AF81FC0C209001F312E /* SelectLanguageViewController.m */,
+				D4041AFF1FC0C7FF001F312E /* UploadDocumentsViewController.h */,
+				D4041B001FC0C7FF001F312E /* UploadDocumentsViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -504,6 +514,9 @@
 				D4041AF21FC031AD001F312E /* AdvertPDFCollectionViewCell.h */,
 				D4041AF31FC031AD001F312E /* AdvertPDFCollectionViewCell.m */,
 				D4041AF41FC031AD001F312E /* AdvertPDFCollectionViewCell.xib */,
+				D4041AFA1FC0C601001F312E /* UploadDocumentsCollectionViewCell.h */,
+				D4041AFB1FC0C601001F312E /* UploadDocumentsCollectionViewCell.m */,
+				D4041AFC1FC0C601001F312E /* UploadDocumentsCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -645,6 +658,7 @@
 				D4F05F311FBDE5CD002024F6 /* FeaturedAdsTableViewCell.xib in Resources */,
 				D43143C61F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf in Resources */,
 				D4A019C11F850F0200E311B7 /* Assets.xcassets in Resources */,
+				D4041AFE1FC0C601001F312E /* UploadDocumentsCollectionViewCell.xib in Resources */,
 				D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */,
 				D4736B5A1FBC60B6004A51A2 /* FavoritesTableViewCell.xib in Resources */,
 				D420BFEB1FB82DD60071E30A /* FilterMiscTableViewCell.xib in Resources */,
@@ -681,6 +695,7 @@
 				D4F05F291FBDD18B002024F6 /* FeaturedCarerViewController.m in Sources */,
 				D4F05F371FBEFBBE002024F6 /* FAQViewController.m in Sources */,
 				D48EE4B51F9B2A2C00CB43A0 /* LGSideMenuSegue.m in Sources */,
+				D4041B011FC0C7FF001F312E /* UploadDocumentsViewController.m in Sources */,
 				D4F05F3C1FBEFD65002024F6 /* FAQSectionView.m in Sources */,
 				D4AD692F1F933668009D57A7 /* AdsHomeTableViewCell.m in Sources */,
 				D49D78CF1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.m in Sources */,
@@ -721,6 +736,7 @@
 				D420BFE01FB5CD7A0071E30A /* FilterViewController.m in Sources */,
 				D4F05F401FBF055E002024F6 /* FAQTableViewCell.m in Sources */,
 				D48EE4BF1F9B382C00CB43A0 /* SideMenuTableViewCell.m in Sources */,
+				D4041AFD1FC0C601001F312E /* UploadDocumentsCollectionViewCell.m in Sources */,
 				D4041AF51FC031AD001F312E /* AdvertPDFCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

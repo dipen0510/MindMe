@@ -69,6 +69,7 @@
 }
 
 - (IBAction)addButtonTapped:(id)sender {
+    [self performSegueWithIdentifier:@"showUploadDocSegue" sender:nil];
 }
 
 #pragma mark - CollectionView Datasource
