@@ -11,6 +11,7 @@
 		D4041AF11FC0232C001F312E /* YourAdvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041AF01FC0232C001F312E /* YourAdvertViewController.m */; };
 		D4041AF51FC031AD001F312E /* AdvertPDFCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041AF31FC031AD001F312E /* AdvertPDFCollectionViewCell.m */; };
 		D4041AF61FC031AD001F312E /* AdvertPDFCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4041AF41FC031AD001F312E /* AdvertPDFCollectionViewCell.xib */; };
+		D4041AF91FC0C209001F312E /* SelectLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041AF81FC0C209001F312E /* SelectLanguageViewController.m */; };
 		D40CDD6F1FAEE89100213855 /* DrivingLicenseInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40CDD6E1FAEE89100213855 /* DrivingLicenseInfoViewController.m */; };
 		D415586F1FB42E6B0031E23F /* tmpAdsHome.png in Resources */ = {isa = PBXBuildFile; fileRef = D415586E1FB42E6B0031E23F /* tmpAdsHome.png */; };
 		D41558721FB461A60031E23F /* AdsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41558711FB461A60031E23F /* AdsDetailViewController.m */; };
@@ -110,6 +111,8 @@
 		D4041AF21FC031AD001F312E /* AdvertPDFCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertPDFCollectionViewCell.h; sourceTree = "<group>"; };
 		D4041AF31FC031AD001F312E /* AdvertPDFCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertPDFCollectionViewCell.m; sourceTree = "<group>"; };
 		D4041AF41FC031AD001F312E /* AdvertPDFCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvertPDFCollectionViewCell.xib; sourceTree = "<group>"; };
+		D4041AF71FC0C209001F312E /* SelectLanguageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectLanguageViewController.h; sourceTree = "<group>"; };
+		D4041AF81FC0C209001F312E /* SelectLanguageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectLanguageViewController.m; sourceTree = "<group>"; };
 		D40CDD6D1FAEE89100213855 /* DrivingLicenseInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrivingLicenseInfoViewController.h; sourceTree = "<group>"; };
 		D40CDD6E1FAEE89100213855 /* DrivingLicenseInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrivingLicenseInfoViewController.m; sourceTree = "<group>"; };
 		D415586E1FB42E6B0031E23F /* tmpAdsHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmpAdsHome.png; sourceTree = "<group>"; };
@@ -415,6 +418,8 @@
 				D4041AED1FC0153C001F312E /* YourInformationViewController.m */,
 				D4041AEF1FC0232C001F312E /* YourAdvertViewController.h */,
 				D4041AF01FC0232C001F312E /* YourAdvertViewController.m */,
+				D4041AF71FC0C209001F312E /* SelectLanguageViewController.h */,
+				D4041AF81FC0C209001F312E /* SelectLanguageViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -669,6 +674,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D41558721FB461A60031E23F /* AdsDetailViewController.m in Sources */,
+				D4041AF91FC0C209001F312E /* SelectLanguageViewController.m in Sources */,
 				D43EE8CE1FB30AF100BE7E08 /* ContactUsViewController.m in Sources */,
 				D48EE4C31F9B383C00CB43A0 /* SideMenuViewController.m in Sources */,
 				D4A019E91F85386C00E311B7 /* LoginViewController.m in Sources */,
