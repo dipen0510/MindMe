@@ -15,6 +15,7 @@
 		D4041AFD1FC0C601001F312E /* UploadDocumentsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041AFB1FC0C601001F312E /* UploadDocumentsCollectionViewCell.m */; };
 		D4041AFE1FC0C601001F312E /* UploadDocumentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4041AFC1FC0C601001F312E /* UploadDocumentsCollectionViewCell.xib */; };
 		D4041B011FC0C7FF001F312E /* UploadDocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041B001FC0C7FF001F312E /* UploadDocumentsViewController.m */; };
+		D4041B041FC0CD67001F312E /* CVUnderApprovalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041B031FC0CD67001F312E /* CVUnderApprovalViewController.m */; };
 		D40CDD6F1FAEE89100213855 /* DrivingLicenseInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40CDD6E1FAEE89100213855 /* DrivingLicenseInfoViewController.m */; };
 		D415586F1FB42E6B0031E23F /* tmpAdsHome.png in Resources */ = {isa = PBXBuildFile; fileRef = D415586E1FB42E6B0031E23F /* tmpAdsHome.png */; };
 		D41558721FB461A60031E23F /* AdsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41558711FB461A60031E23F /* AdsDetailViewController.m */; };
@@ -121,6 +122,8 @@
 		D4041AFC1FC0C601001F312E /* UploadDocumentsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadDocumentsCollectionViewCell.xib; sourceTree = "<group>"; };
 		D4041AFF1FC0C7FF001F312E /* UploadDocumentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDocumentsViewController.h; sourceTree = "<group>"; };
 		D4041B001FC0C7FF001F312E /* UploadDocumentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDocumentsViewController.m; sourceTree = "<group>"; };
+		D4041B021FC0CD67001F312E /* CVUnderApprovalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVUnderApprovalViewController.h; sourceTree = "<group>"; };
+		D4041B031FC0CD67001F312E /* CVUnderApprovalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVUnderApprovalViewController.m; sourceTree = "<group>"; };
 		D40CDD6D1FAEE89100213855 /* DrivingLicenseInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrivingLicenseInfoViewController.h; sourceTree = "<group>"; };
 		D40CDD6E1FAEE89100213855 /* DrivingLicenseInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrivingLicenseInfoViewController.m; sourceTree = "<group>"; };
 		D415586E1FB42E6B0031E23F /* tmpAdsHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmpAdsHome.png; sourceTree = "<group>"; };
@@ -430,6 +433,8 @@
 				D4041AF81FC0C209001F312E /* SelectLanguageViewController.m */,
 				D4041AFF1FC0C7FF001F312E /* UploadDocumentsViewController.h */,
 				D4041B001FC0C7FF001F312E /* UploadDocumentsViewController.m */,
+				D4041B021FC0CD67001F312E /* CVUnderApprovalViewController.h */,
+				D4041B031FC0CD67001F312E /* CVUnderApprovalViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -688,6 +693,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D41558721FB461A60031E23F /* AdsDetailViewController.m in Sources */,
+				D4041B041FC0CD67001F312E /* CVUnderApprovalViewController.m in Sources */,
 				D4041AF91FC0C209001F312E /* SelectLanguageViewController.m in Sources */,
 				D43EE8CE1FB30AF100BE7E08 /* ContactUsViewController.m in Sources */,
 				D48EE4C31F9B383C00CB43A0 /* SideMenuViewController.m in Sources */,
