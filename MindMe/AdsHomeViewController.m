@@ -34,6 +34,9 @@
     _favoritesView.userInteractionEnabled = YES;
     [_favoritesView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(favoritesViewTapped)]];
     
+    _messagesView.userInteractionEnabled = YES;
+    [_messagesView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(messagesViewTapped)]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -143,6 +146,12 @@
 - (void) favoritesViewTapped {
     
     [self performSegueWithIdentifier:@"showFavoritesSegue" sender:nil];
+    
+}
+
+- (void) messagesViewTapped {
+    
+    [self performSegueWithIdentifier:@"showChatSegue" sender:nil];
     
 }
 

@@ -409,7 +409,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="52.5" y="490" width="270" height="32"/>
+                                <rect key="frame" x="52.5" y="490" width="270" height="31"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">By pressing Sign Up you agree with the
@@ -1140,8 +1140,10 @@ Terms of Services and Privacy Policy</string>
                     <navigationItem key="navigationItem" id="HcK-rk-FFo"/>
                     <connections>
                         <outlet property="favoritesView" destination="6SA-sb-y3N" id="SkV-YO-lgs"/>
+                        <outlet property="messagesView" destination="kyF-4A-gdF" id="Aj0-6c-cp6"/>
                         <segue destination="7QH-IF-iDG" kind="show" identifier="showAdsDetailSegue" id="MHL-d7-JFa"/>
                         <segue destination="T7W-9q-owI" kind="show" identifier="showFavoritesSegue" id="84t-sz-c2d"/>
+                        <segue destination="AJO-Ph-pca" kind="show" identifier="showChatSegue" id="1mT-Qk-sm6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lI4-HV-yas" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3087,6 +3089,66 @@ APPROVAL</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Elh-XV-HMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3845.5999999999999" y="796.55172413793105"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="7RU-mr-u55">
+            <objects>
+                <viewController id="AJO-Ph-pca" customClass="ChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mFS-j5-7gT"/>
+                        <viewControllerLayoutGuide type="bottom" id="xgP-Px-h1Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ujB-Uk-NaS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gB5-uD-OMO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headline_mind_me" translatesAutoresizingMaskIntoConstraints="NO" id="xgU-fc-7A4">
+                                        <rect key="frame" x="135" y="44" width="105" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xgU-fc-7A4" secondAttribute="height" multiplier="105:17" id="Qg8-Y4-5WH"/>
+                                            <constraint firstAttribute="height" constant="17" id="Z31-1s-PSb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPH-2o-guv">
+                                        <rect key="frame" x="8" y="37" width="61" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Ru2-Ah-Y9g"/>
+                                            <constraint firstAttribute="width" constant="61" id="VTX-0n-wlT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="15"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="7QH-IF-iDG" eventType="touchUpInside" id="RWh-9b-fmq"/>
+                                            <action selector="backButtonTapped:" destination="AJO-Ph-pca" eventType="touchUpInside" id="YsF-1d-M0T"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.15940248970000001" green="0.28466475009999997" blue="0.38037025930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xgU-fc-7A4" secondAttribute="bottom" constant="23" id="7Yh-GA-eDD"/>
+                                    <constraint firstAttribute="height" constant="84" id="KKr-Bb-tUs"/>
+                                    <constraint firstItem="HPH-2o-guv" firstAttribute="top" secondItem="gB5-uD-OMO" secondAttribute="top" constant="37" id="Q1x-9Q-aov"/>
+                                    <constraint firstItem="HPH-2o-guv" firstAttribute="leading" secondItem="gB5-uD-OMO" secondAttribute="leading" constant="8" id="cxZ-j5-2mb"/>
+                                    <constraint firstItem="xgU-fc-7A4" firstAttribute="centerX" secondItem="gB5-uD-OMO" secondAttribute="centerX" id="q3D-9V-IXd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gB5-uD-OMO" firstAttribute="leading" secondItem="ujB-Uk-NaS" secondAttribute="leading" id="KVe-4t-5KV"/>
+                            <constraint firstAttribute="trailing" secondItem="gB5-uD-OMO" secondAttribute="trailing" id="dQb-l3-irb"/>
+                            <constraint firstItem="gB5-uD-OMO" firstAttribute="top" secondItem="ujB-Uk-NaS" secondAttribute="top" id="nkQ-BP-0ck"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SrO-kc-2Bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4905" y="796"/>
         </scene>
         <!--Privacy Policy View Controller-->
         <scene sceneID="scE-3p-BMD">

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="17A365" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="VisbyRoundCF-Medium.otf">
+            <string>VisbyRoundCF-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QMChatViewController">
+            <connections>
+                <outlet property="collectionView" destination="l9u-2b-4LK" id="bLP-6g-CkO"/>
+                <outlet property="inputToolbar" destination="BoD-Az-3DM" id="w74-g9-1qA"/>
+                <outlet property="toolbarBottomLayoutGuide" destination="rHs-6q-NX4" id="d6h-iu-VMX"/>
+                <outlet property="view" destination="mUa-cS-ru4" id="nki-T1-RTI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="mUa-cS-ru4">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XS1-xK-ToQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headline_mind_me" translatesAutoresizingMaskIntoConstraints="NO" id="hps-pg-cs2">
+                            <rect key="frame" x="135" y="44" width="105" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="17" id="FXo-oO-gJ6"/>
+                                <constraint firstAttribute="width" secondItem="hps-pg-cs2" secondAttribute="height" multiplier="105:17" id="UZF-4I-4zx"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3x-wE-VGj">
+                            <rect key="frame" x="8" y="37" width="61" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="61" id="gKF-hh-vfo"/>
+                                <constraint firstAttribute="height" constant="30" id="vem-VE-cIW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="15"/>
+                            <state key="normal" title="Back">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="Leo-AG-IdW"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.15940248970000001" green="0.28466475009999997" blue="0.38037025930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="hps-pg-cs2" secondAttribute="bottom" constant="23" id="01h-JA-Fjp"/>
+                        <constraint firstAttribute="height" constant="84" id="DBA-sz-CtU"/>
+                        <constraint firstItem="c3x-wE-VGj" firstAttribute="leading" secondItem="XS1-xK-ToQ" secondAttribute="leading" constant="8" id="Gp9-Eq-Xet"/>
+                        <constraint firstItem="hps-pg-cs2" firstAttribute="centerX" secondItem="XS1-xK-ToQ" secondAttribute="centerX" id="MC7-yc-KWy"/>
+                        <constraint firstItem="c3x-wE-VGj" firstAttribute="top" secondItem="XS1-xK-ToQ" secondAttribute="top" constant="37" id="VLI-cM-CaL"/>
+                    </constraints>
+                </view>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l9u-2b-4LK" customClass="QMChatCollectionView">
+                    <rect key="frame" x="0.0" y="84" width="375" height="539"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewLayout key="collectionViewLayout" id="dZl-7C-LHR" customClass="QMChatCollectionViewFlowLayout"/>
+                    <cells/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="6dx-AD-2A3"/>
+                        <outlet property="delegate" destination="-1" id="vQe-1q-iBa"/>
+                    </connections>
+                </collectionView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoD-Az-3DM" customClass="QMInputToolbar">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <items/>
+                </toolbar>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="BoD-Az-3DM" secondAttribute="trailing" id="7xc-Ha-asg"/>
+                <constraint firstAttribute="trailing" secondItem="XS1-xK-ToQ" secondAttribute="trailing" id="8mn-5z-DRo"/>
+                <constraint firstItem="l9u-2b-4LK" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="Ao9-tY-M3L"/>
+                <constraint firstItem="l9u-2b-4LK" firstAttribute="top" secondItem="mUa-cS-ru4" secondAttribute="top" constant="84" id="GLO-Ke-B4Z"/>
+                <constraint firstItem="XS1-xK-ToQ" firstAttribute="top" secondItem="mUa-cS-ru4" secondAttribute="top" id="Jwl-dF-7dM"/>
+                <constraint firstAttribute="trailing" secondItem="l9u-2b-4LK" secondAttribute="trailing" id="Z1j-5K-vju"/>
+                <constraint firstItem="XS1-xK-ToQ" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="ZUx-Do-Cnd"/>
+                <constraint firstItem="BoD-Az-3DM" firstAttribute="top" secondItem="l9u-2b-4LK" secondAttribute="bottom" id="qcK-jo-Y2N"/>
+                <constraint firstAttribute="bottom" secondItem="BoD-Az-3DM" secondAttribute="bottom" id="rHs-6q-NX4"/>
+                <constraint firstItem="BoD-Az-3DM" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="ts7-8f-0lH"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="146" y="306"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="headline_mind_me" width="556" height="88"/>
+    </resources>
+</document>

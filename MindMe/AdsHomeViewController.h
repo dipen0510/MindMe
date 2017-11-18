@@ -13,5 +13,6 @@
 - (IBAction)menuButtonTapped:(id)sender;
 - (IBAction)filterButtonTapped:(id)sender;
 @property (weak, nonatomic) IBOutlet UIView *favoritesView;
+@property (weak, nonatomic) IBOutlet UIView *messagesView;
 
 @end
