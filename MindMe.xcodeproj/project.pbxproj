@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4041AEE1FC0153C001F312E /* YourInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041AED1FC0153C001F312E /* YourInformationViewController.m */; };
 		D40CDD6F1FAEE89100213855 /* DrivingLicenseInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40CDD6E1FAEE89100213855 /* DrivingLicenseInfoViewController.m */; };
 		D415586F1FB42E6B0031E23F /* tmpAdsHome.png in Resources */ = {isa = PBXBuildFile; fileRef = D415586E1FB42E6B0031E23F /* tmpAdsHome.png */; };
 		D41558721FB461A60031E23F /* AdsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41558711FB461A60031E23F /* AdsDetailViewController.m */; };
@@ -99,6 +100,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D4041AEC1FC0153C001F312E /* YourInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YourInformationViewController.h; sourceTree = "<group>"; };
+		D4041AED1FC0153C001F312E /* YourInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YourInformationViewController.m; sourceTree = "<group>"; };
 		D40CDD6D1FAEE89100213855 /* DrivingLicenseInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrivingLicenseInfoViewController.h; sourceTree = "<group>"; };
 		D40CDD6E1FAEE89100213855 /* DrivingLicenseInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrivingLicenseInfoViewController.m; sourceTree = "<group>"; };
 		D415586E1FB42E6B0031E23F /* tmpAdsHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmpAdsHome.png; sourceTree = "<group>"; };
@@ -400,6 +403,8 @@
 				D4F05F431FBF3D39002024F6 /* BuyPlanViewController.m */,
 				D4F05F4A1FBFFD99002024F6 /* ChooseCareTypeViewController.h */,
 				D4F05F4B1FBFFD99002024F6 /* ChooseCareTypeViewController.m */,
+				D4041AEC1FC0153C001F312E /* YourInformationViewController.h */,
+				D4041AED1FC0153C001F312E /* YourInformationViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -689,6 +694,7 @@
 				D4F05F481FBFFBB9002024F6 /* CreateAdvertsCollectionViewCell.m in Sources */,
 				D4F05F341FBEE4EE002024F6 /* FeaturedAdsViewController.m in Sources */,
 				D420BFEA1FB82DD60071E30A /* FilterMiscTableViewCell.m in Sources */,
+				D4041AEE1FC0153C001F312E /* YourInformationViewController.m in Sources */,
 				D4A019EC1F85482800E311B7 /* RegisterViewController.m in Sources */,
 				D48EE4B81F9B2A2C00CB43A0 /* UIViewController+LGSideMenuController.m in Sources */,
 				D420BFE01FB5CD7A0071E30A /* FilterViewController.m in Sources */,

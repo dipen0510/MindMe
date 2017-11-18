@@ -54,8 +54,10 @@
                 <constraint firstItem="qk7-T5-mEj" firstAttribute="leading" secondItem="MBt-k0-8Tp" secondAttribute="trailing" constant="8" id="zIy-ig-EKE"/>
             </constraints>
             <connections>
+                <outlet property="leadingConstraint" destination="K5O-U3-aR4" id="jWx-Ca-7PC"/>
                 <outlet property="titleLabel" destination="qk7-T5-mEj" id="byi-nf-xR7"/>
                 <outlet property="toggleButton" destination="MBt-k0-8Tp" id="eS5-5g-5EL"/>
+                <outlet property="trailingConstraint" destination="KE7-h3-e0a" id="mpk-XA-gdj"/>
             </connections>
         </collectionViewCell>
     </objects>
