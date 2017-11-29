@@ -185,6 +185,7 @@
 		D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AD692A1F93363B009D57A7 /* AdsHomeViewController.m */; };
 		D4AD692F1F933668009D57A7 /* AdsHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */; };
 		D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */; };
+		D4E34B2A1FCEF92A00D53EDC /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E34B291FCEF92A00D53EDC /* StartViewController.m */; };
 		D4F05F171FBD67E8002024F6 /* STCollapseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F151FBD67E8002024F6 /* STCollapseTableView.m */; };
 		D4F05F1C1FBD8F16002024F6 /* SideMenuSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F1B1FBD8F16002024F6 /* SideMenuSectionView.m */; };
 		D4F05F1E1FBD8F20002024F6 /* SideMenuSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F05F1D1FBD8F20002024F6 /* SideMenuSectionView.xib */; };
@@ -542,6 +543,8 @@
 		D4AD692C1F933668009D57A7 /* AdsHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsHomeTableViewCell.h; sourceTree = "<group>"; };
 		D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsHomeTableViewCell.m; sourceTree = "<group>"; };
 		D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdsHomeTableViewCell.xib; sourceTree = "<group>"; };
+		D4E34B281FCEF92A00D53EDC /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		D4E34B291FCEF92A00D53EDC /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		D4F05F151FBD67E8002024F6 /* STCollapseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCollapseTableView.m; sourceTree = "<group>"; };
 		D4F05F161FBD67E8002024F6 /* STCollapseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCollapseTableView.h; sourceTree = "<group>"; };
 		D4F05F1A1FBD8F16002024F6 /* SideMenuSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuSectionView.h; sourceTree = "<group>"; };
@@ -1385,6 +1388,8 @@
 				D4041B061FC0D737001F312E /* AddReviewViewController.m */,
 				D4041C2B1FC0DFFB001F312E /* ChatViewController.h */,
 				D4041C2C1FC0DFFC001F312E /* ChatViewController.m */,
+				D4E34B281FCEF92A00D53EDC /* StartViewController.h */,
+				D4E34B291FCEF92A00D53EDC /* StartViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -1808,6 +1813,7 @@
 				D420BFE01FB5CD7A0071E30A /* FilterViewController.m in Sources */,
 				D4F05F401FBF055E002024F6 /* FAQTableViewCell.m in Sources */,
 				D48EE4BF1F9B382C00CB43A0 /* SideMenuTableViewCell.m in Sources */,
+				D4E34B2A1FCEF92A00D53EDC /* StartViewController.m in Sources */,
 				D4041AFD1FC0C601001F312E /* UploadDocumentsCollectionViewCell.m in Sources */,
 				D4041AF51FC031AD001F312E /* AdvertPDFCollectionViewCell.m in Sources */,
 			);

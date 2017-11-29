@@ -16,6 +16,8 @@
 
 + sharedInstance;
 
+@property BOOL isUserCarer;
+
 - (void) changeRootControllerForIdentifier:(NSString *)viewControllerId forSideMenuController:(LGSideMenuController *)sideMenuController;
 
 @end

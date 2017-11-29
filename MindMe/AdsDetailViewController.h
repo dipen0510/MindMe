@@ -14,6 +14,7 @@
     
 }
 
+@property (weak, nonatomic) IBOutlet UILabel *yearsExperienceLabel;
 @property (weak, nonatomic) IBOutlet UIButton *contactButton;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
@@ -22,6 +23,9 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *daysRequiredCollectionView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *locationPinLeadingConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *yearsOfExpLeadingConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *doneButtonHeightConstraint;
+@property (weak, nonatomic) IBOutlet UIButton *carerLikeButton;
 
 - (IBAction)backButtonTapped:(id)sender;
+- (IBAction)doneButtonTapped:(id)sender;
 @end

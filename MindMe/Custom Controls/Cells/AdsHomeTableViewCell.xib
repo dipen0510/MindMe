@@ -160,11 +160,21 @@
                                     <color key="titleColor" red="0.90487152338027954" green="0.57823377847671509" blue="0.28885307908058167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Login : 7th August 2017" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="37m-oG-v3K">
+                                <rect key="frame" x="248" y="8" width="111" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="IPJ-XF-e0I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xFa-gv-dzk" firstAttribute="leading" secondItem="f0F-6E-4Ze" secondAttribute="trailing" constant="8" id="1tT-sz-hx8"/>
                             <constraint firstItem="QZg-ex-1as" firstAttribute="width" secondItem="M7d-xT-bDr" secondAttribute="width" id="1xa-Ax-HPz"/>
+                            <constraint firstAttribute="trailing" secondItem="37m-oG-v3K" secondAttribute="trailing" constant="9" id="2wX-Ie-L5d"/>
                             <constraint firstItem="bAz-tq-SWR" firstAttribute="top" secondItem="LC1-i3-4Ve" secondAttribute="bottom" id="33s-JM-eXg"/>
                             <constraint firstItem="xFa-gv-dzk" firstAttribute="width" secondItem="f0F-6E-4Ze" secondAttribute="width" id="4VW-IK-MDj"/>
                             <constraint firstItem="xFa-gv-dzk" firstAttribute="top" secondItem="f0F-6E-4Ze" secondAttribute="top" id="7rM-uT-rbI"/>
@@ -188,6 +198,7 @@
                             <constraint firstItem="QZg-ex-1as" firstAttribute="leading" secondItem="M7d-xT-bDr" secondAttribute="leading" id="YLH-S0-Elj"/>
                             <constraint firstAttribute="trailing" secondItem="9nL-7i-lkX" secondAttribute="trailing" constant="8" id="YtP-fC-Csm"/>
                             <constraint firstAttribute="trailing" secondItem="LC1-i3-4Ve" secondAttribute="trailing" constant="8" id="aIf-2q-tvw"/>
+                            <constraint firstItem="37m-oG-v3K" firstAttribute="top" secondItem="gBX-lr-rRz" secondAttribute="top" constant="8" id="ag2-aa-0ax"/>
                             <constraint firstItem="QZg-ex-1as" firstAttribute="height" secondItem="M7d-xT-bDr" secondAttribute="height" id="cHw-vg-woZ"/>
                             <constraint firstItem="0G2-n3-lEo" firstAttribute="leading" secondItem="gBX-lr-rRz" secondAttribute="leading" constant="8" id="dT9-00-3JU"/>
                             <constraint firstItem="xFa-gv-dzk" firstAttribute="height" secondItem="f0F-6E-4Ze" secondAttribute="height" id="fk1-YC-ZZQ"/>
@@ -218,6 +229,7 @@
                 <outlet property="containerView" destination="gBX-lr-rRz" id="Koo-8X-3lP"/>
                 <outlet property="drivingLicenseImgView" destination="xFa-gv-dzk" id="gmi-jC-bWl"/>
                 <outlet property="profileImgView" destination="0G2-n3-lEo" id="vuV-KQ-fvJ"/>
+                <outlet property="yearsExperienceStaticLabel" destination="bAz-tq-SWR" id="hkd-OO-rCu"/>
             </connections>
             <point key="canvasLocation" x="35" y="49"/>
         </tableViewCell>

@@ -120,7 +120,7 @@
                                     <constraint firstAttribute="width" constant="56" id="tQ2-F9-t7N"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Bold" family="Visby Round CF" pointSize="14"/>
-                                <state key="normal" title="Sign Up">
+                                <state key="normal" title="Register">
                                     <color key="titleColor" red="0.98116391897201538" green="0.53077816963195801" blue="0.037944238632917404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -227,7 +227,7 @@
                                     <constraint firstAttribute="width" constant="56" id="d9Y-u3-NQ2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Bold" family="Visby Round CF" pointSize="14"/>
-                                <state key="normal" title="Sign In">
+                                <state key="normal" title="Login">
                                     <color key="titleColor" red="0.981163919" green="0.53077816960000002" blue="0.037944238630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -412,7 +412,7 @@
                                 <rect key="frame" x="52.5" y="490" width="270" height="31"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">By pressing Sign Up you agree with the
+                                        <string key="content">By pressing Register you agree with the
 Terms of Services and Privacy Policy</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -499,10 +499,10 @@ Terms of Services and Privacy Policy</string>
             </objects>
             <point key="canvasLocation" x="2781.5999999999999" y="36.431784107946029"/>
         </scene>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="9BO-q8-vlY">
             <objects>
-                <viewController id="XTv-fW-UHZ" sceneMemberID="viewController">
+                <viewController id="XTv-fW-UHZ" customClass="StartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HLj-0f-7HF"/>
                         <viewControllerLayoutGuide type="bottom" id="BRe-Bb-4MP"/>
@@ -525,6 +525,7 @@ Terms of Services and Privacy Policy</string>
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="carerButtonTapped:" destination="XTv-fW-UHZ" eventType="touchUpInside" id="0RU-6N-AAQ"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="jcl-G8-9uc"/>
                                 </connections>
                             </button>
@@ -539,6 +540,7 @@ Terms of Services and Privacy Policy</string>
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="parentButtonTapped:" destination="XTv-fW-UHZ" eventType="touchUpInside" id="yT3-zT-G88"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="3oU-YA-ExY"/>
                                 </connections>
                             </button>
@@ -1049,10 +1051,10 @@ Terms of Services and Privacy Policy</string>
                                                     <constraint firstAttribute="width" constant="30" id="bEZ-Y5-hsD"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-4y-1Ah">
-                                                <rect key="frame" x="20" y="42" width="52" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-4y-1Ah">
+                                                <rect key="frame" x="18" y="42" width="56" height="17"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="52" id="g63-cH-FV5"/>
+                                                    <constraint firstAttribute="width" constant="56" id="g63-cH-FV5"/>
                                                     <constraint firstAttribute="height" constant="17" id="rxY-q5-pQh"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="12"/>
@@ -1204,7 +1206,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIKED CARE PROVIDERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuX-6v-qTx">
-                                <rect key="frame" x="99.5" y="104" width="176" height="19"/>
+                                <rect key="frame" x="100" y="104" width="176" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1234,6 +1236,8 @@ Terms of Services and Privacy Policy</string>
                             <constraint firstItem="D88-tq-SJr" firstAttribute="leading" secondItem="4ZL-wE-f6N" secondAttribute="leading" id="mHt-ix-ZTv"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rht-QQ-fMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1285,7 +1289,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADVERT CONTROL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2t-34-g3B">
-                                <rect key="frame" x="118.5" y="104" width="139.5" height="19"/>
+                                <rect key="frame" x="118" y="104" width="139.5" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1521,7 +1525,7 @@ Cg
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE CARE TYPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEd-iw-jgR">
-                                <rect key="frame" x="112.5" y="104" width="151.5" height="19"/>
+                                <rect key="frame" x="112" y="104" width="151.5" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1722,7 +1726,7 @@ Cg
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR INFORMATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDf-IA-FMl">
-                                        <rect key="frame" x="111" y="20" width="153" height="19"/>
+                                        <rect key="frame" x="111.5" y="20" width="152.5" height="19"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                         <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2212,7 +2216,7 @@ Cg
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children minded in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="dPO-4z-cSX">
-                                        <rect key="frame" x="20" y="445" width="134" height="18"/>
+                                        <rect key="frame" x="20" y="445" width="133.5" height="18"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="15"/>
                                         <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2252,7 +2256,7 @@ Cg
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carer should have experience with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Eat-lR-gMh">
-                                        <rect key="frame" x="20" y="538" width="247" height="18"/>
+                                        <rect key="frame" x="20" y="538" width="246.5" height="18"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="15"/>
                                         <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2326,7 +2330,7 @@ Cg
                                         </connections>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qualifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="xkw-SY-gzc">
-                                        <rect key="frame" x="20" y="691" width="98" height="18"/>
+                                        <rect key="frame" x="20" y="691" width="97.5" height="18"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="15"/>
                                         <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2366,7 +2370,7 @@ Cg
                                         </connections>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Requirements (Optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="5cu-Yz-qqx">
-                                        <rect key="frame" x="20" y="934" width="247" height="18"/>
+                                        <rect key="frame" x="20" y="934" width="246.5" height="18"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="15"/>
                                         <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2406,7 +2410,7 @@ Cg
                                         </connections>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activiteis I would like my Carer to provide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="X1R-Bm-kdw">
-                                        <rect key="frame" x="20" y="1087" width="292" height="18"/>
+                                        <rect key="frame" x="20" y="1087" width="291.5" height="18"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="15"/>
                                         <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -3021,7 +3025,7 @@ Cg
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHo-L4-otW">
-                                <rect key="frame" x="81.5" y="374" width="212.5" height="61"/>
+                                <rect key="frame" x="82" y="374" width="212.5" height="61"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">YOUR CV IS UNDER
@@ -3145,6 +3149,8 @@ APPROVAL</string>
                             <constraint firstItem="gB5-uD-OMO" firstAttribute="top" secondItem="ujB-Uk-NaS" secondAttribute="top" id="nkQ-BP-0ck"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SrO-kc-2Bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3198,7 +3204,7 @@ APPROVAL</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIVACY POLICY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhV-SY-4Fw">
-                                <rect key="frame" x="127" y="104" width="122.5" height="19"/>
+                                <rect key="frame" x="126.5" y="104" width="122.5" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -3917,7 +3923,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                                             <constraint firstAttribute="width" secondItem="ran-XK-Fnr" secondAttribute="height" multiplier="1:1" id="eu5-ud-p2u"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiZ-J0-Cmb">
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiZ-J0-Cmb">
                                                         <rect key="frame" x="178" y="166" width="137" height="40"/>
                                                         <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -4405,6 +4411,14 @@ We may send emails to existing customers or prospective customers who have enqui
                                                     <outlet property="delegate" destination="7QH-IF-iDG" id="H9P-km-L3h"/>
                                                 </connections>
                                             </collectionView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Phl-kb-aQ0">
+                                                <rect key="frame" x="185" y="1075" width="5" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="TT3-y4-VRa"/>
+                                                    <constraint firstAttribute="width" constant="5" id="jzN-Fg-fG6"/>
+                                                </constraints>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxm-MW-lqp">
                                                 <rect key="frame" x="37" y="1070" width="138" height="45"/>
                                                 <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -4415,8 +4429,23 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 <state key="normal" title="Done">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="doneButtonTapped:" destination="7QH-IF-iDG" eventType="touchUpInside" id="nXa-fZ-0cS"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdS-pI-y9T">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwL-MK-zFt">
+                                                <rect key="frame" x="118.5" y="1070" width="138" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Sju-uL-iLN"/>
+                                                </constraints>
+                                                <state key="normal" image="like_btn">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="doneButtonTapped:" destination="7QH-IF-iDG" eventType="touchUpInside" id="ZL9-rp-sHa"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdS-pI-y9T">
                                                 <rect key="frame" x="119" y="1131" width="138" height="45"/>
                                                 <color key="backgroundColor" red="0.76559120416641235" green="0.91197580099105835" blue="0.46113097667694092" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -4430,30 +4459,24 @@ We may send emails to existing customers or prospective customers who have enqui
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jqy-ma-5ol">
                                                 <rect key="frame" x="200" y="1070" width="138" height="45"/>
                                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="17"/>
-                                                <state key="normal" title="Add Review">
+                                                <state key="normal" title="Cancel">
                                                     <color key="titleColor" red="0.33709710840000001" green="0.34114208820000003" blue="0.34525841470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="Maf-Jy-gtq" kind="show" id="rIP-52-ljz"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Phl-kb-aQ0">
-                                                <rect key="frame" x="185" y="1075" width="5" height="40"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="TT3-y4-VRa"/>
-                                                    <constraint firstAttribute="width" constant="5" id="jzN-Fg-fG6"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="HwL-MK-zFt" firstAttribute="centerX" secondItem="skq-xy-QkB" secondAttribute="centerX" id="13i-Ue-Kt1"/>
                                             <constraint firstItem="8Po-7e-eIU" firstAttribute="top" secondItem="AA9-3g-A1w" secondAttribute="bottom" constant="2" id="27X-Yc-sI2"/>
                                             <constraint firstItem="3ob-LD-4Dk" firstAttribute="top" secondItem="skq-xy-QkB" secondAttribute="top" constant="18" id="3d0-QQ-WW7"/>
                                             <constraint firstItem="hwy-I2-xmt" firstAttribute="leading" secondItem="xP3-77-tLN" secondAttribute="leading" id="3pM-wz-OVf"/>
                                             <constraint firstItem="Phl-kb-aQ0" firstAttribute="leading" secondItem="Sxm-MW-lqp" secondAttribute="trailing" constant="10" id="3zH-2o-qq5"/>
                                             <constraint firstItem="R2Y-EC-eY5" firstAttribute="top" secondItem="skq-xy-QkB" secondAttribute="top" constant="18" id="4eQ-Rs-w1W"/>
                                             <constraint firstItem="TiW-NK-k40" firstAttribute="leading" secondItem="iA7-nx-PDI" secondAttribute="leading" id="4t8-ah-Z0E"/>
+                                            <constraint firstItem="HwL-MK-zFt" firstAttribute="height" secondItem="Sxm-MW-lqp" secondAttribute="height" id="5Cb-EZ-OJc"/>
                                             <constraint firstItem="flv-xI-ucK" firstAttribute="top" secondItem="77y-kt-vC3" secondAttribute="bottom" constant="8" id="5K1-nS-Nhb"/>
                                             <constraint firstItem="BVB-ih-AtQ" firstAttribute="leading" secondItem="iA7-nx-PDI" secondAttribute="trailing" constant="24" id="5PY-6k-fr9"/>
                                             <constraint firstItem="H49-R9-d9C" firstAttribute="leading" secondItem="skq-xy-QkB" secondAttribute="leading" constant="21" id="5tS-tj-HQS"/>
@@ -4488,6 +4511,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                             <constraint firstItem="bUG-Kq-POc" firstAttribute="top" secondItem="skq-xy-QkB" secondAttribute="top" constant="18" id="EmT-Gh-7pc"/>
                                             <constraint firstAttribute="trailing" secondItem="Cm6-uD-mh5" secondAttribute="trailing" constant="28" id="FDy-4g-T3B"/>
                                             <constraint firstItem="DbG-JO-5CF" firstAttribute="leading" secondItem="skq-xy-QkB" secondAttribute="leading" constant="21" id="Fu0-6C-rtm"/>
+                                            <constraint firstItem="HwL-MK-zFt" firstAttribute="top" secondItem="Sxm-MW-lqp" secondAttribute="top" id="G6K-0v-5xW"/>
                                             <constraint firstItem="Jqy-ma-5ol" firstAttribute="top" secondItem="l7b-hN-OH9" secondAttribute="bottom" constant="24" id="GhK-9N-mdX"/>
                                             <constraint firstAttribute="trailing" secondItem="H49-R9-d9C" secondAttribute="trailing" constant="21" id="GxF-2m-lXY"/>
                                             <constraint firstItem="gmK-PC-6nZ" firstAttribute="leading" secondItem="skq-xy-QkB" secondAttribute="leading" constant="21" id="HQ5-aQ-gtj"/>
@@ -4536,6 +4560,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                             <constraint firstItem="xfa-40-5hQ" firstAttribute="height" secondItem="xP3-77-tLN" secondAttribute="height" id="cKN-Dg-iXO"/>
                                             <constraint firstItem="Hh2-DM-zeG" firstAttribute="leading" secondItem="cbY-hZ-iyF" secondAttribute="leading" id="cWR-oU-80F"/>
                                             <constraint firstItem="14z-hX-jWK" firstAttribute="leading" secondItem="skq-xy-QkB" secondAttribute="leading" constant="24" id="cY0-tk-r5c"/>
+                                            <constraint firstItem="HwL-MK-zFt" firstAttribute="width" secondItem="Sxm-MW-lqp" secondAttribute="width" id="caF-3p-Gga"/>
                                             <constraint firstItem="kK3-OX-11v" firstAttribute="top" secondItem="Hh2-DM-zeG" secondAttribute="bottom" constant="16" id="cdO-La-9lt"/>
                                             <constraint firstItem="Lut-Vt-zsw" firstAttribute="leading" secondItem="hgj-de-70m" secondAttribute="trailing" constant="8" id="ckb-nJ-3yb"/>
                                             <constraint firstItem="Jqy-ma-5ol" firstAttribute="leading" secondItem="Phl-kb-aQ0" secondAttribute="trailing" constant="10" id="cm6-j1-VAj"/>
@@ -4594,11 +4619,26 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="ahw-ne-35s" firstAttribute="top" secondItem="Gqn-Ae-ZPp" secondAttribute="top" id="zcz-Hz-QiR"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOF-Z9-djm">
+                                <rect key="frame" x="0.0" y="1455" width="375" height="45"/>
+                                <color key="backgroundColor" red="0.15940248966217041" green="0.28466475009918213" blue="0.38037025928497314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="W0K-3w-8VG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="17"/>
+                                <state key="normal" title="Contact Me">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="AJO-Ph-pca" kind="show" id="YPO-6i-SEz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="l7b-hN-OH9" firstAttribute="width" secondItem="hLl-G9-ltj" secondAttribute="width" multiplier="345/375" id="6jv-01-IN4"/>
                             <constraint firstItem="Gqn-Ae-ZPp" firstAttribute="bottom" secondItem="Kb4-kA-6Ul" secondAttribute="top" id="G9k-G0-DjO"/>
+                            <constraint firstItem="eOF-Z9-djm" firstAttribute="leading" secondItem="hLl-G9-ltj" secondAttribute="leading" id="GjL-nr-Jft"/>
                             <constraint firstItem="A34-hs-iF2" firstAttribute="top" secondItem="hLl-G9-ltj" secondAttribute="top" id="H64-WU-KAl"/>
                             <constraint firstItem="Gqn-Ae-ZPp" firstAttribute="leading" secondItem="A34-hs-iF2" secondAttribute="leading" id="MPc-DO-n75"/>
                             <constraint firstAttribute="trailing" secondItem="A34-hs-iF2" secondAttribute="trailing" id="ODj-bA-ImI"/>
@@ -4606,6 +4646,8 @@ We may send emails to existing customers or prospective customers who have enqui
                             <constraint firstItem="A34-hs-iF2" firstAttribute="leading" secondItem="hLl-G9-ltj" secondAttribute="leading" id="eOZ-yl-e1e"/>
                             <constraint firstItem="Gqn-Ae-ZPp" firstAttribute="top" secondItem="A34-hs-iF2" secondAttribute="bottom" id="g4R-AC-8lM"/>
                             <constraint firstItem="E9C-me-SGa" firstAttribute="width" secondItem="hLl-G9-ltj" secondAttribute="width" multiplier="100/375" id="goj-eb-FXm"/>
+                            <constraint firstAttribute="trailing" secondItem="eOF-Z9-djm" secondAttribute="trailing" id="jbm-q9-5Z0"/>
+                            <constraint firstItem="Kb4-kA-6Ul" firstAttribute="top" secondItem="eOF-Z9-djm" secondAttribute="bottom" id="sDc-M7-QKs"/>
                             <constraint firstItem="Gqn-Ae-ZPp" firstAttribute="trailing" secondItem="A34-hs-iF2" secondAttribute="trailing" id="t4D-Rq-hiU"/>
                         </constraints>
                     </view>
@@ -4613,13 +4655,17 @@ We may send emails to existing customers or prospective customers who have enqui
                     <size key="freeformSize" width="375" height="1500"/>
                     <connections>
                         <outlet property="cancelButton" destination="Jqy-ma-5ol" id="qk2-WZ-rp6"/>
+                        <outlet property="carerLikeButton" destination="HwL-MK-zFt" id="HQ1-QQ-7Qh"/>
                         <outlet property="contactButton" destination="XiZ-J0-Cmb" id="dkD-G2-PcR"/>
                         <outlet property="daysRequiredCollectionView" destination="l7b-hN-OH9" id="UlT-RT-5Y1"/>
                         <outlet property="doneButton" destination="Sxm-MW-lqp" id="Xsf-Ld-3sz"/>
+                        <outlet property="doneButtonHeightConstraint" destination="KXW-QB-vhx" id="CVU-HR-7wq"/>
                         <outlet property="footerContactButton" destination="xdS-pI-y9T" id="2XT-1e-YlH"/>
                         <outlet property="locationPinLeadingConstraint" destination="a4j-sy-X0A" id="Fpa-kr-O1m"/>
                         <outlet property="profileImgView" destination="E9C-me-SGa" id="ZhV-zV-g5n"/>
+                        <outlet property="yearsExperienceLabel" destination="pFu-vR-N1l" id="0th-HP-Wh4"/>
                         <outlet property="yearsOfExpLeadingConstraint" destination="2Ah-Rp-dIE" id="roS-HH-JsU"/>
+                        <segue destination="T7W-9q-owI" kind="show" identifier="showLikedSegue" id="sPX-6B-Ijk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcY-35-f4C" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4684,7 +4730,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hiw-te-9Ps">
-                                <rect key="frame" x="128.5" y="386.5" width="246.5" height="1"/>
+                                <rect key="frame" x="128.5" y="385.5" width="246.5" height="1"/>
                                 <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="SgS-AJ-9ff"/>
@@ -4697,37 +4743,37 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;All reviews are moderated.&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWY-t7-n8d">
-                                <rect key="frame" x="98" y="161" width="178.5" height="17"/>
+                                <rect key="frame" x="98.5" y="161" width="178" height="17"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews only - No Contact Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImO-Cp-K3c">
-                                <rect key="frame" x="77" y="198" width="221" height="17"/>
+                                <rect key="frame" x="77.5" y="198" width="221" height="17"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Rate Me :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kv6-xc-ycF">
-                                <rect key="frame" x="122" y="235" width="131.5" height="20.5"/>
+                                <rect key="frame" x="122.5" y="235" width="131.5" height="20"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review : Serpil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE5-W0-Tks">
-                                <rect key="frame" x="132" y="314" width="111.5" height="20.5"/>
+                                <rect key="frame" x="132.5" y="313.5" width="111.5" height="20"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Title :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSE-QS-5gi">
-                                <rect key="frame" x="16" y="358" width="100" height="20.5"/>
+                                <rect key="frame" x="16" y="357.5" width="100" height="20"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIr-55-Oyh">
-                                <rect key="frame" x="174.5" y="271" width="25" height="27"/>
+                                <rect key="frame" x="174.5" y="270.5" width="25" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="0fk-1w-4Oc"/>
                                     <constraint firstAttribute="height" constant="27" id="CZH-CP-kQF"/>
@@ -4735,7 +4781,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <state key="normal" image="starUnfilled"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JI-tB-Z1C">
-                                <rect key="frame" x="207" y="271" width="25" height="27"/>
+                                <rect key="frame" x="207" y="270.5" width="25" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="B27-dJ-Tq3"/>
                                     <constraint firstAttribute="height" constant="27" id="LLC-EE-9nk"/>
@@ -4743,7 +4789,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <state key="normal" image="starUnfilled"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeg-P2-CPY">
-                                <rect key="frame" x="141" y="271" width="25" height="27"/>
+                                <rect key="frame" x="141" y="270.5" width="25" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="5L7-tK-lDV"/>
                                     <constraint firstAttribute="height" constant="27" id="zsz-Zm-fnn"/>
@@ -4751,7 +4797,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <state key="normal" image="starUnfilled"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCk-Rc-IbD">
-                                <rect key="frame" x="240" y="271" width="25" height="27"/>
+                                <rect key="frame" x="240" y="270.5" width="25" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="1kR-ZL-giw"/>
                                     <constraint firstAttribute="width" constant="25" id="GBm-Zc-jDe"/>
@@ -4759,7 +4805,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <state key="normal" image="starUnfilled"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcc-IM-6Bb">
-                                <rect key="frame" x="108" y="271" width="25" height="27"/>
+                                <rect key="frame" x="108" y="270.5" width="25" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="5YJ-uJ-f1a"/>
                                     <constraint firstAttribute="height" constant="27" id="Llf-ru-RbX"/>
@@ -4767,13 +4813,13 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <state key="normal" image="starFilled"/>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRU-TD-gLm">
-                                <rect key="frame" x="128.5" y="359.5" width="230.5" height="17"/>
+                                <rect key="frame" x="128.5" y="359" width="230.5" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nz-fb-13t">
-                                <rect key="frame" x="155.5" y="407.5" width="63.5" height="20.5"/>
+                                <rect key="frame" x="156" y="406.5" width="63.5" height="20"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -4791,7 +4837,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </state>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please ensure your review is correct and accurate..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SbG-NK-l2w">
-                                <rect key="frame" x="16" y="440" width="343" height="160"/>
+                                <rect key="frame" x="16" y="438.5" width="343" height="161.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="13"/>
@@ -5065,7 +5111,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a password of at least 5 characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-dk-e66">
-                                <rect key="frame" x="44.5" y="297" width="286.5" height="16"/>
+                                <rect key="frame" x="45" y="297" width="286.5" height="16"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -7106,7 +7152,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <rect key="frame" x="198" y="226" width="153" height="101"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jq1-AF-ZfD">
-                                                <rect key="frame" x="20" y="16" width="113.5" height="21"/>
+                                                <rect key="frame" x="20.5" y="16" width="113.5" height="21"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="$39.99">
                                                         <attributes>
@@ -7227,7 +7273,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* All subscriptions are automatically renewed until cancelled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOb-t7-lHz">
-                                        <rect key="frame" x="51.5" y="476" width="272.5" height="12"/>
+                                        <rect key="frame" x="52" y="476" width="272.5" height="12"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="10"/>
                                         <color key="textColor" red="0.486101687" green="0.49017071719999999" blue="0.49426180120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -7291,7 +7337,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <rect key="frame" x="111" y="791" width="153" height="101"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9e-Yv-h87">
-                                                <rect key="frame" x="24.5" y="16" width="105.5" height="21"/>
+                                                <rect key="frame" x="24" y="16" width="105.5" height="21"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="$159.99">
                                                         <attributes>
@@ -7419,7 +7465,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* All subscriptions are automatically renewed until cancelled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZY-Sr-XSA">
-                                        <rect key="frame" x="51.5" y="924" width="272.5" height="12"/>
+                                        <rect key="frame" x="52" y="924" width="272.5" height="12"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="10"/>
                                         <color key="textColor" red="0.486101687" green="0.49017071719999999" blue="0.49426180120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -7580,7 +7626,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAYMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJE-Fa-2fH">
-                                <rect key="frame" x="152.5" y="104" width="71" height="19"/>
+                                <rect key="frame" x="152" y="104" width="71" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -7789,6 +7835,7 @@ We may send emails to existing customers or prospective customers who have enqui
         <image name="ic_search" width="96" height="96"/>
         <image name="ic_star" width="69" height="69"/>
         <image name="imageLeft" width="1000" height="1000"/>
+        <image name="like_btn" width="180" height="47"/>
         <image name="list" width="512" height="512"/>
         <image name="login_button" width="462" height="155"/>
         <image name="login_fb" width="505" height="184"/>
@@ -7811,5 +7858,7 @@ We may send emails to existing customers or prospective customers who have enqui
     <inferredMetricsTieBreakers>
         <segue reference="QF0-ZY-AdE"/>
         <segue reference="jcl-G8-9uc"/>
+        <segue reference="sPX-6B-Ijk"/>
+        <segue reference="YPO-6i-SEz"/>
     </inferredMetricsTieBreakers>
 </document>

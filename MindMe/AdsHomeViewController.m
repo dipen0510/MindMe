@@ -105,6 +105,14 @@
     cell.drivingLicenseImgView.userInteractionEnabled = YES;
     [cell.drivingLicenseImgView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(drivingLicenseImgViewTapped)]];
     
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        cell.yearsExperienceStaticLabel.text = @"Years of Experience needed :";
+    }
+    else {
+        cell.yearsExperienceStaticLabel.text = @"Years of Experience ";
+    }
+    
+    
 }
 
 

@@ -32,21 +32,41 @@
     _profileImgView.layer.cornerRadius = 50.0;
     _profileImgView.layer.masksToBounds = NO;
     
-    _doneButton.layer.cornerRadius = 22.5;
-    _doneButton.layer.masksToBounds = NO;
-    
-    _footerContactButton.layer.cornerRadius = 22.5;
-    _footerContactButton.layer.masksToBounds = NO;
-    
-    _cancelButton.layer.cornerRadius = 22.5;
-    _cancelButton.layer.masksToBounds = NO;
-    _cancelButton.layer.borderWidth = 1.0;
-    _cancelButton.layer.borderColor = _cancelButton.titleLabel.textColor.CGColor;
-    
     _locationPinLeadingConstraint.constant = (130./375.) * [UIScreen mainScreen].bounds.size.width;
     _yearsOfExpLeadingConstraint.constant = (130./375.) * [UIScreen mainScreen].bounds.size.width;
     
     [self.daysRequiredCollectionView registerNib:[UINib nibWithNibName:@"ProfileAvailabilityCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileAvailabilityCollectionViewCell"];
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _footerContactButton.hidden = YES;
+        [_doneButton setTitle:@"" forState:UIControlStateNormal];
+        [_cancelButton setTitle:@"" forState:UIControlStateNormal];
+        [_doneButton setBackgroundColor:[UIColor clearColor]];
+        [_cancelButton setBackgroundColor:[UIColor clearColor]];
+        [_doneButton setBackgroundImage:[UIImage imageNamed:@"like_btn"] forState:UIControlStateNormal];
+        [_cancelButton setBackgroundImage:[UIImage imageNamed:@"review_btn"] forState:UIControlStateNormal];
+        _doneButtonHeightConstraint.constant = (([UIScreen mainScreen].bounds.size.width - 84)/2.) * (47./180.);
+    }
+    else {
+//        _doneButton.layer.cornerRadius = 22.5;
+//        _doneButton.layer.masksToBounds = NO;
+//        
+//        _footerContactButton.layer.cornerRadius = 22.5;
+//        _footerContactButton.layer.masksToBounds = NO;
+//        
+//        _cancelButton.layer.cornerRadius = 22.5;
+//        _cancelButton.layer.masksToBounds = NO;
+//        _cancelButton.layer.borderWidth = 1.0;
+//        _cancelButton.layer.borderColor = _cancelButton.titleLabel.textColor.CGColor;
+        
+        _footerContactButton.hidden = YES;
+        _doneButton.hidden = YES;
+        _cancelButton.hidden = YES;
+        _carerLikeButton.hidden = NO;
+        _doneButtonHeightConstraint.constant = (([UIScreen mainScreen].bounds.size.width - 84)/2.) * (47./180.);
+
+    
+    }
     
 }
 
@@ -72,6 +92,12 @@
 
 - (IBAction)backButtonTapped:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)doneButtonTapped:(id)sender {
+    
+    [self performSegueWithIdentifier:@"showLikedSegue" sender:nil];
+    
 }
 
 #pragma mark - CollectionView Datasource

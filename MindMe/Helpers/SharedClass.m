@@ -10,6 +10,8 @@
 
 @implementation SharedClass
 
+@synthesize isUserCarer;
+
 static SharedClass *singletonObject = nil;
 
 + (id)sharedInstance {
