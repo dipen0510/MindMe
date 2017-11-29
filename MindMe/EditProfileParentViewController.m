@@ -1,19 +1,20 @@
 //
-//  AdsDetailViewController.m
+//  EditProfileParentViewController.m
 //  MindMe
 //
-//  Created by Dipen Sekhsaria on 09/11/17.
+//  Created by Dipen Sekhsaria on 29/11/17.
 //  Copyright © 2017 Stardeep. All rights reserved.
 //
 
-#import "AdsDetailViewController.h"
+#import "EditProfileParentViewController.h"
+#import "ProfileActivitiesCollectionViewCell.h"
 #import "ProfileAvailabilityCollectionViewCell.h"
 
-@interface AdsDetailViewController ()
+@interface EditProfileParentViewController ()
 
 @end
 
-@implementation AdsDetailViewController
+@implementation EditProfileParentViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,48 +27,21 @@
 
 - (void) setupInitialUI {
     
-    _contactButton.layer.cornerRadius = 20.0;
-    _contactButton.layer.masksToBounds = NO;
+    _doneButton.layer.cornerRadius = 22.5;
+    _doneButton.layer.masksToBounds = NO;
     
-    _profileImgView.layer.cornerRadius = 50.0;
-    _profileImgView.layer.masksToBounds = NO;
+    _cancelButton.layer.cornerRadius = 22.5;
+    _cancelButton.layer.masksToBounds = NO;
+    _cancelButton.layer.borderWidth = 1.0;
+    _cancelButton.layer.borderColor = _cancelButton.titleLabel.textColor.CGColor;
     
-    _locationPinLeadingConstraint.constant = (130./375.) * [UIScreen mainScreen].bounds.size.width;
-    _yearsOfExpLeadingConstraint.constant = (130./375.) * [UIScreen mainScreen].bounds.size.width;
+    [self.activitiesCollectionView registerNib:[UINib nibWithNibName:@"ProfileActivitiesCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileActivitiesCollectionViewCell"];
+    [self.servicesCollectionView registerNib:[UINib nibWithNibName:@"ProfileActivitiesCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileActivitiesCollectionViewCell"];
+    [self.availabilityCollectionView registerNib:[UINib nibWithNibName:@"ProfileAvailabilityCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileAvailabilityCollectionViewCell"];
     
-    [self.daysRequiredCollectionView registerNib:[UINib nibWithNibName:@"ProfileAvailabilityCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileAvailabilityCollectionViewCell"];
-    
-    if (![[SharedClass sharedInstance] isUserCarer]) {
-        _footerContactButton.hidden = YES;
-        [_doneButton setTitle:@"" forState:UIControlStateNormal];
-        [_cancelButton setTitle:@"" forState:UIControlStateNormal];
-        [_doneButton setBackgroundColor:[UIColor clearColor]];
-        [_cancelButton setBackgroundColor:[UIColor clearColor]];
-        [_doneButton setBackgroundImage:[UIImage imageNamed:@"like_btn"] forState:UIControlStateNormal];
-        [_cancelButton setBackgroundImage:[UIImage imageNamed:@"review_btn"] forState:UIControlStateNormal];
-        _doneButtonHeightConstraint.constant = (([UIScreen mainScreen].bounds.size.width - 84)/2.) * (47./180.);
-    }
-    else {
-//        _doneButton.layer.cornerRadius = 22.5;
-//        _doneButton.layer.masksToBounds = NO;
-//        
-//        _footerContactButton.layer.cornerRadius = 22.5;
-//        _footerContactButton.layer.masksToBounds = NO;
-//        
-//        _cancelButton.layer.cornerRadius = 22.5;
-//        _cancelButton.layer.masksToBounds = NO;
-//        _cancelButton.layer.borderWidth = 1.0;
-//        _cancelButton.layer.borderColor = _cancelButton.titleLabel.textColor.CGColor;
-        
-        _footerContactButton.hidden = YES;
-        _doneButton.hidden = YES;
-        _cancelButton.hidden = YES;
-        _carerLikeButton.hidden = NO;
-        _doneButtonHeightConstraint.constant = (([UIScreen mainScreen].bounds.size.width - 84)/2.) * (47./180.);
-        _yearsExperienceLabel.text = @"Years of Experience needed :";
-
-    
-    }
+    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    tapGesture.cancelsTouchesInView = NO;
+    [_contentScrollView addGestureRecognizer:tapGesture];
     
 }
 
@@ -81,23 +55,31 @@
     
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)backButtonTapped:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (IBAction)doneButtonTapped:(id)sender {
+- (IBAction)menuButtonTapped:(id)sender {
     
-    [self performSegueWithIdentifier:@"showLikedSegue" sender:nil];
+    [self.sideMenuController showLeftViewAnimated];
+    
+}
+
+- (IBAction)miscOptionButtonTapped:(id)sender {
+    
+    UIButton* tappedButton = (UIButton *)sender;
+    tappedButton.selected = !tappedButton.isSelected;
     
 }
 
@@ -105,11 +87,17 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 48.;
+    if (collectionView == _availabilityCollectionView) {
+        return 48;
+    }
+    
+    return 3;
     
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (collectionView == _availabilityCollectionView) {
         
         static NSString *CellIdentifier = @"ProfileAvailabilityCollectionViewCell";
         ProfileAvailabilityCollectionViewCell *cell = (ProfileAvailabilityCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
@@ -124,7 +112,22 @@
         [self populateContentForAvailabilityCell:cell atIndexPath:indexPath];
         
         return cell;
+        
+    }
     
+    static NSString *CellIdentifier = @"ProfileActivitiesCollectionViewCell";
+    ProfileActivitiesCollectionViewCell *cell = (ProfileActivitiesCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    if (cell == nil) {
+        // Load the top-level objects from the custom cell XIB.
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ProfileActivitiesCollectionViewCell" owner:self options:nil];
+        // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
+        cell = [topLevelObjects objectAtIndex:0];
+    }
+    
+    [self populateContentForCell:cell atIndexPath:indexPath];
+    
+    return cell;
     
 }
 
@@ -132,12 +135,16 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    if (indexPath.row%8 == 0) {
-        return CGSizeMake(75.,collectionView.frame.size.height/6.);
-    }
+    if (collectionView == _availabilityCollectionView) {
         
-    return CGSizeMake((((345./375.)*[UIScreen mainScreen].bounds.size.width) - 75.)/7.,collectionView.frame.size.height/6.);
-
+        if (indexPath.row%8 == 0) {
+            return CGSizeMake(75.,collectionView.frame.size.height/6.);
+        }
+        
+        return CGSizeMake((((345./375.)*[UIScreen mainScreen].bounds.size.width) - 75.)/7.,collectionView.frame.size.height/6.);
+    }
+    
+    return CGSizeMake(100.,44.);
     
 }
 
@@ -158,7 +165,8 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    
+    if (collectionView == _availabilityCollectionView) {
+        
         if (indexPath.row%8 != 0 && indexPath.row>=8) {
             
             int currentStatus = [[availabilityArr objectAtIndex:indexPath.row] intValue];
@@ -166,12 +174,19 @@
             [collectionView reloadData];
             
         }
-
+        
+    }
     
 }
 
 
 #pragma mark - Populate Content
+
+- (void) populateContentForCell:(ProfileActivitiesCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    
+}
 
 - (void) populateContentForAvailabilityCell:(ProfileAvailabilityCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
@@ -237,6 +252,12 @@
     
     cell.layer.borderColor = [UIColor colorWithWhite:0.9 alpha:1.0].CGColor;
     cell.layer.borderWidth = 0.5;
+    
+}
+
+- (void) dismissKeyboard {
+    
+    [self.view endEditing:YES];
     
 }
 

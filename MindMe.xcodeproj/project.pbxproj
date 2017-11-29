@@ -186,6 +186,9 @@
 		D4AD692F1F933668009D57A7 /* AdsHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */; };
 		D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */; };
 		D4E34B2A1FCEF92A00D53EDC /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E34B291FCEF92A00D53EDC /* StartViewController.m */; };
+		D4E34B2D1FCF17FC00D53EDC /* BuyPlansForParentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E34B2C1FCF17FC00D53EDC /* BuyPlansForParentsViewController.m */; };
+		D4E34B331FCF1D4B00D53EDC /* MembershipFAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E34B321FCF1D4B00D53EDC /* MembershipFAQViewController.m */; };
+		D4E34B361FCF265E00D53EDC /* EditProfileParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E34B351FCF265E00D53EDC /* EditProfileParentViewController.m */; };
 		D4F05F171FBD67E8002024F6 /* STCollapseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F151FBD67E8002024F6 /* STCollapseTableView.m */; };
 		D4F05F1C1FBD8F16002024F6 /* SideMenuSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F05F1B1FBD8F16002024F6 /* SideMenuSectionView.m */; };
 		D4F05F1E1FBD8F20002024F6 /* SideMenuSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F05F1D1FBD8F20002024F6 /* SideMenuSectionView.xib */; };
@@ -545,6 +548,12 @@
 		D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdsHomeTableViewCell.xib; sourceTree = "<group>"; };
 		D4E34B281FCEF92A00D53EDC /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		D4E34B291FCEF92A00D53EDC /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		D4E34B2B1FCF17FC00D53EDC /* BuyPlansForParentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyPlansForParentsViewController.h; sourceTree = "<group>"; };
+		D4E34B2C1FCF17FC00D53EDC /* BuyPlansForParentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyPlansForParentsViewController.m; sourceTree = "<group>"; };
+		D4E34B311FCF1D4B00D53EDC /* MembershipFAQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MembershipFAQViewController.h; sourceTree = "<group>"; };
+		D4E34B321FCF1D4B00D53EDC /* MembershipFAQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MembershipFAQViewController.m; sourceTree = "<group>"; };
+		D4E34B341FCF265E00D53EDC /* EditProfileParentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileParentViewController.h; sourceTree = "<group>"; };
+		D4E34B351FCF265E00D53EDC /* EditProfileParentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileParentViewController.m; sourceTree = "<group>"; };
 		D4F05F151FBD67E8002024F6 /* STCollapseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCollapseTableView.m; sourceTree = "<group>"; };
 		D4F05F161FBD67E8002024F6 /* STCollapseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCollapseTableView.h; sourceTree = "<group>"; };
 		D4F05F1A1FBD8F16002024F6 /* SideMenuSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuSectionView.h; sourceTree = "<group>"; };
@@ -1350,6 +1359,8 @@
 				D41558711FB461A60031E23F /* AdsDetailViewController.m */,
 				D49BFE851F9C6C39000D6638 /* EditProfileViewController.h */,
 				D49BFE861F9C6C39000D6638 /* EditProfileViewController.m */,
+				D4E34B341FCF265E00D53EDC /* EditProfileParentViewController.h */,
+				D4E34B351FCF265E00D53EDC /* EditProfileParentViewController.m */,
 				D40CDD6D1FAEE89100213855 /* DrivingLicenseInfoViewController.h */,
 				D40CDD6E1FAEE89100213855 /* DrivingLicenseInfoViewController.m */,
 				D43EE8CC1FB30AF100BE7E08 /* ContactUsViewController.h */,
@@ -1370,8 +1381,12 @@
 				D4F05F331FBEE4EE002024F6 /* FeaturedAdsViewController.m */,
 				D4F05F351FBEFBBE002024F6 /* FAQViewController.h */,
 				D4F05F361FBEFBBE002024F6 /* FAQViewController.m */,
+				D4E34B311FCF1D4B00D53EDC /* MembershipFAQViewController.h */,
+				D4E34B321FCF1D4B00D53EDC /* MembershipFAQViewController.m */,
 				D4F05F421FBF3D39002024F6 /* BuyPlanViewController.h */,
 				D4F05F431FBF3D39002024F6 /* BuyPlanViewController.m */,
+				D4E34B2B1FCF17FC00D53EDC /* BuyPlansForParentsViewController.h */,
+				D4E34B2C1FCF17FC00D53EDC /* BuyPlansForParentsViewController.m */,
 				D4F05F4A1FBFFD99002024F6 /* ChooseCareTypeViewController.h */,
 				D4F05F4B1FBFFD99002024F6 /* ChooseCareTypeViewController.m */,
 				D4041AEC1FC0153C001F312E /* YourInformationViewController.h */,
@@ -1723,6 +1738,7 @@
 				D4041BE71FC0DEF5001F312E /* NSDate+ChatDataSource.m in Sources */,
 				D4041BF01FC0DEF5001F312E /* QMChatBaseLinkPreviewCell.m in Sources */,
 				D4041C0B1FC0DEF5001F312E /* QMChatLocationOutgoingCell.m in Sources */,
+				D4E34B361FCF265E00D53EDC /* EditProfileParentViewController.m in Sources */,
 				D48EE4B51F9B2A2C00CB43A0 /* LGSideMenuSegue.m in Sources */,
 				D4041B011FC0C7FF001F312E /* UploadDocumentsViewController.m in Sources */,
 				D4F05F3C1FBEFD65002024F6 /* FAQSectionView.m in Sources */,
@@ -1736,12 +1752,14 @@
 				D4041BCE1FC0DEF5001F312E /* QMChatResources.m in Sources */,
 				D420BFE61FB817F50071E30A /* TTRangeSlider.m in Sources */,
 				D4041C1B1FC0DEF5001F312E /* QMChatCellLayoutAttributes.m in Sources */,
+				D4E34B2D1FCF17FC00D53EDC /* BuyPlansForParentsViewController.m in Sources */,
 				D4041C661FC0E157001F312E /* README.md in Sources */,
 				D4F05F221FBDC02D002024F6 /* AdvertsTableViewCell.m in Sources */,
 				D4041C221FC0DEF5001F312E /* UIImage+Cropper.m in Sources */,
 				D4041C631FC0E157001F312E /* FFCircularProgressView.m in Sources */,
 				D48EE4B41F9B2A2C00CB43A0 /* LGSideMenuView.m in Sources */,
 				D4041C691FC0E157001F312E /* UIImageView+HighlightedWebCache.m in Sources */,
+				D4E34B331FCF1D4B00D53EDC /* MembershipFAQViewController.m in Sources */,
 				D4041C721FC0E157001F312E /* UIImageView+WebCache.m in Sources */,
 				D4A019B61F850F0200E311B7 /* main.m in Sources */,
 				D4F05F2C1FBDDC88002024F6 /* PaymentViewController.m in Sources */,

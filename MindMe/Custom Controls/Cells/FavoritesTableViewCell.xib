@@ -109,11 +109,11 @@
                                     <constraint firstAttribute="width" constant="18" id="Y7Y-qH-K2v"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_liked" translatesAutoresizingMaskIntoConstraints="NO" id="QQp-Mk-ob2">
-                                <rect key="frame" x="336" y="124" width="21" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starFilled" translatesAutoresizingMaskIntoConstraints="NO" id="QQp-Mk-ob2">
+                                <rect key="frame" x="332" y="120" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="21" id="fEE-2i-xdo"/>
-                                    <constraint firstAttribute="height" constant="21" id="gts-4T-N0V"/>
+                                    <constraint firstAttribute="width" constant="25" id="fEE-2i-xdo"/>
+                                    <constraint firstAttribute="height" constant="25" id="gts-4T-N0V"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -167,6 +167,6 @@
         <image name="ic_car" width="96" height="96"/>
         <image name="ic_cv" width="96" height="96"/>
         <image name="ic_eu" width="96" height="96"/>
-        <image name="ic_liked" width="96" height="96"/>
+        <image name="starFilled" width="25" height="27"/>
     </resources>
 </document>

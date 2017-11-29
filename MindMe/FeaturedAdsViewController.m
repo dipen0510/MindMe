@@ -77,7 +77,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return 230;
+    return 200;
     
 }
 
@@ -86,6 +86,12 @@
     
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        cell.yearsExperienceStaticLabel.text = @"Years of Experience needed :";
+    }
+    else {
+        cell.yearsExperienceStaticLabel.text = @"Years of Experience ";
+    }
     
 }
 

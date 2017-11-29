@@ -36,19 +36,34 @@
     }
     
     lastOpenedIndex = -1;
-    menuItemsArray=[[NSArray alloc]initWithObjects:@"Account Details", @"Search for a Carer", @"Subscribe Now", @"Information", @"Contact", @"Logout", nil];
+    menuItemsArray=[[NSArray alloc]initWithObjects:@"Account Details", @"Search for a Carer", @"Subscribe Now", @"Information", @"Contact Us", @"Logout", nil];
+    menuItemsArrayForCarer=[[NSArray alloc]initWithObjects:@"Account Details", @"Search Jobs", @"Upgrade", @"Information", @"Contact Us", @"Logout", nil];
     menuImageArray = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_search",@"news_icon",@"info_icon",@"ic_email",@"ic_email",nil];
     sectionArr = [[NSMutableArray alloc] init];
     
-    for (int i = 0; i<menuItemsArray.count; i++) {
-        
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"SideMenuSectionView" owner:self options:nil];
-        SideMenuSectionView *header = [topLevelObjects objectAtIndex:0];
-        header.frame = CGRectMake(header.frame.origin.x, header.frame.origin.y, header.frame.size.width, sectionHeight);
-        header.menuImage.image = [UIImage imageNamed:[menuImageArray objectAtIndex:i]];
-        header.menuTitle.text = [menuItemsArray objectAtIndex:i];
-        [sectionArr addObject:header];
-        
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        for (int i = 0; i<menuItemsArrayForCarer.count; i++) {
+            
+            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"SideMenuSectionView" owner:self options:nil];
+            SideMenuSectionView *header = [topLevelObjects objectAtIndex:0];
+            header.frame = CGRectMake(header.frame.origin.x, header.frame.origin.y, header.frame.size.width, sectionHeight);
+            header.menuImage.image = [UIImage imageNamed:[menuImageArray objectAtIndex:i]];
+            header.menuTitle.text = [menuItemsArrayForCarer objectAtIndex:i];
+            [sectionArr addObject:header];
+            
+        }
+    }
+    else {
+        for (int i = 0; i<menuItemsArray.count; i++) {
+            
+            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"SideMenuSectionView" owner:self options:nil];
+            SideMenuSectionView *header = [topLevelObjects objectAtIndex:0];
+            header.frame = CGRectMake(header.frame.origin.x, header.frame.origin.y, header.frame.size.width, sectionHeight);
+            header.menuImage.image = [UIImage imageNamed:[menuImageArray objectAtIndex:i]];
+            header.menuTitle.text = [menuItemsArray objectAtIndex:i];
+            [sectionArr addObject:header];
+            
+        }
     }
     
     _sideMenuTableView.delegate1 = self;
@@ -71,18 +86,32 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    switch (section) {
-        case 0:
-            return 2;
-            break;
-        case 1:
-            return 3;
-            break;
-        case 3:
-            return 3;
-            break;
-        default:
-            break;
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        switch (section) {
+            case 0:
+                return 2;
+                break;
+            case 3:
+                return 3;
+                break;
+            default:
+                break;
+        }
+    }
+    else {
+        switch (section) {
+            case 0:
+                return 2;
+                break;
+            case 1:
+                return 3;
+                break;
+            case 3:
+                return 3;
+                break;
+            default:
+                break;
+        }
     }
     
     return 0;
@@ -126,9 +155,19 @@
     
     lastOpenedIndex = section;
     
+    if ([[SharedClass sharedInstance] isUserCarer] && section == 1) {
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+    }
+    
     if (section == 2) {
         
-        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FeaturedCarerViewController" forSideMenuController:self.sideMenuController];
+        if ([[SharedClass sharedInstance] isUserCarer]) {
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FeaturedCarerViewController" forSideMenuController:self.sideMenuController];
+        }
+        else {
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"BuyPlansForParentsViewController" forSideMenuController:self.sideMenuController];
+        }
+    
         
     }
     else if (section == 4) {
@@ -190,11 +229,24 @@
 {
     
     SideMenuSectionView *header = [sectionArr objectAtIndex:section];
-    if (section == 0 || section == 1 || section == 3) {
-        header.chevronImgView.hidden = NO;
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        if (section == 0 || section == 3) {
+            header.chevronImgView.hidden = NO;
+        }
+        else {
+            header.chevronImgView.hidden = YES;
+        }
+        
     }
     else {
-        header.chevronImgView.hidden = YES;
+        if (section == 0 || section == 1 || section == 3) {
+            header.chevronImgView.hidden = NO;
+        }
+        else {
+            header.chevronImgView.hidden = YES;
+        }
+        
     }
     
     if (section == 2) {
@@ -220,7 +272,13 @@
                 cell.menuTitle.text = @"Personal Details";
             }
             else {
-                cell.menuTitle.text = @"Adverts";
+                if ([[SharedClass sharedInstance] isUserCarer]) {
+                    cell.menuTitle.text = @"Profiles";
+                }
+                else {
+                    cell.menuTitle.text = @"Adverts";
+                }
+                
             }
             break;
         case 1:
@@ -259,12 +317,21 @@
     
     if (indexPath.row == 0 && indexPath.section == 0) {
         
-        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
+        if ([[SharedClass sharedInstance] isUserCarer]) {
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
+        }
+        else {
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileParentViewController" forSideMenuController:self.sideMenuController];
+        }
+        
         
     }
     else if (indexPath.row == 1 && indexPath.section == 0) {
         
-        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
+        if (![[SharedClass sharedInstance] isUserCarer]) {
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
+        }
+
         
     }
     else if (indexPath.section == 1) {
@@ -281,6 +348,11 @@
     else if (indexPath.row == 0 && indexPath.section == 3) {
         
         [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FAQViewController" forSideMenuController:self.sideMenuController];
+        
+    }
+    else if (indexPath.row == 1 && indexPath.section == 3) {
+        
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"MembershipFAQViewController" forSideMenuController:self.sideMenuController];
         
     }
     

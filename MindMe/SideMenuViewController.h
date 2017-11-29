@@ -11,6 +11,7 @@
 
 @interface SideMenuViewController : UIViewController {
     NSArray *menuItemsArray;
+    NSArray *menuItemsArrayForCarer;
     NSArray *menuImageArray;
     NSMutableArray* sectionArr;
     NSInteger lastOpenedIndex;
