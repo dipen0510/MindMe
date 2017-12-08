@@ -43,6 +43,13 @@
     _upgradedLabel.layer.borderColor = _createAdvertButton.backgroundColor.CGColor;
     _upgradedLabel.layer.borderWidth = 1.0;
     
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        
+        _createAdvertButton.hidden = YES;
+        _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"Subscribed\nSubscribe Now"];
+        
+    }
+    
 }
 
 
@@ -122,6 +129,17 @@
     
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+}
+
+- (NSMutableAttributedString *) attributedTextForUpgradedLabel:(NSString *) labelText {
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:labelText];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setAlignment:NSTextAlignmentCenter];
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [labelText length])];
+    
+    return attributedString ;
     
 }
 

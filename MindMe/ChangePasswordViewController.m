@@ -50,7 +50,13 @@
 */
 
 - (IBAction)cancelButtonTapped:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    if ([[SharedClass sharedInstance] isChangePasswordOpenedFromSideMenu]) {
+        [[SharedClass sharedInstance] setIsChangePasswordOpenedFromSideMenu:NO];
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+    }
+    else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

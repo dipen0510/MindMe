@@ -10,6 +10,7 @@
 #import "AdsHomeTableViewCell.h"
 #import "DrivingLicenseInfoViewController.h"
 #import "FilterViewController.h"
+#import "ActionSheetPicker.h"
 
 @interface AdsHomeViewController () {
     DrivingLicenseInfoViewController *drivingInfoViewController;
@@ -36,6 +37,9 @@
     
     _messagesView.userInteractionEnabled = YES;
     [_messagesView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(messagesViewTapped)]];
+    
+    _carerTypeTFTopConstraint.constant = (13./667)*[UIScreen mainScreen].bounds.size.height;
+    _carerTypeTFLeadingConstraint.constant = (12./375)*[UIScreen mainScreen].bounds.size.width;
     
 }
 
@@ -182,4 +186,22 @@
 
 
 
+- (IBAction)carerTypeButtonTapped:(id)sender {
+    
+    NSArray *colors = [NSArray arrayWithObjects:@"AU Pairs", @"Babysitters", @"Childminders", nil];
+    
+    [ActionSheetStringPicker showPickerWithTitle:@""
+                                            rows:colors
+                                initialSelection:0
+                                       doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+                                           NSLog(@"Picker: %@, Index: %ld, value: %@",
+                                                 picker, (long)selectedIndex, selectedValue);
+                                           _carerTypeTextField.text = selectedValue;
+                                       }
+                                     cancelBlock:^(ActionSheetStringPicker *picker) {
+                                         NSLog(@"Block Picker Canceled");
+                                     }
+                                          origin:sender];
+    
+}
 @end

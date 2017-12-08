@@ -51,13 +51,13 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_eu" translatesAutoresizingMaskIntoConstraints="NO" id="f0F-6E-4Ze">
-                                <rect key="frame" x="20" y="108" width="25.5" height="25.5"/>
+                                <rect key="frame" x="15" y="108" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="f0F-6E-4Ze" secondAttribute="height" multiplier="1:1" id="SPp-Fe-rRc"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_car" translatesAutoresizingMaskIntoConstraints="NO" id="xFa-gv-dzk">
-                                <rect key="frame" x="53.5" y="108" width="25.5" height="25.5"/>
+                                <rect key="frame" x="55" y="108" width="32" height="32"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M7d-xT-bDr">
                                 <rect key="frame" x="108" y="43" width="112" height="20"/>
@@ -192,7 +192,7 @@
                             <constraint firstItem="QZg-ex-1as" firstAttribute="top" secondItem="jeM-TU-Rwf" secondAttribute="bottom" constant="8" id="PFS-lP-KCm"/>
                             <constraint firstAttribute="trailing" secondItem="ZED-zr-0ti" secondAttribute="trailing" constant="2" id="PPF-Nn-qhL"/>
                             <constraint firstItem="44C-wM-POQ" firstAttribute="leading" secondItem="0G2-n3-lEo" secondAttribute="trailing" constant="8" id="SRf-1l-G63"/>
-                            <constraint firstItem="f0F-6E-4Ze" firstAttribute="leading" secondItem="gBX-lr-rRz" secondAttribute="leading" constant="20" id="UV6-KC-oxx"/>
+                            <constraint firstItem="f0F-6E-4Ze" firstAttribute="leading" secondItem="gBX-lr-rRz" secondAttribute="leading" constant="15" id="UV6-KC-oxx"/>
                             <constraint firstAttribute="trailing" secondItem="44C-wM-POQ" secondAttribute="trailing" constant="8" id="UXr-R7-I9W"/>
                             <constraint firstItem="jrQ-P8-SSg" firstAttribute="top" secondItem="44C-wM-POQ" secondAttribute="bottom" constant="8" id="VT0-hx-khg"/>
                             <constraint firstItem="QZg-ex-1as" firstAttribute="leading" secondItem="M7d-xT-bDr" secondAttribute="leading" id="YLH-S0-Elj"/>
@@ -209,7 +209,7 @@
                             <constraint firstItem="f0F-6E-4Ze" firstAttribute="top" secondItem="0G2-n3-lEo" secondAttribute="bottom" constant="8" id="mnZ-3L-NzH"/>
                             <constraint firstItem="9nL-7i-lkX" firstAttribute="top" secondItem="ZED-zr-0ti" secondAttribute="bottom" constant="16" id="ole-kH-UJi"/>
                             <constraint firstItem="jeM-TU-Rwf" firstAttribute="leading" secondItem="M7d-xT-bDr" secondAttribute="trailing" constant="4" id="pxK-RR-UVt"/>
-                            <constraint firstItem="f0F-6E-4Ze" firstAttribute="width" secondItem="0G2-n3-lEo" secondAttribute="width" multiplier="20/72" id="qcS-1T-T2x"/>
+                            <constraint firstItem="f0F-6E-4Ze" firstAttribute="width" secondItem="0G2-n3-lEo" secondAttribute="width" multiplier="25/72" id="qcS-1T-T2x"/>
                             <constraint firstItem="ZED-zr-0ti" firstAttribute="leading" secondItem="bAz-tq-SWR" secondAttribute="trailing" constant="4" id="qr5-TQ-BrL"/>
                             <constraint firstItem="jeM-TU-Rwf" firstAttribute="top" secondItem="M7d-xT-bDr" secondAttribute="top" id="qrj-Qc-qQ9"/>
                             <constraint firstAttribute="trailing" secondItem="jrQ-P8-SSg" secondAttribute="trailing" constant="8" id="ujg-z2-7ok"/>

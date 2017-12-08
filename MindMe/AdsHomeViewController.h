@@ -14,5 +14,9 @@
 - (IBAction)filterButtonTapped:(id)sender;
 @property (weak, nonatomic) IBOutlet UIView *favoritesView;
 @property (weak, nonatomic) IBOutlet UIView *messagesView;
+- (IBAction)carerTypeButtonTapped:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *carerTypeTextField;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *carerTypeTFLeadingConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *carerTypeTFTopConstraint;
 
 @end

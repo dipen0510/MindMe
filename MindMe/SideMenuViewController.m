@@ -26,6 +26,14 @@
     
 }
 
+-(void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    _sideMenuTableView.delegate = nil;
+    
+}
+
 - (void) setupInitialUI {
     
     if ([UIScreen mainScreen].bounds.size.height<667) {
@@ -38,7 +46,7 @@
     lastOpenedIndex = -1;
     menuItemsArray=[[NSArray alloc]initWithObjects:@"Account Details", @"Search for a Carer", @"Subscribe Now", @"Information", @"Contact Us", @"Logout", nil];
     menuItemsArrayForCarer=[[NSArray alloc]initWithObjects:@"Account Details", @"Search Jobs", @"Upgrade", @"Information", @"Contact Us", @"Logout", nil];
-    menuImageArray = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_search",@"news_icon",@"info_icon",@"ic_email",@"ic_email",nil];
+    menuImageArray = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_search",@"news_icon",@"info_icon",@"ic_email",@"logout",nil];
     sectionArr = [[NSMutableArray alloc] init];
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
@@ -174,6 +182,9 @@
         
         [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ContactUsViewController" forSideMenuController:self.sideMenuController];
         
+    }
+    else if (section == 5) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }
     
 }
@@ -328,9 +339,9 @@
     }
     else if (indexPath.row == 1 && indexPath.section == 0) {
         
-        if (![[SharedClass sharedInstance] isUserCarer]) {
+//        if (![[SharedClass sharedInstance] isUserCarer]) {
             [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
-        }
+//        }
 
         
     }
@@ -353,6 +364,12 @@
     else if (indexPath.row == 1 && indexPath.section == 3) {
         
         [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"MembershipFAQViewController" forSideMenuController:self.sideMenuController];
+        
+    }
+    else if (indexPath.row == 2 && indexPath.section == 3) {
+        
+        [[SharedClass sharedInstance] setIsChangePasswordOpenedFromSideMenu:YES];
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ChangePasswordViewController" forSideMenuController:self.sideMenuController];
         
     }
     

@@ -18,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _headerLabel.text = @"LIKED ADVERTS";
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

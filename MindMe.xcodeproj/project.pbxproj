@@ -137,6 +137,15 @@
 		D415586F1FB42E6B0031E23F /* tmpAdsHome.png in Resources */ = {isa = PBXBuildFile; fileRef = D415586E1FB42E6B0031E23F /* tmpAdsHome.png */; };
 		D41558721FB461A60031E23F /* AdsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41558711FB461A60031E23F /* AdsDetailViewController.m */; };
 		D41558751FB4E9590031E23F /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41558741FB4E9590031E23F /* ChangePasswordViewController.m */; };
+		D41B6AAC1FDAC3A400E1F312 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6A9A1FDAC3A400E1F312 /* ActionSheetDatePicker.m */; };
+		D41B6AAD1FDAC3A400E1F312 /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6A9C1FDAC3A400E1F312 /* ActionSheetLocalePicker.m */; };
+		D41B6AAE1FDAC3A400E1F312 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6AA01FDAC3A400E1F312 /* ActionSheetDistancePicker.m */; };
+		D41B6AAF1FDAC3A400E1F312 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6AA11FDAC3A400E1F312 /* ActionSheetCustomPicker.m */; };
+		D41B6AB01FDAC3A400E1F312 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6AA31FDAC3A400E1F312 /* SWActionSheet.m */; };
+		D41B6AB11FDAC3A400E1F312 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6AA51FDAC3A400E1F312 /* ActionSheetStringPicker.m */; };
+		D41B6AB21FDAC3A400E1F312 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6AA61FDAC3A400E1F312 /* DistancePickerView.m */; };
+		D41B6AB31FDAC3A400E1F312 /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6AA71FDAC3A400E1F312 /* ActionSheetMultipleStringPicker.m */; };
+		D41B6AB41FDAC3A400E1F312 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6AA81FDAC3A400E1F312 /* AbstractActionSheetPicker.m */; };
 		D420BFE01FB5CD7A0071E30A /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D420BFDE1FB5CD7A0071E30A /* FilterViewController.m */; };
 		D420BFE11FB5CD7A0071E30A /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D420BFDF1FB5CD7A0071E30A /* FilterViewController.xib */; };
 		D420BFE61FB817F50071E30A /* TTRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D420BFE41FB817F50071E30A /* TTRangeSlider.m */; };
@@ -463,6 +472,26 @@
 		D41558711FB461A60031E23F /* AdsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsDetailViewController.m; sourceTree = "<group>"; };
 		D41558731FB4E9590031E23F /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
 		D41558741FB4E9590031E23F /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		D41B6A981FDAC3A400E1F312 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		D41B6A991FDAC3A400E1F312 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		D41B6A9A1FDAC3A400E1F312 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		D41B6A9B1FDAC3A400E1F312 /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
+		D41B6A9C1FDAC3A400E1F312 /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetLocalePicker.m; sourceTree = "<group>"; };
+		D41B6A9D1FDAC3A400E1F312 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		D41B6A9E1FDAC3A400E1F312 /* ActionSheetMultipleStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetMultipleStringPicker.h; sourceTree = "<group>"; };
+		D41B6A9F1FDAC3A400E1F312 /* DistancePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
+		D41B6AA01FDAC3A400E1F312 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		D41B6AA11FDAC3A400E1F312 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		D41B6AA21FDAC3A400E1F312 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		D41B6AA31FDAC3A400E1F312 /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
+		D41B6AA41FDAC3A400E1F312 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		D41B6AA51FDAC3A400E1F312 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		D41B6AA61FDAC3A400E1F312 /* DistancePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerView.m; sourceTree = "<group>"; };
+		D41B6AA71FDAC3A400E1F312 /* ActionSheetMultipleStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetMultipleStringPicker.m; sourceTree = "<group>"; };
+		D41B6AA81FDAC3A400E1F312 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		D41B6AA91FDAC3A400E1F312 /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetLocalePicker.h; sourceTree = "<group>"; };
+		D41B6AAA1FDAC3A400E1F312 /* ActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetPicker.h; sourceTree = "<group>"; };
+		D41B6AAB1FDAC3A400E1F312 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDistancePicker.h; sourceTree = "<group>"; };
 		D420BFDD1FB5CD7A0071E30A /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
 		D420BFDE1FB5CD7A0071E30A /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
 		D420BFDF1FB5CD7A0071E30A /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
@@ -1230,6 +1259,33 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		D41B6A971FDAC3A400E1F312 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				D41B6A981FDAC3A400E1F312 /* ActionSheetCustomPicker.h */,
+				D41B6A991FDAC3A400E1F312 /* ActionSheetStringPicker.h */,
+				D41B6A9A1FDAC3A400E1F312 /* ActionSheetDatePicker.m */,
+				D41B6A9B1FDAC3A400E1F312 /* SWActionSheet.h */,
+				D41B6A9C1FDAC3A400E1F312 /* ActionSheetLocalePicker.m */,
+				D41B6A9D1FDAC3A400E1F312 /* AbstractActionSheetPicker.h */,
+				D41B6A9E1FDAC3A400E1F312 /* ActionSheetMultipleStringPicker.h */,
+				D41B6A9F1FDAC3A400E1F312 /* DistancePickerView.h */,
+				D41B6AA01FDAC3A400E1F312 /* ActionSheetDistancePicker.m */,
+				D41B6AA11FDAC3A400E1F312 /* ActionSheetCustomPicker.m */,
+				D41B6AA21FDAC3A400E1F312 /* ActionSheetCustomPickerDelegate.h */,
+				D41B6AA31FDAC3A400E1F312 /* SWActionSheet.m */,
+				D41B6AA41FDAC3A400E1F312 /* ActionSheetDatePicker.h */,
+				D41B6AA51FDAC3A400E1F312 /* ActionSheetStringPicker.m */,
+				D41B6AA61FDAC3A400E1F312 /* DistancePickerView.m */,
+				D41B6AA71FDAC3A400E1F312 /* ActionSheetMultipleStringPicker.m */,
+				D41B6AA81FDAC3A400E1F312 /* AbstractActionSheetPicker.m */,
+				D41B6AA91FDAC3A400E1F312 /* ActionSheetLocalePicker.h */,
+				D41B6AAA1FDAC3A400E1F312 /* ActionSheetPicker.h */,
+				D41B6AAB1FDAC3A400E1F312 /* ActionSheetDistancePicker.h */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
 		D420BFE21FB817F50071E30A /* TTRangeSlider */ = {
 			isa = PBXGroup;
 			children = (
@@ -1270,6 +1326,7 @@
 		D48EE4A31F9B2A2400CB43A0 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D41B6A971FDAC3A400E1F312 /* Pickers */,
 				D4041C311FC0E157001F312E /* FFCircularProgressView */,
 				D4041C3A1FC0E157001F312E /* SDWebImage */,
 				D4041B081FC0DEF5001F312E /* QMChatViewController */,
@@ -1706,6 +1763,7 @@
 				D4041C1C1FC0DEF5001F312E /* QMCollectionViewFlowLayoutInvalidationContext.m in Sources */,
 				D4041BD11FC0DEF5001F312E /* QMChatViewController.m in Sources */,
 				D4041BFC1FC0DEF5001F312E /* QMVideoIncomingCell.m in Sources */,
+				D41B6AB01FDAC3A400E1F312 /* SWActionSheet.m in Sources */,
 				D4041C1E1FC0DEF5001F312E /* QMChatCollectionView.m in Sources */,
 				D4041C6D1FC0E157001F312E /* SDWebImageCompat.m in Sources */,
 				D4041C081FC0DEF5001F312E /* QMBaseChatLocationCell.m in Sources */,
@@ -1719,9 +1777,11 @@
 				D43EE8CE1FB30AF100BE7E08 /* ContactUsViewController.m in Sources */,
 				D4041BEF1FC0DEF5001F312E /* QMChatCell.m in Sources */,
 				D4041C091FC0DEF5001F312E /* QMChatOutgoingCell.m in Sources */,
+				D41B6AAE1FDAC3A400E1F312 /* ActionSheetDistancePicker.m in Sources */,
 				D4041C231FC0DEF5001F312E /* NSString+QM.m in Sources */,
 				D4041C011FC0DEF5001F312E /* QMMediaIncomingCell.m in Sources */,
 				D4041BF91FC0DEF5001F312E /* QMAudioIncomingCell.m in Sources */,
+				D41B6AB31FDAC3A400E1F312 /* ActionSheetMultipleStringPicker.m in Sources */,
 				D4041BF11FC0DEF5001F312E /* QMChatOutgoingLinkPreviewCell.m in Sources */,
 				D48EE4C31F9B383C00CB43A0 /* SideMenuViewController.m in Sources */,
 				D4A019E91F85386C00E311B7 /* LoginViewController.m in Sources */,
@@ -1751,6 +1811,7 @@
 				D4041C671FC0E157001F312E /* SDWebImageManager.m in Sources */,
 				D4041BCE1FC0DEF5001F312E /* QMChatResources.m in Sources */,
 				D420BFE61FB817F50071E30A /* TTRangeSlider.m in Sources */,
+				D41B6AB11FDAC3A400E1F312 /* ActionSheetStringPicker.m in Sources */,
 				D4041C1B1FC0DEF5001F312E /* QMChatCellLayoutAttributes.m in Sources */,
 				D4E34B2D1FCF17FC00D53EDC /* BuyPlansForParentsViewController.m in Sources */,
 				D4041C661FC0E157001F312E /* README.md in Sources */,
@@ -1764,11 +1825,13 @@
 				D4A019B61F850F0200E311B7 /* main.m in Sources */,
 				D4F05F2C1FBDDC88002024F6 /* PaymentViewController.m in Sources */,
 				D4041C6A1FC0E157001F312E /* SDWebImageDownloader.m in Sources */,
+				D41B6AAD1FDAC3A400E1F312 /* ActionSheetLocalePicker.m in Sources */,
 				D4041C1D1FC0DEF5001F312E /* QMChatCollectionViewFlowLayout.m in Sources */,
 				D4041C2D1FC0DFFC001F312E /* ChatViewController.m in Sources */,
 				D48EE4B61F9B2A2C00CB43A0 /* LGSideMenuController.m in Sources */,
 				D4041C031FC0DEF5001F312E /* QMVideoOutgoingCell.m in Sources */,
 				D4041C641FC0E157001F312E /* README.md in Sources */,
+				D41B6AB41FDAC3A400E1F312 /* AbstractActionSheetPicker.m in Sources */,
 				D49BFE8B1F9C6F60000D6638 /* SharedClass.m in Sources */,
 				D4F05F301FBDE5CD002024F6 /* FeaturedAdsTableViewCell.m in Sources */,
 				D4041AF11FC0232C001F312E /* YourAdvertViewController.m in Sources */,
@@ -1784,6 +1847,7 @@
 				D40CDD6F1FAEE89100213855 /* DrivingLicenseInfoViewController.m in Sources */,
 				D4041C251FC0DEF5001F312E /* UIImage+QM.m in Sources */,
 				D4041BF71FC0DEF5001F312E /* QMBaseMediaCell.m in Sources */,
+				D41B6AAC1FDAC3A400E1F312 /* ActionSheetDatePicker.m in Sources */,
 				D4041C061FC0DEF5001F312E /* QMChatAttachmentIncomingCell.m in Sources */,
 				D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */,
 				D48EE4B91F9B2A2C00CB43A0 /* LGSideMenuBorderView.m in Sources */,
@@ -1815,7 +1879,9 @@
 				D4041C171FC0DEF5001F312E /* QMAudioRecordView.m in Sources */,
 				D41558751FB4E9590031E23F /* ChangePasswordViewController.m in Sources */,
 				D4041C1F1FC0DEF5001F312E /* QMKVOView.m in Sources */,
+				D41B6AB21FDAC3A400E1F312 /* DistancePickerView.m in Sources */,
 				D4F05F4C1FBFFD99002024F6 /* ChooseCareTypeViewController.m in Sources */,
+				D41B6AAF1FDAC3A400E1F312 /* ActionSheetCustomPicker.m in Sources */,
 				D4041BD01FC0DEF5001F312E /* QMImageLoader.m in Sources */,
 				D49BFE871F9C6C39000D6638 /* EditProfileViewController.m in Sources */,
 				D4F05F441FBF3D39002024F6 /* BuyPlanViewController.m in Sources */,

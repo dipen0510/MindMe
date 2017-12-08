@@ -10,6 +10,7 @@
 
 @interface FavoritesViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 - (IBAction)backButtonTapped:(id)sender;
 
 @end
