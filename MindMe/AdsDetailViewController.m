@@ -29,8 +29,8 @@
     _contactButton.layer.cornerRadius = 20.0;
     _contactButton.layer.masksToBounds = NO;
     
-    _profileImgView.layer.cornerRadius = 50.0;
-    _profileImgView.layer.masksToBounds = NO;
+    _profileImgView.layer.cornerRadius = (50./375)*[UIScreen mainScreen].bounds.size.width;
+    _profileImgView.layer.masksToBounds = YES;
     
     _locationPinLeadingConstraint.constant = (130./375.) * [UIScreen mainScreen].bounds.size.width;
     _yearsOfExpLeadingConstraint.constant = (130./375.) * [UIScreen mainScreen].bounds.size.width;
