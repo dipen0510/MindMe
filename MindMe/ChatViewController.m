@@ -209,9 +209,9 @@ NS_ENUM(NSUInteger, QMMessageType) {
 
 - (void)collectionView:(QMChatCollectionView *)collectionView configureCell:(UICollectionViewCell *)cell forIndexPath:(NSIndexPath *)indexPath
 {
+    QBChatMessage* message = [self.chatDataSource messageForIndexPath:indexPath];
     
     if ([cell conformsToProtocol:@protocol(QMChatAttachmentCell)]) {
-        QBChatMessage* message = [self.chatDataSource messageForIndexPath:indexPath];
         
         if (message.attachments != nil) {
             QBChatAttachment* attachment = message.attachments.firstObject;
@@ -222,6 +222,16 @@ NS_ENUM(NSUInteger, QMMessageType) {
         }
     }
     
+    QMChatCell* cell1 = (QMChatCell *)cell;
+    if (message.senderID == 2000) {
+        cell1.avatarView.image = [UIImage imageNamed:@"baby_pic"];
+    }
+    else {
+        cell1.avatarView.image = [UIImage imageNamed:@"homelogin"];
+    }
+    cell1.avatarView.layer.cornerRadius = cell1.avatarView.frame.size.height/2.;
+    cell1.avatarView.layer.masksToBounds = YES;
+    
     [super collectionView:collectionView configureCell:cell forIndexPath:indexPath];
 }
 
@@ -230,7 +240,7 @@ NS_ENUM(NSUInteger, QMMessageType) {
     QMChatCellLayoutModel layoutModel = [super collectionView:collectionView layoutModelAtIndexPath:indexPath];
     QBChatMessage *item = [self.chatDataSource messageForIndexPath:indexPath];
     
-    layoutModel.avatarSize = CGSizeMake(0.0f, 0.0f);
+    layoutModel.avatarSize = CGSizeMake(35.0f, 35.0f);
     
     if (item!= nil) {
         
