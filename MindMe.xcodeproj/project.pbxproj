@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E586337528C4D1D04B3C5CA /* libPods-MindMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF26E20DF5E423144483EC67 /* libPods-MindMe.a */; };
+		BE22832A6A5D0BC8CDDEEBD0 /* libPods-MindMeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD9184E01890DF811EAD240 /* libPods-MindMeTests.a */; };
+		D2FF9E586F711937AEA1E268 /* libPods-MindMeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 939F1C23FE099283895BF2A8 /* libPods-MindMeUITests.a */; };
 		D4041AEE1FC0153C001F312E /* YourInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041AED1FC0153C001F312E /* YourInformationViewController.m */; };
 		D4041AF11FC0232C001F312E /* YourAdvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041AF01FC0232C001F312E /* YourAdvertViewController.m */; };
 		D4041AF51FC031AD001F312E /* AdvertPDFCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041AF31FC031AD001F312E /* AdvertPDFCollectionViewCell.m */; };
@@ -160,6 +163,7 @@
 		D43143CB1F98E02B00FE0406 /* VisbyRoundCF-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C31F98E02B00FE0406 /* VisbyRoundCF-Regular.otf */; };
 		D43143CC1F98E02B00FE0406 /* VisbyRoundCF-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C41F98E02B00FE0406 /* VisbyRoundCF-Bold.otf */; };
 		D43EE8CE1FB30AF100BE7E08 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43EE8CD1FB30AF100BE7E08 /* ContactUsViewController.m */; };
+		D45B85321FE4E70600074689 /* DataSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D45B85311FE4E70600074689 /* DataSyncManager.m */; };
 		D4736B4C1FBB05B7004A51A2 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B4B1FBB05B7004A51A2 /* TTTAttributedLabel.m */; };
 		D4736B4F1FBB0B2A004A51A2 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B4E1FBB0B2A004A51A2 /* PrivacyPolicyViewController.m */; };
 		D4736B521FBB1015004A51A2 /* TnCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B511FBB1015004A51A2 /* TnCViewController.m */; };
@@ -252,6 +256,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0DB9533B6B86A93E0865176A /* Pods-MindMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindMeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MindMeUITests/Pods-MindMeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0E935E94A36F9C391924CF3C /* Pods-MindMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindMeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindMeUITests/Pods-MindMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		466DE39919E8F74BA9457E63 /* Pods-MindMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindMeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MindMeTests/Pods-MindMeTests.release.xcconfig"; sourceTree = "<group>"; };
+		561D057C0986020658421775 /* Pods-MindMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-MindMe/Pods-MindMe.release.xcconfig"; sourceTree = "<group>"; };
+		939F1C23FE099283895BF2A8 /* libPods-MindMeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MindMeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BBDB4267CF4EBF87CF48ADF /* Pods-MindMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindMe/Pods-MindMe.debug.xcconfig"; sourceTree = "<group>"; };
+		9BD9184E01890DF811EAD240 /* libPods-MindMeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MindMeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF6DB4F57A3DBFBEF17D0622 /* Pods-MindMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindMeTests/Pods-MindMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF26E20DF5E423144483EC67 /* libPods-MindMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MindMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4041AEC1FC0153C001F312E /* YourInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YourInformationViewController.h; sourceTree = "<group>"; };
 		D4041AED1FC0153C001F312E /* YourInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YourInformationViewController.m; sourceTree = "<group>"; };
 		D4041AEF1FC0232C001F312E /* YourAdvertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YourAdvertViewController.h; sourceTree = "<group>"; };
@@ -492,6 +505,7 @@
 		D41B6AA91FDAC3A400E1F312 /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetLocalePicker.h; sourceTree = "<group>"; };
 		D41B6AAA1FDAC3A400E1F312 /* ActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetPicker.h; sourceTree = "<group>"; };
 		D41B6AAB1FDAC3A400E1F312 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		D41D3C101FEBD08000FE1942 /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		D420BFDD1FB5CD7A0071E30A /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
 		D420BFDE1FB5CD7A0071E30A /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
 		D420BFDF1FB5CD7A0071E30A /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
@@ -511,6 +525,8 @@
 		D43143C41F98E02B00FE0406 /* VisbyRoundCF-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-Bold.otf"; sourceTree = "<group>"; };
 		D43EE8CC1FB30AF100BE7E08 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
 		D43EE8CD1FB30AF100BE7E08 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
+		D45B85301FE4E70600074689 /* DataSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSyncManager.h; sourceTree = "<group>"; };
+		D45B85311FE4E70600074689 /* DataSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSyncManager.m; sourceTree = "<group>"; };
 		D4736B4A1FBB05B7004A51A2 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		D4736B4B1FBB05B7004A51A2 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		D4736B4D1FBB0B2A004A51A2 /* PrivacyPolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicyViewController.h; sourceTree = "<group>"; };
@@ -625,6 +641,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4041C7A1FC0E228001F312E /* Quickblox.framework in Frameworks */,
+				7E586337528C4D1D04B3C5CA /* libPods-MindMe.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +649,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE22832A6A5D0BC8CDDEEBD0 /* libPods-MindMeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,12 +657,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2FF9E586F711937AEA1E268 /* libPods-MindMeUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		466B16B3C02A3EC4DFFB202F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BBDB4267CF4EBF87CF48ADF /* Pods-MindMe.debug.xcconfig */,
+				561D057C0986020658421775 /* Pods-MindMe.release.xcconfig */,
+				AF6DB4F57A3DBFBEF17D0622 /* Pods-MindMeTests.debug.xcconfig */,
+				466DE39919E8F74BA9457E63 /* Pods-MindMeTests.release.xcconfig */,
+				0E935E94A36F9C391924CF3C /* Pods-MindMeUITests.debug.xcconfig */,
+				0DB9533B6B86A93E0865176A /* Pods-MindMeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		467D34715A3C7BBC9DF423B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF26E20DF5E423144483EC67 /* libPods-MindMe.a */,
+				9BD9184E01890DF811EAD240 /* libPods-MindMeTests.a */,
+				939F1C23FE099283895BF2A8 /* libPods-MindMeUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D4041B081FC0DEF5001F312E /* QMChatViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1362,8 +1404,11 @@
 		D49BFE881F9C6F60000D6638 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D45B85301FE4E70600074689 /* DataSyncManager.h */,
+				D45B85311FE4E70600074689 /* DataSyncManager.m */,
 				D49BFE8A1F9C6F60000D6638 /* SharedClass.h */,
 				D49BFE891F9C6F60000D6638 /* SharedClass.m */,
+				D41D3C101FEBD08000FE1942 /* Settings.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1375,6 +1420,8 @@
 				D4A019CD1F850F0200E311B7 /* MindMeTests */,
 				D4A019D81F850F0200E311B7 /* MindMeUITests */,
 				D4A019B21F850F0200E311B7 /* Products */,
+				466B16B3C02A3EC4DFFB202F /* Pods */,
+				467D34715A3C7BBC9DF423B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1569,10 +1616,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4A019DE1F850F0200E311B7 /* Build configuration list for PBXNativeTarget "MindMe" */;
 			buildPhases = (
+				5DF7DD67E321C86B786EBA89 /* [CP] Check Pods Manifest.lock */,
 				D4A019AD1F850F0200E311B7 /* Sources */,
 				D4A019AE1F850F0200E311B7 /* Frameworks */,
 				D4A019AF1F850F0200E311B7 /* Resources */,
 				D4041C7D1FC0E2B1001F312E /* Embed Frameworks */,
+				0DFD8E6BA549C2F61CD83CB1 /* [CP] Embed Pods Frameworks */,
+				59F39201617D6B790558CB10 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1587,9 +1637,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4A019E11F850F0200E311B7 /* Build configuration list for PBXNativeTarget "MindMeTests" */;
 			buildPhases = (
+				20B64AF9CBD648BC752AC82D /* [CP] Check Pods Manifest.lock */,
 				D4A019C61F850F0200E311B7 /* Sources */,
 				D4A019C71F850F0200E311B7 /* Frameworks */,
 				D4A019C81F850F0200E311B7 /* Resources */,
+				92454EF914E88D7331C8C122 /* [CP] Embed Pods Frameworks */,
+				05ACDF505FC80A78F65CF071 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1605,9 +1658,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4A019E41F850F0200E311B7 /* Build configuration list for PBXNativeTarget "MindMeUITests" */;
 			buildPhases = (
+				DC7FEE7AE6196C324EAAABBE /* [CP] Check Pods Manifest.lock */,
 				D4A019D11F850F0200E311B7 /* Sources */,
 				D4A019D21F850F0200E311B7 /* Frameworks */,
 				D4A019D31F850F0200E311B7 /* Resources */,
+				EDAC40E0E720F5EA712A667E /* [CP] Embed Pods Frameworks */,
+				255E1A1F30E0A112006854B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1755,6 +1811,157 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05ACDF505FC80A78F65CF071 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindMeTests/Pods-MindMeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0DFD8E6BA549C2F61CD83CB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindMe/Pods-MindMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20B64AF9CBD648BC752AC82D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MindMeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		255E1A1F30E0A112006854B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindMeUITests/Pods-MindMeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59F39201617D6B790558CB10 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MindMe/Pods-MindMe-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindMe/Pods-MindMe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DF7DD67E321C86B786EBA89 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MindMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92454EF914E88D7331C8C122 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindMeTests/Pods-MindMeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC7FEE7AE6196C324EAAABBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MindMeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDAC40E0E720F5EA712A667E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindMeUITests/Pods-MindMeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D4A019AD1F850F0200E311B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1797,6 +2004,7 @@
 				D4041C681FC0E157001F312E /* SDWebImageDecoder.m in Sources */,
 				D4041BE71FC0DEF5001F312E /* NSDate+ChatDataSource.m in Sources */,
 				D4041BF01FC0DEF5001F312E /* QMChatBaseLinkPreviewCell.m in Sources */,
+				D45B85321FE4E70600074689 /* DataSyncManager.m in Sources */,
 				D4041C0B1FC0DEF5001F312E /* QMChatLocationOutgoingCell.m in Sources */,
 				D4E34B361FCF265E00D53EDC /* EditProfileParentViewController.m in Sources */,
 				D48EE4B51F9B2A2C00CB43A0 /* LGSideMenuSegue.m in Sources */,
@@ -2054,6 +2262,7 @@
 		};
 		D4A019DF1F850F0200E311B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BBDB4267CF4EBF87CF48ADF /* Pods-MindMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Swapnil Harkanth (CZA6DXR72T)";
@@ -2075,6 +2284,7 @@
 		};
 		D4A019E01F850F0200E311B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 561D057C0986020658421775 /* Pods-MindMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Swapnil Harkanth (CZA6DXR72T)";
@@ -2096,6 +2306,7 @@
 		};
 		D4A019E21F850F0200E311B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF6DB4F57A3DBFBEF17D0622 /* Pods-MindMeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MindMeTests/Info.plist;
@@ -2108,6 +2319,7 @@
 		};
 		D4A019E31F850F0200E311B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 466DE39919E8F74BA9457E63 /* Pods-MindMeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MindMeTests/Info.plist;
@@ -2120,6 +2332,7 @@
 		};
 		D4A019E51F850F0200E311B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E935E94A36F9C391924CF3C /* Pods-MindMeUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MindMeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2131,6 +2344,7 @@
 		};
 		D4A019E61F850F0200E311B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DB9533B6B86A93E0865176A /* Pods-MindMeUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MindMeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

@@ -32,6 +32,11 @@
     [self.legalLabel addLinkToURL:[NSURL URLWithString:@"action://PP"] withRange:range1];
     self.legalLabel.delegate = self;
     
+    _firstNameTextField.delegate = self;
+    _lastNameTextField.delegate = self;
+    _emailTextField.delegate = self;
+    _passwordTextField.delegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,10 +74,47 @@
     
 }
 
+- (IBAction)registerButtonTapped:(id)sender {
+    
+    NSString* formValid = [self isFormValid];
+    if (!formValid) {
+        [self startRegisterUserDetailsService];
+    }
+    else {
+        [SVProgressHUD showErrorWithStatus:formValid];
+    }
+    
+}
+
+- (NSString*) isFormValid {
+    if ([_firstNameTextField.text isEqualToString:@""]) {
+        return @"Please enter first name to proceed";
+    }
+    else if ([_lastNameTextField.text isEqualToString:@""]) {
+        return @"Please enter last name to proceed";
+    }
+    else if ([_emailTextField.text isEqualToString:@""]) {
+        return @"Please enter email to proceed";
+    }
+    else if ([_passwordTextField.text isEqualToString:@""]) {
+        return @"Please enter password to proceed";
+    }
+    else if (!_careGiverButton.isSelected && !_careNeededButton.isSelected) {
+        return @"Please select at least one Care option";
+    }
+    return nil;
+}
+
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     [self.view endEditing:YES];
     
+}
+
+#pragma mark - Text Field Delegates
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    textField.text = @"";
 }
 
 #pragma mark - TTTAttributedLabel Delegate
@@ -95,5 +137,91 @@
         
     }
 }
+
+#pragma mark - API Helpers
+
+- (void) startRegisterUserDetailsService {
+    
+    [SVProgressHUD showWithStatus:@"Registering"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = RegisterServiceKey;
+    manager.delegate = self;
+    [manager startPOSTingFormData:[self prepareDictionaryForRegisterUserDetails]];
+    
+}
+
+
+#pragma mark - DATASYNCMANAGER Delegates
+
+-(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
+    
+    [SVProgressHUD dismiss];
+    
+    if ([requestServiceKey isEqualToString:RegisterServiceKey]) {
+        [self performSegueWithIdentifier:@"showHomeSegue" sender:nil];
+    }
+    
+    
+    
+}
+
+
+- (void) didFinishServiceWithFailure:(NSString *)errorMsg {
+    
+    
+    [SVProgressHUD dismiss];
+    
+    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:nil
+                                                      message:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)
+                                                     delegate:self
+                                            cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                            otherButtonTitles: nil];
+        
+        if (![errorMsg isEqualToString:@""]) {
+            [alert setMessage:errorMsg];
+        }
+        
+        if ([errorMsg isEqualToString:NSLocalizedString(@"Verify your internet connection and try again", nil)]) {
+            [alert setTitle:NSLocalizedString(@"Connection unsuccessful", nil)];
+        }
+    
+    [alert show];
+    
+    return;
+    
+}
+
+
+
+
+#pragma mark - Modalobject
+
+- (NSMutableDictionary *) prepareDictionaryForRegisterUserDetails {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    [dict setObject:_emailTextField.text forKey:@"username"];
+    [dict setObject:_passwordTextField.text forKey:@"password"];
+    [dict setObject:@"1" forKey:@"device"];
+    [dict setObject:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forKey:@"version"];
+    [dict setObject:@"iOS" forKey:@"type"];
+    [dict setObject:_firstNameTextField.text forKey:@"first_name"];
+    [dict setObject:_lastNameTextField.text forKey:@"last_name"];
+    [dict setObject:@"0.0.0.0" forKey:@"user_ip"];
+    
+    if (_careNeededButton.isSelected) {
+        [dict setObject:@"2" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"1" forKey:@"flag"];
+    }
+    
+    
+    
+    return dict;
+    
+}
+
 
 @end

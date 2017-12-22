@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController <DataSyncManagerDelegate, UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *joinUsButton;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+- (IBAction)loginButtonTapped:(id)sender;
 @end

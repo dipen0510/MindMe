@@ -17,6 +17,7 @@
 + sharedInstance;
 
 @property BOOL isUserCarer;
+@property NSString* userId;
 @property BOOL isChangePasswordOpenedFromSideMenu;
 
 - (void) changeRootControllerForIdentifier:(NSString *)viewControllerId forSideMenuController:(LGSideMenuController *)sideMenuController;

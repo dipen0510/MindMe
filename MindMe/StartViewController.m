@@ -36,13 +36,13 @@
 
 - (IBAction)parentButtonTapped:(id)sender {
     
-    [[SharedClass sharedInstance] setIsUserCarer:NO];
+//    [[SharedClass sharedInstance] setIsUserCarer:NO];
     
 }
 
 - (IBAction)carerButtonTapped:(id)sender {
     
-    [[SharedClass sharedInstance] setIsUserCarer:YES];
+//    [[SharedClass sharedInstance] setIsUserCarer:YES];
     
 }
 @end

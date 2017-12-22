@@ -10,7 +10,7 @@
 
 @implementation SharedClass
 
-@synthesize isUserCarer;
+@synthesize isUserCarer,userId;
 
 static SharedClass *singletonObject = nil;
 
