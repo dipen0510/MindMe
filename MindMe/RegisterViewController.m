@@ -86,6 +86,29 @@
     
 }
 
+- (IBAction)fbRegisterButtonTapped:(id)sender {
+    
+    if (!_careGiverButton.isSelected && !_careNeededButton.isSelected) {
+        [SVProgressHUD showErrorWithStatus:@"Please select at least one Care option"];
+    }
+    else {
+        if ([[FBLoginHelper sharedInstance] emailId]) {
+            [SVProgressHUD showWithStatus:@"Registering"];
+            [self startFBRegisterService];
+        }
+        else
+        {
+            [[FBLoginHelper sharedInstance] initiateFBLoginFromView:self withCompletionBlock:^(BOOL finished){
+                if (finished) {
+                    [SVProgressHUD showWithStatus:@"Registering"];
+                    [self startFBRegisterService];
+                }
+            }];
+        }
+    }
+    
+}
+
 - (NSString*) isFormValid {
     if ([_firstNameTextField.text isEqualToString:@""]) {
         return @"Please enter first name to proceed";
@@ -151,6 +174,15 @@
     
 }
 
+- (void) startFBRegisterService {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = FBRegisterServiceKey;
+    manager.delegate = self;
+    [manager startPOSTingFormData:[self prepareDictionaryForFBRegisterUserDetails]];
+    
+}
+
 
 #pragma mark - DATASYNCMANAGER Delegates
 
@@ -158,7 +190,7 @@
     
     [SVProgressHUD dismiss];
     
-    if ([requestServiceKey isEqualToString:RegisterServiceKey]) {
+    if ([requestServiceKey isEqualToString:RegisterServiceKey] || [requestServiceKey isEqualToString:FBRegisterServiceKey]) {
         [self performSegueWithIdentifier:@"showHomeSegue" sender:nil];
     }
     
@@ -208,6 +240,32 @@
     [dict setObject:@"iOS" forKey:@"type"];
     [dict setObject:_firstNameTextField.text forKey:@"first_name"];
     [dict setObject:_lastNameTextField.text forKey:@"last_name"];
+    [dict setObject:@"0.0.0.0" forKey:@"user_ip"];
+    
+    if (_careNeededButton.isSelected) {
+        [dict setObject:@"2" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"1" forKey:@"flag"];
+    }
+    
+    
+    
+    return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForFBRegisterUserDetails {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    [dict setObject:[[FBLoginHelper sharedInstance] emailId] forKey:@"username"];
+    [dict setObject:[[FBLoginHelper sharedInstance] socialId] forKey:@"facebook_id"];
+    [dict setObject:@"1" forKey:@"device"];
+    [dict setObject:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forKey:@"version"];
+    [dict setObject:@"iOS" forKey:@"type"];
+    [dict setObject:[[FBLoginHelper sharedInstance] firstName] forKey:@"first_name"];
+    [dict setObject:[[FBLoginHelper sharedInstance] lastName] forKey:@"last_name"];
     [dict setObject:@"0.0.0.0" forKey:@"user_ip"];
     
     if (_careNeededButton.isSelected) {

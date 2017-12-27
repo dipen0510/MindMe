@@ -26,5 +26,6 @@
 - (IBAction)careNeededButtonTapped:(id)sender;
 - (IBAction)signInButtonTapped:(id)sender;
 - (IBAction)registerButtonTapped:(id)sender;
+- (IBAction)fbRegisterButtonTapped:(id)sender;
 
 @end

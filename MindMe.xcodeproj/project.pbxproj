@@ -149,6 +149,7 @@
 		D41B6AB21FDAC3A400E1F312 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6AA61FDAC3A400E1F312 /* DistancePickerView.m */; };
 		D41B6AB31FDAC3A400E1F312 /* ActionSheetMultipleStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6AA71FDAC3A400E1F312 /* ActionSheetMultipleStringPicker.m */; };
 		D41B6AB41FDAC3A400E1F312 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6AA81FDAC3A400E1F312 /* AbstractActionSheetPicker.m */; };
+		D41C5E321FF36323007A2AA3 /* FBLoginHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D41C5E311FF36323007A2AA3 /* FBLoginHelper.m */; };
 		D420BFE01FB5CD7A0071E30A /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D420BFDE1FB5CD7A0071E30A /* FilterViewController.m */; };
 		D420BFE11FB5CD7A0071E30A /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D420BFDF1FB5CD7A0071E30A /* FilterViewController.xib */; };
 		D420BFE61FB817F50071E30A /* TTRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D420BFE41FB817F50071E30A /* TTRangeSlider.m */; };
@@ -505,6 +506,8 @@
 		D41B6AA91FDAC3A400E1F312 /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetLocalePicker.h; sourceTree = "<group>"; };
 		D41B6AAA1FDAC3A400E1F312 /* ActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetPicker.h; sourceTree = "<group>"; };
 		D41B6AAB1FDAC3A400E1F312 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		D41C5E301FF36323007A2AA3 /* FBLoginHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginHelper.h; sourceTree = "<group>"; };
+		D41C5E311FF36323007A2AA3 /* FBLoginHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginHelper.m; sourceTree = "<group>"; };
 		D41D3C101FEBD08000FE1942 /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		D420BFDD1FB5CD7A0071E30A /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
 		D420BFDE1FB5CD7A0071E30A /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
@@ -1404,6 +1407,8 @@
 		D49BFE881F9C6F60000D6638 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D41C5E301FF36323007A2AA3 /* FBLoginHelper.h */,
+				D41C5E311FF36323007A2AA3 /* FBLoginHelper.m */,
 				D45B85301FE4E70600074689 /* DataSyncManager.h */,
 				D45B85311FE4E70600074689 /* DataSyncManager.m */,
 				D49BFE8A1F9C6F60000D6638 /* SharedClass.h */,
@@ -2082,6 +2087,7 @@
 				D4041C041FC0DEF5001F312E /* QMChatLocationIncomingCell.m in Sources */,
 				D48EE4B71F9B2A2C00CB43A0 /* LGSideMenuGesturesHandler.m in Sources */,
 				D4041C151FC0DEF5001F312E /* QMToolbarContentView.m in Sources */,
+				D41C5E321FF36323007A2AA3 /* FBLoginHelper.m in Sources */,
 				D4041C711FC0E157001F312E /* NSData+ImageContentType.m in Sources */,
 				D4041C6F1FC0E157001F312E /* SDImageCache.m in Sources */,
 				D4041C171FC0DEF5001F312E /* QMAudioRecordView.m in Sources */,

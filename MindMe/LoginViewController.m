@@ -53,7 +53,16 @@
     DataSyncManager* manager = [[DataSyncManager alloc] init];
     manager.serviceKey = LoginServiceKey;
     manager.delegate = self;
-    [manager startPOSTingFormData:[self prepareDictionaryForRegisterUserDetails]];
+    [manager startPOSTingFormData:[self prepareDictionaryForLoginUserDetails]];
+    
+}
+
+- (void) startFBSignInService {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = FBLoginServiceKey;
+    manager.delegate = self;
+    [manager startPOSTingFormData:[self prepareDictionaryForFBLoginUserDetails]];
     
 }
 
@@ -64,7 +73,7 @@
     
     [SVProgressHUD dismiss];
     
-    if ([requestServiceKey isEqualToString:LoginServiceKey]) {
+    if ([requestServiceKey isEqualToString:LoginServiceKey] || [requestServiceKey isEqualToString:FBLoginServiceKey]) {
         [self performSegueWithIdentifier:@"showHomeSegue" sender:nil];
     }
     
@@ -103,12 +112,26 @@
 
 #pragma mark - Modalobject
 
-- (NSMutableDictionary *) prepareDictionaryForRegisterUserDetails {
+- (NSMutableDictionary *) prepareDictionaryForLoginUserDetails {
     
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
     
     [dict setObject:_emailTextField.text forKey:@"username"];
     [dict setObject:_passwordTextField.text forKey:@"password"];
+    [dict setObject:@"1" forKey:@"device"];
+    [dict setObject:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forKey:@"version"];
+    [dict setObject:@"iOS" forKey:@"type"];
+    
+    return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForFBLoginUserDetails {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    [dict setObject:[[FBLoginHelper sharedInstance] emailId] forKey:@"username"];
+    [dict setObject:[[FBLoginHelper sharedInstance] socialId] forKey:@"facebook_id"];
     [dict setObject:@"1" forKey:@"device"];
     [dict setObject:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forKey:@"version"];
     [dict setObject:@"iOS" forKey:@"type"];
@@ -136,6 +159,24 @@
     }
     else {
         [SVProgressHUD showErrorWithStatus:formValid];
+    }
+    
+}
+
+- (IBAction)fbLoginButtonTapped:(id)sender {
+    
+    if ([[FBLoginHelper sharedInstance] emailId]) {
+        [SVProgressHUD showWithStatus:@"Logging in"];
+        [self startFBSignInService];
+    }
+    else
+    {
+        [[FBLoginHelper sharedInstance] initiateFBLoginFromView:self withCompletionBlock:^(BOOL finished){
+            if (finished) {
+                    [SVProgressHUD showWithStatus:@"Logging in"];
+                    [self startFBSignInService];
+            }
+        }];
     }
     
 }

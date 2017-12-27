@@ -109,6 +109,9 @@
                                     <constraint firstAttribute="width" constant="139" id="wBv-e2-G6d"/>
                                 </constraints>
                                 <state key="normal" image="login_fb"/>
+                                <connections>
+                                    <action selector="fbLoginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xIP-Gn-Xy6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYa-Ya-Vfa">
                                 <rect key="frame" x="220.5" y="408" width="56" height="33"/>
@@ -195,6 +198,7 @@
                     <navigationItem key="navigationItem" id="5DB-CZ-gma"/>
                     <connections>
                         <outlet property="emailTextField" destination="eq2-he-EpN" id="5hE-J8-nnI"/>
+                        <outlet property="fbLoginButton" destination="bCT-31-k05" id="S6a-y9-WCo"/>
                         <outlet property="joinUsButton" destination="cYa-Ya-Vfa" id="mmH-fc-Owu"/>
                         <outlet property="loginButton" destination="1RJ-fZ-zBO" id="1mq-7v-tjh"/>
                         <outlet property="passwordTextField" destination="gHp-ev-2Et" id="39n-HM-Jwq"/>
@@ -355,6 +359,9 @@
                                     <constraint firstAttribute="width" constant="139" id="h0H-OL-ykd"/>
                                 </constraints>
                                 <state key="normal" image="register_fb_button"/>
+                                <connections>
+                                    <action selector="fbRegisterButtonTapped:" destination="3Aj-jd-xlR" eventType="touchUpInside" id="WBx-Yd-qoY"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a Caregiver" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="x16-Aa-ugF">
                                 <rect key="frame" x="65" y="325" width="122.5" height="19"/>
@@ -407,7 +414,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="52.5" y="490" width="270" height="31"/>
+                                <rect key="frame" x="52.5" y="490" width="270" height="32"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">By pressing Register you agree with the
@@ -8910,7 +8917,7 @@ We may send emails to existing customers or prospective customers who have enqui
         <image name="unchecked" width="76" height="76"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6aR-De-M3m"/>
+        <segue reference="4Bd-9L-l1d"/>
         <segue reference="jcl-G8-9uc"/>
         <segue reference="YPO-6i-SEz"/>
         <segue reference="sPX-6B-Ijk"/>

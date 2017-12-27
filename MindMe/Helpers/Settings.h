@@ -12,6 +12,8 @@
 #define WebServiceURL @"http://epmay.com/CIRESTAPI"
 
 #define RegisterServiceKey @"index.php/auth/register"
+#define FBRegisterServiceKey @"index.php/auth/registerfb"
 #define LoginServiceKey @"auth/login"
+#define FBLoginServiceKey @"auth/loginfb"
 
 #endif /* Settings_h */
