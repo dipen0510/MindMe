@@ -10,7 +10,11 @@
 #import "ProfileActivitiesCollectionViewCell.h"
 #import "ProfileAvailabilityCollectionViewCell.h"
 
-@interface EditProfileViewController ()
+@interface EditProfileViewController ()<UITextFieldDelegate> {
+    NSString* latLong;
+    NSMutableArray* googleResponseArr;
+}
+
 
 @end
 
@@ -21,7 +25,14 @@
     // Do any additional setup after loading the view.
     
     [self setupInitialUI];
-    [self setupAvailibilityArr];
+    
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self startGetProfileDetailsService];
     
 }
 
@@ -35,25 +46,19 @@
     _cancelButton.layer.borderWidth = 1.0;
     _cancelButton.layer.borderColor = _cancelButton.titleLabel.textColor.CGColor;
     
-    [self.activitiesCollectionView registerNib:[UINib nibWithNibName:@"ProfileActivitiesCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileActivitiesCollectionViewCell"];
-    [self.servicesCollectionView registerNib:[UINib nibWithNibName:@"ProfileActivitiesCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileActivitiesCollectionViewCell"];
-    [self.availabilityCollectionView registerNib:[UINib nibWithNibName:@"ProfileAvailabilityCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileAvailabilityCollectionViewCell"];
-    
     UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     tapGesture.cancelsTouchesInView = NO;
     [_contentScrollView addGestureRecognizer:tapGesture];
     
+    googleResponseArr = [[NSMutableArray alloc] init];
+    
+    _eirCodeTextField.delegate = self;
+    _addressTextField.delegate = self;
+    
+    _addressView.hidden = YES;
+    
 }
 
-- (void) setupAvailibilityArr {
-    
-    availabilityArr = [[NSMutableArray alloc] init];
-    
-    for (int i = 0; i<48; i++) {
-        [availabilityArr addObject:[NSNumber numberWithInt:0]];
-    }
-    
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -93,182 +98,280 @@
     
 }
 
-#pragma mark - CollectionView Datasource
-
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+- (IBAction)doneButtonTapped:(id)sender {
     
-    if (collectionView == _availabilityCollectionView) {
-        return 48;
-    }
-    
-    return 3;
-    
-}
-
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (collectionView == _availabilityCollectionView) {
-        
-        static NSString *CellIdentifier = @"ProfileAvailabilityCollectionViewCell";
-        ProfileAvailabilityCollectionViewCell *cell = (ProfileAvailabilityCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-        
-        if (cell == nil) {
-            // Load the top-level objects from the custom cell XIB.
-            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ProfileAvailabilityCollectionViewCell" owner:self options:nil];
-            // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
-            cell = [topLevelObjects objectAtIndex:0];
-        }
-        
-        [self populateContentForAvailabilityCell:cell atIndexPath:indexPath];
-        
-        return cell;
+    if (!_tncButton.isSelected) {
+        [SVProgressHUD showErrorWithStatus:@"Please accept Terms & Conditions to continue"];
         
     }
-    
-    static NSString *CellIdentifier = @"ProfileActivitiesCollectionViewCell";
-    ProfileActivitiesCollectionViewCell *cell = (ProfileActivitiesCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    if (cell == nil) {
-        // Load the top-level objects from the custom cell XIB.
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ProfileActivitiesCollectionViewCell" owner:self options:nil];
-        // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
-        cell = [topLevelObjects objectAtIndex:0];
-    }
-    
-    [self populateContentForCell:cell atIndexPath:indexPath];
-    
-    return cell;
-    
-}
-
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    if (collectionView == _availabilityCollectionView) {
-        
-        if (indexPath.row%8 == 0) {
-            return CGSizeMake(75.,collectionView.frame.size.height/6.);
-        }
-        
-        return CGSizeMake((((345./375.)*[UIScreen mainScreen].bounds.size.width) - 75.)/7.,collectionView.frame.size.height/6.);
-    }
-    
-    return CGSizeMake(100.,44.);
-    
-}
-
-- (UIEdgeInsets)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(0, 0, 0, 0); // top, left, bottom, right
-}
-
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    
-    return 0.0;
-}
-
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 0.0;
-}
-
-#pragma mark - CollectionView Delegates
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (collectionView == _availabilityCollectionView) {
-        
-        if (indexPath.row%8 != 0 && indexPath.row>=8) {
-            
-            int currentStatus = [[availabilityArr objectAtIndex:indexPath.row] intValue];
-            [availabilityArr replaceObjectAtIndex:indexPath.row withObject:[NSNumber numberWithInt:!currentStatus]];
-            [collectionView reloadData];
-            
-        }
-        
-    }
-    
-}
-
-
-#pragma mark - Populate Content
-
-- (void) populateContentForCell:(ProfileActivitiesCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
-    
-    
-    
-}
-
-- (void) populateContentForAvailabilityCell:(ProfileAvailabilityCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
-    
-    if (indexPath.row%8 == 0 || indexPath.row<8) {
-        cell.backgroundColor = [UIColor colorWithRed:41./255 green:73./255. blue:97./255. alpha:1.0];
-        cell.availabilityLabel.hidden = NO;
-        
-        switch (indexPath.row) {
-            case 0:
-                cell.availabilityLabel.text = @"Time Schedule";
-                break;
-            case 1:
-                cell.availabilityLabel.text = @"MON";
-                break;
-            case 2:
-                cell.availabilityLabel.text = @"TUE";
-                break;
-            case 3:
-                cell.availabilityLabel.text = @"WED";
-                break;
-            case 4:
-                cell.availabilityLabel.text = @"THU";
-                break;
-            case 5:
-                cell.availabilityLabel.text = @"FRI";
-                break;
-            case 6:
-                cell.availabilityLabel.text = @"SAT";
-                break;
-            case 7:
-                cell.availabilityLabel.text = @"SUN";
-                break;
-            case 8:
-                cell.availabilityLabel.text = @"Morning";
-                break;
-            case 16:
-                cell.availabilityLabel.text = @"Afternoon";
-                break;
-            case 24:
-                cell.availabilityLabel.text = @"Evening";
-                break;
-            case 32:
-                cell.availabilityLabel.text = @"Night";
-                break;
-            case 40:
-                cell.availabilityLabel.text = @"Overnight";
-                break;
-                
-            default:
-                break;
-        }
+    else if (!latLong || [latLong isEqualToString:@""]) {
+        [SVProgressHUD showErrorWithStatus:@"Please enter a valid address or Eircode to continue"];
         
     }
     else {
-        if ([[availabilityArr objectAtIndex:indexPath.row] intValue]) {
-            cell.backgroundColor = [UIColor colorWithRed:41./255 green:73./255. blue:97./255. alpha:1.0];
-        }
-        else {
-            cell.backgroundColor = [UIColor clearColor];
-        }
-        cell.availabilityLabel.hidden = YES;
+        [self startUpdateProfileService];
     }
-    
-    cell.layer.borderColor = [UIColor colorWithWhite:0.9 alpha:1.0].CGColor;
-    cell.layer.borderWidth = 0.5;
+
     
 }
 
 - (void) dismissKeyboard {
     
     [self.view endEditing:YES];
+    _addressView.hidden = YES;
     
 }
+
+#pragma mark - API Helpers
+
+- (void) startGetProfileDetailsService {
+    
+    [SVProgressHUD showWithStatus:@"Fetching Profile Details"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GetUserPersonalDetails;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForGetProfileDetails]];
+    
+}
+
+- (void) startUpdateProfileService {
+    
+    [SVProgressHUD showWithStatus:@"Updating Profile Details"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = UpdateCarerPersonalDetails;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForUpdateParentDetails]];
+    
+}
+
+- (void) startGoogleMapsGeocodeAPIWithParam:(NSString *)params {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GoogleAPIGeocode;
+    manager.delegate = self;
+    [manager startGoogleAPIGeocodeWebService:params];
+    
+}
+
+- (void) startGoogleMapsGeocodeAPIWithAddressParam:(NSString *)params {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GoogleAPIAddressGeocode;
+    manager.delegate = self;
+    [manager startGoogleAPIGeocodeWebService:params];
+    
+}
+
+
+#pragma mark - DATASYNCMANAGER Delegates
+
+-(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
+    
+    [SVProgressHUD dismiss];
+    
+    if ([requestServiceKey isEqualToString:GetUserPersonalDetails]) {
+        
+        _firstNameTextField.text = [[[[[responseData valueForKey:@"message"] objectAtIndex:0] valueForKey:@"full_name"] componentsSeparatedByString:@" "] firstObject];
+        _lastNameTextField.text = [[[[[responseData valueForKey:@"message"] objectAtIndex:0] valueForKey:@"full_name"] componentsSeparatedByString:@" "] lastObject];
+        _phoneTextField.text = [[[responseData valueForKey:@"message"] objectAtIndex:0] valueForKey:@"tel"];
+        _emailTextField.text = [[[responseData valueForKey:@"message"] objectAtIndex:0] valueForKey:@"user_email"];
+        _eirCodeTextField.text = @"";
+        _addressTextField.text = [[[responseData valueForKey:@"message"] objectAtIndex:0] valueForKey:@"address"];
+        
+    }
+    
+    if ([requestServiceKey isEqualToString:UpdateParentPersonalDetails]) {
+        
+    }
+    
+    if ([requestServiceKey isEqualToString:GoogleAPIGeocode]) {
+        
+        googleResponseArr = [[NSMutableArray alloc] initWithArray:[responseData valueForKey:@"results"]];
+        _addressView.hidden = YES;
+        
+        if (googleResponseArr.count > 0) {
+            _addressTextField.text = [[[[googleResponseArr objectAtIndex:0] valueForKey:@"address_components"] valueForKey:@"short_name"] componentsJoinedByString:@", "];
+            latLong = [NSString stringWithFormat:@"%@,%@",[[[[googleResponseArr objectAtIndex:0] valueForKey:@"geometry"] valueForKey:@"location"] valueForKey:@"lat"], [[[[googleResponseArr objectAtIndex:0] valueForKey:@"geometry"] valueForKey:@"location"] valueForKey:@"lng"]] ;
+        }
+        else if (googleResponseArr.count == 0){
+            _addressTextField.text = @"";
+            latLong = [NSString stringWithFormat:@""];
+        }
+        
+    }
+    
+    if ([requestServiceKey isEqualToString:GoogleAPIAddressGeocode]) {
+        
+        googleResponseArr = [[NSMutableArray alloc] initWithArray:[responseData valueForKey:@"results"]];
+        
+        if (googleResponseArr.count > 0) {
+            _addressView.hidden = NO;
+            [_addressTblView reloadData];
+        }
+        else if (googleResponseArr.count == 0){
+            _addressTextField.text = @"";
+            latLong = [NSString stringWithFormat:@""];
+        }
+        
+        
+        
+    }
+    
+}
+
+
+- (void) didFinishServiceWithFailure:(NSString *)errorMsg {
+    
+    
+    [SVProgressHUD dismiss];
+    
+    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:nil
+                                                  message:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)
+                                                 delegate:self
+                                        cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                        otherButtonTitles: nil];
+    
+    if (![errorMsg isEqualToString:@""]) {
+        [alert setMessage:errorMsg];
+    }
+    
+    if ([errorMsg isEqualToString:NSLocalizedString(@"Verify your internet connection and try again", nil)]) {
+        [alert setTitle:NSLocalizedString(@"Connection unsuccessful", nil)];
+    }
+    
+    [alert show];
+    
+    return;
+    
+}
+
+
+
+
+#pragma mark - Modalobject
+
+- (NSMutableDictionary *) prepareDictionaryForGetProfileDetails {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForUpdateParentDetails {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    [dict setObject:_firstNameTextField.text forKey:@"first_name"];
+    [dict setObject:_lastNameTextField.text forKey:@"second_name"];
+    [dict setObject:_phoneTextField.text forKey:@"mobile_number"];
+    [dict setObject:latLong forKey:@"location"];
+    [dict setObject:[NSString stringWithFormat:@"%d",_emailPromotionsButton.isSelected] forKey:@"promotions"];
+    [dict setObject:[NSString stringWithFormat:@"%d",_receiveEmailsButton.isSelected] forKey:@"job_alerts"];
+    [dict setObject:[NSString stringWithFormat:@"1"] forKey:@"sms"];
+    [dict setObject:[[latLong componentsSeparatedByString:@","] firstObject] forKey:@"lati"];
+    [dict setObject:[[latLong componentsSeparatedByString:@","] lastObject] forKey:@"longi"];
+    [dict setObject:_emailTextField.text forKey:@"email"];
+    [dict setObject:@"0" forKey:@"bday"];
+    [dict setObject:@"0" forKey:@"bmonth"];
+    [dict setObject:@"0" forKey:@"byear"];
+    [dict setObject:@"0" forKey:@"age"];
+    [dict setObject:_addressTextField.text forKey:@"eircode_address"];
+    [dict setObject:_eirCodeTextField.text forKey:@"eircode"];
+    
+    
+    return dict;
+    
+}
+
+#pragma mark - UITextField Delegate
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    
+    if (textField == _eirCodeTextField) {
+        [self startGoogleMapsGeocodeAPIWithParam:_eirCodeTextField.text];
+    }
+    
+}
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    if (textField ==_addressTextField) {
+        [self startGoogleMapsGeocodeAPIWithAddressParam:[textField.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    }
+    
+    return YES;
+    
+}
+
+#pragma mark - UITableView Data Source
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return googleResponseArr.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    /*
+     *   This is an important bit, it asks the table view if it has any available cells
+     *   already created which it is not using (if they are offScreen), so that it can
+     *   reuse them (saving the time of alloc/init/load from xib a new cell ).
+     *   The identifier is there to differentiate between different types of cells
+     *   (you can display different types of cells in the same table view)
+     */
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
+    
+    /*
+     *   If the cell is nil it means no cell was available for reuse and that we should
+     *   create a new one.
+     */
+    if (cell == nil) {
+        
+        /*
+         *   Actually create a new cell (with an identifier so that it can be dequeued).
+         */
+        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MyIdentifier"];
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+    }
+    
+    /*
+     *   Now that we have a cell we can configure it to display the data corresponding to
+     *   this row/section
+     */
+    
+    cell.textLabel.text = [[[[googleResponseArr objectAtIndex:indexPath.row] valueForKey:@"address_components"] valueForKey:@"short_name"] componentsJoinedByString:@", "];
+    cell.textLabel.font = [UIFont systemFontOfSize:14.0];
+    
+    
+    /* Now that the cell is configured we return it to the table view so that it can display it */
+    
+    return cell;
+    
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    _addressTextField.text = [[[[googleResponseArr objectAtIndex:indexPath.row] valueForKey:@"address_components"] valueForKey:@"short_name"] componentsJoinedByString:@", "];
+    latLong = [NSString stringWithFormat:@"%@,%@",[[[[googleResponseArr objectAtIndex:indexPath.row] valueForKey:@"geometry"] valueForKey:@"location"] valueForKey:@"lat"], [[[[googleResponseArr objectAtIndex:indexPath.row] valueForKey:@"geometry"] valueForKey:@"location"] valueForKey:@"lng"]] ;
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 30.0;
+}
+
 
 @end

@@ -27,5 +27,7 @@
 @property (nonatomic, strong) NSString* serviceKey;
 
 - (void) startPOSTingFormData:(id)postData;
+- (void) startPOSTingFormDataAfterLogin:(id)postData;
+- (void) startGoogleAPIGeocodeWebService:(NSString *)param;
 
 @end

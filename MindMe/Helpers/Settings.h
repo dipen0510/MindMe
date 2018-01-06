@@ -16,4 +16,11 @@
 #define LoginServiceKey @"auth/login"
 #define FBLoginServiceKey @"auth/loginfb"
 
+#define UpdateParentPersonalDetails @"auth/updateParent"
+#define UpdateCarerPersonalDetails @"auth/updatecarer"
+#define GetUserPersonalDetails @"GetUserDetails"
+
+#define GoogleAPIGeocode @"GoogleAPIGeocode"
+#define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"
+
 #endif /* Settings_h */

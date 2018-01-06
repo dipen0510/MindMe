@@ -68,9 +68,103 @@
     
 }
 
+- (void) startPOSTingFormDataAfterLogin:(id)postData {
+    
+    NSURL* url;
+    url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",WebServiceURL]];
+    
+    
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
+    
+    manager.requestSerializer = [AFJSONRequestSerializer serializerWithWritingOptions:NSJSONWritingPrettyPrinted];
+    [manager.requestSerializer setValue:@"24ad1dc1-c5e2-4bbc-a261-9de40fa7d7c7" forHTTPHeaderField:@"Auth-Key"];
+    [manager.requestSerializer setValue:@"frontend-client" forHTTPHeaderField:@"Client-Service"];
+    [manager.requestSerializer setValue:[[SharedClass sharedInstance] userId] forHTTPHeaderField:@"User-ID"];
+    [manager.requestSerializer setValue:[[SharedClass sharedInstance] authorizationKey] forHTTPHeaderField:@"Authorization"];
+    
+    manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
+    manager.responseSerializer.acceptableStatusCodes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 300)];
+    manager.requestSerializer.timeoutInterval = 60;
+    
+    
+    [manager POST:self.serviceKey parameters:postData constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        
+        
+        
+    } progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            
+            if ([[responseObject valueForKey:@"status"] intValue] == 200) {
+                if ([delegate respondsToSelector:@selector(didFinishServiceWithSuccess:andServiceKey:)]) {
+                    [delegate didFinishServiceWithSuccess:[self prepareResponseObjectForServiceKey:self.serviceKey withData:responseObject] andServiceKey:self.serviceKey];
+                }
+                
+            }
+            else {
+                
+                if ([delegate respondsToSelector:@selector(didFinishServiceWithFailure:)]) {
+                    [delegate didFinishServiceWithFailure:[self errorStringForService:self.serviceKey withData:responseObject]];
+                }
+                
+            }
+            
+        }
+        else {
+            if ([delegate respondsToSelector:@selector(didFinishServiceWithFailure:)]) {
+                [delegate didFinishServiceWithFailure:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)];
+            }
+        }
+        
+    } failure:^(NSURLSessionTask *task, NSError *error) {
+        
+        if ([delegate respondsToSelector:@selector(didFinishServiceWithFailure:)]) {
+            [delegate didFinishServiceWithFailure:NSLocalizedString(@"Verify your internet connection and try again", nil)];
+        }
+        
+    }];
+    
+    
+}
+
+- (void) startGoogleAPIGeocodeWebService:(NSString *)param
+{
+    
+    NSURL* url;
+    url = [NSURL URLWithString:@"https://maps.googleapis.com/maps/api/geocode"];
+    
+    NSString* finalParams = [NSString stringWithFormat:@"json?address=%@&key=AIzaSyDr_kpZrjTFwpVwZ3PYpjxVhcJiKFcfnD8",param];
+    
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
+    manager.requestSerializer = [AFJSONRequestSerializer serializerWithWritingOptions:NSJSONWritingPrettyPrinted];
+    manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
+    manager.requestSerializer.timeoutInterval = 30;
+    
+    [manager GET:finalParams parameters:nil progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        if ([[responseObject valueForKey:@"status"] isEqualToString:@"OK"]) {
+            if ([delegate respondsToSelector:@selector(didFinishServiceWithSuccess:andServiceKey:)]) {
+                [delegate didFinishServiceWithSuccess:[self prepareResponseObjectForServiceKey:self.serviceKey withData:responseObject] andServiceKey:self.serviceKey];
+            }
+            
+        }
+        else {
+            
+            NSLog(@"%@",responseObject);
+            
+        }
+        
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@",error.localizedDescription);
+    }];
+    
+    
+}
+
 - (id) prepareResponseObjectForServiceKey:(NSString *) responseServiceKey withData:(id)responseObj {
     
-    if ([responseServiceKey isEqualToString:RegisterServiceKey] || [responseServiceKey isEqualToString:LoginServiceKey]) {
+    if ([responseServiceKey isEqualToString:RegisterServiceKey] || [responseServiceKey isEqualToString:LoginServiceKey]  || [responseServiceKey isEqualToString:FBRegisterServiceKey]  || [responseServiceKey isEqualToString:FBLoginServiceKey]) {
         
         if ([[responseObj valueForKey:@"flag"] isEqualToString:@"users"]) {
             [[SharedClass sharedInstance] setIsUserCarer:NO];
@@ -80,6 +174,7 @@
         }
         
         [[SharedClass sharedInstance] setUserId:[responseObj valueForKey:@"Userid"]];
+        [[SharedClass sharedInstance] setAuthorizationKey:[responseObj valueForKey:@"token"]];
         
     }
     

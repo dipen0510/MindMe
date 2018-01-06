@@ -8,20 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditProfileParentViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate> {
-    
-    NSMutableArray* availabilityArr;
-    
-}
+@interface EditProfileParentViewController : UIViewController <DataSyncManagerDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
-@property (weak, nonatomic) IBOutlet UICollectionView *activitiesCollectionView;
-@property (weak, nonatomic) IBOutlet UICollectionView *servicesCollectionView;
-@property (weak, nonatomic) IBOutlet UICollectionView *availabilityCollectionView;
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
+@property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phonetextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *eirCodeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *addressTextField;
+@property (weak, nonatomic) IBOutlet UIButton *receiveEmailButton;
+@property (weak, nonatomic) IBOutlet UIButton *mailNotifButton;
+@property (weak, nonatomic) IBOutlet UIButton *tncButton;
+@property (weak, nonatomic) IBOutlet UIButton *receiveSMSButton;
+@property (weak, nonatomic) IBOutlet UIView *addressView;
+@property (weak, nonatomic) IBOutlet UITableView *addressTblView;
 
 - (IBAction)menuButtonTapped:(id)sender;
 - (IBAction)miscOptionButtonTapped:(id)sender;
+- (IBAction)doneButtonTapped:(id)sender;
 
 @end

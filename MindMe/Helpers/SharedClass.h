@@ -18,6 +18,7 @@
 
 @property BOOL isUserCarer;
 @property NSString* userId;
+@property NSString* authorizationKey;
 @property BOOL isChangePasswordOpenedFromSideMenu;
 
 - (void) changeRootControllerForIdentifier:(NSString *)viewControllerId forSideMenuController:(LGSideMenuController *)sideMenuController;
