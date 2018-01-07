@@ -41,6 +41,16 @@
     _carerTypeTFTopConstraint.constant = (13./667)*[UIScreen mainScreen].bounds.size.height;
     _carerTypeTFLeadingConstraint.constant = (12./375)*[UIScreen mainScreen].bounds.size.width;
     
+    if ([[SharedClass sharedInstance] isEditProfileMenuButtonHidden]) {
+        if ([[SharedClass sharedInstance] isUserCarer]) {
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
+        }
+        else {
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileParentViewController" forSideMenuController:self.sideMenuController];
+        }
+
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -157,13 +167,23 @@
 
 - (void) favoritesViewTapped {
     
-    [self performSegueWithIdentifier:@"showFavoritesSegue" sender:nil];
+    if (![[SharedClass sharedInstance] isGuestUser]) {
+        [self performSegueWithIdentifier:@"showFavoritesSegue" sender:nil];
+    }
+    else {
+        [self.sideMenuController.navigationController popViewControllerAnimated:YES];
+    }
     
 }
 
 - (void) messagesViewTapped {
     
-    [self performSegueWithIdentifier:@"showChatSegue" sender:nil];
+    if (![[SharedClass sharedInstance] isGuestUser]) {
+        [self performSegueWithIdentifier:@"showChatSegue" sender:nil];
+    }
+    else {
+        [self.sideMenuController.navigationController popViewControllerAnimated:YES];
+    }
     
 }
 

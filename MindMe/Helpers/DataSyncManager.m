@@ -173,8 +173,14 @@
             [[SharedClass sharedInstance] setIsUserCarer:YES];
         }
         
+        [[SharedClass sharedInstance] setIsGuestUser:NO];
+        [[SharedClass sharedInstance] setIsEditProfileMenuButtonHidden:YES];
         [[SharedClass sharedInstance] setUserId:[responseObj valueForKey:@"Userid"]];
         [[SharedClass sharedInstance] setAuthorizationKey:[responseObj valueForKey:@"token"]];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:[responseObj valueForKey:@"Userid"] forKey:@"Userid"];
+        [[NSUserDefaults standardUserDefaults] setObject:[responseObj valueForKey:@"token"] forKey:@"token"];
+        [[NSUserDefaults standardUserDefaults] setBool:[[SharedClass sharedInstance] isUserCarer] forKey:@"isUserCarer"];
         
     }
     

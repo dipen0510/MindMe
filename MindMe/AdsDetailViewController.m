@@ -97,6 +97,10 @@
 
 - (IBAction)doneButtonTapped:(id)sender {
     
+    if ([[SharedClass sharedInstance] isGuestUser]) {
+        [self.sideMenuController.navigationController popViewControllerAnimated:YES];
+        return;
+    }
     [self performSegueWithIdentifier:@"showLikedSegue" sender:nil];
     
 }

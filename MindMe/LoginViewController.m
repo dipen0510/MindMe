@@ -23,8 +23,24 @@
 }
 
 - (void) setupInitialUI {
+    
     _emailTextField.delegate = self;
     _passwordTextField.delegate = self;
+    
+    if ([[SharedClass sharedInstance] isGuestUser]) {
+        [self performSegueWithIdentifier:@"showHomeSegue" sender:nil];
+    }
+    
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    
+    if ([[SharedClass sharedInstance] userId]) {
+        [self performSegueWithIdentifier:@"showHomeSegue" sender:nil];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +57,14 @@
 #pragma mark - Text Field Delegates
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField {
-    textField.text = @"";
+    
+    if (textField==_emailTextField && [textField.text isEqualToString:@"Email"]) {
+        textField.text = @"";
+    }
+    else if (textField==_passwordTextField) {
+        textField.text = @"";
+    }
+    
 }
 
 #pragma mark - API Helpers
@@ -185,10 +208,19 @@
     if ([_emailTextField.text isEqualToString:@""]) {
         return @"Please enter email to proceed";
     }
+    else if(![self validateEmailWithString:_emailTextField.text]) {
+        return @"Please enter a valid email to proceed";
+    }
     else if ([_passwordTextField.text isEqualToString:@""]) {
         return @"Please enter password to proceed";
     }
     return nil;
+}
+
+- (BOOL)validateEmailWithString:(NSString*)email {
+    NSString *emailRegex = @"^[a-zA-Z0-9]+(_)?([-_+.][a-zA-Z0-9_]+)*\\@[a-zA-Z0-9]+([-.][a-zA-Z0-9]+)*\\.[a-zA-Z0-9]+([-.][a-zA-Z0-9]+)*$";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:email];
 }
 
 @end

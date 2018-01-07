@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *receiveSMSButton;
 @property (weak, nonatomic) IBOutlet UIView *addressView;
 @property (weak, nonatomic) IBOutlet UITableView *addressTblView;
+@property (weak, nonatomic) IBOutlet UIButton *menuButton;
 
 - (IBAction)menuButtonTapped:(id)sender;
 - (IBAction)miscOptionButtonTapped:(id)sender;

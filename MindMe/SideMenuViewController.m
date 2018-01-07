@@ -164,11 +164,19 @@
     lastOpenedIndex = section;
     
     if ([[SharedClass sharedInstance] isUserCarer] && section == 1) {
+        if ([[SharedClass sharedInstance] isGuestUser]) {
+            [self.navigationController popViewControllerAnimated:YES];
+            return;
+        }
         [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
     }
     
     if (section == 2) {
         
+        if ([[SharedClass sharedInstance] isGuestUser]) {
+            [self.navigationController popViewControllerAnimated:YES];
+            return;
+        }
         if ([[SharedClass sharedInstance] isUserCarer]) {
             [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FeaturedCarerViewController" forSideMenuController:self.sideMenuController];
         }
@@ -180,10 +188,20 @@
     }
     else if (section == 4) {
         
+        if ([[SharedClass sharedInstance] isGuestUser]) {
+            [self.navigationController popViewControllerAnimated:YES];
+            return;
+        }
         [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ContactUsViewController" forSideMenuController:self.sideMenuController];
         
     }
     else if (section == 5) {
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Userid"];
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"token"];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserCarer"];
+        [[SharedClass sharedInstance] setUserId:nil];
+        [[SharedClass sharedInstance] setAuthorizationKey:nil];
+        [[SharedClass sharedInstance] setIsUserCarer:NO];
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
     
@@ -322,57 +340,63 @@
 
 - (void) childCellTapped:(UITapGestureRecognizer *)gesture {
     
-    int tag = (int)gesture.view.tag;
-    
-    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:(tag%100) inSection:(tag/100)];
-    
-    if (indexPath.row == 0 && indexPath.section == 0) {
-        
-        if ([[SharedClass sharedInstance] isUserCarer]) {
-            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
-        }
-        else {
-            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileParentViewController" forSideMenuController:self.sideMenuController];
-        }
-        
-        
+    if ([[SharedClass sharedInstance] isGuestUser]) {
+        [self.navigationController popViewControllerAnimated:YES];
+        return;
     }
-    else if (indexPath.row == 1 && indexPath.section == 0) {
+    else {
+        int tag = (int)gesture.view.tag;
         
-//        if (![[SharedClass sharedInstance] isUserCarer]) {
+        NSIndexPath* indexPath = [NSIndexPath indexPathForRow:(tag%100) inSection:(tag/100)];
+        
+        if (indexPath.row == 0 && indexPath.section == 0) {
+            
+            if ([[SharedClass sharedInstance] isUserCarer]) {
+                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
+            }
+            else {
+                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileParentViewController" forSideMenuController:self.sideMenuController];
+            }
+            
+            
+        }
+        else if (indexPath.row == 1 && indexPath.section == 0) {
+            
+            //        if (![[SharedClass sharedInstance] isUserCarer]) {
             [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
-//        }
+            //        }
+            
+            
+        }
+        else if (indexPath.section == 1) {
+            
+            if (indexPath.row == 1) {
+                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FeaturedAdsViewController" forSideMenuController:self.sideMenuController];
+            }
+            else {
+                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+            }
+            
+            
+        }
+        else if (indexPath.row == 0 && indexPath.section == 3) {
+            
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FAQViewController" forSideMenuController:self.sideMenuController];
+            
+        }
+        else if (indexPath.row == 1 && indexPath.section == 3) {
+            
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"MembershipFAQViewController" forSideMenuController:self.sideMenuController];
+            
+        }
+        else if (indexPath.row == 2 && indexPath.section == 3) {
+            
+            [[SharedClass sharedInstance] setIsChangePasswordOpenedFromSideMenu:YES];
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ChangePasswordViewController" forSideMenuController:self.sideMenuController];
+            
+        }
 
-        
     }
-    else if (indexPath.section == 1) {
-        
-        if (indexPath.row == 1) {
-            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FeaturedAdsViewController" forSideMenuController:self.sideMenuController];
-        }
-        else {
-            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
-        }
-        
-        
-    }
-    else if (indexPath.row == 0 && indexPath.section == 3) {
-        
-        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FAQViewController" forSideMenuController:self.sideMenuController];
-        
-    }
-    else if (indexPath.row == 1 && indexPath.section == 3) {
-        
-        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"MembershipFAQViewController" forSideMenuController:self.sideMenuController];
-        
-    }
-    else if (indexPath.row == 2 && indexPath.section == 3) {
-        
-        [[SharedClass sharedInstance] setIsChangePasswordOpenedFromSideMenu:YES];
-        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ChangePasswordViewController" forSideMenuController:self.sideMenuController];
-        
-    }
-    
     
 }
 

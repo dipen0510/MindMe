@@ -16,10 +16,12 @@
 
 + sharedInstance;
 
+@property BOOL isGuestUser;
 @property BOOL isUserCarer;
 @property NSString* userId;
 @property NSString* authorizationKey;
 @property BOOL isChangePasswordOpenedFromSideMenu;
+@property BOOL isEditProfileMenuButtonHidden;
 
 - (void) changeRootControllerForIdentifier:(NSString *)viewControllerId forSideMenuController:(LGSideMenuController *)sideMenuController;
 

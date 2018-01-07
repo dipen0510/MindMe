@@ -119,6 +119,9 @@
     else if ([_emailTextField.text isEqualToString:@""]) {
         return @"Please enter email to proceed";
     }
+    else if(![self validateEmailWithString:_emailTextField.text]) {
+        return @"Please enter a valid email to proceed";
+    }
     else if ([_passwordTextField.text isEqualToString:@""]) {
         return @"Please enter password to proceed";
     }
@@ -126,6 +129,12 @@
         return @"Please select at least one Care option";
     }
     return nil;
+}
+
+- (BOOL)validateEmailWithString:(NSString*)email {
+    NSString *emailRegex = @"^[a-zA-Z0-9]+(_)?([-_+.][a-zA-Z0-9_]+)*\\@[a-zA-Z0-9]+([-.][a-zA-Z0-9]+)*\\.[a-zA-Z0-9]+([-.][a-zA-Z0-9]+)*$";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:email];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

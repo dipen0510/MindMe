@@ -55,6 +55,7 @@
     _addressTextField.delegate = self;
     
     _addressView.hidden = YES;
+    _menuButton.hidden = [[SharedClass sharedInstance] isEditProfileMenuButtonHidden];
     
 }
 
@@ -170,6 +171,9 @@
     }
     
     if ([requestServiceKey isEqualToString:UpdateParentPersonalDetails]) {
+        
+        [[SharedClass sharedInstance] setIsEditProfileMenuButtonHidden:NO];
+        _menuButton.hidden = NO;
         
     }
     
