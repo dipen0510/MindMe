@@ -244,4 +244,17 @@
     
 }
 
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    
+    if ([identifier isEqualToString:@"showContactSegue"] && [[SharedClass sharedInstance] isGuestUser]) {
+        
+        [self.sideMenuController.navigationController popViewControllerAnimated:YES];
+        return NO;
+        
+    }
+    
+    return YES;
+    
+}
+
 @end

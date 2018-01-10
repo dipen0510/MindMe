@@ -146,7 +146,18 @@
 #pragma mark - Text Field Delegates
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField {
-    textField.text = @"";
+    
+    if (textField==_emailTextField) {
+        
+        if ([textField.text isEqualToString:@"Email"]) {
+            textField.text = @"";
+        }
+        
+    }
+    else {
+        textField.text = @"";
+    }
+    
 }
 
 #pragma mark - TTTAttributedLabel Delegate

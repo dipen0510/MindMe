@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditProfileViewController : UIViewController <DataSyncManagerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface EditProfileViewController : UIViewController <DataSyncManagerDelegate, UITableViewDataSource, UITableViewDelegate> {
+    UITextField* activeField;
+}
 
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;

@@ -10,7 +10,7 @@
 #import "SideMenuTableViewCell.h"
 #import "SideMenuSectionView.h"
 
-@interface SideMenuViewController ()<STCollapseTableViewDelegate> {
+@interface SideMenuViewController ()<STCollapseTableViewDelegate, UITableViewDataSource, UITableViewDelegate> {
     int sectionHeight;
 }
 
@@ -23,6 +23,17 @@
     // Do any additional setup after loading the view.
     
     [self setupInitialUI];
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    _sideMenuTableView.dataSource = self;
+    _sideMenuTableView.delegate = self;
+    
+    [_sideMenuTableView reloadData];
     
 }
 

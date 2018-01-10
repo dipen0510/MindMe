@@ -9,6 +9,7 @@
 #import "EditProfileViewController.h"
 #import "ProfileActivitiesCollectionViewCell.h"
 #import "ProfileAvailabilityCollectionViewCell.h"
+#import "ActionSheetPicker.h"
 
 @interface EditProfileViewController ()<UITextFieldDelegate> {
     NSString* latLong;
@@ -25,6 +26,7 @@
     // Do any additional setup after loading the view.
     
     [self setupInitialUI];
+    [self registerForKeyboardNotifications];
     
 }
 
@@ -57,6 +59,10 @@
     
     _addressView.hidden = YES;
     _menuButton.hidden = [[SharedClass sharedInstance] isEditProfileMenuButtonHidden];
+    
+    _dobTextField.delegate = self;
+    
+    activeField = [[UITextField alloc] init];
     
 }
 
@@ -113,6 +119,22 @@
         [self startUpdateProfileService];
     }
 
+    
+}
+
+- (void) dobTextFieldTapped {
+    
+    [ActionSheetDatePicker showPickerWithTitle:@"Select DOB" datePickerMode:UIDatePickerModeDate selectedDate:[NSDate date] minimumDate:nil maximumDate:[NSDate date] doneBlock:^(ActionSheetDatePicker *picker, id selectedDate, id origin) {
+        
+        NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateFormat = @"DD-MMM-YYYY";
+        
+        _dobTextField.text = [dateFormatter stringFromDate:selectedDate];
+        
+        
+    }cancelBlock:^(ActionSheetDatePicker *picker) {
+        
+    } origin:self.view];
     
 }
 
@@ -299,6 +321,17 @@
 
 #pragma mark - UITextField Delegate
 
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    
+    if (textField == _dobTextField) {
+        [self dobTextFieldTapped];
+        return NO;
+    }
+    
+    return YES;
+    
+}
+
 -(void)textFieldDidEndEditing:(UITextField *)textField {
     
     if (textField == _eirCodeTextField) {
@@ -359,6 +392,9 @@
     cell.textLabel.text = [[[[googleResponseArr objectAtIndex:indexPath.row] valueForKey:@"address_components"] valueForKey:@"short_name"] componentsJoinedByString:@", "];
     cell.textLabel.font = [UIFont systemFontOfSize:14.0];
     
+    [cell addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addressCellTapped:)]];
+    cell.tag = indexPath.row;
+    
     
     /* Now that the cell is configured we return it to the table view so that it can display it */
     
@@ -377,5 +413,58 @@
     return 30.0;
 }
 
+- (void) addressCellTapped:(UITapGestureRecognizer *)gesture {
+    
+    int index = (int)gesture.view.tag;
+    
+    _addressTextField.text = [[[[googleResponseArr objectAtIndex:index] valueForKey:@"address_components"] valueForKey:@"short_name"] componentsJoinedByString:@", "];
+    latLong = [NSString stringWithFormat:@"%@,%@",[[[[googleResponseArr objectAtIndex:index] valueForKey:@"geometry"] valueForKey:@"location"] valueForKey:@"lat"], [[[[googleResponseArr objectAtIndex:index] valueForKey:@"geometry"] valueForKey:@"location"] valueForKey:@"lng"]] ;
+    
+    [self dismissKeyboard];
+    
+}
+
+#pragma mark - Form scroll for Keyboard Show/Hide
+
+
+// Call this method somewhere in your view controller setup code.
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+}
+
+// Called when the UIKeyboardDidShowNotification is sent.
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    self.contentScrollView.contentInset = contentInsets;
+    self.contentScrollView.scrollIndicatorInsets = contentInsets;
+    
+    // If active text field is hidden by keyboard, scroll it so it's visible
+    // Your application might not need or want this behavior.
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= kbSize.height;
+    if (!CGRectContainsPoint(aRect, activeField.frame.origin) ) {
+        CGPoint scrollPoint = CGPointMake(0.0, activeField.frame.origin.y-kbSize.height);
+        [self.contentScrollView setContentOffset:scrollPoint animated:YES];
+    }
+}
+
+// Called when the UIKeyboardWillHideNotification is sent
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    self.contentScrollView.contentInset = contentInsets;
+    self.contentScrollView.scrollIndicatorInsets = contentInsets;
+}
 
 @end
