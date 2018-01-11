@@ -285,7 +285,7 @@
 -(void)textFieldDidEndEditing:(UITextField *)textField {
     
     if (textField == _eirCodeTextField) {
-        [self startGoogleMapsGeocodeAPIWithParam:_eirCodeTextField.text];
+        [self startGoogleMapsGeocodeAPIWithParam:[_eirCodeTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""]];
     }
     
 }

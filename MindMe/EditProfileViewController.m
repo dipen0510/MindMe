@@ -127,7 +127,7 @@
     [ActionSheetDatePicker showPickerWithTitle:@"Select DOB" datePickerMode:UIDatePickerModeDate selectedDate:[NSDate date] minimumDate:nil maximumDate:[NSDate date] doneBlock:^(ActionSheetDatePicker *picker, id selectedDate, id origin) {
         
         NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.dateFormat = @"DD-MMM-YYYY";
+        [dateFormatter setDateFormat:@"dd-MMM-yyyy"];
         
         _dobTextField.text = [dateFormatter stringFromDate:selectedDate];
         
@@ -335,7 +335,7 @@
 -(void)textFieldDidEndEditing:(UITextField *)textField {
     
     if (textField == _eirCodeTextField) {
-        [self startGoogleMapsGeocodeAPIWithParam:_eirCodeTextField.text];
+        [self startGoogleMapsGeocodeAPIWithParam:[_eirCodeTextField.text stringByReplacingOccurrencesOfString:@" " withString:@""]];
     }
     
 }

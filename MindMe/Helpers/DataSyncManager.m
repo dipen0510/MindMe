@@ -79,8 +79,8 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializerWithWritingOptions:NSJSONWritingPrettyPrinted];
     [manager.requestSerializer setValue:@"24ad1dc1-c5e2-4bbc-a261-9de40fa7d7c7" forHTTPHeaderField:@"Auth-Key"];
     [manager.requestSerializer setValue:@"frontend-client" forHTTPHeaderField:@"Client-Service"];
-    [manager.requestSerializer setValue:[[SharedClass sharedInstance] userId] forHTTPHeaderField:@"User-ID"];
-    [manager.requestSerializer setValue:[[SharedClass sharedInstance] authorizationKey] forHTTPHeaderField:@"Authorization"];
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",[[SharedClass sharedInstance] userId]] forHTTPHeaderField:@"User-ID"];
+    [manager.requestSerializer setValue:[NSString stringWithFormat:@"%@",[[SharedClass sharedInstance] authorizationKey]] forHTTPHeaderField:@"Authorization"];
     
     manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
     manager.responseSerializer.acceptableStatusCodes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 300)];
