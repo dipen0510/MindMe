@@ -133,7 +133,7 @@
     NSURL* url;
     url = [NSURL URLWithString:@"https://maps.googleapis.com/maps/api/geocode"];
     
-    NSString* finalParams = [NSString stringWithFormat:@"json?address=%@&key=AIzaSyDr_kpZrjTFwpVwZ3PYpjxVhcJiKFcfnD8",param];
+    NSString* finalParams = [NSString stringWithFormat:@"json?address=%@&key=AIzaSyDr_kpZrjTFwpVwZ3PYpjxVhcJiKFcfnD8&components=country:IE",param];
     
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
     manager.requestSerializer = [AFJSONRequestSerializer serializerWithWritingOptions:NSJSONWritingPrettyPrinted];

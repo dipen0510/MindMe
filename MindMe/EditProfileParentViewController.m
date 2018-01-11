@@ -175,6 +175,8 @@
         [[SharedClass sharedInstance] setIsEditProfileMenuButtonHidden:NO];
         _menuButton.hidden = NO;
         
+        [SVProgressHUD showSuccessWithStatus:@"Profile updated successfully"];
+        
     }
     
     if ([requestServiceKey isEqualToString:GoogleAPIGeocode]) {
@@ -265,16 +267,24 @@
     [dict setObject:_firstNameTextField.text forKey:@"first_name"];
     [dict setObject:_lastNameTextField.text forKey:@"second_name"];
     [dict setObject:_phonetextField.text forKey:@"mobile_number"];
-    [dict setObject:latLong forKey:@"location"];
+    [dict setObject:_addressTextField.text forKey:@"location"];
     [dict setObject:[NSString stringWithFormat:@"%d",_receiveEmailButton.isSelected] forKey:@"promotions"];
     [dict setObject:[NSString stringWithFormat:@"%d",_mailNotifButton.isSelected] forKey:@"job_alerts"];
     [dict setObject:[NSString stringWithFormat:@"%d",_receiveSMSButton.isSelected] forKey:@"sms"];
     [dict setObject:[[latLong componentsSeparatedByString:@","] firstObject] forKey:@"lati"];
     [dict setObject:[[latLong componentsSeparatedByString:@","] lastObject] forKey:@"longi"];
     [dict setObject:_emailTextField.text forKey:@"email"];
-    [dict setObject:_addressTextField.text forKey:@"eircode_address"];
-    [dict setObject:_eirCodeTextField.text forKey:@"eircode"];
     
+    if (_eirCodeTextField.text && ![_eirCodeTextField.text isEqualToString:@""]) {
+        [dict setObject:_addressTextField.text forKey:@"eircode_address"];
+        [dict setObject:_eirCodeTextField.text forKey:@"eircode"];
+    }
+    else {
+        [dict setObject:@"" forKey:@"eircode_address"];
+        [dict setObject:@"" forKey:@"eircode"];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setObject:dict forKey:@"profileDetails"];
     
     return dict;
     

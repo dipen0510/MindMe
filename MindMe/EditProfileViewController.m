@@ -300,7 +300,7 @@
     [dict setObject:_firstNameTextField.text forKey:@"first_name"];
     [dict setObject:_lastNameTextField.text forKey:@"second_name"];
     [dict setObject:_phoneTextField.text forKey:@"mobile_number"];
-    [dict setObject:latLong forKey:@"location"];
+    [dict setObject:_addressTextField.text forKey:@"location"];
     [dict setObject:[NSString stringWithFormat:@"%d",_emailPromotionsButton.isSelected] forKey:@"promotions"];
     [dict setObject:[NSString stringWithFormat:@"%d",_receiveEmailsButton.isSelected] forKey:@"job_alerts"];
     [dict setObject:[NSString stringWithFormat:@"1"] forKey:@"sms"];
@@ -311,9 +311,17 @@
     [dict setObject:@"0" forKey:@"bmonth"];
     [dict setObject:@"0" forKey:@"byear"];
     [dict setObject:@"0" forKey:@"age"];
-    [dict setObject:_addressTextField.text forKey:@"eircode_address"];
-    [dict setObject:_eirCodeTextField.text forKey:@"eircode"];
     
+    if (_eirCodeTextField.text && ![_eirCodeTextField.text isEqualToString:@""]) {
+        [dict setObject:_addressTextField.text forKey:@"eircode_address"];
+        [dict setObject:_eirCodeTextField.text forKey:@"eircode"];
+    }
+    else {
+        [dict setObject:@"" forKey:@"eircode_address"];
+        [dict setObject:@"" forKey:@"eircode"];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setObject:dict forKey:@"profileDetails"];
     
     return dict;
     
