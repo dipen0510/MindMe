@@ -55,7 +55,7 @@
     _eirCodeTextField.delegate = self;
     _addressTextField.delegate = self;
     
-    _phoneTextField.keyboardType = UIKeyboardTypeNumberPad;
+    _phonetextField.keyboardType = UIKeyboardTypeNumberPad;
     
     _addressView.hidden = YES;
     _menuButton.hidden = [[SharedClass sharedInstance] isEditProfileMenuButtonHidden];
