@@ -156,6 +156,10 @@
         [SVProgressHUD showErrorWithStatus:@"Please enter a valid address or Eircode to continue"];
         
     }
+    else if ([self calculateAgeFromDateString:_dobTextField.text] < 16) {
+        [SVProgressHUD showErrorWithStatus:@"You should be more than 16 years to continue"];
+        
+    }
     else {
         [self startUpdateProfileService];
     }
@@ -351,7 +355,7 @@
     [dict setObject:[[_dobTextField.text componentsSeparatedByString:@"-"] firstObject] forKey:@"bday"];
     [dict setObject:[[_dobTextField.text componentsSeparatedByString:@"-"] objectAtIndex:1] forKey:@"bmonth"];
     [dict setObject:[[_dobTextField.text componentsSeparatedByString:@"-"] lastObject] forKey:@"byear"];
-    [dict setObject:@"0" forKey:@"age"];
+    [dict setObject:[NSString stringWithFormat:@"%d",[self calculateAgeFromDateString:_dobTextField.text]] forKey:@"age"];
     
     if (_eirCodeTextField.text && ![_eirCodeTextField.text isEqualToString:@""]) {
         [dict setObject:_addressTextField.text forKey:@"eircode_address"];
@@ -385,7 +389,7 @@
     [dict setObject:[[_dobTextField.text componentsSeparatedByString:@"-"] firstObject] forKey:@"birth_day"];
     [dict setObject:[[_dobTextField.text componentsSeparatedByString:@"-"] objectAtIndex:1] forKey:@"birth_month"];
     [dict setObject:[[_dobTextField.text componentsSeparatedByString:@"-"] lastObject] forKey:@"birth_year"];
-    [dict setObject:@"0" forKey:@"age"];
+    [dict setObject:[NSString stringWithFormat:@"%d",[self calculateAgeFromDateString:_dobTextField.text]] forKey:@"age"];
     
     if (_eirCodeTextField.text && ![_eirCodeTextField.text isEqualToString:@""]) {
         [dict setObject:_addressTextField.text forKey:@"eircode_address"];
@@ -406,6 +410,20 @@
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dict];
     [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"profileDetails"];
 
+}
+
+- (int) calculateAgeFromDateString:(NSString *)dateStr {
+    
+    NSDate *todayDate = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+    int time = [todayDate timeIntervalSinceDate:[dateFormatter dateFromString:dateStr]];
+    int allDays = (((time/60)/60)/24);
+    int days = allDays%365;
+    int years = (allDays-days)/365;
+    
+    return years;
+    
 }
 
 #pragma mark - UITextField Delegate
