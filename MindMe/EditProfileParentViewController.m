@@ -24,6 +24,7 @@
     // Do any additional setup after loading the view.
     
     [self setupInitialUI];
+    [self setupProfileDetails];
     
 }
 
@@ -31,7 +32,7 @@
     
     [super viewWillAppear:animated];
     
-    [self startGetProfileDetailsService];
+//    [self startGetProfileDetailsService];
     
 }
 
@@ -58,6 +59,44 @@
     _menuButton.hidden = [[SharedClass sharedInstance] isEditProfileMenuButtonHidden];
     
 }
+
+- (void) setupProfileDetails {
+    
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
+    NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
+    
+    _firstNameTextField.text = [responseData valueForKey:@"first_name"];
+    _lastNameTextField.text = [responseData valueForKey:@"second_name"];
+    _phonetextField.text = [responseData valueForKey:@"mobile_number"];
+    _emailTextField.text = [responseData valueForKey:@"user_email"];
+    _eirCodeTextField.text = [responseData valueForKey:@"eircode"];
+    _addressTextField.text = [responseData valueForKey:@"address1"];
+    
+    latLong = [NSString stringWithFormat:@"%@,%@",[responseData valueForKey:@"latitude"], [responseData valueForKey:@"longitude"]] ;
+    
+    if ([[responseData valueForKey:@"promotions"] isEqualToString:@"1"]) {
+        _receiveEmailButton.selected = YES;
+    }
+    else {
+        _receiveEmailButton.selected = NO;
+    }
+    
+    if ([[responseData valueForKey:@"sms"] isEqualToString:@"1"]) {
+        _receiveSMSButton.selected = YES;
+    }
+    else {
+        _receiveSMSButton.selected = NO;
+    }
+    
+    if ([[responseData valueForKey:@"job_alerts"] isEqualToString:@"1"]) {
+        _mailNotifButton.selected = YES;
+    }
+    else {
+        _mailNotifButton.selected = NO;
+    }
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -286,7 +325,44 @@
     
     [[NSUserDefaults standardUserDefaults] setObject:dict forKey:@"profileDetails"];
     
+    [self convertAndUpdateUserDetails];
+    
     return dict;
+    
+}
+
+- (void) convertAndUpdateUserDetails {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    [dict setObject:_firstNameTextField.text forKey:@"first_name"];
+    [dict setObject:_lastNameTextField.text forKey:@"second_name"];
+    [dict setObject:_phonetextField.text forKey:@"mobile_number"];
+    [dict setObject:_addressTextField.text forKey:@"address1"];
+    [dict setObject:[NSString stringWithFormat:@"%d",_receiveEmailButton.isSelected] forKey:@"promotions"];
+    [dict setObject:[NSString stringWithFormat:@"%d",_mailNotifButton.isSelected] forKey:@"job_alerts"];
+    [dict setObject:[NSString stringWithFormat:@"%d",_receiveSMSButton.isSelected] forKey:@"sms"];
+    [dict setObject:[[latLong componentsSeparatedByString:@","] firstObject] forKey:@"latitude"];
+    [dict setObject:[[latLong componentsSeparatedByString:@","] lastObject] forKey:@"longitude"];
+    [dict setObject:_emailTextField.text forKey:@"user_email"];
+    [dict setObject:@"0" forKey:@"birth_day"];
+    [dict setObject:@"0" forKey:@"birth_month"];
+    [dict setObject:@"0" forKey:@"birth_year"];
+    [dict setObject:@"0" forKey:@"age"];
+    
+    if (_eirCodeTextField.text && ![_eirCodeTextField.text isEqualToString:@""]) {
+        [dict setObject:_addressTextField.text forKey:@"eircode_address"];
+        [dict setObject:_eirCodeTextField.text forKey:@"eircode"];
+    }
+    else {
+        [dict setObject:@"" forKey:@"eircode_address"];
+        [dict setObject:@"" forKey:@"eircode"];
+    }
+    
+    [dict setObject:@"1" forKey:@"gender"];
+    
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dict];
+    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"profileDetails"];
     
 }
 

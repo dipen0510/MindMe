@@ -26,6 +26,7 @@
     // Do any additional setup after loading the view.
     
     [self setupInitialUI];
+    [self setupProfileDetails];
     [self registerForKeyboardNotifications];
     
 }
@@ -34,7 +35,7 @@
     
     [super viewWillAppear:animated];
     
-    [self startGetProfileDetailsService];
+//    [self startGetProfileDetailsService];
     
 }
 
@@ -63,6 +64,46 @@
     _dobTextField.delegate = self;
     
     activeField = [[UITextField alloc] init];
+    
+}
+
+- (void) setupProfileDetails {
+    
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
+    NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
+    
+    _firstNameTextField.text = [responseData valueForKey:@"first_name"];
+    _lastNameTextField.text = [responseData valueForKey:@"second_name"];
+    _phoneTextField.text = [responseData valueForKey:@"mobile_number"];
+    _emailTextField.text = [responseData valueForKey:@"user_email"];
+    _eirCodeTextField.text = [responseData valueForKey:@"eircode"];
+    _addressTextField.text = [responseData valueForKey:@"address1"];
+    _dobTextField.text = [NSString stringWithFormat:@"%@-%@-%@",[responseData valueForKey:@"birth_day"],[responseData valueForKey:@"birth_month"],[responseData valueForKey:@"birth_year"]];
+    
+    latLong = [NSString stringWithFormat:@"%@,%@",[responseData valueForKey:@"latitude"], [responseData valueForKey:@"longitude"]] ;
+    
+    if ([[responseData valueForKey:@"gender"] isEqualToString:@"1"]) {
+        _maleButton.selected = YES;
+        _femaleButton.selected = NO;
+    }
+    else {
+        _maleButton.selected = NO;
+        _femaleButton.selected = YES;
+    }
+    
+    if ([[responseData valueForKey:@"promotions"] isEqualToString:@"1"]) {
+        _emailPromotionsButton.selected = YES;
+    }
+    else {
+        _emailPromotionsButton.selected = NO;
+    }
+    
+    if ([[responseData valueForKey:@"job_alerts"] isEqualToString:@"1"]) {
+        _receiveEmailsButton.selected = YES;
+    }
+    else {
+        _receiveEmailsButton.selected = NO;
+    }
     
 }
 
@@ -127,7 +168,7 @@
     [ActionSheetDatePicker showPickerWithTitle:@"Select DOB" datePickerMode:UIDatePickerModeDate selectedDate:[NSDate date] minimumDate:nil maximumDate:[NSDate date] doneBlock:^(ActionSheetDatePicker *picker, id selectedDate, id origin) {
         
         NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"dd-MMM-yyyy"];
+        [dateFormatter setDateFormat:@"dd-MM-yyyy"];
         
         _dobTextField.text = [dateFormatter stringFromDate:selectedDate];
         
@@ -307,9 +348,9 @@
     [dict setObject:[[latLong componentsSeparatedByString:@","] firstObject] forKey:@"lati"];
     [dict setObject:[[latLong componentsSeparatedByString:@","] lastObject] forKey:@"longi"];
     [dict setObject:_emailTextField.text forKey:@"email"];
-    [dict setObject:@"0" forKey:@"bday"];
-    [dict setObject:@"0" forKey:@"bmonth"];
-    [dict setObject:@"0" forKey:@"byear"];
+    [dict setObject:[[_dobTextField.text componentsSeparatedByString:@"-"] firstObject] forKey:@"bday"];
+    [dict setObject:[[_dobTextField.text componentsSeparatedByString:@"-"] objectAtIndex:1] forKey:@"bmonth"];
+    [dict setObject:[[_dobTextField.text componentsSeparatedByString:@"-"] lastObject] forKey:@"byear"];
     [dict setObject:@"0" forKey:@"age"];
     
     if (_eirCodeTextField.text && ![_eirCodeTextField.text isEqualToString:@""]) {
@@ -321,10 +362,50 @@
         [dict setObject:@"" forKey:@"eircode"];
     }
     
-    [[NSUserDefaults standardUserDefaults] setObject:dict forKey:@"profileDetails"];
+    [self convertAndUpdateUserDetails];
     
     return dict;
     
+}
+
+- (void) convertAndUpdateUserDetails {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    [dict setObject:_firstNameTextField.text forKey:@"first_name"];
+    [dict setObject:_lastNameTextField.text forKey:@"second_name"];
+    [dict setObject:_phoneTextField.text forKey:@"mobile_number"];
+    [dict setObject:_addressTextField.text forKey:@"address1"];
+    [dict setObject:[NSString stringWithFormat:@"%d",_emailPromotionsButton.isSelected] forKey:@"promotions"];
+    [dict setObject:[NSString stringWithFormat:@"%d",_receiveEmailsButton.isSelected] forKey:@"job_alerts"];
+    [dict setObject:[NSString stringWithFormat:@"1"] forKey:@"sms"];
+    [dict setObject:[[latLong componentsSeparatedByString:@","] firstObject] forKey:@"latitude"];
+    [dict setObject:[[latLong componentsSeparatedByString:@","] lastObject] forKey:@"longitude"];
+    [dict setObject:_emailTextField.text forKey:@"user_email"];
+    [dict setObject:[[_dobTextField.text componentsSeparatedByString:@"-"] firstObject] forKey:@"birth_day"];
+    [dict setObject:[[_dobTextField.text componentsSeparatedByString:@"-"] objectAtIndex:1] forKey:@"birth_month"];
+    [dict setObject:[[_dobTextField.text componentsSeparatedByString:@"-"] lastObject] forKey:@"birth_year"];
+    [dict setObject:@"0" forKey:@"age"];
+    
+    if (_eirCodeTextField.text && ![_eirCodeTextField.text isEqualToString:@""]) {
+        [dict setObject:_addressTextField.text forKey:@"eircode_address"];
+        [dict setObject:_eirCodeTextField.text forKey:@"eircode"];
+    }
+    else {
+        [dict setObject:@"" forKey:@"eircode_address"];
+        [dict setObject:@"" forKey:@"eircode"];
+    }
+    
+    if (_maleButton.selected) {
+        [dict setObject:@"1" forKey:@"gender"];
+    }
+    else {
+       [dict setObject:@"2" forKey:@"gender"];
+    }
+    
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dict];
+    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"profileDetails"];
+
 }
 
 #pragma mark - UITextField Delegate
