@@ -55,6 +55,8 @@
     _eirCodeTextField.delegate = self;
     _addressTextField.delegate = self;
     
+    _phoneTextField.keyboardType = UIKeyboardTypeNumberPad;
+    
     _addressView.hidden = YES;
     _menuButton.hidden = [[SharedClass sharedInstance] isEditProfileMenuButtonHidden];
     
@@ -65,35 +67,86 @@
     NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
     NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
     
-    _firstNameTextField.text = [responseData valueForKey:@"first_name"];
-    _lastNameTextField.text = [responseData valueForKey:@"second_name"];
-    _phonetextField.text = [responseData valueForKey:@"mobile_number"];
-    _emailTextField.text = [responseData valueForKey:@"user_email"];
-    _eirCodeTextField.text = [responseData valueForKey:@"eircode"];
-    _addressTextField.text = [responseData valueForKey:@"address1"];
+    if ([responseData valueForKey:@"first_name"] && ![[responseData valueForKey:@"first_name"] isEqual:[NSNull null]]) {
+        _firstNameTextField.text = [responseData valueForKey:@"first_name"];
+    }
+    else {
+        _firstNameTextField.text = @"";
+    }
+    
+    if ([responseData valueForKey:@"second_name"] && ![[responseData valueForKey:@"second_name"] isEqual:[NSNull null]]) {
+        _lastNameTextField.text = [responseData valueForKey:@"second_name"];
+    }
+    else {
+        _lastNameTextField.text = @"";
+    }
+    
+    if ([responseData valueForKey:@"mobile_number"] && ![[responseData valueForKey:@"mobile_number"] isEqual:[NSNull null]]) {
+        _phonetextField.text = [responseData valueForKey:@"mobile_number"];
+    }
+    else {
+        _phonetextField.text = @"";
+    }
+    
+    if ([responseData valueForKey:@"user_email"] && ![[responseData valueForKey:@"user_email"] isEqual:[NSNull null]]) {
+        _emailTextField.text = [responseData valueForKey:@"user_email"];
+    }
+    else {
+        _emailTextField.text = @"";
+    }
+    
+    if ([responseData valueForKey:@"eircode"] && ![[responseData valueForKey:@"eircode"] isEqual:[NSNull null]]) {
+        _eirCodeTextField.text = [responseData valueForKey:@"eircode"];
+    }
+    else {
+        _eirCodeTextField.text = @"";
+    }
+    
+    if ([responseData valueForKey:@"address1"] && ![[responseData valueForKey:@"address1"] isEqual:[NSNull null]]) {
+        _addressTextField.text = [responseData valueForKey:@"address1"];
+    }
+    else {
+        _addressTextField.text = @"";
+    }
     
     latLong = [NSString stringWithFormat:@"%@,%@",[responseData valueForKey:@"latitude"], [responseData valueForKey:@"longitude"]] ;
     
-    if ([[responseData valueForKey:@"promotions"] isEqualToString:@"1"]) {
-        _receiveEmailButton.selected = YES;
+    if ([responseData valueForKey:@"promotions"] && ![[responseData valueForKey:@"promotions"] isEqual:[NSNull null]]) {
+        if ([[responseData valueForKey:@"promotions"] isEqualToString:@"1"]) {
+            _receiveEmailButton.selected = YES;
+        }
+        else {
+            _receiveEmailButton.selected = NO;
+        }
     }
     else {
         _receiveEmailButton.selected = NO;
     }
     
-    if ([[responseData valueForKey:@"sms"] isEqualToString:@"1"]) {
-        _receiveSMSButton.selected = YES;
+    if ([responseData valueForKey:@"sms"] && ![[responseData valueForKey:@"sms"] isEqual:[NSNull null]]) {
+        if ([[responseData valueForKey:@"sms"] isEqualToString:@"1"]) {
+            _receiveSMSButton.selected = YES;
+        }
+        else {
+            _receiveSMSButton.selected = NO;
+        }
     }
     else {
         _receiveSMSButton.selected = NO;
     }
     
-    if ([[responseData valueForKey:@"job_alerts"] isEqualToString:@"1"]) {
-        _mailNotifButton.selected = YES;
+    if ([responseData valueForKey:@"job_alerts"] && ![[responseData valueForKey:@"job_alerts"] isEqual:[NSNull null]]) {
+        if ([[responseData valueForKey:@"job_alerts"] isEqualToString:@"1"]) {
+            _mailNotifButton.selected = YES;
+        }
+        else {
+            _mailNotifButton.selected = NO;
+        }
     }
     else {
         _mailNotifButton.selected = NO;
     }
+    
     
 }
 

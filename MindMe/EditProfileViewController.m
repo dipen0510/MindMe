@@ -58,6 +58,8 @@
     _eirCodeTextField.delegate = self;
     _addressTextField.delegate = self;
     
+    _phoneTextField.keyboardType = UIKeyboardTypeNumberPad;
+    
     _addressView.hidden = YES;
     _menuButton.hidden = [[SharedClass sharedInstance] isEditProfileMenuButtonHidden];
     
@@ -72,34 +74,91 @@
     NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
     NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
     
-    _firstNameTextField.text = [responseData valueForKey:@"first_name"];
-    _lastNameTextField.text = [responseData valueForKey:@"second_name"];
-    _phoneTextField.text = [responseData valueForKey:@"mobile_number"];
-    _emailTextField.text = [responseData valueForKey:@"user_email"];
-    _eirCodeTextField.text = [responseData valueForKey:@"eircode"];
-    _addressTextField.text = [responseData valueForKey:@"address1"];
+    if ([responseData valueForKey:@"first_name"] && ![[responseData valueForKey:@"first_name"] isEqual:[NSNull null]]) {
+        _firstNameTextField.text = [responseData valueForKey:@"first_name"];
+    }
+    else {
+        _firstNameTextField.text = @"";
+    }
+    
+    if ([responseData valueForKey:@"second_name"] && ![[responseData valueForKey:@"second_name"] isEqual:[NSNull null]]) {
+        _lastNameTextField.text = [responseData valueForKey:@"second_name"];
+    }
+    else {
+        _lastNameTextField.text = @"";
+    }
+    
+    if ([responseData valueForKey:@"mobile_number"] && ![[responseData valueForKey:@"mobile_number"] isEqual:[NSNull null]]) {
+        _phoneTextField.text = [responseData valueForKey:@"mobile_number"];
+    }
+    else {
+        _phoneTextField.text = @"";
+    }
+    
+    if ([responseData valueForKey:@"user_email"] && ![[responseData valueForKey:@"user_email"] isEqual:[NSNull null]]) {
+        _emailTextField.text = [responseData valueForKey:@"user_email"];
+    }
+    else {
+        _emailTextField.text = @"";
+    }
+    
+    if ([responseData valueForKey:@"eircode"] && ![[responseData valueForKey:@"eircode"] isEqual:[NSNull null]]) {
+        _eirCodeTextField.text = [responseData valueForKey:@"eircode"];
+    }
+    else {
+        _eirCodeTextField.text = @"";
+    }
+    
+    if ([responseData valueForKey:@"address1"] && ![[responseData valueForKey:@"address1"] isEqual:[NSNull null]]) {
+        _addressTextField.text = [responseData valueForKey:@"address1"];
+    }
+    else {
+        _addressTextField.text = @"";
+    }
+    
+//    _lastNameTextField.text = [responseData valueForKey:@"second_name"];
+//    _phoneTextField.text = [responseData valueForKey:@"mobile_number"];
+//    _emailTextField.text = [responseData valueForKey:@"user_email"];
+//    _eirCodeTextField.text = [responseData valueForKey:@"eircode"];
+//    _addressTextField.text = [responseData valueForKey:@"address1"];
     _dobTextField.text = [NSString stringWithFormat:@"%@-%@-%@",[responseData valueForKey:@"birth_day"],[responseData valueForKey:@"birth_month"],[responseData valueForKey:@"birth_year"]];
     
     latLong = [NSString stringWithFormat:@"%@,%@",[responseData valueForKey:@"latitude"], [responseData valueForKey:@"longitude"]] ;
     
-    if ([[responseData valueForKey:@"gender"] isEqualToString:@"1"]) {
-        _maleButton.selected = YES;
-        _femaleButton.selected = NO;
+    if ([responseData valueForKey:@"gender"] && ![[responseData valueForKey:@"gender"] isEqual:[NSNull null]]) {
+        if ([[responseData valueForKey:@"gender"] isEqualToString:@"1"]) {
+            _maleButton.selected = YES;
+            _femaleButton.selected = NO;
+        }
+        else {
+            _maleButton.selected = NO;
+            _femaleButton.selected = YES;
+        }
     }
     else {
         _maleButton.selected = NO;
-        _femaleButton.selected = YES;
+        _femaleButton.selected = NO;
     }
     
-    if ([[responseData valueForKey:@"promotions"] isEqualToString:@"1"]) {
-        _emailPromotionsButton.selected = YES;
+    if ([responseData valueForKey:@"promotions"] && ![[responseData valueForKey:@"promotions"] isEqual:[NSNull null]]) {
+        if ([[responseData valueForKey:@"promotions"] isEqualToString:@"1"]) {
+            _emailPromotionsButton.selected = YES;
+        }
+        else {
+            _emailPromotionsButton.selected = NO;
+        }
     }
     else {
         _emailPromotionsButton.selected = NO;
     }
     
-    if ([[responseData valueForKey:@"job_alerts"] isEqualToString:@"1"]) {
-        _receiveEmailsButton.selected = YES;
+    if ([responseData valueForKey:@"job_alerts"] && ![[responseData valueForKey:@"job_alerts"] isEqual:[NSNull null]]) {
+        if ([[responseData valueForKey:@"job_alerts"] isEqualToString:@"1"]) {
+            _receiveEmailsButton.selected = YES;
+        }
+        else {
+            _receiveEmailsButton.selected = NO;
+        }
     }
     else {
         _receiveEmailsButton.selected = NO;

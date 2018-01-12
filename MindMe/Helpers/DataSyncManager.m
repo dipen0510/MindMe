@@ -182,14 +182,23 @@
         [[NSUserDefaults standardUserDefaults] setObject:[responseObj valueForKey:@"token"] forKey:@"token"];
         [[NSUserDefaults standardUserDefaults] setBool:[[SharedClass sharedInstance] isUserCarer] forKey:@"isUserCarer"];
         
-        
-        if ([responseObj valueForKey:@"data"] && ![[responseObj valueForKey:@"data"] isEqual:[NSNull null]]) {
-            NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithDictionary:[responseObj valueForKey:@"data"]];
-            [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"user_email"] forKey:@"user_email"];
-            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dict];
-            [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"profileDetails"];
+        if ([responseServiceKey isEqualToString:RegisterServiceKey] || [responseServiceKey isEqualToString:FBRegisterServiceKey]) {
+            if ([responseObj valueForKey:@"data"] && ![[responseObj valueForKey:@"data"] isEqual:[NSNull null]]) {
+                NSArray* arr = [[NSArray alloc] initWithArray:[responseObj valueForKey:@"data"]];
+                NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithDictionary:[arr objectAtIndex:0]];
+                [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"user_email"] forKey:@"user_email"];
+                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dict];
+                [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"profileDetails"];
+            }
         }
-        
+        else {
+            if ([responseObj valueForKey:@"data"] && ![[responseObj valueForKey:@"data"] isEqual:[NSNull null]]) {
+                NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithDictionary:[responseObj valueForKey:@"data"]];
+                [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"user_email"] forKey:@"user_email"];
+                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dict];
+                [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"profileDetails"];
+            }
+        }
         
     }
     
