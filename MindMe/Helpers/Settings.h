@@ -19,6 +19,8 @@
 #define UpdateParentPersonalDetails @"auth/updateParent"
 #define UpdateCarerPersonalDetails @"auth/updatecarer"
 #define GetUserPersonalDetails @"GetUserDetails"
+#define ForgotPasswordKey @"auth/forgotPassword"
+#define ChangePasswordKey @"auth/changePassword"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"

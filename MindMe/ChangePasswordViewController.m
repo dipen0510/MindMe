@@ -32,6 +32,14 @@
     _cancelButton.layer.borderWidth = 1.0;
     _cancelButton.layer.borderColor = _cancelButton.titleLabel.textColor.CGColor;
     
+    _currentPwdTextField.delegate = self;
+    _nPwdTextField.delegate = self;
+    _confirmNPwdTextField.delegate = self;
+
+    _currentPwdTextField.secureTextEntry = NO;
+    _nPwdTextField.secureTextEntry = NO;
+    _confirmNPwdTextField.secureTextEntry = NO;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,9 +67,133 @@
     }
 }
 
+- (IBAction)resetPwdButtonTapped:(id)sender {
+    
+    NSString* formValid = [self isFormValid];
+    if (!formValid) {
+        [self startChangePasswordService];
+    }
+    else {
+        [SVProgressHUD showErrorWithStatus:formValid];
+    }
+    
+}
+
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     [self.view endEditing:YES];
+    
+}
+
+- (NSString*) isFormValid {
+    if ([_currentPwdTextField.text isEqualToString:@""]) {
+        return @"Please enter current password to proceed";
+    }
+    else if ([_nPwdTextField.text isEqualToString:@""]) {
+        return @"Please enter new password to proceed";
+    }
+    else if ([_confirmNPwdTextField.text isEqualToString:@""]) {
+        return @"Please enter confirm new password to proceed";
+    }
+    else if(![_nPwdTextField.text isEqualToString:_confirmNPwdTextField.text]) {
+        return @"New password and confirm new password should be same";
+    }
+    else if (_nPwdTextField.text.length < 5) {
+        return @"Please enter at least five characters for new password to proceed";
+    }
+    return nil;
+}
+
+- (BOOL)validateEmailWithString:(NSString*)email {
+    NSString *emailRegex = @"^[a-zA-Z0-9]+(_)?([-_+.][a-zA-Z0-9_]+)*\\@[a-zA-Z0-9]+([-.][a-zA-Z0-9]+)*\\.[a-zA-Z0-9]+([-.][a-zA-Z0-9]+)*$";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:email];
+}
+
+
+#pragma mark - API Helpers
+
+- (void) startChangePasswordService {
+    
+    [SVProgressHUD showWithStatus:@"Changing password"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = ChangePasswordKey;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForChangePassword]];
+    
+}
+
+
+#pragma mark - DATASYNCMANAGER Delegates
+
+-(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
+    
+    [SVProgressHUD showSuccessWithStatus:@"Password changed successfully"];
+    
+    if ([requestServiceKey isEqualToString:ChangePasswordKey]) {
+        [self cancelButtonTapped:nil];
+    }
+    
+    
+    
+}
+
+
+- (void) didFinishServiceWithFailure:(NSString *)errorMsg {
+    
+    
+    [SVProgressHUD dismiss];
+    
+    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:nil
+                                                  message:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)
+                                                 delegate:self
+                                        cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                        otherButtonTitles: nil];
+    
+    if (![errorMsg isEqualToString:@""]) {
+        [alert setMessage:errorMsg];
+    }
+    
+    if ([errorMsg isEqualToString:NSLocalizedString(@"Verify your internet connection and try again", nil)]) {
+        [alert setTitle:NSLocalizedString(@"Connection unsuccessful", nil)];
+    }
+    
+    [alert show];
+    
+    return;
+    
+}
+
+
+
+
+#pragma mark - Modalobject
+
+- (NSMutableDictionary *) prepareDictionaryForChangePassword {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    [dict setObject:_currentPwdTextField.text forKey:@"current_pwd"];
+    [dict setObject:_nPwdTextField.text forKey:@"new_pwd"];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    return dict;
+    
+}
+
+#pragma mark - Text Field Delegates
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    
+    textField.text = @"";
+    textField.secureTextEntry = YES;
     
 }
 

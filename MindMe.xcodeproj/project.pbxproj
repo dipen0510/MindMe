@@ -137,6 +137,7 @@
 		D4041C7A1FC0E228001F312E /* Quickblox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4041C291FC0DF15001F312E /* Quickblox.framework */; };
 		D4041C7C1FC0E2B1001F312E /* Quickblox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4041C291FC0DF15001F312E /* Quickblox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D40CDD6F1FAEE89100213855 /* DrivingLicenseInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40CDD6E1FAEE89100213855 /* DrivingLicenseInfoViewController.m */; };
+		D410BBEC201146C60038A017 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D410BBEB201146C60038A017 /* ForgotPasswordViewController.m */; };
 		D415586F1FB42E6B0031E23F /* tmpAdsHome.png in Resources */ = {isa = PBXBuildFile; fileRef = D415586E1FB42E6B0031E23F /* tmpAdsHome.png */; };
 		D41558721FB461A60031E23F /* AdsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41558711FB461A60031E23F /* AdsDetailViewController.m */; };
 		D41558751FB4E9590031E23F /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41558741FB4E9590031E23F /* ChangePasswordViewController.m */; };
@@ -481,6 +482,8 @@
 		D4041C601FC0E157001F312E /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
 		D40CDD6D1FAEE89100213855 /* DrivingLicenseInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrivingLicenseInfoViewController.h; sourceTree = "<group>"; };
 		D40CDD6E1FAEE89100213855 /* DrivingLicenseInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrivingLicenseInfoViewController.m; sourceTree = "<group>"; };
+		D410BBEA201146C60038A017 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
+		D410BBEB201146C60038A017 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		D415586E1FB42E6B0031E23F /* tmpAdsHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmpAdsHome.png; sourceTree = "<group>"; };
 		D41558701FB461A60031E23F /* AdsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsDetailViewController.h; sourceTree = "<group>"; };
 		D41558711FB461A60031E23F /* AdsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsDetailViewController.m; sourceTree = "<group>"; };
@@ -1460,6 +1463,8 @@
 				D4A019EB1F85482800E311B7 /* RegisterViewController.m */,
 				D41558731FB4E9590031E23F /* ChangePasswordViewController.h */,
 				D41558741FB4E9590031E23F /* ChangePasswordViewController.m */,
+				D410BBEA201146C60038A017 /* ForgotPasswordViewController.h */,
+				D410BBEB201146C60038A017 /* ForgotPasswordViewController.m */,
 				D48EE4C11F9B383C00CB43A0 /* SideMenuViewController.h */,
 				D48EE4C21F9B383C00CB43A0 /* SideMenuViewController.m */,
 				D4AD69291F93363B009D57A7 /* AdsHomeViewController.h */,
@@ -2060,6 +2065,7 @@
 				D40CDD6F1FAEE89100213855 /* DrivingLicenseInfoViewController.m in Sources */,
 				D4041C251FC0DEF5001F312E /* UIImage+QM.m in Sources */,
 				D4041BF71FC0DEF5001F312E /* QMBaseMediaCell.m in Sources */,
+				D410BBEC201146C60038A017 /* ForgotPasswordViewController.m in Sources */,
 				D41B6AAC1FDAC3A400E1F312 /* ActionSheetDatePicker.m in Sources */,
 				D4041C061FC0DEF5001F312E /* QMChatAttachmentIncomingCell.m in Sources */,
 				D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */,
