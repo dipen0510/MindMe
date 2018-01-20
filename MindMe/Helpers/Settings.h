@@ -21,6 +21,7 @@
 #define GetUserPersonalDetails @"GetUserDetails"
 #define ForgotPasswordKey @"auth/forgotPassword"
 #define ChangePasswordKey @"auth/changePassword"
+#define GetPostedAdverts @"profile/getProfileDetails"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"

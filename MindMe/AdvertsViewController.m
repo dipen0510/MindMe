@@ -23,6 +23,14 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self startGetAdvertsService];
+    
+}
+
 - (void) setupInitialUI {
     
     _createAdvertButton.layer.cornerRadius = 20.0;
@@ -45,9 +53,29 @@
     
     if (![[SharedClass sharedInstance] isUserCarer]) {
         
-        _createAdvertButton.hidden = YES;
-        _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"Subscribed\nSubscribe Now"];
+//        _createAdvertButton.hidden = YES;
+        _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"Subscribed"];
         
+    }
+    
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
+    NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
+    
+    _nameLabel.text = [NSString stringWithFormat:@"Hi %@ %@",[responseData valueForKey:@"first_name"],[responseData valueForKey:@"second_name"]];
+    
+    NSData *dictionaryData1 = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetailsCopy"];
+    NSDictionary *responseData1 = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData1];
+    
+    if ([[responseData1 valueForKey:@"Sub_active"] intValue] == 1) {
+        _subscribedValueLabel.text = @"YES";
+    }
+    else {
+        if (![[SharedClass sharedInstance] isUserCarer]) {
+            _subscribedValueLabel.text = @"Subscribe\nNow ";
+        }
+        else {
+            _subscribedValueLabel.text = @"Upgrade\nNow ";
+        }
     }
     
 }
@@ -85,7 +113,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 5;
+    return advertsArr.count;
     
 }
 
@@ -130,6 +158,10 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
+    cell.careTypeLabel.text = [NSString stringWithFormat:@"%@ advert [%@ views]",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"],[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"viewed"]];
+    [cell.editButton setTitle:[NSString stringWithFormat:@"Edit %@ Advert",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]] forState:UIControlStateNormal];
+    
+    
 }
 
 - (NSMutableAttributedString *) attributedTextForUpgradedLabel:(NSString *) labelText {
@@ -143,4 +175,102 @@
     
 }
 
+
+#pragma mark - API Helpers
+
+- (void) startGetAdvertsService {
+    
+    [SVProgressHUD showWithStatus:@"Fetching data"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GetPostedAdverts;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForGetPostedAdverts]];
+    
+}
+
+
+#pragma mark - DATASYNCMANAGER Delegates
+
+-(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
+    
+    [SVProgressHUD showSuccessWithStatus:@"Data fetched successfully"];
+    
+    if ([requestServiceKey isEqualToString:GetPostedAdverts]) {
+        
+        if ([[responseData valueForKey:@"message"] isKindOfClass:[NSArray class]]) {
+            advertsArr = [[NSMutableArray alloc] initWithArray:[responseData valueForKey:@"message"]];
+            [self updateLiveAdvertsValueLabel];
+        }
+        else {
+            _liveAdvertValueLabel.text = @"0";
+        }
+        
+        [_advertTblView reloadData];
+
+    }
+    
+    
+    
+}
+
+
+- (void) didFinishServiceWithFailure:(NSString *)errorMsg {
+    
+    
+    [SVProgressHUD dismiss];
+    
+    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:nil
+                                                  message:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)
+                                                 delegate:self
+                                        cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                        otherButtonTitles: nil];
+    
+    if (![errorMsg isEqualToString:@""]) {
+        [alert setMessage:errorMsg];
+    }
+    
+    if ([errorMsg isEqualToString:NSLocalizedString(@"Verify your internet connection and try again", nil)]) {
+        [alert setTitle:NSLocalizedString(@"Connection unsuccessful", nil)];
+    }
+    
+    [alert show];
+    
+    return;
+    
+}
+
+
+
+
+#pragma mark - Modalobject
+
+- (NSMutableDictionary *) prepareDictionaryForGetPostedAdverts {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    return dict;
+    
+}
+
+- (void) updateLiveAdvertsValueLabel {
+    
+    int count = 0;
+    
+    for (NSDictionary* dict in advertsArr) {
+        if ([[dict valueForKey:@"job_ad_active"] intValue] == 1) {
+            count++;
+        }
+    }
+    
+    _liveAdvertValueLabel.text = [NSString stringWithFormat:@"%d",count];
+    
+}
 @end

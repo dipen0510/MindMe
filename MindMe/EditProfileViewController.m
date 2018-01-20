@@ -309,10 +309,12 @@
         
     }
     
-    if ([requestServiceKey isEqualToString:UpdateParentPersonalDetails]) {
+    if ([requestServiceKey isEqualToString:UpdateCarerPersonalDetails]) {
         
         [[SharedClass sharedInstance] setIsEditProfileMenuButtonHidden:NO];
         _menuButton.hidden = NO;
+        
+        [SVProgressHUD showSuccessWithStatus:@"Profile updated successfully"];
         
     }
     

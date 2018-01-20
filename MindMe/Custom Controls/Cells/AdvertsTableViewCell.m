@@ -13,6 +13,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    _editButton.layer.cornerRadius = (18.5/568) * [UIScreen mainScreen].bounds.size.height;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

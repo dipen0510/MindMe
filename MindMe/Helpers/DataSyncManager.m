@@ -185,18 +185,33 @@
         if ([responseServiceKey isEqualToString:RegisterServiceKey] || [responseServiceKey isEqualToString:FBRegisterServiceKey]) {
             if ([responseObj valueForKey:@"data"] && ![[responseObj valueForKey:@"data"] isEqual:[NSNull null]]) {
                 NSArray* arr = [[NSArray alloc] initWithArray:[responseObj valueForKey:@"data"]];
+                
                 NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithDictionary:[arr objectAtIndex:0]];
                 [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"user_email"] forKey:@"user_email"];
+                [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"Sub_active"] forKey:@"Sub_active"];
+                
                 NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dict];
                 [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"profileDetails"];
+                
+                NSData *data1 = [NSKeyedArchiver archivedDataWithRootObject:dict];
+                [[NSUserDefaults standardUserDefaults] setObject:data1 forKey:@"profileDetailsCopy"];
+                
             }
         }
         else {
             if ([responseObj valueForKey:@"data"] && ![[responseObj valueForKey:@"data"] isEqual:[NSNull null]]) {
+                
                 NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithDictionary:[responseObj valueForKey:@"data"]];
                 [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"user_email"] forKey:@"user_email"];
+                [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"Sub_active"] forKey:@"Sub_active"];
+                
+                
                 NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dict];
                 [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"profileDetails"];
+                
+                NSData *data1 = [NSKeyedArchiver archivedDataWithRootObject:dict];
+                [[NSUserDefaults standardUserDefaults] setObject:data1 forKey:@"profileDetailsCopy"];
+                
             }
         }
         

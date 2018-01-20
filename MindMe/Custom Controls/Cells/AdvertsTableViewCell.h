@@ -10,4 +10,8 @@
 
 @interface AdvertsTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *careTypeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *toggleButton;
+@property (weak, nonatomic) IBOutlet UIButton *editButton;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @end
