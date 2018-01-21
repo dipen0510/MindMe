@@ -8,6 +8,7 @@
 
 #import "ChooseCareTypeViewController.h"
 #import "CreateAdvertsCollectionViewCell.h"
+#import "YourInformationViewController.h"
 
 @interface ChooseCareTypeViewController ()
 
@@ -143,24 +144,84 @@
     
     cell.titleLabel.text = [existingAdvertsArr objectAtIndex:indexPath.row];
     
+    cell.toggleButton.tag = indexPath.row;
+    [cell.toggleButton addTarget:self action:@selector(editCareTypeToggleButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
+    if ([[existingAdvertsArr objectAtIndex:indexPath.row] isEqualToString:selectedCareType]) {
+        cell.toggleButton.selected = YES;
+    }
+    else {
+        cell.toggleButton.selected = NO;
+    }
+    
 }
 
 - (void) populateContentForSecondCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.titleLabel.text = [newAdvertsArr objectAtIndex:indexPath.row];
     
+    cell.toggleButton.tag = indexPath.row;
+    [cell.toggleButton addTarget:self action:@selector(newCareTypeToggleButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
+    if ([[newAdvertsArr objectAtIndex:indexPath.row] isEqualToString:selectedCareType]) {
+        cell.toggleButton.selected = YES;
+    }
+    else {
+        cell.toggleButton.selected = NO;
+    }
+    
+}
+
+- (void) editCareTypeToggleButtonTapped:(UIButton *)sender {
+    
+    selectedCareType = [existingAdvertsArr objectAtIndex:sender.tag];
+    
+    [_firstCollectionView reloadData];
+    [_secondCollectionView reloadData];
+    
+}
+
+- (void) newCareTypeToggleButtonTapped:(UIButton *)sender {
+    
+    selectedCareType = [newAdvertsArr objectAtIndex:sender.tag];
+    
+    [_firstCollectionView reloadData];
+    [_secondCollectionView reloadData];
+    
 }
 
 
-/*
 #pragma mark - Navigation
+
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    
+    if ([identifier isEqualToString:@"showYourInfoSegue"]) {
+        
+        if (!selectedCareType) {
+            [SVProgressHUD showErrorWithStatus:@"Select at least one care type to proceed"];
+            return NO;
+        }
+        
+    }
+    
+    return YES;
+    
+}
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"showYourInfoSegue"]) {
+        
+        YourInformationViewController* controller = (YourInformationViewController*)[segue destinationViewController];
+        controller.selectedCareType = selectedCareType;
+        
+    }
+    
 }
-*/
+
 
 - (IBAction)backButtonTapped:(id)sender {
     if (self.navigationController) {

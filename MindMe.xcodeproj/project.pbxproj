@@ -172,6 +172,14 @@
 		D4736B551FBC50A3004A51A2 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B541FBC50A3004A51A2 /* FavoritesViewController.m */; };
 		D4736B591FBC60B6004A51A2 /* FavoritesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B571FBC60B6004A51A2 /* FavoritesTableViewCell.m */; };
 		D4736B5A1FBC60B6004A51A2 /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4736B581FBC60B6004A51A2 /* FavoritesTableViewCell.xib */; };
+		D48AE2402014BC3F00C2F165 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D48AE2312014BC3F00C2F165 /* LICENSE */; };
+		D48AE2412014BC3F00C2F165 /* PEPhotoCropEditor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D48AE2332014BC3F00C2F165 /* PEPhotoCropEditor.bundle */; };
+		D48AE2422014BC3F00C2F165 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D48AE2342014BC3F00C2F165 /* README.md */; };
+		D48AE2432014BC3F00C2F165 /* UIImage+PECrop.m in Sources */ = {isa = PBXBuildFile; fileRef = D48AE2372014BC3F00C2F165 /* UIImage+PECrop.m */; };
+		D48AE2442014BC3F00C2F165 /* PEResizeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D48AE2382014BC3F00C2F165 /* PEResizeControl.m */; };
+		D48AE2452014BC3F00C2F165 /* PECropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D48AE2392014BC3F00C2F165 /* PECropViewController.m */; };
+		D48AE2462014BC3F00C2F165 /* PECropView.m in Sources */ = {isa = PBXBuildFile; fileRef = D48AE23A2014BC3F00C2F165 /* PECropView.m */; };
+		D48AE2472014BC3F00C2F165 /* PECropRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D48AE23B2014BC3F00C2F165 /* PECropRectView.m */; };
 		D48EE4B31F9B2A2C00CB43A0 /* LGSideMenuHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4AA1F9B2A2C00CB43A0 /* LGSideMenuHelper.m */; };
 		D48EE4B41F9B2A2C00CB43A0 /* LGSideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4AC1F9B2A2C00CB43A0 /* LGSideMenuView.m */; };
 		D48EE4B51F9B2A2C00CB43A0 /* LGSideMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EE4AD1F9B2A2C00CB43A0 /* LGSideMenuSegue.m */; };
@@ -544,6 +552,19 @@
 		D4736B561FBC60B6004A51A2 /* FavoritesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesTableViewCell.h; sourceTree = "<group>"; };
 		D4736B571FBC60B6004A51A2 /* FavoritesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesTableViewCell.m; sourceTree = "<group>"; };
 		D4736B581FBC60B6004A51A2 /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
+		D48AE2312014BC3F00C2F165 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D48AE2332014BC3F00C2F165 /* PEPhotoCropEditor.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PEPhotoCropEditor.bundle; sourceTree = "<group>"; };
+		D48AE2342014BC3F00C2F165 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D48AE2362014BC3F00C2F165 /* PECropRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PECropRectView.h; sourceTree = "<group>"; };
+		D48AE2372014BC3F00C2F165 /* UIImage+PECrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PECrop.m"; sourceTree = "<group>"; };
+		D48AE2382014BC3F00C2F165 /* PEResizeControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PEResizeControl.m; sourceTree = "<group>"; };
+		D48AE2392014BC3F00C2F165 /* PECropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PECropViewController.m; sourceTree = "<group>"; };
+		D48AE23A2014BC3F00C2F165 /* PECropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PECropView.m; sourceTree = "<group>"; };
+		D48AE23B2014BC3F00C2F165 /* PECropRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PECropRectView.m; sourceTree = "<group>"; };
+		D48AE23C2014BC3F00C2F165 /* UIImage+PECrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PECrop.h"; sourceTree = "<group>"; };
+		D48AE23D2014BC3F00C2F165 /* PEResizeControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEResizeControl.h; sourceTree = "<group>"; };
+		D48AE23E2014BC3F00C2F165 /* PECropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PECropView.h; sourceTree = "<group>"; };
+		D48AE23F2014BC3F00C2F165 /* PECropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PECropViewController.h; sourceTree = "<group>"; };
 		D48EE4A51F9B2A2C00CB43A0 /* LGSideMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuSegue.h; sourceTree = "<group>"; };
 		D48EE4A61F9B2A2C00CB43A0 /* LGSideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuView.h; sourceTree = "<group>"; };
 		D48EE4A71F9B2A2C00CB43A0 /* LGSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuController.h; sourceTree = "<group>"; };
@@ -1371,9 +1392,46 @@
 			path = ../TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
+		D48AE2302014BC3F00C2F165 /* PEPhotoCropEditor */ = {
+			isa = PBXGroup;
+			children = (
+				D48AE2312014BC3F00C2F165 /* LICENSE */,
+				D48AE2322014BC3F00C2F165 /* Resources */,
+				D48AE2342014BC3F00C2F165 /* README.md */,
+				D48AE2352014BC3F00C2F165 /* Lib */,
+			);
+			path = PEPhotoCropEditor;
+			sourceTree = "<group>";
+		};
+		D48AE2322014BC3F00C2F165 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D48AE2332014BC3F00C2F165 /* PEPhotoCropEditor.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D48AE2352014BC3F00C2F165 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				D48AE2362014BC3F00C2F165 /* PECropRectView.h */,
+				D48AE2372014BC3F00C2F165 /* UIImage+PECrop.m */,
+				D48AE2382014BC3F00C2F165 /* PEResizeControl.m */,
+				D48AE2392014BC3F00C2F165 /* PECropViewController.m */,
+				D48AE23A2014BC3F00C2F165 /* PECropView.m */,
+				D48AE23B2014BC3F00C2F165 /* PECropRectView.m */,
+				D48AE23C2014BC3F00C2F165 /* UIImage+PECrop.h */,
+				D48AE23D2014BC3F00C2F165 /* PEResizeControl.h */,
+				D48AE23E2014BC3F00C2F165 /* PECropView.h */,
+				D48AE23F2014BC3F00C2F165 /* PECropViewController.h */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
 		D48EE4A31F9B2A2400CB43A0 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D48AE2302014BC3F00C2F165 /* PEPhotoCropEditor */,
 				D41B6A971FDAC3A400E1F312 /* Pickers */,
 				D4041C311FC0E157001F312E /* FFCircularProgressView */,
 				D4041C3A1FC0E157001F312E /* SDWebImage */,
@@ -1777,6 +1835,8 @@
 				D4041BCD1FC0DEF5001F312E /* QMChatViewController.xib in Resources */,
 				D4041BDF1FC0DEF5001F312E /* MicOverlay.png in Resources */,
 				D4041C001FC0DEF5001F312E /* QMAudioOutgoingCell.xib in Resources */,
+				D48AE2412014BC3F00C2F165 /* PEPhotoCropEditor.bundle in Resources */,
+				D48AE2402014BC3F00C2F165 /* LICENSE in Resources */,
 				D4041C611FC0E157001F312E /* LICENSE in Resources */,
 				D4F05F231FBDC02D002024F6 /* AdvertsTableViewCell.xib in Resources */,
 				D4041BDD1FC0DEF5001F312E /* play_icon.png in Resources */,
@@ -1983,6 +2043,7 @@
 				D41B6AB01FDAC3A400E1F312 /* SWActionSheet.m in Sources */,
 				D4041C1E1FC0DEF5001F312E /* QMChatCollectionView.m in Sources */,
 				D4041C6D1FC0E157001F312E /* SDWebImageCompat.m in Sources */,
+				D48AE2422014BC3F00C2F165 /* README.md in Sources */,
 				D4041C081FC0DEF5001F312E /* QMBaseChatLocationCell.m in Sources */,
 				D4041BFA1FC0DEF5001F312E /* QMMediaOutgoingCell.m in Sources */,
 				D4041C741FC0E157001F312E /* SDImageCacheConfig.m in Sources */,
@@ -2001,10 +2062,12 @@
 				D41B6AB31FDAC3A400E1F312 /* ActionSheetMultipleStringPicker.m in Sources */,
 				D4041BF11FC0DEF5001F312E /* QMChatOutgoingLinkPreviewCell.m in Sources */,
 				D48EE4C31F9B383C00CB43A0 /* SideMenuViewController.m in Sources */,
+				D48AE2432014BC3F00C2F165 /* UIImage+PECrop.m in Sources */,
 				D4A019E91F85386C00E311B7 /* LoginViewController.m in Sources */,
 				D4F05F291FBDD18B002024F6 /* FeaturedCarerViewController.m in Sources */,
 				D4041C0E1FC0DEF5001F312E /* QMChatNotificationCell.m in Sources */,
 				D4F05F371FBEFBBE002024F6 /* FAQViewController.m in Sources */,
+				D48AE2452014BC3F00C2F165 /* PECropViewController.m in Sources */,
 				D4041C301FC0E09D001F312E /* UIImage+fixOrientation.m in Sources */,
 				D4041C121FC0DEF5001F312E /* QMInputToolbar.m in Sources */,
 				D4041C201FC0DEF5001F312E /* QMChatContainerView.m in Sources */,
@@ -2077,6 +2140,9 @@
 				D48EE4B31F9B2A2C00CB43A0 /* LGSideMenuHelper.m in Sources */,
 				D4041C161FC0DEF5001F312E /* QMProgressView.m in Sources */,
 				D4041C761FC0E157001F312E /* UIView+WebCache.m in Sources */,
+				D48AE2472014BC3F00C2F165 /* PECropRectView.m in Sources */,
+				D48AE2462014BC3F00C2F165 /* PECropView.m in Sources */,
+				D48AE2442014BC3F00C2F165 /* PEResizeControl.m in Sources */,
 				D4041C6E1FC0E157001F312E /* SDWebImagePrefetcher.m in Sources */,
 				D4041C751FC0E157001F312E /* UIView+WebCacheOperation.m in Sources */,
 				D4041BF51FC0DEF5001F312E /* QMImageOutgoingCell.m in Sources */,

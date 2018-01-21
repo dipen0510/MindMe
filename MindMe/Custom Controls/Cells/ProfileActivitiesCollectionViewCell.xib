@@ -50,6 +50,7 @@
             </constraints>
             <connections>
                 <outlet property="activityLabel" destination="RkN-LK-zyk" id="BJ5-lR-zMc"/>
+                <outlet property="deleteButton" destination="JoD-h2-jv1" id="Elw-eM-z2c"/>
             </connections>
         </collectionViewCell>
     </objects>

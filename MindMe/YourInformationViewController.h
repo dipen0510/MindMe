@@ -7,8 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PECropViewController.h"
 
-@interface YourInformationViewController : UIViewController
+@interface YourInformationViewController : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PECropViewControllerDelegate, UITextFieldDelegate> {
+    
+    UIActionSheet* actSheet;
+    UIImage* profileImage;
+    
+    NSMutableArray* selectedLanguageArr;
+    
+}
+
+@property (nonatomic, strong) NSString* selectedCareType;
 
 @property (weak, nonatomic) IBOutlet UIImageView *profileImgView;
 @property (weak, nonatomic) IBOutlet UICollectionView *languagesCollectionView;
@@ -16,10 +26,17 @@
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
+@property (weak, nonatomic) IBOutlet UITextView *addYourBioTextView;
+@property (weak, nonatomic) IBOutlet UITextField *preferredRateTextField;
+@property (weak, nonatomic) IBOutlet UIButton *requiredRegularlyButton;
+@property (weak, nonatomic) IBOutlet UIButton *requiredOcassionalyButton;
+@property (weak, nonatomic) IBOutlet UILabel *experienceLabel;
 
 - (IBAction)requiredOccassionalyButtonTapped:(UIButton *)sender;
 - (IBAction)requiredRegulartlyButtonTapped:(UIButton *)sender;
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)addLanguagesButtonTapped:(id)sender;
+- (IBAction)experienceMinusButtonTapped:(id)sender;
+- (IBAction)experiencePlusButtonTapped:(id)sender;
 
 @end

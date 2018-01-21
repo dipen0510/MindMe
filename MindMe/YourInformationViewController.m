@@ -10,6 +10,7 @@
 #import "ProfileActivitiesCollectionViewCell.h"
 #import "CreateAdvertsCollectionViewCell.h"
 #import "SelectLanguageViewController.h"
+#import "ActionSheetPicker.h"
 
 @interface YourInformationViewController () {
     
@@ -26,6 +27,7 @@
     // Do any additional setup after loading the view.
     
     [self setupInitialUI];
+    [self setupActionSheet];
     
 }
 
@@ -33,6 +35,8 @@
     
     _profileImgView.layer.cornerRadius = _profileImgView.frame.size.height/2.;
     _profileImgView.layer.masksToBounds = YES;
+    _profileImgView.userInteractionEnabled = YES;
+    [_profileImgView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapOnProfileImageButton)]];
     
     _nextButton.layer.cornerRadius = 17.5;
     _nextButton.layer.masksToBounds = NO;
@@ -48,6 +52,10 @@
     UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     tapGesture.cancelsTouchesInView = NO;
     [_contentScrollView addGestureRecognizer:tapGesture];
+    
+    _preferredRateTextField.delegate = self;
+    
+    selectedLanguageArr = [[NSMutableArray alloc] init];
     
 }
 
@@ -68,10 +76,12 @@
 
 - (IBAction)requiredOccassionalyButtonTapped:(UIButton *)sender {
     sender.selected = !sender.isSelected;
+    _requiredRegularlyButton.selected = NO;
 }
 
 - (IBAction)requiredRegulartlyButtonTapped:(UIButton *)sender {
     sender.selected = !sender.isSelected;
+    _requiredOcassionalyButton.selected = NO;
 }
 
 - (IBAction)backButtonTapped:(id)sender {
@@ -82,7 +92,83 @@
     
     selectLanguageController = [self.storyboard instantiateViewControllerWithIdentifier:@"SelectLanguageViewController"];
     selectLanguageController.view.frame = self.view.bounds;
+    selectLanguageController.languageTextField.delegate = self;
+    [selectLanguageController.addButton addTarget:self action:@selector(languagePopupAddButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:selectLanguageController.view];
+    
+}
+
+- (IBAction)experienceMinusButtonTapped:(id)sender {
+    
+    int years = [[[_experienceLabel.text componentsSeparatedByString:@" "] firstObject] intValue];
+    
+    if (years>0) {
+        years--;
+    }
+    _experienceLabel.text = [NSString stringWithFormat:@"%d years",years];
+    
+}
+
+- (IBAction)experiencePlusButtonTapped:(id)sender {
+    
+    int years = [[[_experienceLabel.text componentsSeparatedByString:@" "] firstObject] intValue];
+    _experienceLabel.text = [NSString stringWithFormat:@"%d years",++years];
+    
+}
+
+-(void)didTapOnProfileImageButton {
+    
+    if ([actSheet isVisible]) {
+        [actSheet dismissWithClickedButtonIndex:0 animated:YES];
+    }
+    else {
+        [actSheet showInView:self.view];
+    }
+    
+}
+
+- (void) hourlyRateFieldTapped {
+    
+    [ActionSheetStringPicker showPickerWithTitle:@"Select Rate" rows:[NSArray arrayWithObjects:@"Negotiable", @"5 to 10 Euro", @"10 to 20 Euro", @"20 to 30 Euro", @"30 to 40 Euro", @"40 to 50 Euro", @"50+ Euro", nil] initialSelection:0 doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+        
+        _preferredRateTextField.text = selectedValue;
+        
+    } cancelBlock:^(ActionSheetStringPicker *picker) {
+        
+    } origin:self.view];
+
+    
+}
+
+- (void) languageTextFieldTapped {
+    
+    [ActionSheetStringPicker showPickerWithTitle:@"Select Language" rows:[NSArray arrayWithObjects:@"English", @"Irish", @"French", @"German", @"Spanish", @"Italian", @"Afrikaans", @"Arabic", @"Bulgarian", @"Cantonese", @"Chinese(Mandarin)", @"Czech", @"Danish", @"Dutch", @"Estonian", @"Finnish", @"Greek", @"Hebrew", @"Hindi", @"Hungarian", @"Japanese", @"Mandarin", @"Polish", @"Portuguese", @"Punjabi", @"Romanian", @"Russian", @"Sign", @"Slovak", @"Spanish", @"Swedish", @"Tagalog", @"Turkish", @"Urdu", @"Welsh", nil] initialSelection:0 doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+        
+        selectLanguageController.languageTextField.text = selectedValue;
+        
+        
+    } cancelBlock:^(ActionSheetStringPicker *picker) {
+        
+    } origin:self.view];
+    
+    
+}
+
+- (void) languagePopupAddButtonTapped {
+    
+    if (![selectedLanguageArr containsObject:selectLanguageController.languageTextField.text]) {
+        [selectedLanguageArr addObject:selectLanguageController.languageTextField.text];
+    }
+    
+    [_languagesCollectionView reloadData];
+    [selectLanguageController hideDrivingLicenseInfo:nil];
+    
+}
+
+- (void) languageCollectionViewDeleteButtonTapped:(UIButton *)sender {
+    
+    [selectedLanguageArr removeObjectAtIndex:sender.tag];
+    [_languagesCollectionView reloadData];
     
 }
 
@@ -94,7 +180,7 @@
     if (collectionView == _miscCollectionView) {
         return 4;
     }
-    return 2.;
+    return selectedLanguageArr.count;
     
 }
 
@@ -204,19 +290,9 @@
 
 - (void) populateContentForCell:(ProfileActivitiesCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
-    switch (indexPath.row) {
-        case 0:
-            cell.activityLabel.text = @"English";
-            break;
-            
-        case 1:
-            cell.activityLabel.text = @"German";
-            break;
-            
-        default:
-            break;
-    }
-
+    cell.activityLabel.text = [selectedLanguageArr objectAtIndex:indexPath.row];
+    cell.deleteButton.tag = indexPath.row;
+    [cell.deleteButton addTarget:self action:@selector(languageCollectionViewDeleteButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
@@ -225,4 +301,179 @@
     [self.view endEditing:YES];
     
 }
+
+#pragma mark - Profile Image Change
+
+- (void) setupActionSheet {
+    
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        actSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                               delegate:self
+                                      cancelButtonTitle:@"Cancel"
+                                 destructiveButtonTitle:nil
+                                      otherButtonTitles:@"Photo Library", nil];
+    }
+    else {
+        actSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                               delegate:self
+                                      cancelButtonTitle:@"Cancel"
+                                 destructiveButtonTitle:nil
+                                      otherButtonTitles:@"Photo Library", @"Camera", nil];
+    }
+    
+}
+
+
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (actionSheet == actSheet) {
+        //FLOG(@"Button %d", buttonIndex);
+        
+        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+        {
+            
+            switch (buttonIndex) {
+                    
+                case 0:
+                {
+                    UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
+                    imgPicker.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
+                    imgPicker.delegate = self;
+                    [self presentViewController:imgPicker animated:YES completion:nil];
+                    break;
+                }
+                    
+                default:
+                    
+                    break;
+            }
+            
+        }
+        else {
+            
+            switch (buttonIndex) {
+                    
+                case 0:
+                {
+                    UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
+                    imgPicker.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
+                    imgPicker.delegate = self;
+                    [self presentViewController:imgPicker animated:YES completion:nil];
+                    break;
+                }
+                    
+                case 1:
+                {
+                    UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
+                    imgPicker.sourceType =  UIImagePickerControllerSourceTypeCamera;
+                    imgPicker.delegate = self;
+                    [self presentViewController:imgPicker animated:YES completion:nil];
+                    break;
+                }
+                    
+                default:
+                    
+                    break;
+            }
+            
+        }
+        
+        
+        
+        
+    }
+}
+
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image1 = info[UIImagePickerControllerOriginalImage];
+    [_profileImgView setImage:image1];
+    
+    //    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+    //
+    //        [self openEditor:nil];
+    //
+    //    } else {
+    [picker dismissViewControllerAnimated:YES completion:^{
+        [self openEditor:nil];
+    }];
+    //    }
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+
+#pragma mark - PECropViewControllerDelegate methods
+
+-(void)cropViewController:(PECropViewController *)controller didFinishCroppingImage:(UIImage *)croppedImage {
+    
+    [_profileImgView setImage:croppedImage];
+    profileImage = croppedImage;
+    
+    [controller dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
+- (void)cropViewControllerDidCancel:(PECropViewController *)controller
+{
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        // [self updateEditButtonEnabled];
+    }
+    
+    [controller dismissViewControllerAnimated:YES completion:NULL];
+}
+
+
+#pragma mark - Action methods
+//#GD: 2015_0318 added method to crop the profile pic
+- (IBAction)openEditor:(id)sender
+{
+    PECropViewController *controller = [[PECropViewController alloc] init];
+    controller.delegate = self;
+    controller.image = _profileImgView.image;
+    
+    UIImage *image = _profileImgView.image;
+    CGFloat width = image.size.width;
+    CGFloat height = image.size.height;
+    CGFloat length = MIN(width, height);
+    controller.imageCropRect = CGRectMake((width - length) / 2,
+                                          (height - length) / 2,
+                                          length,
+                                          length);
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        navigationController.modalPresentationStyle = UIModalPresentationFormSheet;
+    }
+    
+    [self presentViewController:navigationController animated:YES completion:NULL];
+    
+    
+}
+
+#pragma mark - UITextField Delegate
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    
+    if (textField == _preferredRateTextField) {
+        [self hourlyRateFieldTapped];
+        return NO;
+    }
+    if (textField == selectLanguageController.languageTextField) {
+        [self languageTextFieldTapped];
+        return NO;
+    }
+    
+    return YES;
+    
+}
+
 @end

@@ -11,5 +11,6 @@
 @interface ProfileActivitiesCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *activityLabel;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 
 @end

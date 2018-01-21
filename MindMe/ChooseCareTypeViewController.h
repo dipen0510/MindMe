@@ -13,6 +13,7 @@
     NSMutableArray* newAdvertsArr;
     NSMutableArray* existingAdvertsArr;
     NSMutableArray* allAdvertsArr;
+    NSString* selectedCareType;
     
 }
 

@@ -414,7 +414,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="52.5" y="490" width="270" height="32"/>
+                                <rect key="frame" x="52.5" y="490" width="270" height="31"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">By pressing Register you agree with the
@@ -1662,7 +1662,7 @@ Cg
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AH4-6F-Px0" kind="show" id="p8p-Lv-PZS"/>
+                                    <segue destination="AH4-6F-Px0" kind="show" identifier="showYourInfoSegue" id="p8p-Lv-PZS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63z-TR-EKo">
@@ -1801,7 +1801,7 @@ Cg
                                             <constraint firstAttribute="height" constant="1" id="P6Y-sh-4NL"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sV8-Ea-6wG">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sV8-Ea-6wG">
                                         <rect key="frame" x="45" y="203" width="322" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1905,6 +1905,9 @@ Cg
                                             <constraint firstAttribute="width" constant="20" id="phT-1z-gOO"/>
                                         </constraints>
                                         <state key="normal" image="plus"/>
+                                        <connections>
+                                            <action selector="experiencePlusButtonTapped:" destination="AH4-6F-Px0" eventType="touchUpInside" id="Lvv-cD-fch"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UV8-zN-Dih">
                                         <rect key="frame" x="277.5" y="405" width="20" height="20"/>
@@ -1913,8 +1916,11 @@ Cg
                                             <constraint firstAttribute="width" constant="20" id="pEq-Gy-DL8"/>
                                         </constraints>
                                         <state key="normal" image="minus"/>
+                                        <connections>
+                                            <action selector="experienceMinusButtonTapped:" destination="AH4-6F-Px0" eventType="touchUpInside" id="14r-Ou-aes"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcV-eK-Ukh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 years" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="FcV-eK-Ukh">
                                         <rect key="frame" x="301.5" y="406.5" width="37.5" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="37.5" id="09r-JB-vAZ"/>
@@ -2109,12 +2115,17 @@ Cg
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
+                        <outlet property="addYourBioTextView" destination="sV8-Ea-6wG" id="foA-S5-Hfc"/>
                         <outlet property="cancelButton" destination="gZP-gF-Ve0" id="0FE-27-Tf3"/>
                         <outlet property="contentScrollView" destination="OaK-lT-o4R" id="1te-eZ-aV3"/>
+                        <outlet property="experienceLabel" destination="FcV-eK-Ukh" id="8j3-GM-jB0"/>
                         <outlet property="languagesCollectionView" destination="0CI-vT-ijd" id="IMC-dP-h91"/>
                         <outlet property="miscCollectionView" destination="jZY-I1-I64" id="CXA-4u-s8R"/>
                         <outlet property="nextButton" destination="Sj3-4g-Bad" id="udU-iv-Xvf"/>
+                        <outlet property="preferredRateTextField" destination="T4U-8u-BGK" id="Mv1-5s-ro1"/>
                         <outlet property="profileImgView" destination="Baq-cY-z3p" id="W21-dw-Q61"/>
+                        <outlet property="requiredOcassionalyButton" destination="nD2-Rx-wuv" id="1Xc-De-VZO"/>
+                        <outlet property="requiredRegularlyButton" destination="wk7-Ic-2YI" id="nie-1G-ciZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFp-F6-Olu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2838,11 +2849,24 @@ Cg
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecW-Ru-DOA">
+                                        <rect key="frame" x="60" y="113" width="100.5" height="25"/>
+                                        <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="Vc2-gG-tPa"/>
+                                            <constraint firstAttribute="width" secondItem="ecW-Ru-DOA" secondAttribute="height" multiplier="4:1" id="u0U-pM-CDR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="13"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="tK9-ja-Gqg" firstAttribute="centerX" secondItem="jLJ-VV-Arw" secondAttribute="centerX" id="Lq5-z0-1GZ"/>
                                     <constraint firstAttribute="trailing" secondItem="9s7-2N-tF5" secondAttribute="trailing" constant="20" id="PpP-hr-AS6"/>
+                                    <constraint firstItem="ecW-Ru-DOA" firstAttribute="centerX" secondItem="jLJ-VV-Arw" secondAttribute="centerX" id="UDB-tl-mbw"/>
                                     <constraint firstItem="tK9-ja-Gqg" firstAttribute="top" secondItem="jLJ-VV-Arw" secondAttribute="top" constant="20" id="Ws4-fn-9Ga"/>
                                     <constraint firstAttribute="height" constant="150" id="XHH-dg-Y8a"/>
                                     <constraint firstItem="9s7-2N-tF5" firstAttribute="top" secondItem="Tt9-rG-2ST" secondAttribute="bottom" constant="8" id="bHC-ua-qG7"/>
@@ -2853,6 +2877,7 @@ Cg
                                     <constraint firstItem="Tt9-rG-2ST" firstAttribute="leading" secondItem="jLJ-VV-Arw" secondAttribute="leading" constant="20" id="ouM-na-tIE"/>
                                     <constraint firstItem="Tt9-rG-2ST" firstAttribute="top" secondItem="wBV-aT-sId" secondAttribute="bottom" constant="20" id="r0f-2q-Vxz"/>
                                     <constraint firstAttribute="trailing" secondItem="Tt9-rG-2ST" secondAttribute="trailing" constant="20" id="uuz-ls-gyn"/>
+                                    <constraint firstAttribute="bottom" secondItem="ecW-Ru-DOA" secondAttribute="bottom" constant="12" id="v6g-yY-XOo"/>
                                     <constraint firstItem="9s7-2N-tF5" firstAttribute="leading" secondItem="jLJ-VV-Arw" secondAttribute="leading" constant="20" id="wH1-vf-4Rs"/>
                                 </constraints>
                             </view>
@@ -2868,8 +2893,10 @@ Cg
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="ecW-Ru-DOA" id="3ap-53-DcF"/>
                         <outlet property="bgTapView" destination="kFa-Kl-Edt" id="HaG-Zb-TeL"/>
                         <outlet property="contentView" destination="jLJ-VV-Arw" id="ONa-AJ-KbB"/>
+                        <outlet property="languageTextField" destination="Tt9-rG-2ST" id="aY0-cx-StO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n6Y-vZ-UIB" userLabel="First Responder" sceneMemberID="firstResponder"/>

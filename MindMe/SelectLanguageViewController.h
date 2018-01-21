@@ -12,5 +12,9 @@
 
 @property (weak, nonatomic) IBOutlet UIView *bgTapView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UITextField *languageTextField;
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
+
+- (void) hideDrivingLicenseInfo:(id)sender;
 
 @end
