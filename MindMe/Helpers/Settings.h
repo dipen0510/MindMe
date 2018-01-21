@@ -22,6 +22,8 @@
 #define ForgotPasswordKey @"auth/forgotPassword"
 #define ChangePasswordKey @"auth/changePassword"
 #define GetPostedAdverts @"profile/getProfileDetails"
+#define ToggleAdvertActive @"index.php/profile/toggleProfileDets"
+#define DeleteAdvert @"profile/delProfileDetails"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"

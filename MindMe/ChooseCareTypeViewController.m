@@ -15,11 +15,14 @@
 
 @implementation ChooseCareTypeViewController
 
+@synthesize userAdvertsArr;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     [self setupInitialUI];
+    [self setupDataSource];
     
 }
 
@@ -38,6 +41,30 @@
     
 }
 
+- (void) setupDataSource {
+    
+    allAdvertsArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    existingAdvertsArr = [[NSMutableArray alloc] init];
+    newAdvertsArr = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary* dict in userAdvertsArr) {
+        [existingAdvertsArr addObject:[dict valueForKey:@"care_type"]];
+    }
+    
+    for (NSString* str in allAdvertsArr) {
+        
+        if (![existingAdvertsArr containsObject:str]) {
+            [newAdvertsArr addObject:str];
+        }
+        
+    }
+    
+    _firstCollectionViewHeightConstraint.constant = (30 * (existingAdvertsArr.count%2)) + (30 * (existingAdvertsArr.count/2));
+    _secondCollectionViewHeightConstraint.constant = (30 * (newAdvertsArr.count%2)) + (30 * (newAdvertsArr.count/2));
+                                                                                           
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -49,9 +76,9 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
     if (collectionView == _firstCollectionView) {
-        return 3;
+        return existingAdvertsArr.count;
     }
-    return 12.;
+    return newAdvertsArr.count;
     
 }
 
@@ -114,81 +141,13 @@
 
 - (void) populateContentForFirstCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
-    switch (indexPath.row) {
-        case 0:
-            cell.titleLabel.text = @"AU Pair Profile";
-            break;
-            
-        case 1:
-            cell.titleLabel.text = @"Babysitters Profile";
-            break;
-            
-        case 2:
-            cell.titleLabel.text = @"Elderly Care Profile";
-            break;
-            
-        default:
-            break;
-    }
-    
+    cell.titleLabel.text = [existingAdvertsArr objectAtIndex:indexPath.row];
     
 }
 
 - (void) populateContentForSecondCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
-    switch (indexPath.row) {
-        case 0:
-            cell.titleLabel.text = @"Childminders";
-            break;
-            
-        case 1:
-            cell.titleLabel.text = @"Cleaners";
-            break;
-            
-        case 2:
-            cell.titleLabel.text = @"Creche";
-            break;
-            
-        case 3:
-            cell.titleLabel.text = @"Dog Walkers";
-            break;
-            
-        case 4:
-            cell.titleLabel.text = @"House Keepers";
-            break;
-            
-        case 5:
-            cell.titleLabel.text = @"Maternity Nurse";
-            break;
-            
-        case 6:
-            cell.titleLabel.text = @"Nanny";
-            break;
-            
-        case 7:
-            cell.titleLabel.text = @"Pet Minders";
-            break;
-            
-        case 8:
-            cell.titleLabel.text = @"Private Midwife";
-            break;
-            
-        case 9:
-            cell.titleLabel.text = @"School Run";
-            break;
-            
-        case 10:
-            cell.titleLabel.text = @"Special Needs Care";
-            break;
-            
-        case 11:
-            cell.titleLabel.text = @"Tutor";
-            break;
-            
-        default:
-            break;
-    }
-    
+    cell.titleLabel.text = [newAdvertsArr objectAtIndex:indexPath.row];
     
 }
 

@@ -48,16 +48,17 @@
                             <constraint firstAttribute="height" constant="26" id="tAY-jE-gHl"/>
                         </constraints>
                         <state key="normal" image="on_off"/>
+                        <state key="selected" image="off_on"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zn1-BL-pWK">
                         <rect key="frame" x="24" y="63" width="173" height="37"/>
-                        <color key="backgroundColor" red="0.80518454313278198" green="0.93489426374435425" blue="0.55784755945205688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="173" id="XVa-7Q-EsT"/>
                             <constraint firstAttribute="width" secondItem="zn1-BL-pWK" secondAttribute="height" multiplier="173:37" id="vDA-oq-juI"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="13"/>
-                        <state key="normal" title="aa">
+                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
+                        <state key="normal" title="aa" backgroundImage="edit_carer_advert_icon-1">
                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
@@ -101,6 +102,8 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="edit_carer_advert_icon-1" width="546" height="112"/>
+        <image name="off_on" width="207" height="87"/>
         <image name="on_off" width="198" height="87"/>
         <image name="trash_icon" width="46" height="62"/>
     </resources>

@@ -1429,7 +1429,7 @@ Cg
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zZh-KK-C69" kind="show" id="E73-GT-k1E"/>
+                                    <segue destination="zZh-KK-C69" kind="show" identifier="showChooseCareTypeSegue" id="E73-GT-k1E"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UEk-AS-NLb">
@@ -1619,13 +1619,13 @@ Cg
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the type of job you're looking for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSq-Y4-XPJ">
-                                <rect key="frame" x="16" y="280" width="253.5" height="17"/>
+                                <rect key="frame" x="16" y="270" width="253.5" height="17"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sK9-DP-4K5">
-                                <rect key="frame" x="0.0" y="309" width="375" height="180"/>
+                                <rect key="frame" x="0.0" y="299" width="375" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="Mba-5e-sSJ"/>
@@ -1684,7 +1684,7 @@ Cg
                             <constraint firstItem="YEd-iw-jgR" firstAttribute="top" secondItem="JMi-BJ-KRy" secondAttribute="bottom" constant="20" id="A3X-nV-XH6"/>
                             <constraint firstItem="JMi-BJ-KRy" firstAttribute="top" secondItem="kfT-LP-c3j" secondAttribute="top" id="G13-BP-cFB"/>
                             <constraint firstAttribute="trailing" secondItem="63z-TR-EKo" secondAttribute="trailing" constant="37" id="IcD-1a-5Cn"/>
-                            <constraint firstItem="uSq-Y4-XPJ" firstAttribute="top" secondItem="BQc-zo-dzO" secondAttribute="bottom" constant="30" id="JnI-6V-3bc"/>
+                            <constraint firstItem="uSq-Y4-XPJ" firstAttribute="top" secondItem="BQc-zo-dzO" secondAttribute="bottom" constant="20" id="JnI-6V-3bc"/>
                             <constraint firstItem="uSq-Y4-XPJ" firstAttribute="leading" secondItem="Qiq-0j-4fC" secondAttribute="leading" id="OFr-LX-gxZ"/>
                             <constraint firstItem="BQc-zo-dzO" firstAttribute="top" secondItem="Qiq-0j-4fC" secondAttribute="bottom" constant="12" id="Pti-Wy-1mK"/>
                             <constraint firstItem="63z-TR-EKo" firstAttribute="height" secondItem="Wye-HT-NHn" secondAttribute="height" id="QOX-WW-D5l"/>
@@ -1705,8 +1705,10 @@ Cg
                     <connections>
                         <outlet property="cancelButton" destination="63z-TR-EKo" id="AZc-NE-1l8"/>
                         <outlet property="firstCollectionView" destination="BQc-zo-dzO" id="tBk-qJ-PIl"/>
+                        <outlet property="firstCollectionViewHeightConstraint" destination="DLx-2G-jSR" id="clJ-co-hxe"/>
                         <outlet property="nextButton" destination="Wye-HT-NHn" id="HqV-VU-nw8"/>
                         <outlet property="secondCollectionView" destination="sK9-DP-4K5" id="1mC-7x-GFk"/>
+                        <outlet property="secondCollectionViewHeightConstraint" destination="Mba-5e-sSJ" id="K49-qE-9ip"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4jM-PY-kGl" userLabel="First Responder" sceneMemberID="firstResponder"/>

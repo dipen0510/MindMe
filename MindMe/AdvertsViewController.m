@@ -8,6 +8,7 @@
 
 #import "AdvertsViewController.h"
 #import "AdvertsTableViewCell.h"
+#import "ChooseCareTypeViewController.h"
 
 @interface AdvertsViewController ()
 
@@ -92,15 +93,23 @@
     
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"showChooseCareTypeSegue"]) {
+        
+        ChooseCareTypeViewController* destController = (ChooseCareTypeViewController *)[segue destinationViewController];
+        destController.userAdvertsArr = advertsArr;
+        
+    }
+    
 }
-*/
+
 
 #pragma - mark TableView Datasource and Delegates
 
@@ -161,6 +170,27 @@
     cell.careTypeLabel.text = [NSString stringWithFormat:@"%@ advert [%@ views]",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"],[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"viewed"]];
     [cell.editButton setTitle:[NSString stringWithFormat:@"Edit %@ Advert",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]] forState:UIControlStateNormal];
     
+    cell.toggleButton.tag = indexPath.row;
+    [cell.toggleButton addTarget:self action:@selector(advertToggleButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    cell.toggleButton.selected = ![[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"job_ad_active"] boolValue];
+    
+    cell.deleteButton.tag = indexPath.row;
+    [cell.deleteButton addTarget:self action:@selector(advertDeleteButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+}
+
+- (void) advertToggleButtonTapped:(UIButton *)sender {
+    
+    sender.selected = !sender.isSelected;
+    
+    [self startToggleAdvertsServiceForAdvert:[advertsArr objectAtIndex:sender.tag]];
+    
+}
+
+- (void) advertDeleteButtonTapped:(UIButton *)sender {
+    
+    [self startDeleteAdvertsServiceForAdvert:[advertsArr objectAtIndex:sender.tag]];
     
 }
 
@@ -189,14 +219,34 @@
     
 }
 
+- (void) startToggleAdvertsServiceForAdvert:(NSMutableDictionary *)advertDict {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = ToggleAdvertActive;
+    manager.delegate = nil;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForToggleAdverts:advertDict]];
+    
+}
+
+- (void) startDeleteAdvertsServiceForAdvert:(NSMutableDictionary *)advertDict {
+    
+    [SVProgressHUD showWithStatus:@"Deleting data"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = DeleteAdvert;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForDeleteAdverts:advertDict]];
+    
+}
+
 
 #pragma mark - DATASYNCMANAGER Delegates
 
 -(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
     
-    [SVProgressHUD showSuccessWithStatus:@"Data fetched successfully"];
-    
     if ([requestServiceKey isEqualToString:GetPostedAdverts]) {
+        
+        [SVProgressHUD showSuccessWithStatus:@"Data refreshed successfully"];
         
         if ([[responseData valueForKey:@"message"] isKindOfClass:[NSArray class]]) {
             advertsArr = [[NSMutableArray alloc] initWithArray:[responseData valueForKey:@"message"]];
@@ -208,6 +258,12 @@
         
         [_advertTblView reloadData];
 
+    }
+    
+    if ([requestServiceKey isEqualToString:DeleteAdvert]) {
+        
+        [self startGetAdvertsService];
+        
     }
     
     
@@ -248,6 +304,43 @@
 - (NSMutableDictionary *) prepareDictionaryForGetPostedAdverts {
     
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForToggleAdverts:(NSMutableDictionary *)advertDict {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    BOOL jobActive = [[advertDict valueForKey:@"job_ad_active"] boolValue];
+    
+    [dict setObject:[advertDict valueForKey:@"care_type"] forKey:@"care_type"];
+    [dict setObject:[NSString stringWithFormat:@"%d",!jobActive] forKey:@"job_ad_active"];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForDeleteAdverts:(NSMutableDictionary *)advertDict {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    [dict setObject:[advertDict valueForKey:@"care_type"] forKey:@"care_type"];
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
         [dict setObject:@"carer" forKey:@"flag"];

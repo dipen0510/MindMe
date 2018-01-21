@@ -8,11 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChooseCareTypeViewController : UIViewController
+@interface ChooseCareTypeViewController : UIViewController {
+    
+    NSMutableArray* newAdvertsArr;
+    NSMutableArray* existingAdvertsArr;
+    NSMutableArray* allAdvertsArr;
+    
+}
+
+@property (nonatomic, strong) NSMutableArray* userAdvertsArr;
 
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UICollectionView *firstCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *secondCollectionView;
+
 - (IBAction)backButtonTapped:(id)sender;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *firstCollectionViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *secondCollectionViewHeightConstraint;
 @end
