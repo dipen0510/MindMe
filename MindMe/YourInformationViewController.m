@@ -11,6 +11,7 @@
 #import "CreateAdvertsCollectionViewCell.h"
 #import "SelectLanguageViewController.h"
 #import "ActionSheetPicker.h"
+#import "YourAdvertViewController.h"
 
 @interface YourInformationViewController () {
     
@@ -64,15 +65,89 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
+
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    
+    if ([identifier isEqualToString:@"showYourAdvertSegue"]) {
+        
+        if (!_requiredRegularlyButton.isSelected && !_requiredOcassionalyButton.isSelected) {
+            [SVProgressHUD showErrorWithStatus:@"Select at least one frequency - Regularly or Occassionally"];
+            return NO;
+        }
+        if (selectedLanguageArr.count == 0) {
+            [SVProgressHUD showErrorWithStatus:@"Select at least one language to proceed"];
+            return NO;
+        }
+        
+    }
+    
+    return YES;
+    
+}
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"showYourAdvertSegue"]) {
+        
+        YourAdvertViewController* controller = (YourAdvertViewController*)[segue destinationViewController];
+        controller.advertDetailsDict = [self prepareDictionaryForYourAdvert];
+        
+    }
+    
 }
-*/
+
+- (NSMutableDictionary *) prepareDictionaryForYourAdvert {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    [dict setObject:_selectedCareType forKey:@"care_type"];
+    
+    if (profileImage) {
+        [dict setObject:profileImage forKey:@"profileImage"];
+    }
+    else {
+        [dict setObject:@"" forKey:@"profileImage"];
+    }
+    
+    [dict setObject:_addYourBioTextView.text forKey:@"about_you"];
+    [dict setObject:_preferredRateTextField.text forKey:@"pay"];
+    [dict setObject:[[_experienceLabel.text componentsSeparatedByString:@" "] firstObject] forKey:@"experience"];
+    
+    if (_requiredRegularlyButton.selected) {
+        [dict setObject:@"Regular" forKey:@"frequency"];
+    }
+    else {
+        [dict setObject:@"Occasional" forKey:@"frequency"];
+    }
+    
+    [dict setObject:[selectedLanguageArr componentsJoinedByString:@","] forKey:@"languages"];
+    
+    NSString* additions = @"";
+    for (int i = 0; i<4; i++) {
+        CreateAdvertsCollectionViewCell* cell = (CreateAdvertsCollectionViewCell *)[_miscCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+        if (cell.toggleButton.isSelected) {
+            if ([additions isEqualToString:@""]) {
+                additions = [NSString stringWithFormat:@"%@",cell.titleLabel.text];
+            }
+            else {
+                additions = [NSString stringWithFormat:@"%@,%@",additions,cell.titleLabel.text];
+            }
+        }
+    }
+    
+    [dict setObject:additions forKey:@"Additionals"];
+    
+    return dict;
+    
+    
+}
+
 
 - (IBAction)requiredOccassionalyButtonTapped:(UIButton *)sender {
     sender.selected = !sender.isSelected;

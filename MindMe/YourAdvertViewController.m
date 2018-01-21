@@ -23,6 +23,7 @@
     
     [self setupInitialUI];
     [self setupAvailibilityArr];
+    [self setupUIForForms];
     
 }
 
@@ -59,6 +60,188 @@
     
 }
 
+- (void) setupUIForForms {
+    
+    NSString* careType = [_advertDetailsDict valueForKey:@"care_type"];
+    
+    if ([careType isEqualToString:@"Au Pair"]) {
+        [self setupUIForAUPairForm];
+    }
+    else if ([careType isEqualToString:@"Babysitters"]) {
+        [self setupUIForBabysittersForm];
+    }
+    else if ([careType isEqualToString:@"Childminders"]) {
+        [self setupUIForChildmindersForm];
+    }
+    else if ([careType isEqualToString:@"Creche"]) {
+        [self setupUIForCrecheForm];
+    }
+    else if ([careType isEqualToString:@"Nanny"]) {
+        [self setupUIForNannyForm];
+    }
+    else if ([careType isEqualToString:@"Cleaners"]) {
+        [self setupUIForCleanersForm];
+    }
+    
+}
+
+- (void) setupUIForAUPairForm {
+    
+    _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
+    
+    _secondCollectionViewTitle.text = @"Au Pair requires to live in or live out";
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Live In", @"Live Out", nil];
+    
+    _thirdCollectionViewTitle.text = @"Age Group Experience";
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"New Born", @"0 - 6 Months", @"6 Months - 2 years", @"2 years - 5 years", @"5 Years +", @"Teenagers", nil];
+    
+    _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Childcare Qualifications", @"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Childcare Certification", @"Fetac Special Needs Certification", @"Tusla Registered", nil];
+    
+    _fifthCollectionViewTitle.text = @"Additional Requirements: (optional)";
+    fifthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Light Housekeeping", @"Meal Preparation", @"Laundry", @"Errand / Shopping", @"Homework Help", @"Willing to Drive Children", nil];
+    
+    _sixthCollectionViewTitle.text = @"I Like To Do : (select up to 3)";
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Sports", @"Arts & crafts", @"Outdoor Activity", @"Music & Drama", @"Games", @"Reading", nil];
+    
+    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
+    seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+}
+
+- (void) setupUIForBabysittersForm {
+    
+    _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
+    
+    _secondCollectionViewTitle.text = @"Children minded in";
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Parent Home", @"Carers Home", nil];
+    
+    _thirdCollectionViewTitle.text = @"Age Group Experience";
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"New Born", @"0 - 6 Months", @"6 Months - 2 years", @"2 years - 5 years", @"5 Years +", @"Teenagers", nil];
+    
+    _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Childcare Qualifications", @"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Childcare Certification", @"Fetac Special Needs Certification", @"Tusla Registered", nil];
+    
+    _fifthCollectionViewTitle.text = @"Additional Requirements: (optional)";
+    fifthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Light Housekeeping", @"Meal Preparation", @"Laundry", @"Errand / Shopping", @"Homework Help", @"Willing to Drive Children", nil];
+    
+    _sixthCollectionViewTitle.text = @"I Like To Do : (select up to 3)";
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Sports", @"Arts & crafts", @"Outdoor Activity", @"Music & Drama", @"Games", @"Reading", nil];
+    
+    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
+    seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+}
+
+- (void) setupUIForChildmindersForm {
+    
+    _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
+    
+    _secondCollectionViewTitle.text = @"Children minded in";
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Parent Home", @"Carers Home", nil];
+    
+    _thirdCollectionViewTitle.text = @"Age Group Experience";
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"New Born", @"0 - 6 Months", @"6 Months - 2 years", @"2 years - 5 years", @"5 Years +", @"Teenagers", nil];
+    
+    _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Childcare Qualifications", @"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Childcare Certification", @"Fetac Special Needs Certification", @"Tusla Registered", nil];
+    
+    _fifthCollectionViewTitle.text = @"Additional Requirements: (optional)";
+    fifthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Light Housekeeping", @"Meal Preparation", @"Laundry", @"Errand / Shopping", @"Homework Help", @"Willing to Drive Children", nil];
+    
+    _sixthCollectionViewTitle.text = @"I Like To Do : (select up to 3)";
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Sports", @"Arts & crafts", @"Outdoor Activity", @"Music & Drama", @"Games", @"Reading", nil];
+    
+    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
+    seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+}
+
+- (void) setupUIForCrecheForm {
+    
+    _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
+    
+    _secondCollectionViewTitle.text = @"Children minded in";
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Parent Home", @"Carers Home", nil];
+    
+    _thirdCollectionViewTitle.text = @"Age Group Experience";
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"New Born", @"0 - 6 Months", @"6 Months - 2 years", @"2 years - 5 years", @"5 Years +", @"Teenagers", nil];
+    
+    _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Childcare Qualifications", @"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Childcare Certification", @"Fetac Special Needs Certification", @"Tusla Registered", nil];
+    
+    _fifthCollectionViewTitle.text = @"Additional Requirements: (optional)";
+    fifthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Light Housekeeping", @"Meal Preparation", @"Laundry", @"Errand / Shopping", @"Homework Help", @"Willing to Drive Children", nil];
+    
+    _sixthCollectionViewTitle.text = @"I Like To Do : (select up to 3)";
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Sports", @"Arts & crafts", @"Outdoor Activity", @"Music & Drama", @"Games", @"Reading", nil];
+    
+    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
+    seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+}
+
+- (void) setupUIForNannyForm {
+    
+    _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
+    
+    _secondCollectionViewTitle.text = @"Children minded in";
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Parent Home", @"Carers Home", nil];
+    
+    _thirdCollectionViewTitle.text = @"Age Group Experience";
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"New Born", @"0 - 6 Months", @"6 Months - 2 years", @"2 years - 5 years", @"5 Years +", @"Teenagers", nil];
+    
+    _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Childcare Qualifications", @"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Childcare Certification", @"Fetac Special Needs Certification", @"Tusla Registered", nil];
+    
+    _fifthCollectionViewTitle.text = @"Additional Requirements: (optional)";
+    fifthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Light Housekeeping", @"Meal Preparation", @"Laundry", @"Errand / Shopping", @"Homework Help", @"Willing to Drive Children", nil];
+    
+    _sixthCollectionViewTitle.text = @"I Like To Do : (select up to 3)";
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Sports", @"Arts & crafts", @"Outdoor Activity", @"Music & Drama", @"Games", @"Reading", nil];
+    
+    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
+    seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+}
+
+- (void) setupUIForCleanersForm {
+    
+    _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
+    
+    _secondCollectionViewTitle.hidden = YES;
+    _secondCollectionView.hidden = YES;
+    _secondCollectionSeparatorView.hidden = YES;
+    
+    _thirdCollectionViewTitleTopConstraint.constant = -44 - _secondCollectionViewHeightConstraint.constant;
+    _thirdCollectionViewTitle.text = @"Cleaning Services You Can Provide";
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Bathroom Cleaning", @"Dishes", @"Plant Care", @"Kitchen Cleaning", @"Oven Cleaning", @"Window Washing", @"Pet Cleanup", @"General Room Cleaning", @"Surface Polishing", @"Packing and Unpacking", @"Bed Changing", @"Carpet Cleaning", @"Attic Cleaning", @"Furniture Treatment", @"Basement Cleaning", @"Refrigerator Cleaning", @"Wall Washing", @"House Sitting", @"Cabinet Cleaning", @"Laundry", @"Organization", @"External Cleaning", nil];
+    _thirdCollectionViewHeightConstraint.constant = 330;
+    
+    _fourthCollectionViewTitle.text = @"Do You Have Documentation";
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Garda Vetting", @"Work Visa", @"References", @"Driving Licence", nil];
+    _fourthCollectionViewHeightConstraint.constant = 60.;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitle.hidden = YES;
+    _sixthCollectionView.hidden = YES;
+    _sixthCollectionSeparatorView.hidden = YES;
+    
+    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
+    seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -77,25 +260,25 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
     if (collectionView == _firstCollectionView) {
-        return 2;
+        return firstCollectionViewArr.count;
     }
     else if (collectionView == _secondCollectionView) {
-        return 2;
+        return secondCollectionViewArr.count;
     }
     else if (collectionView == _thirdCollectionView) {
-        return 6;
+        return thirdCollectionViewArr.count;
     }
     else if (collectionView == _forthCollectionView) {
-        return 11;
+        return fourthCollectionViewArr.count;
     }
     else if (collectionView == _fifthCollectionView) {
-        return 6;
+        return fifthCollectionViewArr.count;
     }
     else if (collectionView == _sixthCollectionView) {
-        return 6;
+        return sixthCollectionViewArr.count;
     }
     else if (collectionView == _seventhCollectionView) {
-        return 14;
+        return seventhCollectionViewArr.count;
     }
     else if (collectionView == _cvCollectionView) {
         return 1;
@@ -232,260 +415,46 @@
 
 - (void) populateContentForFirstCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
-    switch (indexPath.row) {
-        case 0:
-            cell.titleLabel.text = @"Yes";
-            break;
-            
-        case 1:
-            cell.titleLabel.text = @"No";
-            break;
-            
-        default:
-            break;
-    }
+    cell.titleLabel.text = [firstCollectionViewArr objectAtIndex:indexPath.row];
     
     
 }
 
 - (void) populateContentForSecondCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
-    switch (indexPath.row) {
-        case 0:
-            cell.titleLabel.text = @"Parent Home";
-            break;
-            
-        case 1:
-            cell.titleLabel.text = @"Carers Home";
-            break;
-            
-        default:
-            break;
-    }
+    cell.titleLabel.text = [secondCollectionViewArr objectAtIndex:indexPath.row];
     
     
 }
 
 - (void) populateContentForThirdCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
-    switch (indexPath.row) {
-        case 0:
-            cell.titleLabel.text = @"New Born";
-            break;
-            
-        case 1:
-            cell.titleLabel.text = @"0 - 6 Months";
-            break;
-            
-        case 2:
-            cell.titleLabel.text = @"6 Months - 2 Years";
-            break;
-            
-        case 3:
-            cell.titleLabel.text = @"2 Years - 5 years";
-            break;
-            
-        case 4:
-            cell.titleLabel.text = @"5 Years +";
-            break;
-            
-        case 5:
-            cell.titleLabel.text = @"Teenagers";
-            break;
-            
-        default:
-            break;
-    }
-    
+    cell.titleLabel.text = [thirdCollectionViewArr objectAtIndex:indexPath.row];
     
 }
 
 - (void) populateContentForForthCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
-    switch (indexPath.row) {
-        case 0:
-            cell.titleLabel.text = @"Childcare";
-            break;
-            
-        case 1:
-            cell.titleLabel.text = @"Special Needs";
-            break;
-            
-        case 2:
-            cell.titleLabel.text = @"First Aid";
-            break;
-            
-        case 3:
-            cell.titleLabel.text = @"Garda Vetting";
-            break;
-            
-        case 4:
-            cell.titleLabel.text = @"Work Visa";
-            break;
-            
-        case 5:
-            cell.titleLabel.text = @"EU passport";
-            break;
-            
-        case 6:
-            cell.titleLabel.text = @"References";
-            break;
-            
-        case 7:
-            cell.titleLabel.text = @"Drivin License";
-            break;
-            
-        case 8:
-            cell.titleLabel.text = @"Fetac childcare";
-            break;
-            
-        case 9:
-            cell.titleLabel.text = @"Fetac Special Needs";
-            break;
-            
-        case 10:
-            cell.titleLabel.text = @"Tusla Registration";
-            break;
-            
-        default:
-            break;
-    }
-    
+    cell.titleLabel.text = [fourthCollectionViewArr objectAtIndex:indexPath.row];
     
 }
 
 - (void) populateContentForFifthCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
-    switch (indexPath.row) {
-        case 0:
-            cell.titleLabel.text = @"Light Housekeeping";
-            break;
-            
-        case 1:
-            cell.titleLabel.text = @"Meal Preparation";
-            break;
-            
-        case 2:
-            cell.titleLabel.text = @"Laundry";
-            break;
-            
-        case 3:
-            cell.titleLabel.text = @"Errand/Shopping";
-            break;
-            
-        case 4:
-            cell.titleLabel.text = @"Homework Help";
-            break;
-            
-        case 5:
-            cell.titleLabel.text = @"Willing to drive children";
-            break;
-            
-        default:
-            break;
-    }
-    
+    cell.titleLabel.text = [fifthCollectionViewArr objectAtIndex:indexPath.row];
     
 }
 
 - (void) populateContentForSixthCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
-    switch (indexPath.row) {
-        case 0:
-            cell.titleLabel.text = @"Sports";
-            break;
-            
-        case 1:
-            cell.titleLabel.text = @"Arts & Crafts";
-            break;
-            
-        case 2:
-            cell.titleLabel.text = @"Outdoor Activity";
-            break;
-            
-        case 3:
-            cell.titleLabel.text = @"Music & Drama";
-            break;
-            
-        case 4:
-            cell.titleLabel.text = @"Games";
-            break;
-            
-        case 5:
-            cell.titleLabel.text = @"Reading";
-            break;
-            
-        default:
-            break;
-    }
+    cell.titleLabel.text = [sixthCollectionViewArr objectAtIndex:indexPath.row];
     
     
 }
 
 - (void) populateContentForSeventhCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
-    switch (indexPath.row) {
-            
-        case 0:
-            cell.titleLabel.text = @"AU Pairs";
-            break;
-            
-        case 1:
-            cell.titleLabel.text = @"Childminders";
-            break;
-            
-        case 2:
-            cell.titleLabel.text = @"Cleaners";
-            break;
-            
-        case 3:
-            cell.titleLabel.text = @"Creche";
-            break;
-            
-        case 4:
-            cell.titleLabel.text = @"Dog Walkers";
-            break;
-            
-        case 5:
-            cell.titleLabel.text = @"Elderly Care";
-            break;
-            
-        case 6:
-            cell.titleLabel.text = @"House Keepers";
-            break;
-            
-        case 7:
-            cell.titleLabel.text = @"Maternity Nurse";
-            break;
-            
-        case 8:
-            cell.titleLabel.text = @"Nanny";
-            break;
-            
-        case 9:
-            cell.titleLabel.text = @"Pet Minders";
-            break;
-            
-        case 10:
-            cell.titleLabel.text = @"Private Midwife";
-            break;
-            
-        case 11:
-            cell.titleLabel.text = @"School Run";
-            break;
-            
-        case 12:
-            cell.titleLabel.text = @"Special Needs Care";
-            break;
-            
-        case 13:
-            cell.titleLabel.text = @"Tutor";
-            break;
-            
-        default:
-            break;
-    }
-    
+    cell.titleLabel.text = [seventhCollectionViewArr objectAtIndex:indexPath.row];
     
 }
 

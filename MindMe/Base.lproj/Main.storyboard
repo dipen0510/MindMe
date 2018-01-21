@@ -414,7 +414,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="52.5" y="490" width="270" height="31"/>
+                                <rect key="frame" x="52.5" y="490" width="270" height="32"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">By pressing Register you agree with the
@@ -2027,7 +2027,7 @@ Cg
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="2Ee-H5-kde" kind="show" id="ny8-4J-Uws"/>
+                                            <segue destination="2Ee-H5-kde" kind="show" identifier="showYourAdvertSegue" id="ny8-4J-Uws"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2712,14 +2712,42 @@ Cg
                         <outlet property="cancelButton" destination="x3Z-V1-B4M" id="kCt-pS-uYw"/>
                         <outlet property="cvCollectionView" destination="ylt-eY-MVF" id="Tdg-K8-3jJ"/>
                         <outlet property="daysRequiredCollectionView" destination="YLU-Gt-x3c" id="icX-ej-FdW"/>
+                        <outlet property="fifthCollectionSeparatorView" destination="dgV-10-CjF" id="N0F-kb-lDR"/>
                         <outlet property="fifthCollectionView" destination="w8E-ya-vgW" id="43z-mA-ddm"/>
+                        <outlet property="fifthCollectionViewHeightConstraint" destination="BtJ-er-EQg" id="Vxx-H4-Pe8"/>
+                        <outlet property="fifthCollectionViewTitle" destination="5cu-Yz-qqx" id="Nc7-m3-v60"/>
+                        <outlet property="fifthCollectionViewTitleTopConstraint" destination="Brb-QG-o0v" id="SSM-lt-toe"/>
+                        <outlet property="firstCollectionSeparatorView" destination="I40-bo-YRS" id="TIn-df-5MZ"/>
                         <outlet property="firstCollectionView" destination="QmR-yr-2K3" id="Vzb-ul-YyT"/>
+                        <outlet property="firstCollectionViewHeightConstraint" destination="fGX-PV-a2z" id="Y9B-Bx-ci9"/>
+                        <outlet property="firstCollectionViewTitle" destination="aY1-ID-E1c" id="vs4-H4-feH"/>
+                        <outlet property="firstCollectionViewTitleTopConstraint" destination="eFu-Ed-4cE" id="LSm-zs-AHG"/>
                         <outlet property="forthCollectionView" destination="bch-JX-zQs" id="wT4-r4-CI5"/>
+                        <outlet property="fourthCollectionSeparatorView" destination="czT-a5-JKS" id="YoT-rm-OEV"/>
+                        <outlet property="fourthCollectionViewHeightConstraint" destination="L0f-jR-fvr" id="kMN-d2-fo9"/>
+                        <outlet property="fourthCollectionViewTitle" destination="xkw-SY-gzc" id="nj2-7y-YiQ"/>
+                        <outlet property="fourthCollectionViewTitleTopConstraint" destination="YSf-By-zuw" id="DP3-mE-IEf"/>
                         <outlet property="nextButton" destination="MSb-JG-BTa" id="A9u-ox-pMY"/>
+                        <outlet property="secondCollectionSeparatorView" destination="2Pv-m7-Xb8" id="gab-zm-xp9"/>
                         <outlet property="secondCollectionView" destination="FCW-IJ-c5x" id="JKA-Mi-gPN"/>
+                        <outlet property="secondCollectionViewHeightConstraint" destination="JB3-5F-h6e" id="ncY-TS-O3l"/>
+                        <outlet property="secondCollectionViewTitle" destination="dPO-4z-cSX" id="cEI-b1-H6O"/>
+                        <outlet property="secondCollectionViewTitleTopConstraint" destination="c7Q-Xk-Bja" id="omG-Wx-emf"/>
+                        <outlet property="seventhCollectionSeparatorView" destination="cP4-iV-qck" id="WPR-75-Gq4"/>
                         <outlet property="seventhCollectionView" destination="fZm-Z8-JnY" id="0Yu-qV-bLs"/>
+                        <outlet property="seventhCollectionViewHeightConstraint" destination="7p2-8w-icY" id="0G3-D2-nSa"/>
+                        <outlet property="seventhCollectionViewTitle" destination="W9a-ox-FBk" id="whi-NN-Azp"/>
+                        <outlet property="seventhCollectionViewTitleTopConstraint" destination="BNc-jQ-zVE" id="iwK-12-jow"/>
+                        <outlet property="sixthCollectionSeparatorView" destination="3Zt-hE-ilA" id="Rjc-25-EMc"/>
                         <outlet property="sixthCollectionView" destination="KwU-1F-Xse" id="C4M-Yc-fYm"/>
+                        <outlet property="sixthCollectionViewHeightConstraint" destination="ph3-Kr-dm7" id="gwK-UF-rEJ"/>
+                        <outlet property="sixthCollectionViewTitle" destination="X1R-Bm-kdw" id="gPc-xD-E6X"/>
+                        <outlet property="sixthCollectionViewTitleTopConstraint" destination="gAH-ut-UhN" id="5Gu-CH-4EQ"/>
+                        <outlet property="thirdCollectionSeparatorView" destination="g2g-Cn-iH0" id="64E-q0-aVr"/>
                         <outlet property="thirdCollectionView" destination="F2U-F5-yXq" id="QUF-5v-ZIw"/>
+                        <outlet property="thirdCollectionViewHeightConstraint" destination="X1O-Fs-8zf" id="tfp-ko-ra4"/>
+                        <outlet property="thirdCollectionViewTitle" destination="Eat-lR-gMh" id="Gk0-kf-eoH"/>
+                        <outlet property="thirdCollectionViewTitleTopConstraint" destination="UxZ-Zm-oqA" id="VxZ-24-Vek"/>
                         <segue destination="1pa-YR-ITw" kind="show" identifier="showUploadDocSegue" id="CTT-AK-ZAd"/>
                     </connections>
                 </viewController>
