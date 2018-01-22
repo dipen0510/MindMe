@@ -28,6 +28,7 @@
 
 - (void) startPOSTingFormData:(id)postData;
 - (void) startPOSTingFormDataAfterLogin:(id)postData;
+- (void) startPOSTingAdverDetails:(id)postData;
 - (void) startGoogleAPIGeocodeWebService:(NSString *)param;
 
 @end

@@ -729,6 +729,17 @@
     [self performSegueWithIdentifier:@"showUploadDocSegue" sender:nil];
 }
 
+- (IBAction)nextButtonTapped:(id)sender {
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [self startAddCarerAdvertsService];
+    }
+    else {
+        [self startAddParentAdvertsService];
+    }
+    
+}
+
 #pragma mark - CollectionView Datasource
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -1004,6 +1015,265 @@
     
 }
 
+ - (NSString *) fullNameForAvailabilityIndex:(int)i {
+    
+    if (i/8 <= 1) {
+        return @"Morning";
+    }
+    else if (i/8 > 1 && i/8 <= 2) {
+        return @"Afternoon";
+    }
+    else if (i/8 > 2 && i/8 <= 3) {
+        return @"Evening";
+    }
+    else if (i/8 > 3 && i/8 <= 4) {
+        return @"Night";
+    }
+    
+    return @"Overnight";
+    
+}
+
+- (NSString *) fullNameForWeekdayAvailabilityIndex:(int)i {
+    
+    if (i%8 == 1) {
+        return @"Monday";
+    }
+    else if (i%8 == 2) {
+        return @"Tuesday";
+    }
+    else if (i%8 == 3) {
+        return @"Wednesday";
+    }
+    else if (i%8 == 4) {
+        return @"Thursday";
+    }
+    else if (i%8 == 5) {
+        return @"Friday";
+    }
+    else if (i%8 == 6) {
+        return @"Saturday";
+    }
+    
+    return @"Sunday";
+    
+}
+
+#pragma mark - API Helpers
+
+- (void) startAddCarerAdvertsService {
+    
+    [SVProgressHUD showWithStatus:@"Updating Profile"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = AddCarerAdvert;
+    manager.delegate = self;
+    [manager startPOSTingAdverDetails:[self prepareDictionaryForPostingAdvert]];
+    
+}
+
+- (void) startAddParentAdvertsService {
+    
+    [SVProgressHUD showWithStatus:@"Updating Advert"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = AddParentAdvert;
+    manager.delegate = self;
+    [manager startPOSTingAdverDetails:[self prepareDictionaryForPostingAdvert]];
+    
+}
+
+
+#pragma mark - DATASYNCMANAGER Delegates
+
+-(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
+    
+    if ([requestServiceKey isEqualToString:AddCarerAdvert]) {
+        
+        [SVProgressHUD showSuccessWithStatus:@"Profile posted successfully"];
+        
+        
+        
+    }
+    
+    if ([requestServiceKey isEqualToString:AddParentAdvert]) {
+        
+        [SVProgressHUD showSuccessWithStatus:@"Advert posted successfully"];
+        
+        
+        
+    }
+    
+    
+    
+}
+
+
+- (void) didFinishServiceWithFailure:(NSString *)errorMsg {
+    
+    
+    [SVProgressHUD dismiss];
+    
+    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:nil
+                                                  message:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)
+                                                 delegate:self
+                                        cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                        otherButtonTitles: nil];
+    
+    if (![errorMsg isEqualToString:@""]) {
+        [alert setMessage:errorMsg];
+    }
+    
+    if ([errorMsg isEqualToString:NSLocalizedString(@"Verify your internet connection and try again", nil)]) {
+        [alert setTitle:NSLocalizedString(@"Connection unsuccessful", nil)];
+    }
+    
+    [alert show];
+    
+    return;
+    
+}
+
+
+
+
+#pragma mark - Modalobject
+
+- (NSMutableDictionary *) prepareDictionaryForPostingAdvert {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithDictionary:_advertDetailsDict];
+    
+    NSString* booking = @"";
+    
+    for (int i = 0; i<availabilityArr.count; i++) {
+
+        if ([[availabilityArr objectAtIndex:i] intValue]) {
+            if ([booking isEqualToString:@""]) {
+                booking = [NSString stringWithFormat:@"%@ %@", [self fullNameForWeekdayAvailabilityIndex:i], [self fullNameForAvailabilityIndex:i]];
+            }
+            else {
+                booking = [NSString stringWithFormat:@"%@,%@ %@",booking,[self fullNameForWeekdayAvailabilityIndex:i],[self fullNameForAvailabilityIndex:i]];
+            }
+        }
+        
+    }
+    [dict setObject:booking forKey:@"booking"];
+    
+    CreateAdvertsCollectionViewCell* emerCell = (CreateAdvertsCollectionViewCell*)[_firstCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    if (emerCell.toggleButton.isSelected) {
+        [dict setObject:@"1" forKey:@"emer"];
+    }
+    else {
+        [dict setObject:@"0" forKey:@"emer"];
+    }
+    
+    NSString* mindLOC = @"";
+    if (!_secondCollectionView.hidden) {
+        for (int i = 0; i<secondCollectionViewArr.count; i++) {
+            CreateAdvertsCollectionViewCell* tmpCell = (CreateAdvertsCollectionViewCell*)[_secondCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            if (tmpCell.toggleButton.isSelected) {
+                if ([mindLOC isEqualToString:@""]) {
+                    mindLOC = [NSString stringWithFormat:@"%@", [tmpCell.titleLabel.text stringByReplacingOccurrencesOfString:@"Parent" withString:@"Their"]];
+                }
+                else {
+                    mindLOC = [NSString stringWithFormat:@"%@,%@",mindLOC,[tmpCell.titleLabel.text stringByReplacingOccurrencesOfString:@"Parent" withString:@"Their"]];
+                }
+            }
+        }
+    }
+    [dict setObject:mindLOC forKey:@"mind_loc"];
+    
+    
+    NSString* ageGroup = @"";
+    if (!_thirdCollectionView.hidden) {
+        for (int i = 0; i<thirdCollectionViewArr.count; i++) {
+            CreateAdvertsCollectionViewCell* tmpCell = (CreateAdvertsCollectionViewCell*)[_thirdCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            if (tmpCell.toggleButton.isSelected) {
+                if ([ageGroup isEqualToString:@""]) {
+                    ageGroup = [NSString stringWithFormat:@"%@", [tmpCell.titleLabel.text stringByReplacingOccurrencesOfString:@"-" withString:@"to"]];
+                }
+                else {
+                    ageGroup = [NSString stringWithFormat:@"%@,%@",ageGroup,[tmpCell.titleLabel.text stringByReplacingOccurrencesOfString:@"-" withString:@"to"]];
+                }
+            }
+        }
+    }
+    [dict setObject:ageGroup forKey:@"age_group"];
+    
+    
+    NSString* require = @"";
+    if (!_forthCollectionView.hidden) {
+        for (int i = 0; i<fourthCollectionViewArr.count; i++) {
+            CreateAdvertsCollectionViewCell* tmpCell = (CreateAdvertsCollectionViewCell*)[_forthCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            if (tmpCell.toggleButton.isSelected) {
+                if ([require isEqualToString:@""]) {
+                    require = [NSString stringWithFormat:@"%@", tmpCell.titleLabel.text];
+                }
+                else {
+                    require = [NSString stringWithFormat:@"%@,%@",require,tmpCell.titleLabel.text];
+                }
+            }
+        }
+    }
+    [dict setObject:require forKey:@"require"];
+    
+    
+    NSString* additional_optional = @"";
+    if (!_fifthCollectionView.hidden) {
+        for (int i = 0; i<fifthCollectionViewArr.count; i++) {
+            CreateAdvertsCollectionViewCell* tmpCell = (CreateAdvertsCollectionViewCell*)[_fifthCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            if (tmpCell.toggleButton.isSelected) {
+                if ([additional_optional isEqualToString:@""]) {
+                    additional_optional = [NSString stringWithFormat:@"%@", tmpCell.titleLabel.text];
+                }
+                else {
+                    additional_optional = [NSString stringWithFormat:@"%@,%@",additional_optional,tmpCell.titleLabel.text];
+                }
+            }
+        }
+    }
+    [dict setObject:additional_optional forKey:@"additional_optional"];
+    
+    
+    NSString* love_optional = @"";
+    if (!_sixthCollectionView.hidden) {
+        for (int i = 0; i<sixthCollectionViewArr.count; i++) {
+            CreateAdvertsCollectionViewCell* tmpCell = (CreateAdvertsCollectionViewCell*)[_sixthCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            if (tmpCell.toggleButton.isSelected) {
+                if ([love_optional isEqualToString:@""]) {
+                    love_optional = [NSString stringWithFormat:@"%@", tmpCell.titleLabel.text];
+                }
+                else {
+                    love_optional = [NSString stringWithFormat:@"%@,%@",love_optional,tmpCell.titleLabel.text];
+                }
+            }
+        }
+    }
+    [dict setObject:love_optional forKey:@"love_optional"];
+    
+    
+    NSString* services = @"";
+    if (!_seventhCollectionView.hidden) {
+        for (int i = 0; i<seventhCollectionViewArr.count; i++) {
+            CreateAdvertsCollectionViewCell* tmpCell = (CreateAdvertsCollectionViewCell*)[_seventhCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            if (tmpCell.toggleButton.isSelected) {
+                if ([services isEqualToString:@""]) {
+                    services = [NSString stringWithFormat:@"%@", tmpCell.titleLabel.text];
+                }
+                else {
+                    services = [NSString stringWithFormat:@"%@,%@",services,tmpCell.titleLabel.text];
+                }
+            }
+        }
+    }
+    [dict setObject:services forKey:@"services"];
+    
+    [dict setObject:@"1" forKey:@"job_ad_active"];
+    
+    return dict;
+    
+}
+
 
 /*
 #pragma mark - Navigation
@@ -1014,5 +1284,31 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//- (NSString *) fullNameForWeekday:(NSString *)weekday {
+//
+//    if ([weekday isEqualToString:@"MON"]) {
+//        return @"Monday";
+//    }
+//    else if ([weekday isEqualToString:@"TUE"]) {
+//        return @"Tuesday";
+//    }
+//    else if ([weekday isEqualToString:@"WED"]) {
+//        return @"Wednesday";
+//    }
+//    else if ([weekday isEqualToString:@"THU"]) {
+//        return @"Thursday";
+//    }
+//    else if ([weekday isEqualToString:@"FRI"]) {
+//        return @"Friday";
+//    }
+//    else if ([weekday isEqualToString:@"SAT"]) {
+//        return @"Saturday";
+//    }
+//
+//    return @"Sunday";
+//
+//}
+
 
 @end

@@ -24,6 +24,8 @@
 #define GetPostedAdverts @"profile/getProfileDetails"
 #define ToggleAdvertActive @"index.php/profile/toggleProfileDets"
 #define DeleteAdvert @"profile/delProfileDetails"
+#define AddCarerAdvert @"profile/updateCarerProfileDetails"
+#define AddParentAdvert @"advert/updateParentProfileDetails"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"

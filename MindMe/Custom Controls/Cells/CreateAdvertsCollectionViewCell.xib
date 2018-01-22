@@ -23,11 +23,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="qk7-T5-mEj">
-                        <rect key="frame" x="46" y="5.5" width="88" height="19"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="19" id="odu-CR-gIS"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="qk7-T5-mEj">
+                        <rect key="frame" x="46" y="0.0" width="96" height="30"/>
                         <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="14"/>
                         <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -49,8 +46,10 @@
             <constraints>
                 <constraint firstItem="qk7-T5-mEj" firstAttribute="centerY" secondItem="MBt-k0-8Tp" secondAttribute="centerY" id="88l-nH-n8b"/>
                 <constraint firstItem="MBt-k0-8Tp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="K5O-U3-aR4"/>
-                <constraint firstAttribute="trailing" secondItem="qk7-T5-mEj" secondAttribute="trailing" constant="16" id="KE7-h3-e0a"/>
+                <constraint firstAttribute="trailing" secondItem="qk7-T5-mEj" secondAttribute="trailing" constant="8" id="KE7-h3-e0a"/>
                 <constraint firstItem="MBt-k0-8Tp" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="LDE-jJ-O6p"/>
+                <constraint firstItem="qk7-T5-mEj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="SwA-jB-1wT"/>
+                <constraint firstAttribute="bottom" secondItem="qk7-T5-mEj" secondAttribute="bottom" id="i0p-Zx-nf8"/>
                 <constraint firstItem="qk7-T5-mEj" firstAttribute="leading" secondItem="MBt-k0-8Tp" secondAttribute="trailing" constant="8" id="zIy-ig-EKE"/>
             </constraints>
             <connections>

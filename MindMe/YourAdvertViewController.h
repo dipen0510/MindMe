@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YourAdvertViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate> {
+@interface YourAdvertViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, DataSyncManagerDelegate> {
     
     NSMutableArray* availabilityArr;
     
@@ -54,6 +54,7 @@
 
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)addButtonTapped:(id)sender;
+- (IBAction)nextButtonTapped:(id)sender;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *firstCollectionViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *secondCollectionViewHeightConstraint;
