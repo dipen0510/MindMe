@@ -82,6 +82,33 @@
     else if ([careType isEqualToString:@"Cleaners"]) {
         [self setupUIForCleanersForm];
     }
+    else if ([careType isEqualToString:@"Dog Walkers"]) {
+        [self setupUIForDayWalkersForm];
+    }
+    else if ([careType isEqualToString:@"Elderly Care"]) {
+        [self setupUIForElderlyCareForm];
+    }
+    else if ([careType isEqualToString:@"House Keepers"]) {
+        [self setupUIForHousekeepersForm];
+    }
+    else if ([careType isEqualToString:@"Maternity Nurse"]) {
+        [self setupUIForMaternityNurseForm];
+    }
+    else if ([careType isEqualToString:@"Pet Minders"]) {
+        [self setupUIForPetMindersForm];
+    }
+    else if ([careType isEqualToString:@"Private Midwife"]) {
+        [self setupUIForPrivateMidwifeForm];
+    }
+    else if ([careType isEqualToString:@"School Run"]) {
+        [self setupUIForSchoolRunForm];
+    }
+    else if ([careType isEqualToString:@"Special Needs Care"]) {
+        [self setupUIForSpecialNeedsCareForm];
+    }
+    else if ([careType isEqualToString:@"Tutor"]) {
+        [self setupUIForTutorForm];
+    }
     
 }
 
@@ -241,6 +268,291 @@
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
 }
+
+- (void) setupUIForDayWalkersForm {
+    
+    _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
+    
+    _secondCollectionViewTitle.hidden = YES;
+    _secondCollectionView.hidden = YES;
+    _secondCollectionSeparatorView.hidden = YES;
+    
+    _thirdCollectionViewTitleTopConstraint.constant = -44 - _secondCollectionViewHeightConstraint.constant;
+    _thirdCollectionViewTitle.text = @"Pets You Have Experience With";
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Dogs", @"Cats", @"Birds", @"Fish", @"Amphibians", @"Mammals", @"Horses", @"Farm Animals", @"Exotic Pets", @"Other Pets", nil];
+    _thirdCollectionViewHeightConstraint.constant = 150;
+    
+    _fourthCollectionViewTitle.text = @"You Can Provide";
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Play & Exercise", @"First Aid", @"Training", @"Boarding", @"Waste Cleanup", @"Overnight Care", @"Walking", @"Feeding", nil];
+    _fourthCollectionViewHeightConstraint.constant = 120.;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitle.hidden = YES;
+    _sixthCollectionView.hidden = YES;
+    _sixthCollectionSeparatorView.hidden = YES;
+    
+    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
+    seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+}
+
+- (void) setupUIForElderlyCareForm {
+    
+    _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
+    
+    _secondCollectionViewTitle.hidden = YES;
+    _secondCollectionView.hidden = YES;
+    _secondCollectionSeparatorView.hidden = YES;
+    
+    _thirdCollectionViewTitleTopConstraint.constant = -44 - _secondCollectionViewHeightConstraint.constant;    _thirdCollectionViewTitle.text = @"Age Group Experience";
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"55 - 65 Years", @"65 to 75 Years", @"75 to 85 Years", @"85+ Years", nil];
+    _thirdCollectionViewHeightConstraint.constant = 60.;
+    
+    _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Special Needs Certification", nil];
+    _fourthCollectionViewHeightConstraint.constant = 120.;
+    
+    _fifthCollectionViewTitle.text = @"Additional Services You Can Provide";
+    fifthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Companion Services", @"Home Nursing Care", @"Home Help Services", @"Transportation", @"Live-in Care", @"Homecare Services", @"Meal Preparation", @"Personal Care (e.g. Bathing, Grooming)", nil];
+    _fifthCollectionViewHeightConstraint.constant = 120.;
+    
+    _sixthCollectionViewTitle.hidden = YES;
+    _sixthCollectionView.hidden = YES;
+    _sixthCollectionSeparatorView.hidden = YES;
+    
+    _seventhCollectionViewTitleTopConstraint.constant = -44 - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
+    seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+}
+
+- (void) setupUIForHousekeepersForm {
+    
+    _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
+    
+    _secondCollectionViewTitle.hidden = YES;
+    _secondCollectionView.hidden = YES;
+    _secondCollectionSeparatorView.hidden = YES;
+    
+    _thirdCollectionViewTitleTopConstraint.constant = -44 - _secondCollectionViewHeightConstraint.constant;
+    _thirdCollectionViewTitle.text = @"House Keeping Services You Can Provide";
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Bathroom Cleaning", @"Dishes", @"Plant Care", @"Kitchen Cleaning", @"Oven Cleaning", @"Window Washing", @"Pet Cleanup", @"General Room Cleaning", @"Surface Polishing", @"Packing and Unpacking", @"Bed Changing",@"Carpet Cleaning", @"Attic Cleaning", @"Furniture Treatment", @"Basement Cleaning", @"Refrigerator Cleaning", @"Wall Washing", @"House Sitting", @"Cabinet Cleaning", @"Laundry", @"Organization", @"External Cleaning", nil];
+    _thirdCollectionViewHeightConstraint.constant = 330;
+    
+    _fourthCollectionViewTitle.text = @"Do You Have Documentation";
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Garda Vetting", @"Work Visa", @"References", @"Driving Licence", nil];
+    _fourthCollectionViewHeightConstraint.constant = 60.;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitle.hidden = YES;
+    _sixthCollectionView.hidden = YES;
+    _sixthCollectionSeparatorView.hidden = YES;
+    
+    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
+    seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+}
+
+- (void) setupUIForMaternityNurseForm {
+    
+    _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
+    
+    _secondCollectionViewTitle.hidden = YES;
+    _secondCollectionView.hidden = YES;
+    _secondCollectionSeparatorView.hidden = YES;
+    
+    _thirdCollectionViewTitle.hidden = YES;
+    _thirdCollectionView.hidden = YES;
+    _thirdCollectionSeparatorView.hidden = YES;
+    
+    _fourthCollectionViewTitleTopConstraint.constant = -108 - _secondCollectionViewHeightConstraint.constant - _thirdCollectionViewHeightConstraint.constant;
+    _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Special Needs Certification", nil];
+    _fourthCollectionViewHeightConstraint.constant = 120.;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitle.hidden = YES;
+    _sixthCollectionView.hidden = YES;
+    _sixthCollectionSeparatorView.hidden = YES;
+    
+    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
+    seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+}
+
+- (void) setupUIForPetMindersForm {
+    
+    _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
+    
+    _secondCollectionViewTitle.hidden = YES;
+    _secondCollectionView.hidden = YES;
+    _secondCollectionSeparatorView.hidden = YES;
+    
+    _thirdCollectionViewTitleTopConstraint.constant = -44 - _secondCollectionViewHeightConstraint.constant;
+    _thirdCollectionViewTitle.text = @"Pets You Have Experience With";
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Dogs", @"Cats", @"Birds", @"Fish", @"Amphibians", @"Mammals", @"Horses", @"Farm Animals", @"Exotic Pets", @"Other Pets", nil];
+    _thirdCollectionViewHeightConstraint.constant = 150;
+    
+    _fourthCollectionViewTitle.text = @"You Can Provide";
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Play & Exercise", @"First Aid", @"Training", @"Boarding", @"Waste Cleanup", @"Overnight Care", @"Walking", @"Feeding", nil];
+    _fourthCollectionViewHeightConstraint.constant = 120.;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitle.hidden = YES;
+    _sixthCollectionView.hidden = YES;
+    _sixthCollectionSeparatorView.hidden = YES;
+    
+    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
+    seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+}
+
+- (void) setupUIForPrivateMidwifeForm {
+    
+    _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
+    
+    _secondCollectionViewTitle.hidden = YES;
+    _secondCollectionView.hidden = YES;
+    _secondCollectionSeparatorView.hidden = YES;
+    
+    _thirdCollectionViewTitle.hidden = YES;
+    _thirdCollectionView.hidden = YES;
+    _thirdCollectionSeparatorView.hidden = YES;
+    
+    _fourthCollectionViewTitleTopConstraint.constant = -108 - _secondCollectionViewHeightConstraint.constant - _thirdCollectionViewHeightConstraint.constant;
+    _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Special Needs Certification", nil];
+    _fourthCollectionViewHeightConstraint.constant = 120.;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitle.hidden = YES;
+    _sixthCollectionView.hidden = YES;
+    _sixthCollectionSeparatorView.hidden = YES;
+    
+    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
+    seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+}
+
+- (void) setupUIForSchoolRunForm {
+    
+    _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
+    
+    _secondCollectionViewTitle.hidden = YES;
+    _secondCollectionView.hidden = YES;
+    _secondCollectionSeparatorView.hidden = YES;
+    
+    _thirdCollectionViewTitleTopConstraint.constant = -44 - _secondCollectionViewHeightConstraint.constant;    _thirdCollectionViewTitle.text = @"Provide Transport For";
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Infants (0-1 year of age)", @"Toddlers (1-3 years of age)", @"Preschoolers (3-5 years of age)", @"Middle Childhood (6-12 years of age)", @"Teenagers (15-19 years of age)", @"Adult", @"Elderly", @"Special Needs (wheel chair access)", nil];
+    _thirdCollectionViewHeightConstraint.constant = 120.;
+    
+    _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Special Needs Certification", nil];
+    _fourthCollectionViewHeightConstraint.constant = 120.;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitle.hidden = YES;
+    _sixthCollectionView.hidden = YES;
+    _sixthCollectionSeparatorView.hidden = YES;
+    
+    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
+    seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"Special Needs Care", @"Tutor", nil];
+    
+}
+
+- (void) setupUIForSpecialNeedsCareForm {
+    
+    _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
+    
+    _secondCollectionViewTitle.hidden = YES;
+    _secondCollectionView.hidden = YES;
+    _secondCollectionSeparatorView.hidden = YES;
+    
+    _thirdCollectionViewTitleTopConstraint.constant = -44 - _secondCollectionViewHeightConstraint.constant;    _thirdCollectionViewTitle.text = @"Age Group Experience";
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Infant (up to 12 months)", @"Youth (2-12 years)", @"Teen (13-19 years)", @"Adult (20-64 years)", @"Elderly Person (65+)", nil];
+    _thirdCollectionViewHeightConstraint.constant = 90.;
+    
+    _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Special Needs Certification", nil];
+    _fourthCollectionViewHeightConstraint.constant = 120.;
+    
+    _fifthCollectionViewTitle.text = @"I Have Experience With";
+    fifthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"ADD", @"ADHD", @"Aspergers", @"Asthma", @"Autism", @"Autism Spectrum Disorder", @"Blindness/Visual Impairment", @"Cancer", @"Celiac", @"Central Auditory Disorder", @"Cerebral Palsy", @"Cognitive Disabilities", @"Cystic Fibrosis", @"Deafness", @"Developmental Delays", @"Diabetes", @"Down Syndrome", @"Dwarfism", @"Dyslexia", @"Epilepsy", @"Fetal Alcohol Syndrome", @"Food Allergies", @"Fragile X", @"Heart Defects", @"Hydrocephaly", @"Mental Illness", @"Mobility Challenges", @"Multiple Sclerosis", @"Muscular Dystrophy", @"Obesity", @"Pervasive Developmental Disorder", @"Polymicrogyria", @"Prader Willi", @"Rett Syndrome", @"Seizure Disorder", @"Sensory Integration Disorder", @"Speech Delay", @"Spinal Cord Injury", @"Thyroid Condition", @"Tourette Syndrome", nil];
+    _fifthCollectionViewHeightConstraint.constant = 600;
+    
+    _sixthCollectionViewTitle.hidden = YES;
+    _sixthCollectionView.hidden = YES;
+    _sixthCollectionSeparatorView.hidden = YES;
+    
+    _seventhCollectionViewTitleTopConstraint.constant = -44 - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
+    seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Tutor", nil];
+    
+}
+
+- (void) setupUIForTutorForm {
+    
+    _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
+    
+    _secondCollectionViewTitle.text = @"Junior Cycle Subjects";
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Ancient Greek", @"Art - Craft - Design", @"Business Studies", @"Civic - Social and Political Education", @"Classical Studies", @"English", @"Environmental and Social Studies (ESS)", @"French", @"Geography", @"German", @"Hebrew Studies", @"History", @"Home Economics", @"Irish", @"Italian", @"Latin", @"Materials Technology (Wood)", @"Mathematics", @"Metalwork", @"Music", @"Physical Education", @"Religious Education", @"Science", @"Social - Personal and Health Education", @"Spanish", @"Technical Graphics", @"Technology", @"Typewriting", nil];
+    _secondCollectionViewHeightConstraint.constant = 420.;
+    
+    _thirdCollectionViewTitle.text = @"Senior Cycle Subjects";
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Accounting", @"Agricultural Economics", @"Agricultural Science", @"Ancient Greek", @"Applied Mathematics", @"Arabic", @"Art", @"Biology", @"Business", @"Chemistry", @"Classical Studies", @"Construction Studies", @"Design and Communication Graphics", @"Economics", @"Engineering", @"English", @"French", @"Gaeilge", @"Geography", @"German", @"Hebrew Studies", @"History", @"Home Economics", @"Italian", @"Japanese", @"Latin", @"Mathematics", @"Music", @"Physics", @"Religious Education", @"Russian", @"Spanish", @"Technology", @"Chemistry", nil];
+    _thirdCollectionViewHeightConstraint.constant = 510.;
+    
+    _fourthCollectionViewTitle.text = @"Do You Have Documentation";
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Garda Vetting", @"Work Visa", @"References", @"Driving Licence", nil];
+    _fourthCollectionViewHeightConstraint.constant = 60.;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitle.hidden = YES;
+    _sixthCollectionView.hidden = YES;
+    _sixthCollectionSeparatorView.hidden = YES;
+    
+    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
+    seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", nil];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
