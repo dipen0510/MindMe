@@ -2551,7 +2551,7 @@ Cg
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gn7-be-xc6">
-                                        <rect key="frame" x="30" y="1637" width="39" height="20"/>
+                                        <rect key="frame" x="30" y="1637" width="325" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="fMr-Im-ofR"/>
                                         </constraints>
@@ -2638,6 +2638,7 @@ Cg
                                     <constraint firstItem="YLU-Gt-x3c" firstAttribute="leading" secondItem="ZsY-co-iYH" secondAttribute="leading" constant="16" id="74Q-3q-pzK"/>
                                     <constraint firstItem="FCW-IJ-c5x" firstAttribute="leading" secondItem="ZsY-co-iYH" secondAttribute="leading" id="9vq-AL-VCB"/>
                                     <constraint firstItem="x3Z-V1-B4M" firstAttribute="height" secondItem="MSb-JG-BTa" secondAttribute="height" id="A3p-tz-6Qc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gn7-be-xc6" secondAttribute="trailing" constant="20" id="AN6-Us-iU8"/>
                                     <constraint firstItem="Gn7-be-xc6" firstAttribute="leading" secondItem="ZsY-co-iYH" secondAttribute="leading" constant="30" id="AQC-LA-6hm"/>
                                     <constraint firstItem="fZm-Z8-JnY" firstAttribute="top" secondItem="W9a-ox-FBk" secondAttribute="bottom" constant="12" id="AZi-rR-LoF"/>
                                     <constraint firstItem="qf1-y1-Cxf" firstAttribute="leading" secondItem="ZsY-co-iYH" secondAttribute="leading" constant="16" id="B5y-nh-vom"/>
@@ -2751,6 +2752,7 @@ Cg
                         <outlet property="fourthCollectionViewHeightConstraint" destination="L0f-jR-fvr" id="kMN-d2-fo9"/>
                         <outlet property="fourthCollectionViewTitle" destination="xkw-SY-gzc" id="nj2-7y-YiQ"/>
                         <outlet property="fourthCollectionViewTitleTopConstraint" destination="YSf-By-zuw" id="DP3-mE-IEf"/>
+                        <outlet property="isAdvertActiveLabel" destination="Gn7-be-xc6" id="5si-T7-Ehc"/>
                         <outlet property="nextButton" destination="MSb-JG-BTa" id="A9u-ox-pMY"/>
                         <outlet property="secondCollectionSeparatorView" destination="2Pv-m7-Xb8" id="gab-zm-xp9"/>
                         <outlet property="secondCollectionView" destination="FCW-IJ-c5x" id="JKA-Mi-gPN"/>

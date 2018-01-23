@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YourAdvertViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, DataSyncManagerDelegate> {
+@interface YourAdvertViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, DataSyncManagerDelegate, UITextFieldDelegate> {
     
     NSMutableArray* availabilityArr;
     
@@ -36,6 +36,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UICollectionView *cvCollectionView;
 @property (weak, nonatomic) IBOutlet UITextField *weeklyHeaderLabel;
+@property (weak, nonatomic) IBOutlet UITextField *isAdvertActiveLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *secondCollectionViewTitle;
 @property (weak, nonatomic) IBOutlet UILabel *firstCollectionViewTitle;

@@ -10,6 +10,7 @@
 #import "ProfileAvailabilityCollectionViewCell.h"
 #import "CreateAdvertsCollectionViewCell.h"
 #import "AdvertPDFCollectionViewCell.h"
+#import "ActionSheetPicker.h"
 
 @interface YourAdvertViewController ()
 
@@ -54,6 +55,8 @@
     else {
         _weeklyHeaderLabel.text = @"Please indicate the days care is required";
     }
+    
+    _isAdvertActiveLabel.delegate = self;
     
 }
 
@@ -1275,7 +1278,13 @@
     }
     [dict setObject:services forKey:@"services"];
     
-    [dict setObject:@"1" forKey:@"job_ad_active"];
+    if ([_isAdvertActiveLabel.text isEqualToString:@"No"]) {
+        [dict setObject:@"0" forKey:@"job_ad_active"];
+    }
+    else {
+        [dict setObject:@"1" forKey:@"job_ad_active"];
+    }
+    
     
     return dict;
     
@@ -1292,30 +1301,29 @@
 }
 */
 
-//- (NSString *) fullNameForWeekday:(NSString *)weekday {
-//
-//    if ([weekday isEqualToString:@"MON"]) {
-//        return @"Monday";
-//    }
-//    else if ([weekday isEqualToString:@"TUE"]) {
-//        return @"Tuesday";
-//    }
-//    else if ([weekday isEqualToString:@"WED"]) {
-//        return @"Wednesday";
-//    }
-//    else if ([weekday isEqualToString:@"THU"]) {
-//        return @"Thursday";
-//    }
-//    else if ([weekday isEqualToString:@"FRI"]) {
-//        return @"Friday";
-//    }
-//    else if ([weekday isEqualToString:@"SAT"]) {
-//        return @"Saturday";
-//    }
-//
-//    return @"Sunday";
-//
-//}
+#pragma mark - UITextField Delegate
 
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    
+    if (textField == _isAdvertActiveLabel) {
+        [self advertActiveTextFieldTapped];
+        return NO;
+    }
+    
+    return YES;
+    
+}
+
+- (void) advertActiveTextFieldTapped {
+    
+    [ActionSheetStringPicker showPickerWithTitle:@"" rows:[NSArray arrayWithObjects:@"Yes", @"No", nil] initialSelection:0 doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+        
+        _isAdvertActiveLabel.text = selectedValue;
+        
+    } cancelBlock:^(ActionSheetStringPicker *picker) {
+        
+    } origin:self.view];
+    
+}
 
 @end
