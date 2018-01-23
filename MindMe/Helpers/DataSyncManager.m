@@ -151,10 +151,13 @@
     
     [manager POST:self.serviceKey parameters:postData constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         
-        NSData* data = UIImageJPEGRepresentation(profileImage,0.75);
-        [formData appendPartWithFileData:data
-                                    name:@"image_path"
-                                fileName:@"image_path" mimeType:@"image/jpeg"];
+        if (profileImage && ![profileImage isEqual:@""]) {
+            NSData* data = UIImageJPEGRepresentation(profileImage,0.75);
+            [formData appendPartWithFileData:data
+                                        name:@"image_path"
+                                    fileName:@"image_path" mimeType:@"image/jpeg"];
+        }
+        
         
     } progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         
