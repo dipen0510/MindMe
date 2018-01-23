@@ -35,6 +35,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UICollectionView *cvCollectionView;
+@property (weak, nonatomic) IBOutlet UITextField *weeklyHeaderLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *secondCollectionViewTitle;
 @property (weak, nonatomic) IBOutlet UILabel *firstCollectionViewTitle;

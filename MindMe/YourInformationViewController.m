@@ -64,6 +64,8 @@
     _requiredOccasionallyLabel.userInteractionEnabled = YES;
     [_requiredOccasionallyLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(requiredOccassionalyButtonTapped:)]];
     
+    _addYourBioTextView.delegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -557,4 +559,13 @@
     
 }
 
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
+    
+    if (textView == _addYourBioTextView && [textView.text containsString:@"Experienced flexible mature minder needed to work 3 full days a week"]) {
+        textView.text = @"";
+    }
+    
+    return YES;
+    
+}
 @end

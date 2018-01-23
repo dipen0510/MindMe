@@ -48,6 +48,13 @@
     [self.seventhCollectionView registerNib:[UINib nibWithNibName:@"CreateAdvertsCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"CreateAdvertsCollectionViewCell"];
     [self.cvCollectionView registerNib:[UINib nibWithNibName:@"AdvertPDFCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"AdvertPDFCollectionViewCell"];
     
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _weeklyHeaderLabel.text = @"What Days Are You Available To Work";
+    }
+    else {
+        _weeklyHeaderLabel.text = @"Please indicate the days care is required";
+    }
+    
 }
 
 - (void) setupAvailibilityArr {

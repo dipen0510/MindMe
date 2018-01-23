@@ -414,7 +414,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="52.5" y="490" width="270" height="31"/>
+                                <rect key="frame" x="52.5" y="490" width="270" height="32"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">By pressing Register you agree with the
@@ -1788,8 +1788,8 @@ Cg
                                             <constraint firstAttribute="width" secondItem="Baq-cY-z3p" secondAttribute="height" multiplier="1:1" id="Tr5-4V-Shy"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add you Bio" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JMe-bi-8B7">
-                                        <rect key="frame" x="37" y="181" width="89" height="18"/>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add your Bio" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JMe-bi-8B7">
+                                        <rect key="frame" x="37" y="181" width="95" height="18"/>
                                         <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -1824,20 +1824,20 @@ Cg
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Experience in years required" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oZs-hu-QgD">
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Number of years experience" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oZs-hu-QgD">
                                         <rect key="frame" x="37" y="405.5" width="224.5" height="18"/>
                                         <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Languages required" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="23c-jw-3Ze">
-                                        <rect key="frame" x="37" y="454" width="147" height="18"/>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select your Primary languages" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="23c-jw-3Ze">
+                                        <rect key="frame" x="37" y="454" width="223" height="18"/>
                                         <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5 to 10 Euro" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T4U-8u-BGK">
-                                        <rect key="frame" x="51" y="308" width="72" height="20"/>
+                                        <rect key="frame" x="51" y="308" width="316" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="5E7-ty-AjZ"/>
                                         </constraints>
@@ -2030,6 +2030,20 @@ Cg
                                             <segue destination="2Ee-H5-kde" kind="show" identifier="showYourAdvertSegue" id="ny8-4J-Uws"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_edit_pencil" translatesAutoresizingMaskIntoConstraints="NO" id="fUb-v6-Myx">
+                                        <rect key="frame" x="205" y="76" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fUb-v6-Myx" secondAttribute="height" multiplier="1:1" id="OBq-Qx-pv1"/>
+                                            <constraint firstAttribute="height" constant="20" id="lIi-RB-COE"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_drop_down_grey_192x192" translatesAutoresizingMaskIntoConstraints="NO" id="Vz8-Of-Jot">
+                                        <rect key="frame" x="332" y="301" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="GLL-iR-Bkn"/>
+                                            <constraint firstAttribute="height" constant="35" id="jsX-Op-6Ir"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ryJ-0r-b9o" firstAttribute="width" secondItem="5s9-43-O5v" secondAttribute="width" id="0e1-EM-2sS"/>
@@ -2047,12 +2061,15 @@ Cg
                                     <constraint firstItem="4Xh-aU-lJY" firstAttribute="leading" secondItem="JMe-bi-8B7" secondAttribute="leading" id="8FF-4t-2YJ"/>
                                     <constraint firstAttribute="trailing" secondItem="sV8-Ea-6wG" secondAttribute="trailing" constant="8" id="95Z-xL-C1B"/>
                                     <constraint firstItem="x7Y-Bn-Q34" firstAttribute="width" secondItem="ruJ-pK-iig" secondAttribute="width" id="9mQ-aR-e83"/>
+                                    <constraint firstItem="ryJ-0r-b9o" firstAttribute="top" secondItem="Vz8-Of-Jot" secondAttribute="bottom" id="AUR-gh-wdv"/>
                                     <constraint firstItem="0CI-vT-ijd" firstAttribute="top" secondItem="23c-jw-3Ze" secondAttribute="bottom" constant="16" id="AwX-cV-KFJ"/>
                                     <constraint firstItem="gZP-gF-Ve0" firstAttribute="width" secondItem="Sj3-4g-Bad" secondAttribute="width" id="Bni-AC-msV"/>
                                     <constraint firstItem="I8A-YW-EDC" firstAttribute="centerY" secondItem="oZs-hu-QgD" secondAttribute="centerY" id="Cyz-OL-H77"/>
                                     <constraint firstItem="JMe-bi-8B7" firstAttribute="leading" secondItem="OaK-lT-o4R" secondAttribute="leading" constant="37" id="DB9-r0-jZl"/>
+                                    <constraint firstItem="fUb-v6-Myx" firstAttribute="trailing" secondItem="Baq-cY-z3p" secondAttribute="trailing" id="DwI-XQ-sSK"/>
                                     <constraint firstItem="ruJ-pK-iig" firstAttribute="leading" secondItem="wk7-Ic-2YI" secondAttribute="trailing" constant="8" id="EIj-a9-xhY"/>
                                     <constraint firstAttribute="trailing" secondItem="f1R-kx-pbq" secondAttribute="trailing" constant="16" id="FAA-3m-Inw"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vz8-Of-Jot" secondAttribute="trailing" constant="8" id="Gxb-XU-faX"/>
                                     <constraint firstItem="UV8-zN-Dih" firstAttribute="leading" secondItem="oZs-hu-QgD" secondAttribute="trailing" constant="16" id="HPp-Yu-M40"/>
                                     <constraint firstItem="FcV-eK-Ukh" firstAttribute="leading" secondItem="UV8-zN-Dih" secondAttribute="trailing" constant="4" id="IrY-P0-81M"/>
                                     <constraint firstItem="T4U-8u-BGK" firstAttribute="leading" secondItem="OaK-lT-o4R" secondAttribute="leading" constant="51" id="JDT-Ak-euf"/>
@@ -2091,10 +2108,12 @@ Cg
                                     <constraint firstItem="nD2-Rx-wuv" firstAttribute="centerY" secondItem="wk7-Ic-2YI" secondAttribute="centerY" id="pjH-uR-bMl"/>
                                     <constraint firstAttribute="trailing" secondItem="5s9-43-O5v" secondAttribute="trailing" id="qEb-lR-kqd"/>
                                     <constraint firstItem="XDf-IA-FMl" firstAttribute="centerX" secondItem="OaK-lT-o4R" secondAttribute="centerX" id="rBE-7F-UED"/>
+                                    <constraint firstItem="fUb-v6-Myx" firstAttribute="top" secondItem="f1R-kx-pbq" secondAttribute="bottom" constant="20" id="rcT-m7-Y6N"/>
                                     <constraint firstItem="OHm-jB-bXu" firstAttribute="top" secondItem="mLb-sQ-NIG" secondAttribute="bottom" constant="60" id="ssR-p2-dD1"/>
                                     <constraint firstItem="P8O-1D-0yu" firstAttribute="leading" secondItem="mLb-sQ-NIG" secondAttribute="leading" id="uTU-PB-3nW"/>
                                     <constraint firstItem="x7Y-Bn-Q34" firstAttribute="trailing" secondItem="sV8-Ea-6wG" secondAttribute="trailing" constant="-8" id="uk8-dd-ryZ"/>
                                     <constraint firstItem="I8A-YW-EDC" firstAttribute="leading" secondItem="FcV-eK-Ukh" secondAttribute="trailing" constant="4" id="uuY-u4-7HY"/>
+                                    <constraint firstAttribute="trailing" secondItem="T4U-8u-BGK" secondAttribute="trailing" constant="8" id="xNK-qX-DuE"/>
                                     <constraint firstItem="oZs-hu-QgD" firstAttribute="top" secondItem="ruJ-pK-iig" secondAttribute="bottom" constant="30" id="yQF-E3-Tzp"/>
                                     <constraint firstItem="gZP-gF-Ve0" firstAttribute="leading" secondItem="Sj3-4g-Bad" secondAttribute="trailing" constant="20" id="yes-xO-mXa"/>
                                     <constraint firstAttribute="trailing" secondItem="OHm-jB-bXu" secondAttribute="trailing" constant="24" id="zJA-mq-efG"/>
@@ -2753,6 +2772,7 @@ Cg
                         <outlet property="thirdCollectionViewHeightConstraint" destination="X1O-Fs-8zf" id="tfp-ko-ra4"/>
                         <outlet property="thirdCollectionViewTitle" destination="Eat-lR-gMh" id="Gk0-kf-eoH"/>
                         <outlet property="thirdCollectionViewTitleTopConstraint" destination="UxZ-Zm-oqA" id="VxZ-24-Vek"/>
+                        <outlet property="weeklyHeaderLabel" destination="qeU-Ld-Oxv" id="235-gG-tql"/>
                         <segue destination="1pa-YR-ITw" kind="show" identifier="showUploadDocSegue" id="CTT-AK-ZAd"/>
                     </connections>
                 </viewController>
@@ -9206,6 +9226,7 @@ We may send emails to existing customers or prospective customers who have enqui
         <image name="ic_phone" width="96" height="96"/>
         <image name="ic_search" width="96" height="96"/>
         <image name="ic_star" width="69" height="69"/>
+        <image name="icon_edit_pencil" width="76" height="76"/>
         <image name="imageLeft" width="1000" height="1000"/>
         <image name="like_btn" width="180" height="47"/>
         <image name="list" width="512" height="512"/>

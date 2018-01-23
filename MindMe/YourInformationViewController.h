@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PECropViewController.h"
 
-@interface YourInformationViewController : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PECropViewControllerDelegate, UITextFieldDelegate> {
+@interface YourInformationViewController : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PECropViewControllerDelegate, UITextFieldDelegate, UITextViewDelegate> {
     
     UIActionSheet* actSheet;
     UIImage* profileImage;
