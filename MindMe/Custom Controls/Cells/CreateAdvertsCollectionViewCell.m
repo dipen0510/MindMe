@@ -7,15 +7,20 @@
 //
 
 #import "CreateAdvertsCollectionViewCell.h"
+#import "ChooseCareTypeViewController.h"
 
 @implementation CreateAdvertsCollectionViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+        _titleLabel.userInteractionEnabled = YES;
+        [_titleLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleButtonTapped:)]];
+    
 }
 
 - (IBAction)toggleButtonTapped:(UIButton *)sender {
-    sender.selected = !sender.isSelected;
+        _toggleButton.selected = !_toggleButton.isSelected;
 }
+
 @end

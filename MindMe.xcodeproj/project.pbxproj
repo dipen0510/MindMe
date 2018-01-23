@@ -208,6 +208,8 @@
 		D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AD692A1F93363B009D57A7 /* AdsHomeViewController.m */; };
 		D4AD692F1F933668009D57A7 /* AdsHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */; };
 		D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */; };
+		D4E232EE20177064002F4961 /* ChooseCareTypeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E232EC20177064002F4961 /* ChooseCareTypeCollectionViewCell.m */; };
+		D4E232EF20177064002F4961 /* ChooseCareTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4E232ED20177064002F4961 /* ChooseCareTypeCollectionViewCell.xib */; };
 		D4E34B2A1FCEF92A00D53EDC /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E34B291FCEF92A00D53EDC /* StartViewController.m */; };
 		D4E34B2D1FCF17FC00D53EDC /* BuyPlansForParentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E34B2C1FCF17FC00D53EDC /* BuyPlansForParentsViewController.m */; };
 		D4E34B331FCF1D4B00D53EDC /* MembershipFAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E34B321FCF1D4B00D53EDC /* MembershipFAQViewController.m */; };
@@ -618,6 +620,9 @@
 		D4AD692C1F933668009D57A7 /* AdsHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsHomeTableViewCell.h; sourceTree = "<group>"; };
 		D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsHomeTableViewCell.m; sourceTree = "<group>"; };
 		D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdsHomeTableViewCell.xib; sourceTree = "<group>"; };
+		D4E232EB20177064002F4961 /* ChooseCareTypeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseCareTypeCollectionViewCell.h; sourceTree = "<group>"; };
+		D4E232EC20177064002F4961 /* ChooseCareTypeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseCareTypeCollectionViewCell.m; sourceTree = "<group>"; };
+		D4E232ED20177064002F4961 /* ChooseCareTypeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseCareTypeCollectionViewCell.xib; sourceTree = "<group>"; };
 		D4E34B281FCEF92A00D53EDC /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		D4E34B291FCEF92A00D53EDC /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		D4E34B2B1FCF17FC00D53EDC /* BuyPlansForParentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyPlansForParentsViewController.h; sourceTree = "<group>"; };
@@ -1664,6 +1669,9 @@
 				D4041AFA1FC0C601001F312E /* UploadDocumentsCollectionViewCell.h */,
 				D4041AFB1FC0C601001F312E /* UploadDocumentsCollectionViewCell.m */,
 				D4041AFC1FC0C601001F312E /* UploadDocumentsCollectionViewCell.xib */,
+				D4E232EB20177064002F4961 /* ChooseCareTypeCollectionViewCell.h */,
+				D4E232EC20177064002F4961 /* ChooseCareTypeCollectionViewCell.m */,
+				D4E232ED20177064002F4961 /* ChooseCareTypeCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1819,6 +1827,7 @@
 				D4041BE51FC0DEF5001F312E /* ic_progress-grey.pdf in Resources */,
 				D4041BD51FC0DEF5001F312E /* Media.xcassets in Resources */,
 				D4041AF61FC031AD001F312E /* AdvertPDFCollectionViewCell.xib in Resources */,
+				D4E232EF20177064002F4961 /* ChooseCareTypeCollectionViewCell.xib in Resources */,
 				D4041BDE1FC0DEF5001F312E /* MicButton.png in Resources */,
 				D4041BDA1FC0DEF5001F312E /* video-thumbnail.png in Resources */,
 				D4041BE01FC0DEF5001F312E /* cancel_icon.png in Resources */,
@@ -2125,6 +2134,7 @@
 				D4041BE81FC0DEF5001F312E /* QMChatDataSource.m in Sources */,
 				D4041C241FC0DEF5001F312E /* UIView+QM.m in Sources */,
 				D4041C1A1FC0DEF5001F312E /* QMAudioRecordButton.m in Sources */,
+				D4E232EE20177064002F4961 /* ChooseCareTypeCollectionViewCell.m in Sources */,
 				D40CDD6F1FAEE89100213855 /* DrivingLicenseInfoViewController.m in Sources */,
 				D4041C251FC0DEF5001F312E /* UIImage+QM.m in Sources */,
 				D4041BF71FC0DEF5001F312E /* QMBaseMediaCell.m in Sources */,

@@ -31,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *requiredRegularlyButton;
 @property (weak, nonatomic) IBOutlet UIButton *requiredOcassionalyButton;
 @property (weak, nonatomic) IBOutlet UILabel *experienceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *requiredRegularlyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *requiredOccasionallyLabel;
 
 - (IBAction)requiredOccassionalyButtonTapped:(UIButton *)sender;
 - (IBAction)requiredRegulartlyButtonTapped:(UIButton *)sender;

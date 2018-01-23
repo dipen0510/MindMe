@@ -58,6 +58,12 @@
     
     selectedLanguageArr = [[NSMutableArray alloc] init];
     
+    _requiredRegularlyLabel.userInteractionEnabled = YES;
+    [_requiredRegularlyLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(requiredRegulartlyButtonTapped:)]];
+    
+    _requiredOccasionallyLabel.userInteractionEnabled = YES;
+    [_requiredOccasionallyLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(requiredOccassionalyButtonTapped:)]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -150,12 +156,12 @@
 
 
 - (IBAction)requiredOccassionalyButtonTapped:(UIButton *)sender {
-    sender.selected = !sender.isSelected;
+    _requiredOcassionalyButton.selected = !_requiredOcassionalyButton.isSelected;
     _requiredRegularlyButton.selected = NO;
 }
 
 - (IBAction)requiredRegulartlyButtonTapped:(UIButton *)sender {
-    sender.selected = !sender.isSelected;
+    _requiredRegularlyButton.selected = !_requiredRegularlyButton.isSelected;
     _requiredOcassionalyButton.selected = NO;
 }
 

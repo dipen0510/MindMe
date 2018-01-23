@@ -7,7 +7,7 @@
 //
 
 #import "ChooseCareTypeViewController.h"
-#import "CreateAdvertsCollectionViewCell.h"
+#import "ChooseCareTypeCollectionViewCell.h"
 #import "YourInformationViewController.h"
 
 @interface ChooseCareTypeViewController ()
@@ -37,8 +37,8 @@
     _cancelButton.layer.borderWidth = 1.0;
     _cancelButton.layer.borderColor = _cancelButton.titleLabel.textColor.CGColor;
     
-    [self.firstCollectionView registerNib:[UINib nibWithNibName:@"CreateAdvertsCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"CreateAdvertsCollectionViewCell"];
-    [self.secondCollectionView registerNib:[UINib nibWithNibName:@"CreateAdvertsCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"CreateAdvertsCollectionViewCell"];
+    [self.firstCollectionView registerNib:[UINib nibWithNibName:@"ChooseCareTypeCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ChooseCareTypeCollectionViewCell"];
+    [self.secondCollectionView registerNib:[UINib nibWithNibName:@"ChooseCareTypeCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ChooseCareTypeCollectionViewCell"];
     
 }
 
@@ -85,12 +85,12 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"CreateAdvertsCollectionViewCell";
-    CreateAdvertsCollectionViewCell *cell = (CreateAdvertsCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"ChooseCareTypeCollectionViewCell";
+    ChooseCareTypeCollectionViewCell *cell = (ChooseCareTypeCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if (cell == nil) {
         // Load the top-level objects from the custom cell XIB.
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CreateAdvertsCollectionViewCell" owner:self options:nil];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ChooseCareTypeCollectionViewCell" owner:self options:nil];
         // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
         cell = [topLevelObjects objectAtIndex:0];
     }
@@ -134,18 +134,26 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (collectionView == _firstCollectionView) {
+        selectedCareType = [existingAdvertsArr objectAtIndex:indexPath.row];
+        [_firstCollectionView reloadData];
+        [_secondCollectionView reloadData];
+    }
+    else if (collectionView == _secondCollectionView) {
+        selectedCareType = [newAdvertsArr objectAtIndex:indexPath.row];
+        [_firstCollectionView reloadData];
+        [_secondCollectionView reloadData];
+    }
+    
     
 }
 
 
 #pragma mark - Populate Content
 
-- (void) populateContentForFirstCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
+- (void) populateContentForFirstCollectionViewCell:(ChooseCareTypeCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.titleLabel.text = [existingAdvertsArr objectAtIndex:indexPath.row];
-    
-    cell.toggleButton.tag = indexPath.row;
-    [cell.toggleButton addTarget:self action:@selector(editCareTypeToggleButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     if ([[existingAdvertsArr objectAtIndex:indexPath.row] isEqualToString:selectedCareType]) {
         cell.toggleButton.selected = YES;
@@ -156,12 +164,9 @@
     
 }
 
-- (void) populateContentForSecondCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
+- (void) populateContentForSecondCollectionViewCell:(ChooseCareTypeCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.titleLabel.text = [newAdvertsArr objectAtIndex:indexPath.row];
-    
-    cell.toggleButton.tag = indexPath.row;
-    [cell.toggleButton addTarget:self action:@selector(newCareTypeToggleButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     if ([[newAdvertsArr objectAtIndex:indexPath.row] isEqualToString:selectedCareType]) {
         cell.toggleButton.selected = YES;
@@ -169,24 +174,6 @@
     else {
         cell.toggleButton.selected = NO;
     }
-    
-}
-
-- (void) editCareTypeToggleButtonTapped:(UIButton *)sender {
-    
-    selectedCareType = [existingAdvertsArr objectAtIndex:sender.tag];
-    
-    [_firstCollectionView reloadData];
-    [_secondCollectionView reloadData];
-    
-}
-
-- (void) newCareTypeToggleButtonTapped:(UIButton *)sender {
-    
-    selectedCareType = [newAdvertsArr objectAtIndex:sender.tag];
-    
-    [_firstCollectionView reloadData];
-    [_secondCollectionView reloadData];
     
 }
 
