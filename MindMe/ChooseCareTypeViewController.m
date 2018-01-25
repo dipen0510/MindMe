@@ -205,6 +205,14 @@
         YourInformationViewController* controller = (YourInformationViewController*)[segue destinationViewController];
         controller.selectedCareType = selectedCareType;
         
+        if ([existingAdvertsArr containsObject:selectedCareType]) {
+            controller.advertDictToBeEdited = [userAdvertsArr objectAtIndex:[existingAdvertsArr indexOfObject:selectedCareType]];
+        }
+        else {
+            controller.advertDictToBeEdited = nil;
+        }
+        
+        
     }
     
 }

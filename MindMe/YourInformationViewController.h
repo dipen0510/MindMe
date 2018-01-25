@@ -19,6 +19,7 @@
 }
 
 @property (nonatomic, strong) NSString* selectedCareType;
+@property (nonatomic, strong) NSMutableDictionary* advertDictToBeEdited;
 
 @property (weak, nonatomic) IBOutlet UIImageView *profileImgView;
 @property (weak, nonatomic) IBOutlet UICollectionView *languagesCollectionView;

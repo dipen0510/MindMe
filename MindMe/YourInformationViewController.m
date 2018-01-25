@@ -12,6 +12,7 @@
 #import "SelectLanguageViewController.h"
 #import "ActionSheetPicker.h"
 #import "YourAdvertViewController.h"
+#import <UIImageView+AFNetworking.h>
 
 @interface YourInformationViewController () {
     
@@ -29,6 +30,7 @@
     
     [self setupInitialUI];
     [self setupActionSheet];
+    [self setupUIForEditingAdvert];
     
 }
 
@@ -65,6 +67,42 @@
     [_requiredOccasionallyLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(requiredOccassionalyButtonTapped:)]];
     
     _addYourBioTextView.delegate = self;
+    
+}
+
+- (void) setupUIForEditingAdvert {
+    
+    if (_advertDictToBeEdited) {
+        
+        if (![[_advertDictToBeEdited valueForKey:@"image_path"] isEqualToString:@""]) {
+            __weak UIImageView* weakImageView = _profileImgView;
+            [_profileImgView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceURL,[_advertDictToBeEdited valueForKey:@"image_path"]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
+                                                                     cachePolicy:NSURLRequestReturnCacheDataElseLoad
+                                                                 timeoutInterval:60.0] placeholderImage:[UIImage imageNamed:@"rewards_placeholder"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                
+                weakImageView.alpha = 0.0;
+                weakImageView.image = image;
+                profileImage = image;
+                [UIView animateWithDuration:0.25
+                                 animations:^{
+                                     weakImageView.alpha = 1.0;
+                                 }];
+            } failure:NULL];
+        }
+        
+        _addYourBioTextView.text = [_advertDictToBeEdited valueForKey:@"about_you"];
+        _preferredRateTextField.text = [_advertDictToBeEdited valueForKey:@"pay"];
+        
+        if ([[_advertDictToBeEdited valueForKey:@"frequency"] isEqualToString:@"Ocassional"]) {
+            _requiredOcassionalyButton.selected = YES;
+        }
+        else {
+            _requiredRegularlyButton.selected = YES;
+        }
+        
+        _experienceLabel.text = [NSString stringWithFormat:@"%@ years",[_advertDictToBeEdited valueForKey:@"experience"]];
+        
+    }
     
 }
 
