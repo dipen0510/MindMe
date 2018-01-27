@@ -63,11 +63,12 @@
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIt-YL-dAZ">
-                        <rect key="frame" x="283" y="67" width="15" height="21"/>
+                        <rect key="frame" x="273" y="64" width="25" height="35"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="jIt-YL-dAZ" secondAttribute="height" multiplier="5:7" id="bqy-qz-BML"/>
-                            <constraint firstAttribute="width" constant="15" id="gtt-oa-oTX"/>
+                            <constraint firstAttribute="width" constant="25" id="gtt-oa-oTX"/>
                         </constraints>
+                        <inset key="imageEdgeInsets" minX="4" minY="4" maxX="4" maxY="9"/>
                         <state key="normal" image="trash_icon"/>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFy-1l-uLx">
@@ -86,7 +87,7 @@
                     <constraint firstItem="Qh4-rf-zgU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="VB8-dU-0JC"/>
                     <constraint firstAttribute="trailing" secondItem="gFy-1l-uLx" secondAttribute="trailing" constant="12" id="cqw-9h-vIv"/>
                     <constraint firstAttribute="bottom" secondItem="gFy-1l-uLx" secondAttribute="bottom" id="fXD-hd-RBs"/>
-                    <constraint firstItem="jIt-YL-dAZ" firstAttribute="top" secondItem="nBy-PY-eF8" secondAttribute="bottom" constant="29" id="hQo-Bu-HJq"/>
+                    <constraint firstItem="jIt-YL-dAZ" firstAttribute="top" secondItem="nBy-PY-eF8" secondAttribute="bottom" constant="26" id="hQo-Bu-HJq"/>
                     <constraint firstItem="Qh4-rf-zgU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="hyk-es-WpJ"/>
                     <constraint firstAttribute="trailingMargin" secondItem="jIt-YL-dAZ" secondAttribute="trailing" constant="14" id="mxG-20-QWQ"/>
                     <constraint firstItem="nBy-PY-eF8" firstAttribute="leading" secondItem="Qh4-rf-zgU" secondAttribute="trailing" constant="8" id="nD3-G0-uZs"/>

@@ -68,6 +68,11 @@
     
     _addYourBioTextView.delegate = self;
     
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _numberOfExperienceStaticLabel.text = @"Experience in years required";
+    }
+    
+    
 }
 
 - (void) setupUIForEditingAdvert {

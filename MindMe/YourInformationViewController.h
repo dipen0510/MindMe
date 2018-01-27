@@ -34,6 +34,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *experienceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *requiredRegularlyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *requiredOccasionallyLabel;
+@property (weak, nonatomic) IBOutlet UITextField *numberOfExperienceStaticLabel;
 
 - (IBAction)requiredOccassionalyButtonTapped:(UIButton *)sender;
 - (IBAction)requiredRegulartlyButtonTapped:(UIButton *)sender;

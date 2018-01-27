@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AdvertsViewController : UIViewController <DataSyncManagerDelegate> {
+@interface AdvertsViewController : UIViewController <DataSyncManagerDelegate, UIAlertViewDelegate> {
     
     NSMutableArray* advertsArr;
     NSMutableDictionary* editAdvertDict;
+    NSMutableDictionary* deleteAdvertDict;
     
 }
 

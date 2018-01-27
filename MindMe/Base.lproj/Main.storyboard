@@ -1241,7 +1241,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIKED CARE PROVIDERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuX-6v-qTx">
-                                <rect key="frame" x="100.5" y="104" width="176" height="19"/>
+                                <rect key="frame" x="99.5" y="104" width="176" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2142,6 +2142,7 @@ Cg
                         <outlet property="languagesCollectionView" destination="0CI-vT-ijd" id="IMC-dP-h91"/>
                         <outlet property="miscCollectionView" destination="jZY-I1-I64" id="CXA-4u-s8R"/>
                         <outlet property="nextButton" destination="Sj3-4g-Bad" id="udU-iv-Xvf"/>
+                        <outlet property="numberOfExperienceStaticLabel" destination="oZs-hu-QgD" id="Vsw-Gs-vWX"/>
                         <outlet property="preferredRateTextField" destination="T4U-8u-BGK" id="Mv1-5s-ro1"/>
                         <outlet property="profileImgView" destination="Baq-cY-z3p" id="W21-dw-Q61"/>
                         <outlet property="requiredOcassionalyButton" destination="nD2-Rx-wuv" id="1Xc-De-VZO"/>
@@ -2581,7 +2582,7 @@ Cg
                                             <color key="titleColor" red="0.33709710840000001" green="0.34114208820000003" blue="0.34525841470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ylt-eY-MVF">
+                                    <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ylt-eY-MVF">
                                         <rect key="frame" x="37" y="1543" width="275" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -2614,7 +2615,18 @@ Cg
                                         <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXw-b5-Khh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="QGo-gi-hOc">
+                                        <rect key="frame" x="37" y="1543" width="322" height="50.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50.5" id="hV8-rS-esJ"/>
+                                        </constraints>
+                                        <string key="text">Kindly upload your CV by logging in on www.mindme.ie or by downloading
+our Android App from the Google Play Store</string>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXw-b5-Khh">
                                         <rect key="frame" x="323" y="1549" width="36" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="8Ec-Ty-RYQ"/>
@@ -2637,6 +2649,7 @@ Cg
                                     <constraint firstAttribute="trailing" secondItem="bch-JX-zQs" secondAttribute="trailing" id="66U-O0-yG1"/>
                                     <constraint firstItem="lfG-JU-DhE" firstAttribute="top" secondItem="ZsY-co-iYH" secondAttribute="top" constant="20" id="6jN-BN-VE0"/>
                                     <constraint firstItem="YLU-Gt-x3c" firstAttribute="leading" secondItem="ZsY-co-iYH" secondAttribute="leading" constant="16" id="74Q-3q-pzK"/>
+                                    <constraint firstItem="DXw-b5-Khh" firstAttribute="trailing" secondItem="QGo-gi-hOc" secondAttribute="trailing" id="83y-PX-xp2"/>
                                     <constraint firstItem="FCW-IJ-c5x" firstAttribute="leading" secondItem="ZsY-co-iYH" secondAttribute="leading" id="9vq-AL-VCB"/>
                                     <constraint firstItem="x3Z-V1-B4M" firstAttribute="height" secondItem="MSb-JG-BTa" secondAttribute="height" id="A3p-tz-6Qc"/>
                                     <constraint firstAttribute="trailing" secondItem="Gn7-be-xc6" secondAttribute="trailing" constant="20" id="AN6-Us-iU8"/>
@@ -2671,6 +2684,7 @@ Cg
                                     <constraint firstItem="3Zt-hE-ilA" firstAttribute="top" secondItem="KwU-1F-Xse" secondAttribute="bottom" constant="12" id="RB0-d7-D2m"/>
                                     <constraint firstAttribute="trailing" secondItem="KwU-1F-Xse" secondAttribute="trailing" id="Rkt-7f-5jt"/>
                                     <constraint firstAttribute="trailing" secondItem="aY1-ID-E1c" secondAttribute="trailing" constant="20" id="Tb6-PC-LB9"/>
+                                    <constraint firstItem="QGo-gi-hOc" firstAttribute="top" secondItem="H5V-VO-tWd" secondAttribute="bottom" constant="12" id="Tg7-2h-7uI"/>
                                     <constraint firstItem="dgV-10-CjF" firstAttribute="top" secondItem="w8E-ya-vgW" secondAttribute="bottom" constant="12" id="TkS-i4-TVT"/>
                                     <constraint firstItem="bch-JX-zQs" firstAttribute="top" secondItem="xkw-SY-gzc" secondAttribute="bottom" constant="12" id="TuG-R0-gVz"/>
                                     <constraint firstItem="Eat-lR-gMh" firstAttribute="top" secondItem="2Pv-m7-Xb8" secondAttribute="bottom" constant="20" id="UxZ-Zm-oqA"/>
@@ -2717,6 +2731,7 @@ Cg
                                     <constraint firstAttribute="trailing" secondItem="w8E-ya-vgW" secondAttribute="trailing" id="ymy-cI-adE"/>
                                     <constraint firstAttribute="trailing" secondItem="2Pv-m7-Xb8" secondAttribute="trailing" constant="16" id="z42-LQ-Jka"/>
                                     <constraint firstItem="g2g-Cn-iH0" firstAttribute="leading" secondItem="ZsY-co-iYH" secondAttribute="leading" constant="16" id="zYy-AJ-X2t"/>
+                                    <constraint firstItem="QGo-gi-hOc" firstAttribute="leading" secondItem="ylt-eY-MVF" secondAttribute="leading" id="zzU-s6-x3P"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -2735,6 +2750,7 @@ Cg
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1900"/>
                     <connections>
+                        <outlet property="advertIsActiveLabelTopConstraint" destination="Mjh-LS-UEp" id="uoQ-OH-W7f"/>
                         <outlet property="cancelButton" destination="x3Z-V1-B4M" id="kCt-pS-uYw"/>
                         <outlet property="cvCollectionView" destination="ylt-eY-MVF" id="Tdg-K8-3jJ"/>
                         <outlet property="daysRequiredCollectionView" destination="YLU-Gt-x3c" id="icX-ej-FdW"/>
@@ -2775,6 +2791,8 @@ Cg
                         <outlet property="thirdCollectionViewHeightConstraint" destination="X1O-Fs-8zf" id="tfp-ko-ra4"/>
                         <outlet property="thirdCollectionViewTitle" destination="Eat-lR-gMh" id="Gk0-kf-eoH"/>
                         <outlet property="thirdCollectionViewTitleTopConstraint" destination="UxZ-Zm-oqA" id="VxZ-24-Vek"/>
+                        <outlet property="uploadCVDescLabel" destination="QGo-gi-hOc" id="xCI-P3-S4V"/>
+                        <outlet property="uploadCVStaticLabel" destination="H5V-VO-tWd" id="MhH-aH-q6i"/>
                         <outlet property="weeklyHeaderLabel" destination="qeU-Ld-Oxv" id="235-gG-tql"/>
                         <segue destination="1pa-YR-ITw" kind="show" identifier="showUploadDocSegue" id="CTT-AK-ZAd"/>
                     </connections>
@@ -5495,7 +5513,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews only - No Contact Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImO-Cp-K3c">
-                                <rect key="frame" x="78" y="198" width="221" height="17"/>
+                                <rect key="frame" x="77" y="198" width="221" height="17"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

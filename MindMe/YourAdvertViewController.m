@@ -53,7 +53,13 @@
         _weeklyHeaderLabel.text = @"What Days Are You Available To Work";
     }
     else {
+        
         _weeklyHeaderLabel.text = @"Please indicate the days care is required";
+        
+        _uploadCVStaticLabel.hidden = YES;
+        _uploadCVDescLabel.hidden = YES;
+        _advertIsActiveLabelTopConstraint.constant = -76.;
+        
     }
     
     _isAdvertActiveLabel.delegate = self;
@@ -344,7 +350,6 @@
     _sixthCollectionSeparatorView.hidden = YES;
     
     _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
-    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
 }
@@ -428,7 +433,6 @@
     _sixthCollectionSeparatorView.hidden = YES;
     
     _seventhCollectionViewTitleTopConstraint.constant = -44 - _sixthCollectionViewHeightConstraint.constant;
-    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
 }
@@ -470,7 +474,6 @@
     _sixthCollectionSeparatorView.hidden = YES;
     
     _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
-    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
 }
@@ -512,7 +515,6 @@
     _sixthCollectionSeparatorView.hidden = YES;
     
     _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
-    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
 }
@@ -678,7 +680,6 @@
     _sixthCollectionSeparatorView.hidden = YES;
     
     _seventhCollectionViewTitleTopConstraint.constant = -44 - _sixthCollectionViewHeightConstraint.constant;
-    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Tutor", nil];
     
 }
@@ -720,7 +721,6 @@
     _sixthCollectionSeparatorView.hidden = YES;
     
     _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
-    _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", nil];
     
 }

@@ -56,7 +56,7 @@
     if (![[SharedClass sharedInstance] isUserCarer]) {
         
 //        _createAdvertButton.hidden = YES;
-        _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"Subscribed"];
+        _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"Subscribed\n"];
         
     }
     
@@ -201,8 +201,11 @@
 
 - (void) advertDeleteButtonTapped:(UIButton *)sender {
     
-    [self startDeleteAdvertsServiceForAdvert:[advertsArr objectAtIndex:sender.tag]];
+    deleteAdvertDict = [[NSMutableDictionary alloc] initWithDictionary:[advertsArr objectAtIndex:sender.tag]];
     
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Confirm Delete" message:@"Are you sure you want to delete." delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+    [alert show];
+
 }
 
 - (void) advertEditButtonTapped:(UIButton *)sender {
@@ -382,6 +385,16 @@
     }
     
     _liveAdvertValueLabel.text = [NSString stringWithFormat:@"%d",count];
+    
+}
+
+#pragma mark - AlertView Delegate
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 1) {
+        [self startDeleteAdvertsServiceForAdvert:deleteAdvertDict];
+    }
     
 }
 @end

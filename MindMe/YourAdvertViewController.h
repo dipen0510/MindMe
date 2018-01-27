@@ -54,6 +54,9 @@
 @property (weak, nonatomic) IBOutlet UIView *sixthCollectionSeparatorView;
 @property (weak, nonatomic) IBOutlet UIView *seventhCollectionSeparatorView;
 
+@property (weak, nonatomic) IBOutlet UILabel *uploadCVStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *uploadCVDescLabel;
+
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)addButtonTapped:(id)sender;
 - (IBAction)nextButtonTapped:(id)sender;
@@ -73,5 +76,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *fifthCollectionViewTitleTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *sixthCollectionViewTitleTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *seventhCollectionViewTitleTopConstraint;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *advertIsActiveLabelTopConstraint;
 
 @end

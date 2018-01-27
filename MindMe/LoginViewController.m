@@ -97,6 +97,7 @@
     [SVProgressHUD dismiss];
     
     if ([requestServiceKey isEqualToString:LoginServiceKey] || [requestServiceKey isEqualToString:FBLoginServiceKey]) {
+        [[SharedClass sharedInstance] setIsEditProfileMenuButtonHidden:NO];
         [self performSegueWithIdentifier:@"showHomeSegue" sender:nil];
     }
     

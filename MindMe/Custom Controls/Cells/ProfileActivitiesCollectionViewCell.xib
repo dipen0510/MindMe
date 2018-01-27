@@ -31,11 +31,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoD-h2-jv1">
-                        <rect key="frame" x="88" y="5" width="8" height="8"/>
+                        <rect key="frame" x="80" y="5" width="16" height="16"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="8" id="821-8j-JUZ"/>
-                            <constraint firstAttribute="height" constant="8" id="RC8-xA-wz0"/>
+                            <constraint firstAttribute="width" constant="16" id="821-8j-JUZ"/>
+                            <constraint firstAttribute="height" constant="16" id="RC8-xA-wz0"/>
                         </constraints>
+                        <inset key="imageEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
                         <state key="normal" image="cancel_icon"/>
                     </button>
                 </subviews>
