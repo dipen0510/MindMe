@@ -19,5 +19,6 @@
 #import "DataSyncManager.h"
 #import "SVProgressHUD.h"
 #import "FBLoginHelper.h"
+#import <UIImageView+AFNetworking.h>
 
 #endif /* PrefixHeader_pch */

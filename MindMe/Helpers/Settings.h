@@ -26,6 +26,7 @@
 #define DeleteAdvert @"profile/delProfileDetails"
 #define AddCarerAdvert @"profile/updateCarerProfileDetails"
 #define AddParentAdvert @"advert/updateParentProfileDetails"
+#define GetAllHomeAdverts @"fetchAll_profile"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"

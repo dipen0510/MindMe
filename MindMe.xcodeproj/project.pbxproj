@@ -1520,6 +1520,8 @@
 				D48EE4A31F9B2A2400CB43A0 /* Library */,
 				D43143BC1F98E02B00FE0406 /* Resources */,
 				D4A019B41F850F0200E311B7 /* Supporting Files */,
+				D4E34B281FCEF92A00D53EDC /* StartViewController.h */,
+				D4E34B291FCEF92A00D53EDC /* StartViewController.m */,
 				D4A019E71F85386C00E311B7 /* LoginViewController.h */,
 				D4A019E81F85386C00E311B7 /* LoginViewController.m */,
 				D4A019EA1F85482800E311B7 /* RegisterViewController.h */,
@@ -1580,8 +1582,6 @@
 				D4041B061FC0D737001F312E /* AddReviewViewController.m */,
 				D4041C2B1FC0DFFB001F312E /* ChatViewController.h */,
 				D4041C2C1FC0DFFC001F312E /* ChatViewController.m */,
-				D4E34B281FCEF92A00D53EDC /* StartViewController.h */,
-				D4E34B291FCEF92A00D53EDC /* StartViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";

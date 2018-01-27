@@ -50,6 +50,9 @@
         }
 
     }
+    else {
+        [self startGetAdvertsService];
+    }
     
 }
 
@@ -69,7 +72,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 5;
+    return advertsArr.count;
     
 }
 
@@ -119,6 +122,10 @@
     cell.drivingLicenseImgView.userInteractionEnabled = YES;
     [cell.drivingLicenseImgView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(drivingLicenseImgViewTapped)]];
     
+    cell.drivingLicenseImgView.hidden = YES;
+    cell.euImgView.hidden = YES;
+    cell.lastLoginLabel.hidden = YES;
+    
     if ([[SharedClass sharedInstance] isUserCarer]) {
         cell.yearsExperienceStaticLabel.text = @"Years of Experience needed :";
     }
@@ -126,6 +133,29 @@
         cell.yearsExperienceStaticLabel.text = @"Years of Experience ";
     }
     
+    cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"second_name"]];
+    cell.locationLabel.text = [[advertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"];
+    cell.careTypeLabel.text = [[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
+    cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ yrs minimum",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
+    cell.descLabel.text = [[advertsArr objectAtIndex:indexPath.row] valueForKey:@"love_optional"];
+    
+    if (![[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqualToString:@""]) {
+        __weak UIImageView* weakImageView = cell.profileImgView;
+        [cell.profileImgView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceURL,[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"image_path"]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
+                                                                 cachePolicy:NSURLRequestReturnCacheDataElseLoad
+                                                             timeoutInterval:60.0] placeholderImage:[UIImage imageNamed:@"profile_icon"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+            
+            weakImageView.alpha = 0.0;
+            weakImageView.image = image;
+            [UIView animateWithDuration:0.25
+                             animations:^{
+                                 weakImageView.alpha = 1.0;
+                             }];
+        } failure:NULL];
+    }
+    else {
+        cell.profileImgView.image = [UIImage imageNamed:@"profile_icon"];
+    }
     
 }
 
@@ -224,4 +254,103 @@
                                           origin:sender];
     
 }
+
+#pragma mark - API Helpers
+
+- (void) startGetAdvertsService {
+    
+    [SVProgressHUD showWithStatus:@"Fetching data"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GetAllHomeAdverts;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForGetPostedAdverts]];
+    
+}
+
+#pragma mark - DATASYNCMANAGER Delegates
+
+-(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
+    
+    if ([requestServiceKey isEqualToString:GetAllHomeAdverts]) {
+        
+        [SVProgressHUD showSuccessWithStatus:@"Data refreshed successfully"];
+        
+        if ([[responseData valueForKey:@"message"] isKindOfClass:[NSArray class]]) {
+            advertsArr = [[NSMutableArray alloc] initWithArray:[responseData valueForKey:@"message"]];
+        }
+        
+        [_advertTblView reloadData];
+        
+    }
+    
+    
+    
+}
+
+
+- (void) didFinishServiceWithFailure:(NSString *)errorMsg {
+    
+    
+    [SVProgressHUD dismiss];
+    
+    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:nil
+                                                  message:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)
+                                                 delegate:self
+                                        cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                        otherButtonTitles: nil];
+    
+    if (![errorMsg isEqualToString:@""]) {
+        [alert setMessage:errorMsg];
+    }
+    
+    if ([errorMsg isEqualToString:NSLocalizedString(@"Verify your internet connection and try again", nil)]) {
+        [alert setTitle:NSLocalizedString(@"Connection unsuccessful", nil)];
+    }
+    
+    [alert show];
+    
+    return;
+    
+}
+
+
+
+
+#pragma mark - Modalobject
+
+- (NSMutableDictionary *) prepareDictionaryForGetPostedAdverts {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    if ([[SharedClass sharedInstance] isGuestUser]) {
+        
+        [dict setObject:@"53.3664257" forKey:@"lat"];
+        [dict setObject:@"-6.0769125" forKey:@"long"];
+        [dict setObject:@"Dublin, Ireland" forKey:@"address"];
+        
+    }
+    else {
+        
+        NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
+        NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
+        
+        [dict setObject:[responseData valueForKey:@"latitude"] forKey:@"lat"];
+        [dict setObject:[responseData valueForKey:@"longitude"] forKey:@"long"];
+        [dict setObject:[responseData valueForKey:@"address1"] forKey:@"address"];
+        
+    }
+    
+    return dict;
+    
+}
+
+
 @end

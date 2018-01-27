@@ -8,14 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AdsHomeViewController : UIViewController
+@interface AdsHomeViewController : UIViewController <DataSyncManagerDelegate> {
+    
+    NSMutableArray* advertsArr;
+    
+}
 
-- (IBAction)menuButtonTapped:(id)sender;
-- (IBAction)filterButtonTapped:(id)sender;
 @property (weak, nonatomic) IBOutlet UIView *favoritesView;
 @property (weak, nonatomic) IBOutlet UIView *messagesView;
-- (IBAction)carerTypeButtonTapped:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *carerTypeTextField;
+@property (weak, nonatomic) IBOutlet UITableView *advertTblView;
+
+- (IBAction)carerTypeButtonTapped:(id)sender;
+- (IBAction)menuButtonTapped:(id)sender;
+- (IBAction)filterButtonTapped:(id)sender;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *carerTypeTFLeadingConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *carerTypeTFTopConstraint;
 

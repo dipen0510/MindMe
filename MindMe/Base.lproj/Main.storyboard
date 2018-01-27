@@ -1173,6 +1173,7 @@ Terms of Services and Privacy Policy</string>
                     </view>
                     <navigationItem key="navigationItem" id="HcK-rk-FFo"/>
                     <connections>
+                        <outlet property="advertTblView" destination="22P-W0-D5q" id="eQ9-VD-DoJ"/>
                         <outlet property="carerTypeTFLeadingConstraint" destination="OCD-9v-fu8" id="4jQ-nb-sI4"/>
                         <outlet property="carerTypeTFTopConstraint" destination="SVb-Al-7R6" id="m3N-XP-Fja"/>
                         <outlet property="carerTypeTextField" destination="Y3A-uD-AX2" id="aYi-MW-WNA"/>
@@ -9271,8 +9272,8 @@ We may send emails to existing customers or prospective customers who have enqui
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6aR-De-M3m"/>
-        <segue reference="sPX-6B-Ijk"/>
-        <segue reference="YPO-6i-SEz"/>
+        <segue reference="1mT-Qk-sm6"/>
+        <segue reference="84t-sz-c2d"/>
         <segue reference="eOh-mb-7xJ"/>
         <segue reference="f1d-Wb-gFu"/>
     </inferredMetricsTieBreakers>

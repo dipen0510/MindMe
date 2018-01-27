@@ -12,7 +12,6 @@
 #import "SelectLanguageViewController.h"
 #import "ActionSheetPicker.h"
 #import "YourAdvertViewController.h"
-#import <UIImageView+AFNetworking.h>
 
 @interface YourInformationViewController () {
     
@@ -80,11 +79,10 @@
     if (_advertDictToBeEdited) {
         
         if (![[_advertDictToBeEdited valueForKey:@"image_path"] isEqualToString:@""]) {
-            _profileImgView.image = nil;
             __weak UIImageView* weakImageView = _profileImgView;
             [_profileImgView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceURL,[_advertDictToBeEdited valueForKey:@"image_path"]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
                                                                      cachePolicy:NSURLRequestReturnCacheDataElseLoad
-                                                                 timeoutInterval:60.0] placeholderImage:[UIImage imageNamed:@"rewards_placeholder"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                                                 timeoutInterval:60.0] placeholderImage:[UIImage imageNamed:@"profile_icon"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
                 
                 weakImageView.alpha = 0.0;
                 weakImageView.image = image;
