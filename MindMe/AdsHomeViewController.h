@@ -11,6 +11,7 @@
 @interface AdsHomeViewController : UIViewController <DataSyncManagerDelegate> {
     
     NSMutableArray* advertsArr;
+    NSMutableDictionary* selectedAdvertDict;
     
 }
 

@@ -21,6 +21,7 @@
     
     [self setupInitialUI];
     [self setupAvailibilityArr];
+    [self setupValueLayoutForAdvert];
     
 }
 
@@ -48,16 +49,6 @@
         _doneButtonHeightConstraint.constant = (([UIScreen mainScreen].bounds.size.width - 84)/2.) * (47./180.);
     }
     else {
-//        _doneButton.layer.cornerRadius = 22.5;
-//        _doneButton.layer.masksToBounds = NO;
-//        
-//        _footerContactButton.layer.cornerRadius = 22.5;
-//        _footerContactButton.layer.masksToBounds = NO;
-//        
-//        _cancelButton.layer.cornerRadius = 22.5;
-//        _cancelButton.layer.masksToBounds = NO;
-//        _cancelButton.layer.borderWidth = 1.0;
-//        _cancelButton.layer.borderColor = _cancelButton.titleLabel.textColor.CGColor;
         
         _footerContactButton.hidden = YES;
         _doneButton.hidden = YES;
@@ -75,8 +66,107 @@
     
     availabilityArr = [[NSMutableArray alloc] init];
     
+    NSMutableArray* bookingArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"booking"] componentsSeparatedByString:@","]];
+    NSMutableArray* indexArr = [[NSMutableArray alloc] init];
+    
+    for (NSString* str in bookingArr) {
+        int i = [self fullNameForAvailabilityIndex:[[str componentsSeparatedByString:@" "] lastObject]]*8 + [self fullNameForWeekdayAvailabilityIndex:[[str componentsSeparatedByString:@" "] firstObject]];
+        [indexArr addObject:[NSNumber numberWithInt:i]];
+    }
+    
     for (int i = 0; i<48; i++) {
-        [availabilityArr addObject:[NSNumber numberWithInt:0]];
+        
+        if ([indexArr containsObject:[NSNumber numberWithInt:i]]) {
+            [availabilityArr addObject:[NSNumber numberWithInt:1]];
+        }
+        else {
+            [availabilityArr addObject:[NSNumber numberWithInt:0]];
+        }
+        
+    }
+    
+}
+
+- (void) setupValueLayoutForAdvert {
+    
+    _nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[_advertDict valueForKey:@"first_name"],[[_advertDict valueForKey:@"second_name"] substringToIndex:1]];
+    _locationLabel.text = [_advertDict valueForKey:@"address1"];
+    _careTypeLabel.text = [_advertDict valueForKey:@"care_type"];
+    _experienceValueLabel.text = [NSString stringWithFormat:@"%@ years",[_advertDict valueForKey:@"experience"]];
+    _aboutTextView.text = [_advertDict valueForKey:@"about_you"];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _jobActiveViewsLabel.hidden = YES;
+    }
+    else {
+        _jobActiveViewsLabel.hidden = NO;
+        _jobActiveViewsLabel.text = [NSString stringWithFormat:@"Job Active %@ views",[_advertDict valueForKey:@"viewed"]];
+    }
+    
+    _rateLabel.text = [_advertDict valueForKey:@"pay"];
+    
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    
+    NSDateFormatter* dateFormatter1 = [[NSDateFormatter alloc] init];
+    [dateFormatter1 setDateStyle:NSDateFormatterMediumStyle];
+    
+    _lastLoginLabel.text = [dateFormatter1 stringFromDate:[dateFormatter dateFromString:[_advertDict valueForKey:@"posted"]]];
+    _memberSinceLabel.text = [dateFormatter1 stringFromDate:[dateFormatter dateFromString:[_advertDict valueForKey:@"date"]]];
+    
+    if ([[_advertDict valueForKey:@"additionals"] containsString:_haveACaerLabel.text]) {
+        _haveACarImgView.image = [UIImage imageNamed:@"ic_green_correct"];
+    }
+    else {
+        _haveACarImgView.image = [UIImage imageNamed:@"ic_cross"];
+    }
+    
+    if ([[_advertDict valueForKey:@"additionals"] containsString:_comfortableWithpetsLabel.text]) {
+        _comfortableWithPetsImgView.image = [UIImage imageNamed:@"ic_green_correct"];
+    }
+    else {
+        _comfortableWithPetsImgView.image = [UIImage imageNamed:@"ic_cross"];
+    }
+    
+    if ([[_advertDict valueForKey:@"additionals"] containsString:_acceptOnlinePaymentLabel.text]) {
+        _acceptOnlinePaymentImgView.image = [UIImage imageNamed:@"ic_green_correct"];
+    }
+    else {
+        _acceptOnlinePaymentImgView.image = [UIImage imageNamed:@"ic_cross"];
+    }
+    
+    if ([[_advertDict valueForKey:@"additionals"] containsString:_nonSmokerLabel.text]) {
+        _nonSmokerImgView.image = [UIImage imageNamed:@"ic_green_correct"];
+    }
+    else {
+        _nonSmokerImgView.image = [UIImage imageNamed:@"ic_cross"];
+    }
+    
+    if ([[_advertDict valueForKey:@"emer"] intValue] == 1) {
+        _shortNoticeImgView.image = [UIImage imageNamed:@"ic_green_correct"];
+    }
+    else {
+        _shortNoticeImgView.image = [UIImage imageNamed:@"ic_cross"];
+    }
+    
+    _languagesValueLabel.text = [NSString stringWithFormat:@"Languages: %@",[_advertDict valueForKey:@"languages"]];
+    
+    if (![[_advertDict valueForKey:@"image_path"] isEqualToString:@""]) {
+        __weak UIImageView* weakImageView = _profileImgView;
+        [_profileImgView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceURL,[_advertDict valueForKey:@"image_path"]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
+                                                                     cachePolicy:NSURLRequestReturnCacheDataElseLoad
+                                                                 timeoutInterval:60.0] placeholderImage:[UIImage imageNamed:@"profile_icon"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+            
+            weakImageView.alpha = 0.0;
+            weakImageView.image = image;
+            [UIView animateWithDuration:0.25
+                             animations:^{
+                                 weakImageView.alpha = 1.0;
+                             }];
+        } failure:NULL];
+    }
+    else {
+        _profileImgView.image = [UIImage imageNamed:@"profile_icon"];
     }
     
 }
@@ -163,13 +253,13 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     
-        if (indexPath.row%8 != 0 && indexPath.row>=8) {
-            
-            int currentStatus = [[availabilityArr objectAtIndex:indexPath.row] intValue];
-            [availabilityArr replaceObjectAtIndex:indexPath.row withObject:[NSNumber numberWithInt:!currentStatus]];
-            [collectionView reloadData];
-            
-        }
+//        if (indexPath.row%8 != 0 && indexPath.row>=8) {
+//            
+//            int currentStatus = [[availabilityArr objectAtIndex:indexPath.row] intValue];
+//            [availabilityArr replaceObjectAtIndex:indexPath.row withObject:[NSNumber numberWithInt:!currentStatus]];
+//            [collectionView reloadData];
+//            
+//        }
 
     
 }
@@ -254,6 +344,51 @@
     }
     
     return YES;
+    
+}
+
+
+- (int) fullNameForAvailabilityIndex:(NSString *)str {
+    
+    if ([str isEqualToString:@"Morning"]) {
+        return 1;
+    }
+    else if ([str isEqualToString:@"Afternoon"]) {
+        return 2;
+    }
+    else if ([str isEqualToString:@"Evening"]) {
+        return 3;
+    }
+    else if ([str isEqualToString:@"Night"]) {
+        return 4;
+    }
+    
+    return 5;
+    
+}
+
+- (int) fullNameForWeekdayAvailabilityIndex:(NSString *)str {
+    
+    if ([str isEqualToString:@"Monday"]) {
+        return 1;
+    }
+    else if ([str isEqualToString:@"Tuesday"]) {
+        return 2;
+    }
+    else if ([str isEqualToString:@"Wednesday"]) {
+        return 3;
+    }
+    else if ([str isEqualToString:@"Thursday"]) {
+        return 4;
+    }
+    else if ([str isEqualToString:@"Friday"]) {
+        return 5;
+    }
+    else if ([str isEqualToString:@"Saturday"]) {
+        return 6;
+    }
+    
+    return 7;
     
 }
 

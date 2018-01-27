@@ -11,6 +11,7 @@
 #import "DrivingLicenseInfoViewController.h"
 #import "FilterViewController.h"
 #import "ActionSheetPicker.h"
+#import "AdsDetailViewController.h"
 
 @interface AdsHomeViewController () {
     DrivingLicenseInfoViewController *drivingInfoViewController;
@@ -102,6 +103,7 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    selectedAdvertDict = [[NSMutableDictionary alloc] initWithDictionary:[advertsArr objectAtIndex:indexPath.row]];
     [self performSegueWithIdentifier:@"showAdsDetailSegue" sender:nil];
     
 }
@@ -133,11 +135,11 @@
         cell.yearsExperienceStaticLabel.text = @"Years of Experience ";
     }
     
-    cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"second_name"]];
+    cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
     cell.locationLabel.text = [[advertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"];
     cell.careTypeLabel.text = [[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
-    cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ yrs minimum",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
-    cell.descLabel.text = [[advertsArr objectAtIndex:indexPath.row] valueForKey:@"love_optional"];
+    cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ years",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
+    cell.descLabel.text = [[advertsArr objectAtIndex:indexPath.row] valueForKey:@"about_you"];
     
     if (![[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqualToString:@""]) {
         __weak UIImageView* weakImageView = cell.profileImgView;
@@ -160,15 +162,24 @@
 }
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"showAdsDetailSegue"]) {
+        
+        AdsDetailViewController* controller = (AdsDetailViewController *)[segue destinationViewController];
+        controller.advertDict = selectedAdvertDict;
+        
+    }
+    
 }
-*/
+
+#pragma mark - User Interaction Methods
 
 - (IBAction)menuButtonTapped:(id)sender {
     
