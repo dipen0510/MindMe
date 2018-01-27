@@ -1762,6 +1762,7 @@
 				TargetAttributes = {
 					D4A019B01F850F0200E311B7 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = CZA6DXR72T;
 						ProvisioningStyle = Manual;
 					};
 					D4A019C91F850F0200E311B7 = {
@@ -2354,7 +2355,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Swapnil Harkanth (CZA6DXR72T)";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CZA6DXR72T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MindMe/Library/QMChatViewController/QuickBlox",
@@ -2365,7 +2366,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.MindMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e179b871-ec52-4167-9147-132b43133197";
+				PROVISIONING_PROFILE = "a41cf120-ae03-4e8f-b7fe-e24048a8ede0";
 				PROVISIONING_PROFILE_SPECIFIER = "Mind Me Ad-Hoc";
 			};
 			name = Debug;
@@ -2376,7 +2377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Swapnil Harkanth (CZA6DXR72T)";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CZA6DXR72T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MindMe/Library/QMChatViewController/QuickBlox",
@@ -2387,7 +2388,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.MindMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e179b871-ec52-4167-9147-132b43133197";
+				PROVISIONING_PROFILE = "a41cf120-ae03-4e8f-b7fe-e24048a8ede0";
 				PROVISIONING_PROFILE_SPECIFIER = "Mind Me Ad-Hoc";
 			};
 			name = Release;

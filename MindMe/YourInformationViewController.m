@@ -75,6 +75,7 @@
     if (_advertDictToBeEdited) {
         
         if (![[_advertDictToBeEdited valueForKey:@"image_path"] isEqualToString:@""]) {
+            _profileImgView.image = nil;
             __weak UIImageView* weakImageView = _profileImgView;
             [_profileImgView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceURL,[_advertDictToBeEdited valueForKey:@"image_path"]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
                                                                      cachePolicy:NSURLRequestReturnCacheDataElseLoad
@@ -101,6 +102,8 @@
         }
         
         _experienceLabel.text = [NSString stringWithFormat:@"%@ years",[_advertDictToBeEdited valueForKey:@"experience"]];
+        
+        selectedLanguageArr = [[NSMutableArray alloc] initWithArray:[[_advertDictToBeEdited valueForKey:@"languages"] componentsSeparatedByString:@","]];
         
     }
     
@@ -382,24 +385,64 @@
             cell.leadingConstraint.constant = 20;
             cell.trailingConstraint.constant = 0;
             cell.titleLabel.text = @"Accept online payments";
+            
+            if (_advertDictToBeEdited) {
+                if ([[_advertDictToBeEdited valueForKey:@"additionals"] containsString:cell.titleLabel.text]) {
+                    cell.toggleButton.selected = YES;
+                }
+                else {
+                    cell.toggleButton.selected = NO;
+                }
+            }
+            
             break;
             
         case 1:
             cell.titleLabel.text = @"Non-smoker";
             cell.leadingConstraint.constant = 8;
             cell.trailingConstraint.constant = 16;
+            
+            if (_advertDictToBeEdited) {
+                if ([[_advertDictToBeEdited valueForKey:@"additionals"] containsString:cell.titleLabel.text]) {
+                    cell.toggleButton.selected = YES;
+                }
+                else {
+                    cell.toggleButton.selected = NO;
+                }
+            }
+            
             break;
             
         case 2:
             cell.leadingConstraint.constant = 20;
             cell.trailingConstraint.constant = 0;
             cell.titleLabel.text = @"Have a car";
+            
+            if (_advertDictToBeEdited) {
+                if ([[_advertDictToBeEdited valueForKey:@"additionals"] containsString:cell.titleLabel.text]) {
+                    cell.toggleButton.selected = YES;
+                }
+                else {
+                    cell.toggleButton.selected = NO;
+                }
+            }
+            
             break;
             
         case 3:
             cell.leadingConstraint.constant = 8;
             cell.trailingConstraint.constant = 16;
             cell.titleLabel.text = @"Comfortable with pets";
+            
+            if (_advertDictToBeEdited) {
+                if ([[_advertDictToBeEdited valueForKey:@"additionals"] containsString:cell.titleLabel.text]) {
+                    cell.toggleButton.selected = YES;
+                }
+                else {
+                    cell.toggleButton.selected = NO;
+                }
+            }
+            
             break;
             
         default:

@@ -11,6 +11,7 @@
 @interface AdvertsViewController : UIViewController <DataSyncManagerDelegate> {
     
     NSMutableArray* advertsArr;
+    NSMutableDictionary* editAdvertDict;
     
 }
 

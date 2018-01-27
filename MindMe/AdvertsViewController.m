@@ -9,6 +9,7 @@
 #import "AdvertsViewController.h"
 #import "AdvertsTableViewCell.h"
 #import "ChooseCareTypeViewController.h"
+#import "YourInformationViewController.h"
 
 @interface AdvertsViewController ()
 
@@ -107,6 +108,13 @@
         destController.userAdvertsArr = advertsArr;
         
     }
+    if ([segue.identifier isEqualToString:@"showYourInfoSegue"]) {
+        
+        YourInformationViewController* controller = (YourInformationViewController*)[segue destinationViewController];
+        controller.selectedCareType = [editAdvertDict valueForKey:@"care_type"];
+        controller.advertDictToBeEdited = editAdvertDict;
+        
+    }
     
 }
 
@@ -177,6 +185,9 @@
     cell.deleteButton.tag = indexPath.row;
     [cell.deleteButton addTarget:self action:@selector(advertDeleteButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     
+    cell.editButton.tag = indexPath.row;
+    [cell.editButton addTarget:self action:@selector(advertEditButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
     
 }
 
@@ -191,6 +202,13 @@
 - (void) advertDeleteButtonTapped:(UIButton *)sender {
     
     [self startDeleteAdvertsServiceForAdvert:[advertsArr objectAtIndex:sender.tag]];
+    
+}
+
+- (void) advertEditButtonTapped:(UIButton *)sender {
+    
+    editAdvertDict = [[NSMutableDictionary alloc] initWithDictionary:[advertsArr objectAtIndex:sender.tag]];
+    [self performSegueWithIdentifier:@"showYourInfoSegue" sender:nil];
     
 }
 
