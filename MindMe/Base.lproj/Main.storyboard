@@ -414,7 +414,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="52.5" y="490" width="270" height="32"/>
+                                <rect key="frame" x="52.5" y="490" width="270" height="31"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">By pressing Register you agree with the
@@ -762,7 +762,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="General Enquiry" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mhE-Fl-oQw">
-                                <rect key="frame" x="25" y="185" width="325" height="20"/>
+                                <rect key="frame" x="25" y="165" width="325" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="yur-dB-Ipk"/>
                                 </constraints>
@@ -771,21 +771,21 @@ Terms of Services and Privacy Policy</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Vu-VQ-5RP">
-                                <rect key="frame" x="16" y="213" width="343" height="1"/>
+                                <rect key="frame" x="16" y="193" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="qxi-se-Fw4"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCN-HE-qi4">
-                                <rect key="frame" x="16" y="262" width="343" height="1"/>
+                                <rect key="frame" x="16" y="242" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="fUC-IW-IDR"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Full Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ax-FO-YcA">
-                                <rect key="frame" x="25" y="234" width="325" height="20"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ax-FO-YcA">
+                                <rect key="frame" x="25" y="214" width="325" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="N2T-rR-VUc"/>
                                 </constraints>
@@ -794,14 +794,14 @@ Terms of Services and Privacy Policy</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="st4-zW-5s2">
-                                <rect key="frame" x="16" y="311" width="343" height="1"/>
+                                <rect key="frame" x="16" y="291" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="22O-ba-mas"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OkD-19-yZr">
-                                <rect key="frame" x="25" y="283" width="325" height="20"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OkD-19-yZr">
+                                <rect key="frame" x="25" y="263" width="325" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="LXG-6W-3xa"/>
                                 </constraints>
@@ -810,7 +810,7 @@ Terms of Services and Privacy Policy</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONw-Me-lgt">
-                                <rect key="frame" x="16" y="360" width="343" height="1"/>
+                                <rect key="frame" x="16" y="340" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Pun-H4-kRc"/>
@@ -823,8 +823,8 @@ Terms of Services and Privacy Policy</string>
                                     <constraint firstAttribute="height" constant="1" id="JNN-ie-Y8R"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Contact Number" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pAj-Az-Z9G">
-                                <rect key="frame" x="25" y="332" width="325" height="20"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contact Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pAj-Az-Z9G">
+                                <rect key="frame" x="25" y="312" width="325" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="tbS-W3-GBH"/>
                                 </constraints>
@@ -833,10 +833,10 @@ Terms of Services and Privacy Policy</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type your Enquiry" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YUn-dW-gNW">
-                                <rect key="frame" x="25" y="385" width="325" height="98"/>
+                                <rect key="frame" x="25" y="349" width="325" height="142"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyo-Ub-4dq">
@@ -871,7 +871,7 @@ Terms of Services and Privacy Policy</string>
                             <constraint firstItem="1ax-FO-YcA" firstAttribute="leading" secondItem="wtR-Pb-Am2" secondAttribute="leading" constant="25" id="49J-jT-Aj4"/>
                             <constraint firstItem="zFY-5C-hrp" firstAttribute="centerX" secondItem="wtR-Pb-Am2" secondAttribute="centerX" id="65W-uu-rt5"/>
                             <constraint firstItem="RaW-D5-pXA" firstAttribute="leading" secondItem="wtR-Pb-Am2" secondAttribute="leading" id="6Rr-U7-0bW"/>
-                            <constraint firstItem="mhE-Fl-oQw" firstAttribute="top" secondItem="gpO-Ml-vmP" secondAttribute="bottom" constant="44" id="6l5-ho-6e9"/>
+                            <constraint firstItem="mhE-Fl-oQw" firstAttribute="top" secondItem="gpO-Ml-vmP" secondAttribute="bottom" constant="24" id="6l5-ho-6e9"/>
                             <constraint firstItem="fyo-Ub-4dq" firstAttribute="top" secondItem="Gou-HT-Dku" secondAttribute="bottom" constant="24" id="6wh-pV-uqb"/>
                             <constraint firstItem="OkD-19-yZr" firstAttribute="top" secondItem="dCN-HE-qi4" secondAttribute="bottom" constant="20" id="8Yf-Vh-c3U"/>
                             <constraint firstAttribute="trailing" secondItem="ONw-Me-lgt" secondAttribute="trailing" constant="16" id="AYp-Pb-b7h"/>
@@ -881,7 +881,7 @@ Terms of Services and Privacy Policy</string>
                             <constraint firstAttribute="trailing" secondItem="mhE-Fl-oQw" secondAttribute="trailing" constant="25" id="Hhc-Te-bTS"/>
                             <constraint firstItem="YUn-dW-gNW" firstAttribute="leading" secondItem="wtR-Pb-Am2" secondAttribute="leading" constant="25" id="JA6-1j-czn"/>
                             <constraint firstAttribute="trailing" secondItem="Gou-HT-Dku" secondAttribute="trailing" constant="25" id="OGW-rY-Pd5"/>
-                            <constraint firstItem="Gvi-gJ-evZ" firstAttribute="top" secondItem="YUn-dW-gNW" secondAttribute="bottom" constant="16" id="OUK-Sd-KaR"/>
+                            <constraint firstItem="Gvi-gJ-evZ" firstAttribute="top" secondItem="YUn-dW-gNW" secondAttribute="bottom" constant="8" id="OUK-Sd-KaR"/>
                             <constraint firstItem="ONw-Me-lgt" firstAttribute="leading" secondItem="wtR-Pb-Am2" secondAttribute="leading" constant="16" id="Ppu-Rf-fQg"/>
                             <constraint firstItem="7Vu-VQ-5RP" firstAttribute="leading" secondItem="wtR-Pb-Am2" secondAttribute="leading" constant="16" id="Qj2-WA-trq"/>
                             <constraint firstAttribute="trailing" secondItem="Gvi-gJ-evZ" secondAttribute="trailing" constant="16" id="Shr-id-uTb"/>
@@ -910,10 +910,15 @@ Terms of Services and Privacy Policy</string>
                             <constraint firstAttribute="trailing" secondItem="1ax-FO-YcA" secondAttribute="trailing" constant="25" id="rzS-ZW-UMC"/>
                             <constraint firstItem="st4-zW-5s2" firstAttribute="top" secondItem="OkD-19-yZr" secondAttribute="bottom" constant="8" id="sOG-aS-HlM"/>
                             <constraint firstItem="gpO-Ml-vmP" firstAttribute="top" secondItem="zFY-5C-hrp" secondAttribute="bottom" constant="17" id="smy-hn-re1"/>
-                            <constraint firstItem="YUn-dW-gNW" firstAttribute="top" secondItem="ONw-Me-lgt" secondAttribute="bottom" constant="24" id="uAp-nx-smj"/>
+                            <constraint firstItem="YUn-dW-gNW" firstAttribute="top" secondItem="ONw-Me-lgt" secondAttribute="bottom" constant="8" id="uAp-nx-smj"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contactNumberTextField" destination="pAj-Az-Z9G" id="ZlQ-BX-bpA"/>
+                        <outlet property="emailTextField" destination="OkD-19-yZr" id="i0V-wf-6qt"/>
+                        <outlet property="enquireyDescTextView" destination="YUn-dW-gNW" id="QbJ-5V-Pa2"/>
+                        <outlet property="enquiryTypeTextField" destination="mhE-Fl-oQw" id="pe4-wl-B74"/>
+                        <outlet property="nameTextField" destination="1ax-FO-YcA" id="w7m-iN-4cS"/>
                         <outlet property="sendButton" destination="fyo-Ub-4dq" id="z7s-xC-WnL"/>
                     </connections>
                 </viewController>

@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContactUsViewController : UIViewController
+@interface ContactUsViewController : UIViewController <UITextFieldDelegate, DataSyncManagerDelegate, UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
+@property (weak, nonatomic) IBOutlet UITextField *enquiryTypeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *contactNumberTextField;
+@property (weak, nonatomic) IBOutlet UITextView *enquireyDescTextView;
 
 - (IBAction)menuButtonTapped:(id)sender;
 

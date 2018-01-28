@@ -27,6 +27,7 @@
 #define AddCarerAdvert @"profile/updateCarerProfileDetails"
 #define AddParentAdvert @"advert/updateParentProfileDetails"
 #define GetAllHomeAdverts @"fetchAll_profile"
+#define ContactUs @"emailManage/contactUs"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"
