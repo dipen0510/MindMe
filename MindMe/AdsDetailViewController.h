@@ -12,6 +12,13 @@
     
     NSMutableArray* availabilityArr;
     
+    NSMutableArray* firstCollectionViewArr;
+    NSMutableArray* secondCollectionViewArr;
+    NSMutableArray* thirdCollectionViewArr;
+    NSMutableArray* fourthCollectionViewArr;
+    NSMutableArray* fifthCollectionViewArr;
+    NSMutableArray* sixthCollectionViewArr;
+    
 }
 
 @property (nonatomic, strong) NSMutableDictionary* advertDict;
@@ -50,5 +57,40 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *locationPinLeadingConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *yearsOfExpLeadingConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *doneButtonHeightConstraint;
+
+@property (weak, nonatomic) IBOutlet UITextField *firstCollectionViewTitle;
+@property (weak, nonatomic) IBOutlet UITextField *secondCollectionViewTitle;
+@property (weak, nonatomic) IBOutlet UITextField *thirdCollectionViewTitle;
+@property (weak, nonatomic) IBOutlet UITextField *fourthCollectionViewTitle;
+@property (weak, nonatomic) IBOutlet UITextField *fifthCollectionViewTitle;
+@property (weak, nonatomic) IBOutlet UITextField *sixthCollectionViewTitle;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *firstCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *secondCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *thirdCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *fourthCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *fifthCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *sixthCollectionView;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *firstCollectionViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *secondCollectionViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *thirdCollectionViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *fourthCollectionViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *fifthCollectionViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *sixthCollectionViewHeightConstraint;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *firstCollectionViewTitleTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *secondCollectionViewTitleTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *thirdCollectionViewTitleTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *fourthCollectionViewTitleTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *fifthCollectionViewTitleTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *sixthCollectionViewTitleTopConstraint;
+
+@property (weak, nonatomic) IBOutlet UIView *firstCollectionViewSeparatorView;
+@property (weak, nonatomic) IBOutlet UIView *secondCollectionViewSeparatorView;
+@property (weak, nonatomic) IBOutlet UIView *thirdCollectionViewSeparatorView;
+@property (weak, nonatomic) IBOutlet UIView *fourthCollectionViewSeparatorView;
+@property (weak, nonatomic) IBOutlet UIView *fifthCollectionViewSeparatorView;
+@property (weak, nonatomic) IBOutlet UIView *sixthCollectionViewSeparatorView;
 
 @end

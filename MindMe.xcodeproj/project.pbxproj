@@ -208,6 +208,8 @@
 		D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AD692A1F93363B009D57A7 /* AdsHomeViewController.m */; };
 		D4AD692F1F933668009D57A7 /* AdsHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */; };
 		D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */; };
+		D4CA348B201F698700D54051 /* AdsDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CA3489201F698700D54051 /* AdsDetailCollectionViewCell.m */; };
+		D4CA348C201F698700D54051 /* AdsDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4CA348A201F698700D54051 /* AdsDetailCollectionViewCell.xib */; };
 		D4E232EE20177064002F4961 /* ChooseCareTypeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E232EC20177064002F4961 /* ChooseCareTypeCollectionViewCell.m */; };
 		D4E232EF20177064002F4961 /* ChooseCareTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4E232ED20177064002F4961 /* ChooseCareTypeCollectionViewCell.xib */; };
 		D4E34B2A1FCEF92A00D53EDC /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E34B291FCEF92A00D53EDC /* StartViewController.m */; };
@@ -620,6 +622,9 @@
 		D4AD692C1F933668009D57A7 /* AdsHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsHomeTableViewCell.h; sourceTree = "<group>"; };
 		D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsHomeTableViewCell.m; sourceTree = "<group>"; };
 		D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdsHomeTableViewCell.xib; sourceTree = "<group>"; };
+		D4CA3488201F698700D54051 /* AdsDetailCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsDetailCollectionViewCell.h; sourceTree = "<group>"; };
+		D4CA3489201F698700D54051 /* AdsDetailCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsDetailCollectionViewCell.m; sourceTree = "<group>"; };
+		D4CA348A201F698700D54051 /* AdsDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdsDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		D4E232EB20177064002F4961 /* ChooseCareTypeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseCareTypeCollectionViewCell.h; sourceTree = "<group>"; };
 		D4E232EC20177064002F4961 /* ChooseCareTypeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseCareTypeCollectionViewCell.m; sourceTree = "<group>"; };
 		D4E232ED20177064002F4961 /* ChooseCareTypeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseCareTypeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -1672,6 +1677,9 @@
 				D4E232EB20177064002F4961 /* ChooseCareTypeCollectionViewCell.h */,
 				D4E232EC20177064002F4961 /* ChooseCareTypeCollectionViewCell.m */,
 				D4E232ED20177064002F4961 /* ChooseCareTypeCollectionViewCell.xib */,
+				D4CA3488201F698700D54051 /* AdsDetailCollectionViewCell.h */,
+				D4CA3489201F698700D54051 /* AdsDetailCollectionViewCell.m */,
+				D4CA348A201F698700D54051 /* AdsDetailCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1809,6 +1817,7 @@
 				D4041BD81FC0DEF5001F312E /* ic_pause_grey.pdf in Resources */,
 				D43143CA1F98E02B00FE0406 /* VisbyRoundCF-ExtraLight.otf in Resources */,
 				D415586F1FB42E6B0031E23F /* tmpAdsHome.png in Resources */,
+				D4CA348C201F698700D54051 /* AdsDetailCollectionViewCell.xib in Resources */,
 				D4041C021FC0DEF5001F312E /* QMVideoOutgoingCell.xib in Resources */,
 				D43143C51F98E02B00FE0406 /* VisbyRoundCF-Medium.otf in Resources */,
 				D4041BD91FC0DEF5001F312E /* ic_retry-grey@2x.png in Resources */,
@@ -2095,6 +2104,7 @@
 				D4F05F3C1FBEFD65002024F6 /* FAQSectionView.m in Sources */,
 				D4041C211FC0DEF5001F312E /* UIColor+QM.m in Sources */,
 				D4041B071FC0D737001F312E /* AddReviewViewController.m in Sources */,
+				D4CA348B201F698700D54051 /* AdsDetailCollectionViewCell.m in Sources */,
 				D4AD692F1F933668009D57A7 /* AdsHomeTableViewCell.m in Sources */,
 				D4041C6B1FC0E157001F312E /* UIImage+GIF.m in Sources */,
 				D49D78CF1FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.m in Sources */,

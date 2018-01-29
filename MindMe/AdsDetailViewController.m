@@ -8,6 +8,7 @@
 
 #import "AdsDetailViewController.h"
 #import "ProfileAvailabilityCollectionViewCell.h"
+#import "AdsDetailCollectionViewCell.h"
 
 @interface AdsDetailViewController ()
 
@@ -22,6 +23,7 @@
     [self setupInitialUI];
     [self setupAvailibilityArr];
     [self setupValueLayoutForAdvert];
+    [self setupUIForForms];
     
 }
 
@@ -37,6 +39,31 @@
     _yearsOfExpLeadingConstraint.constant = (130./375.) * [UIScreen mainScreen].bounds.size.width;
     
     [self.daysRequiredCollectionView registerNib:[UINib nibWithNibName:@"ProfileAvailabilityCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileAvailabilityCollectionViewCell"];
+    
+    [self.firstCollectionView registerNib:[UINib nibWithNibName:@"AdsDetailCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"AdsDetailCollectionViewCell"];
+    [self.secondCollectionView registerNib:[UINib nibWithNibName:@"AdsDetailCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"AdsDetailCollectionViewCell"];
+    [self.thirdCollectionView registerNib:[UINib nibWithNibName:@"AdsDetailCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"AdsDetailCollectionViewCell"];
+    [self.fourthCollectionView registerNib:[UINib nibWithNibName:@"AdsDetailCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"AdsDetailCollectionViewCell"];
+    [self.fifthCollectionView registerNib:[UINib nibWithNibName:@"AdsDetailCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"AdsDetailCollectionViewCell"];
+    [self.sixthCollectionView registerNib:[UINib nibWithNibName:@"AdsDetailCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"AdsDetailCollectionViewCell"];
+    
+    _firstCollectionView.dataSource = self;
+    _firstCollectionView.delegate = self;
+    
+    _secondCollectionView.dataSource = self;
+    _secondCollectionView.delegate = self;
+    
+    _thirdCollectionView.dataSource = self;
+    _thirdCollectionView.delegate = self;
+    
+    _fourthCollectionView.dataSource = self;
+    _fourthCollectionView.delegate = self;
+    
+    _fifthCollectionView.dataSource = self;
+    _fifthCollectionView.delegate = self;
+    
+    _sixthCollectionView.dataSource = self;
+    _sixthCollectionView.delegate = self;
     
     if (![[SharedClass sharedInstance] isUserCarer]) {
         _footerContactButton.hidden = YES;
@@ -59,6 +86,7 @@
 
     
     }
+    
     
 }
 
@@ -171,6 +199,58 @@
     
 }
 
+- (void) setupUIForForms {
+    
+    NSString* careType = [_advertDict valueForKey:@"care_type"];
+    
+    if ([careType isEqualToString:@"Au Pair"]) {
+        [self setupUIForAUPairForm];
+    }
+    else if ([careType isEqualToString:@"Babysitters"]) {
+        [self setupUIForBabysittersForm];
+    }
+    else if ([careType isEqualToString:@"Childminders"]) {
+        [self setupUIForChildmindersForm];
+    }
+    else if ([careType isEqualToString:@"Creche"]) {
+        [self setupUIForCrecheForm];
+    }
+    else if ([careType isEqualToString:@"Nanny"]) {
+        [self setupUIForNannyForm];
+    }
+    else if ([careType isEqualToString:@"Cleaners"]) {
+        [self setupUIForCleanersForm];
+    }
+    else if ([careType isEqualToString:@"Dog Walkers"]) {
+        [self setupUIForDayWalkersForm];
+    }
+    else if ([careType isEqualToString:@"Elderly Care"]) {
+        [self setupUIForElderlyCareForm];
+    }
+    else if ([careType isEqualToString:@"House Keepers"]) {
+        [self setupUIForHousekeepersForm];
+    }
+    else if ([careType isEqualToString:@"Maternity Nurse"]) {
+        [self setupUIForMaternityNurseForm];
+    }
+    else if ([careType isEqualToString:@"Pet Minders"]) {
+        [self setupUIForPetMindersForm];
+    }
+    else if ([careType isEqualToString:@"Private Midwife"]) {
+        [self setupUIForPrivateMidwifeForm];
+    }
+    else if ([careType isEqualToString:@"School Run"]) {
+        [self setupUIForSchoolRunForm];
+    }
+    else if ([careType isEqualToString:@"Special Needs Care"]) {
+        [self setupUIForSpecialNeedsCareForm];
+    }
+    else if ([careType isEqualToString:@"Tutor"]) {
+        [self setupUIForTutorForm];
+    }
+    
+}
+
 /*
 #pragma mark - Navigation
 
@@ -199,12 +279,31 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
+    if (collectionView == _firstCollectionView) {
+        return firstCollectionViewArr.count;
+    }
+    else if (collectionView == _secondCollectionView) {
+        return secondCollectionViewArr.count;
+    }
+    else if (collectionView == _thirdCollectionView) {
+        return thirdCollectionViewArr.count;
+    }
+    else if (collectionView == _fourthCollectionView) {
+        return fourthCollectionViewArr.count;
+    }
+    else if (collectionView == _fifthCollectionView) {
+        return fifthCollectionViewArr.count;
+    }
+    else if (collectionView == _sixthCollectionView) {
+        return sixthCollectionViewArr.count;
+    }
     return 48.;
     
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
         
+    if (collectionView == _daysRequiredCollectionView) {
         static NSString *CellIdentifier = @"ProfileAvailabilityCollectionViewCell";
         ProfileAvailabilityCollectionViewCell *cell = (ProfileAvailabilityCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
         
@@ -218,6 +317,38 @@
         [self populateContentForAvailabilityCell:cell atIndexPath:indexPath];
         
         return cell;
+    }
+    
+    static NSString *CellIdentifier = @"AdsDetailCollectionViewCell";
+    AdsDetailCollectionViewCell *cell = (AdsDetailCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    if (cell == nil) {
+        // Load the top-level objects from the custom cell XIB.
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"AdsDetailCollectionViewCell" owner:self options:nil];
+        // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
+        cell = [topLevelObjects objectAtIndex:0];
+    }
+    
+    if (collectionView == _firstCollectionView) {
+        [self populateContentForFirstCollectionViewCell:cell atIndexPath:indexPath];
+    }
+    else if (collectionView == _secondCollectionView) {
+        [self populateContentForSecondCollectionViewCell:cell atIndexPath:indexPath];
+    }
+    else if (collectionView == _thirdCollectionView) {
+        [self populateContentForThirdCollectionViewCell:cell atIndexPath:indexPath];
+    }
+    else if (collectionView == _fourthCollectionView) {
+        [self populateContentForForthCollectionViewCell:cell atIndexPath:indexPath];
+    }
+    else if (collectionView == _fifthCollectionView) {
+        [self populateContentForFifthCollectionViewCell:cell atIndexPath:indexPath];
+    }
+    else if (collectionView == _sixthCollectionView) {
+        [self populateContentForSixthCollectionViewCell:cell atIndexPath:indexPath];
+    }
+    
+    return cell;
     
     
 }
@@ -226,12 +357,15 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    if (indexPath.row%8 == 0) {
-        return CGSizeMake(75.,collectionView.frame.size.height/6.);
-    }
+    if (collectionView == _daysRequiredCollectionView) {
+        if (indexPath.row%8 == 0) {
+            return CGSizeMake(75.,collectionView.frame.size.height/6.);
+        }
         
-    return CGSizeMake((((345./375.)*[UIScreen mainScreen].bounds.size.width) - 75.)/7.,collectionView.frame.size.height/6.);
-
+        return CGSizeMake((((345./375.)*[UIScreen mainScreen].bounds.size.width) - 75.)/7.,collectionView.frame.size.height/6.);
+    }
+    
+    return CGSizeMake((collectionView.frame.size.width)/2., 30);
     
 }
 
@@ -266,6 +400,45 @@
 
 
 #pragma mark - Populate Content
+
+- (void) populateContentForFirstCollectionViewCell:(AdsDetailCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
+    
+    cell.detailsTextLabel.text = [firstCollectionViewArr objectAtIndex:indexPath.row];
+    
+    
+}
+
+- (void) populateContentForSecondCollectionViewCell:(AdsDetailCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
+    
+    cell.detailsTextLabel.text = [secondCollectionViewArr objectAtIndex:indexPath.row];
+    
+    
+}
+
+- (void) populateContentForThirdCollectionViewCell:(AdsDetailCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
+    
+    cell.detailsTextLabel.text = [thirdCollectionViewArr objectAtIndex:indexPath.row];
+    
+}
+
+- (void) populateContentForForthCollectionViewCell:(AdsDetailCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
+    
+    cell.detailsTextLabel.text = [fourthCollectionViewArr objectAtIndex:indexPath.row];
+    
+}
+
+- (void) populateContentForFifthCollectionViewCell:(AdsDetailCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
+    
+    cell.detailsTextLabel.text = [fifthCollectionViewArr objectAtIndex:indexPath.row];
+    
+}
+
+- (void) populateContentForSixthCollectionViewCell:(AdsDetailCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
+    
+    cell.detailsTextLabel.text = [sixthCollectionViewArr objectAtIndex:indexPath.row];
+    
+    
+}
 
 - (void) populateContentForAvailabilityCell:(ProfileAvailabilityCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
@@ -389,6 +562,588 @@
     }
     
     return 7;
+    
+}
+
+
+- (void) setupUIForAUPairForm {
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _firstCollectionViewTitle.text = @"Au Pair requires to live in or live out";
+        _secondCollectionViewTitle.text = @"Age Group Experience";
+        _thirdCollectionViewTitle.text = @"Do You Have Qualifications";
+        _fourthCollectionViewTitle.text = @"Additional Requirements: (optional)";
+        _fifthCollectionViewTitle.text = @"I Like To Do : (select up to 3)";
+        _sixthCollectionViewTitle.text = @"Other Services I Can Offer";
+    }
+    else {
+        _firstCollectionViewTitle.text = @"Au Pair required to live in or live out";
+        _secondCollectionViewTitle.text = @"Carer should have experience with";
+        _thirdCollectionViewTitle.text = @"Carer should have the following";
+        _fourthCollectionViewTitle.text = @"Additional Requirements: (optional)";
+        _fifthCollectionViewTitle.text = @"Activities I would like my carer to provide";
+        _sixthCollectionViewTitle.text = @"Other Services I May Require";
+    }
+    
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"aupair_live"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*30 + (firstCollectionViewArr.count%2)*30;
+    
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*30 + (fourthCollectionViewArr.count%2)*30;
+    
+    fifthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+    _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*30 + (fifthCollectionViewArr.count%2)*30;
+    
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+}
+
+- (void) setupUIForBabysittersForm {
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _firstCollectionViewTitle.text = @"Children minded in";
+        _secondCollectionViewTitle.text = @"Age Group Experience";
+        _thirdCollectionViewTitle.text = @"Do You Have Qualifications";
+        _fourthCollectionViewTitle.text = @"Additional Requirements: (optional)";
+        _fifthCollectionViewTitle.text = @"I Like To Do : (select up to 3)";
+        _sixthCollectionViewTitle.text = @"Other Services I Can Offer";
+    }
+    else {
+        _firstCollectionViewTitle.text = @"Children minded in";
+        _secondCollectionViewTitle.text = @"Carer should have experience with";
+        _thirdCollectionViewTitle.text = @"Carer should have the following";
+        _fourthCollectionViewTitle.text = @"Additional Requirements: (optional)";
+        _fifthCollectionViewTitle.text = @"Activities I would like my carer to provide";
+        _sixthCollectionViewTitle.text = @"Other Services I May Require";
+    }
+    
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*30 + (firstCollectionViewArr.count%2)*30;
+    
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*30 + (fourthCollectionViewArr.count%2)*30;
+    
+    fifthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+    _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*30 + (fifthCollectionViewArr.count%2)*30;
+    
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+}
+
+- (void) setupUIForChildmindersForm {
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _firstCollectionViewTitle.text = @"Children minded in";
+        _secondCollectionViewTitle.text = @"Age Group Experience";
+        _thirdCollectionViewTitle.text = @"Do You Have Qualifications";
+        _fourthCollectionViewTitle.text = @"Additional Requirements: (optional)";
+        _fifthCollectionViewTitle.text = @"I Like To Do : (select up to 3)";
+        _sixthCollectionViewTitle.text = @"Other Services I Can Offer";
+    }
+    else {
+        _firstCollectionViewTitle.text = @"Children minded in";
+        _secondCollectionViewTitle.text = @"Carer should have experience with";
+        _thirdCollectionViewTitle.text = @"Carer should have the following";
+        _fourthCollectionViewTitle.text = @"Additional Requirements: (optional)";
+        _fifthCollectionViewTitle.text = @"Activities I would like my carer to provide";
+        _sixthCollectionViewTitle.text = @"Other Services I May Require";
+    }
+    
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*30 + (firstCollectionViewArr.count%2)*30;
+    
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*30 + (fourthCollectionViewArr.count%2)*30;
+    
+    fifthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+    _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*30 + (fifthCollectionViewArr.count%2)*30;
+    
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+    
+}
+
+- (void) setupUIForCrecheForm {
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _firstCollectionViewTitle.text = @"Children minded in";
+        _secondCollectionViewTitle.text = @"Age Group Experience";
+        _thirdCollectionViewTitle.text = @"Do You Have Qualifications";
+        _fourthCollectionViewTitle.text = @"Additional Requirements: (optional)";
+        _fifthCollectionViewTitle.text = @"I Like To Do : (select up to 3)";
+        _sixthCollectionViewTitle.text = @"Other Services I Can Offer";
+    }
+    else {
+        _firstCollectionViewTitle.text = @"Children minded in";
+        _secondCollectionViewTitle.text = @"Carer should have experience with";
+        _thirdCollectionViewTitle.text = @"Carer should have the following";
+        _fourthCollectionViewTitle.text = @"Additional Requirements: (optional)";
+        _fifthCollectionViewTitle.text = @"Activities I would like my carer to provide";
+        _sixthCollectionViewTitle.text = @"Other Services I May Require";
+    }
+    
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*30 + (firstCollectionViewArr.count%2)*30;
+    
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*30 + (fourthCollectionViewArr.count%2)*30;
+    
+    fifthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+    _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*30 + (fifthCollectionViewArr.count%2)*30;
+    
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+    
+}
+
+- (void) setupUIForNannyForm {
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _firstCollectionViewTitle.text = @"Children minded in";
+        _secondCollectionViewTitle.text = @"Age Group Experience";
+        _thirdCollectionViewTitle.text = @"Do You Have Qualifications";
+        _fourthCollectionViewTitle.text = @"Additional Requirements: (optional)";
+        _fifthCollectionViewTitle.text = @"I Like To Do : (select up to 3)";
+        _sixthCollectionViewTitle.text = @"Other Services I Can Offer";
+    }
+    else {
+        _firstCollectionViewTitle.text = @"Children minded in";
+        _secondCollectionViewTitle.text = @"Carer should have experience with";
+        _thirdCollectionViewTitle.text = @"Carer should have the following";
+        _fourthCollectionViewTitle.text = @"Additional Requirements: (optional)";
+        _fifthCollectionViewTitle.text = @"Activities I would like my carer to provide";
+        _sixthCollectionViewTitle.text = @"Other Services I May Require";
+    }
+    
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*30 + (firstCollectionViewArr.count%2)*30;
+    
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*30 + (fourthCollectionViewArr.count%2)*30;
+    
+    fifthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+    _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*30 + (fifthCollectionViewArr.count%2)*30;
+    
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+    
+}
+
+- (void) setupUIForCleanersForm {
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _secondCollectionViewTitle.text = @"Cleaning Services You Can Provide";
+        _thirdCollectionViewTitle.text = @"Do You Have Documentation";
+        _sixthCollectionViewTitle.text = @"Other Services I Can Offer";
+    }
+    else {
+        _secondCollectionViewTitle.text = @"Cleaning Services required";
+        _thirdCollectionViewTitle.text = @"Documentation Required";
+        _sixthCollectionViewTitle.text = @"Other Services I May Require";
+    }
+    
+    _firstCollectionViewTitle.hidden = YES;
+    _firstCollectionView.hidden = YES;
+    _firstCollectionViewSeparatorView.hidden = YES;
+    
+    _secondCollectionViewTitleTopConstraint.constant = -44 - _firstCollectionViewHeightConstraint.constant;
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    
+    _fourthCollectionViewTitle.hidden = YES;
+    _fourthCollectionView.hidden = YES;
+    _fourthCollectionViewSeparatorView.hidden = YES;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionViewSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+    
+}
+
+- (void) setupUIForDayWalkersForm {
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _secondCollectionViewTitle.text = @"Pets You Have Experience With";
+        _thirdCollectionViewTitle.text = @"You Can Provide";
+        _sixthCollectionViewTitle.text = @"Other Services I Can Offer";
+    }
+    else {
+        _secondCollectionViewTitle.text = @"Type Of Pet Requiring Care";
+        _thirdCollectionViewTitle.text = @"Carer should Provide";
+        _sixthCollectionViewTitle.text = @"Other Services I May Require";
+    }
+    
+    _firstCollectionViewTitle.hidden = YES;
+    _firstCollectionView.hidden = YES;
+    _firstCollectionViewSeparatorView.hidden = YES;
+    
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    
+    _fourthCollectionViewTitle.hidden = YES;
+    _fourthCollectionView.hidden = YES;
+    _fourthCollectionViewSeparatorView.hidden = YES;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionViewSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+
+
+    
+}
+
+- (void) setupUIForElderlyCareForm {
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _secondCollectionViewTitle.text = @"Age Group Experience";
+        _thirdCollectionViewTitle.text = @"Do You Have Qualifications";
+        _fourthCollectionViewTitle.text = @"Additional Services You Can Provide";
+        _sixthCollectionViewTitle.text = @"Other Services I Can Offer";
+    }
+    else {
+        _secondCollectionViewTitle.text = @"Carer should have experience with";
+        _thirdCollectionViewTitle.text = @"Carer should have the following";
+        _fourthCollectionViewTitle.text = @"Additional Services You Require";
+        _sixthCollectionViewTitle.text = @"Other Services I May Require";
+    }
+    
+    _firstCollectionViewTitle.hidden = YES;
+    _firstCollectionView.hidden = YES;
+    _firstCollectionViewSeparatorView.hidden = YES;
+    
+    _secondCollectionViewTitleTopConstraint.constant = -44 - _firstCollectionViewHeightConstraint.constant;
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*30 + (fourthCollectionViewArr.count%2)*30;
+    
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionViewSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitleTopConstraint.constant = -44 - _fifthCollectionViewHeightConstraint.constant;
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+}
+
+- (void) setupUIForHousekeepersForm {
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _secondCollectionViewTitle.text = @"House Keeping Services You Can Provide";
+        _thirdCollectionViewTitle.text = @"Do You Have Documentation";
+        _sixthCollectionViewTitle.text = @"Other Services I Can Offer";
+    }
+    else {
+        _secondCollectionViewTitle.text = @"House Keeping Services required";
+        _thirdCollectionViewTitle.text = @"Documentation Required";
+        _sixthCollectionViewTitle.text = @"Other Services I May Require";
+    }
+    
+    _firstCollectionViewTitle.hidden = YES;
+    _firstCollectionView.hidden = YES;
+    _firstCollectionViewSeparatorView.hidden = YES;
+    
+    _secondCollectionViewTitleTopConstraint.constant = -44 - _firstCollectionViewHeightConstraint.constant;
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    
+    _fourthCollectionViewTitle.hidden = YES;
+    _fourthCollectionView.hidden = YES;
+    _fourthCollectionViewSeparatorView.hidden = YES;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionViewSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+}
+
+- (void) setupUIForMaternityNurseForm {
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _thirdCollectionViewTitle.text = @"Do You Have Qualifications";
+        _sixthCollectionViewTitle.text = @"Other Services I Can Offer";
+    }
+    else {
+        _thirdCollectionViewTitle.text = @"Carer should have the following";
+        _sixthCollectionViewTitle.text = @"Other Services I May Require";
+    }
+    
+    _secondCollectionViewTitle.hidden = YES;
+    _secondCollectionView.hidden = YES;
+    _secondCollectionViewSeparatorView.hidden = YES;
+    
+    _firstCollectionViewTitle.hidden = YES;
+    _firstCollectionView.hidden = YES;
+    _firstCollectionViewSeparatorView.hidden = YES;
+    
+    _thirdCollectionViewTitleTopConstraint.constant = -108 - _secondCollectionViewHeightConstraint.constant - _firstCollectionViewHeightConstraint.constant;
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    
+    _fourthCollectionViewTitle.hidden = YES;
+    _fourthCollectionView.hidden = YES;
+    _fourthCollectionViewSeparatorView.hidden = YES;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionViewSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+}
+
+- (void) setupUIForPetMindersForm {
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _secondCollectionViewTitle.text = @"Pets You Have Experience With";
+        _thirdCollectionViewTitle.text = @"You Can Provide";
+        _sixthCollectionViewTitle.text = @"Other Services I Can Offer";
+    }
+    else {
+        _secondCollectionViewTitle.text = @"Type Of Pet Requiring Care";
+        _thirdCollectionViewTitle.text = @"Carer should Provide";
+        _sixthCollectionViewTitle.text = @"Other Services I May Require";
+    }
+    
+    _firstCollectionViewTitle.hidden = YES;
+    _firstCollectionView.hidden = YES;
+    _firstCollectionViewSeparatorView.hidden = YES;
+    
+    _secondCollectionViewTitleTopConstraint.constant = -44 - _firstCollectionViewHeightConstraint.constant;
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    
+    _fourthCollectionViewTitle.hidden = YES;
+    _fourthCollectionView.hidden = YES;
+    _fourthCollectionViewSeparatorView.hidden = YES;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionViewSeparatorView.hidden = YES;
+    
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+}
+
+- (void) setupUIForPrivateMidwifeForm {
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _thirdCollectionViewTitle.text = @"Do You Have Qualifications";
+        _sixthCollectionViewTitle.text = @"Other Services I Can Offer";
+    }
+    else {
+        _thirdCollectionViewTitle.text = @"Carer should have the following";
+        _sixthCollectionViewTitle.text = @"Other Services I May Require";
+    }
+    
+    _secondCollectionViewTitle.hidden = YES;
+    _secondCollectionView.hidden = YES;
+    _secondCollectionViewSeparatorView.hidden = YES;
+    
+    _firstCollectionViewTitle.hidden = YES;
+    _firstCollectionView.hidden = YES;
+    _firstCollectionViewSeparatorView.hidden = YES;
+    
+    _thirdCollectionViewTitleTopConstraint.constant = -108 - _secondCollectionViewHeightConstraint.constant - _firstCollectionViewHeightConstraint.constant;
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    
+    _fourthCollectionViewTitle.hidden = YES;
+    _fourthCollectionView.hidden = YES;
+    _fourthCollectionViewSeparatorView.hidden = YES;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionViewSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+}
+
+- (void) setupUIForSchoolRunForm {
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _secondCollectionViewTitle.text = @"Provide Transport For";
+        _thirdCollectionViewTitle.text = @"Do You Have Qualifications";
+        _sixthCollectionViewTitle.text = @"Other Services I Can Offer";
+    }
+    else {
+        _secondCollectionViewTitle.text = @"Require Transport For";
+        _thirdCollectionViewTitle.text = @"Carer should have the following";
+        _sixthCollectionViewTitle.text = @"Other Services I May Require";
+    }
+    
+    _firstCollectionViewTitle.hidden = YES;
+    _firstCollectionView.hidden = YES;
+    _firstCollectionViewSeparatorView.hidden = YES;
+    
+    _secondCollectionViewTitleTopConstraint.constant = -44 - _firstCollectionViewHeightConstraint.constant;
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    
+    
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    
+    _fourthCollectionViewTitle.hidden = YES;
+    _fourthCollectionView.hidden = YES;
+    _fourthCollectionViewSeparatorView.hidden = YES;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionViewSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+}
+
+- (void) setupUIForSpecialNeedsCareForm {
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _secondCollectionViewTitle.text = @"Age Group Experience";
+        _thirdCollectionViewTitle.text = @"Do You Have Qualifications";
+        _fourthCollectionViewTitle.text = @"I Have Experience With";
+        _sixthCollectionViewTitle.text = @"Other Services I Can Offer";
+    }
+    else {
+        _secondCollectionViewTitle.text = @"Age Group Experience";
+        _thirdCollectionViewTitle.text = @"Carer should have the following";
+        _fourthCollectionViewTitle.text = @"Carer Should Have Experience With";
+        _sixthCollectionViewTitle.text = @"Other Services I May Require";
+    }
+    
+    _firstCollectionViewTitle.hidden = YES;
+    _firstCollectionView.hidden = YES;
+    _firstCollectionViewSeparatorView.hidden = YES;
+    
+    _secondCollectionViewTitleTopConstraint.constant = -44 - _firstCollectionViewHeightConstraint.constant;
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    
+    fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*30 + (fourthCollectionViewArr.count%2)*30;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionViewSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitleTopConstraint.constant = -44 - _fifthCollectionViewHeightConstraint.constant;
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+}
+
+- (void) setupUIForTutorForm {
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        _firstCollectionViewTitle.text = @"Junior Cycle Subjects";
+        _secondCollectionViewTitle.text = @"Senior Cycle Subjects";
+        _thirdCollectionViewTitle.text = @"Do You Have Documentation";
+        _sixthCollectionViewTitle.text = @"Other Services I Can Offer";
+    }
+    else {
+        _firstCollectionViewTitle.text = @"Junior Cycle Subjects";
+        _secondCollectionViewTitle.text = @"Senior Cycle Subjects";
+        _thirdCollectionViewTitle.text = @"Tutor should have the following";
+        _sixthCollectionViewTitle.text = @"Other Services I May Require";
+    }
+    
+    firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"additional_optional"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*30 + (firstCollectionViewArr.count%2)*30;
+    
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    
+    _fourthCollectionViewTitle.hidden = YES;
+    _fourthCollectionView.hidden = YES;
+    _fourthCollectionViewSeparatorView.hidden = YES;
+    
+    _fifthCollectionViewTitle.hidden = YES;
+    _fifthCollectionView.hidden = YES;
+    _fifthCollectionViewSeparatorView.hidden = YES;
+    
+    _sixthCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
+    sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
     
 }
 
