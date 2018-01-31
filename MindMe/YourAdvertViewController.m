@@ -43,6 +43,7 @@
     _otherRelevantInfoTextView.layer.borderWidth = 1.;
     _otherRelevantInfoTextView.layer.cornerRadius = 5.0;
     _otherRelevantInfoTextView.text = @"";
+    _otherRelevantInfoTextView.delegate = self;
     
     [self.daysRequiredCollectionView registerNib:[UINib nibWithNibName:@"ProfileAvailabilityCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileAvailabilityCollectionViewCell"];
     
@@ -1365,6 +1366,33 @@
     } cancelBlock:^(ActionSheetStringPicker *picker) {
         
     } origin:self.view];
+    
+}
+
+-(void)textViewDidBeginEditing:(UITextView *)textView {
+    
+    if (textView == _otherRelevantInfoTextView) {
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:.3];
+        [UIView setAnimationBeginsFromCurrentState:TRUE];
+        self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y -100., self.view.frame.size.width, self.view.frame.size.height);
+        
+        [UIView commitAnimations];
+    }
+    
+    
+}
+
+-(void)textViewDidEndEditing:(UITextView *)textView {
+    
+    if (textView == _otherRelevantInfoTextView) {
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:.3];
+        [UIView setAnimationBeginsFromCurrentState:TRUE];
+        self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y +100., self.view.frame.size.width, self.view.frame.size.height);
+        
+        [UIView commitAnimations];
+    }
     
 }
 

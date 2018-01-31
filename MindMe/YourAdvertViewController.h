@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YourAdvertViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, DataSyncManagerDelegate, UITextFieldDelegate> {
+@interface YourAdvertViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, DataSyncManagerDelegate, UITextFieldDelegate, UITextViewDelegate> {
     
     NSMutableArray* availabilityArr;
     

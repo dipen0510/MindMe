@@ -135,10 +135,13 @@
     
     if ([identifier isEqualToString:@"showYourAdvertSegue"]) {
         
-        if (!_requiredRegularlyButton.isSelected && !_requiredOcassionalyButton.isSelected) {
-            [SVProgressHUD showErrorWithStatus:@"Select at least one frequency - Regularly or Occassionally"];
-            return NO;
+        if (![[SharedClass sharedInstance] isUserCarer]) {
+            if (!_requiredRegularlyButton.isSelected && !_requiredOcassionalyButton.isSelected) {
+                [SVProgressHUD showErrorWithStatus:@"Select at least one frequency - Regularly or Occassionally"];
+                return NO;
+            }
         }
+        
         if (selectedLanguageArr.count == 0) {
             [SVProgressHUD showErrorWithStatus:@"Select at least one language to proceed"];
             return NO;
