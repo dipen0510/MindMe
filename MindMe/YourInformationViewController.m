@@ -70,6 +70,16 @@
     if (![[SharedClass sharedInstance] isUserCarer]) {
         _numberOfExperienceStaticLabel.text = @"Experience in years required";
     }
+    else {
+        
+        _requiredRegularlyLabel.hidden = YES;
+        _requiredRegularlyButton.hidden = YES;
+        _requiredOccasionallyLabel.hidden = YES;
+        _requiredOcassionalyButton.hidden = YES;
+        
+        _numberOfExperienceStaticLabelTopConstraint.constant = -20.;
+        
+    }
     
     
 }

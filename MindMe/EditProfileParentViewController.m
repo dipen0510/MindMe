@@ -60,6 +60,10 @@
     _addressView.hidden = YES;
     _menuButton.hidden = [[SharedClass sharedInstance] isEditProfileMenuButtonHidden];
     
+    if (![[SharedClass sharedInstance] isEditProfileMenuButtonHidden]) {
+        _tncButton.selected = YES;
+    }
+    
 }
 
 - (void) setupProfileDetails {

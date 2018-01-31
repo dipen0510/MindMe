@@ -1,9 +1,9 @@
 //
 //  FBLoginHelper.h
-//  PampersRewards
+//  MindMe
 //
 //  Created by InfosysDev on 07/12/17.
-//  Copyright © 2017 ProcterAndGamble. All rights reserved.
+//  Copyright © 2017 Stardeep. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

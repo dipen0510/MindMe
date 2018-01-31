@@ -55,9 +55,12 @@
     
     if (![[SharedClass sharedInstance] isUserCarer]) {
         
-//        _createAdvertButton.hidden = YES;
         _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"Subscribed\n"];
         
+    }
+    else {
+        _headerLabel.text = @"Profile Control";
+        [_createAdvertButton setTitle:@"Create Profile" forState:UIControlStateNormal];
     }
     
     NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];

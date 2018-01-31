@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *liveAdvertValueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *subscribedValueLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 
 - (IBAction)menuButtonTapped:(id)sender;
 

@@ -28,6 +28,7 @@
 #define AddParentAdvert @"advert/updateParentProfileDetails"
 #define GetAllHomeAdverts @"fetchAll_profile"
 #define ContactUs @"emailManage/contactUs"
+#define IncrementAdvertViews @"profile/incrementview"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"

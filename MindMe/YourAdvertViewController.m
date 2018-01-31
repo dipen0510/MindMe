@@ -11,6 +11,7 @@
 #import "CreateAdvertsCollectionViewCell.h"
 #import "AdvertPDFCollectionViewCell.h"
 #import "ActionSheetPicker.h"
+#import "AdvertsViewController.h"
 
 @interface YourAdvertViewController ()
 
@@ -37,6 +38,11 @@
     _cancelButton.layer.masksToBounds = NO;
     _cancelButton.layer.borderWidth = 1.0;
     _cancelButton.layer.borderColor = _cancelButton.titleLabel.textColor.CGColor;
+    
+    _otherRelevantInfoTextView.layer.borderColor = [UIColor colorWithWhite:0.9 alpha:1.].CGColor;
+    _otherRelevantInfoTextView.layer.borderWidth = 1.;
+    _otherRelevantInfoTextView.layer.cornerRadius = 5.0;
+    _otherRelevantInfoTextView.text = @"";
     
     [self.daysRequiredCollectionView registerNib:[UINib nibWithNibName:@"ProfileAvailabilityCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileAvailabilityCollectionViewCell"];
     
@@ -328,6 +334,10 @@
         _seventhCollectionViewTitle.text = @"Other Services I May Require";
     }
     
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
+    
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
     _secondCollectionViewTitle.hidden = YES;
@@ -368,6 +378,10 @@
         _fourthCollectionViewTitle.text = @"Carer should Provide";
         _seventhCollectionViewTitle.text = @"Other Services I May Require";
     }
+    
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
@@ -412,6 +426,10 @@
         _seventhCollectionViewTitle.text = @"Other Services I May Require";
     }
     
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
+    
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
     _secondCollectionViewTitle.hidden = YES;
@@ -452,6 +470,10 @@
         _seventhCollectionViewTitle.text = @"Other Services I May Require";
     }
     
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
+    
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
     _secondCollectionViewTitle.hidden = YES;
@@ -490,6 +512,10 @@
         _fourthCollectionViewTitle.text = @"Carer should have the following";
         _seventhCollectionViewTitle.text = @"Other Services I May Require";
     }
+    
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
@@ -534,6 +560,10 @@
         _seventhCollectionViewTitle.text = @"Other Services I May Require";
     }
     
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
+    
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
     _secondCollectionViewTitle.hidden = YES;
@@ -572,6 +602,10 @@
         _fourthCollectionViewTitle.text = @"Carer should have the following";
         _seventhCollectionViewTitle.text = @"Other Services I May Require";
     }
+    
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
@@ -614,6 +648,10 @@
         _fourthCollectionViewTitle.text = @"Carer should have the following";
         _seventhCollectionViewTitle.text = @"Other Services I May Require";
     }
+    
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
     
     _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
@@ -658,6 +696,10 @@
         _fifthCollectionViewTitle.text = @"Carer Should Have Experience With";
         _seventhCollectionViewTitle.text = @"Other Services I May Require";
     }
+    
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
@@ -1102,19 +1144,15 @@
         
         [SVProgressHUD showSuccessWithStatus:@"Profile posted successfully"];
         
-        
-        
     }
     
     if ([requestServiceKey isEqualToString:AddParentAdvert]) {
         
         [SVProgressHUD showSuccessWithStatus:@"Advert posted successfully"];
         
-        
-        
     }
     
-    
+    [self goBackToAdvertControlViewController];
     
 }
 
@@ -1261,6 +1299,10 @@
     }
     [dict setObject:love_optional forKey:@"love_optional"];
     
+    if ([[dict valueForKey:@"love_optional"] isEqualToString:@""] && !_otherRelevantInfoTextView.hidden) {
+        [dict setObject:_otherRelevantInfoTextView.text forKey:@"love_optional"];
+    }
+    
     
     NSString* services = @"";
     if (!_seventhCollectionView.hidden) {
@@ -1324,6 +1366,21 @@
         
     } origin:self.view];
     
+}
+
+- (void) goBackToAdvertControlViewController{
+    
+    for (UIViewController *controller in self.navigationController.viewControllers)
+    {
+        if ([controller isKindOfClass:[AdvertsViewController class]])
+        {
+            //Do not forget to import AnOldViewController.h
+            
+            [self.navigationController popToViewController:controller
+                                                  animated:YES];
+            break;
+        }
+    }
 }
 
 @end

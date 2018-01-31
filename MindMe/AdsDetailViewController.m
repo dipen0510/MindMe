@@ -74,6 +74,7 @@
         [_doneButton setBackgroundImage:[UIImage imageNamed:@"like_btn"] forState:UIControlStateNormal];
         [_cancelButton setBackgroundImage:[UIImage imageNamed:@"review_btn"] forState:UIControlStateNormal];
         _doneButtonHeightConstraint.constant = (([UIScreen mainScreen].bounds.size.width - 84)/2.) * (47./180.);
+        [self startIncrementAdvertsViewService];
     }
     else {
         
@@ -1147,4 +1148,37 @@
     
 }
 
+
+#pragma mark - API Helpers
+
+- (void) startIncrementAdvertsViewService {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = IncrementAdvertViews;
+    manager.delegate = nil;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForIncrementAdvertsView]];
+    
+}
+
+
+#pragma mark - Modalobject
+
+- (NSMutableDictionary *) prepareDictionaryForIncrementAdvertsView {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    [dict setObject:[_advertDict valueForKey:@"ID"] forKey:@"advertid"];
+    [dict setObject:[NSString stringWithFormat:@"%@",[[SharedClass sharedInstance] userId]] forKey:@"parentid"];
+    [dict setObject:[_advertDict valueForKey:@"Userid"] forKey:@"carerid"];
+    
+    return dict;
+    
+}
 @end

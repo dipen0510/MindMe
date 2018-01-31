@@ -1247,7 +1247,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIKED CARE PROVIDERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuX-6v-qTx">
-                                <rect key="frame" x="100" y="104" width="176" height="19"/>
+                                <rect key="frame" x="99.5" y="104" width="176" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1333,7 +1333,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADVERT CONTROL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2t-34-g3B">
-                                <rect key="frame" x="118" y="104" width="139.5" height="19"/>
+                                <rect key="frame" x="118.5" y="104" width="139.5" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1518,6 +1518,7 @@ Cg
                         <outlet property="advertLabel" destination="YRE-bQ-fzp" id="4d9-Wg-F0N"/>
                         <outlet property="advertTblView" destination="UEk-AS-NLb" id="Xft-cg-xLy"/>
                         <outlet property="createAdvertButton" destination="aUB-XM-AVg" id="BOS-bC-ZQX"/>
+                        <outlet property="headerLabel" destination="y2t-34-g3B" id="bRp-t4-qYy"/>
                         <outlet property="liveAdvertValueLabel" destination="4bN-du-Xne" id="rIu-6M-8qg"/>
                         <outlet property="mailLabel" destination="jZ3-ae-r04" id="kfr-gH-Wga"/>
                         <outlet property="nameLabel" destination="Bkx-y5-Eqe" id="TOT-XU-fYF"/>
@@ -1580,7 +1581,7 @@ Cg
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE CARE TYPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEd-iw-jgR">
-                                <rect key="frame" x="112" y="104" width="151.5" height="19"/>
+                                <rect key="frame" x="112.5" y="104" width="151.5" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2149,6 +2150,7 @@ Cg
                         <outlet property="miscCollectionView" destination="jZY-I1-I64" id="CXA-4u-s8R"/>
                         <outlet property="nextButton" destination="Sj3-4g-Bad" id="udU-iv-Xvf"/>
                         <outlet property="numberOfExperienceStaticLabel" destination="oZs-hu-QgD" id="Vsw-Gs-vWX"/>
+                        <outlet property="numberOfExperienceStaticLabelTopConstraint" destination="yQF-E3-Tzp" id="tH7-iJ-UEW"/>
                         <outlet property="preferredRateTextField" destination="T4U-8u-BGK" id="Mv1-5s-ro1"/>
                         <outlet property="profileImgView" destination="Baq-cY-z3p" id="W21-dw-Q61"/>
                         <outlet property="requiredOcassionalyButton" destination="nD2-Rx-wuv" id="1Xc-De-VZO"/>
@@ -2644,6 +2646,22 @@ our Android App from the Google Play Store</string>
                                             <action selector="addButtonTapped:" destination="2Ee-H5-kde" eventType="touchUpInside" id="qqd-4d-XRO"/>
                                         </connections>
                                     </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Relevant Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="nMf-8p-PiF">
+                                        <rect key="frame" x="20" y="1607" width="193.5" height="18"/>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="15"/>
+                                        <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="itT-qJ-AW3">
+                                        <rect key="frame" x="24" y="1639" width="327" height="68"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="68" id="k0q-Bf-dwv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="F2U-F5-yXq" firstAttribute="top" secondItem="Eat-lR-gMh" secondAttribute="bottom" constant="12" id="0Ib-XQ-aRR"/>
@@ -2656,6 +2674,7 @@ our Android App from the Google Play Store</string>
                                     <constraint firstItem="lfG-JU-DhE" firstAttribute="top" secondItem="ZsY-co-iYH" secondAttribute="top" constant="20" id="6jN-BN-VE0"/>
                                     <constraint firstItem="YLU-Gt-x3c" firstAttribute="leading" secondItem="ZsY-co-iYH" secondAttribute="leading" constant="16" id="74Q-3q-pzK"/>
                                     <constraint firstItem="DXw-b5-Khh" firstAttribute="trailing" secondItem="QGo-gi-hOc" secondAttribute="trailing" id="83y-PX-xp2"/>
+                                    <constraint firstItem="itT-qJ-AW3" firstAttribute="leading" secondItem="ZsY-co-iYH" secondAttribute="leading" constant="24" id="8uW-Ka-Ybv"/>
                                     <constraint firstItem="FCW-IJ-c5x" firstAttribute="leading" secondItem="ZsY-co-iYH" secondAttribute="leading" id="9vq-AL-VCB"/>
                                     <constraint firstItem="x3Z-V1-B4M" firstAttribute="height" secondItem="MSb-JG-BTa" secondAttribute="height" id="A3p-tz-6Qc"/>
                                     <constraint firstAttribute="trailing" secondItem="Gn7-be-xc6" secondAttribute="trailing" constant="20" id="AN6-Us-iU8"/>
@@ -2720,6 +2739,7 @@ our Android App from the Google Play Store</string>
                                     <constraint firstAttribute="trailing" secondItem="x3Z-V1-B4M" secondAttribute="trailing" constant="37" id="jYn-cj-1mF"/>
                                     <constraint firstItem="I40-bo-YRS" firstAttribute="top" secondItem="QmR-yr-2K3" secondAttribute="bottom" constant="16" id="je3-AB-3Hw"/>
                                     <constraint firstItem="g2g-Cn-iH0" firstAttribute="top" secondItem="F2U-F5-yXq" secondAttribute="bottom" constant="12" id="js4-yf-3tX"/>
+                                    <constraint firstAttribute="trailing" secondItem="itT-qJ-AW3" secondAttribute="trailing" constant="24" id="jsO-5J-32E"/>
                                     <constraint firstItem="bch-JX-zQs" firstAttribute="leading" secondItem="ZsY-co-iYH" secondAttribute="leading" id="k20-aV-lBB"/>
                                     <constraint firstItem="W9a-ox-FBk" firstAttribute="leading" secondItem="Eat-lR-gMh" secondAttribute="leading" id="kjO-QC-4nt"/>
                                     <constraint firstItem="cP4-iV-qck" firstAttribute="width" secondItem="g2g-Cn-iH0" secondAttribute="width" id="l2u-w5-ghg"/>
@@ -2729,10 +2749,13 @@ our Android App from the Google Play Store</string>
                                     <constraint firstItem="cP4-iV-qck" firstAttribute="top" secondItem="fZm-Z8-JnY" secondAttribute="bottom" constant="12" id="odm-3u-1dc"/>
                                     <constraint firstAttribute="bottom" secondItem="MSb-JG-BTa" secondAttribute="bottom" constant="39" id="pZI-Bf-twm"/>
                                     <constraint firstItem="ylt-eY-MVF" firstAttribute="leading" secondItem="ZsY-co-iYH" secondAttribute="leading" constant="37" id="rec-tK-GiS"/>
+                                    <constraint firstItem="nMf-8p-PiF" firstAttribute="top" secondItem="QGo-gi-hOc" secondAttribute="bottom" constant="13.5" id="tP2-4r-j4A"/>
                                     <constraint firstItem="L1I-bq-cBI" firstAttribute="top" secondItem="lfG-JU-DhE" secondAttribute="bottom" constant="16" id="tc3-yT-mLo"/>
                                     <constraint firstItem="RIb-3V-NNh" firstAttribute="leading" secondItem="W9a-ox-FBk" secondAttribute="leading" id="tcc-Um-n69"/>
+                                    <constraint firstItem="nMf-8p-PiF" firstAttribute="leading" secondItem="H5V-VO-tWd" secondAttribute="leading" id="uX9-pg-12i"/>
                                     <constraint firstItem="YLU-Gt-x3c" firstAttribute="top" secondItem="qeU-Ld-Oxv" secondAttribute="bottom" constant="16" id="v1S-sH-RJ3"/>
                                     <constraint firstItem="QmR-yr-2K3" firstAttribute="top" secondItem="aY1-ID-E1c" secondAttribute="bottom" constant="12" id="wpb-BM-MS6"/>
+                                    <constraint firstItem="itT-qJ-AW3" firstAttribute="top" secondItem="nMf-8p-PiF" secondAttribute="bottom" constant="14" id="yE6-wY-O1o"/>
                                     <constraint firstAttribute="trailing" secondItem="L1I-bq-cBI" secondAttribute="trailing" constant="16" id="ykU-BP-O4P"/>
                                     <constraint firstAttribute="trailing" secondItem="w8E-ya-vgW" secondAttribute="trailing" id="ymy-cI-adE"/>
                                     <constraint firstAttribute="trailing" secondItem="2Pv-m7-Xb8" secondAttribute="trailing" constant="16" id="z42-LQ-Jka"/>
@@ -2777,6 +2800,8 @@ our Android App from the Google Play Store</string>
                         <outlet property="fourthCollectionViewTitleTopConstraint" destination="YSf-By-zuw" id="DP3-mE-IEf"/>
                         <outlet property="isAdvertActiveLabel" destination="Gn7-be-xc6" id="5si-T7-Ehc"/>
                         <outlet property="nextButton" destination="MSb-JG-BTa" id="A9u-ox-pMY"/>
+                        <outlet property="otherRelevantInfoStaticLabel" destination="nMf-8p-PiF" id="RjV-7O-sTo"/>
+                        <outlet property="otherRelevantInfoTextView" destination="itT-qJ-AW3" id="zba-lZ-B8O"/>
                         <outlet property="secondCollectionSeparatorView" destination="2Pv-m7-Xb8" id="gab-zm-xp9"/>
                         <outlet property="secondCollectionView" destination="FCW-IJ-c5x" id="JKA-Mi-gPN"/>
                         <outlet property="secondCollectionViewHeightConstraint" destination="JB3-5F-h6e" id="ncY-TS-O3l"/>
@@ -3182,7 +3207,7 @@ our Android App from the Google Play Store</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHo-L4-otW">
-                                <rect key="frame" x="82" y="374" width="212.5" height="61"/>
+                                <rect key="frame" x="81.5" y="374" width="212.5" height="61"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">YOUR CV IS UNDER
@@ -3361,7 +3386,7 @@ APPROVAL</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIVACY POLICY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhV-SY-4Fw">
-                                <rect key="frame" x="126.5" y="104" width="122.5" height="19"/>
+                                <rect key="frame" x="127" y="104" width="122.5" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -5626,19 +5651,19 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews only - No Contact Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImO-Cp-K3c">
-                                <rect key="frame" x="77.5" y="198" width="221" height="17"/>
+                                <rect key="frame" x="77" y="198" width="221" height="17"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Rate Me :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kv6-xc-ycF">
-                                <rect key="frame" x="122.5" y="235" width="131.5" height="20"/>
+                                <rect key="frame" x="122" y="235" width="131.5" height="20"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review : Serpil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE5-W0-Tks">
-                                <rect key="frame" x="132.5" y="313.5" width="111.5" height="20"/>
+                                <rect key="frame" x="132" y="313.5" width="111.5" height="20"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -5696,7 +5721,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nz-fb-13t">
-                                <rect key="frame" x="156" y="406.5" width="63.5" height="20"/>
+                                <rect key="frame" x="156.5" y="406.5" width="63.5" height="20"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -5863,7 +5888,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yhj-ON-ojt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yAc-9C-3no">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yAc-9C-3no">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -5882,7 +5907,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wg9-Nn-sTY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="etA-fm-vvl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="etA-fm-vvl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -6009,7 +6034,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a password of at least 5 characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-dk-e66">
-                                <rect key="frame" x="45" y="327" width="286.5" height="16"/>
+                                <rect key="frame" x="44.5" y="327" width="286.5" height="16"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -8072,7 +8097,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <rect key="frame" x="198" y="226" width="153" height="101"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jq1-AF-ZfD">
-                                                <rect key="frame" x="20.5" y="16" width="113.5" height="21"/>
+                                                <rect key="frame" x="20" y="16" width="113.5" height="21"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="$39.99">
                                                         <attributes>
@@ -8193,7 +8218,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* All subscriptions are automatically renewed until cancelled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOb-t7-lHz">
-                                        <rect key="frame" x="52" y="476" width="272.5" height="12"/>
+                                        <rect key="frame" x="51.5" y="476" width="272.5" height="12"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="10"/>
                                         <color key="textColor" red="0.486101687" green="0.49017071719999999" blue="0.49426180120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -8257,7 +8282,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <rect key="frame" x="111" y="791" width="153" height="101"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9e-Yv-h87">
-                                                <rect key="frame" x="24" y="16" width="105.5" height="21"/>
+                                                <rect key="frame" x="24.5" y="16" width="105.5" height="21"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="$159.99">
                                                         <attributes>
@@ -8385,7 +8410,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* All subscriptions are automatically renewed until cancelled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZY-Sr-XSA">
-                                        <rect key="frame" x="52" y="924" width="272.5" height="12"/>
+                                        <rect key="frame" x="51.5" y="924" width="272.5" height="12"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="10"/>
                                         <color key="textColor" red="0.486101687" green="0.49017071719999999" blue="0.49426180120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -8546,7 +8571,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAYMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJE-Fa-2fH">
-                                <rect key="frame" x="152" y="104" width="71" height="19"/>
+                                <rect key="frame" x="152.5" y="104" width="71" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -8852,7 +8877,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* All subscriptions are automatically renewed until cancelled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cr5-Te-9e4">
-                                        <rect key="frame" x="52" y="476" width="272.5" height="12"/>
+                                        <rect key="frame" x="51.5" y="476" width="272.5" height="12"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="10"/>
                                         <color key="textColor" red="0.486101687" green="0.49017071719999999" blue="0.49426180120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -9029,7 +9054,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <rect key="frame" x="198" y="351" width="153" height="101"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJB-2S-Ejk">
-                                                <rect key="frame" x="27.5" y="16" width="99.5" height="21"/>
+                                                <rect key="frame" x="27" y="16" width="99.5" height="21"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="$69.99">
                                                         <attributes>

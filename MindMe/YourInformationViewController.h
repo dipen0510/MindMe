@@ -43,4 +43,6 @@
 - (IBAction)experienceMinusButtonTapped:(id)sender;
 - (IBAction)experiencePlusButtonTapped:(id)sender;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *numberOfExperienceStaticLabelTopConstraint;
+
 @end
