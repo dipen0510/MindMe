@@ -58,6 +58,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *uploadCVDescLabel;
 @property (weak, nonatomic) IBOutlet UILabel *otherRelevantInfoStaticLabel;
 @property (weak, nonatomic) IBOutlet UITextView *otherRelevantInfoTextView;
+@property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
 
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)addButtonTapped:(id)sender;

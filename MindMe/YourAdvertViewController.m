@@ -71,6 +71,9 @@
     
     _isAdvertActiveLabel.delegate = self;
     
+    [_contentScrollView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)]];
+    _contentScrollView.exclusiveTouch = NO;
+    
 }
 
 - (void) setupAvailibilityArr {
@@ -793,6 +796,12 @@
     
 }
 
+- (void) hideKeyboard {
+    
+    [self.view endEditing:YES];
+    
+}
+
 #pragma mark - CollectionView Datasource
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -1061,10 +1070,27 @@
     cell.layer.borderColor = [UIColor colorWithWhite:0.9 alpha:1.0].CGColor;
     cell.layer.borderWidth = 0.5;
     
+    cell.tag = indexPath.row;
+    [cell addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapOnAvailabilityCell:)]];
+    
 }
 
 - (void) populateContentForCVCollectionViewCell:(AdvertPDFCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
+    
+}
+
+- (void) didTapOnAvailabilityCell:(UITapGestureRecognizer *)gesture {
+    
+    long index = gesture.view.tag;
+    
+    if (index%8 != 0 && index>=8) {
+        
+        int currentStatus = [[availabilityArr objectAtIndex:index] intValue];
+        [availabilityArr replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:!currentStatus]];
+        [_daysRequiredCollectionView reloadData];
+        
+    }
     
 }
 

@@ -152,10 +152,11 @@
     [manager POST:self.serviceKey parameters:postData constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         
         if (profileImage && ![profileImage isEqual:@""]) {
-            NSData* data = UIImageJPEGRepresentation(profileImage,0.75);
+            NSData* data = UIImagePNGRepresentation(profileImage);
+            
             [formData appendPartWithFileData:data
                                         name:@"image_path"
-                                    fileName:@"image_path" mimeType:@"image/jpeg"];
+                                    fileName:@"profile.png" mimeType:@"image/png"];
         }
         
         
