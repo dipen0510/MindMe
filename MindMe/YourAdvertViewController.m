@@ -1147,7 +1147,17 @@
     DataSyncManager* manager = [[DataSyncManager alloc] init];
     manager.serviceKey = AddCarerAdvert;
     manager.delegate = self;
-    [manager startPOSTingAdverDetails:[self prepareDictionaryForPostingAdvert]];
+    
+    NSMutableDictionary* postDict = [[NSMutableDictionary alloc] init];
+    
+    if ([[_advertDetailsDict valueForKey:@"care_type"] isEqualToString:@"Tutor"]) {
+        postDict = [self prepareDictionaryForTutorPostingAdvert];
+    }
+    else {
+        postDict = [self prepareDictionaryForPostingAdvert];
+    }
+    
+    [manager startPOSTingAdverDetails:postDict];
     
 }
 
@@ -1158,7 +1168,17 @@
     DataSyncManager* manager = [[DataSyncManager alloc] init];
     manager.serviceKey = AddParentAdvert;
     manager.delegate = self;
-    [manager startPOSTingAdverDetails:[self prepareDictionaryForPostingAdvert]];
+    
+    NSMutableDictionary* postDict = [[NSMutableDictionary alloc] init];
+    
+    if ([[_advertDetailsDict valueForKey:@"care_type"] isEqualToString:@"Tutor"]) {
+        postDict = [self prepareDictionaryForTutorPostingAdvert];
+    }
+    else {
+        postDict = [self prepareDictionaryForPostingAdvert];
+    }
+    
+    [manager startPOSTingAdverDetails:postDict];
     
 }
 
@@ -1273,7 +1293,15 @@
             }
         }
     }
-    [dict setObject:ageGroup forKey:@"age_group"];
+    
+    if ([[_advertDetailsDict valueForKey:@"care_type"] isEqualToString:@"Cleaners"] || [[_advertDetailsDict valueForKey:@"care_type"] isEqualToString:@"House Keepers"] || [[_advertDetailsDict valueForKey:@"care_type"] isEqualToString:@"Dog Walkers"] || [[_advertDetailsDict valueForKey:@"care_type"] isEqualToString:@"Pet Minders"]) {
+        [dict setObject:ageGroup forKey:@"additional_optional"];
+        [dict setObject:@"" forKey:@"age_group"];
+    }
+    else {
+        [dict setObject:ageGroup forKey:@"age_group"];
+    }
+    
     
     
     NSString* require = @"";
@@ -1307,7 +1335,10 @@
             }
         }
     }
-    [dict setObject:additional_optional forKey:@"additional_optional"];
+    if (![[_advertDetailsDict valueForKey:@"care_type"] isEqualToString:@"Cleaners"] && ![[_advertDetailsDict valueForKey:@"care_type"] isEqualToString:@"House Keepers"] && ![[_advertDetailsDict valueForKey:@"care_type"] isEqualToString:@"Dog Walkers"] && ![[_advertDetailsDict valueForKey:@"care_type"] isEqualToString:@"Pet Minders"]) {
+        [dict setObject:additional_optional forKey:@"additional_optional"];
+    }
+    
     
     
     NSString* love_optional = @"";
@@ -1353,6 +1384,119 @@
     else {
         [dict setObject:@"1" forKey:@"job_ad_active"];
     }
+    
+    
+    return dict;
+    
+}
+
+
+- (NSMutableDictionary *) prepareDictionaryForTutorPostingAdvert {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithDictionary:_advertDetailsDict];
+    
+    NSString* booking = @"";
+    
+    for (int i = 0; i<availabilityArr.count; i++) {
+        
+        if ([[availabilityArr objectAtIndex:i] intValue]) {
+            if ([booking isEqualToString:@""]) {
+                booking = [NSString stringWithFormat:@"%@ %@", [self fullNameForWeekdayAvailabilityIndex:i], [self fullNameForAvailabilityIndex:i]];
+            }
+            else {
+                booking = [NSString stringWithFormat:@"%@,%@ %@",booking,[self fullNameForWeekdayAvailabilityIndex:i],[self fullNameForAvailabilityIndex:i]];
+            }
+        }
+        
+    }
+    [dict setObject:booking forKey:@"booking"];
+    
+    CreateAdvertsCollectionViewCell* emerCell = (CreateAdvertsCollectionViewCell*)[_firstCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    if (emerCell.toggleButton.isSelected) {
+        [dict setObject:@"1" forKey:@"emer"];
+    }
+    else {
+        [dict setObject:@"0" forKey:@"emer"];
+    }
+    
+    NSString* mindLOC = @"";
+    if (!_secondCollectionView.hidden) {
+        for (int i = 0; i<secondCollectionViewArr.count; i++) {
+            CreateAdvertsCollectionViewCell* tmpCell = (CreateAdvertsCollectionViewCell*)[_secondCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            if (tmpCell.toggleButton.isSelected) {
+                if ([mindLOC isEqualToString:@""]) {
+                    mindLOC = [NSString stringWithFormat:@"%@", [tmpCell.titleLabel.text stringByReplacingOccurrencesOfString:@"Parent" withString:@"Their"]];
+                }
+                else {
+                    mindLOC = [NSString stringWithFormat:@"%@,%@",mindLOC,[tmpCell.titleLabel.text stringByReplacingOccurrencesOfString:@"Parent" withString:@"Their"]];
+                }
+            }
+        }
+    }
+    [dict setObject:mindLOC forKey:@"additional_optional"];
+    
+    
+    NSString* ageGroup = @"";
+    if (!_thirdCollectionView.hidden) {
+        for (int i = 0; i<thirdCollectionViewArr.count; i++) {
+            CreateAdvertsCollectionViewCell* tmpCell = (CreateAdvertsCollectionViewCell*)[_thirdCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            if (tmpCell.toggleButton.isSelected) {
+                if ([ageGroup isEqualToString:@""]) {
+                    ageGroup = [NSString stringWithFormat:@"%@", [tmpCell.titleLabel.text stringByReplacingOccurrencesOfString:@"-" withString:@"to"]];
+                }
+                else {
+                    ageGroup = [NSString stringWithFormat:@"%@,%@",ageGroup,[tmpCell.titleLabel.text stringByReplacingOccurrencesOfString:@"-" withString:@"to"]];
+                }
+            }
+        }
+    }
+    
+    [dict setObject:ageGroup forKey:@"love_optional"];
+    
+    
+    
+    NSString* require = @"";
+    if (!_forthCollectionView.hidden) {
+        for (int i = 0; i<fourthCollectionViewArr.count; i++) {
+            CreateAdvertsCollectionViewCell* tmpCell = (CreateAdvertsCollectionViewCell*)[_forthCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            if (tmpCell.toggleButton.isSelected) {
+                if ([require isEqualToString:@""]) {
+                    require = [NSString stringWithFormat:@"%@", tmpCell.titleLabel.text];
+                }
+                else {
+                    require = [NSString stringWithFormat:@"%@,%@",require,tmpCell.titleLabel.text];
+                }
+            }
+        }
+    }
+    [dict setObject:require forKey:@"require"];
+
+    
+    NSString* services = @"";
+    if (!_seventhCollectionView.hidden) {
+        for (int i = 0; i<seventhCollectionViewArr.count; i++) {
+            CreateAdvertsCollectionViewCell* tmpCell = (CreateAdvertsCollectionViewCell*)[_seventhCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            if (tmpCell.toggleButton.isSelected) {
+                if ([services isEqualToString:@""]) {
+                    services = [NSString stringWithFormat:@"%@", tmpCell.titleLabel.text];
+                }
+                else {
+                    services = [NSString stringWithFormat:@"%@,%@",services,tmpCell.titleLabel.text];
+                }
+            }
+        }
+    }
+    [dict setObject:services forKey:@"services"];
+    
+    if ([_isAdvertActiveLabel.text isEqualToString:@"No"]) {
+        [dict setObject:@"0" forKey:@"job_ad_active"];
+    }
+    else {
+        [dict setObject:@"1" forKey:@"job_ad_active"];
+    }
+    
+    [dict setObject:@"" forKey:@"mind_loc"];
+    [dict setObject:@"" forKey:@"age_group"];
     
     
     return dict;
