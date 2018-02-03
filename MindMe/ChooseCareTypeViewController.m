@@ -40,6 +40,12 @@
     [self.firstCollectionView registerNib:[UINib nibWithNibName:@"ChooseCareTypeCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ChooseCareTypeCollectionViewCell"];
     [self.secondCollectionView registerNib:[UINib nibWithNibName:@"ChooseCareTypeCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ChooseCareTypeCollectionViewCell"];
     
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        
+        _editSectionHeaderLabel.text = @"Edit your existing Advert";
+        
+    }
+    
 }
 
 - (void) setupDataSource {

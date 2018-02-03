@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UICollectionView *firstCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *secondCollectionView;
+@property (weak, nonatomic) IBOutlet UILabel *editSectionHeaderLabel;
 
 - (IBAction)backButtonTapped:(id)sender;
 

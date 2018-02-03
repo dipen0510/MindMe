@@ -56,11 +56,13 @@
     if (![[SharedClass sharedInstance] isUserCarer]) {
         
         _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"Subscribed\n"];
+        _tableViewheaderLabel.text = @"Adverts";
         
     }
     else {
         _headerLabel.text = @"Profile Control";
         [_createAdvertButton setTitle:@"Create Profile" forState:UIControlStateNormal];
+        _advertLabel.text = @"Live Profiles\n";
     }
     
     NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
@@ -178,8 +180,15 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.careTypeLabel.text = [NSString stringWithFormat:@"%@ advert [%@ views]",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"],[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"viewed"]];
-    [cell.editButton setTitle:[NSString stringWithFormat:@"Edit %@ Advert",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]] forState:UIControlStateNormal];
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        cell.careTypeLabel.text = [NSString stringWithFormat:@"%@ advert [%@ views]",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"],[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"viewed"]];
+        [cell.editButton setTitle:[NSString stringWithFormat:@"Edit %@ Advert",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]] forState:UIControlStateNormal];
+    }
+    else {
+        cell.careTypeLabel.text = [NSString stringWithFormat:@"%@ profile [%@ views]",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"],[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"viewed"]];
+        [cell.editButton setTitle:[NSString stringWithFormat:@"Edit %@ Profile",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]] forState:UIControlStateNormal];
+    }
+    
     
     cell.toggleButton.tag = indexPath.row;
     [cell.toggleButton addTarget:self action:@selector(advertToggleButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
