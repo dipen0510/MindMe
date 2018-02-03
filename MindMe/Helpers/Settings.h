@@ -29,6 +29,7 @@
 #define GetAllHomeAdverts @"fetchAll_profile"
 #define ContactUs @"emailManage/contactUs"
 #define IncrementAdvertViews @"profile/incrementview"
+#define GetSubscriptions @"subscribe/getallsubscriptions"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"

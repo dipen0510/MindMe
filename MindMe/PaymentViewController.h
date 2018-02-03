@@ -10,6 +10,8 @@
 
 @interface PaymentViewController : UIViewController
 
+@property (nonatomic, strong) NSMutableDictionary* subscriptionDict;
+
 @property (weak, nonatomic) IBOutlet UIButton *payButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 

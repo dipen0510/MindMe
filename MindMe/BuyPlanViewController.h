@@ -11,18 +11,14 @@
 @interface BuyPlanViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *voucherApplyButton;
-@property (weak, nonatomic) IBOutlet UIButton *silverQuarterlySelectButton;
-@property (weak, nonatomic) IBOutlet UIButton *silverMonthlySelectButton;
-@property (weak, nonatomic) IBOutlet UIButton *silverYearlySelectButton;
 @property (weak, nonatomic) IBOutlet UIButton *goldMonthlySelectButton;
-@property (weak, nonatomic) IBOutlet UIButton *goldQuarterlySelectButton;
 @property (weak, nonatomic) IBOutlet UIButton *goldYearlySelectButton;
-@property (weak, nonatomic) IBOutlet UIView *silverMonthlyView;
-@property (weak, nonatomic) IBOutlet UIView *silverQuaretlyView;
-@property (weak, nonatomic) IBOutlet UIView *silverYearlyView;
+@property (weak, nonatomic) IBOutlet UIButton *goldQuarterlySelectButton;
+@property (weak, nonatomic) IBOutlet UIButton *goldHalfYearlySelectButton;
 @property (weak, nonatomic) IBOutlet UIView *goldMonthlyView;
 @property (weak, nonatomic) IBOutlet UIView *goldQuarterlyView;
 @property (weak, nonatomic) IBOutlet UIView *goldYearlyView;
+@property (weak, nonatomic) IBOutlet UIView *goldhalfYearlyView;
 
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)selectButtonTapped:(id)sender;

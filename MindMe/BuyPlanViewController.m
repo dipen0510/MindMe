@@ -27,32 +27,15 @@
     _voucherApplyButton.layer.cornerRadius = 10.0;
     _voucherApplyButton.layer.masksToBounds = NO;
     
-    _silverMonthlySelectButton.layer.cornerRadius = 12.0;
-    _silverMonthlySelectButton.layer.masksToBounds = NO;
-    _silverQuarterlySelectButton.layer.cornerRadius = 12.0;
-    _silverQuarterlySelectButton.layer.masksToBounds = NO;
-    _silverYearlySelectButton.layer.cornerRadius = 12.0;
-    _silverYearlySelectButton.layer.masksToBounds = NO;
-    
     _goldMonthlySelectButton.layer.cornerRadius = 12.0;
     _goldMonthlySelectButton.layer.masksToBounds = NO;
     _goldQuarterlySelectButton.layer.cornerRadius = 12.0;
     _goldQuarterlySelectButton.layer.masksToBounds = NO;
     _goldYearlySelectButton.layer.cornerRadius = 12.0;
     _goldYearlySelectButton.layer.masksToBounds = NO;
+    _goldHalfYearlySelectButton.layer.cornerRadius = 12.0;
+    _goldHalfYearlySelectButton.layer.masksToBounds = NO;
     
-    _silverQuaretlyView.layer.cornerRadius = 5.0;
-    _silverQuaretlyView.layer.masksToBounds = NO;
-    _silverQuaretlyView.layer.borderWidth = 1.0;
-    _silverQuaretlyView.layer.borderColor = _silverMonthlySelectButton.backgroundColor.CGColor;
-    _silverMonthlyView.layer.cornerRadius = 5.0;
-    _silverMonthlyView.layer.masksToBounds = NO;
-    _silverMonthlyView.layer.borderWidth = 1.0;
-    _silverMonthlyView.layer.borderColor = _silverMonthlySelectButton.backgroundColor.CGColor;
-    _silverYearlyView.layer.cornerRadius = 5.0;
-    _silverYearlyView.layer.masksToBounds = NO;
-    _silverYearlyView.layer.borderWidth = 1.0;
-    _silverYearlyView.layer.borderColor = _silverMonthlySelectButton.backgroundColor.CGColor;
     
     _goldQuarterlyView.layer.cornerRadius = 5.0;
     _goldQuarterlyView.layer.masksToBounds = NO;
@@ -66,7 +49,10 @@
     _goldYearlyView.layer.masksToBounds = NO;
     _goldYearlyView.layer.borderWidth = 1.0;
     _goldYearlyView.layer.borderColor = _goldMonthlySelectButton.backgroundColor.CGColor;
-    
+    _goldhalfYearlyView.layer.cornerRadius = 5.0;
+    _goldhalfYearlyView.layer.masksToBounds = NO;
+    _goldhalfYearlyView.layer.borderWidth = 1.0;
+    _goldhalfYearlyView.layer.borderColor = _goldMonthlySelectButton.backgroundColor.CGColor;
     
 }
 
