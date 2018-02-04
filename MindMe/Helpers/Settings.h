@@ -11,6 +11,11 @@
 
 #define WebServiceURL @"http://epmay.com/CIRESTAPI"
 
+#define StripeBaseURL @"https://api.stripe.com/v1"
+
+#define StripeSubscriptionKey @"subscriptions"
+#define StripeCustomerKey @"customers"
+
 #define RegisterServiceKey @"index.php/auth/register"
 #define FBRegisterServiceKey @"index.php/auth/registerfb"
 #define LoginServiceKey @"auth/login"
@@ -30,6 +35,7 @@
 #define ContactUs @"emailManage/contactUs"
 #define IncrementAdvertViews @"profile/incrementview"
 #define GetSubscriptions @"subscribe/getallsubscriptions"
+#define PostSubscriptionReceipt @"subscribe/dosubscribe"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"

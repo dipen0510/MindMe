@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PaymentViewController : UIViewController
+@interface PaymentViewController : UIViewController <DataSyncManagerDelegate> {
+    NSString* cardToken;
+    NSString* customerId;
+    NSString* subscriptionId;
+}
 
 @property (nonatomic, strong) NSMutableDictionary* subscriptionDict;
 
@@ -18,7 +22,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *monthTextField;
 @property (weak, nonatomic) IBOutlet UITextField *yearTextField;
 @property (weak, nonatomic) IBOutlet UITextField *cvvTextField;
+@property (weak, nonatomic) IBOutlet UITextField *cardNumberTextField;
+@property (weak, nonatomic) IBOutlet UITextField *cardNameTextField;
 
-
+- (IBAction)payButtonTapped:(id)sender;
+- (IBAction)cancelButtonTapped:(id)sender;
 - (IBAction)backButtonTapped:(id)sender;
+
 @end

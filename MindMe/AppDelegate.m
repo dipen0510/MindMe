@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <Stripe/Stripe.h>
 
 @interface AppDelegate ()
 
@@ -26,6 +27,8 @@
     
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
+    
+    [[STPPaymentConfiguration sharedConfiguration] setPublishableKey:@"pk_test_rFhihoAilbwnqvKfLRRTE3c8"];
     
     return YES;
     
