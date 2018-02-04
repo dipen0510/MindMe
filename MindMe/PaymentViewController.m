@@ -33,6 +33,7 @@
     _cancelButton.layer.borderWidth = 1.0;
     _cancelButton.layer.borderColor = _cancelButton.titleLabel.textColor.CGColor;
     
+    _cardNumberTextField.keyboardType = UIKeyboardTypeNumberPad;
     _monthTextField.keyboardType = UIKeyboardTypeNumberPad;
     _yearTextField.keyboardType = UIKeyboardTypeNumberPad;
     _cvvTextField.keyboardType = UIKeyboardTypeNumberPad;

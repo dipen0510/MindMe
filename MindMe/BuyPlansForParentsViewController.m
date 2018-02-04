@@ -171,6 +171,13 @@
     
 }
 
+- (IBAction)voucherApplyButtonTapped:(id)sender {
+    
+    [self.view endEditing:YES];
+    [self startGetVouchersService];
+    
+}
+
 #pragma mark - API Helpers
 
 - (void) startGetSubscriptionsService {
@@ -181,6 +188,17 @@
     manager.serviceKey = GetSubscriptions;
     manager.delegate = self;
     [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForSubscriptions]];
+    
+}
+
+- (void) startGetVouchersService {
+    
+    [SVProgressHUD showWithStatus:@"Validating voucher"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GetVouchers;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForVouchers]];
     
 }
 
@@ -197,7 +215,20 @@
         
         
     }
-    
+    if ([requestServiceKey isEqualToString:GetVouchers]) {
+        
+        NSMutableArray* messageArr = [[NSMutableArray alloc] initWithArray:[responseData valueForKey:@"message"]];
+        
+        if (messageArr.count == 0) {
+            [SVProgressHUD showErrorWithStatus:@"Invalid voucher code"];
+        }
+        else {
+            [SVProgressHUD showSuccessWithStatus:@"Voucher applied successfully"];
+            selectedSubscriptionDict = [messageArr objectAtIndex:0];
+            [self performSegueWithIdentifier:@"showPaymentSegue" sender:nil];
+        }
+        
+    }
     
     
 }
@@ -243,6 +274,23 @@
     else {
         [dict setObject:@"parent" forKey:@"flag"];
     }
+    
+    return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForVouchers {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    [dict setObject:_vouchertextField.text forKey:@"voucharcode"];
     
     return dict;
     

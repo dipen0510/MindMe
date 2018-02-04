@@ -35,6 +35,7 @@
 #define ContactUs @"emailManage/contactUs"
 #define IncrementAdvertViews @"profile/incrementview"
 #define GetSubscriptions @"subscribe/getallsubscriptions"
+#define GetVouchers @"subscribe/getallvouchers"
 #define PostSubscriptionReceipt @"subscribe/dosubscribe"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
