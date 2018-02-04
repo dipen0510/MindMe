@@ -85,15 +85,15 @@
         if ([[subsDict valueForKey:@"plan_type"] containsString:@"GOLD"]) {
             
             if ([[subsDict valueForKey:@"short_description"] containsString:@"month"]) {
-                _goldMonthlyLabel.text = [NSString stringWithFormat:@"$%@",[subsDict valueForKey:@"price_to_charge"]];
+                _goldMonthlyLabel.text = [NSString stringWithFormat:@"€%@",[subsDict valueForKey:@"price_to_charge"]];
                 goldMonthlyDict = [[NSMutableDictionary alloc] initWithDictionary:subsDict];
             }
             else if ([[subsDict valueForKey:@"short_description"] containsString:@"quarter"]) {
-                _goldQuarterlyLabel.text = [NSString stringWithFormat:@"$%@",[subsDict valueForKey:@"price_to_charge"]];
+                _goldQuarterlyLabel.text = [NSString stringWithFormat:@"€%@",[subsDict valueForKey:@"price_to_charge"]];
                 goldQuarterlyDict = [[NSMutableDictionary alloc] initWithDictionary:subsDict];
             }
             else if ([[subsDict valueForKey:@"short_description"] containsString:@"year"]) {
-                _goldAnnualLabel.text = [NSString stringWithFormat:@"$%@",[subsDict valueForKey:@"price_to_charge"]];
+                _goldAnnualLabel.text = [NSString stringWithFormat:@"€%@",[subsDict valueForKey:@"price_to_charge"]];
                 goldAnnualDict = [[NSMutableDictionary alloc] initWithDictionary:subsDict];
             }
             
@@ -101,15 +101,15 @@
         else {
             
             if ([[subsDict valueForKey:@"short_description"] containsString:@"month"]) {
-                _silverMonthlyLabel.text = [NSString stringWithFormat:@"$%@",[subsDict valueForKey:@"price_to_charge"]];
+                _silverMonthlyLabel.text = [NSString stringWithFormat:@"€%@",[subsDict valueForKey:@"price_to_charge"]];
                 silverMonthlyDict = [[NSMutableDictionary alloc] initWithDictionary:subsDict];
             }
             else if ([[subsDict valueForKey:@"short_description"] containsString:@"quarter"]) {
-                _silverQuarterlyLabel.text = [NSString stringWithFormat:@"$%@",[subsDict valueForKey:@"price_to_charge"]];
+                _silverQuarterlyLabel.text = [NSString stringWithFormat:@"€%@",[subsDict valueForKey:@"price_to_charge"]];
                 silverQuarterlyDict = [[NSMutableDictionary alloc] initWithDictionary:subsDict];
             }
             else if ([[subsDict valueForKey:@"short_description"] containsString:@"year"]) {
-                _silverAnnualLabel.text = [NSString stringWithFormat:@"$%@",[subsDict valueForKey:@"price_to_charge"]];
+                _silverAnnualLabel.text = [NSString stringWithFormat:@"€%@",[subsDict valueForKey:@"price_to_charge"]];
                 silverAnnualDict = [[NSMutableDictionary alloc] initWithDictionary:subsDict];
             }
             
@@ -125,7 +125,7 @@
 }
 
 
- #pragma mark - Navigation
+#pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
