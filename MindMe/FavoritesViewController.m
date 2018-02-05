@@ -92,7 +92,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return 170;
+    return 200;
     
 }
 
@@ -102,9 +102,33 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.drivingLicenseImgView.userInteractionEnabled = YES;
+    cell.drivingLicenseImgView.hidden = YES;
+    cell.euImgView.hidden = YES;
+    cell.lastLoginLabel.hidden = YES;
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        cell.yearsExperienceStaticLabel.text = @"Years of Experience needed :";
+        cell.featuredImgView.hidden = YES;
+        cell.featuredLabel.hidden = YES;
+    }
+    else {
+        cell.yearsExperienceStaticLabel.text = @"Years of Experience ";
+        
+        if ([[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"Sub_active"] && [[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"Sub_active"] intValue] == 1) {
+            cell.featuredImgView.hidden = NO;
+            cell.featuredLabel.hidden = NO;
+        }
+        else {
+            cell.featuredImgView.hidden = YES;
+            cell.featuredLabel.hidden = YES;
+        }
+        
+    }
     
     cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
+    cell.locationLabel.text = [[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"address1"];
+    cell.careTypeLabel.text = [[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
+    cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ years",[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
     cell.descLabel.text = [[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"about_you"];
     
     if (![[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqualToString:@""]) {
