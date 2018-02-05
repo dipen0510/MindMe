@@ -13,5 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImgView;
 @property (weak, nonatomic) IBOutlet UIImageView *drivingLicenseImgView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descLabel;
 
 @end

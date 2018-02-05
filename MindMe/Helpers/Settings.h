@@ -37,6 +37,7 @@
 #define GetSubscriptions @"subscribe/getallsubscriptions"
 #define GetVouchers @"subscribe/getallvouchers"
 #define PostSubscriptionReceipt @"subscribe/dosubscribe"
+#define GetFavoriteAdverts @"advert/getLikedAdvert"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"

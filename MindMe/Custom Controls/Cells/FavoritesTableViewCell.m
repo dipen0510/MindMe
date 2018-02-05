@@ -21,7 +21,7 @@
     _containerView.layer.shadowOpacity = 0.4f;
     _containerView.layer.shadowRadius = 5.0;
     
-    _profileImgView.layer.cornerRadius = (0.25 * [UIScreen mainScreen].bounds.size.width)/2.;
+    _profileImgView.layer.cornerRadius = ((92./800.) * [UIScreen mainScreen].bounds.size.width);
     _profileImgView.layer.masksToBounds = YES;
     
 }
