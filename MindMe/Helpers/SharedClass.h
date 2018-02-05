@@ -23,6 +23,9 @@
 @property BOOL isChangePasswordOpenedFromSideMenu;
 @property BOOL isEditProfileMenuButtonHidden;
 
+@property BOOL isFeaturedFilterApplied;
+@property BOOL isLastMinuiteCareFilterApplied;
+
 - (void) changeRootControllerForIdentifier:(NSString *)viewControllerId forSideMenuController:(LGSideMenuController *)sideMenuController;
 
 @end

@@ -11,6 +11,7 @@
 @interface AdsHomeViewController : UIViewController <DataSyncManagerDelegate> {
     
     NSMutableArray* advertsArr;
+    NSMutableArray* filteredAdvertsArr;
     NSMutableDictionary* selectedAdvertDict;
     
 }
@@ -26,5 +27,6 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *carerTypeTFLeadingConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *carerTypeTFTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *advertTblViewTopConstraint;
 
 @end

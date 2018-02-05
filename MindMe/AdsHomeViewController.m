@@ -42,6 +42,13 @@
     _carerTypeTFTopConstraint.constant = (13./667)*[UIScreen mainScreen].bounds.size.height;
     _carerTypeTFLeadingConstraint.constant = (12./375)*[UIScreen mainScreen].bounds.size.width;
     
+    if ([[SharedClass sharedInstance] isFeaturedFilterApplied] || [[SharedClass sharedInstance] isLastMinuiteCareFilterApplied]) {
+        _advertTblViewTopConstraint.constant = 0.0;
+    }
+    else {
+        _advertTblViewTopConstraint.constant = 50.0;
+    }
+    
     if ([[SharedClass sharedInstance] isEditProfileMenuButtonHidden]) {
         if ([[SharedClass sharedInstance] isUserCarer]) {
             [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
@@ -73,7 +80,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return advertsArr.count;
+    return filteredAdvertsArr.count;
     
 }
 
@@ -103,7 +110,7 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    selectedAdvertDict = [[NSMutableDictionary alloc] initWithDictionary:[advertsArr objectAtIndex:indexPath.row]];
+    selectedAdvertDict = [[NSMutableDictionary alloc] initWithDictionary:[filteredAdvertsArr objectAtIndex:indexPath.row]];
     [self performSegueWithIdentifier:@"showAdsDetailSegue" sender:nil];
     
 }
@@ -135,15 +142,15 @@
         cell.yearsExperienceStaticLabel.text = @"Years of Experience ";
     }
     
-    cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
-    cell.locationLabel.text = [[advertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"];
-    cell.careTypeLabel.text = [[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
-    cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ years",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
-    cell.descLabel.text = [[advertsArr objectAtIndex:indexPath.row] valueForKey:@"about_you"];
+    cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
+    cell.locationLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"];
+    cell.careTypeLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
+    cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ years",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
+    cell.descLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"about_you"];
     
-    if (![[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqualToString:@""]) {
+    if (![[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqualToString:@""]) {
         __weak UIImageView* weakImageView = cell.profileImgView;
-        [cell.profileImgView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceURL,[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"image_path"]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
+        [cell.profileImgView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceURL,[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"image_path"]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
                                                                  cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                                              timeoutInterval:60.0] placeholderImage:[UIImage imageNamed:@"profile_icon"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
             
@@ -289,6 +296,17 @@
         
         if ([[responseData valueForKey:@"message"] isKindOfClass:[NSArray class]]) {
             advertsArr = [[NSMutableArray alloc] initWithArray:[responseData valueForKey:@"message"]];
+            
+            if ([[SharedClass sharedInstance] isLastMinuiteCareFilterApplied]) {
+                [self filterAdvertsForlastMinuteCare];
+            }
+            else if ([[SharedClass sharedInstance] isFeaturedFilterApplied]) {
+                [self filterAdvertsForFeatured];
+            }
+            else {
+                filteredAdvertsArr = [[NSMutableArray alloc] initWithArray:advertsArr];
+            }
+            
         }
         
         [_advertTblView reloadData];
@@ -363,5 +381,33 @@
     
 }
 
+
+- (void) filterAdvertsForFeatured {
+    
+    filteredAdvertsArr = [[NSMutableArray alloc] init];
+    
+    for (NSMutableDictionary* advertDict in advertsArr) {
+        
+        if ([[advertDict valueForKey:@"Sub_active"] intValue] == 1) {
+            [filteredAdvertsArr addObject:advertDict];
+        }
+        
+    }
+    
+}
+
+- (void) filterAdvertsForlastMinuteCare {
+    
+    filteredAdvertsArr = [[NSMutableArray alloc] init];
+    
+    for (NSMutableDictionary* advertDict in advertsArr) {
+        
+        if ([[advertDict valueForKey:@"emer"] intValue] == 1) {
+            [filteredAdvertsArr addObject:advertDict];
+        }
+        
+    }
+    
+}
 
 @end

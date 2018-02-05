@@ -179,6 +179,8 @@
             [self.navigationController popViewControllerAnimated:YES];
             return;
         }
+        [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
+        [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
         [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
     }
     
@@ -210,6 +212,8 @@
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Userid"];
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"token"];
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserCarer"];
+        [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
+        [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
         [[SharedClass sharedInstance] setUserId:nil];
         [[SharedClass sharedInstance] setAuthorizationKey:nil];
         [[SharedClass sharedInstance] setIsUserCarer:NO];
@@ -382,12 +386,19 @@
         else if (indexPath.section == 1) {
             
             if (indexPath.row == 1) {
-                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FeaturedAdsViewController" forSideMenuController:self.sideMenuController];
+                [[SharedClass sharedInstance] setIsFeaturedFilterApplied:YES];
+                [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
+            }
+            else if (indexPath.row == 2) {
+                [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
+                [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:YES];
             }
             else {
-                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+                [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
+                [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
             }
             
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
             
         }
         else if (indexPath.row == 0 && indexPath.section == 3) {

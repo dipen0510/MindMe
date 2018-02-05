@@ -414,7 +414,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="52.5" y="490" width="270" height="32"/>
+                                <rect key="frame" x="52.5" y="490" width="270" height="31"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">By pressing Register you agree with the
@@ -988,14 +988,6 @@ Terms of Services and Privacy Policy</string>
                                     <constraint firstItem="Gmx-KA-nFz" firstAttribute="leading" secondItem="5qO-ii-dqU" secondAttribute="leading" constant="22" id="yFY-Yv-1aj"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="22P-W0-D5q">
-                                <rect key="frame" x="0.0" y="134" width="375" height="467"/>
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="Hai-AU-Qxt" id="rCd-0o-Lyz"/>
-                                    <outlet property="delegate" destination="Hai-AU-Qxt" id="XfA-S6-j04"/>
-                                </connections>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqY-yY-Pff">
                                 <rect key="frame" x="0.0" y="601" width="375" height="66"/>
                                 <subviews>
@@ -1149,6 +1141,14 @@ Terms of Services and Privacy Policy</string>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="22P-W0-D5q">
+                                <rect key="frame" x="0.0" y="134" width="375" height="467"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hai-AU-Qxt" id="rCd-0o-Lyz"/>
+                                    <outlet property="delegate" destination="Hai-AU-Qxt" id="XfA-S6-j04"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1179,6 +1179,7 @@ Terms of Services and Privacy Policy</string>
                     <navigationItem key="navigationItem" id="HcK-rk-FFo"/>
                     <connections>
                         <outlet property="advertTblView" destination="22P-W0-D5q" id="eQ9-VD-DoJ"/>
+                        <outlet property="advertTblViewTopConstraint" destination="f6f-s9-OcQ" id="Vbb-oc-urw"/>
                         <outlet property="carerTypeTFLeadingConstraint" destination="OCD-9v-fu8" id="4jQ-nb-sI4"/>
                         <outlet property="carerTypeTFTopConstraint" destination="SVb-Al-7R6" id="m3N-XP-Fja"/>
                         <outlet property="carerTypeTextField" destination="Y3A-uD-AX2" id="aYi-MW-WNA"/>
@@ -5893,7 +5894,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yhj-ON-ojt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yAc-9C-3no">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yAc-9C-3no">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -5912,7 +5913,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wg9-Nn-sTY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="etA-fm-vvl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="etA-fm-vvl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -9456,9 +9457,9 @@ We may send emails to existing customers or prospective customers who have enqui
     <inferredMetricsTieBreakers>
         <segue reference="f1d-Wb-gFu"/>
         <segue reference="6aR-De-M3m"/>
-        <segue reference="sPX-6B-Ijk"/>
-        <segue reference="J63-l6-tZo"/>
-        <segue reference="YPO-6i-SEz"/>
+        <segue reference="1mT-Qk-sm6"/>
+        <segue reference="84t-sz-c2d"/>
+        <segue reference="MHL-d7-JFa"/>
         <segue reference="eOh-mb-7xJ"/>
     </inferredMetricsTieBreakers>
 </document>

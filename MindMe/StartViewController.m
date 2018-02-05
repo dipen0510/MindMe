@@ -30,6 +30,9 @@
 
 - (void) setupInitialUi {
     
+    [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
+    [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
+    
     NSString* userid = [[NSUserDefaults standardUserDefaults] valueForKey:@"Userid"];
     NSString* token = [[NSUserDefaults standardUserDefaults] valueForKey:@"token"];
     BOOL isUserCarer = [[NSUserDefaults standardUserDefaults] boolForKey:@"isUserCarer"];
