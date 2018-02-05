@@ -256,7 +256,7 @@
 
 - (IBAction)carerTypeButtonTapped:(id)sender {
     
-    NSArray *colors = [NSArray arrayWithObjects:@"AU Pairs", @"Babysitters", @"Childminders", nil];
+    NSArray *colors = [NSArray arrayWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     [ActionSheetStringPicker showPickerWithTitle:@""
                                             rows:colors
@@ -265,6 +265,8 @@
                                            NSLog(@"Picker: %@, Index: %ld, value: %@",
                                                  picker, (long)selectedIndex, selectedValue);
                                            _carerTypeTextField.text = selectedValue;
+                                           [self filterAdvertsForCareType:selectedValue];
+                                           [_advertTblView reloadData];
                                        }
                                      cancelBlock:^(ActionSheetStringPicker *picker) {
                                          NSLog(@"Block Picker Canceled");
@@ -403,6 +405,20 @@
     for (NSMutableDictionary* advertDict in advertsArr) {
         
         if ([[advertDict valueForKey:@"emer"] intValue] == 1) {
+            [filteredAdvertsArr addObject:advertDict];
+        }
+        
+    }
+    
+}
+
+- (void) filterAdvertsForCareType:(NSString *)careType {
+    
+    filteredAdvertsArr = [[NSMutableArray alloc] init];
+    
+    for (NSMutableDictionary* advertDict in advertsArr) {
+        
+        if ([[advertDict valueForKey:@"care_type"] isEqualToString:careType]) {
             [filteredAdvertsArr addObject:advertDict];
         }
         
