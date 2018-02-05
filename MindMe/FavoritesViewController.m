@@ -8,6 +8,7 @@
 
 #import "FavoritesViewController.h"
 #import "FavoritesTableViewCell.h"
+#import "AdsDetailViewController.h"
 
 @interface FavoritesViewController ()
 
@@ -32,15 +33,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"showAdsDetailSegue"]) {
+        
+        AdsDetailViewController* controller = (AdsDetailViewController *)[segue destinationViewController];
+        controller.advertDict = selectedAdvertDict;
+        
+    }
+    
 }
-*/
 
 - (IBAction)backButtonTapped:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
@@ -86,6 +93,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    selectedAdvertDict = [[NSMutableDictionary alloc] initWithDictionary:[favoritesArr objectAtIndex:indexPath.row]];
+    [self performSegueWithIdentifier:@"showAdsDetailSegue" sender:nil];
     
 }
 

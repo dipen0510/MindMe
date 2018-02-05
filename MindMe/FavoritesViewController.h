@@ -10,6 +10,7 @@
 
 @interface FavoritesViewController : UIViewController <DataSyncManagerDelegate> {
     NSMutableArray* favoritesArr;
+    NSMutableDictionary* selectedAdvertDict;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *favoritesTblView;

@@ -1282,6 +1282,7 @@ Terms of Services and Privacy Policy</string>
                     <connections>
                         <outlet property="favoritesTblView" destination="D88-tq-SJr" id="dRb-VP-pHc"/>
                         <outlet property="headerLabel" destination="BuX-6v-qTx" id="TPH-ky-8Vu"/>
+                        <segue destination="7QH-IF-iDG" kind="show" identifier="showAdsDetailSegue" id="J63-l6-tZo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rht-QQ-fMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -9454,9 +9455,10 @@ We may send emails to existing customers or prospective customers who have enqui
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="f1d-Wb-gFu"/>
-        <segue reference="eOh-mb-7xJ"/>
-        <segue reference="sPX-6B-Ijk"/>
         <segue reference="6aR-De-M3m"/>
+        <segue reference="sPX-6B-Ijk"/>
+        <segue reference="J63-l6-tZo"/>
         <segue reference="YPO-6i-SEz"/>
+        <segue reference="eOh-mb-7xJ"/>
     </inferredMetricsTieBreakers>
 </document>
