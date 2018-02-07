@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AdsHomeViewController : UIViewController <DataSyncManagerDelegate> {
+@interface AdsHomeViewController : UIViewController <DataSyncManagerDelegate, UITextFieldDelegate> {
     
     NSMutableArray* advertsArr;
     NSMutableArray* filteredAdvertsArr;
@@ -20,6 +20,9 @@
 @property (weak, nonatomic) IBOutlet UIView *messagesView;
 @property (weak, nonatomic) IBOutlet UITextField *carerTypeTextField;
 @property (weak, nonatomic) IBOutlet UITableView *advertTblView;
+@property (weak, nonatomic) IBOutlet UIView *addressView;
+@property (weak, nonatomic) IBOutlet UITableView *addressTblView;
+@property (weak, nonatomic) IBOutlet UITextField *addressTextField;
 
 - (IBAction)carerTypeButtonTapped:(id)sender;
 - (IBAction)menuButtonTapped:(id)sender;

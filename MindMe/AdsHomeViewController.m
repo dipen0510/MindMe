@@ -17,6 +17,9 @@
     DrivingLicenseInfoViewController *drivingInfoViewController;
     FilterViewController* filterViewController;
     UIView* blackBgView;
+    NSString* latLong;
+    NSMutableArray* googleResponseArr;
+    
 }
 
 @end
@@ -62,6 +65,23 @@
         [self startGetAdvertsService];
     }
     
+    _addressView.hidden = YES;
+    _addressTextField.delegate = self;
+    
+}
+
+- (void) dismissKeyboard {
+    
+    [self.view endEditing:YES];
+    _addressView.hidden = YES;
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+        
+        [self.view endEditing:YES];
+        _addressView.hidden = YES;
+        
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,12 +100,55 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
+    if (tableView == _addressTblView) {
+        return googleResponseArr.count;
+    }
+    
     return filteredAdvertsArr.count;
     
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (tableView == _addressTblView) {
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
+        
+        /*
+         *   If the cell is nil it means no cell was available for reuse and that we should
+         *   create a new one.
+         */
+        if (cell == nil) {
+            
+            /*
+             *   Actually create a new cell (with an identifier so that it can be dequeued).
+             */
+            
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MyIdentifier"];
+            
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+        }
+        
+        /*
+         *   Now that we have a cell we can configure it to display the data corresponding to
+         *   this row/section
+         */
+        
+        cell.textLabel.text = [[[[googleResponseArr objectAtIndex:indexPath.row] valueForKey:@"address_components"] valueForKey:@"short_name"] componentsJoinedByString:@", "];
+        cell.textLabel.font = [UIFont systemFontOfSize:14.0];
+        
+        [cell addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addressCellTapped:)]];
+        cell.tag = indexPath.row;
+        
+        
+        /* Now that the cell is configured we return it to the table view so that it can display it */
+        
+        return cell;
+
+        
+    }
     
     static NSString *CellIdentifier = @"AdsHomeTableViewCell";
     AdsHomeTableViewCell *cell = (AdsHomeTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -110,15 +173,39 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    selectedAdvertDict = [[NSMutableDictionary alloc] initWithDictionary:[filteredAdvertsArr objectAtIndex:indexPath.row]];
-    [self performSegueWithIdentifier:@"showAdsDetailSegue" sender:nil];
+    if (tableView == _addressTblView) {
+        _addressTextField.text = [[[[googleResponseArr objectAtIndex:indexPath.row] valueForKey:@"address_components"] valueForKey:@"short_name"] componentsJoinedByString:@", "];
+        latLong = [NSString stringWithFormat:@"%@,%@",[[[[googleResponseArr objectAtIndex:indexPath.row] valueForKey:@"geometry"] valueForKey:@"location"] valueForKey:@"lat"], [[[[googleResponseArr objectAtIndex:indexPath.row] valueForKey:@"geometry"] valueForKey:@"location"] valueForKey:@"lng"]] ;
+    }
+    else {
+        selectedAdvertDict = [[NSMutableDictionary alloc] initWithDictionary:[filteredAdvertsArr objectAtIndex:indexPath.row]];
+        [self performSegueWithIdentifier:@"showAdsDetailSegue" sender:nil];
+    }
     
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    if (tableView == _addressTblView) {
+        return 30.0;
+    }
+    
     return 200;
+    
+}
+
+- (void) addressCellTapped:(UITapGestureRecognizer *)gesture {
+    
+    int index = (int)gesture.view.tag;
+    
+    _addressTextField.text = [[[[googleResponseArr objectAtIndex:index] valueForKey:@"address_components"] valueForKey:@"short_name"] componentsJoinedByString:@", "];
+    latLong = [NSString stringWithFormat:@"%@,%@",[[[[googleResponseArr objectAtIndex:index] valueForKey:@"geometry"] valueForKey:@"location"] valueForKey:@"lat"], [[[[googleResponseArr objectAtIndex:index] valueForKey:@"geometry"] valueForKey:@"location"] valueForKey:@"lng"]] ;
+    
+    [self filterAdvertsForLocation];
+    [_advertTblView reloadData];
+    
+    [self dismissKeyboard];
     
 }
 
@@ -190,11 +277,14 @@
 
 - (IBAction)menuButtonTapped:(id)sender {
     
+    [self dismissKeyboard];
     [self.sideMenuController showLeftViewAnimated];
     
 }
 
 - (IBAction)filterButtonTapped:(id)sender {
+    
+    [self dismissKeyboard];
     
     filterViewController = [[FilterViewController alloc] init];
     filterViewController.view.frame = CGRectMake(20, 100, [UIScreen mainScreen].bounds.size.width - 40, [UIScreen mainScreen].bounds.size.height - 140);
@@ -256,6 +346,8 @@
 
 - (IBAction)carerTypeButtonTapped:(id)sender {
     
+    [self dismissKeyboard];
+    
     NSArray *colors = [NSArray arrayWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     [ActionSheetStringPicker showPickerWithTitle:@""
@@ -288,6 +380,15 @@
     
 }
 
+- (void) startGoogleMapsGeocodeAPIWithAddressParam:(NSString *)params {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GoogleAPIAddressGeocode;
+    manager.delegate = self;
+    [manager startGoogleAPIGeocodeWebService:params];
+    
+}
+
 #pragma mark - DATASYNCMANAGER Delegates
 
 -(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
@@ -312,6 +413,23 @@
         }
         
         [_advertTblView reloadData];
+        
+    }
+    
+    if ([requestServiceKey isEqualToString:GoogleAPIAddressGeocode]) {
+        
+        googleResponseArr = [[NSMutableArray alloc] initWithArray:[responseData valueForKey:@"results"]];
+        
+        if (googleResponseArr.count > 0) {
+            _addressView.hidden = NO;
+            [_addressTblView reloadData];
+        }
+        else if (googleResponseArr.count == 0){
+            _addressTextField.text = @"";
+            latLong = [NSString stringWithFormat:@""];
+        }
+        
+        
         
     }
     
@@ -423,6 +541,54 @@
         }
         
     }
+    
+}
+
+- (void) filterAdvertsForLocation {
+    
+    filteredAdvertsArr = [[NSMutableArray alloc] init];
+    
+    for (NSMutableDictionary* advertDict in advertsArr) {
+        
+        NSString* advertLocation = [NSString stringWithFormat:@"%@,%@",[advertDict valueForKey:@"latitude"],[advertDict valueForKey:@"longitude"]];
+        
+        if ([advertLocation isEqualToString:latLong]) {
+            [filteredAdvertsArr addObject:advertDict];
+        }
+        
+    }
+    
+}
+
+- (void) resetAllAdvertsFilter {
+    
+    if (filteredAdvertsArr.count != advertsArr.count) {
+        filteredAdvertsArr = [[NSMutableArray alloc] initWithArray:advertsArr];
+        [_advertTblView reloadData];
+    }
+    
+}
+
+#pragma mark - UITextFieldDelegate
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    if (textField ==_addressTextField) {
+        
+        if ([string isEqualToString:@""]) {
+            if (textField.text.length<=1) {
+                [self dismissKeyboard];
+                textField.text = @"";
+            }
+            [self resetAllAdvertsFilter];
+        }
+        else {
+            [self startGoogleMapsGeocodeAPIWithAddressParam:[textField.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        }
+    
+    }
+    
+    return YES;
     
 }
 
