@@ -12,6 +12,7 @@
 #import "FilterViewController.h"
 #import "ActionSheetPicker.h"
 #import "AdsDetailViewController.h"
+#import "FilterMiscTableViewCell.h"
 
 @interface AdsHomeViewController () {
     DrivingLicenseInfoViewController *drivingInfoViewController;
@@ -288,7 +289,12 @@
     
     filterViewController = [[FilterViewController alloc] init];
     filterViewController.view.frame = CGRectMake(20, 100, [UIScreen mainScreen].bounds.size.width - 40, [UIScreen mainScreen].bounds.size.height - 140);
-    [filterViewController.applyButton addTarget:self action:@selector(closeFilterView) forControlEvents:UIControlEventTouchUpInside];
+    
+    filterViewController.careTypeTextField.delegate = self;
+    filterViewController.distanceTextField.delegate = self;
+    
+    [filterViewController.applyButton addTarget:self action:@selector(filterViewApplyButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    [filterViewController.primaryApplyButton addTarget:self action:@selector(filterViewApplyButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
     blackBgView = [[UIView alloc] initWithFrame:self.view.frame];
     blackBgView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.7];
@@ -589,6 +595,233 @@
     }
     
     return YES;
+    
+}
+
+- (IBAction)filterCarerTypeButtonTapped {
+    
+    NSArray *colors = [NSArray arrayWithObjects:@"All", @"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+    [ActionSheetStringPicker showPickerWithTitle:@""
+                                            rows:colors
+                                initialSelection:0
+                                       doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+                                           NSLog(@"Picker: %@, Index: %ld, value: %@",
+                                                 picker, (long)selectedIndex, selectedValue);
+                                           filterViewController.careTypeTextField.text = selectedValue;
+                                       }
+                                     cancelBlock:^(ActionSheetStringPicker *picker) {
+                                         NSLog(@"Block Picker Canceled");
+                                     }
+                                          origin:self.view];
+    
+}
+
+- (IBAction)filterDistanceButtonTapped {
+    
+    NSArray *colors = [NSArray arrayWithObjects:@"0-20 Km", @"0-10 Km", @"0-5 Km", @"0-3 Km", @"0-1 Km", nil];
+    
+    [ActionSheetStringPicker showPickerWithTitle:@""
+                                            rows:colors
+                                initialSelection:0
+                                       doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+                                           NSLog(@"Picker: %@, Index: %ld, value: %@",
+                                                 picker, (long)selectedIndex, selectedValue);
+                                           filterViewController.distanceTextField.text = selectedValue;
+                                       }
+                                     cancelBlock:^(ActionSheetStringPicker *picker) {
+                                         NSLog(@"Block Picker Canceled");
+                                     }
+                                          origin:self.view];
+    
+}
+
+- (void) filterViewApplyButtonTapped {
+    
+    filteredAdvertsArr = [[NSMutableArray alloc] init];
+    
+    for (NSMutableDictionary* advertDict in advertsArr) {
+        
+        if ([filterViewController.careTypeTextField.text isEqualToString:@"All"]) {
+            [filteredAdvertsArr addObject:advertDict];
+        }
+        else if ([[advertDict valueForKey:@"care_type"] isEqualToString:filterViewController.careTypeTextField.text]) {
+            [filteredAdvertsArr addObject:advertDict];
+        }
+        
+    }
+    
+    NSMutableArray* tmpAdvertsArr = [[NSMutableArray alloc] initWithArray:filteredAdvertsArr];
+    filteredAdvertsArr = [[NSMutableArray alloc] init];
+    
+    for (NSMutableDictionary* advertDict in tmpAdvertsArr) {
+        
+        NSString* distanceStr = [[[[filterViewController.distanceTextField.text componentsSeparatedByString:@" "] firstObject] componentsSeparatedByString:@"-"] lastObject];
+        
+        if ([[advertDict valueForKey:@"distance"] doubleValue] <= [distanceStr doubleValue]) {
+            [filteredAdvertsArr addObject:advertDict];
+        }
+        
+    }
+    
+    tmpAdvertsArr = [[NSMutableArray alloc] initWithArray:filteredAdvertsArr];
+    filteredAdvertsArr = [[NSMutableArray alloc] init];
+    
+    for (NSMutableDictionary* advertDict in tmpAdvertsArr) {
+        
+        float selectedMax = filterViewController.ageSlider.selectedMaximum;
+        float selectedMin = filterViewController.ageSlider.selectedMinimum;
+        
+        NSInteger userAge = [self ageFromYear:[advertDict valueForKey:@"birth_year"] Month:[advertDict valueForKey:@"birth_month"] day:[advertDict valueForKey:@"birth_day"]];
+        
+        if (userAge>= selectedMin && userAge<= selectedMax) {
+            [filteredAdvertsArr addObject:advertDict];
+        }
+        
+    }
+    
+    tmpAdvertsArr = [[NSMutableArray alloc] initWithArray:filteredAdvertsArr];
+    filteredAdvertsArr = [[NSMutableArray alloc] init];
+    
+    for (NSMutableDictionary* advertDict in tmpAdvertsArr) {
+        
+        float selectedMax = filterViewController.experienceSlider.selectedMaximum;
+        float selectedMin = filterViewController.experienceSlider.selectedMinimum;
+        
+        int userExp = [[advertDict valueForKey:@"experience"] intValue];
+        
+        if (userExp>= selectedMin && userExp<= selectedMax) {
+            [filteredAdvertsArr addObject:advertDict];
+        }
+        
+    }
+    
+    if (!filterViewController.isRefineSearchEnabled) {
+        tmpAdvertsArr = [[NSMutableArray alloc] initWithArray:filteredAdvertsArr];
+        filteredAdvertsArr = [[NSMutableArray alloc] init];
+        
+        for (NSMutableDictionary* advertDict in tmpAdvertsArr) {
+            
+            for (int i = 0; i<filterViewController.availabilityArr.count; i++) {
+                
+                if ([[filterViewController.availabilityArr objectAtIndex:i] intValue]) {
+                    NSString* booking = [NSString stringWithFormat:@"%@ %@", [self fullNameForWeekdayAvailabilityIndex:i], [self fullNameForAvailabilityIndex:i]];
+                    
+                    if ([[advertDict valueForKey:@"booking"] containsString:booking]) {
+                        if (![filteredAdvertsArr containsObject:advertDict]) {
+                            [filteredAdvertsArr addObject:advertDict];
+                        }
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+        
+        tmpAdvertsArr = [[NSMutableArray alloc] initWithArray:filteredAdvertsArr];
+        filteredAdvertsArr = [[NSMutableArray alloc] init];
+        
+        for (NSMutableDictionary* advertDict in tmpAdvertsArr) {
+            
+            for (int i = 0; i<filterViewController.caretypeArr.count; i++) {
+                
+                FilterMiscTableViewCell* cell = (FilterMiscTableViewCell *)[filterViewController.miscTblView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+                if ([[filterViewController.servicesArr objectAtIndex:i] intValue]) {
+                    if ([[advertDict valueForKey:@"services"] containsString:cell.miscLabel.text]) {
+                        if (![filteredAdvertsArr containsObject:advertDict]) {
+                            [filteredAdvertsArr addObject:advertDict];
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+    }
+    
+    
+    
+    [_advertTblView reloadData];
+    [self closeFilterView];
+    
+}
+
+- (NSInteger)ageFromYear:(NSString *)year Month:(NSString *)month day:(NSString *)day {
+    
+    NSString* dobStr = [NSString stringWithFormat:@"%@/%@/%@",day,month,year];
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"dd/MM/yyyy";
+    NSDate* userDoB = [dateFormatter dateFromString:dobStr];
+    
+    NSDate *today = [NSDate date];
+    NSDateComponents *ageComponents = [[NSCalendar currentCalendar]
+                                       components:NSCalendarUnitYear
+                                       fromDate:userDoB
+                                       toDate:today
+                                       options:0];
+    return ageComponents.year;
+}
+
+#pragma mark - UITextField Delegates
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    
+    if (textField == filterViewController.careTypeTextField) {
+        [self filterCarerTypeButtonTapped];
+        return NO;
+    }
+    if (textField == filterViewController.distanceTextField) {
+        [self filterDistanceButtonTapped];
+        return NO;
+    }
+    
+    return YES;
+    
+}
+
+- (NSString *) fullNameForAvailabilityIndex:(int)i {
+    
+    if (i/8 <= 1) {
+        return @"Morning";
+    }
+    else if (i/8 > 1 && i/8 <= 2) {
+        return @"Afternoon";
+    }
+    else if (i/8 > 2 && i/8 <= 3) {
+        return @"Evening";
+    }
+    else if (i/8 > 3 && i/8 <= 4) {
+        return @"Night";
+    }
+    
+    return @"Overnight";
+    
+}
+
+- (NSString *) fullNameForWeekdayAvailabilityIndex:(int)i {
+    
+    if (i%8 == 1) {
+        return @"Monday";
+    }
+    else if (i%8 == 2) {
+        return @"Tuesday";
+    }
+    else if (i%8 == 3) {
+        return @"Wednesday";
+    }
+    else if (i%8 == 4) {
+        return @"Thursday";
+    }
+    else if (i%8 == 5) {
+        return @"Friday";
+    }
+    else if (i%8 == 6) {
+        return @"Saturday";
+    }
+    
+    return @"Sunday";
     
 }
 

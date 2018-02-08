@@ -13,6 +13,10 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    [_miscLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(miscButtonTapped:)]];
+    _miscLabel.userInteractionEnabled = YES;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -23,5 +27,6 @@
 
 - (IBAction)miscButtonTapped:(id)sender {
     _miscButton.selected = !_miscButton.isSelected;
+    _isSelected = _miscButton.selected;
 }
 @end

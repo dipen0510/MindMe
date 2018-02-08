@@ -30,8 +30,8 @@
                             <constraint firstAttribute="height" constant="18" id="eU6-Y8-gmj"/>
                             <constraint firstAttribute="width" constant="18" id="qCV-qz-vHI"/>
                         </constraints>
-                        <state key="normal" image="filter_rb_active"/>
-                        <state key="selected" image="filter_rb_inactive"/>
+                        <state key="normal" image="filter_rb_inactive"/>
+                        <state key="selected" image="filter_rb_active"/>
                         <connections>
                             <action selector="miscButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="age-F9-9lu"/>
                         </connections>

@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *miscButton;
 @property (weak, nonatomic) IBOutlet UILabel *miscLabel;
+@property BOOL isSelected;
 
 - (IBAction)miscButtonTapped:(id)sender;
 

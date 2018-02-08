@@ -9,6 +9,7 @@
 #import "FilterViewController.h"
 #import "ProfileAvailabilityCollectionViewCell.h"
 #import "FilterMiscTableViewCell.h"
+#import "ActionSheetPicker.h"
 
 @interface FilterViewController ()
 
@@ -16,12 +17,15 @@
 
 @implementation FilterViewController
 
+@synthesize availabilityArr,isRefineSearchEnabled,caretypeArr,servicesArr;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
     [self setupInitialUI];
     [self setupAvailibilityArr];
+    [self setupServicesArr];
     
 }
 
@@ -30,7 +34,13 @@
     _applyButton.layer.cornerRadius = 15.;
     _applyButton.layer.masksToBounds = NO;
     
+    _primaryApplyButton.layer.cornerRadius = 15.;
+    _primaryApplyButton.layer.masksToBounds = NO;
+    _primaryApplyButton.hidden = YES;
+    
     [self.availabilityCollectionView registerNib:[UINib nibWithNibName:@"ProfileAvailabilityCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileAvailabilityCollectionViewCell"];
+    
+    caretypeArr = [NSArray arrayWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
 }
 
@@ -38,8 +48,18 @@
     
     availabilityArr = [[NSMutableArray alloc] init];
     
-    for (int i = 0; i<40; i++) {
-        [availabilityArr addObject:[NSNumber numberWithInt:0]];
+    for (int i = 0; i<48; i++) {
+        [availabilityArr addObject:[NSNumber numberWithInt:1]];
+    }
+    
+}
+
+- (void) setupServicesArr {
+    
+    servicesArr = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i<caretypeArr.count; i++) {
+        [servicesArr addObject:[NSNumber numberWithInt:1]];
     }
     
 }
@@ -63,7 +83,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 40.;
+    return 48.;
     
 }
 
@@ -128,6 +148,31 @@
     
 }
 
+- (void) didTapOnAvailabilityCell:(UITapGestureRecognizer *)gesture {
+    
+    long index = gesture.view.tag;
+    
+    if (index%8 != 0 && index>=8) {
+        
+        int currentStatus = [[availabilityArr objectAtIndex:index] intValue];
+        [availabilityArr replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:!currentStatus]];
+        [_availabilityCollectionView reloadData];
+        
+    }
+    
+}
+
+- (void) didTapOnServicesCell:(UITapGestureRecognizer *)gesture {
+    
+    long index = gesture.view.tag;
+  
+        int currentStatus = [[servicesArr objectAtIndex:index] intValue];
+        [servicesArr replaceObjectAtIndex:index withObject:[NSNumber numberWithInt:!currentStatus]];
+        [_miscTblView reloadData];
+
+    
+}
+
 #pragma mark - Populate Content
 
 - (void) populateContentForAvailabilityCell:(ProfileAvailabilityCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
@@ -179,6 +224,10 @@
                 cell.availabilityLabel.textAlignment = NSTextAlignmentLeft;
                 cell.availabilityLabel.text = @"Night";
                 break;
+            case 40:
+                cell.availabilityLabel.textAlignment = NSTextAlignmentLeft;
+                cell.availabilityLabel.text = @"Overnight";
+                break;
                 
             default:
                 break;
@@ -188,9 +237,20 @@
     else {
         cell.availabilityLabel.hidden = YES;
         cell.availabilityButton.hidden = NO;
+        if ([[availabilityArr objectAtIndex:indexPath.row] intValue]) {
+            cell.availabilityButton.selected = YES;
+        }
+        else {
+            cell.availabilityButton.selected = NO;
+        }
     }
     
     cell.availabilityLabel.textColor = [UIColor blackColor];
+    
+    cell.tag = indexPath.row;
+    [cell addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapOnAvailabilityCell:)]];
+    
+    cell.availabilityButton.userInteractionEnabled = NO;
     
 }
 
@@ -205,7 +265,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 10;
+    return caretypeArr.count;
     
 }
 
@@ -248,44 +308,45 @@
 - (void) populateContentForSettingsCell:(FilterMiscTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.miscLabel.text = [caretypeArr objectAtIndex:indexPath.row];
     
-    switch (indexPath.row) {
-        case 0:
-            cell.miscLabel.text = @"Childcare Qualifications";
-            break;
-        case 1:
-            cell.miscLabel.text = @"Special Needs Experience";
-            break;
-        case 2:
-            cell.miscLabel.text = @"First Aid";
-            break;
-        case 3:
-            cell.miscLabel.text = @"Garda Vetting";
-            break;
-        case 4:
-            cell.miscLabel.text = @"Visa";
-            break;
-        case 5:
-            cell.miscLabel.text = @"EU Passport";
-            break;
-        case 6:
-            cell.miscLabel.text = @"Reference";
-            break;
-        case 7:
-            cell.miscLabel.text = @"Driving License";
-            break;
-        case 8:
-            cell.miscLabel.text = @"Fetac Childcare Certification";
-            break;
-        case 9:
-            cell.miscLabel.text = @"Has Own Transport";
-            break;
-        
-            
-        default:
-            break;
+    if ([[servicesArr objectAtIndex:indexPath.row] intValue]) {
+        cell.miscButton.selected = YES;
+    }
+    else {
+        cell.miscButton.selected = NO;
     }
     
+    cell.tag = indexPath.row;
+    [cell addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapOnServicesCell:)]];
+    
+    cell.miscButton.userInteractionEnabled = NO;
+    cell.miscLabel.userInteractionEnabled = NO;
+    
 }
+
+- (IBAction)refineSearchButtonTapped:(id)sender {
+    
+    if (isRefineSearchEnabled) {
+        
+        _contentScrollView.contentSize = CGSizeMake(_contentScrollView.contentSize.width, _contentScrollView.contentSize.height + 635);
+        _primaryApplyButton.hidden = YES;
+        _availabilityStaticLabel.hidden = NO;
+        _availabilitySeparatorView.hidden = NO;
+        
+    }
+    else {
+        
+        _contentScrollView.contentSize = CGSizeMake(_contentScrollView.contentSize.width, _contentScrollView.contentSize.height - 635);
+        _primaryApplyButton.hidden = NO;
+        _availabilityStaticLabel.hidden = YES;
+        _availabilitySeparatorView.hidden = YES;
+        
+    }
+    
+    isRefineSearchEnabled = !isRefineSearchEnabled;
+    
+}
+
 
 @end
