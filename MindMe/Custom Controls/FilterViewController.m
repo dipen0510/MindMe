@@ -42,6 +42,12 @@
     
     caretypeArr = [NSArray arrayWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _experienceStaticLabelTopConstraint.constant = -95;
+        _carerAgeStaticLabel.hidden = YES;
+        _ageSlider.hidden = YES;
+    }
+    
 }
 
 - (void) setupAvailibilityArr {

@@ -664,21 +664,25 @@
         
     }
     
-    tmpAdvertsArr = [[NSMutableArray alloc] initWithArray:filteredAdvertsArr];
-    filteredAdvertsArr = [[NSMutableArray alloc] init];
-    
-    for (NSMutableDictionary* advertDict in tmpAdvertsArr) {
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        tmpAdvertsArr = [[NSMutableArray alloc] initWithArray:filteredAdvertsArr];
+        filteredAdvertsArr = [[NSMutableArray alloc] init];
         
-        float selectedMax = filterViewController.ageSlider.selectedMaximum;
-        float selectedMin = filterViewController.ageSlider.selectedMinimum;
-        
-        NSInteger userAge = [self ageFromYear:[advertDict valueForKey:@"birth_year"] Month:[advertDict valueForKey:@"birth_month"] day:[advertDict valueForKey:@"birth_day"]];
-        
-        if (userAge>= selectedMin && userAge<= selectedMax) {
-            [filteredAdvertsArr addObject:advertDict];
+        for (NSMutableDictionary* advertDict in tmpAdvertsArr) {
+            
+            float selectedMax = filterViewController.ageSlider.selectedMaximum;
+            float selectedMin = filterViewController.ageSlider.selectedMinimum;
+            
+            NSInteger userAge = [self ageFromYear:[advertDict valueForKey:@"birth_year"] Month:[advertDict valueForKey:@"birth_month"] day:[advertDict valueForKey:@"birth_day"]];
+            
+            if (userAge>= selectedMin && userAge<= selectedMax) {
+                [filteredAdvertsArr addObject:advertDict];
+            }
+            
         }
-        
     }
+    
+    
     
     tmpAdvertsArr = [[NSMutableArray alloc] initWithArray:filteredAdvertsArr];
     filteredAdvertsArr = [[NSMutableArray alloc] init];

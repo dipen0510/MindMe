@@ -26,9 +26,11 @@
                 <outlet property="availabilitySeparatorView" destination="XbC-8G-Xml" id="bHF-JA-vHb"/>
                 <outlet property="availabilityStaticLabel" destination="9Up-ms-cWb" id="xNH-i4-pac"/>
                 <outlet property="careTypeTextField" destination="CFK-eP-4af" id="Hly-XO-rmZ"/>
+                <outlet property="carerAgeStaticLabel" destination="E7r-Lg-2XT" id="YfD-BF-Sqf"/>
                 <outlet property="contentScrollView" destination="9Xl-MW-tUW" id="xHF-AL-RCi"/>
                 <outlet property="distanceTextField" destination="6P4-XN-ZNU" id="OHg-Wu-w4t"/>
                 <outlet property="experienceSlider" destination="BNE-Hs-VWx" id="qvy-O8-6FY"/>
+                <outlet property="experienceStaticLabelTopConstraint" destination="zxZ-yK-2G3" id="Ezx-p7-xtU"/>
                 <outlet property="filterLabel" destination="gjT-U6-xWf" id="Dyl-BU-5ZZ"/>
                 <outlet property="miscTblView" destination="o1d-vT-EHA" id="1w5-U6-QqO"/>
                 <outlet property="primaryApplyButton" destination="xl4-05-SDC" id="PqN-ei-YZg"/>
