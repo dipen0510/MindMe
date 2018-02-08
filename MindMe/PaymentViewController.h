@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PaymentViewController : UIViewController <DataSyncManagerDelegate> {
+@interface PaymentViewController : UIViewController <DataSyncManagerDelegate, UITextFieldDelegate> {
     NSString* cardToken;
     NSString* customerId;
     NSString* subscriptionId;

@@ -42,6 +42,8 @@
         _monthTextField.font = _yearTextField.font = _cvvTextField.font = [UIFont fontWithName:@"VisbyRoundCF-Regular" size:10.0];
     }
     
+    _cardNumberTextField.delegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -263,6 +265,25 @@
     [dict setObject:customerId forKey:@"ref_id"];
     
     return dict;
+    
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    if (textField == _cardNumberTextField) {
+        
+        if ([textField.text stringByAppendingString:string].length > 16) {
+            
+            [_cardNameTextField becomeFirstResponder];
+            return NO;
+            
+        }
+        
+    }
+    
+    return YES;
     
 }
 
