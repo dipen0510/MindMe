@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @property (weak, nonatomic) IBOutlet TTTAttributedLabel *legalLabel;
+@property (weak, nonatomic) IBOutlet UILabel *findACaregiverStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *findACarejobStaticLabel;
 
 
 - (IBAction)careGiverButtonTapped:(id)sender;

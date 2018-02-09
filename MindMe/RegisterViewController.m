@@ -37,6 +37,9 @@
     _emailTextField.delegate = self;
     _passwordTextField.delegate = self;
     
+    [_findACaregiverStaticLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(careGiverButtonTapped:)]];
+    [_findACarejobStaticLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(careNeededButtonTapped:)]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
