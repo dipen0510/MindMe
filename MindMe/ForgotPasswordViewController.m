@@ -101,7 +101,7 @@
 
 -(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
     
-    [SVProgressHUD showSuccessWithStatus:@"An email has been sent with new password"];
+    [SVProgressHUD showSuccessWithStatus:@"We have sent you a temporary password. Kindly check your Registered Email for further details."];
     
     if ([requestServiceKey isEqualToString:ForgotPasswordKey]) {
         [self cancelButtonTapped:nil];
@@ -118,18 +118,10 @@
     [SVProgressHUD dismiss];
     
     UIAlertView* alert=[[UIAlertView alloc] initWithTitle:nil
-                                                  message:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)
+                                                  message:NSLocalizedString(@"Invalid Email Address. Kindly enter a Registered Email Address and try again.", nil)
                                                  delegate:self
                                         cancelButtonTitle:NSLocalizedString(@"OK", nil)
                                         otherButtonTitles: nil];
-    
-    if (![errorMsg isEqualToString:@""]) {
-        [alert setMessage:errorMsg];
-    }
-    
-    if ([errorMsg isEqualToString:NSLocalizedString(@"Verify your internet connection and try again", nil)]) {
-        [alert setTitle:NSLocalizedString(@"Connection unsuccessful", nil)];
-    }
     
     [alert show];
     
