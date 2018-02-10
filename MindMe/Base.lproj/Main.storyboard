@@ -1234,6 +1234,7 @@ Terms of Services and Privacy Policy</string>
                         <outlet property="carerTypeTextField" destination="Y3A-uD-AX2" id="aYi-MW-WNA"/>
                         <outlet property="favoritesView" destination="6SA-sb-y3N" id="SkV-YO-lgs"/>
                         <outlet property="messagesView" destination="kyF-4A-gdF" id="Aj0-6c-cp6"/>
+                        <outlet property="profileView" destination="aON-ZX-tTJ" id="0ZA-TI-3lQ"/>
                         <segue destination="7QH-IF-iDG" kind="show" identifier="showAdsDetailSegue" id="MHL-d7-JFa"/>
                         <segue destination="T7W-9q-owI" kind="show" identifier="showFavoritesSegue" id="84t-sz-c2d"/>
                         <segue destination="AJO-Ph-pca" kind="show" identifier="showChatSegue" id="1mT-Qk-sm6"/>
@@ -8645,7 +8646,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAYMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJE-Fa-2fH">
-                                <rect key="frame" x="153" y="104" width="71" height="19"/>
+                                <rect key="frame" x="152" y="104" width="71" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

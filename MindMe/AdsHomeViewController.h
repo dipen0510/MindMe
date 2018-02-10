@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIView *addressView;
 @property (weak, nonatomic) IBOutlet UITableView *addressTblView;
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
+@property (weak, nonatomic) IBOutlet UIView *profileView;
 
 - (IBAction)carerTypeButtonTapped:(id)sender;
 - (IBAction)menuButtonTapped:(id)sender;

@@ -43,6 +43,9 @@
     _messagesView.userInteractionEnabled = YES;
     [_messagesView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(messagesViewTapped)]];
     
+    _profileView.userInteractionEnabled = YES;
+    [_profileView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(profileViewTapped)]];
+    
     _carerTypeTFTopConstraint.constant = (13./667)*[UIScreen mainScreen].bounds.size.height;
     _carerTypeTFLeadingConstraint.constant = (12./375)*[UIScreen mainScreen].bounds.size.width;
     
@@ -324,6 +327,22 @@
     
     if (![[SharedClass sharedInstance] isGuestUser]) {
         [self performSegueWithIdentifier:@"showChatSegue" sender:nil];
+    }
+    else {
+        [self.sideMenuController.navigationController popViewControllerAnimated:YES];
+    }
+    
+}
+
+- (void) profileViewTapped {
+    
+    if (![[SharedClass sharedInstance] isGuestUser]) {
+        if ([[SharedClass sharedInstance] isUserCarer]) {
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
+        }
+        else {
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileParentViewController" forSideMenuController:self.sideMenuController];
+        }
     }
     else {
         [self.sideMenuController.navigationController popViewControllerAnimated:YES];
