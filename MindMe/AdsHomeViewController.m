@@ -354,7 +354,7 @@
     
     [self dismissKeyboard];
     
-    NSArray *colors = [NSArray arrayWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    NSArray *colors = [NSArray arrayWithObjects:@"All", @"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     [ActionSheetStringPicker showPickerWithTitle:@""
                                             rows:colors
@@ -540,12 +540,17 @@
     
     filteredAdvertsArr = [[NSMutableArray alloc] init];
     
-    for (NSMutableDictionary* advertDict in advertsArr) {
-        
-        if ([[advertDict valueForKey:@"care_type"] isEqualToString:careType]) {
-            [filteredAdvertsArr addObject:advertDict];
+    if ([careType isEqualToString:@"All"]) {
+        filteredAdvertsArr = [[NSMutableArray alloc] initWithArray:advertsArr];
+    }
+    else {
+        for (NSMutableDictionary* advertDict in advertsArr) {
+            
+            if ([[advertDict valueForKey:@"care_type"] isEqualToString:careType]) {
+                [filteredAdvertsArr addObject:advertDict];
+            }
+            
         }
-        
     }
     
 }
