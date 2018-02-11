@@ -39,6 +39,13 @@
     
     [_sendButton addTarget:self action:@selector(sendButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
+    NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
+    
+    _nameTextField.text = [NSString stringWithFormat:@"%@ %@",[responseData valueForKey:@"first_name"],[responseData valueForKey:@"second_name"]];
+    _emailTextField.text = [responseData valueForKey:@"user_email"];
+    _contactNumberTextField.text = [responseData valueForKey:@"mobile_number"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -153,6 +160,7 @@
     
     if (textView == _enquireyDescTextView && [textView.text containsString:@"Type your Enquiry"]) {
         textView.text = @"";
+        textView.textColor = [UIColor blackColor];
     }
     
     return YES;

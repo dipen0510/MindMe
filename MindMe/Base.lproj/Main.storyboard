@@ -791,7 +791,6 @@ Terms of Services and Privacy Policy</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="N2T-rR-VUc"/>
                                 </constraints>
-                                <color key="textColor" red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -807,7 +806,7 @@ Terms of Services and Privacy Policy</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="LXG-6W-3xa"/>
                                 </constraints>
-                                <color key="textColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -830,7 +829,7 @@ Terms of Services and Privacy Policy</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="tbS-W3-GBH"/>
                                 </constraints>
-                                <color key="textColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
