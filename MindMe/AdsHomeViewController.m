@@ -49,12 +49,12 @@
     _carerTypeTFTopConstraint.constant = (13./667)*[UIScreen mainScreen].bounds.size.height;
     _carerTypeTFLeadingConstraint.constant = (12./375)*[UIScreen mainScreen].bounds.size.width;
     
-    if ([[SharedClass sharedInstance] isFeaturedFilterApplied] || [[SharedClass sharedInstance] isLastMinuiteCareFilterApplied]) {
-        _advertTblViewTopConstraint.constant = 0.0;
-    }
-    else {
-        _advertTblViewTopConstraint.constant = 50.0;
-    }
+//    if ([[SharedClass sharedInstance] isFeaturedFilterApplied] || [[SharedClass sharedInstance] isLastMinuiteCareFilterApplied]) {
+//        _advertTblViewTopConstraint.constant = 0.0;
+//    }
+//    else {
+//        _advertTblViewTopConstraint.constant = 50.0;
+//    }
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
         _noAdsFoundsLabel.text = [_noAdsFoundsLabel.text stringByReplacingOccurrencesOfString:@"Adverts" withString:@"Profiles"];
