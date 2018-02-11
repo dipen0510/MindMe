@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *addressTblView;
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
 @property (weak, nonatomic) IBOutlet UIView *profileView;
+@property (weak, nonatomic) IBOutlet UILabel *noAdsFoundsLabel;
 
 - (IBAction)carerTypeButtonTapped:(id)sender;
 - (IBAction)menuButtonTapped:(id)sender;

@@ -56,6 +56,10 @@
         _advertTblViewTopConstraint.constant = 50.0;
     }
     
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _noAdsFoundsLabel.text = [_noAdsFoundsLabel.text stringByReplacingOccurrencesOfString:@"Adverts" withString:@"Profiles"];
+    }
+    
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isEditProfileMenuButtonHidden"]) {
         
         if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isProfileUpdated"]) {
@@ -97,6 +101,19 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) refreshUI {
+    
+    if (filteredAdvertsArr.count == 0) {
+        _noAdsFoundsLabel.hidden = NO;
+    }
+    else {
+        _noAdsFoundsLabel.hidden = YES;
+    }
+    
+    [_advertTblView reloadData];
+    
 }
 
 #pragma - mark TableView Datasource and Delegates
@@ -212,8 +229,7 @@
     _addressTextField.text = [[[[googleResponseArr objectAtIndex:index] valueForKey:@"address_components"] valueForKey:@"short_name"] componentsJoinedByString:@", "];
     latLong = [NSString stringWithFormat:@"%@,%@",[[[[googleResponseArr objectAtIndex:index] valueForKey:@"geometry"] valueForKey:@"location"] valueForKey:@"lat"], [[[[googleResponseArr objectAtIndex:index] valueForKey:@"geometry"] valueForKey:@"location"] valueForKey:@"lng"]] ;
     
-    [self filterAdvertsForLocation];
-    [_advertTblView reloadData];
+    [self filterAdvertsForLocation];;
     
     [self dismissKeyboard];
     
@@ -389,7 +405,6 @@
                                                  picker, (long)selectedIndex, selectedValue);
                                            _carerTypeTextField.text = selectedValue;
                                            [self filterAdvertsForCareType:selectedValue];
-                                           [_advertTblView reloadData];
                                        }
                                      cancelBlock:^(ActionSheetStringPicker *picker) {
                                          NSLog(@"Block Picker Canceled");
@@ -443,7 +458,7 @@
             
         }
         
-        [_advertTblView reloadData];
+        [self refreshUI];
         
     }
     
@@ -545,6 +560,8 @@
         
     }
     
+    [self refreshUI];
+    
 }
 
 - (void) filterAdvertsForlastMinuteCare {
@@ -558,6 +575,8 @@
         }
         
     }
+    
+    [self refreshUI];
     
 }
 
@@ -578,6 +597,8 @@
         }
     }
     
+    [self refreshUI];
+    
 }
 
 - (void) filterAdvertsForLocation {
@@ -594,13 +615,15 @@
         
     }
     
+    [self refreshUI];
+    
 }
 
 - (void) resetAllAdvertsFilter {
     
     if (filteredAdvertsArr.count != advertsArr.count) {
         filteredAdvertsArr = [[NSMutableArray alloc] initWithArray:advertsArr];
-        [_advertTblView reloadData];
+        [self refreshUI];
     }
     
 }
@@ -777,7 +800,7 @@
     
     
     
-    [_advertTblView reloadData];
+    [self refreshUI];
     [self closeFilterView];
     
 }

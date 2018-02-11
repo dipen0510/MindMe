@@ -1189,13 +1189,22 @@ Terms of Services and Privacy Policy</string>
                                     <constraint firstAttribute="height" constant="200" id="zbi-ra-VeZ"/>
                                 </constraints>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGz-03-WTZ">
+                                <rect key="frame" x="27" y="293" width="320" height="82"/>
+                                <string key="text">We are sorry but there are no Adverts currently in your area that match with you preferences. Kindly change your preferences or check back again later !</string>
+                                <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ycn-Gi-Uqc" firstAttribute="height" secondItem="Y3A-uD-AX2" secondAttribute="height" id="3Go-LR-1GQ"/>
                             <constraint firstItem="Ycn-Gi-Uqc" firstAttribute="width" secondItem="Y3A-uD-AX2" secondAttribute="width" multiplier="1.15" id="3fe-l9-HLJ"/>
                             <constraint firstItem="abE-c3-1zs" firstAttribute="height" secondItem="oRj-td-yYe" secondAttribute="height" id="44h-uK-5xH"/>
+                            <constraint firstItem="PGz-03-WTZ" firstAttribute="width" secondItem="pXT-6X-BLT" secondAttribute="width" multiplier="320/375" id="4sd-7W-ei6"/>
                             <constraint firstItem="lY3-YS-lwm" firstAttribute="top" secondItem="cqY-yY-Pff" secondAttribute="bottom" id="4wJ-91-xdq"/>
+                            <constraint firstItem="PGz-03-WTZ" firstAttribute="centerX" secondItem="pXT-6X-BLT" secondAttribute="centerX" id="6fP-Ew-ncx"/>
                             <constraint firstItem="abE-c3-1zs" firstAttribute="leading" secondItem="pXT-6X-BLT" secondAttribute="leading" id="D1s-Cc-bKO"/>
                             <constraint firstAttribute="trailing" secondItem="22P-W0-D5q" secondAttribute="trailing" id="DYo-eJ-lBF"/>
                             <constraint firstItem="oRj-td-yYe" firstAttribute="top" secondItem="5qO-ii-dqU" secondAttribute="bottom" id="E7n-ho-Tfv"/>
@@ -1205,6 +1214,7 @@ Terms of Services and Privacy Policy</string>
                             <constraint firstItem="oRj-td-yYe" firstAttribute="leading" secondItem="pXT-6X-BLT" secondAttribute="leading" id="JLt-Rc-2pe"/>
                             <constraint firstItem="abE-c3-1zs" firstAttribute="top" secondItem="5qO-ii-dqU" secondAttribute="bottom" id="Jtt-Nl-ve4"/>
                             <constraint firstItem="5qO-ii-dqU" firstAttribute="leading" secondItem="pXT-6X-BLT" secondAttribute="leading" id="KGC-hK-O9K"/>
+                            <constraint firstItem="PGz-03-WTZ" firstAttribute="centerY" secondItem="pXT-6X-BLT" secondAttribute="centerY" id="L7A-EB-zAR"/>
                             <constraint firstAttribute="trailing" secondItem="oRj-td-yYe" secondAttribute="trailing" id="NCK-Rx-Zy4"/>
                             <constraint firstItem="Y3A-uD-AX2" firstAttribute="leading" secondItem="pXT-6X-BLT" secondAttribute="leadingMargin" constant="13" id="OCD-9v-fu8"/>
                             <constraint firstItem="Y3A-uD-AX2" firstAttribute="top" secondItem="5qO-ii-dqU" secondAttribute="bottom" constant="13" id="SVb-Al-7R6"/>
@@ -1234,6 +1244,7 @@ Terms of Services and Privacy Policy</string>
                         <outlet property="carerTypeTextField" destination="Y3A-uD-AX2" id="aYi-MW-WNA"/>
                         <outlet property="favoritesView" destination="6SA-sb-y3N" id="SkV-YO-lgs"/>
                         <outlet property="messagesView" destination="kyF-4A-gdF" id="Aj0-6c-cp6"/>
+                        <outlet property="noAdsFoundsLabel" destination="PGz-03-WTZ" id="6sQ-OW-FsQ"/>
                         <outlet property="profileView" destination="aON-ZX-tTJ" id="0ZA-TI-3lQ"/>
                         <segue destination="7QH-IF-iDG" kind="show" identifier="showAdsDetailSegue" id="MHL-d7-JFa"/>
                         <segue destination="T7W-9q-owI" kind="show" identifier="showFavoritesSegue" id="84t-sz-c2d"/>
