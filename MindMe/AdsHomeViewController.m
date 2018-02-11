@@ -793,7 +793,7 @@
                 
                 FilterMiscTableViewCell* cell = (FilterMiscTableViewCell *)[filterViewController.miscTblView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
                 if ([[filterViewController.servicesArr objectAtIndex:i] intValue]) {
-                    if ([[advertDict valueForKey:@"services"] containsString:cell.miscLabel.text]) {
+                    if ([[advertDict valueForKey:@"require"] containsString:cell.miscLabel.text]) {
                         if (![filteredAdvertsArr containsObject:advertDict]) {
                             [filteredAdvertsArr addObject:advertDict];
                         }

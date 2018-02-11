@@ -40,7 +40,7 @@
     
     [self.availabilityCollectionView registerNib:[UINib nibWithNibName:@"ProfileAvailabilityCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileAvailabilityCollectionViewCell"];
     
-    caretypeArr = [NSArray arrayWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    caretypeArr = [NSArray arrayWithObjects:@"Childcare Qualifications", @"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Visa", @"Eu Passport", @"Reference", @"Driving Licence", @"Fetac Childcare Certification", @"Has Own Transport", nil];
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
         _experienceStaticLabelTopConstraint.constant = -95;
@@ -55,7 +55,7 @@
     availabilityArr = [[NSMutableArray alloc] init];
     
     for (int i = 0; i<48; i++) {
-        [availabilityArr addObject:[NSNumber numberWithInt:1]];
+        [availabilityArr addObject:[NSNumber numberWithInt:0]];
     }
     
 }
@@ -65,7 +65,7 @@
     servicesArr = [[NSMutableArray alloc] init];
     
     for (int i = 0; i<caretypeArr.count; i++) {
-        [servicesArr addObject:[NSNumber numberWithInt:1]];
+        [servicesArr addObject:[NSNumber numberWithInt:0]];
     }
     
 }
@@ -335,7 +335,7 @@
     
     if (isRefineSearchEnabled) {
         
-        _contentScrollView.contentSize = CGSizeMake(_contentScrollView.contentSize.width, _contentScrollView.contentSize.height + 635);
+        _contentScrollView.contentSize = CGSizeMake(_contentScrollView.contentSize.width, _contentScrollView.contentSize.height + 510);
         _primaryApplyButton.hidden = YES;
         _availabilityStaticLabel.hidden = NO;
         _availabilitySeparatorView.hidden = NO;
@@ -343,7 +343,7 @@
     }
     else {
         
-        _contentScrollView.contentSize = CGSizeMake(_contentScrollView.contentSize.width, _contentScrollView.contentSize.height - 635);
+        _contentScrollView.contentSize = CGSizeMake(_contentScrollView.contentSize.width, _contentScrollView.contentSize.height - 510);
         _primaryApplyButton.hidden = NO;
         _availabilityStaticLabel.hidden = YES;
         _availabilitySeparatorView.hidden = YES;

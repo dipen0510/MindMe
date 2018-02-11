@@ -228,10 +228,10 @@
                             </connections>
                         </collectionView>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o1d-vT-EHA">
-                            <rect key="frame" x="26" y="717" width="310" height="375"/>
+                            <rect key="frame" x="26" y="717" width="310" height="250"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="375" id="mA1-V9-p8v"/>
+                                <constraint firstAttribute="height" constant="250" id="mA1-V9-p8v"/>
                             </constraints>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="GYf-ey-ruP"/>
@@ -239,7 +239,7 @@
                             </connections>
                         </tableView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeh-7T-8fU">
-                            <rect key="frame" x="112" y="1117" width="150" height="30"/>
+                            <rect key="frame" x="112" y="992" width="150" height="30"/>
                             <color key="backgroundColor" red="1" green="0.5346016884" blue="0.0298230648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="150" id="0en-Cc-d4L"/>
