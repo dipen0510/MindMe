@@ -56,12 +56,18 @@
         _advertTblViewTopConstraint.constant = 50.0;
     }
     
-    if ([[SharedClass sharedInstance] isEditProfileMenuButtonHidden]) {
-        if ([[SharedClass sharedInstance] isUserCarer]) {
-            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isEditProfileMenuButtonHidden"]) {
+        
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isProfileUpdated"]) {
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
         }
         else {
-            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileParentViewController" forSideMenuController:self.sideMenuController];
+            if ([[SharedClass sharedInstance] isUserCarer]) {
+                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
+            }
+            else {
+                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileParentViewController" forSideMenuController:self.sideMenuController];
+            }
         }
 
     }

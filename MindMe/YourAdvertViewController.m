@@ -1191,11 +1191,15 @@
         
         [SVProgressHUD showSuccessWithStatus:@"Profile posted successfully"];
         
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isEditProfileMenuButtonHidden"];
+        
     }
     
     if ([requestServiceKey isEqualToString:AddParentAdvert]) {
         
         [SVProgressHUD showSuccessWithStatus:@"Advert posted successfully"];
+        
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isEditProfileMenuButtonHidden"];
         
     }
     

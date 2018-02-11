@@ -61,9 +61,9 @@
     _phoneTextField.keyboardType = UIKeyboardTypeNumberPad;
     
     _addressView.hidden = YES;
-    _menuButton.hidden = [[SharedClass sharedInstance] isEditProfileMenuButtonHidden];
+    _menuButton.hidden = [[NSUserDefaults standardUserDefaults] boolForKey:@"isEditProfileMenuButtonHidden"];
     
-    if (![[SharedClass sharedInstance] isEditProfileMenuButtonHidden]) {
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"isEditProfileMenuButtonHidden"]) {
         _tncButton.selected = YES;
     }
     
@@ -315,10 +315,13 @@
     
     if ([requestServiceKey isEqualToString:UpdateCarerPersonalDetails]) {
         
-        [[SharedClass sharedInstance] setIsEditProfileMenuButtonHidden:NO];
-        _menuButton.hidden = NO;
-        
         [SVProgressHUD showSuccessWithStatus:@"Profile updated successfully"];
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isProfileUpdated"];
+        
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isEditProfileMenuButtonHidden"]) {
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
+        }
         
     }
     

@@ -21,7 +21,6 @@
 @property NSString* userId;
 @property NSString* authorizationKey;
 @property BOOL isChangePasswordOpenedFromSideMenu;
-@property BOOL isEditProfileMenuButtonHidden;
 
 @property BOOL isFeaturedFilterApplied;
 @property BOOL isLastMinuiteCareFilterApplied;

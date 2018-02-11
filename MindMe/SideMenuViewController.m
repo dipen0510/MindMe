@@ -217,6 +217,8 @@
         [[SharedClass sharedInstance] setUserId:nil];
         [[SharedClass sharedInstance] setAuthorizationKey:nil];
         [[SharedClass sharedInstance] setIsUserCarer:NO];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isEditProfileMenuButtonHidden"];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isProfileUpdated"];
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
     

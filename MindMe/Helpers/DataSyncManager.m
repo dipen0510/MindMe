@@ -294,7 +294,8 @@
         }
         
         [[SharedClass sharedInstance] setIsGuestUser:NO];
-        [[SharedClass sharedInstance] setIsEditProfileMenuButtonHidden:YES];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isEditProfileMenuButtonHidden"];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isProfileUpdated"];
         [[SharedClass sharedInstance] setUserId:[responseObj valueForKey:@"Userid"]];
         [[SharedClass sharedInstance] setAuthorizationKey:[responseObj valueForKey:@"token"]];
         

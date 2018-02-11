@@ -97,7 +97,8 @@
     [SVProgressHUD dismiss];
     
     if ([requestServiceKey isEqualToString:LoginServiceKey] || [requestServiceKey isEqualToString:FBLoginServiceKey]) {
-        [[SharedClass sharedInstance] setIsEditProfileMenuButtonHidden:NO];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isEditProfileMenuButtonHidden"];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isProfileUpdated"];
         [self performSegueWithIdentifier:@"showHomeSegue" sender:nil];
     }
     

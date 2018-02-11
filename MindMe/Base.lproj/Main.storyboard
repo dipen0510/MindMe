@@ -1574,6 +1574,7 @@ Cg
                         <outlet property="headerLabel" destination="y2t-34-g3B" id="bRp-t4-qYy"/>
                         <outlet property="liveAdvertValueLabel" destination="4bN-du-Xne" id="rIu-6M-8qg"/>
                         <outlet property="mailLabel" destination="jZ3-ae-r04" id="kfr-gH-Wga"/>
+                        <outlet property="menuButton" destination="Ev2-Yp-QNs" id="EXU-ie-SHe"/>
                         <outlet property="nameLabel" destination="Bkx-y5-Eqe" id="TOT-XU-fYF"/>
                         <outlet property="subscribedValueLabel" destination="62e-1e-0b2" id="2hP-y7-nJk"/>
                         <outlet property="tableViewheaderLabel" destination="bR8-7J-8pN" id="3Hr-c1-nw1"/>
