@@ -82,6 +82,8 @@
     _addressView.hidden = YES;
     _addressTextField.delegate = self;
     
+    _carerTypeTextField.text = @"All";
+    
 }
 
 - (void) dismissKeyboard {
@@ -404,7 +406,7 @@
                                            NSLog(@"Picker: %@, Index: %ld, value: %@",
                                                  picker, (long)selectedIndex, selectedValue);
                                            _carerTypeTextField.text = selectedValue;
-                                           [self filterAdvertsForCareType:selectedValue];
+                                           [self filterAdvertsForCareType];
                                        }
                                      cancelBlock:^(ActionSheetStringPicker *picker) {
                                          NSLog(@"Block Picker Canceled");
@@ -580,17 +582,17 @@
     
 }
 
-- (void) filterAdvertsForCareType:(NSString *)careType {
+- (void) filterAdvertsForCareType {
     
     filteredAdvertsArr = [[NSMutableArray alloc] init];
     
-    if ([careType isEqualToString:@"All"]) {
+    if ([_carerTypeTextField.text isEqualToString:@"All"]) {
         filteredAdvertsArr = [[NSMutableArray alloc] initWithArray:advertsArr];
     }
     else {
         for (NSMutableDictionary* advertDict in advertsArr) {
             
-            if ([[advertDict valueForKey:@"care_type"] isEqualToString:careType]) {
+            if ([[advertDict valueForKey:@"care_type"] isEqualToString:_carerTypeTextField.text]) {
                 [filteredAdvertsArr addObject:advertDict];
             }
             
@@ -621,6 +623,8 @@
 
 - (void) resetAllAdvertsFilter {
     
+    latLong = @"";
+    
     if (filteredAdvertsArr.count != advertsArr.count) {
         filteredAdvertsArr = [[NSMutableArray alloc] initWithArray:advertsArr];
         [self refreshUI];
@@ -638,8 +642,11 @@
             if (textField.text.length<=1) {
                 [self dismissKeyboard];
                 textField.text = @"";
+                [self filterAdvertsForCareType];
             }
-            [self resetAllAdvertsFilter];
+            else {
+                [self resetAllAdvertsFilter];
+            }
         }
         else {
             [self startGoogleMapsGeocodeAPIWithAddressParam:[textField.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
