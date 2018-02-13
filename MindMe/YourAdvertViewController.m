@@ -74,6 +74,18 @@
     [_contentScrollView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)]];
     _contentScrollView.exclusiveTouch = NO;
     
+    if (_isAdvertInEditingMode) {
+        isEMERType = [[_advertDetailsDict valueForKey:@"emer"] intValue];
+    }
+    if (_isAdvertInEditingMode) {
+        if ([[_advertDetailsDict valueForKey:@"job_ad_active"] intValue]) {
+            _isAdvertActiveLabel.text = @"Yes";
+        }
+        else {
+            _isAdvertActiveLabel.text = @"No";
+        }
+    }
+    
 }
 
 - (void) setupAvailibilityArr {
@@ -173,6 +185,22 @@
     
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
+    if (_isAdvertInEditingMode) {
+        
+        secondPreselectedArr = [[NSMutableArray alloc] initWithArray:[[[_advertDetailsDict valueForKey:@"aupair_live"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+        
+        thirdPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+        
+        fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        
+        fifthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+        
+        sixthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+        
+        seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+    }
+    
 }
 
 - (void) setupUIForBabysittersForm {
@@ -209,6 +237,22 @@
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Sports", @"Arts & crafts", @"Outdoor Activity", @"Music & Drama", @"Games", @"Reading", nil];
     
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+    if (_isAdvertInEditingMode) {
+        
+        secondPreselectedArr = [[NSMutableArray alloc] initWithArray:[[[_advertDetailsDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+        
+        thirdPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+        
+        fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        
+        fifthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+        
+        sixthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+        
+        seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+    }
     
 }
 
@@ -247,6 +291,22 @@
     
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
+    if (_isAdvertInEditingMode) {
+        
+        secondPreselectedArr = [[NSMutableArray alloc] initWithArray:[[[_advertDetailsDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+        
+        thirdPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+        
+        fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        
+        fifthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+        
+        sixthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+        
+        seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+    }
+    
 }
 
 - (void) setupUIForCrecheForm {
@@ -284,6 +344,22 @@
     
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
+    if (_isAdvertInEditingMode) {
+        
+        secondPreselectedArr = [[NSMutableArray alloc] initWithArray:[[[_advertDetailsDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+        
+        thirdPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+        
+        fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        
+        fifthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+        
+        sixthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+        
+        seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+    }
+    
 }
 
 - (void) setupUIForNannyForm {
@@ -320,6 +396,22 @@
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Sports", @"Arts & crafts", @"Outdoor Activity", @"Music & Drama", @"Games", @"Reading", nil];
     
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+    if (_isAdvertInEditingMode) {
+        
+        secondPreselectedArr = [[NSMutableArray alloc] initWithArray:[[[_advertDetailsDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+        
+        thirdPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+        
+        fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        
+        fifthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+        
+        sixthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+        
+        seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+    }
     
 }
 
@@ -367,6 +459,16 @@
     _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
+    if (_isAdvertInEditingMode) {
+        
+        thirdPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+        
+        fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        
+        seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+    }
+    
 }
 
 - (void) setupUIForDayWalkersForm {
@@ -412,6 +514,16 @@
     
     _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+    if (_isAdvertInEditingMode) {
+        
+        thirdPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+        
+        fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        
+        seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+    }
     
 }
 
@@ -460,6 +572,18 @@
     _seventhCollectionViewTitleTopConstraint.constant = -44 - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
+    if (_isAdvertInEditingMode) {
+        
+        thirdPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+        
+        fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        
+        fifthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+        
+        seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+    }
+    
 }
 
 - (void) setupUIForHousekeepersForm {
@@ -505,6 +629,16 @@
     
     _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+    if (_isAdvertInEditingMode) {
+        
+        thirdPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+        
+        fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        
+        seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+    }
     
 }
 
@@ -552,6 +686,14 @@
     _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
+    if (_isAdvertInEditingMode) {
+        
+        fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        
+        seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+    }
+    
 }
 
 - (void) setupUIForPetMindersForm {
@@ -598,6 +740,16 @@
     _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
+    if (_isAdvertInEditingMode) {
+        
+        thirdPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+        
+        fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        
+        seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+    }
+    
 }
 
 - (void) setupUIForPrivateMidwifeForm {
@@ -642,6 +794,14 @@
     
     _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    
+    if (_isAdvertInEditingMode) {
+        
+        fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        
+        seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+    }
     
 }
 
@@ -690,6 +850,16 @@
     _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"Special Needs Care", @"Tutor", nil];
     
+    if (_isAdvertInEditingMode) {
+        
+        thirdPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+        
+        fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        
+        seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+    }
+    
 }
 
 - (void) setupUIForSpecialNeedsCareForm {
@@ -737,6 +907,18 @@
     _seventhCollectionViewTitleTopConstraint.constant = -44 - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Tutor", nil];
     
+    if (_isAdvertInEditingMode) {
+        
+        thirdPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+        
+        fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        
+        fifthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+        
+        seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+    }
+    
 }
 
 - (void) setupUIForTutorForm {
@@ -777,6 +959,18 @@
     
     _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", nil];
+    
+    if (_isAdvertInEditingMode) {
+        
+        secondPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+        
+        thirdPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+        
+        fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        
+        seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+    }
     
 }
 
@@ -1001,31 +1195,55 @@
 - (void) populateContentForSecondCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.titleLabel.text = [secondCollectionViewArr objectAtIndex:indexPath.row];
+    cell.toggleButton.selected = NO;
     
+    if ([secondPreselectedArr containsObject:cell.titleLabel.text]) {
+        cell.toggleButton.selected = YES;
+    }
     
 }
 
 - (void) populateContentForThirdCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.titleLabel.text = [thirdCollectionViewArr objectAtIndex:indexPath.row];
+    cell.toggleButton.selected = NO;
+    
+    if ([thirdPreselectedArr containsObject:cell.titleLabel.text]) {
+        cell.toggleButton.selected = YES;
+    }
     
 }
 
 - (void) populateContentForForthCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.titleLabel.text = [fourthCollectionViewArr objectAtIndex:indexPath.row];
+    cell.toggleButton.selected = NO;
+    
+    if ([fourthPreselectedArr containsObject:cell.titleLabel.text]) {
+        cell.toggleButton.selected = YES;
+    }
     
 }
 
 - (void) populateContentForFifthCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.titleLabel.text = [fifthCollectionViewArr objectAtIndex:indexPath.row];
+    cell.toggleButton.selected = NO;
+    
+    if ([fifthPreselectedArr containsObject:cell.titleLabel.text]) {
+        cell.toggleButton.selected = YES;
+    }
     
 }
 
 - (void) populateContentForSixthCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.titleLabel.text = [sixthCollectionViewArr objectAtIndex:indexPath.row];
+    cell.toggleButton.selected = NO;
+    
+    if ([sixthPreselectedArr containsObject:cell.titleLabel.text]) {
+        cell.toggleButton.selected = YES;
+    }
     
     
 }
@@ -1033,6 +1251,11 @@
 - (void) populateContentForSeventhCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.titleLabel.text = [seventhCollectionViewArr objectAtIndex:indexPath.row];
+    cell.toggleButton.selected = NO;
+    
+    if ([seventhPreselectedArr containsObject:cell.titleLabel.text]) {
+        cell.toggleButton.selected = YES;
+    }
     
 }
 

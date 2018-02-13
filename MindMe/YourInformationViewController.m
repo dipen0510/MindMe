@@ -163,6 +163,10 @@
         YourAdvertViewController* controller = (YourAdvertViewController*)[segue destinationViewController];
         controller.advertDetailsDict = [self prepareDictionaryForYourAdvert];
         
+        if (_advertDictToBeEdited) {
+            controller.isAdvertInEditingMode = YES;
+        }
+        
     }
     
 }
@@ -171,13 +175,17 @@
     
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
     
+    if (_advertDictToBeEdited) {
+        dict = [[NSMutableDictionary alloc] initWithDictionary:_advertDictToBeEdited];
+    }
+    
     [dict setObject:_selectedCareType forKey:@"care_type"];
     
     if (profileImage) {
-        [dict setObject:profileImage forKey:@"profileImage"];
+        [dict setObject:profileImage forKey:@"image_path"];
     }
     else {
-        [dict setObject:@"" forKey:@"profileImage"];
+        [dict setObject:@"" forKey:@"image_path"];
     }
     
     [dict setObject:_addYourBioTextView.text forKey:@"about_you"];

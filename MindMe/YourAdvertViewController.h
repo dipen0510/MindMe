@@ -20,10 +20,18 @@
     NSMutableArray* sixthCollectionViewArr;
     NSMutableArray* seventhCollectionViewArr;
     
+    NSMutableArray* secondPreselectedArr;
+    NSMutableArray* thirdPreselectedArr;
+    NSMutableArray* fourthPreselectedArr;
+    NSMutableArray* fifthPreselectedArr;
+    NSMutableArray* sixthPreselectedArr;
+    NSMutableArray* seventhPreselectedArr;
+    
     BOOL isEMERType;
     
 }
 
+@property BOOL isAdvertInEditingMode;
 @property (strong, nonatomic) NSMutableDictionary * advertDetailsDict;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *daysRequiredCollectionView;

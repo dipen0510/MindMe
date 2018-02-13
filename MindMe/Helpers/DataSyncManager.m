@@ -145,8 +145,8 @@
     manager.responseSerializer.acceptableStatusCodes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 300)];
     manager.requestSerializer.timeoutInterval = 60;
     
-    UIImage* profileImage = [postData valueForKey:@"profileImage"];
-    [postData removeObjectForKey:@"profileImage"];
+    UIImage* profileImage = [postData valueForKey:@"image_path"];
+    [postData removeObjectForKey:@"image_path"];
     
     
     [manager POST:self.serviceKey parameters:postData constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
