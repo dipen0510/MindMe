@@ -81,5 +81,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *seventhCollectionViewTitleTopConstraint;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *advertIsActiveLabelTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *otherRelevantInfoTopConstraint;
 
 @end

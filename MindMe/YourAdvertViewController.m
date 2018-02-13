@@ -341,6 +341,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
+    _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
@@ -386,6 +387,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
+    _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
@@ -433,6 +435,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
+    _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
@@ -477,6 +480,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
+    _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
@@ -520,6 +524,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
+    _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
@@ -567,6 +572,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
+    _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
@@ -610,6 +616,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
+    _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
@@ -656,6 +663,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
+    _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
     
     _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
@@ -704,6 +712,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
+    _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
