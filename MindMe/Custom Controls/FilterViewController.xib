@@ -351,7 +351,7 @@
     </objects>
     <resources>
         <image name="arrow_drop_down_grey_192x192" width="192" height="192"/>
-        <image name="refine_your_search2_btn" width="483" height="118"/>
+        <image name="refine_your_search2_btn" width="443" height="109"/>
         <image name="refine_your_search_btn" width="443" height="109"/>
     </resources>
 </document>
