@@ -30,7 +30,13 @@
     [super viewWillAppear:animated];
     
     _menuButton.hidden = [[NSUserDefaults standardUserDefaults] boolForKey:@"isEditProfileMenuButtonHidden"];
-    [self startGetAdvertsService];
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isEditProfileMenuButtonHidden"]) {
+        [self performSegueWithIdentifier:@"showChooseCareTypeSegue" sender:nil];
+    }
+    else {
+        [self startGetAdvertsService];
+    }
     
 }
 
