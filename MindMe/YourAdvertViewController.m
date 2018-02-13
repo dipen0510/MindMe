@@ -972,7 +972,29 @@
 - (void) populateContentForFirstCollectionViewCell:(CreateAdvertsCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.titleLabel.text = [firstCollectionViewArr objectAtIndex:indexPath.row];
+
+    UIView* cellTapView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    cellTapView.userInteractionEnabled = YES;
+    cellTapView.tag = indexPath.row;
+    [cellTapView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapOnEMERCell:)]];
+    [cell addSubview:cellTapView];
     
+    if (isEMERType) {
+        if (indexPath.row == 0) {
+            cell.toggleButton.selected = YES;
+        }
+        else {
+            cell.toggleButton.selected = NO;
+        }
+    }
+    else {
+        if (indexPath.row == 0) {
+            cell.toggleButton.selected = NO;
+        }
+        else {
+            cell.toggleButton.selected = YES;
+        }
+    }
     
 }
 
@@ -1086,6 +1108,19 @@
 
 - (void) populateContentForCVCollectionViewCell:(AdvertPDFCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
+    
+}
+
+- (void) didTapOnEMERCell:(UITapGestureRecognizer *)gesture {
+    
+    if (gesture.view.tag == 1) {
+        isEMERType = NO;
+    }
+    else {
+        isEMERType = YES;
+    }
+    
+    [_firstCollectionView reloadData];
     
 }
 

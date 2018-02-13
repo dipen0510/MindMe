@@ -20,6 +20,8 @@
     NSMutableArray* sixthCollectionViewArr;
     NSMutableArray* seventhCollectionViewArr;
     
+    BOOL isEMERType;
+    
 }
 
 @property (strong, nonatomic) NSMutableDictionary * advertDetailsDict;
