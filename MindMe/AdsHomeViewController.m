@@ -82,7 +82,13 @@
     _addressView.hidden = YES;
     _addressTextField.delegate = self;
     
-    _carerTypeTextField.text = @"All";
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _carerTypeTextField.text = @"All Profiles";
+    }
+    else {
+        _carerTypeTextField.text = @"All Adverts";
+    }
+    
     
 }
 
@@ -397,7 +403,16 @@
     
     [self dismissKeyboard];
     
-    NSArray *colors = [NSArray arrayWithObjects:@"All", @"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
+    NSString* allStr = @"";
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        allStr = @"All Profiles";
+    }
+    else {
+        allStr = @"All Adverts";
+    }
+    
+    NSArray *colors = [NSArray arrayWithObjects:allStr, @"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     [ActionSheetStringPicker showPickerWithTitle:@""
                                             rows:colors
@@ -586,7 +601,7 @@
     
     filteredAdvertsArr = [[NSMutableArray alloc] init];
     
-    if ([_carerTypeTextField.text isEqualToString:@"All"]) {
+    if ([_carerTypeTextField.text containsString:@"All"]) {
         filteredAdvertsArr = [[NSMutableArray alloc] initWithArray:advertsArr];
     }
     else {
