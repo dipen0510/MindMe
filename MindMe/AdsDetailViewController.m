@@ -1152,10 +1152,20 @@
 - (void) refreshUIForLikeDislikeCTAFOrString:(NSString *)responseStr {
     
     if ([responseStr containsString:@"Not"]) {
-        [_carerLikeButton setImage:[UIImage imageNamed:@"unlike"] forState:UIControlStateNormal];
+        if ([[SharedClass sharedInstance] isUserCarer]) {
+            [_carerLikeButton setImage:[UIImage imageNamed:@"like_btn"] forState:UIControlStateNormal];
+        }
+        else {
+            [_doneButton setBackgroundImage:[UIImage imageNamed:@"like_btn"] forState:UIControlStateNormal];
+        }
     }
     else {
-        [_carerLikeButton setImage:[UIImage imageNamed:@"like_btn"] forState:UIControlStateNormal];
+        if ([[SharedClass sharedInstance] isUserCarer]) {
+            [_carerLikeButton setImage:[UIImage imageNamed:@"unlike"] forState:UIControlStateNormal];
+        }
+        else {
+            [_doneButton setBackgroundImage:[UIImage imageNamed:@"unlike"] forState:UIControlStateNormal];
+        }
     }
     
 }
