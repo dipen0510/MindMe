@@ -92,8 +92,33 @@
     
     availabilityArr = [[NSMutableArray alloc] init];
     
-    for (int i = 0; i<48; i++) {
-        [availabilityArr addObject:[NSNumber numberWithInt:0]];
+    if (_isAdvertInEditingMode) {
+        
+        NSMutableArray* bookingArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"booking"] componentsSeparatedByString:@","]];
+        NSMutableArray* indexArr = [[NSMutableArray alloc] init];
+        
+        for (NSString* str in bookingArr) {
+            int i = [self fullNameForAvailabilityIndex2:[[str componentsSeparatedByString:@" "] lastObject]]*8 + [self fullNameForWeekdayAvailabilityIndex2:[[str componentsSeparatedByString:@" "] firstObject]];
+            [indexArr addObject:[NSNumber numberWithInt:i]];
+        }
+        
+        for (int i = 0; i<48; i++) {
+            
+            if ([indexArr containsObject:[NSNumber numberWithInt:i]]) {
+                [availabilityArr addObject:[NSNumber numberWithInt:1]];
+            }
+            else {
+                [availabilityArr addObject:[NSNumber numberWithInt:0]];
+            }
+            
+        }
+
+        
+    }
+    else {
+        for (int i = 0; i<48; i++) {
+            [availabilityArr addObject:[NSNumber numberWithInt:0]];
+        }
     }
     
 }
@@ -1404,6 +1429,52 @@
     return @"Sunday";
     
 }
+
+- (int) fullNameForAvailabilityIndex2:(NSString *)str {
+    
+    if ([str isEqualToString:@"Morning"]) {
+        return 1;
+    }
+    else if ([str isEqualToString:@"Afternoon"]) {
+        return 2;
+    }
+    else if ([str isEqualToString:@"Evening"]) {
+        return 3;
+    }
+    else if ([str isEqualToString:@"Night"]) {
+        return 4;
+    }
+    
+    return 5;
+    
+}
+
+- (int) fullNameForWeekdayAvailabilityIndex2:(NSString *)str {
+    
+    if ([str isEqualToString:@"Monday"]) {
+        return 1;
+    }
+    else if ([str isEqualToString:@"Tuesday"]) {
+        return 2;
+    }
+    else if ([str isEqualToString:@"Wednesday"]) {
+        return 3;
+    }
+    else if ([str isEqualToString:@"Thursday"]) {
+        return 4;
+    }
+    else if ([str isEqualToString:@"Friday"]) {
+        return 5;
+    }
+    else if ([str isEqualToString:@"Saturday"]) {
+        return 6;
+    }
+    
+    return 7;
+    
+}
+
+
 
 #pragma mark - API Helpers
 
