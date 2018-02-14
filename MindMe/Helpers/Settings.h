@@ -40,6 +40,7 @@
 #define GetFavoriteAdverts @"advert/getLikedAdvert"
 #define LikeDislikeAdvert @"likeOrDislike/savelikeordislike"
 #define CheckLikedDisliked @"likeOrDislike/checkLikeOrDislike"
+#define ReviewAdvert @"likeOrDislike/saveReviewByParent"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"

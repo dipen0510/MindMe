@@ -32,6 +32,14 @@
     _reviewTextView.layer.borderWidth = 1.0;
     _reviewTextView.layer.borderColor = _reviewTextView.textColor.CGColor;
     
+    [_firstStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_secondStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_thordStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_fourthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_fifthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    
+    _reviewNameLabel.text = [NSString stringWithFormat:@"Review : %@ %@.",[_advertDict valueForKey:@"first_name"],[[_advertDict valueForKey:@"second_name"] substringToIndex:1]];
+    
     
 }
 
@@ -50,6 +58,66 @@
 }
 */
 
+- (IBAction)firstStarButtonTapped:(id)sender {
+    
+    rating = 1;
+    
+    [_firstStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_secondStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_thordStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_fourthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_fifthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    
+}
+
+- (IBAction)secondStarButtonTapped:(id)sender {
+    
+    rating = 2;
+    
+    [_firstStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_secondStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_thordStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_fourthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_fifthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    
+}
+
+- (IBAction)thirStarButtonTapped:(id)sender {
+    
+    rating = 3;
+    
+    [_firstStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_secondStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_thordStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_fourthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_fifthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    
+}
+
+- (IBAction)fourthStarButtonTapped:(id)sender {
+    
+    rating = 4;
+    
+    [_firstStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_secondStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_thordStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_fourthStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_fifthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    
+}
+
+- (IBAction)fifthStarButtonTapped:(id)sender {
+    
+    rating = 5;
+    
+    [_firstStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_secondStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_thordStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_fourthStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_fifthStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    
+}
+
 - (IBAction)backButtonTapped:(id)sender {
     if (self.navigationController) {
         [self.navigationController popViewControllerAnimated:YES];
@@ -58,4 +126,189 @@
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
+
+- (IBAction)postReviewButtonTapped:(id)sender {
+    
+    NSString* formValid = [self isFormValid];
+    if (!formValid) {
+        [self startReviewService];
+    }
+    else {
+        [SVProgressHUD showErrorWithStatus:formValid];
+    }
+    
+}
+
+- (NSString*) isFormValid {
+    if (rating == 0) {
+        return @"Please give at least one star to proceed";
+    }
+    else if ([_reviewTitleTextField.text isEqualToString:@""]) {
+        return @"Please enter review title to proceed";
+    }
+    else if ([_reviewTextView.text isEqualToString:@""]) {
+        return @"Please enter review description to proceed";
+    }
+    return nil;
+}
+
+#pragma mark - UITextField Delegate
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    
+    return YES;
+    
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    
+    if (textField == _reviewTitleTextField) {
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:.3];
+        [UIView setAnimationBeginsFromCurrentState:TRUE];
+        self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y -100., self.view.frame.size.width, self.view.frame.size.height);
+        
+        [UIView commitAnimations];
+    }
+    
+}
+
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
+    if (textField == _reviewTitleTextField) {
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:.3];
+        [UIView setAnimationBeginsFromCurrentState:TRUE];
+        self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y +100., self.view.frame.size.width, self.view.frame.size.height);
+        
+        [UIView commitAnimations];
+    }
+    
+}
+
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
+    
+    if (textView == _reviewTextView && [textView.text containsString:@"Please ensure your review is correct"]) {
+        textView.text = @"";
+        textView.textColor = [UIColor blackColor];
+    }
+    
+    return YES;
+    
+}
+
+-(void)textViewDidBeginEditing:(UITextView *)textView {
+    
+    if (textView == _reviewTextView) {
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:.3];
+        [UIView setAnimationBeginsFromCurrentState:TRUE];
+        self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y -200., self.view.frame.size.width, self.view.frame.size.height);
+        
+        [UIView commitAnimations];
+    }
+    
+    
+}
+
+-(void)textViewDidEndEditing:(UITextView *)textView {
+    
+    if (textView == _reviewTextView) {
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:.3];
+        [UIView setAnimationBeginsFromCurrentState:TRUE];
+        self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y +200., self.view.frame.size.width, self.view.frame.size.height);
+        
+        [UIView commitAnimations];
+    }
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
+
+- (void) startReviewService {
+    
+    [SVProgressHUD showWithStatus:@"Updating review"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = ReviewAdvert;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForReview]];
+    
+}
+
+#pragma mark - DATASYNCMANAGER Delegates
+
+-(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
+    
+    if ([requestServiceKey isEqualToString:ReviewAdvert]) {
+        
+        [SVProgressHUD showSuccessWithStatus:@"Review updated successfully"];
+        
+    }
+    
+}
+
+
+- (void) didFinishServiceWithFailure:(NSString *)errorMsg {
+    
+    
+    [SVProgressHUD dismiss];
+    
+    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:nil
+                                                  message:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)
+                                                 delegate:self
+                                        cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                        otherButtonTitles: nil];
+    
+    if (![errorMsg isEqualToString:@""]) {
+        [alert setMessage:errorMsg];
+    }
+    
+    if ([errorMsg isEqualToString:NSLocalizedString(@"Verify your internet connection and try again", nil)]) {
+        [alert setTitle:NSLocalizedString(@"Connection unsuccessful", nil)];
+    }
+    
+    [alert show];
+    
+    return;
+    
+}
+
+
+
+#pragma mark - Modalobject
+
+- (NSMutableDictionary *) prepareDictionaryForReview {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+        [dict setObject:[NSString stringWithFormat:@"%@",[[SharedClass sharedInstance] userId]] forKey:@"carerid"];
+        [dict setObject:[_advertDict valueForKey:@"Userid"] forKey:@"parentid"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+        [dict setObject:[NSString stringWithFormat:@"%@",[[SharedClass sharedInstance] userId]] forKey:@"parentid"];
+        [dict setObject:[_advertDict valueForKey:@"Userid"] forKey:@"carerid"];
+    }
+    
+    [dict setObject:[_advertDict valueForKey:@"ID"] forKey:@"advertid"];
+    
+    [dict setObject:_reviewTitleTextField.text forKey:@"review_title"];
+    [dict setObject:_reviewTextView.text forKey:@"review_text"];
+    [dict setObject:[NSString stringWithFormat:@"%d",rating] forKey:@"stars"];
+    
+    return dict;
+    
+}
+
+
+
 @end

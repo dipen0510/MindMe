@@ -5251,7 +5251,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                                     <color key="titleColor" red="0.33709710840000001" green="0.34114208820000003" blue="0.34525841470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Maf-Jy-gtq" kind="show" id="rIP-52-ljz"/>
+                                                    <segue destination="Maf-Jy-gtq" kind="show" identifier="showReviewSegue" id="rIP-52-ljz"/>
                                                 </connections>
                                             </button>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WTa-g0-HVz">
@@ -5758,6 +5758,9 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstAttribute="height" constant="27" id="CZH-CP-kQF"/>
                                 </constraints>
                                 <state key="normal" image="starUnfilled"/>
+                                <connections>
+                                    <action selector="thirStarButtonTapped:" destination="Maf-Jy-gtq" eventType="touchUpInside" id="uJ4-rB-RJs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JI-tB-Z1C">
                                 <rect key="frame" x="207" y="270.5" width="25" height="27"/>
@@ -5766,6 +5769,9 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstAttribute="height" constant="27" id="LLC-EE-9nk"/>
                                 </constraints>
                                 <state key="normal" image="starUnfilled"/>
+                                <connections>
+                                    <action selector="fourthStarButtonTapped:" destination="Maf-Jy-gtq" eventType="touchUpInside" id="95d-uy-Rbx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeg-P2-CPY">
                                 <rect key="frame" x="141" y="270.5" width="25" height="27"/>
@@ -5774,6 +5780,9 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstAttribute="height" constant="27" id="zsz-Zm-fnn"/>
                                 </constraints>
                                 <state key="normal" image="starUnfilled"/>
+                                <connections>
+                                    <action selector="secondStarButtonTapped:" destination="Maf-Jy-gtq" eventType="touchUpInside" id="05t-bm-0wz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCk-Rc-IbD">
                                 <rect key="frame" x="240" y="270.5" width="25" height="27"/>
@@ -5782,6 +5791,9 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstAttribute="width" constant="25" id="GBm-Zc-jDe"/>
                                 </constraints>
                                 <state key="normal" image="starUnfilled"/>
+                                <connections>
+                                    <action selector="fifthStarButtonTapped:" destination="Maf-Jy-gtq" eventType="touchUpInside" id="kFc-XR-dvH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcc-IM-6Bb">
                                 <rect key="frame" x="108" y="270.5" width="25" height="27"/>
@@ -5790,12 +5802,18 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstAttribute="height" constant="27" id="Llf-ru-RbX"/>
                                 </constraints>
                                 <state key="normal" image="starFilled"/>
+                                <connections>
+                                    <action selector="firstStarButtonTapped:" destination="Maf-Jy-gtq" eventType="touchUpInside" id="liQ-Zq-HIg"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRU-TD-gLm">
                                 <rect key="frame" x="128.5" y="359" width="230.5" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Maf-Jy-gtq" id="P1v-6Y-nqI"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nz-fb-13t">
                                 <rect key="frame" x="156" y="406.5" width="63.5" height="20"/>
@@ -5814,6 +5832,9 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <state key="normal" title="Post Review">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="postReviewButtonTapped:" destination="Maf-Jy-gtq" eventType="touchUpInside" id="oUH-ox-hiS"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please ensure your review is correct and accurate..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SbG-NK-l2w">
                                 <rect key="frame" x="16" y="438.5" width="343" height="161.5"/>
@@ -5821,6 +5842,9 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Maf-Jy-gtq" id="Nn5-02-rzj"/>
+                                </connections>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5880,8 +5904,15 @@ We may send emails to existing customers or prospective customers who have enqui
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="fifthStar" destination="ZCk-Rc-IbD" id="I5h-Cu-s7I"/>
+                        <outlet property="firstStar" destination="Mcc-IM-6Bb" id="MSF-x9-5wu"/>
+                        <outlet property="fourthStar" destination="7JI-tB-Z1C" id="2KQ-h5-zRh"/>
                         <outlet property="postReviewButton" destination="iez-ac-tb1" id="iA1-IZ-D8h"/>
+                        <outlet property="reviewNameLabel" destination="DE5-W0-Tks" id="Hke-h8-JjB"/>
                         <outlet property="reviewTextView" destination="SbG-NK-l2w" id="izV-NY-izE"/>
+                        <outlet property="reviewTitleTextField" destination="SRU-TD-gLm" id="dBM-yV-DmT"/>
+                        <outlet property="secondStar" destination="zeg-P2-CPY" id="wut-Ua-LJH"/>
+                        <outlet property="thordStar" destination="CIr-55-Oyh" id="vLm-1H-LpV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iel-3w-WJI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -5965,7 +5996,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yhj-ON-ojt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yAc-9C-3no">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yAc-9C-3no">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -5984,7 +6015,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wg9-Nn-sTY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="etA-fm-vvl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="etA-fm-vvl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
