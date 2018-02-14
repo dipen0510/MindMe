@@ -38,6 +38,8 @@
 #define GetVouchers @"subscribe/getallvouchers"
 #define PostSubscriptionReceipt @"subscribe/dosubscribe"
 #define GetFavoriteAdverts @"advert/getLikedAdvert"
+#define LikeDislikeAdvert @"likeOrDislike/savelikeordislike"
+#define CheckLikedDisliked @"likeOrDislike/checkLikeOrDislike"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"

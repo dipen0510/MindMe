@@ -24,6 +24,7 @@
     [self setupAvailibilityArr];
     [self setupValueLayoutForAdvert];
     [self setupUIForForms];
+    [self startCheckLikeDislikeService];
     
 }
 
@@ -272,7 +273,7 @@
         [self.sideMenuController.navigationController popViewControllerAnimated:YES];
         return;
     }
-    [self performSegueWithIdentifier:@"showLikedSegue" sender:nil];
+    [self startLikeDislikeService];
     
 }
 
@@ -1148,6 +1149,17 @@
     
 }
 
+- (void) refreshUIForLikeDislikeCTAFOrString:(NSString *)responseStr {
+    
+    if ([responseStr containsString:@"Not"]) {
+        [_carerLikeButton setImage:[UIImage imageNamed:@"unlike"] forState:UIControlStateNormal];
+    }
+    else {
+        [_carerLikeButton setImage:[UIImage imageNamed:@"like_btn"] forState:UIControlStateNormal];
+    }
+    
+}
+
 
 #pragma mark - API Helpers
 
@@ -1159,6 +1171,76 @@
     [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForIncrementAdvertsView]];
     
 }
+
+- (void) startLikeDislikeService {
+    
+    [SVProgressHUD showWithStatus:@"Updating status"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = LikeDislikeAdvert;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForLikeDislike]];
+    
+}
+
+- (void) startCheckLikeDislikeService {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = CheckLikedDisliked;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForLikeDislike]];
+    
+}
+
+#pragma mark - DATASYNCMANAGER Delegates
+
+-(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
+    
+    if ([requestServiceKey isEqualToString:LikeDislikeAdvert]) {
+        
+//        [SVProgressHUD showWithStatus:@"Checking status"];
+        [SVProgressHUD showSuccessWithStatus:@"Status updated successfully"];
+        [self startCheckLikeDislikeService];
+        
+    }
+    if ([requestServiceKey isEqualToString:CheckLikedDisliked]) {
+        
+//        [SVProgressHUD showSuccessWithStatus:@"Status updated successfully"];
+        
+        [self refreshUIForLikeDislikeCTAFOrString:[responseData valueForKey:@"message"]];
+        
+    }
+    
+    
+    
+}
+
+
+- (void) didFinishServiceWithFailure:(NSString *)errorMsg {
+    
+    
+    [SVProgressHUD dismiss];
+    
+    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:nil
+                                                  message:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)
+                                                 delegate:self
+                                        cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                        otherButtonTitles: nil];
+    
+    if (![errorMsg isEqualToString:@""]) {
+        [alert setMessage:errorMsg];
+    }
+    
+    if ([errorMsg isEqualToString:NSLocalizedString(@"Verify your internet connection and try again", nil)]) {
+        [alert setTitle:NSLocalizedString(@"Connection unsuccessful", nil)];
+    }
+    
+    [alert show];
+    
+    return;
+    
+}
+
 
 
 #pragma mark - Modalobject
@@ -1181,4 +1263,26 @@
     return dict;
     
 }
+
+- (NSMutableDictionary *) prepareDictionaryForLikeDislike {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+        [dict setObject:[NSString stringWithFormat:@"%@",[[SharedClass sharedInstance] userId]] forKey:@"carerid"];
+        [dict setObject:[_advertDict valueForKey:@"Userid"] forKey:@"parentid"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+        [dict setObject:[NSString stringWithFormat:@"%@",[[SharedClass sharedInstance] userId]] forKey:@"parentid"];
+        [dict setObject:[_advertDict valueForKey:@"Userid"] forKey:@"carerid"];
+    }
+    
+    [dict setObject:[_advertDict valueForKey:@"ID"] forKey:@"advertid"];
+    
+    return dict;
+    
+}
+
 @end
