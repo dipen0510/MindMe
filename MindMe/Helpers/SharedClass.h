@@ -20,6 +20,7 @@
 @property BOOL isUserCarer;
 @property NSString* userId;
 @property NSString* authorizationKey;
+@property NSString* userAuthId;
 @property BOOL isChangePasswordOpenedFromSideMenu;
 
 @property BOOL isFeaturedFilterApplied;

@@ -818,6 +818,11 @@
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
     
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
+    _daysRequiredLabelTopConstraint.constant = 108;
+    
     
 }
 
@@ -857,6 +862,10 @@
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
 
 
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
+    _daysRequiredLabelTopConstraint.constant = 108;
     
 }
 
@@ -898,6 +907,11 @@
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
     
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
+    _daysRequiredLabelTopConstraint.constant = 108;
+    
 }
 
 - (void) setupUIForHousekeepersForm {
@@ -936,6 +950,11 @@
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
     
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
+    _daysRequiredLabelTopConstraint.constant = 108;
+    
 }
 
 - (void) setupUIForMaternityNurseForm {
@@ -972,6 +991,11 @@
     _sixthCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
+    _daysRequiredLabelTopConstraint.constant = 108;
     
 }
 
@@ -1010,6 +1034,11 @@
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
     
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
+    _daysRequiredLabelTopConstraint.constant = 108;
+    
 }
 
 - (void) setupUIForPrivateMidwifeForm {
@@ -1046,6 +1075,11 @@
     _sixthCollectionViewTitleTopConstraint.constant = -100 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
+    _daysRequiredLabelTopConstraint.constant = 108;
     
 }
 
@@ -1086,6 +1120,11 @@
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
     
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
+    _daysRequiredLabelTopConstraint.constant = 108;
+    
 }
 
 - (void) setupUIForSpecialNeedsCareForm {
@@ -1124,6 +1163,11 @@
     _sixthCollectionViewTitleTopConstraint.constant = -44 - _fifthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    
+    _otherRelevantInfoStaticLabel.hidden = NO;
+    _otherRelevantInfoTextView.hidden = NO;
+    _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
+    _daysRequiredLabelTopConstraint.constant = 108;
     
 }
 

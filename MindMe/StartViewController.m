@@ -36,14 +36,16 @@
     NSString* userid = [[NSUserDefaults standardUserDefaults] valueForKey:@"Userid"];
     NSString* token = [[NSUserDefaults standardUserDefaults] valueForKey:@"token"];
     BOOL isUserCarer = [[NSUserDefaults standardUserDefaults] boolForKey:@"isUserCarer"];
+    NSString* userAutId = [[NSUserDefaults standardUserDefaults] objectForKey:@"User_auth_id"];
     
     if (userid && token) {
         
         [[SharedClass sharedInstance] setUserId:userid];
         [[SharedClass sharedInstance] setAuthorizationKey:token];
         [[SharedClass sharedInstance] setIsUserCarer:isUserCarer];
+        [[SharedClass sharedInstance] setUserAuthId:userAutId];
         
-//        [self startGetProfileDetailsService];
+        [self startGetProfileDetailsService];
         
         if (isUserCarer) {
             [self carerButtonTapped:nil];
@@ -100,7 +102,7 @@
     DataSyncManager* manager = [[DataSyncManager alloc] init];
     manager.serviceKey = GetUserPersonalDetails;
     manager.delegate = nil;
-    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForGetProfileDetails]];
+    [manager startPOSTingFormDataForRefreshingUserToken:[self prepareDictionaryForGetProfileDetails]];
     
 }
 
