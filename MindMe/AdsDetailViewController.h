@@ -22,6 +22,7 @@
 }
 
 @property (nonatomic, strong) NSMutableDictionary* advertDict;
+@property BOOL isOpenedFromFavorites;
 
 @property (weak, nonatomic) IBOutlet UILabel *yearsExperienceLabel;
 @property (weak, nonatomic) IBOutlet UIButton *contactButton;
@@ -50,6 +51,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *nonSmokerLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *nonSmokerImgView;
 @property (weak, nonatomic) IBOutlet UIImageView *shortNoticeImgView;
+@property (weak, nonatomic) IBOutlet UITextField *otherRelevantInfoStaticLabel;
+@property (weak, nonatomic) IBOutlet UITextView *otherRelevantInfoTextView;
 
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)doneButtonTapped:(id)sender;
@@ -85,6 +88,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *fourthCollectionViewTitleTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *fifthCollectionViewTitleTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *sixthCollectionViewTitleTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *daysRequiredLabelTopConstraint;
 
 @property (weak, nonatomic) IBOutlet UIView *firstCollectionViewSeparatorView;
 @property (weak, nonatomic) IBOutlet UIView *secondCollectionViewSeparatorView;

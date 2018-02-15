@@ -43,6 +43,8 @@
         [[SharedClass sharedInstance] setAuthorizationKey:token];
         [[SharedClass sharedInstance] setIsUserCarer:isUserCarer];
         
+//        [self startGetProfileDetailsService];
+        
         if (isUserCarer) {
             [self carerButtonTapped:nil];
         }
@@ -90,4 +92,33 @@
     [self performSegueWithIdentifier:@"showLoginSegue" sender:nil];
     
 }
+
+#pragma mark - API Helpers
+
+- (void) startGetProfileDetailsService {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GetUserPersonalDetails;
+    manager.delegate = nil;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForGetProfileDetails]];
+    
+}
+
+#pragma mark - Modalobject
+
+- (NSMutableDictionary *) prepareDictionaryForGetProfileDetails {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    return dict;
+    
+}
+
 @end

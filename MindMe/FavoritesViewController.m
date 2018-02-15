@@ -44,6 +44,7 @@
         
         AdsDetailViewController* controller = (AdsDetailViewController *)[segue destinationViewController];
         controller.advertDict = selectedAdvertDict;
+        controller.isOpenedFromFavorites = YES;
         
     }
     

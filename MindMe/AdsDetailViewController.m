@@ -259,6 +259,12 @@
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
     
+    if ([identifier isEqualToString:@"showContactSegue"] && [[SharedClass sharedInstance] isGuestUser]) {
+        
+        [self.sideMenuController.navigationController popViewControllerAnimated:YES];
+        return NO;
+        
+    }
     if ([identifier isEqualToString:@"showReviewSegue"]) {
         
         if ([[SharedClass sharedInstance] isGuestUser]) {
@@ -529,19 +535,6 @@
     
     cell.layer.borderColor = [UIColor colorWithWhite:0.9 alpha:1.0].CGColor;
     cell.layer.borderWidth = 0.5;
-    
-}
-
--(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
-    
-    if ([identifier isEqualToString:@"showContactSegue"] && [[SharedClass sharedInstance] isGuestUser]) {
-        
-        [self.sideMenuController.navigationController popViewControllerAnimated:YES];
-        return NO;
-        
-    }
-    
-    return YES;
     
 }
 
@@ -1038,7 +1031,7 @@
     _firstCollectionView.hidden = YES;
     _firstCollectionViewSeparatorView.hidden = YES;
     
-    _thirdCollectionViewTitleTopConstraint.constant = -108 - _secondCollectionViewHeightConstraint.constant - _firstCollectionViewHeightConstraint.constant;
+    _thirdCollectionViewTitleTopConstraint.constant = -100 - _secondCollectionViewHeightConstraint.constant - _firstCollectionViewHeightConstraint.constant;
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
     
@@ -1050,7 +1043,7 @@
     _fifthCollectionView.hidden = YES;
     _fifthCollectionViewSeparatorView.hidden = YES;
     
-    _sixthCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
+    _sixthCollectionViewTitleTopConstraint.constant = -100 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
     
@@ -1289,7 +1282,13 @@
         [dict setObject:@"parent" forKey:@"flag"];
     }
     
-    [dict setObject:[_advertDict valueForKey:@"ID"] forKey:@"advertid"];
+    if (_isOpenedFromFavorites) {
+        [dict setObject:[_advertDict valueForKey:@"advert_id"] forKey:@"advertid"];
+    }
+    else {
+        [dict setObject:[_advertDict valueForKey:@"ID"] forKey:@"advertid"];
+    }
+    
     [dict setObject:[NSString stringWithFormat:@"%@",[[SharedClass sharedInstance] userId]] forKey:@"parentid"];
     [dict setObject:[_advertDict valueForKey:@"Userid"] forKey:@"carerid"];
     
@@ -1312,7 +1311,12 @@
         [dict setObject:[_advertDict valueForKey:@"Userid"] forKey:@"carerid"];
     }
     
-    [dict setObject:[_advertDict valueForKey:@"ID"] forKey:@"advertid"];
+    if (_isOpenedFromFavorites) {
+        [dict setObject:[_advertDict valueForKey:@"advert_id"] forKey:@"advertid"];
+    }
+    else {
+        [dict setObject:[_advertDict valueForKey:@"ID"] forKey:@"advertid"];
+    }
     
     return dict;
     
