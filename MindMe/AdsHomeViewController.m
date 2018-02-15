@@ -83,10 +83,10 @@
     _addressTextField.delegate = self;
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
-        _carerTypeTextField.text = @"All Profiles";
+        _carerTypeTextField.text = @"All Adverts";
     }
     else {
-        _carerTypeTextField.text = @"All Adverts";
+        _carerTypeTextField.text = @"All Profiles";
     }
     
     
@@ -406,10 +406,10 @@
     NSString* allStr = @"";
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
-        allStr = @"All Profiles";
+        allStr = @"All Adverts";
     }
     else {
-        allStr = @"All Adverts";
+        allStr = @"All Profiles";
     }
     
     NSArray *colors = [NSArray arrayWithObjects:allStr, @"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];

@@ -209,17 +209,23 @@
         
     }
     else if (section == 5) {
-        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Userid"];
-        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"token"];
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserCarer"];
-        [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
-        [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
-        [[SharedClass sharedInstance] setUserId:nil];
-        [[SharedClass sharedInstance] setAuthorizationKey:nil];
-        [[SharedClass sharedInstance] setIsUserCarer:NO];
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isEditProfileMenuButtonHidden"];
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isProfileUpdated"];
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        
+        if ([[SharedClass sharedInstance] isGuestUser]) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+        else {
+            [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Userid"];
+            [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"token"];
+            [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserCarer"];
+            [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
+            [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
+            [[SharedClass sharedInstance] setUserId:nil];
+            [[SharedClass sharedInstance] setAuthorizationKey:nil];
+            [[SharedClass sharedInstance] setIsUserCarer:NO];
+            [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isEditProfileMenuButtonHidden"];
+            [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isProfileUpdated"];
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
     }
     
 }
