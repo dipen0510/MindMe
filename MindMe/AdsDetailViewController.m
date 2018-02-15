@@ -25,7 +25,10 @@
     [self setupAvailibilityArr];
     [self setupValueLayoutForAdvert];
     [self setupUIForForms];
-    [self startCheckLikeDislikeService];
+    
+    if (![[SharedClass sharedInstance] isGuestUser]) {
+        [self startCheckLikeDislikeService];
+    }
     
 }
 

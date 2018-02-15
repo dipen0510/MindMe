@@ -185,7 +185,8 @@
         [self startPostSubscriptionReceiptService];
     }
     if ([requestServiceKey isEqualToString:PostSubscriptionReceipt]) {
-        [SVProgressHUD showSuccessWithStatus:@"Payment Successful"];
+        [SVProgressHUD showSuccessWithStatus:@"Successfully Subscribed"];
+        [self performSelector:@selector(changeScreenToAdvertControl) withObject:nil afterDelay:1.5];
     }
     
 }
@@ -285,6 +286,10 @@
     
     return YES;
     
+}
+
+- (void) changeScreenToAdvertControl {
+    [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
 }
 
 @end
