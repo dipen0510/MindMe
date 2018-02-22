@@ -37,7 +37,7 @@
     _contactButton.layer.cornerRadius = 20.0;
     _contactButton.layer.masksToBounds = NO;
     
-    _profileImgView.layer.cornerRadius = (50./375)*[UIScreen mainScreen].bounds.size.width;
+    _profileImgView.layer.cornerRadius = (58.5/375)*[UIScreen mainScreen].bounds.size.width;
     _profileImgView.layer.masksToBounds = YES;
     
     _locationPinLeadingConstraint.constant = (130./375.) * [UIScreen mainScreen].bounds.size.width;
@@ -148,7 +148,7 @@
     _lastLoginLabel.text = [dateFormatter1 stringFromDate:[dateFormatter dateFromString:[_advertDict valueForKey:@"posted"]]];
     _memberSinceLabel.text = [dateFormatter1 stringFromDate:[dateFormatter dateFromString:[_advertDict valueForKey:@"date"]]];
     
-    if ([[_advertDict valueForKey:@"additionals"] containsString:_haveACaerLabel.text]) {
+    if ([[_advertDict valueForKey:@"additionals"] containsString:@"Have a car"]) {
         _haveACarImgView.image = [UIImage imageNamed:@"ic_green_correct"];
     }
     else {
@@ -162,12 +162,12 @@
         _comfortableWithPetsImgView.image = [UIImage imageNamed:@"ic_cross"];
     }
     
-    if ([[_advertDict valueForKey:@"additionals"] containsString:_acceptOnlinePaymentLabel.text]) {
-        _acceptOnlinePaymentImgView.image = [UIImage imageNamed:@"ic_green_correct"];
-    }
-    else {
-        _acceptOnlinePaymentImgView.image = [UIImage imageNamed:@"ic_cross"];
-    }
+//    if ([[_advertDict valueForKey:@"additionals"] containsString:_acceptOnlinePaymentLabel.text]) {
+//        _acceptOnlinePaymentImgView.image = [UIImage imageNamed:@"ic_green_correct"];
+//    }
+//    else {
+//        _acceptOnlinePaymentImgView.image = [UIImage imageNamed:@"ic_cross"];
+//    }
     
     if ([[_advertDict valueForKey:@"additionals"] containsString:_nonSmokerLabel.text]) {
         _nonSmokerImgView.image = [UIImage imageNamed:@"ic_green_correct"];
@@ -438,39 +438,66 @@
 - (void) populateContentForFirstCollectionViewCell:(AdsDetailCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.detailsTextLabel.text = [firstCollectionViewArr objectAtIndex:indexPath.row];
+    cell.detailsTextLabel.textColor = _aboutTextView.textColor;
+    cell.detailsTextLabel.font = _careTypeLabel.font;
     
+    cell.detailsTickImgView.hidden = NO;
+    cell.detailsTextLabelLeadingConstraint.constant = 31.;
     
 }
 
 - (void) populateContentForSecondCollectionViewCell:(AdsDetailCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.detailsTextLabel.text = [secondCollectionViewArr objectAtIndex:indexPath.row];
+    cell.detailsTextLabel.textColor = _aboutTextView.textColor;
+    cell.detailsTextLabel.font = _careTypeLabel.font;
     
+    cell.detailsTickImgView.hidden = NO;
+    cell.detailsTextLabelLeadingConstraint.constant = 31.;
     
 }
 
 - (void) populateContentForThirdCollectionViewCell:(AdsDetailCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.detailsTextLabel.text = [thirdCollectionViewArr objectAtIndex:indexPath.row];
+    cell.detailsTextLabel.textColor = _aboutTextView.textColor;
+    cell.detailsTextLabel.font = _careTypeLabel.font;
+    
+    cell.detailsTickImgView.hidden = NO;
+    cell.detailsTextLabelLeadingConstraint.constant = 31.;
     
 }
 
 - (void) populateContentForForthCollectionViewCell:(AdsDetailCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.detailsTextLabel.text = [fourthCollectionViewArr objectAtIndex:indexPath.row];
+    cell.detailsTextLabel.textColor = _aboutTextView.textColor;
+    cell.detailsTextLabel.font = _careTypeLabel.font;
+    
+    cell.detailsTickImgView.hidden = NO;
+    cell.detailsTextLabelLeadingConstraint.constant = 31.;
     
 }
 
 - (void) populateContentForFifthCollectionViewCell:(AdsDetailCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.detailsTextLabel.text = [fifthCollectionViewArr objectAtIndex:indexPath.row];
+    cell.detailsTextLabel.textColor = _aboutTextView.textColor;
+    cell.detailsTextLabel.font = _careTypeLabel.font;
+    
+    cell.detailsTickImgView.hidden = NO;
+    cell.detailsTextLabelLeadingConstraint.constant = 31.;
     
 }
 
 - (void) populateContentForSixthCollectionViewCell:(AdsDetailCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
     
     cell.detailsTextLabel.text = [sixthCollectionViewArr objectAtIndex:indexPath.row];
+    cell.detailsTextLabel.textColor = _aboutTextView.textColor;
+    cell.detailsTextLabel.font = _careTypeLabel.font;
     
+    cell.detailsTickImgView.hidden = NO;
+    cell.detailsTextLabelLeadingConstraint.constant = 31.;
     
 }
 
@@ -479,31 +506,34 @@
     if (indexPath.row%8 == 0 || indexPath.row<8) {
         cell.backgroundColor = [UIColor colorWithRed:41./255 green:73./255. blue:97./255. alpha:1.0];
         cell.availabilityLabel.hidden = NO;
+        cell.availabilityLabel.numberOfLines = 1;
+        cell.availabilityImgView.hidden = YES;
         
         switch (indexPath.row) {
             case 0:
                 cell.availabilityLabel.text = @"Time Schedule";
+                cell.availabilityLabel.numberOfLines = 2;
                 break;
             case 1:
-                cell.availabilityLabel.text = @"MON";
+                cell.availabilityLabel.text = @"Mon";
                 break;
             case 2:
-                cell.availabilityLabel.text = @"TUE";
+                cell.availabilityLabel.text = @"Tue";
                 break;
             case 3:
-                cell.availabilityLabel.text = @"WED";
+                cell.availabilityLabel.text = @"Wed";
                 break;
             case 4:
-                cell.availabilityLabel.text = @"THU";
+                cell.availabilityLabel.text = @"Thu";
                 break;
             case 5:
-                cell.availabilityLabel.text = @"FRI";
+                cell.availabilityLabel.text = @"Fri";
                 break;
             case 6:
-                cell.availabilityLabel.text = @"SAT";
+                cell.availabilityLabel.text = @"Sat";
                 break;
             case 7:
-                cell.availabilityLabel.text = @"SUN";
+                cell.availabilityLabel.text = @"Sun";
                 break;
             case 8:
                 cell.availabilityLabel.text = @"Morning";
@@ -528,10 +558,10 @@
     }
     else {
         if ([[availabilityArr objectAtIndex:indexPath.row] intValue]) {
-            cell.backgroundColor = [UIColor colorWithRed:41./255 green:73./255. blue:97./255. alpha:1.0];
+            cell.availabilityImgView.hidden = NO;
         }
         else {
-            cell.backgroundColor = [UIColor clearColor];
+            cell.availabilityImgView.hidden = YES;
         }
         cell.availabilityLabel.hidden = YES;
     }
@@ -1063,7 +1093,7 @@
     _firstCollectionView.hidden = YES;
     _firstCollectionViewSeparatorView.hidden = YES;
     
-    _thirdCollectionViewTitleTopConstraint.constant = -100 - _secondCollectionViewHeightConstraint.constant - _firstCollectionViewHeightConstraint.constant;
+    _thirdCollectionViewTitleTopConstraint.constant = -140 - _secondCollectionViewHeightConstraint.constant - _firstCollectionViewHeightConstraint.constant;
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
     
@@ -1075,7 +1105,7 @@
     _fifthCollectionView.hidden = YES;
     _fifthCollectionViewSeparatorView.hidden = YES;
     
-    _sixthCollectionViewTitleTopConstraint.constant = -100 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
+    _sixthCollectionViewTitleTopConstraint.constant = -140 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
     

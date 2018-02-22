@@ -9,8 +9,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="VisbyRoundCF-Regular.otf">
-            <string>VisbyRoundCF-Regular</string>
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
         </array>
     </customFonts>
     <objects>
@@ -23,9 +23,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="9gV-9Q-OyE">
-                        <rect key="frame" x="4" y="0.0" width="92" height="50"/>
-                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="9gV-9Q-OyE">
+                        <rect key="frame" x="6" y="0.0" width="90" height="50"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="10"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -41,18 +41,28 @@
                             <action selector="availabilityButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="2j2-Jg-RTg"/>
                         </connections>
                     </button>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_green_correct" translatesAutoresizingMaskIntoConstraints="NO" id="rbp-1O-Y0e">
+                        <rect key="frame" x="42.5" y="17.5" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="11x-US-xcs"/>
+                            <constraint firstAttribute="width" constant="15" id="k9P-aV-tpg"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="9gV-9Q-OyE" secondAttribute="trailing" constant="4" id="1vZ-uC-JgC"/>
-                <constraint firstItem="9gV-9Q-OyE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="8I8-lc-vcL"/>
+                <constraint firstItem="9gV-9Q-OyE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="8I8-lc-vcL"/>
                 <constraint firstItem="VR6-tP-PDL" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="IAf-Fk-nHP"/>
                 <constraint firstItem="VR6-tP-PDL" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Opx-vX-ffy"/>
+                <constraint firstItem="rbp-1O-Y0e" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="RWd-gF-hq9"/>
                 <constraint firstAttribute="bottom" secondItem="9gV-9Q-OyE" secondAttribute="bottom" id="gLw-6O-KDF"/>
                 <constraint firstItem="9gV-9Q-OyE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sOP-Z1-k9a"/>
+                <constraint firstItem="rbp-1O-Y0e" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="xir-yI-xCV"/>
             </constraints>
             <connections>
                 <outlet property="availabilityButton" destination="VR6-tP-PDL" id="rmd-ID-4aC"/>
+                <outlet property="availabilityImgView" destination="rbp-1O-Y0e" id="PVD-ZR-nBN"/>
                 <outlet property="availabilityLabel" destination="9gV-9Q-OyE" id="vDm-KY-VfK"/>
             </connections>
         </collectionViewCell>
@@ -60,5 +70,6 @@
     <resources>
         <image name="filter_rb_active" width="24" height="24"/>
         <image name="filter_rb_inactive" width="24" height="24"/>
+        <image name="ic_green_correct" width="96" height="96"/>
     </resources>
 </document>

@@ -208,6 +208,10 @@
 		D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AD692A1F93363B009D57A7 /* AdsHomeViewController.m */; };
 		D4AD692F1F933668009D57A7 /* AdsHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */; };
 		D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */; };
+		D4C1F35D203ED60C00A8C211 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4C1F35A203ED60C00A8C211 /* Montserrat-Light.ttf */; };
+		D4C1F35E203ED60C00A8C211 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4C1F35B203ED60C00A8C211 /* Montserrat-Regular.ttf */; };
+		D4C1F35F203ED60C00A8C211 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4C1F35C203ED60C00A8C211 /* Montserrat-SemiBold.ttf */; };
+		D4C1F361203F225600A8C211 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4C1F360203F225600A8C211 /* Montserrat-Medium.ttf */; };
 		D4CA348B201F698700D54051 /* AdsDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CA3489201F698700D54051 /* AdsDetailCollectionViewCell.m */; };
 		D4CA348C201F698700D54051 /* AdsDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4CA348A201F698700D54051 /* AdsDetailCollectionViewCell.xib */; };
 		D4E232EE20177064002F4961 /* ChooseCareTypeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E232EC20177064002F4961 /* ChooseCareTypeCollectionViewCell.m */; };
@@ -622,6 +626,10 @@
 		D4AD692C1F933668009D57A7 /* AdsHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsHomeTableViewCell.h; sourceTree = "<group>"; };
 		D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsHomeTableViewCell.m; sourceTree = "<group>"; };
 		D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdsHomeTableViewCell.xib; sourceTree = "<group>"; };
+		D4C1F35A203ED60C00A8C211 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		D4C1F35B203ED60C00A8C211 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		D4C1F35C203ED60C00A8C211 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		D4C1F360203F225600A8C211 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		D4CA3488201F698700D54051 /* AdsDetailCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsDetailCollectionViewCell.h; sourceTree = "<group>"; };
 		D4CA3489201F698700D54051 /* AdsDetailCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsDetailCollectionViewCell.m; sourceTree = "<group>"; };
 		D4CA348A201F698700D54051 /* AdsDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdsDetailCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -1379,6 +1387,10 @@
 		D43143BC1F98E02B00FE0406 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D4C1F360203F225600A8C211 /* Montserrat-Medium.ttf */,
+				D4C1F35A203ED60C00A8C211 /* Montserrat-Light.ttf */,
+				D4C1F35B203ED60C00A8C211 /* Montserrat-Regular.ttf */,
+				D4C1F35C203ED60C00A8C211 /* Montserrat-SemiBold.ttf */,
 				D415586E1FB42E6B0031E23F /* tmpAdsHome.png */,
 				D43143BD1F98E02B00FE0406 /* VisbyRoundCF-Medium.otf */,
 				D43143BE1F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf */,
@@ -1811,6 +1823,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D43143C81F98E02B00FE0406 /* VisbyRoundCF-Light.otf in Resources */,
+				D4C1F361203F225600A8C211 /* Montserrat-Medium.ttf in Resources */,
 				D4041C0A1FC0DEF5001F312E /* QMChatOutgoingCell.xib in Resources */,
 				D4041BE31FC0DEF5001F312E /* ic_retry-grey.png in Resources */,
 				D49BFE911F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.xib in Resources */,
@@ -1822,6 +1835,7 @@
 				D43143C51F98E02B00FE0406 /* VisbyRoundCF-Medium.otf in Resources */,
 				D4041BD91FC0DEF5001F312E /* ic_retry-grey@2x.png in Resources */,
 				D4041BE11FC0DEF5001F312E /* pause_icon.png in Resources */,
+				D4C1F35D203ED60C00A8C211 /* Montserrat-Light.ttf in Resources */,
 				D4041BFB1FC0DEF5001F312E /* QMVideoIncomingCell.xib in Resources */,
 				D43143C91F98E02B00FE0406 /* VisbyRoundCF-ExtraBold.otf in Resources */,
 				D4041BEE1FC0DEF5001F312E /* QMChatContactRequestCell.xib in Resources */,
@@ -1861,6 +1875,7 @@
 				D4041BDD1FC0DEF5001F312E /* play_icon.png in Resources */,
 				D4041BEB1FC0DEF5001F312E /* QMChatIncomingCell.xib in Resources */,
 				D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */,
+				D4C1F35F203ED60C00A8C211 /* Montserrat-SemiBold.ttf in Resources */,
 				D4041BDB1FC0DEF5001F312E /* ic_audio.pdf in Resources */,
 				D48EE4C01F9B382C00CB43A0 /* SideMenuTableViewCell.xib in Resources */,
 				D4F05F411FBF055E002024F6 /* FAQTableViewCell.xib in Resources */,
@@ -1876,6 +1891,7 @@
 				D4041AFE1FC0C601001F312E /* UploadDocumentsCollectionViewCell.xib in Resources */,
 				D4041BFE1FC0DEF5001F312E /* QMImageIncomingCell.xib in Resources */,
 				D4041BDC1FC0DEF5001F312E /* ic_play_grey.pdf in Resources */,
+				D4C1F35E203ED60C00A8C211 /* Montserrat-Regular.ttf in Resources */,
 				D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */,
 				D4736B5A1FBC60B6004A51A2 /* FavoritesTableViewCell.xib in Resources */,
 				D420BFEB1FB82DD60071E30A /* FilterMiscTableViewCell.xib in Resources */,
@@ -1973,7 +1989,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MindMe/Pods-MindMe-resources.sh",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
-				"$PODS_CONFIGURATION_BUILD_DIR/Stripe/Stripe.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/Stripe/Stripe.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (

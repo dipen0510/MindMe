@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -29,17 +30,31 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_green_correct" translatesAutoresizingMaskIntoConstraints="NO" id="yYF-Zx-Bfg">
+                        <rect key="frame" x="8" y="7.5" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="yYF-Zx-Bfg" secondAttribute="height" multiplier="1:1" id="Dfj-If-CsJ"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="nHr-K3-cLV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2HL-Ha-bms"/>
                 <constraint firstAttribute="trailing" secondItem="nHr-K3-cLV" secondAttribute="trailing" id="ELx-AG-SiI"/>
+                <constraint firstItem="yYF-Zx-Bfg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="T6P-PZ-xcN"/>
                 <constraint firstAttribute="bottom" secondItem="nHr-K3-cLV" secondAttribute="bottom" id="adg-pL-IuG"/>
+                <constraint firstItem="yYF-Zx-Bfg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="7.5" id="bEO-SC-NOv"/>
                 <constraint firstItem="nHr-K3-cLV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="mov-MT-sL8"/>
+                <constraint firstAttribute="bottom" secondItem="yYF-Zx-Bfg" secondAttribute="bottom" constant="7.5" id="rfX-dp-QUH"/>
             </constraints>
             <connections>
                 <outlet property="detailsTextLabel" destination="nHr-K3-cLV" id="jjb-Ck-5tX"/>
+                <outlet property="detailsTextLabelLeadingConstraint" destination="mov-MT-sL8" id="c5I-Ia-5FK"/>
+                <outlet property="detailsTickImgView" destination="yYF-Zx-Bfg" id="fe4-Eb-qYA"/>
             </connections>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="ic_green_correct" width="96" height="96"/>
+    </resources>
 </document>

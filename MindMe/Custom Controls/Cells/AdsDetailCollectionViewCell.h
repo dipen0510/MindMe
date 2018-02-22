@@ -11,4 +11,7 @@
 @interface AdsDetailCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *detailsTextLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *detailsTickImgView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *detailsTextLabelLeadingConstraint;
+
 @end

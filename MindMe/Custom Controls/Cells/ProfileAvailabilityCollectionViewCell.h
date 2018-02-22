@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *availabilityLabel;
 @property (weak, nonatomic) IBOutlet UIButton *availabilityButton;
+@property (weak, nonatomic) IBOutlet UIImageView *availabilityImgView;
 - (IBAction)availabilityButtonTapped:(id)sender;
 
 @end
