@@ -19,6 +19,8 @@
     NSMutableArray* fifthCollectionViewArr;
     NSMutableArray* sixthCollectionViewArr;
     
+    NSMutableArray* reviewArr;
+    
 }
 
 @property (nonatomic, strong) NSMutableDictionary* advertDict;
@@ -96,5 +98,8 @@
 @property (weak, nonatomic) IBOutlet UIView *fourthCollectionViewSeparatorView;
 @property (weak, nonatomic) IBOutlet UIView *fifthCollectionViewSeparatorView;
 @property (weak, nonatomic) IBOutlet UIView *sixthCollectionViewSeparatorView;
+
+@property (weak, nonatomic) IBOutlet UITableView *reviewTblView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *reviewTblViewHeightConstraint;
 
 @end

@@ -10,6 +10,7 @@
 #import "ProfileAvailabilityCollectionViewCell.h"
 #import "AdsDetailCollectionViewCell.h"
 #import "AddReviewViewController.h"
+#import "ReviewsTableViewCell.h"
 
 @interface AdsDetailViewController ()
 
@@ -28,6 +29,7 @@
     
     if (![[SharedClass sharedInstance] isGuestUser]) {
         [self startCheckLikeDislikeService];
+        [self startGetAllReviewService];
     }
     
 }
@@ -37,7 +39,7 @@
     _contactButton.layer.cornerRadius = 20.0;
     _contactButton.layer.masksToBounds = NO;
     
-    _profileImgView.layer.cornerRadius = (58.5/375)*[UIScreen mainScreen].bounds.size.width;
+    _profileImgView.layer.cornerRadius = _profileImgView.frame.size.height/2.;
     _profileImgView.layer.masksToBounds = YES;
     
     _locationPinLeadingConstraint.constant = (130./375.) * [UIScreen mainScreen].bounds.size.width;
@@ -71,7 +73,7 @@
     _sixthCollectionView.delegate = self;
     
     if (![[SharedClass sharedInstance] isUserCarer]) {
-        _footerContactButton.hidden = YES;
+        _footerContactButton.hidden = NO;
         [_doneButton setTitle:@"" forState:UIControlStateNormal];
         [_cancelButton setTitle:@"" forState:UIControlStateNormal];
         [_doneButton setBackgroundColor:[UIColor clearColor]];
@@ -83,7 +85,7 @@
     }
     else {
         
-        _footerContactButton.hidden = YES;
+        _footerContactButton.hidden = NO;
         _doneButton.hidden = YES;
         _cancelButton.hidden = YES;
         _carerLikeButton.hidden = NO;
@@ -92,6 +94,9 @@
 
     
     }
+    
+    reviewArr = [[NSMutableArray alloc] init];
+    _reviewTblViewHeightConstraint.constant = 0;
     
     
 }
@@ -1249,7 +1254,7 @@
             [_carerLikeButton setImage:[UIImage imageNamed:@"like_btn"] forState:UIControlStateNormal];
         }
         else {
-            [_doneButton setBackgroundImage:[UIImage imageNamed:@"like_btn"] forState:UIControlStateNormal];
+            [_doneButton setImage:[UIImage imageNamed:@"like_btn"] forState:UIControlStateNormal];
         }
     }
     else {
@@ -1257,7 +1262,7 @@
             [_carerLikeButton setImage:[UIImage imageNamed:@"unlike"] forState:UIControlStateNormal];
         }
         else {
-            [_doneButton setBackgroundImage:[UIImage imageNamed:@"unlike"] forState:UIControlStateNormal];
+            [_doneButton setImage:[UIImage imageNamed:@"unlike"] forState:UIControlStateNormal];
         }
     }
     
@@ -1295,6 +1300,16 @@
     
 }
 
+- (void) startGetAllReviewService {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GetAllReviews;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForGetAllReviews]];
+    
+}
+
+
 #pragma mark - DATASYNCMANAGER Delegates
 
 -(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
@@ -1313,7 +1328,13 @@
         [self refreshUIForLikeDislikeCTAFOrString:[responseData valueForKey:@"message"]];
         
     }
-    
+    if ([requestServiceKey isEqualToString:GetAllReviews]) {
+        
+        reviewArr = [[NSMutableArray alloc] initWithArray:[responseData valueForKey:@"message"]];
+        _reviewTblViewHeightConstraint.constant = (reviewArr.count*308.);
+        [_reviewTblView reloadData];
+        
+    }
     
     
 }
@@ -1396,6 +1417,132 @@
     }
     
     return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForGetAllReviews {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if (_isOpenedFromFavorites) {
+        [dict setObject:[_advertDict valueForKey:@"advert_id"] forKey:@"advertid"];
+    }
+    else {
+        [dict setObject:[_advertDict valueForKey:@"ID"] forKey:@"advertid"];
+    }
+    
+    return dict;
+    
+}
+
+
+#pragma - mark TableView Datasource and Delegates
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 1;
+    
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return reviewArr.count;
+    
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"ReviewsTableViewCell";
+    ReviewsTableViewCell *cell = (ReviewsTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil) {
+        // Load the top-level objects from the custom cell XIB.
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ReviewsTableViewCell" owner:self options:nil];
+        // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
+        cell = [topLevelObjects objectAtIndex:0];
+    }
+    
+    [self populateContentForAdsCell:cell forIndexPath:indexPath];
+    
+    return cell;
+    
+    
+    
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return 308.;
+    
+}
+
+
+- (void) populateContentForAdsCell:(ReviewsTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@",[[reviewArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[reviewArr objectAtIndex:indexPath.row] valueForKey:@"second_name"]];
+    cell.reviewTitleLabel.text = [[reviewArr objectAtIndex:indexPath.row] valueForKey:@"review_title"];
+    cell.reviewDescriptionTextView.text = [[reviewArr objectAtIndex:indexPath.row] valueForKey:@"review_text"];
+    
+    switch ([[[reviewArr objectAtIndex:indexPath.row] valueForKey:@"stars"] intValue]) {
+        case 0:
+            [cell.firstStarButton setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+            [cell.secondStarButton setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+            [cell.thirdStarButton setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+            [cell.fourthStarButton setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+            [cell.fifthStarButton setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+            break;
+        case 1:
+            [cell.firstStarButton setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+            [cell.secondStarButton setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+            [cell.thirdStarButton setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+            [cell.fourthStarButton setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+            [cell.fifthStarButton setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+            break;
+        case 2:
+            [cell.firstStarButton setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+            [cell.secondStarButton setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+            [cell.thirdStarButton setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+            [cell.fourthStarButton setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+            [cell.fifthStarButton setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+            break;
+        case 3:
+            [cell.firstStarButton setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+            [cell.secondStarButton setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+            [cell.thirdStarButton setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+            [cell.fourthStarButton setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+            [cell.fifthStarButton setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+            break;
+        case 4:
+            [cell.firstStarButton setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+            [cell.secondStarButton setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+            [cell.thirdStarButton setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+            [cell.fourthStarButton setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+            [cell.fifthStarButton setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+            break;
+        case 5:
+            [cell.firstStarButton setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+            [cell.secondStarButton setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+            [cell.thirdStarButton setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+            [cell.fourthStarButton setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+            [cell.fifthStarButton setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+            break;
+            
+        default:
+            break;
+    }
     
 }
 

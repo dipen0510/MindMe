@@ -208,12 +208,14 @@
 		D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AD692A1F93363B009D57A7 /* AdsHomeViewController.m */; };
 		D4AD692F1F933668009D57A7 /* AdsHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */; };
 		D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */; };
-		D4C1F35D203ED60C00A8C211 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4C1F35A203ED60C00A8C211 /* Montserrat-Light.ttf */; };
-		D4C1F35E203ED60C00A8C211 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4C1F35B203ED60C00A8C211 /* Montserrat-Regular.ttf */; };
-		D4C1F35F203ED60C00A8C211 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4C1F35C203ED60C00A8C211 /* Montserrat-SemiBold.ttf */; };
-		D4C1F361203F225600A8C211 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4C1F360203F225600A8C211 /* Montserrat-Medium.ttf */; };
 		D4CA348B201F698700D54051 /* AdsDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CA3489201F698700D54051 /* AdsDetailCollectionViewCell.m */; };
 		D4CA348C201F698700D54051 /* AdsDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4CA348A201F698700D54051 /* AdsDetailCollectionViewCell.xib */; };
+		D4D42377204025870068BBDA /* ReviewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D42375204025870068BBDA /* ReviewsTableViewCell.m */; };
+		D4D42378204025870068BBDA /* ReviewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4D42376204025870068BBDA /* ReviewsTableViewCell.xib */; };
+		D4D4237D20402E760068BBDA /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4D4237920402E760068BBDA /* Montserrat-Light.otf */; };
+		D4D4237E20402E760068BBDA /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4D4237A20402E760068BBDA /* Montserrat-Medium.otf */; };
+		D4D4237F20402E760068BBDA /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4D4237B20402E760068BBDA /* Montserrat-Regular.otf */; };
+		D4D4238020402E760068BBDA /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4D4237C20402E760068BBDA /* Montserrat-SemiBold.otf */; };
 		D4E232EE20177064002F4961 /* ChooseCareTypeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E232EC20177064002F4961 /* ChooseCareTypeCollectionViewCell.m */; };
 		D4E232EF20177064002F4961 /* ChooseCareTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4E232ED20177064002F4961 /* ChooseCareTypeCollectionViewCell.xib */; };
 		D4E34B2A1FCEF92A00D53EDC /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E34B291FCEF92A00D53EDC /* StartViewController.m */; };
@@ -626,13 +628,16 @@
 		D4AD692C1F933668009D57A7 /* AdsHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsHomeTableViewCell.h; sourceTree = "<group>"; };
 		D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsHomeTableViewCell.m; sourceTree = "<group>"; };
 		D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdsHomeTableViewCell.xib; sourceTree = "<group>"; };
-		D4C1F35A203ED60C00A8C211 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
-		D4C1F35B203ED60C00A8C211 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
-		D4C1F35C203ED60C00A8C211 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
-		D4C1F360203F225600A8C211 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		D4CA3488201F698700D54051 /* AdsDetailCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsDetailCollectionViewCell.h; sourceTree = "<group>"; };
 		D4CA3489201F698700D54051 /* AdsDetailCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsDetailCollectionViewCell.m; sourceTree = "<group>"; };
 		D4CA348A201F698700D54051 /* AdsDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdsDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		D4D42374204025870068BBDA /* ReviewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsTableViewCell.h; sourceTree = "<group>"; };
+		D4D42375204025870068BBDA /* ReviewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsTableViewCell.m; sourceTree = "<group>"; };
+		D4D42376204025870068BBDA /* ReviewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewsTableViewCell.xib; sourceTree = "<group>"; };
+		D4D4237920402E760068BBDA /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		D4D4237A20402E760068BBDA /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
+		D4D4237B20402E760068BBDA /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		D4D4237C20402E760068BBDA /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
 		D4E232EB20177064002F4961 /* ChooseCareTypeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseCareTypeCollectionViewCell.h; sourceTree = "<group>"; };
 		D4E232EC20177064002F4961 /* ChooseCareTypeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseCareTypeCollectionViewCell.m; sourceTree = "<group>"; };
 		D4E232ED20177064002F4961 /* ChooseCareTypeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseCareTypeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -1387,10 +1392,10 @@
 		D43143BC1F98E02B00FE0406 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D4C1F360203F225600A8C211 /* Montserrat-Medium.ttf */,
-				D4C1F35A203ED60C00A8C211 /* Montserrat-Light.ttf */,
-				D4C1F35B203ED60C00A8C211 /* Montserrat-Regular.ttf */,
-				D4C1F35C203ED60C00A8C211 /* Montserrat-SemiBold.ttf */,
+				D4D4237920402E760068BBDA /* Montserrat-Light.otf */,
+				D4D4237A20402E760068BBDA /* Montserrat-Medium.otf */,
+				D4D4237B20402E760068BBDA /* Montserrat-Regular.otf */,
+				D4D4237C20402E760068BBDA /* Montserrat-SemiBold.otf */,
 				D415586E1FB42E6B0031E23F /* tmpAdsHome.png */,
 				D43143BD1F98E02B00FE0406 /* VisbyRoundCF-Medium.otf */,
 				D43143BE1F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf */,
@@ -1692,6 +1697,9 @@
 				D4CA3488201F698700D54051 /* AdsDetailCollectionViewCell.h */,
 				D4CA3489201F698700D54051 /* AdsDetailCollectionViewCell.m */,
 				D4CA348A201F698700D54051 /* AdsDetailCollectionViewCell.xib */,
+				D4D42374204025870068BBDA /* ReviewsTableViewCell.h */,
+				D4D42375204025870068BBDA /* ReviewsTableViewCell.m */,
+				D4D42376204025870068BBDA /* ReviewsTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1823,7 +1831,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D43143C81F98E02B00FE0406 /* VisbyRoundCF-Light.otf in Resources */,
-				D4C1F361203F225600A8C211 /* Montserrat-Medium.ttf in Resources */,
 				D4041C0A1FC0DEF5001F312E /* QMChatOutgoingCell.xib in Resources */,
 				D4041BE31FC0DEF5001F312E /* ic_retry-grey.png in Resources */,
 				D49BFE911F9DF776000D6638 /* ProfileActivitiesCollectionViewCell.xib in Resources */,
@@ -1835,8 +1842,8 @@
 				D43143C51F98E02B00FE0406 /* VisbyRoundCF-Medium.otf in Resources */,
 				D4041BD91FC0DEF5001F312E /* ic_retry-grey@2x.png in Resources */,
 				D4041BE11FC0DEF5001F312E /* pause_icon.png in Resources */,
-				D4C1F35D203ED60C00A8C211 /* Montserrat-Light.ttf in Resources */,
 				D4041BFB1FC0DEF5001F312E /* QMVideoIncomingCell.xib in Resources */,
+				D4D4237E20402E760068BBDA /* Montserrat-Medium.otf in Resources */,
 				D43143C91F98E02B00FE0406 /* VisbyRoundCF-ExtraBold.otf in Resources */,
 				D4041BEE1FC0DEF5001F312E /* QMChatContactRequestCell.xib in Resources */,
 				D49D78D01FA6FE8F007670F9 /* ProfileAvailabilityCollectionViewCell.xib in Resources */,
@@ -1844,6 +1851,7 @@
 				D4041C131FC0DEF5001F312E /* QMToolbarContentView.xib in Resources */,
 				D4041C0D1FC0DEF5001F312E /* QMChatNotificationCell.xib in Resources */,
 				D43143CC1F98E02B00FE0406 /* VisbyRoundCF-Bold.otf in Resources */,
+				D4D4238020402E760068BBDA /* Montserrat-SemiBold.otf in Resources */,
 				D4041BF61FC0DEF5001F312E /* QMImageOutgoingCell.xib in Resources */,
 				D4041BD31FC0DEF5001F312E /* ic_download_grey.pdf in Resources */,
 				D4041BE21FC0DEF5001F312E /* MicOverlay@3x.png in Resources */,
@@ -1861,6 +1869,7 @@
 				D43143CB1F98E02B00FE0406 /* VisbyRoundCF-Regular.otf in Resources */,
 				D4041C051FC0DEF5001F312E /* QMChatLocationIncomingCell.xib in Resources */,
 				D4041BEA1FC0DEF5001F312E /* QMChatAttachmentOutgoingCell.xib in Resources */,
+				D4D4237F20402E760068BBDA /* Montserrat-Regular.otf in Resources */,
 				D4041C651FC0E157001F312E /* LICENSE in Resources */,
 				D4F05F1E1FBD8F20002024F6 /* SideMenuSectionView.xib in Resources */,
 				D420BFE11FB5CD7A0071E30A /* FilterViewController.xib in Resources */,
@@ -1869,13 +1878,13 @@
 				D4041BDF1FC0DEF5001F312E /* MicOverlay.png in Resources */,
 				D4041C001FC0DEF5001F312E /* QMAudioOutgoingCell.xib in Resources */,
 				D48AE2412014BC3F00C2F165 /* PEPhotoCropEditor.bundle in Resources */,
+				D4D4237D20402E760068BBDA /* Montserrat-Light.otf in Resources */,
 				D48AE2402014BC3F00C2F165 /* LICENSE in Resources */,
 				D4041C611FC0E157001F312E /* LICENSE in Resources */,
 				D4F05F231FBDC02D002024F6 /* AdvertsTableViewCell.xib in Resources */,
 				D4041BDD1FC0DEF5001F312E /* play_icon.png in Resources */,
 				D4041BEB1FC0DEF5001F312E /* QMChatIncomingCell.xib in Resources */,
 				D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */,
-				D4C1F35F203ED60C00A8C211 /* Montserrat-SemiBold.ttf in Resources */,
 				D4041BDB1FC0DEF5001F312E /* ic_audio.pdf in Resources */,
 				D48EE4C01F9B382C00CB43A0 /* SideMenuTableViewCell.xib in Resources */,
 				D4F05F411FBF055E002024F6 /* FAQTableViewCell.xib in Resources */,
@@ -1891,10 +1900,10 @@
 				D4041AFE1FC0C601001F312E /* UploadDocumentsCollectionViewCell.xib in Resources */,
 				D4041BFE1FC0DEF5001F312E /* QMImageIncomingCell.xib in Resources */,
 				D4041BDC1FC0DEF5001F312E /* ic_play_grey.pdf in Resources */,
-				D4C1F35E203ED60C00A8C211 /* Montserrat-Regular.ttf in Resources */,
 				D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */,
 				D4736B5A1FBC60B6004A51A2 /* FavoritesTableViewCell.xib in Resources */,
 				D420BFEB1FB82DD60071E30A /* FilterMiscTableViewCell.xib in Resources */,
+				D4D42378204025870068BBDA /* ReviewsTableViewCell.xib in Resources */,
 				D4F05F491FBFFBB9002024F6 /* CreateAdvertsCollectionViewCell.xib in Resources */,
 				D4041C0F1FC0DEF5001F312E /* QMHeaderCollectionReusableView.xib in Resources */,
 			);
@@ -2114,6 +2123,7 @@
 				D4041BE71FC0DEF5001F312E /* NSDate+ChatDataSource.m in Sources */,
 				D4041BF01FC0DEF5001F312E /* QMChatBaseLinkPreviewCell.m in Sources */,
 				D45B85321FE4E70600074689 /* DataSyncManager.m in Sources */,
+				D4D42377204025870068BBDA /* ReviewsTableViewCell.m in Sources */,
 				D4041C0B1FC0DEF5001F312E /* QMChatLocationOutgoingCell.m in Sources */,
 				D4E34B361FCF265E00D53EDC /* EditProfileParentViewController.m in Sources */,
 				D48EE4B51F9B2A2C00CB43A0 /* LGSideMenuSegue.m in Sources */,
