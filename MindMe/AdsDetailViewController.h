@@ -69,6 +69,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *fourthCollectionViewTitle;
 @property (weak, nonatomic) IBOutlet UITextField *fifthCollectionViewTitle;
 @property (weak, nonatomic) IBOutlet UITextField *sixthCollectionViewTitle;
+@property (weak, nonatomic) IBOutlet UITextField *reviewStaticLabel;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *firstCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *secondCollectionView;
@@ -91,6 +92,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *fifthCollectionViewTitleTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *sixthCollectionViewTitleTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *daysRequiredLabelTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cancelButtonTopConstraint;
 
 @property (weak, nonatomic) IBOutlet UIView *firstCollectionViewSeparatorView;
 @property (weak, nonatomic) IBOutlet UIView *secondCollectionViewSeparatorView;

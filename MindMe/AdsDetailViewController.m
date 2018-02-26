@@ -92,6 +92,9 @@
         _doneButtonHeightConstraint.constant = (([UIScreen mainScreen].bounds.size.width - 84)/2.) * (47./180.);
         _yearsExperienceLabel.text = @"Years of Experience needed :";
 
+        _reviewStaticLabel.hidden = YES;
+        _reviewTblView.hidden = YES;
+        _cancelButtonTopConstraint.constant = -35;
     
     }
     
@@ -130,8 +133,17 @@
     
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[_advertDict valueForKey:@"first_name"],[[_advertDict valueForKey:@"second_name"] substringToIndex:1]];
     _locationLabel.text = [_advertDict valueForKey:@"address1"];
-    _careTypeLabel.text = [_advertDict valueForKey:@"care_type"];
-    _experienceValueLabel.text = [NSString stringWithFormat:@"%@ years of Experience",[_advertDict valueForKey:@"experience"]];
+    
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _experienceValueLabel.text = [NSString stringWithFormat:@"Experience Required : %@ years",[_advertDict valueForKey:@"experience"]];
+        _careTypeLabel.text = [NSString stringWithFormat:@"%@ Required",[_advertDict valueForKey:@"care_type"]];
+    }
+    else {
+        _experienceValueLabel.text = [NSString stringWithFormat:@"%@ years of Experience",[_advertDict valueForKey:@"experience"]];
+        _careTypeLabel.text = [_advertDict valueForKey:@"care_type"];
+    }
+    
     _aboutTextView.text = [_advertDict valueForKey:@"about_you"];
     
     _aboutTextViewHeightConstraint.constant = self.aboutTextView.contentSize.height;
