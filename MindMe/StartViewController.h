@@ -12,5 +12,7 @@
 
 - (IBAction)parentButtonTapped:(id)sender;
 - (IBAction)carerButtonTapped:(id)sender;
+- (IBAction)loginButtonTapped:(id)sender;
+- (IBAction)registerButtonTapped:(id)sender;
 
 @end

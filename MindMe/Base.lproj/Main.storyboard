@@ -136,7 +136,7 @@
                                     <color key="titleColor" red="0.98116391897201538" green="0.53077816963195801" blue="0.037944238632917404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3Aj-jd-xlR" kind="show" id="kMe-Y4-Jvu"/>
+                                    <segue destination="3Aj-jd-xlR" kind="show" identifier="showRegisterSegue" id="kMe-Y4-Jvu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmD-53-v1j">
@@ -215,6 +215,7 @@
                         <outlet property="loginButton" destination="1RJ-fZ-zBO" id="1mq-7v-tjh"/>
                         <outlet property="passwordTextField" destination="gHp-ev-2Et" id="39n-HM-Jwq"/>
                         <segue destination="8Q6-MX-foE" kind="show" identifier="showHomeSegue" animates="NO" id="6aR-De-M3m"/>
+                        <segue destination="3Aj-jd-xlR" kind="show" identifier="showRegisterSegueWithoutAnimation" animates="NO" id="JyL-g6-slT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -544,7 +545,7 @@ Terms of Services and Privacy Policy</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="A4A-MP-zUs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                 <state key="normal" title="FIND A CARE JOB">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -558,7 +559,7 @@ Terms of Services and Privacy Policy</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Y2s-4R-vhL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                 <state key="normal" title="FIND A CAREGIVER">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -566,18 +567,55 @@ Terms of Services and Privacy Policy</string>
                                     <action selector="parentButtonTapped:" destination="XTv-fW-UHZ" eventType="touchUpInside" id="yT3-zT-G88"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzk-wO-jrJ">
+                                <rect key="frame" x="16" y="470" width="172.5" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mzk-wO-jrJ" secondAttribute="height" multiplier="94:31" id="Z2X-nb-oP6"/>
+                                </constraints>
+                                <state key="normal" image="login_new"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="XTv-fW-UHZ" eventType="touchUpInside" id="4Uk-Hn-t7C"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edM-e6-8Wt">
+                                <rect key="frame" x="186.5" y="489" width="1" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="836-JR-azC"/>
+                                    <constraint firstAttribute="width" constant="1" id="jJb-Nr-ajZ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6D-vq-LuT">
+                                <rect key="frame" x="185.5" y="470" width="173.5" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="R6D-vq-LuT" secondAttribute="height" multiplier="94:31" id="vTj-zP-SOA"/>
+                                </constraints>
+                                <state key="normal" image="register_new"/>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="XTv-fW-UHZ" eventType="touchUpInside" id="4VV-cr-X6y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HSa-Di-Jtf" firstAttribute="top" secondItem="UVd-HY-oHD" secondAttribute="top" id="2Oi-An-bZf"/>
                             <constraint firstAttribute="trailing" secondItem="HSa-Di-Jtf" secondAttribute="trailing" id="3Tp-92-q7y"/>
+                            <constraint firstItem="edM-e6-8Wt" firstAttribute="leading" secondItem="mzk-wO-jrJ" secondAttribute="trailing" constant="-2" id="4vQ-dn-WkO"/>
+                            <constraint firstItem="ncR-s2-NS3" firstAttribute="top" secondItem="mzk-wO-jrJ" secondAttribute="bottom" constant="20" id="6Bo-XE-7in"/>
+                            <constraint firstItem="R6D-vq-LuT" firstAttribute="leading" secondItem="edM-e6-8Wt" secondAttribute="trailing" constant="-2" id="6FM-xY-pzA"/>
                             <constraint firstItem="BRe-Bb-4MP" firstAttribute="top" secondItem="HSa-Di-Jtf" secondAttribute="bottom" id="A2g-Cl-NRA"/>
                             <constraint firstItem="rBd-pM-aCW" firstAttribute="top" secondItem="ncR-s2-NS3" secondAttribute="bottom" id="C3M-lB-n8K"/>
+                            <constraint firstItem="mzk-wO-jrJ" firstAttribute="leading" secondItem="UVd-HY-oHD" secondAttribute="leading" constant="16" id="QHb-aY-TqD"/>
                             <constraint firstAttribute="trailing" secondItem="ncR-s2-NS3" secondAttribute="trailing" id="Xrg-4v-h43"/>
+                            <constraint firstAttribute="trailing" secondItem="R6D-vq-LuT" secondAttribute="trailing" constant="16" id="aYL-Q5-8z2"/>
                             <constraint firstAttribute="trailing" secondItem="rBd-pM-aCW" secondAttribute="trailing" id="eX4-C4-IH2"/>
                             <constraint firstItem="HSa-Di-Jtf" firstAttribute="leading" secondItem="UVd-HY-oHD" secondAttribute="leading" id="jpT-T2-6Vs"/>
+                            <constraint firstItem="R6D-vq-LuT" firstAttribute="width" secondItem="R6D-vq-LuT" secondAttribute="height" multiplier="94:31" id="lnH-pT-JIx"/>
                             <constraint firstItem="ncR-s2-NS3" firstAttribute="leading" secondItem="UVd-HY-oHD" secondAttribute="leading" id="mz3-hY-eUG"/>
                             <constraint firstItem="rBd-pM-aCW" firstAttribute="leading" secondItem="UVd-HY-oHD" secondAttribute="leading" id="qkS-NF-qrM"/>
+                            <constraint firstItem="ncR-s2-NS3" firstAttribute="top" secondItem="R6D-vq-LuT" secondAttribute="bottom" constant="20" id="u5G-UH-OvK"/>
+                            <constraint firstItem="ncR-s2-NS3" firstAttribute="top" secondItem="edM-e6-8Wt" secondAttribute="bottom" constant="8" id="xCZ-q5-Lp8"/>
+                            <constraint firstItem="edM-e6-8Wt" firstAttribute="centerX" secondItem="UVd-HY-oHD" secondAttribute="centerX" id="y0p-fS-uRX"/>
                             <constraint firstItem="BRe-Bb-4MP" firstAttribute="top" secondItem="rBd-pM-aCW" secondAttribute="bottom" id="yvr-Le-zhH"/>
                         </constraints>
                     </view>
@@ -10610,6 +10648,7 @@ We may send emails to existing customers or prospective customers who have enqui
         <image name="location_icon" width="45" height="56"/>
         <image name="login_button" width="462" height="155"/>
         <image name="login_fb" width="505" height="184"/>
+        <image name="login_new" width="564" height="186"/>
         <image name="login_page_background" width="1242" height="2208"/>
         <image name="minus" width="120" height="120"/>
         <image name="online_payment_icon" width="113" height="113"/>
@@ -10619,6 +10658,7 @@ We may send emails to existing customers or prospective customers who have enqui
         <image name="profile_icon" width="512" height="511"/>
         <image name="register_button" width="462" height="155"/>
         <image name="register_fb_button" width="505" height="184"/>
+        <image name="register_new" width="564" height="186"/>
         <image name="review_btn" width="564" height="186"/>
         <image name="short_notice" width="113" height="113"/>
         <image name="signup_bg" width="1080" height="1920"/>
@@ -10633,11 +10673,12 @@ We may send emails to existing customers or prospective customers who have enqui
         <image name="unchecked" width="76" height="76"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p8p-Lv-PZS"/>
-        <segue reference="4Bd-9L-l1d"/>
+        <segue reference="jWM-TZ-0OS"/>
         <segue reference="ViG-EI-YVQ"/>
         <segue reference="rOb-Cg-ZKt"/>
-        <segue reference="jWM-TZ-0OS"/>
+        <segue reference="p8p-Lv-PZS"/>
+        <segue reference="JyL-g6-slT"/>
+        <segue reference="6aR-De-M3m"/>
         <segue reference="eOh-mb-7xJ"/>
     </inferredMetricsTieBreakers>
 </document>

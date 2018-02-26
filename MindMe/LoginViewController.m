@@ -27,8 +27,14 @@
     _emailTextField.delegate = self;
     _passwordTextField.delegate = self;
     
-    if ([[SharedClass sharedInstance] isGuestUser]) {
-        [self performSegueWithIdentifier:@"showHomeSegue" sender:nil];
+    if ([[SharedClass sharedInstance] isRegisterTappedOnStart]) {
+        [[SharedClass sharedInstance] setIsRegisterTappedOnStart:NO];
+        [self performSegueWithIdentifier:@"showRegisterSegueWithoutAnimation" sender:nil];
+    }
+    else {
+        if ([[SharedClass sharedInstance] isGuestUser]) {
+            [self performSegueWithIdentifier:@"showHomeSegue" sender:nil];
+        }
     }
     
 }

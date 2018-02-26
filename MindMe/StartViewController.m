@@ -95,6 +95,17 @@
     
 }
 
+- (IBAction)loginButtonTapped:(id)sender {
+    [self performSegueWithIdentifier:@"showLoginSegue" sender:nil];
+}
+
+- (IBAction)registerButtonTapped:(id)sender {
+    
+    [[SharedClass sharedInstance] setIsRegisterTappedOnStart:YES];
+    [self performSegueWithIdentifier:@"showLoginSegue" sender:nil];
+    
+}
+
 #pragma mark - API Helpers
 
 - (void) startGetProfileDetailsService {

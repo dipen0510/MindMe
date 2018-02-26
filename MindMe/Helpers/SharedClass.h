@@ -16,6 +16,7 @@
 
 + sharedInstance;
 
+@property BOOL isRegisterTappedOnStart;
 @property BOOL isGuestUser;
 @property BOOL isUserCarer;
 @property NSString* userId;
