@@ -10167,8 +10167,8 @@ We may send emails to existing customers or prospective customers who have enqui
                                             <constraint firstAttribute="width" constant="15" id="pWn-tz-det"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Native Language : English" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Za-ZB-0ij">
-                                        <rect key="frame" x="103" y="1056" width="193" height="18.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Native Language : English" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Za-ZB-0ij">
+                                        <rect key="frame" x="103" y="1056" width="255" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <color key="textColor" red="0.42310506110000001" green="0.54752999540000002" blue="0.64756429199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -10486,13 +10486,17 @@ We may send emails to existing customers or prospective customers who have enqui
                             <constraint firstItem="JeE-f1-yC8" firstAttribute="leading" secondItem="U33-eZ-fOh" secondAttribute="leading" id="n0k-46-zYv"/>
                             <constraint firstItem="bny-w4-jS2" firstAttribute="width" secondItem="U33-eZ-fOh" secondAttribute="width" id="rBz-jB-mm4"/>
                             <constraint firstItem="eip-if-LV2" firstAttribute="leading" secondItem="U33-eZ-fOh" secondAttribute="leading" id="rL1-aE-4sM"/>
+                            <constraint firstItem="9Za-ZB-0ij" firstAttribute="width" secondItem="U33-eZ-fOh" secondAttribute="width" multiplier="255/375" id="wVQ-n1-eS7"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="3200"/>
                     <connections>
+                        <outlet property="aboutStaticLabel" destination="pNk-Et-xLZ" id="un6-bQ-JQM"/>
                         <outlet property="aboutTextView" destination="Zow-7l-Fg2" id="I0G-w7-NN5"/>
                         <outlet property="aboutTextViewHeightConstraint" destination="T27-GY-VTP" id="Sdl-eB-xzF"/>
+                        <outlet property="ageLabel" destination="TNA-8f-KRM" id="7di-qa-wSJ"/>
+                        <outlet property="availabilityStaicLabel" destination="Z0r-8C-hZu" id="PDu-N8-zCT"/>
                         <outlet property="cancelButton" destination="ivI-c0-EOw" id="GIf-Mm-nQG"/>
                         <outlet property="cancelButtonTopConstraint" destination="v18-b5-kth" id="feO-ah-dqs"/>
                         <outlet property="carImgViewTopConstraint" destination="5fa-6H-XlH" id="bPK-Eh-DNf"/>
@@ -10500,8 +10504,11 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="carerLikeButton" destination="lEi-yM-PUC" id="iCs-nf-Awu"/>
                         <outlet property="comfortableWithPetsImgView" destination="amM-oE-MHm" id="TNC-dy-P9C"/>
                         <outlet property="comfortableWithpetsLabel" destination="sZg-hZ-iRj" id="Bkg-Md-fmp"/>
+                        <outlet property="cvStaticLabel" destination="bA2-qE-Ilh" id="7cn-yB-33E"/>
+                        <outlet property="cvValueLabel" destination="rSF-PU-IBU" id="lfX-Oe-yZN"/>
                         <outlet property="daysRequiredCollectionView" destination="Kz5-PM-JrO" id="CRB-Uv-1I1"/>
                         <outlet property="doneButton" destination="Sfa-I0-reX" id="dLf-sm-du8"/>
+                        <outlet property="eduLevelLabel" destination="7C3-TC-ron" id="8vC-jn-VSg"/>
                         <outlet property="experienceValueLabel" destination="cpa-az-6lB" id="Ynj-ef-6kn"/>
                         <outlet property="fifthCollectionView" destination="ei6-Nl-31t" id="Seb-Tx-rUG"/>
                         <outlet property="fifthCollectionViewHeightConstraint" destination="Etx-o8-5L2" id="o0M-Cm-qyW"/>
@@ -10519,12 +10526,16 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="fourthCollectionViewSeparatorView" destination="BT4-VZ-88i" id="m1D-Qn-QEf"/>
                         <outlet property="fourthCollectionViewTitle" destination="cjN-1v-hjd" id="ZfY-sy-pLF"/>
                         <outlet property="fourthCollectionViewTitleTopConstraint" destination="aHX-P0-pdi" id="ycw-qn-mXQ"/>
+                        <outlet property="genderStaticLabel" destination="boD-lo-72R" id="bfY-aJ-yC3"/>
+                        <outlet property="genderValueLabel" destination="sDr-ey-Rq6" id="aac-tV-hXa"/>
                         <outlet property="haveACaerLabel" destination="NGk-cR-bZ7" id="GQn-br-o6Y"/>
                         <outlet property="haveACarImgView" destination="x3N-fD-bIx" id="LTQ-Uv-Swr"/>
                         <outlet property="languagesValueLabel" destination="9Za-ZB-0ij" id="2Uc-Kz-QXi"/>
                         <outlet property="lastLoginLabel" destination="ajA-KN-RaE" id="O17-bV-9fo"/>
+                        <outlet property="lastLoginStaticLabel" destination="xfr-6R-Fgc" id="IbP-Kc-Lrw"/>
                         <outlet property="locationLabel" destination="uSM-Ri-5Ip" id="EFj-ZL-v5L"/>
                         <outlet property="memberSinceLabel" destination="hX4-tg-gjo" id="mCm-dA-kHs"/>
+                        <outlet property="memberSinceStaticLabel" destination="gYr-Ha-HYz" id="XMh-sT-Mac"/>
                         <outlet property="mobileSeparatorView" destination="2SS-j3-qpP" id="qUG-y4-eIe"/>
                         <outlet property="mobileStaticLabel" destination="MQ3-eP-2j3" id="fLP-oC-tYj"/>
                         <outlet property="mobileStaticLabel2" destination="Ecl-hF-p8A" id="UTs-MW-KJL"/>
@@ -10534,6 +10545,7 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="nonSmokerLabel" destination="I00-ZB-mVK" id="XwY-bq-Z2J"/>
                         <outlet property="profileImgView" destination="Moc-Wh-iSm" id="d3m-Fi-aa5"/>
                         <outlet property="rateLabel" destination="cAX-C2-lMg" id="J1f-gF-aRp"/>
+                        <outlet property="rateStaticLabel" destination="o5k-8z-wUg" id="q2h-6A-dui"/>
                         <outlet property="reviewStaticLabel" destination="8JT-5O-KyT" id="pkd-ab-SiM"/>
                         <outlet property="reviewTblView" destination="bny-w4-jS2" id="gvf-56-po9"/>
                         <outlet property="reviewTblViewHeightConstraint" destination="Hr8-IE-EaZ" id="sV3-lh-mY9"/>
@@ -10543,6 +10555,7 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="secondCollectionViewTitle" destination="TYd-OF-8Ga" id="LSq-Be-aa1"/>
                         <outlet property="secondCollectionViewTitleTopConstraint" destination="8ZW-Sy-11c" id="vuL-1d-omu"/>
                         <outlet property="shortNoticeImgView" destination="DUV-6p-AhE" id="FhR-rf-aN8"/>
+                        <outlet property="shortNoticeLabel" destination="HjC-Hd-ZWr" id="VFV-y9-QNl"/>
                         <outlet property="sixthCollectionView" destination="MBg-Z0-oT1" id="IhF-jp-ume"/>
                         <outlet property="sixthCollectionViewHeightConstraint" destination="16i-W0-MxE" id="6DR-Bk-Cpt"/>
                         <outlet property="sixthCollectionViewSeparatorView" destination="a1Q-8O-C5J" id="eIE-2C-hNj"/>

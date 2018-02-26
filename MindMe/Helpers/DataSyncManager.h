@@ -23,7 +23,7 @@
     
 }
 
-@property (nonatomic,assign)  id <DataSyncManagerDelegate> delegate;
+@property (nonatomic, weak)  id <DataSyncManagerDelegate> delegate;
 @property (nonatomic, strong) NSString* serviceKey;
 
 - (void) startPOSTingFormData:(id)postData;

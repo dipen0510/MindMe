@@ -74,6 +74,18 @@
 @property (weak, nonatomic) IBOutlet UILabel *mobileValueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mobileStaticLabel2;
 @property (weak, nonatomic) IBOutlet UIView *mobileSeparatorView;
+@property (weak, nonatomic) IBOutlet UILabel *rateStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *memberSinceStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lastLoginStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *genderStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *genderValueLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cvStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cvValueLabel;
+@property (weak, nonatomic) IBOutlet UILabel *aboutStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *shortNoticeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *eduLevelLabel;
+@property (weak, nonatomic) IBOutlet UITextField *availabilityStaicLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ageLabel;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *firstCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *secondCollectionView;

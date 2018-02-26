@@ -26,6 +26,7 @@
     [self setupAvailibilityArr];
     [self setupValueLayoutForAdvert];
     [self setupUIForForms];
+    [self setupPixelPerfectUI];
     
     if (![[SharedClass sharedInstance] isGuestUser]) {
         [self startCheckLikeDislikeService];
@@ -107,6 +108,26 @@
     reviewArr = [[NSMutableArray alloc] init];
     _reviewTblViewHeightConstraint.constant = 0;
     
+    
+}
+
+- (void) setupPixelPerfectUI {
+    
+    _nameLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(21./667)*kScreenHeight];
+    _careTypeLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    _ageLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    _locationLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    _experienceValueLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    _rateLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    _rateStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    
+    _memberSinceLabel.font = _memberSinceStaticLabel.font = _lastLoginLabel.font = _lastLoginStaticLabel.font = _genderValueLabel.font = _genderStaticLabel.font = _cvValueLabel.font = _cvStaticLabel.font = _haveACaerLabel.font = _comfortableWithpetsLabel.font = _shortNoticeLabel.font = _nonSmokerLabel.font = _languagesValueLabel.font = _eduLevelLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    
+     _aboutStaticLabel.font =  _mobileStaticLabel.font = _firstCollectionViewTitle.font = _secondCollectionViewTitle.font = _thirdCollectionViewTitle.font = _fourthCollectionViewTitle.font = _fifthCollectionViewTitle.font = _sixthCollectionViewTitle.font = _availabilityStaicLabel.font = _reviewStaticLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    
+    _aboutTextView.font = _mobileValueLabel.font = _mobileStaticLabel2.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    
+    _footerContactButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(15./667)*kScreenHeight];
     
 }
 
@@ -434,7 +455,7 @@
         return CGSizeMake((((345./375.)*[UIScreen mainScreen].bounds.size.width) - 75.)/7.,collectionView.frame.size.height/6.);
     }
     
-    return CGSizeMake((collectionView.frame.size.width)/2., 30);
+    return CGSizeMake((collectionView.frame.size.width)/2., (30./568.)*kScreenHeight);
     
 }
 
@@ -672,22 +693,22 @@
     }
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"aupair_live"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
-    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*30 + (firstCollectionViewArr.count%2)*30;
+    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (firstCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
-    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
-    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
-    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*30 + (fourthCollectionViewArr.count%2)*30;
+    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (fourthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     fifthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
-    _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*30 + (fifthCollectionViewArr.count%2)*30;
+    _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (fifthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
-    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
 }
 
@@ -711,22 +732,22 @@
     }
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
-    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*30 + (firstCollectionViewArr.count%2)*30;
+    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (firstCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
-    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
-    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
-    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*30 + (fourthCollectionViewArr.count%2)*30;
+    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (fourthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     fifthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
-    _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*30 + (fifthCollectionViewArr.count%2)*30;
+    _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (fifthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
-    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
 }
 
@@ -750,22 +771,22 @@
     }
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
-    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*30 + (firstCollectionViewArr.count%2)*30;
+    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (firstCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
-    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
-    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
-    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*30 + (fourthCollectionViewArr.count%2)*30;
+    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (fourthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     fifthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
-    _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*30 + (fifthCollectionViewArr.count%2)*30;
+    _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (fifthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
-    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     
 }
@@ -790,22 +811,22 @@
     }
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
-    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*30 + (firstCollectionViewArr.count%2)*30;
+    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (firstCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
-    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
-    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
-    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*30 + (fourthCollectionViewArr.count%2)*30;
+    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (fourthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     fifthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
-    _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*30 + (fifthCollectionViewArr.count%2)*30;
+    _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (fifthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
-    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     
 }
@@ -830,22 +851,22 @@
     }
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
-    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*30 + (firstCollectionViewArr.count%2)*30;
+    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (firstCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
-    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
-    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
-    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*30 + (fourthCollectionViewArr.count%2)*30;
+    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (fourthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     fifthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
-    _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*30 + (fifthCollectionViewArr.count%2)*30;
+    _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (fifthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
-    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     
 }
@@ -867,12 +888,12 @@
     _firstCollectionView.hidden = YES;
     _firstCollectionViewSeparatorView.hidden = YES;
     
-    _secondCollectionViewTitleTopConstraint.constant = -44 - _firstCollectionViewHeightConstraint.constant;
+    _secondCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _firstCollectionViewHeightConstraint.constant;
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
-    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
-    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
     _fourthCollectionView.hidden = YES;
@@ -882,14 +903,14 @@
     _fifthCollectionView.hidden = YES;
     _fifthCollectionViewSeparatorView.hidden = YES;
     
-    _sixthCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
+    _sixthCollectionViewTitleTopConstraint.constant = (-120/568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
-    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = 108;
+    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
     
     
 }
@@ -911,11 +932,12 @@
     _firstCollectionView.hidden = YES;
     _firstCollectionViewSeparatorView.hidden = YES;
     
+    _secondCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _firstCollectionViewHeightConstraint.constant;
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
-    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
-    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
     _fourthCollectionView.hidden = YES;
@@ -925,15 +947,15 @@
     _fifthCollectionView.hidden = YES;
     _fifthCollectionViewSeparatorView.hidden = YES;
     
-    _sixthCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
+    _sixthCollectionViewTitleTopConstraint.constant = -(120./568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
-    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
 
 
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = 108;
+    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
     
 }
 
@@ -956,29 +978,29 @@
     _firstCollectionView.hidden = YES;
     _firstCollectionViewSeparatorView.hidden = YES;
     
-    _secondCollectionViewTitleTopConstraint.constant = -44 - _firstCollectionViewHeightConstraint.constant;
+    _secondCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _firstCollectionViewHeightConstraint.constant;
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
-    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
-    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
-    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*30 + (fourthCollectionViewArr.count%2)*30;
+    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (fourthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     
     _fifthCollectionViewTitle.hidden = YES;
     _fifthCollectionView.hidden = YES;
     _fifthCollectionViewSeparatorView.hidden = YES;
     
-    _sixthCollectionViewTitleTopConstraint.constant = -44 - _fifthCollectionViewHeightConstraint.constant;
+    _sixthCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
-    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = 108;
+    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
     
 }
 
@@ -999,12 +1021,12 @@
     _firstCollectionView.hidden = YES;
     _firstCollectionViewSeparatorView.hidden = YES;
     
-    _secondCollectionViewTitleTopConstraint.constant = -44 - _firstCollectionViewHeightConstraint.constant;
+    _secondCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _firstCollectionViewHeightConstraint.constant;
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
-    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
-    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
     _fourthCollectionView.hidden = YES;
@@ -1014,14 +1036,14 @@
     _fifthCollectionView.hidden = YES;
     _fifthCollectionViewSeparatorView.hidden = YES;
     
-    _sixthCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
+    _sixthCollectionViewTitleTopConstraint.constant = -(120./568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
-    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = 108;
+    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
     
 }
 
@@ -1044,9 +1066,9 @@
     _firstCollectionView.hidden = YES;
     _firstCollectionViewSeparatorView.hidden = YES;
     
-    _thirdCollectionViewTitleTopConstraint.constant = -108 - _secondCollectionViewHeightConstraint.constant - _firstCollectionViewHeightConstraint.constant;
+    _thirdCollectionViewTitleTopConstraint.constant = -(120./568.)*kScreenHeight - _secondCollectionViewHeightConstraint.constant - _firstCollectionViewHeightConstraint.constant;
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
-    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
     _fourthCollectionView.hidden = YES;
@@ -1056,14 +1078,14 @@
     _fifthCollectionView.hidden = YES;
     _fifthCollectionViewSeparatorView.hidden = YES;
     
-    _sixthCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
+    _sixthCollectionViewTitleTopConstraint.constant = -(120./568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
-    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = 108;
+    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
     
 }
 
@@ -1084,12 +1106,12 @@
     _firstCollectionView.hidden = YES;
     _firstCollectionViewSeparatorView.hidden = YES;
     
-    _secondCollectionViewTitleTopConstraint.constant = -44 - _firstCollectionViewHeightConstraint.constant;
+    _secondCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _firstCollectionViewHeightConstraint.constant;
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
-    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
-    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
     _fourthCollectionView.hidden = YES;
@@ -1100,12 +1122,12 @@
     _fifthCollectionViewSeparatorView.hidden = YES;
     
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
-    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = 108;
+    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
     
 }
 
@@ -1130,7 +1152,7 @@
     
     _thirdCollectionViewTitleTopConstraint.constant = -140 - _secondCollectionViewHeightConstraint.constant - _firstCollectionViewHeightConstraint.constant;
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
-    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
     _fourthCollectionView.hidden = YES;
@@ -1142,12 +1164,12 @@
     
     _sixthCollectionViewTitleTopConstraint.constant = -140 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
-    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = 108;
+    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
     
 }
 
@@ -1168,13 +1190,13 @@
     _firstCollectionView.hidden = YES;
     _firstCollectionViewSeparatorView.hidden = YES;
     
-    _secondCollectionViewTitleTopConstraint.constant = -44 - _firstCollectionViewHeightConstraint.constant;
+    _secondCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _firstCollectionViewHeightConstraint.constant;
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
-    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
-    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
     _fourthCollectionView.hidden = YES;
@@ -1184,14 +1206,14 @@
     _fifthCollectionView.hidden = YES;
     _fifthCollectionViewSeparatorView.hidden = YES;
     
-    _sixthCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
+    _sixthCollectionViewTitleTopConstraint.constant = -(120./568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
-    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = 108;
+    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
     
 }
 
@@ -1214,28 +1236,28 @@
     _firstCollectionView.hidden = YES;
     _firstCollectionViewSeparatorView.hidden = YES;
     
-    _secondCollectionViewTitleTopConstraint.constant = -44 - _firstCollectionViewHeightConstraint.constant;
+    _secondCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _firstCollectionViewHeightConstraint.constant;
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
-    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
-    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
-    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*30 + (fourthCollectionViewArr.count%2)*30;
+    _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (fourthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _fifthCollectionViewTitle.hidden = YES;
     _fifthCollectionView.hidden = YES;
     _fifthCollectionViewSeparatorView.hidden = YES;
     
-    _sixthCollectionViewTitleTopConstraint.constant = -44 - _fifthCollectionViewHeightConstraint.constant;
+    _sixthCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
-    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = 108;
+    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
     
 }
 
@@ -1255,13 +1277,13 @@
     }
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"additional_optional"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
-    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*30 + (firstCollectionViewArr.count%2)*30;
+    _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (firstCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
-    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*30 + (secondCollectionViewArr.count%2)*30;
+    _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
-    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*30 + (thirdCollectionViewArr.count%2)*30;
+    _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
     _fourthCollectionView.hidden = YES;
@@ -1271,9 +1293,9 @@
     _fifthCollectionView.hidden = YES;
     _fifthCollectionViewSeparatorView.hidden = YES;
     
-    _sixthCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
+    _sixthCollectionViewTitleTopConstraint.constant = -(120./568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
-    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*30 + (sixthCollectionViewArr.count%2)*30;
+    _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(30./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(30./568.)*kScreenHeight;
     
 }
 
@@ -1525,6 +1547,10 @@
     cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@",[[reviewArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[reviewArr objectAtIndex:indexPath.row] valueForKey:@"second_name"]];
     cell.reviewTitleLabel.text = [[reviewArr objectAtIndex:indexPath.row] valueForKey:@"review_title"];
     cell.reviewDescriptionTextView.text = [[reviewArr objectAtIndex:indexPath.row] valueForKey:@"review_text"];
+    
+    cell.nameLabel.font = _nameLabel.font;
+    cell.reviewTitleLabel.font = _aboutStaticLabel.font;
+    cell.reviewDescriptionTextView.font = _aboutTextView.font;
     
     switch ([[[reviewArr objectAtIndex:indexPath.row] valueForKey:@"stars"] intValue]) {
         case 0:
