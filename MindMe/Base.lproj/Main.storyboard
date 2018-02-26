@@ -426,7 +426,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="52.5" y="490" width="270" height="32"/>
+                                <rect key="frame" x="52.5" y="490" width="270" height="31"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">By pressing Register you agree with the
@@ -1201,7 +1201,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGz-03-WTZ">
-                                <rect key="frame" x="27" y="293" width="320" height="82"/>
+                                <rect key="frame" x="27" y="292.5" width="320" height="82"/>
                                 <string key="text">We are sorry but there are no Adverts currently in your area that match with you preferences. Kindly change your preferences or check back again later !</string>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1320,7 +1320,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIKED CARE PROVIDERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuX-6v-qTx">
-                                <rect key="frame" x="100" y="104" width="176" height="19"/>
+                                <rect key="frame" x="99.5" y="104" width="176" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1408,7 +1408,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADVERT CONTROL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2t-34-g3B">
-                                <rect key="frame" x="118" y="104" width="139.5" height="19"/>
+                                <rect key="frame" x="118.5" y="104" width="139.5" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1658,7 +1658,7 @@ Cg
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE CARE TYPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEd-iw-jgR">
-                                <rect key="frame" x="112" y="104" width="151.5" height="19"/>
+                                <rect key="frame" x="112.5" y="104" width="151.5" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -3296,7 +3296,7 @@ our Android App from the Google Play Store</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHo-L4-otW">
-                                <rect key="frame" x="82" y="374" width="212.5" height="61"/>
+                                <rect key="frame" x="81.5" y="374" width="212.5" height="61"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">YOUR CV IS UNDER
@@ -3475,7 +3475,7 @@ APPROVAL</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIVACY POLICY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhV-SY-4Fw">
-                                <rect key="frame" x="126.5" y="104" width="122.5" height="19"/>
+                                <rect key="frame" x="127" y="104" width="122.5" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -5769,19 +5769,19 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews only - No Contact Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImO-Cp-K3c">
-                                <rect key="frame" x="77.5" y="198" width="221" height="17"/>
+                                <rect key="frame" x="77" y="198" width="221" height="17"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Rate Me :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kv6-xc-ycF">
-                                <rect key="frame" x="122.5" y="235" width="131.5" height="20"/>
+                                <rect key="frame" x="122" y="235" width="131.5" height="20"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review : Serpil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE5-W0-Tks">
-                                <rect key="frame" x="132.5" y="313.5" width="111.5" height="20"/>
+                                <rect key="frame" x="132" y="313.5" width="111.5" height="20"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -5857,7 +5857,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nz-fb-13t">
-                                <rect key="frame" x="156" y="406.5" width="63.5" height="20"/>
+                                <rect key="frame" x="156.5" y="406.5" width="63.5" height="20"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -6183,7 +6183,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a password of at least 5 characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-dk-e66">
-                                <rect key="frame" x="45" y="327" width="286.5" height="16"/>
+                                <rect key="frame" x="44.5" y="327" width="286.5" height="16"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -8375,7 +8375,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* All subscriptions are automatically renewed until cancelled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOb-t7-lHz">
-                                        <rect key="frame" x="52" y="476" width="272.5" height="12"/>
+                                        <rect key="frame" x="51.5" y="476" width="272.5" height="12"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="10"/>
                                         <color key="textColor" red="0.486101687" green="0.49017071719999999" blue="0.49426180120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -8384,7 +8384,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <rect key="frame" x="24" y="674" width="153" height="101"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Q6-4r-RB5">
-                                                <rect key="frame" x="24" y="16" width="106" height="20"/>
+                                                <rect key="frame" x="23.5" y="16" width="106" height="20"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="            ">
                                                         <attributes>
@@ -8419,7 +8419,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOC-v4-au0">
-                                                <rect key="frame" x="23.5" y="16" width="43.5" height="20"/>
+                                                <rect key="frame" x="23" y="16" width="43.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
                                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -8570,7 +8570,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* All subscriptions are automatically renewed until cancelled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZY-Sr-XSA">
-                                        <rect key="frame" x="52" y="924" width="272.5" height="12"/>
+                                        <rect key="frame" x="51.5" y="924" width="272.5" height="12"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="10"/>
                                         <color key="textColor" red="0.486101687" green="0.49017071719999999" blue="0.49426180120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -8739,7 +8739,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAYMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJE-Fa-2fH">
-                                <rect key="frame" x="152" y="104" width="71" height="19"/>
+                                <rect key="frame" x="152.5" y="104" width="71" height="19"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -9057,7 +9057,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* All subscriptions are automatically renewed until cancelled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cr5-Te-9e4">
-                                        <rect key="frame" x="52" y="476" width="272.5" height="12"/>
+                                        <rect key="frame" x="51.5" y="476" width="272.5" height="12"/>
                                         <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="10"/>
                                         <color key="textColor" red="0.486101687" green="0.49017071719999999" blue="0.49426180120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -9599,13 +9599,13 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <rect key="frame" x="0.0" y="84" width="375" height="2916"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Age Experience" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WlE-Ge-cSc">
-                                        <rect key="frame" x="21" y="1160.5" width="122" height="19"/>
+                                        <rect key="frame" x="21" y="1179" width="122" height="19"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gxx-CN-D5C">
-                                        <rect key="frame" x="21" y="1195.5" width="333" height="54"/>
+                                        <rect key="frame" x="21" y="1214" width="333" height="54"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="FN1-jA-laf"/>
@@ -9632,20 +9632,20 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </connections>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJC-Vh-ib3">
-                                        <rect key="frame" x="21" y="1273.5" width="333" height="1"/>
+                                        <rect key="frame" x="21" y="1292" width="333" height="1"/>
                                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="lbm-qP-Quf"/>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Additional Information" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYd-OF-8Ga">
-                                        <rect key="frame" x="21" y="1298.5" width="178" height="19"/>
+                                        <rect key="frame" x="21" y="1317" width="178" height="19"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HfW-ym-3KH">
-                                        <rect key="frame" x="21" y="1333.5" width="333" height="54"/>
+                                        <rect key="frame" x="21" y="1352" width="333" height="54"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="oeh-hJ-RcT"/>
@@ -9672,20 +9672,20 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </connections>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7Y-G1-Fxn">
-                                        <rect key="frame" x="21" y="1411.5" width="333" height="1"/>
+                                        <rect key="frame" x="21" y="1430" width="333" height="1"/>
                                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="c46-DV-Amg"/>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Other Services" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEN-qx-Pe8">
-                                        <rect key="frame" x="21" y="1436.5" width="114" height="19"/>
+                                        <rect key="frame" x="21" y="1455" width="114" height="19"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f9l-gh-G1h">
-                                        <rect key="frame" x="21" y="1471.5" width="333" height="33"/>
+                                        <rect key="frame" x="21" y="1490" width="333" height="33"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="TK8-2R-xh0"/>
@@ -9712,7 +9712,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </connections>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Kp-Pa-qbD">
-                                        <rect key="frame" x="21" y="1528.5" width="333" height="1"/>
+                                        <rect key="frame" x="21" y="1547" width="333" height="1"/>
                                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="IIX-Au-UHM"/>
@@ -9720,13 +9720,13 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Activities" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cjN-1v-hjd">
-                                        <rect key="frame" x="21" y="1553.5" width="74" height="19"/>
+                                        <rect key="frame" x="21" y="1572" width="74" height="19"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qJt-Me-6gg">
-                                        <rect key="frame" x="21" y="1588.5" width="333" height="25"/>
+                                        <rect key="frame" x="21" y="1607" width="333" height="25"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="G5V-9v-558"/>
@@ -9753,20 +9753,20 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </connections>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BT4-VZ-88i">
-                                        <rect key="frame" x="21" y="1637.5" width="333" height="1"/>
+                                        <rect key="frame" x="21" y="1656" width="333" height="1"/>
                                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="UfD-tx-FWi"/>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Other care service I may require" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FXK-Ye-4Tf">
-                                        <rect key="frame" x="21" y="1662.5" width="246" height="19"/>
+                                        <rect key="frame" x="21" y="1681" width="246" height="19"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ei6-Nl-31t">
-                                        <rect key="frame" x="21" y="1697.5" width="333" height="29"/>
+                                        <rect key="frame" x="21" y="1716" width="333" height="29"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="Etx-o8-5L2"/>
@@ -9793,20 +9793,20 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </connections>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lnd-MI-Uwa">
-                                        <rect key="frame" x="21" y="1750.5" width="333" height="1"/>
+                                        <rect key="frame" x="21" y="1769" width="333" height="1"/>
                                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Ude-qo-b8B"/>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Other care service I may require" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bBQ-ee-DlW">
-                                        <rect key="frame" x="21" y="1775.5" width="246" height="19"/>
+                                        <rect key="frame" x="21" y="1794" width="246" height="19"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MBg-Z0-oT1">
-                                        <rect key="frame" x="21" y="1810.5" width="333" height="79"/>
+                                        <rect key="frame" x="21" y="1829" width="333" height="79"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="79" id="16i-W0-MxE"/>
@@ -9833,20 +9833,20 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </connections>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1Q-8O-C5J">
-                                        <rect key="frame" x="21" y="1913.5" width="333" height="1"/>
+                                        <rect key="frame" x="21" y="1932" width="333" height="1"/>
                                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="oXQ-ff-dv9"/>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Availability" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z0r-8C-hZu">
-                                        <rect key="frame" x="21" y="1938.5" width="88" height="19"/>
+                                        <rect key="frame" x="21" y="1957" width="88" height="19"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kz5-PM-JrO">
-                                        <rect key="frame" x="16" y="1987.5" width="345" height="200"/>
+                                        <rect key="frame" x="16" y="2006" width="345" height="200"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="bBT-rQ-geO"/>
@@ -9873,14 +9873,14 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </connections>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1y-Yd-qQd">
-                                        <rect key="frame" x="21" y="2211.5" width="333" height="1"/>
+                                        <rect key="frame" x="21" y="2230" width="333" height="1"/>
                                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="EvQ-6B-meD"/>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Reviews" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8JT-5O-KyT">
-                                        <rect key="frame" x="21" y="2236.5" width="66" height="19"/>
+                                        <rect key="frame" x="21" y="2255" width="66" height="19"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -9892,7 +9892,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Childminders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uu-AJ-zC1">
-                                        <rect key="frame" x="137" y="180" width="102" height="18.5"/>
+                                        <rect key="frame" x="137.5" y="180" width="101.5" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -9920,7 +9920,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Years of Experience" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpa-az-6lB">
-                                        <rect key="frame" x="114" y="287.5" width="160" height="18.5"/>
+                                        <rect key="frame" x="113.5" y="287.5" width="160" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -9932,7 +9932,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="experience" translatesAutoresizingMaskIntoConstraints="NO" id="gix-sz-g4M">
-                                        <rect key="frame" x="97" y="289" width="11" height="16"/>
+                                        <rect key="frame" x="96.5" y="289" width="11" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="OsX-ld-Kj0"/>
                                             <constraint firstAttribute="width" constant="11" id="rBn-WB-bLI"/>
@@ -10002,21 +10002,21 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2SS-j3-qpP">
-                                        <rect key="frame" x="21" y="806.5" width="333" height="1"/>
+                                        <rect key="frame" x="21" y="825" width="333" height="1"/>
                                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="sb0-8Z-5kB"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Clp-g1-IUK">
-                                        <rect key="frame" x="21" y="1135.5" width="333" height="1"/>
+                                        <rect key="frame" x="21" y="1154" width="333" height="1"/>
                                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="pIZ-Jq-xTv"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ3-eP-2j3">
-                                        <rect key="frame" x="21" y="711" width="52" height="18.5"/>
+                                        <rect key="frame" x="21" y="711" width="51.5" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -10039,8 +10039,8 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <color key="textColor" red="0.42310506110000001" green="0.54752999540000002" blue="0.64756429199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234567890" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaf-5k-Npg">
-                                        <rect key="frame" x="21" y="737.5" width="93" height="18.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxxxxxxxxx" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaf-5k-Npg">
+                                        <rect key="frame" x="21" y="737.5" width="79.5" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                         <color key="textColor" red="0.42310506110000001" green="0.54752999540000002" blue="0.64756429199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -10058,20 +10058,20 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Before calling, please send a Text Meesage first" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecl-hF-p8A">
-                                        <rect key="frame" x="21" y="764" width="338" height="18.5"/>
+                                        <rect key="frame" x="21" y="764" width="338" height="37"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                         <color key="textColor" red="0.42310506110000001" green="0.54752999540000002" blue="0.64756429199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Eon-rM-G8e">
-                                        <rect key="frame" x="26" y="831.5" width="30" height="30"/>
+                                        <rect key="frame" x="26" y="850" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="DeT-YQ-baz"/>
                                             <constraint firstAttribute="height" constant="30" id="Lz8-mT-fZj"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_green_correct" translatesAutoresizingMaskIntoConstraints="NO" id="x3N-fD-bIx">
-                                        <rect key="frame" x="80" y="839.5" width="15" height="15"/>
+                                        <rect key="frame" x="80" y="858" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="10K-q2-5bq"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="Ipr-Xe-E1c"/>
@@ -10080,20 +10080,20 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has own transportation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGk-cR-bZ7">
-                                        <rect key="frame" x="103" y="837.5" width="177" height="18.5"/>
+                                        <rect key="frame" x="103" y="856" width="177" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <color key="textColor" red="0.42310506110000001" green="0.54752999540000002" blue="0.64756429199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pets_icon" translatesAutoresizingMaskIntoConstraints="NO" id="xQw-e6-XtQ">
-                                        <rect key="frame" x="26" y="881.5" width="30" height="30"/>
+                                        <rect key="frame" x="26" y="900" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="83s-f7-jkr"/>
                                             <constraint firstAttribute="width" constant="30" id="Vfq-k2-q7l"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_green_correct" translatesAutoresizingMaskIntoConstraints="NO" id="amM-oE-MHm">
-                                        <rect key="frame" x="80" y="889.5" width="15" height="15"/>
+                                        <rect key="frame" x="80" y="908" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="Dzk-Ka-eP2"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="ESV-Ub-fja"/>
@@ -10102,20 +10102,20 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comfortable with Pets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZg-hZ-iRj">
-                                        <rect key="frame" x="103" y="887.5" width="169" height="18.5"/>
+                                        <rect key="frame" x="103" y="906" width="169" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <color key="textColor" red="0.42310506110000001" green="0.54752999540000002" blue="0.64756429199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="short_notice" translatesAutoresizingMaskIntoConstraints="NO" id="H7r-8H-cW3">
-                                        <rect key="frame" x="26" y="931.5" width="30" height="30"/>
+                                        <rect key="frame" x="26" y="950" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="0rG-AN-edv"/>
                                             <constraint firstAttribute="height" constant="30" id="Ovc-cm-wTX"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_green_correct" translatesAutoresizingMaskIntoConstraints="NO" id="DUV-6p-AhE">
-                                        <rect key="frame" x="80" y="939.5" width="15" height="15"/>
+                                        <rect key="frame" x="80" y="958" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="6eI-8F-fCI"/>
                                             <constraint firstAttribute="width" constant="15" id="J5D-fO-WLx"/>
@@ -10124,20 +10124,20 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available on short notice" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjC-Hd-ZWr">
-                                        <rect key="frame" x="103" y="937.5" width="186.5" height="18.5"/>
+                                        <rect key="frame" x="103" y="956" width="186.5" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <color key="textColor" red="0.42310506110000001" green="0.54752999540000002" blue="0.64756429199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smoke_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Nsh-sP-OiN">
-                                        <rect key="frame" x="26" y="981.5" width="30" height="30"/>
+                                        <rect key="frame" x="26" y="1000" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="0A7-B3-EgP"/>
                                             <constraint firstAttribute="height" constant="30" id="gZf-vB-JWH"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_green_correct" translatesAutoresizingMaskIntoConstraints="NO" id="j2B-Np-pDZ">
-                                        <rect key="frame" x="80" y="989.5" width="15" height="15"/>
+                                        <rect key="frame" x="80" y="1008" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="CPz-iY-8Pi"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="G55-tg-CsT"/>
@@ -10146,20 +10146,20 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nonsmoker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I00-ZB-mVK">
-                                        <rect key="frame" x="103" y="987.5" width="87" height="18.5"/>
+                                        <rect key="frame" x="103" y="1006" width="87" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <color key="textColor" red="0.42310506110000001" green="0.54752999540000002" blue="0.64756429199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online_payment_icon" translatesAutoresizingMaskIntoConstraints="NO" id="s59-a6-kpJ">
-                                        <rect key="frame" x="26" y="1031.5" width="30" height="30"/>
+                                        <rect key="frame" x="26" y="1050" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="ZyV-Se-fcu"/>
                                             <constraint firstAttribute="height" constant="30" id="kvs-OK-QSG"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_green_correct" translatesAutoresizingMaskIntoConstraints="NO" id="Nje-IK-byY">
-                                        <rect key="frame" x="80" y="1039.5" width="15" height="15"/>
+                                        <rect key="frame" x="80" y="1058" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="I2V-fO-Gbc"/>
                                             <constraint firstAttribute="height" constant="15" id="gGs-qo-pxW"/>
@@ -10168,20 +10168,20 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Native Language : English" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Za-ZB-0ij">
-                                        <rect key="frame" x="103" y="1037.5" width="193" height="18.5"/>
+                                        <rect key="frame" x="103" y="1056" width="193" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <color key="textColor" red="0.42310506110000001" green="0.54752999540000002" blue="0.64756429199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lang_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ZhR-Jy-Njo">
-                                        <rect key="frame" x="26" y="1081.5" width="30" height="30"/>
+                                        <rect key="frame" x="26" y="1100" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="NBN-rB-p2y"/>
                                             <constraint firstAttribute="height" constant="30" id="Tn6-fl-D22"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_green_correct" translatesAutoresizingMaskIntoConstraints="NO" id="nK3-uS-E5G">
-                                        <rect key="frame" x="80" y="1089.5" width="15" height="15"/>
+                                        <rect key="frame" x="80" y="1108" width="15" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="T1O-Ke-j6I"/>
                                             <constraint firstAttribute="height" constant="15" id="YPW-BP-r6V"/>
@@ -10190,13 +10190,13 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edu Level : NA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7C3-TC-ron">
-                                        <rect key="frame" x="103" y="1087.5" width="107" height="18.5"/>
+                                        <rect key="frame" x="103" y="1106" width="107" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <color key="textColor" red="0.42310506110000001" green="0.54752999540000002" blue="0.64756429199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Py7-xk-Wmg">
-                                        <rect key="frame" x="21" y="2279.5" width="333" height="600"/>
+                                        <rect key="frame" x="21" y="2298" width="333" height="600"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="600" id="Hr8-IE-EaZ"/>
@@ -10219,10 +10219,9 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </cells>
                                     </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivI-c0-EOw">
-                                        <rect key="frame" x="43" y="2914.5" width="135" height="45"/>
+                                        <rect key="frame" x="16" y="2933" width="170.5" height="57"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="135" id="efm-zJ-VFH"/>
-                                            <constraint firstAttribute="height" constant="45" id="oVl-qz-sp9"/>
+                                            <constraint firstAttribute="width" secondItem="ivI-c0-EOw" secondAttribute="height" multiplier="3:1" id="0IN-uf-Gm4"/>
                                         </constraints>
                                         <state key="normal" image="review_btn"/>
                                         <connections>
@@ -10230,14 +10229,14 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfa-I0-reX">
-                                        <rect key="frame" x="196" y="2914.5" width="135" height="45"/>
+                                        <rect key="frame" x="188.5" y="2933" width="170.5" height="57"/>
                                         <state key="normal" image="like_btn"/>
                                         <connections>
                                             <action selector="doneButtonTapped:" destination="Dbs-ec-zZ7" eventType="touchUpInside" id="NaQ-Oa-IKz"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vb-3m-EFt">
-                                        <rect key="frame" x="186" y="2914.5" width="2" height="45"/>
+                                        <rect key="frame" x="186.5" y="2933" width="2" height="57"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="2" id="JWZ-lg-kCE"/>
@@ -10258,7 +10257,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bny-w4-jS2">
-                                        <rect key="frame" x="0.0" y="2279.5" width="375" height="600"/>
+                                        <rect key="frame" x="0.0" y="2298" width="375" height="600"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="dataSource" destination="Dbs-ec-zZ7" id="F9i-22-X1r"/>
@@ -10306,6 +10305,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="f9l-gh-G1h" firstAttribute="top" secondItem="xEN-qx-Pe8" secondAttribute="bottom" constant="16" id="CYO-Y0-so4"/>
                                     <constraint firstItem="WlE-Ge-cSc" firstAttribute="leading" secondItem="MQ3-eP-2j3" secondAttribute="leading" id="EQi-eG-e6M"/>
                                     <constraint firstItem="cpa-az-6lB" firstAttribute="leading" secondItem="gix-sz-g4M" secondAttribute="trailing" constant="6" id="ETl-qf-Lmh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sfa-I0-reX" secondAttribute="trailing" constant="16" id="EWP-Z2-Okf"/>
                                     <constraint firstItem="Py7-xk-Wmg" firstAttribute="height" secondItem="bny-w4-jS2" secondAttribute="height" id="EYV-5Z-Hs3"/>
                                     <constraint firstItem="7C3-TC-ron" firstAttribute="centerY" secondItem="nK3-uS-E5G" secondAttribute="centerY" id="EZg-I2-Y26"/>
                                     <constraint firstItem="b0l-W2-1x3" firstAttribute="top" secondItem="rSF-PU-IBU" secondAttribute="bottom" constant="24" id="EpG-ul-EJz"/>
@@ -10313,6 +10313,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="j2B-Np-pDZ" firstAttribute="centerY" secondItem="Nsh-sP-OiN" secondAttribute="centerY" id="GDk-4j-Chq"/>
                                     <constraint firstItem="TNA-8f-KRM" firstAttribute="top" secondItem="7Uu-AJ-zC1" secondAttribute="bottom" constant="12" id="GPS-OJ-enH"/>
                                     <constraint firstItem="qJt-Me-6gg" firstAttribute="top" secondItem="cjN-1v-hjd" secondAttribute="bottom" constant="16" id="GZg-CZ-WNG"/>
+                                    <constraint firstItem="ivI-c0-EOw" firstAttribute="leading" secondItem="JeE-f1-yC8" secondAttribute="leading" constant="16" id="Gme-rE-cou"/>
                                     <constraint firstItem="gxx-CN-D5C" firstAttribute="leading" secondItem="JeE-f1-yC8" secondAttribute="leading" constant="21" id="Gzy-Ry-sD9"/>
                                     <constraint firstAttribute="trailing" secondItem="DPG-GD-fjR" secondAttribute="trailing" id="HSa-Rc-u37"/>
                                     <constraint firstItem="amM-oE-MHm" firstAttribute="leading" secondItem="xQw-e6-XtQ" secondAttribute="trailing" constant="24" id="Hgj-bc-tRj"/>
@@ -10386,7 +10387,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="ei6-Nl-31t" firstAttribute="top" secondItem="FXK-Ye-4Tf" secondAttribute="bottom" constant="16" id="eFS-cq-T5C"/>
                                     <constraint firstItem="cAX-C2-lMg" firstAttribute="leading" secondItem="o5k-8z-wUg" secondAttribute="trailing" id="ed4-Bf-9J9"/>
                                     <constraint firstItem="sDr-ey-Rq6" firstAttribute="top" secondItem="boD-lo-72R" secondAttribute="bottom" constant="8" id="eg1-CB-AL8"/>
-                                    <constraint firstAttribute="bottom" secondItem="ivI-c0-EOw" secondAttribute="bottom" constant="50" id="erw-1B-Nll"/>
+                                    <constraint firstAttribute="bottom" secondItem="ivI-c0-EOw" secondAttribute="bottom" constant="75" id="erw-1B-Nll"/>
                                     <constraint firstItem="jaf-5k-Npg" firstAttribute="leading" secondItem="MQ3-eP-2j3" secondAttribute="leading" id="esK-Su-YnH"/>
                                     <constraint firstItem="8JT-5O-KyT" firstAttribute="leading" secondItem="Z0r-8C-hZu" secondAttribute="leading" id="fOM-RC-ymu"/>
                                     <constraint firstItem="bny-w4-jS2" firstAttribute="leading" secondItem="JeE-f1-yC8" secondAttribute="leading" id="fhP-iR-Ftb"/>
@@ -10403,7 +10404,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="MQ3-eP-2j3" firstAttribute="top" secondItem="H9c-UV-kuS" secondAttribute="bottom" constant="24" id="kEr-Wx-PqC"/>
                                     <constraint firstItem="7C3-TC-ron" firstAttribute="leading" secondItem="nK3-uS-E5G" secondAttribute="trailing" constant="8" id="kmh-aN-Piz"/>
                                     <constraint firstItem="iJC-Vh-ib3" firstAttribute="leading" secondItem="TYd-OF-8Ga" secondAttribute="leading" id="l5U-ky-8hy"/>
-                                    <constraint firstItem="2vb-3m-EFt" firstAttribute="leading" secondItem="ivI-c0-EOw" secondAttribute="trailing" constant="8" id="lML-Du-tjv"/>
+                                    <constraint firstItem="2vb-3m-EFt" firstAttribute="leading" secondItem="ivI-c0-EOw" secondAttribute="trailing" id="lML-Du-tjv"/>
                                     <constraint firstItem="BT4-VZ-88i" firstAttribute="centerX" secondItem="JeE-f1-yC8" secondAttribute="centerX" id="lSI-Rr-dTe"/>
                                     <constraint firstItem="DPG-GD-fjR" firstAttribute="leading" secondItem="JeE-f1-yC8" secondAttribute="leading" id="lnG-qD-uKq"/>
                                     <constraint firstItem="Nsh-sP-OiN" firstAttribute="leading" secondItem="Eon-rM-G8e" secondAttribute="leading" id="mJJ-OY-BTr"/>
@@ -10440,7 +10441,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="sZg-hZ-iRj" firstAttribute="leading" secondItem="amM-oE-MHm" secondAttribute="trailing" constant="8" id="wYd-aN-10t"/>
                                     <constraint firstItem="9Za-ZB-0ij" firstAttribute="centerY" secondItem="Nje-IK-byY" secondAttribute="centerY" id="wmX-T9-VVY"/>
                                     <constraint firstItem="Sfa-I0-reX" firstAttribute="width" secondItem="ivI-c0-EOw" secondAttribute="width" id="x0D-qI-9uL"/>
-                                    <constraint firstItem="Sfa-I0-reX" firstAttribute="leading" secondItem="2vb-3m-EFt" secondAttribute="trailing" constant="8" id="x3M-id-eJH"/>
+                                    <constraint firstItem="Sfa-I0-reX" firstAttribute="leading" secondItem="2vb-3m-EFt" secondAttribute="trailing" id="x3M-id-eJH"/>
                                     <constraint firstAttribute="trailing" secondItem="Zow-7l-Fg2" secondAttribute="trailing" constant="24" id="xD8-GZ-8eJ"/>
                                     <constraint firstItem="BT4-VZ-88i" firstAttribute="top" secondItem="qJt-Me-6gg" secondAttribute="bottom" constant="24" id="xZE-vW-Mro"/>
                                     <constraint firstItem="cpa-az-6lB" firstAttribute="centerX" secondItem="JeE-f1-yC8" secondAttribute="centerX" constant="6" id="yI9-06-9Lk"/>
@@ -10453,7 +10454,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstAttribute="height" constant="45" id="PAs-iz-fsZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
-                                <state key="normal" title="Contact Me">
+                                <state key="normal" title="CONTACT ME">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -10478,6 +10479,7 @@ We may send emails to existing customers or prospective customers who have enqui
                     <size key="freeformSize" width="375" height="3000"/>
                     <connections>
                         <outlet property="aboutTextView" destination="Zow-7l-Fg2" id="I0G-w7-NN5"/>
+                        <outlet property="aboutTextViewHeightConstraint" destination="T27-GY-VTP" id="Sdl-eB-xzF"/>
                         <outlet property="cancelButton" destination="ivI-c0-EOw" id="GIf-Mm-nQG"/>
                         <outlet property="careTypeLabel" destination="7Uu-AJ-zC1" id="AEj-BS-6WY"/>
                         <outlet property="comfortableWithPetsImgView" destination="amM-oE-MHm" id="TNC-dy-P9C"/>

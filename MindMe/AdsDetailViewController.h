@@ -101,5 +101,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *reviewTblView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *reviewTblViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *aboutTextViewHeightConstraint;
 
 @end

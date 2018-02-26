@@ -131,8 +131,10 @@
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[_advertDict valueForKey:@"first_name"],[[_advertDict valueForKey:@"second_name"] substringToIndex:1]];
     _locationLabel.text = [_advertDict valueForKey:@"address1"];
     _careTypeLabel.text = [_advertDict valueForKey:@"care_type"];
-    _experienceValueLabel.text = [NSString stringWithFormat:@"%@ years",[_advertDict valueForKey:@"experience"]];
+    _experienceValueLabel.text = [NSString stringWithFormat:@"%@ years of Experience",[_advertDict valueForKey:@"experience"]];
     _aboutTextView.text = [_advertDict valueForKey:@"about_you"];
+    
+    _aboutTextViewHeightConstraint.constant = self.aboutTextView.contentSize.height;
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
         _jobActiveViewsLabel.hidden = YES;
