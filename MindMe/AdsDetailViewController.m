@@ -95,6 +95,12 @@
         _reviewStaticLabel.hidden = YES;
         _reviewTblView.hidden = YES;
         _cancelButtonTopConstraint.constant = -35;
+        
+        _mobileValueLabel.hidden = YES;
+        _mobileStaticLabel.hidden = YES;
+        _mobileStaticLabel2.hidden = YES;
+        _mobileSeparatorView.hidden = YES;
+        _carImgViewTopConstraint.constant = -120;
     
     }
     
@@ -154,6 +160,16 @@
     else {
         _jobActiveViewsLabel.hidden = NO;
         _jobActiveViewsLabel.text = [NSString stringWithFormat:@"Job Active %@ views",[_advertDict valueForKey:@"viewed"]];
+    }
+    
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
+    NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
+    
+    if ([[responseData valueForKey:@"Sub_active"] intValue] == 1) {
+        _mobileValueLabel.text = [_advertDict valueForKey:@"mobile_number"];
+    }
+    else {
+        _mobileValueLabel.text = @"xxxxxxxxxx";
     }
     
     _rateLabel.text = [_advertDict valueForKey:@"pay"];

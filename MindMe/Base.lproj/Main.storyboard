@@ -10495,6 +10495,7 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="aboutTextViewHeightConstraint" destination="T27-GY-VTP" id="Sdl-eB-xzF"/>
                         <outlet property="cancelButton" destination="ivI-c0-EOw" id="GIf-Mm-nQG"/>
                         <outlet property="cancelButtonTopConstraint" destination="v18-b5-kth" id="feO-ah-dqs"/>
+                        <outlet property="carImgViewTopConstraint" destination="5fa-6H-XlH" id="bPK-Eh-DNf"/>
                         <outlet property="careTypeLabel" destination="7Uu-AJ-zC1" id="AEj-BS-6WY"/>
                         <outlet property="carerLikeButton" destination="lEi-yM-PUC" id="iCs-nf-Awu"/>
                         <outlet property="comfortableWithPetsImgView" destination="amM-oE-MHm" id="TNC-dy-P9C"/>
@@ -10524,6 +10525,10 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="lastLoginLabel" destination="ajA-KN-RaE" id="O17-bV-9fo"/>
                         <outlet property="locationLabel" destination="uSM-Ri-5Ip" id="EFj-ZL-v5L"/>
                         <outlet property="memberSinceLabel" destination="hX4-tg-gjo" id="mCm-dA-kHs"/>
+                        <outlet property="mobileSeparatorView" destination="2SS-j3-qpP" id="qUG-y4-eIe"/>
+                        <outlet property="mobileStaticLabel" destination="MQ3-eP-2j3" id="fLP-oC-tYj"/>
+                        <outlet property="mobileStaticLabel2" destination="Ecl-hF-p8A" id="UTs-MW-KJL"/>
+                        <outlet property="mobileValueLabel" destination="jaf-5k-Npg" id="NgN-ev-Tu7"/>
                         <outlet property="nameLabel" destination="wkB-nN-KrJ" id="Jgc-0L-wDr"/>
                         <outlet property="nonSmokerImgView" destination="j2B-Np-pDZ" id="Q98-8u-Ngq"/>
                         <outlet property="nonSmokerLabel" destination="I00-ZB-mVK" id="XwY-bq-Z2J"/>

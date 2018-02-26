@@ -70,6 +70,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *fifthCollectionViewTitle;
 @property (weak, nonatomic) IBOutlet UITextField *sixthCollectionViewTitle;
 @property (weak, nonatomic) IBOutlet UITextField *reviewStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mobileStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mobileValueLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mobileStaticLabel2;
+@property (weak, nonatomic) IBOutlet UIView *mobileSeparatorView;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *firstCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *secondCollectionView;
@@ -104,5 +108,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *reviewTblView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *reviewTblViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *aboutTextViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *carImgViewTopConstraint;
 
 @end
