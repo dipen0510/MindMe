@@ -24,8 +24,6 @@
 
 - (void) setupInitialUI {
     
-    _firstNameLabelTopConstraint.constant = (90./568.)*[UIScreen mainScreen].bounds.size.height;
-    
     NSRange range = [self.legalLabel.text rangeOfString:NSLocalizedString(@"Terms of Services", nil)];
     [self.legalLabel addLinkToURL:[NSURL URLWithString:@"action://ToS"] withRange:range];
     NSRange range1 = [self.legalLabel.text rangeOfString:NSLocalizedString(@"Privacy Policy", nil)];
@@ -39,6 +37,31 @@
     
     [_findACaregiverStaticLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(careGiverButtonTapped:)]];
     [_findACarejobStaticLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(careNeededButtonTapped:)]];
+    
+    _findACarejobStaticLabel.font =  _findACaregiverStaticLabel.font = _orStaticLabel.font = _fbButton.titleLabel.font = _signInLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    
+    _emailTextField.font = _passwordTextField.font = _firstNameTextField.font = _lastNameTextField.font = _alreadyHaveAccountStaticLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(19./667)*kScreenHeight];
+    
+    _headerLabelTopConstraint.constant = (51./667) * kScreenHeight;
+    _firstNameTopConstraint.constant = (32./667) * kScreenHeight;
+    _lastNameTopConstraint.constant = (22./667) * kScreenHeight;
+    _emailTopCOnstraint.constant = (22./667) * kScreenHeight;
+    _pwdTopConstraint.constant = (22./667) * kScreenHeight;
+    _optionsTopConstraint.constant = (30./667) * kScreenHeight;
+    _signUpButtonTopConstraint.constant = (32./667.) * kScreenHeight;
+    _orStaticLabelTopConstraint.constant = (10./667.) * kScreenHeight;
+    _fbButtonTopConstraint.constant = (16./667.) * kScreenHeight;
+    _legalLabelTopConstraint.constant = (16./667.) * kScreenHeight;
+    
+    if (kScreenWidth < 375) {
+        _firstNameTopConstraint.constant = (25./667) * kScreenHeight;
+        _signUpButtonTopConstraint.constant = (25./667.) * kScreenHeight;
+        _legalLabelTopConstraint.constant = (10./667.) * kScreenHeight;
+    }
+    
+    [_backTapView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backButtonTapped:)]];
     
 }
 
@@ -110,6 +133,10 @@
         }
     }
     
+}
+
+- (IBAction)backButtonTapped:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (NSString*) isFormValid {

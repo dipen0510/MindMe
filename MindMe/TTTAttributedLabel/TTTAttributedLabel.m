@@ -134,7 +134,7 @@ static inline NSDictionary * NSAttributedStringAttributesFromLabel(TTTAttributed
         [mutableAttributes setObject:label.font forKey:(NSString *)kCTFontAttributeName];
         
         if (label.tag == 101) {
-            [mutableAttributes setObject:[UIFont fontWithName:@"VisbyRoundCF-Regular" size:12.0] forKey:(NSString *)kCTFontAttributeName];
+            [mutableAttributes setObject:[UIFont fontWithName:@"Montserrat-Light" size:(13.0/667.)*kScreenHeight] forKey:(NSString *)kCTFontAttributeName];
         }
         
         [mutableAttributes setObject:label.textColor forKey:(NSString *)kCTForegroundColorAttributeName];
