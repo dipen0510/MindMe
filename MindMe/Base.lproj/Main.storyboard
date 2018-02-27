@@ -6227,7 +6227,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yhj-ON-ojt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yAc-9C-3no">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yAc-9C-3no">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -6246,7 +6246,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wg9-Nn-sTY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="etA-fm-vvl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="etA-fm-vvl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -9775,10 +9775,20 @@ We may send emails to existing customers or prospective customers who have enqui
                                             <action selector="backButtonTapped:" destination="Dbs-ec-zZ7" eventType="touchUpInside" id="JIh-A3-8S1"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCO-V5-xZ2">
+                                        <rect key="frame" x="336" y="42.5" width="19" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="pCO-V5-xZ2" secondAttribute="height" multiplier="41:43" id="741-nb-kCx"/>
+                                            <constraint firstAttribute="height" constant="20" id="Wwh-ya-QPT"/>
+                                        </constraints>
+                                        <state key="normal" image="share"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15940248970000001" green="0.28466475009999997" blue="0.38037025930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="pCO-V5-xZ2" firstAttribute="centerY" secondItem="EQ4-AY-How" secondAttribute="centerY" id="51e-2x-fgi"/>
                                     <constraint firstItem="EQ4-AY-How" firstAttribute="centerX" secondItem="eip-if-LV2" secondAttribute="centerX" id="CSc-AV-pQ8"/>
+                                    <constraint firstAttribute="trailing" secondItem="pCO-V5-xZ2" secondAttribute="trailing" constant="20" id="FN7-Qv-2xQ"/>
                                     <constraint firstItem="EQ4-AY-How" firstAttribute="top" secondItem="eip-if-LV2" secondAttribute="top" constant="44" id="Fed-SN-7hR"/>
                                     <constraint firstAttribute="height" constant="84" id="eh5-Qg-Tmj"/>
                                     <constraint firstItem="8b6-Ra-gwx" firstAttribute="leading" secondItem="eip-if-LV2" secondAttribute="leading" constant="8" id="gtz-Ro-80h"/>
@@ -10409,7 +10419,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </cells>
                                     </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivI-c0-EOw">
-                                        <rect key="frame" x="16" y="2933" width="170.5" height="57"/>
+                                        <rect key="frame" x="16" y="2940" width="170.5" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ivI-c0-EOw" secondAttribute="height" multiplier="3:1" id="0IN-uf-Gm4"/>
                                         </constraints>
@@ -10419,14 +10429,14 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfa-I0-reX">
-                                        <rect key="frame" x="188.5" y="2933" width="170.5" height="57"/>
+                                        <rect key="frame" x="188.5" y="2940" width="170.5" height="57"/>
                                         <state key="normal" image="like_btn"/>
                                         <connections>
                                             <action selector="doneButtonTapped:" destination="Dbs-ec-zZ7" eventType="touchUpInside" id="NaQ-Oa-IKz"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vb-3m-EFt">
-                                        <rect key="frame" x="186.5" y="2933" width="2" height="57"/>
+                                        <rect key="frame" x="186.5" y="2933" width="2" height="64"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="2" id="JWZ-lg-kCE"/>
@@ -10455,7 +10465,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </connections>
                                     </tableView>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEi-yM-PUC">
-                                        <rect key="frame" x="102.5" y="2933" width="170" height="57"/>
+                                        <rect key="frame" x="102.5" y="2940" width="170" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="lEi-yM-PUC" secondAttribute="height" multiplier="170:57" id="1RS-eT-1XV"/>
                                         </constraints>
@@ -10464,6 +10474,12 @@ We may send emails to existing customers or prospective customers who have enqui
                                             <action selector="doneButtonTapped:" destination="Dbs-ec-zZ7" eventType="touchUpInside" id="Dgb-zx-kzW"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Reviews Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14B-Se-p9n">
+                                        <rect key="frame" x="109.5" y="2291" width="156" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -10545,6 +10561,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="cpa-az-6lB" firstAttribute="top" secondItem="uSM-Ri-5Ip" secondAttribute="bottom" constant="20" id="QrK-nV-Vco"/>
                                     <constraint firstItem="wkB-nN-KrJ" firstAttribute="top" secondItem="JeE-f1-yC8" secondAttribute="top" constant="142" id="RJB-5m-d4W"/>
                                     <constraint firstItem="bA2-qE-Ilh" firstAttribute="top" secondItem="boD-lo-72R" secondAttribute="top" id="SA7-2i-kwY"/>
+                                    <constraint firstItem="14B-Se-p9n" firstAttribute="top" secondItem="M1y-Yd-qQd" secondAttribute="bottom" constant="60" id="SED-oa-Ccx"/>
                                     <constraint firstItem="xEN-qx-Pe8" firstAttribute="top" secondItem="C7Y-G1-Fxn" secondAttribute="bottom" constant="24" id="Skb-me-il2"/>
                                     <constraint firstItem="TYd-OF-8Ga" firstAttribute="leading" secondItem="WlE-Ge-cSc" secondAttribute="leading" id="TfQ-ne-5aJ"/>
                                     <constraint firstItem="nK3-uS-E5G" firstAttribute="centerY" secondItem="ZhR-Jy-Njo" secondAttribute="centerY" id="UMI-Tq-2ki"/>
@@ -10637,8 +10654,9 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="Py7-xk-Wmg" firstAttribute="leading" secondItem="JeE-f1-yC8" secondAttribute="leading" constant="21" id="uJa-3f-yor"/>
                                     <constraint firstItem="2SS-j3-qpP" firstAttribute="centerX" secondItem="JeE-f1-yC8" secondAttribute="centerX" id="uY3-bi-jnO"/>
                                     <constraint firstItem="8JT-5O-KyT" firstAttribute="top" secondItem="M1y-Yd-qQd" secondAttribute="bottom" constant="24" id="uda-5P-Gbr"/>
-                                    <constraint firstItem="ivI-c0-EOw" firstAttribute="top" secondItem="Py7-xk-Wmg" secondAttribute="bottom" constant="35" id="v18-b5-kth"/>
+                                    <constraint firstItem="ivI-c0-EOw" firstAttribute="top" secondItem="Py7-xk-Wmg" secondAttribute="bottom" constant="42" id="v18-b5-kth"/>
                                     <constraint firstItem="Z0r-8C-hZu" firstAttribute="leading" secondItem="xEN-qx-Pe8" secondAttribute="leading" id="vAL-5Z-zMW"/>
+                                    <constraint firstItem="14B-Se-p9n" firstAttribute="centerX" secondItem="JeE-f1-yC8" secondAttribute="centerX" id="wE7-aA-CZX"/>
                                     <constraint firstItem="f9l-gh-G1h" firstAttribute="leading" secondItem="HfW-ym-3KH" secondAttribute="leading" id="wN7-Ke-S7K"/>
                                     <constraint firstItem="sZg-hZ-iRj" firstAttribute="leading" secondItem="amM-oE-MHm" secondAttribute="trailing" constant="8" id="wYd-aN-10t"/>
                                     <constraint firstItem="9Za-ZB-0ij" firstAttribute="centerY" secondItem="Nje-IK-byY" secondAttribute="centerY" id="wmX-T9-VVY"/>
@@ -10731,6 +10749,7 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="mobileStaticLabel2" destination="Ecl-hF-p8A" id="UTs-MW-KJL"/>
                         <outlet property="mobileValueLabel" destination="jaf-5k-Npg" id="NgN-ev-Tu7"/>
                         <outlet property="nameLabel" destination="wkB-nN-KrJ" id="Jgc-0L-wDr"/>
+                        <outlet property="noReviewsLabel" destination="14B-Se-p9n" id="HRN-NL-PAO"/>
                         <outlet property="nonSmokerImgView" destination="j2B-Np-pDZ" id="Q98-8u-Ngq"/>
                         <outlet property="nonSmokerLabel" destination="I00-ZB-mVK" id="XwY-bq-Z2J"/>
                         <outlet property="profileImgView" destination="Moc-Wh-iSm" id="d3m-Fi-aa5"/>
@@ -10812,6 +10831,7 @@ We may send emails to existing customers or prospective customers who have enqui
         <image name="profile_icon" width="512" height="511"/>
         <image name="register_new" width="564" height="186"/>
         <image name="review_btn" width="564" height="186"/>
+        <image name="share" width="41" height="43"/>
         <image name="short_notice" width="113" height="113"/>
         <image name="smoke_icon" width="113" height="113"/>
         <image name="starFilled" width="25" height="27"/>

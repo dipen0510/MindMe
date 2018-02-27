@@ -95,6 +95,7 @@
 
         _reviewStaticLabel.hidden = YES;
         _reviewTblView.hidden = YES;
+        _noReviewsLabel.hidden = YES;
         _cancelButtonTopConstraint.constant = -35;
         
         _mobileValueLabel.hidden = YES;
@@ -107,7 +108,6 @@
     
     reviewArr = [[NSMutableArray alloc] init];
     _reviewTblViewHeightConstraint.constant = 0;
-    
     
 }
 
@@ -125,7 +125,7 @@
     
      _aboutStaticLabel.font =  _mobileStaticLabel.font = _firstCollectionViewTitle.font = _secondCollectionViewTitle.font = _thirdCollectionViewTitle.font = _fourthCollectionViewTitle.font = _fifthCollectionViewTitle.font = _sixthCollectionViewTitle.font = _availabilityStaicLabel.font = _reviewStaticLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
     
-    _aboutTextView.font = _mobileValueLabel.font = _mobileStaticLabel2.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    _aboutTextView.font = _mobileValueLabel.font = _mobileStaticLabel2.font = _noReviewsLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
     
     _footerContactButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(15./667)*kScreenHeight];
     
@@ -1384,6 +1384,14 @@
         
         reviewArr = [[NSMutableArray alloc] initWithArray:[responseData valueForKey:@"message"]];
         _reviewTblViewHeightConstraint.constant = (reviewArr.count*308.);
+        
+        if (reviewArr.count == 0 && ![[SharedClass sharedInstance] isUserCarer]) {
+            _noReviewsLabel.hidden = NO;
+        }
+        else {
+            _noReviewsLabel.hidden = YES;
+        }
+        
         [_reviewTblView reloadData];
         
     }
