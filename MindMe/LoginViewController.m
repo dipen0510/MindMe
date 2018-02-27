@@ -37,6 +37,19 @@
         }
     }
     
+    _headerTopConstraint.constant = (31./667) * kScreenHeight;
+    _emailImgTopConstraint.constant = (151./667) * kScreenHeight;
+    _emailTFTopConstraint.constant = (150./667) * kScreenHeight;
+    _loginButtonTopConstraint.constant = (64./667) * kScreenHeight;
+    
+    _forgetPasswordButton.titleLabel.font =  _orStaticLabel.font = _fbLoginButton.titleLabel.font = _signUplabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    
+    _emailTextField.font = _passwordTextField.font = _forgetPasswordStaticLabel.font = _dontHaveAccountStaticLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(19./667)*kScreenHeight];
+    
+    [_backButtonTapView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backButtonTapped:)]];
+    
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -210,6 +223,10 @@
         }];
     }
     
+}
+
+- (IBAction)backButtonTapped:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (NSString*) isFormValid {
