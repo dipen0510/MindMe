@@ -137,6 +137,8 @@
                 <constraint firstItem="NZj-0x-3in" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="18/200" id="zX8-5D-6RJ"/>
             </constraints>
             <connections>
+                <outlet property="ageImgView" destination="sjw-97-eIE" id="xSh-Qa-tJe"/>
+                <outlet property="ageImgViewTopConstraint" destination="rcU-Om-7X4" id="TQP-mJ-lZh"/>
                 <outlet property="ageLabel" destination="xr5-vR-Dgw" id="wfr-LH-kPg"/>
                 <outlet property="careTypeLabel" destination="F6u-ZJ-N0i" id="E49-vc-siu"/>
                 <outlet property="containerView" destination="gBX-lr-rRz" id="Koo-8X-3lP"/>

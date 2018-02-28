@@ -49,6 +49,23 @@
     _carerTypeTFTopConstraint.constant = (13./667)*[UIScreen mainScreen].bounds.size.height;
     _carerTypeTFLeadingConstraint.constant = (12./375)*[UIScreen mainScreen].bounds.size.width;
     
+    _careTypeContainerView.layer.cornerRadius = 17.;
+    _locationContainerView.layer.cornerRadius = 17.;
+    
+    _careTypeContainerView.layer.masksToBounds = NO;
+    _careTypeContainerView.layer.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.7].CGColor;
+    _careTypeContainerView.layer.shadowOffset = CGSizeMake(0.0f, 1.0f);
+    _careTypeContainerView.layer.shadowOpacity = 0.2f;
+    _careTypeContainerView.layer.shadowRadius = 3.5;
+    
+    _locationContainerView.layer.masksToBounds = NO;
+    _locationContainerView.layer.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.7].CGColor;
+    _locationContainerView.layer.shadowOffset = CGSizeMake(0.0f, 1.0f);
+    _locationContainerView.layer.shadowOpacity = 0.2f;
+    _locationContainerView.layer.shadowRadius = 3.5;
+    
+    _carerTypeTextField.font = _addressTextField.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    
 //    if ([[SharedClass sharedInstance] isFeaturedFilterApplied] || [[SharedClass sharedInstance] isLastMinuiteCareFilterApplied]) {
 //        _advertTblViewTopConstraint.constant = 0.0;
 //    }
@@ -254,10 +271,24 @@
     
     cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
     cell.locationLabel.text = [NSString stringWithFormat:@"%d km Away",[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"distance"] intValue]];
-    cell.careTypeLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
-    cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ Years Experience",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        cell.careTypeLabel.text = [NSString stringWithFormat:@"%@ Required",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]];
+        cell.ageLabel.hidden = YES;
+        cell.ageImgView.hidden = YES;
+        cell.ageImgViewTopConstraint.constant = -13.5;
+    }
+    else {
+        cell.careTypeLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
+        cell.ageLabel.text = [NSString stringWithFormat:@"%ld Years Old",[self ageFromYear:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"birth_year"] Month:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"birth_month"] day:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"birth_day"]]];
+        cell.ageLabel.hidden = NO;
+        cell.ageImgView.hidden = NO;
+        cell.ageImgViewTopConstraint.constant = 12.;
+    }
+    
+    
     cell.descLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"about_you"];
-    cell.ageLabel.text = [NSString stringWithFormat:@"%ld Years Old",[self ageFromYear:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"birth_year"] Month:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"birth_month"] day:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"birth_day"]]];
+    
     
     if (![[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqualToString:@""]) {
         __weak UIImageView* weakImageView = cell.profileImgView;

@@ -18,5 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *experienceValueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ageLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *ageImgView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *ageImgViewTopConstraint;
 
 @end
