@@ -18,11 +18,13 @@
     _containerView.layer.masksToBounds = NO;
     _containerView.layer.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.7].CGColor;
     _containerView.layer.shadowOffset = CGSizeMake(0.0f, 1.0f);
-    _containerView.layer.shadowOpacity = 0.4f;
-    _containerView.layer.shadowRadius = 5.0;
+    _containerView.layer.shadowOpacity = 0.2f;
+    _containerView.layer.shadowRadius = 3.5;
     
-    _profileImgView.layer.cornerRadius = ((92./800.) * [UIScreen mainScreen].bounds.size.width);
-    _profileImgView.layer.masksToBounds = YES;
+    _nameLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(19./667)*kScreenHeight];
+    _locationLabel.font = _ageLabel.font = _experienceValueLabel.font = _careTypeLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    _descLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    
     
 }
 

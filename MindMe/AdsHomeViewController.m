@@ -226,7 +226,7 @@
         return 30.0;
     }
     
-    return 200;
+    return (200./568)*kScreenHeight;
     
 }
 
@@ -249,25 +249,15 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.drivingLicenseImgView.userInteractionEnabled = YES;
-    [cell.drivingLicenseImgView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(drivingLicenseImgViewTapped)]];
-    
-    cell.drivingLicenseImgView.hidden = YES;
-    cell.euImgView.hidden = YES;
-    cell.lastLoginLabel.hidden = YES;
-    
-    if ([[SharedClass sharedInstance] isUserCarer]) {
-        cell.yearsExperienceStaticLabel.text = @"Years of Experience needed :";
-    }
-    else {
-        cell.yearsExperienceStaticLabel.text = @"Years of Experience ";
-    }
+    cell.profileImgView.layer.cornerRadius = (32.5/568.)*kScreenHeight;
+    cell.profileImgView.layer.masksToBounds = YES;
     
     cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
-    cell.locationLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"];
+    cell.locationLabel.text = [NSString stringWithFormat:@"%d km Away",[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"distance"] intValue]];
     cell.careTypeLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
-    cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ years",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
+    cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ Years Experience",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
     cell.descLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"about_you"];
+    cell.ageLabel.text = [NSString stringWithFormat:@"%ld Years Old",[self ageFromYear:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"birth_year"] Month:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"birth_month"] day:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"birth_day"]]];
     
     if (![[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqualToString:@""]) {
         __weak UIImageView* weakImageView = cell.profileImgView;
@@ -389,13 +379,13 @@
 
 #pragma mark - Driving License Info Helpers
 
-- (void) drivingLicenseImgViewTapped {
-    
-    drivingInfoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DrivingLicenseInfoViewController"];
-    drivingInfoViewController.view.frame = self.view.bounds;
-    [self.view addSubview:drivingInfoViewController.view];
-    
-}
+//- (void) drivingLicenseImgViewTapped {
+//    
+//    drivingInfoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DrivingLicenseInfoViewController"];
+//    drivingInfoViewController.view.frame = self.view.bounds;
+//    [self.view addSubview:drivingInfoViewController.view];
+//    
+//}
 
 
 
