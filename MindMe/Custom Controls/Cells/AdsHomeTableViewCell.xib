@@ -34,6 +34,10 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBX-lr-rRz">
                         <rect key="frame" x="16" y="8" width="368" height="203.5"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXL-aD-aHO">
+                                <rect key="frame" x="0.0" y="0.0" width="368" height="203.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby_pic" translatesAutoresizingMaskIntoConstraints="NO" id="0G2-n3-lEo">
                                 <rect key="frame" x="14" y="51.5" width="71.5" height="71.5"/>
                                 <constraints>
@@ -89,9 +93,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We are looking for an experienced Carer for our Mother. Good companion..." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nL-7i-lkX">
-                                <rect key="frame" x="14" y="146.5" width="340" height="40.5"/>
+                                <rect key="frame" x="14" y="157" width="340" height="40.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                 <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shape 2" translatesAutoresizingMaskIntoConstraints="NO" id="Hk4-c6-FWe">
+                                <rect key="frame" x="10" y="131" width="88" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hk4-c6-FWe" secondAttribute="height" multiplier="4:1" id="bLA-32-JIC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0R-yg-qQN">
+                                <rect key="frame" x="22" y="133.5" width="63" height="17.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -99,24 +115,32 @@
                         <constraints>
                             <constraint firstItem="44C-wM-POQ" firstAttribute="leading" secondItem="gBX-lr-rRz" secondAttribute="leading" constant="14" id="2Lu-gs-hM0"/>
                             <constraint firstItem="v0i-dw-yRP" firstAttribute="leading" secondItem="xr5-vR-Dgw" secondAttribute="leading" id="41g-ip-zBp"/>
+                            <constraint firstAttribute="bottom" secondItem="dXL-aD-aHO" secondAttribute="bottom" id="4tD-1V-vSg"/>
                             <constraint firstItem="v0i-dw-yRP" firstAttribute="centerY" secondItem="Pho-gF-mR7" secondAttribute="centerY" id="Dk6-Ge-gh5"/>
                             <constraint firstItem="44C-wM-POQ" firstAttribute="top" secondItem="gBX-lr-rRz" secondAttribute="top" constant="14" id="DmX-vN-p31"/>
                             <constraint firstItem="0G2-n3-lEo" firstAttribute="leading" secondItem="44C-wM-POQ" secondAttribute="leading" id="FeQ-2J-IYY"/>
                             <constraint firstItem="ZED-zr-0ti" firstAttribute="centerY" secondItem="NZj-0x-3in" secondAttribute="centerY" id="HUV-lM-Bgr"/>
+                            <constraint firstItem="dXL-aD-aHO" firstAttribute="leading" secondItem="gBX-lr-rRz" secondAttribute="leading" id="JXS-Pq-uKF"/>
                             <constraint firstItem="ZED-zr-0ti" firstAttribute="leading" secondItem="v0i-dw-yRP" secondAttribute="leading" id="KX1-8s-FqT"/>
                             <constraint firstItem="9nL-7i-lkX" firstAttribute="leading" secondItem="gBX-lr-rRz" secondAttribute="leading" constant="14" id="LhY-Mu-mzE"/>
                             <constraint firstItem="xr5-vR-Dgw" firstAttribute="leading" secondItem="sjw-97-eIE" secondAttribute="trailing" constant="8" id="NP0-eT-OW2"/>
+                            <constraint firstItem="Z0R-yg-qQN" firstAttribute="centerY" secondItem="Hk4-c6-FWe" secondAttribute="centerY" id="NvI-py-yd9"/>
                             <constraint firstItem="sjw-97-eIE" firstAttribute="leading" secondItem="0G2-n3-lEo" secondAttribute="trailing" constant="28.5" id="Qjg-FC-Ayc"/>
                             <constraint firstItem="F6u-ZJ-N0i" firstAttribute="centerY" secondItem="44C-wM-POQ" secondAttribute="centerY" id="QkT-1W-c8u"/>
+                            <constraint firstItem="Hk4-c6-FWe" firstAttribute="top" secondItem="0G2-n3-lEo" secondAttribute="bottom" constant="8" id="UUB-vK-UvB"/>
                             <constraint firstItem="F6u-ZJ-N0i" firstAttribute="leading" secondItem="44C-wM-POQ" secondAttribute="trailing" constant="24" id="V97-oU-7ok"/>
                             <constraint firstItem="NZj-0x-3in" firstAttribute="leading" secondItem="Pho-gF-mR7" secondAttribute="leading" id="Xxs-mo-gGa"/>
+                            <constraint firstItem="9nL-7i-lkX" firstAttribute="top" secondItem="Hk4-c6-FWe" secondAttribute="bottom" constant="4" id="acu-1O-JBS"/>
                             <constraint firstItem="sjw-97-eIE" firstAttribute="top" secondItem="0G2-n3-lEo" secondAttribute="top" id="dO6-kw-8Kr"/>
                             <constraint firstItem="0G2-n3-lEo" firstAttribute="top" secondItem="44C-wM-POQ" secondAttribute="bottom" constant="14" id="gCN-pn-TsC"/>
+                            <constraint firstAttribute="trailing" secondItem="dXL-aD-aHO" secondAttribute="trailing" id="h8f-WH-WkF"/>
                             <constraint firstItem="NZj-0x-3in" firstAttribute="top" secondItem="Pho-gF-mR7" secondAttribute="bottom" constant="12" id="jAG-kl-70o"/>
                             <constraint firstItem="xr5-vR-Dgw" firstAttribute="centerY" secondItem="sjw-97-eIE" secondAttribute="centerY" id="oBi-R8-pvh"/>
-                            <constraint firstAttribute="bottom" secondItem="9nL-7i-lkX" secondAttribute="bottom" constant="16.5" id="orh-B2-urX"/>
                             <constraint firstItem="Pho-gF-mR7" firstAttribute="top" secondItem="sjw-97-eIE" secondAttribute="bottom" constant="12" id="rcU-Om-7X4"/>
+                            <constraint firstItem="dXL-aD-aHO" firstAttribute="top" secondItem="gBX-lr-rRz" secondAttribute="top" id="sC6-Px-rFP"/>
                             <constraint firstAttribute="trailing" secondItem="9nL-7i-lkX" secondAttribute="trailing" constant="14" id="sbV-WS-8cB"/>
+                            <constraint firstItem="Hk4-c6-FWe" firstAttribute="leading" secondItem="0G2-n3-lEo" secondAttribute="leading" constant="-4" id="t4v-Hi-rp3"/>
+                            <constraint firstItem="Z0R-yg-qQN" firstAttribute="leading" secondItem="gBX-lr-rRz" secondAttribute="leading" constant="22" id="yVB-oe-fN2"/>
                             <constraint firstItem="Pho-gF-mR7" firstAttribute="leading" secondItem="sjw-97-eIE" secondAttribute="leading" id="yVE-eW-CFN"/>
                         </constraints>
                     </view>
@@ -133,6 +157,7 @@
                 <constraint firstItem="Pho-gF-mR7" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="17/200" id="3ly-nG-cEh"/>
                 <constraint firstItem="sjw-97-eIE" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="15/200" id="906-2o-STX"/>
                 <constraint firstItem="9nL-7i-lkX" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="37/200" id="EJa-6l-a8A"/>
+                <constraint firstItem="Hk4-c6-FWe" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="20/200" id="HC2-56-mtd"/>
                 <constraint firstItem="0G2-n3-lEo" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="65/200" id="azQ-jA-b6W"/>
                 <constraint firstItem="NZj-0x-3in" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="18/200" id="zX8-5D-6RJ"/>
             </constraints>
@@ -143,15 +168,22 @@
                 <outlet property="careTypeLabel" destination="F6u-ZJ-N0i" id="E49-vc-siu"/>
                 <outlet property="containerView" destination="gBX-lr-rRz" id="Koo-8X-3lP"/>
                 <outlet property="descLabel" destination="9nL-7i-lkX" id="20v-4y-CTb"/>
+                <outlet property="descTopConstraint" destination="acu-1O-JBS" id="eTD-p3-Wy9"/>
                 <outlet property="experienceValueLabel" destination="ZED-zr-0ti" id="3jN-Cj-UlF"/>
+                <outlet property="featuredImgView" destination="Hk4-c6-FWe" id="04L-5G-jb4"/>
+                <outlet property="featuredImgViewTopConstraint" destination="UUB-vK-UvB" id="vpX-co-uru"/>
+                <outlet property="featuredLabel" destination="Z0R-yg-qQN" id="RlJ-aT-yTR"/>
+                <outlet property="gradientView" destination="dXL-aD-aHO" id="l2V-Qq-bJG"/>
                 <outlet property="locationLabel" destination="v0i-dw-yRP" id="9E9-PQ-HRW"/>
                 <outlet property="nameLabel" destination="44C-wM-POQ" id="r4E-4t-qAn"/>
                 <outlet property="profileImgView" destination="0G2-n3-lEo" id="vuV-KQ-fvJ"/>
+                <outlet property="profileImgViewTopCOnstraint" destination="gCN-pn-TsC" id="qrW-52-JVm"/>
             </connections>
             <point key="canvasLocation" x="35" y="49"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Shape 2" width="319" height="80"/>
         <image name="baby_pic" width="253" height="250"/>
         <image name="circular-line-with-word-age-in-the-center" width="50" height="48"/>
         <image name="experience" width="40" height="59"/>

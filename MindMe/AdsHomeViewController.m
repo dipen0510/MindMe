@@ -288,7 +288,20 @@
     
     
     cell.descLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"about_you"];
+    cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ Years of Experience",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
     
+    
+    if ([[SharedClass sharedInstance] isFeaturedFilterApplied]) {
+        cell.featuredLabel.hidden = NO;
+        cell.featuredImgView.hidden = NO;
+        cell.gradientView.hidden = NO;
+        [self addFeaturedGradientToView:cell.gradientView];
+    }
+    else {
+        cell.featuredLabel.hidden = YES;
+        cell.featuredImgView.hidden = YES;
+        cell.gradientView.hidden = YES;
+    }
     
     if (![[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqualToString:@""]) {
         __weak UIImageView* weakImageView = cell.profileImgView;
@@ -307,6 +320,16 @@
     else {
         cell.profileImgView.image = [UIImage imageNamed:@"profile_icon"];
     }
+    
+}
+
+- (void) addFeaturedGradientToView:(UIView *)view {
+    
+    CAGradientLayer* gradient = [CAGradientLayer new];
+    gradient.colors = @[(id)[UIColor colorWithRed:0.9765 green:0.8745 blue:0.7451 alpha:1.0].CGColor, (id)[UIColor colorWithRed:0.9882 green:0.9373 blue:0.8706 alpha:1.0].CGColor, (id)[UIColor whiteColor].CGColor];
+    gradient.frame = view.bounds;
+    gradient.locations = @[@0.0, @0.6, @1.0];
+    [view.layer insertSublayer:gradient atIndex:0];
     
 }
 

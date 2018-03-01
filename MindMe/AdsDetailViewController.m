@@ -109,6 +109,8 @@
     reviewArr = [[NSMutableArray alloc] init];
     _reviewTblViewHeightConstraint.constant = 0;
     
+    [_footerContactButton addTarget:self action:@selector(contactMeButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
 - (void) setupPixelPerfectUI {
@@ -362,6 +364,19 @@
         return;
     }
     [self startLikeDislikeService];
+    
+}
+
+- (void) contactMeButtonTapped {
+    
+    if ([[SharedClass sharedInstance] isGuestUser]) {
+        
+        [self.sideMenuController.navigationController popViewControllerAnimated:YES];
+        return;
+        
+    }
+    
+    [self performSegueWithIdentifier:@"showContactSegue" sender:nil];
     
 }
 

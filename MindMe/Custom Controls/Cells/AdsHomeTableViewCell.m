@@ -23,8 +23,16 @@
     
     _nameLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(19./667)*kScreenHeight];
     _locationLabel.font = _ageLabel.font = _experienceValueLabel.font = _careTypeLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    _featuredLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(14./667)*kScreenHeight];
     _descLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
     
+    _profileImgViewTopCOnstraint.constant = (14./667.)*kScreenHeight;
+    _featuredImgViewTopConstraint.constant = (8./667.)*kScreenHeight;
+    _descTopConstraint.constant = (4./667.)*kScreenHeight;
+    
+    _gradientView.layer.cornerRadius = 5.0;
+    _gradientView.clipsToBounds = YES;
+    _gradientView.layer.masksToBounds = YES;
     
 }
 
