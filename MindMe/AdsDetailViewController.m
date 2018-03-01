@@ -367,6 +367,23 @@
     
 }
 
+- (IBAction)shareButtonTapped:(id)sender {
+    
+    if ([[SharedClass sharedInstance] isGuestUser]) {
+        
+        [self.sideMenuController.navigationController popViewControllerAnimated:YES];
+        return;
+        
+    }
+    
+    NSString* sharingText = [NSString stringWithFormat:@"Hi My name is %@ and I am looking for a position as a %@ in %@. Check out My Profile on www.MindMe.ie for more information.\nhttps://www.mindme.ie/profile_details.php?hid=%@&&a_id=%@",[_advertDict valueForKey:@"first_name"],[_advertDict valueForKey:@"care_type"],[_advertDict valueForKey:@"address1"],[_advertDict valueForKey:@"md5_id"],[_advertDict valueForKey:@"Userid"]];
+    
+    UIActivityViewController *activityVC=[[UIActivityViewController alloc]initWithActivityItems:[[NSMutableArray alloc]initWithObjects:sharingText, nil] applicationActivities:nil];
+    
+    [self presentViewController:activityVC animated:YES completion:nil];
+    
+}
+
 - (void) contactMeButtonTapped {
     
     if ([[SharedClass sharedInstance] isGuestUser]) {

@@ -58,6 +58,7 @@
 
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)doneButtonTapped:(id)sender;
+- (IBAction)shareButtonTapped:(id)sender;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *locationPinLeadingConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *yearsOfExpLeadingConstraint;
