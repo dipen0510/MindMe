@@ -710,7 +710,7 @@
 
 - (void) setupUIForAUPairForm {
     
-    if ([[SharedClass sharedInstance] isUserCarer]) {
+    if (![[SharedClass sharedInstance] isUserCarer]) {
         _firstCollectionViewTitle.text = @"Au Pair requires to live in or live out";
         _secondCollectionViewTitle.text = @"Age Group Experience";
         _thirdCollectionViewTitle.text = @"Do You Have Qualifications";

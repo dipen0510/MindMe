@@ -291,7 +291,7 @@
     cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ Years of Experience",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
     
     
-    if ([[SharedClass sharedInstance] isFeaturedFilterApplied]) {
+    if ([[SharedClass sharedInstance] isFeaturedFilterApplied] || [[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"Sub_active"] intValue] == 1) {
         cell.featuredLabel.hidden = NO;
         cell.featuredImgView.hidden = NO;
         cell.gradientView.hidden = NO;
