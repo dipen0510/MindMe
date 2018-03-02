@@ -58,6 +58,7 @@
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
         _weeklyHeaderLabel.text = @"What Days Are You Available To Work";
+        _headerLabel.text = @"Your Profile";
     }
     else {
         

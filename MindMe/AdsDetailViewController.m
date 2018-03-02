@@ -103,6 +103,9 @@
         _mobileStaticLabel2.hidden = YES;
         _mobileSeparatorView.hidden = YES;
         _carImgViewTopConstraint.constant = -120;
+        
+        _cvStaticLabel.hidden = YES;
+        _cvValueLabel.hidden = YES;
     
     }
     
