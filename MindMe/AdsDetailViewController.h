@@ -123,5 +123,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *reviewTblViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *aboutTextViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *carImgViewTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *locationTopConstraint;
 
 @end

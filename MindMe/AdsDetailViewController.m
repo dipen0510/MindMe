@@ -106,6 +106,9 @@
         
         _cvStaticLabel.hidden = YES;
         _cvValueLabel.hidden = YES;
+        
+        _ageLabel.hidden = YES;
+        _locationTopConstraint.constant = -15;
     
     }
     
