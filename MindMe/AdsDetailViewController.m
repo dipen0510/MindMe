@@ -399,7 +399,7 @@
         
     }
     
-    [self performSegueWithIdentifier:@"showContactSegue" sender:nil];
+    [self performSegueWithIdentifier:@"showChatStartSegue" sender:nil];
     
 }
 

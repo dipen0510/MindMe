@@ -1,0 +1,236 @@
+//
+//  ChatStartViewController.m
+//  MindMe
+//
+//  Created by Dipen Sekhsaria on 04/03/18.
+//  Copyright © 2018 Stardeep. All rights reserved.
+//
+
+#import "ChatStartViewController.h"
+#import "ChooseCareTypeCollectionViewCell.h"
+
+@interface ChatStartViewController ()
+
+@end
+
+@implementation ChatStartViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    [self setupInitialUI];
+    [self startGetAdvertsService];
+
+}
+
+- (void) setupInitialUI {
+    
+    _sendButton.layer.cornerRadius = 17.5;
+    _sendButton.layer.masksToBounds = NO;
+    
+    [self.careTypeCollectionView registerNib:[UINib nibWithNibName:@"ChooseCareTypeCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ChooseCareTypeCollectionViewCell"];
+    
+    _titleLabel.font =  _messageLabel.font = _selectActiveProfStaticLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    
+    _messageTextField.font =  _titleTextField.font = _selectActiveProfStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    
+    _footerLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(13./667)*kScreenHeight];
+    
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+#pragma mark - CollectionView Datasource
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return allCareTypesArr.count;
+    
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"ChooseCareTypeCollectionViewCell";
+    ChooseCareTypeCollectionViewCell *cell = (ChooseCareTypeCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    if (cell == nil) {
+        // Load the top-level objects from the custom cell XIB.
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"ChooseCareTypeCollectionViewCell" owner:self options:nil];
+        // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
+        cell = [topLevelObjects objectAtIndex:0];
+    }
+    
+    [self populateContentForFirstCollectionViewCell:cell atIndexPath:indexPath];
+    
+    
+    return cell;
+    
+    
+}
+
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return CGSizeMake((kScreenWidth-42)/2., 30);
+    
+    
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(0, 0, 0, 0); // top, left, bottom, right
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    
+    return 0.0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 0.0;
+}
+
+#pragma mark - CollectionView Delegates
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    selectedCareType = [[allCareTypesArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
+    [collectionView reloadData];
+    
+}
+
+
+#pragma mark - Populate Content
+
+- (void) populateContentForFirstCollectionViewCell:(ChooseCareTypeCollectionViewCell *) cell atIndexPath:(NSIndexPath *)indexPath {
+    
+    cell.titleLabel.text = [[allCareTypesArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
+    [cell.titleLabel setFont:_footerLabel.font];
+    cell.titleLabel.textColor = [UIColor blackColor];
+    
+    if ([[[allCareTypesArr objectAtIndex:indexPath.row] valueForKey:@"care_type"] isEqualToString:selectedCareType]) {
+        cell.toggleButton.selected = YES;
+    }
+    else {
+        cell.toggleButton.selected = NO;
+    }
+    
+}
+
+
+- (IBAction)sendButtonTapped:(id)sender {
+}
+
+- (IBAction)backButtonTapped:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
+
+
+#pragma mark - API Helpers
+
+- (void) startGetAdvertsService {
+    
+    [SVProgressHUD showWithStatus:@"Fetching data"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GetPostedAdverts;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForGetPostedAdverts]];
+    
+}
+
+
+#pragma mark - DATASYNCMANAGER Delegates
+
+-(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
+    
+    if ([requestServiceKey isEqualToString:GetPostedAdverts]) {
+        
+        [SVProgressHUD showSuccessWithStatus:@"Data refreshed successfully"];
+        
+        if ([[responseData valueForKey:@"message"] isKindOfClass:[NSArray class]]) {
+            
+            NSMutableArray* tempArr = [[NSMutableArray alloc] initWithArray:[responseData valueForKey:@"message"]];
+            allCareTypesArr = [[NSMutableArray alloc] init];
+            
+            for (NSDictionary* tmpDict in tempArr) {
+                if ([[tmpDict valueForKey:@"job_ad_active"] intValue] == 1) {
+                    [allCareTypesArr addObject:tmpDict];
+                }
+            }
+            
+        }
+        
+        [_careTypeCollectionView reloadData];
+        
+    }
+    
+}
+
+
+- (void) didFinishServiceWithFailure:(NSString *)errorMsg {
+    
+    
+    [SVProgressHUD dismiss];
+    
+    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:nil
+                                                  message:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)
+                                                 delegate:self
+                                        cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                        otherButtonTitles: nil];
+    
+    if (![errorMsg isEqualToString:@""]) {
+        [alert setMessage:errorMsg];
+    }
+    
+    if ([errorMsg isEqualToString:NSLocalizedString(@"Verify your internet connection and try again", nil)]) {
+        [alert setTitle:NSLocalizedString(@"Connection unsuccessful", nil)];
+    }
+    
+    [alert show];
+    
+    return;
+    
+}
+
+
+
+
+#pragma mark - Modalobject
+
+- (NSMutableDictionary *) prepareDictionaryForGetPostedAdverts {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    return dict;
+    
+}
+
+@end

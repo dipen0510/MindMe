@@ -166,6 +166,7 @@
 		D43143CC1F98E02B00FE0406 /* VisbyRoundCF-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C41F98E02B00FE0406 /* VisbyRoundCF-Bold.otf */; };
 		D43EE8CE1FB30AF100BE7E08 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43EE8CD1FB30AF100BE7E08 /* ContactUsViewController.m */; };
 		D45B85321FE4E70600074689 /* DataSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D45B85311FE4E70600074689 /* DataSyncManager.m */; };
+		D46D63C5204BF07700BB69C7 /* ChatStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D46D63C4204BF07700BB69C7 /* ChatStartViewController.m */; };
 		D4736B4C1FBB05B7004A51A2 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B4B1FBB05B7004A51A2 /* TTTAttributedLabel.m */; };
 		D4736B4F1FBB0B2A004A51A2 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B4E1FBB0B2A004A51A2 /* PrivacyPolicyViewController.m */; };
 		D4736B521FBB1015004A51A2 /* TnCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B511FBB1015004A51A2 /* TnCViewController.m */; };
@@ -551,6 +552,8 @@
 		D43EE8CD1FB30AF100BE7E08 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
 		D45B85301FE4E70600074689 /* DataSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSyncManager.h; sourceTree = "<group>"; };
 		D45B85311FE4E70600074689 /* DataSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSyncManager.m; sourceTree = "<group>"; };
+		D46D63C3204BF07700BB69C7 /* ChatStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatStartViewController.h; sourceTree = "<group>"; };
+		D46D63C4204BF07700BB69C7 /* ChatStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatStartViewController.m; sourceTree = "<group>"; };
 		D4736B4A1FBB05B7004A51A2 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		D4736B4B1FBB05B7004A51A2 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		D4736B4D1FBB0B2A004A51A2 /* PrivacyPolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicyViewController.h; sourceTree = "<group>"; };
@@ -1604,6 +1607,8 @@
 				D4041B061FC0D737001F312E /* AddReviewViewController.m */,
 				D4041C2B1FC0DFFB001F312E /* ChatViewController.h */,
 				D4041C2C1FC0DFFC001F312E /* ChatViewController.m */,
+				D46D63C3204BF07700BB69C7 /* ChatStartViewController.h */,
+				D46D63C4204BF07700BB69C7 /* ChatStartViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -2177,6 +2182,7 @@
 				D4041C251FC0DEF5001F312E /* UIImage+QM.m in Sources */,
 				D4041BF71FC0DEF5001F312E /* QMBaseMediaCell.m in Sources */,
 				D410BBEC201146C60038A017 /* ForgotPasswordViewController.m in Sources */,
+				D46D63C5204BF07700BB69C7 /* ChatStartViewController.m in Sources */,
 				D41B6AAC1FDAC3A400E1F312 /* ActionSheetDatePicker.m in Sources */,
 				D4041C061FC0DEF5001F312E /* QMChatAttachmentIncomingCell.m in Sources */,
 				D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */,
