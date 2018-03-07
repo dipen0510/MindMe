@@ -39,6 +39,8 @@
     
     _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
     
+    selectedCareType = @"";
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -112,6 +114,7 @@
     
     selectedCareType = [[allCareTypesArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
     [collectionView reloadData];
+    [self.view endEditing:YES];
     
 }
 
@@ -135,6 +138,15 @@
 
 
 - (IBAction)sendButtonTapped:(id)sender {
+    
+    NSString* formValid = [self isFormValid];
+    if (!formValid) {
+        [self startSendMessageService];
+    }
+    else {
+        [SVProgressHUD showErrorWithStatus:formValid];
+    }
+    
 }
 
 - (IBAction)backButtonTapped:(id)sender {
@@ -143,6 +155,19 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
+}
+
+- (NSString*) isFormValid {
+    if ([_titleTextField.text isEqualToString:@""]) {
+        return @"Please enter message title to proceed";
+    }
+    else if ([_messageTextField.text isEqualToString:@""]) {
+        return @"Please enter message to proceed";
+    }
+    else if ([selectedCareType isEqualToString:@""]) {
+        return @"Please select a care type to proceed";
+    }
+    return nil;
 }
 
 
@@ -156,6 +181,17 @@
     manager.serviceKey = GetPostedAdverts;
     manager.delegate = self;
     [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForGetPostedAdverts]];
+    
+}
+
+- (void) startSendMessageService {
+    
+    [SVProgressHUD showWithStatus:@"Sending Message"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = SendMessage;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForSendMesssage]];
     
 }
 
@@ -182,6 +218,12 @@
         }
         
         [_careTypeCollectionView reloadData];
+        
+    }
+    if ([requestServiceKey isEqualToString:SendMessage]) {
+        
+        [SVProgressHUD showSuccessWithStatus:@"Message sent successfully"];
+        [self.navigationController popViewControllerAnimated:YES];
         
     }
     
@@ -227,6 +269,40 @@
     }
     else {
         [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForSendMesssage {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"User_type"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"User_type"];
+    }
+    
+    [dict setObject:[_advertDict valueForKey:@"Userid"] forKey:@"Userid"];
+    [dict setObject:[NSString stringWithFormat:@"%@",[[SharedClass sharedInstance] userId]] forKey:@"from"];
+    [dict setObject:_messageTextField.text forKey:@"message"];
+    [dict setObject:_titleTextField.text forKey:@"message_title"];
+    
+    if (_isOpenedFromFavorites) {
+        [dict setObject:[_advertDict valueForKey:@"advert_id"] forKey:@"refer_id"];
+    }
+    else {
+        [dict setObject:[_advertDict valueForKey:@"ID"] forKey:@"refer_id"];
+    }
+    
+    for (NSMutableDictionary* tmpDict in allCareTypesArr) {
+        if ([[tmpDict valueForKey:@"care_type"] isEqualToString:selectedCareType]) {
+            [dict setObject:[tmpDict valueForKey:@"ID"] forKey:@"sender_profile_id"];
+            break;
+        }
     }
     
     return dict;

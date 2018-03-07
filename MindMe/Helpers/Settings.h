@@ -43,6 +43,8 @@
 #define ReviewAdvert @"likeOrDislike/saveReviewByParent"
 #define GetAllReviews @"likeOrDislike/getallreview"
 
+#define SendMessage @"conversations/sendsms"
+
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"
 

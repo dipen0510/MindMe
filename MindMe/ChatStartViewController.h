@@ -13,6 +13,9 @@
     NSMutableArray* allCareTypesArr;
 }
 
+@property (strong, nonatomic) NSMutableDictionary* advertDict;
+@property BOOL isOpenedFromFavorites;
+
 @property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;

@@ -11,6 +11,7 @@
 #import "AdsDetailCollectionViewCell.h"
 #import "AddReviewViewController.h"
 #import "ReviewsTableViewCell.h"
+#import "ChatStartViewController.h"
 
 @interface AdsDetailViewController ()
 
@@ -353,6 +354,13 @@
         
         AddReviewViewController* controller = (AddReviewViewController *)[segue destinationViewController];
         controller.advertDict = _advertDict;
+        
+    }
+    if ([segue.identifier isEqualToString:@"showChatStartSegue"]) {
+        
+        ChatStartViewController* controller = (ChatStartViewController *)[segue destinationViewController];
+        controller.advertDict = _advertDict;
+        controller.isOpenedFromFavorites = _isOpenedFromFavorites;
         
     }
     
