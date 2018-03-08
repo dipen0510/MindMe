@@ -541,7 +541,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="58" y="533.5" width="260" height="41"/>
+                                <rect key="frame" x="58" y="533.5" width="260" height="29.5"/>
                                 <string key="text">By pressing Sign Up you agree with the
 Terms of Services and Privacy Policy</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
@@ -6273,7 +6273,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yhj-ON-ojt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yAc-9C-3no">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yAc-9C-3no">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -6292,7 +6292,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wg9-Nn-sTY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="etA-fm-vvl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="etA-fm-vvl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -11232,6 +11232,10 @@ We may send emails to existing customers or prospective customers who have enqui
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zny-Jl-526">
                                 <rect key="frame" x="0.0" y="139" width="375" height="462"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2NL-Aw-00k" id="DGd-05-ckN"/>
+                                    <outlet property="delegate" destination="2NL-Aw-00k" id="cxO-9X-wmi"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6sE-zM-akS">
                                 <rect key="frame" x="0.0" y="84" width="375" height="55"/>
@@ -11313,6 +11317,7 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="archivedButton" destination="ECy-jE-ICk" id="UK5-2R-EYM"/>
                         <outlet property="favoritesView" destination="iIC-Mi-pUr" id="mw6-D7-Upl"/>
                         <outlet property="inboxButton" destination="fk0-Bi-UoC" id="TAy-PZ-M21"/>
+                        <outlet property="listTableView" destination="zny-Jl-526" id="5gp-m5-zLt"/>
                         <outlet property="profileView" destination="r7N-c2-bZK" id="4a1-dF-Fmw"/>
                         <outlet property="searchView" destination="lu3-Hf-KLG" id="1lS-mz-3CL"/>
                         <outlet property="sentButton" destination="lJ6-32-Toh" id="Cg0-Qz-lok"/>

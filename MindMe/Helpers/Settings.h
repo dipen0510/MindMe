@@ -44,6 +44,7 @@
 #define GetAllReviews @"likeOrDislike/getallreview"
 
 #define SendMessage @"conversations/sendsms"
+#define GetAllMessageList @"conversations/index"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"

@@ -142,6 +142,10 @@
 		D41558721FB461A60031E23F /* AdsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41558711FB461A60031E23F /* AdsDetailViewController.m */; };
 		D41558751FB4E9590031E23F /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41558741FB4E9590031E23F /* ChangePasswordViewController.m */; };
 		D415CB1120513D5F005866C6 /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CB1020513D5F005866C6 /* ChatListViewController.m */; };
+		D415CB1520519C1C005866C6 /* ChatListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CB1320519C1C005866C6 /* ChatListTableViewCell.m */; };
+		D415CB1620519C1C005866C6 /* ChatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D415CB1420519C1C005866C6 /* ChatListTableViewCell.xib */; };
+		D415CB212051A4FB005866C6 /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CB1F2051A4FB005866C6 /* NSDate+TimeAgo.m */; };
+		D415CB222051A4FB005866C6 /* NSDateTimeAgo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D415CB202051A4FB005866C6 /* NSDateTimeAgo.bundle */; };
 		D41B6AAC1FDAC3A400E1F312 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6A9A1FDAC3A400E1F312 /* ActionSheetDatePicker.m */; };
 		D41B6AAD1FDAC3A400E1F312 /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6A9C1FDAC3A400E1F312 /* ActionSheetLocalePicker.m */; };
 		D41B6AAE1FDAC3A400E1F312 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6AA01FDAC3A400E1F312 /* ActionSheetDistancePicker.m */; };
@@ -511,6 +515,12 @@
 		D41558741FB4E9590031E23F /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
 		D415CB0F20513D5F005866C6 /* ChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListViewController.h; sourceTree = "<group>"; };
 		D415CB1020513D5F005866C6 /* ChatListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListViewController.m; sourceTree = "<group>"; };
+		D415CB1220519C1C005866C6 /* ChatListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListTableViewCell.h; sourceTree = "<group>"; };
+		D415CB1320519C1C005866C6 /* ChatListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListTableViewCell.m; sourceTree = "<group>"; };
+		D415CB1420519C1C005866C6 /* ChatListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatListTableViewCell.xib; sourceTree = "<group>"; };
+		D415CB1E2051A4FB005866C6 /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
+		D415CB1F2051A4FB005866C6 /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
+		D415CB202051A4FB005866C6 /* NSDateTimeAgo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NSDateTimeAgo.bundle; sourceTree = "<group>"; };
 		D41B6A981FDAC3A400E1F312 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
 		D41B6A991FDAC3A400E1F312 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
 		D41B6A9A1FDAC3A400E1F312 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
@@ -1357,6 +1367,16 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		D415CB172051A4E5005866C6 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D415CB1E2051A4FB005866C6 /* NSDate+TimeAgo.h */,
+				D415CB1F2051A4FB005866C6 /* NSDate+TimeAgo.m */,
+				D415CB202051A4FB005866C6 /* NSDateTimeAgo.bundle */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		D41B6A971FDAC3A400E1F312 /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1464,6 +1484,7 @@
 		D48EE4A31F9B2A2400CB43A0 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D415CB172051A4E5005866C6 /* Categories */,
 				D48AE2302014BC3F00C2F165 /* PEPhotoCropEditor */,
 				D41B6A971FDAC3A400E1F312 /* Pickers */,
 				D4041C311FC0E157001F312E /* FFCircularProgressView */,
@@ -1710,6 +1731,9 @@
 				D4D42374204025870068BBDA /* ReviewsTableViewCell.h */,
 				D4D42375204025870068BBDA /* ReviewsTableViewCell.m */,
 				D4D42376204025870068BBDA /* ReviewsTableViewCell.xib */,
+				D415CB1220519C1C005866C6 /* ChatListTableViewCell.h */,
+				D415CB1320519C1C005866C6 /* ChatListTableViewCell.m */,
+				D415CB1420519C1C005866C6 /* ChatListTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1877,6 +1901,7 @@
 				D4A019C41F850F0200E311B7 /* LaunchScreen.storyboard in Resources */,
 				D4041C181FC0DEF5001F312E /* QMAudioRecordView.xib in Resources */,
 				D43143CB1F98E02B00FE0406 /* VisbyRoundCF-Regular.otf in Resources */,
+				D415CB1620519C1C005866C6 /* ChatListTableViewCell.xib in Resources */,
 				D4041C051FC0DEF5001F312E /* QMChatLocationIncomingCell.xib in Resources */,
 				D4041BEA1FC0DEF5001F312E /* QMChatAttachmentOutgoingCell.xib in Resources */,
 				D4D4237F20402E760068BBDA /* Montserrat-Regular.otf in Resources */,
@@ -1908,6 +1933,7 @@
 				D43143C61F98E02B00FE0406 /* VisbyRoundCF-Heavy.otf in Resources */,
 				D4A019C11F850F0200E311B7 /* Assets.xcassets in Resources */,
 				D4041AFE1FC0C601001F312E /* UploadDocumentsCollectionViewCell.xib in Resources */,
+				D415CB222051A4FB005866C6 /* NSDateTimeAgo.bundle in Resources */,
 				D4041BFE1FC0DEF5001F312E /* QMImageIncomingCell.xib in Resources */,
 				D4041BDC1FC0DEF5001F312E /* ic_play_grey.pdf in Resources */,
 				D4A019BF1F850F0200E311B7 /* Main.storyboard in Resources */,
@@ -2163,6 +2189,7 @@
 				D4A019B61F850F0200E311B7 /* main.m in Sources */,
 				D4F05F2C1FBDDC88002024F6 /* PaymentViewController.m in Sources */,
 				D4041C6A1FC0E157001F312E /* SDWebImageDownloader.m in Sources */,
+				D415CB1520519C1C005866C6 /* ChatListTableViewCell.m in Sources */,
 				D41B6AAD1FDAC3A400E1F312 /* ActionSheetLocalePicker.m in Sources */,
 				D4041C1D1FC0DEF5001F312E /* QMChatCollectionViewFlowLayout.m in Sources */,
 				D4041C2D1FC0DFFC001F312E /* ChatViewController.m in Sources */,
@@ -2180,6 +2207,7 @@
 				D4041C701FC0E157001F312E /* SDWebImageDownloaderOperation.m in Sources */,
 				D4F05F171FBD67E8002024F6 /* STCollapseTableView.m in Sources */,
 				D4041C191FC0DEF5001F312E /* QMImageView.m in Sources */,
+				D415CB212051A4FB005866C6 /* NSDate+TimeAgo.m in Sources */,
 				D4041BE81FC0DEF5001F312E /* QMChatDataSource.m in Sources */,
 				D4041C241FC0DEF5001F312E /* UIView+QM.m in Sources */,
 				D4041C1A1FC0DEF5001F312E /* QMAudioRecordButton.m in Sources */,

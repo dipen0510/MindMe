@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSDate+TimeAgo.h"
 
-@interface ChatListViewController : UIViewController
+@interface ChatListViewController : UIViewController <DataSyncManagerDelegate> {
+    NSMutableArray* msgListArr;
+    int selectedIndex;
+}
 
 @property (weak, nonatomic) IBOutlet UIView *favoritesView;
 @property (weak, nonatomic) IBOutlet UIView *searchView;
@@ -16,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *inboxButton;
 @property (weak, nonatomic) IBOutlet UIButton *sentButton;
 @property (weak, nonatomic) IBOutlet UIButton *archivedButton;
+@property (weak, nonatomic) IBOutlet UITableView *listTableView;
 
 - (IBAction)menuButtonTapped:(id)sender;
 - (IBAction)inboxButtonTapped:(id)sender;
