@@ -280,10 +280,10 @@
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
-        [dict setObject:@"carer" forKey:@"User_type"];
+        [dict setObject:@"carer" forKey:@"user_type"];
     }
     else {
-        [dict setObject:@"parent" forKey:@"User_type"];
+        [dict setObject:@"parent" forKey:@"user_type"];
     }
     
     [dict setObject:[_advertDict valueForKey:@"Userid"] forKey:@"Userid"];
