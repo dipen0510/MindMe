@@ -141,6 +141,7 @@
 		D415586F1FB42E6B0031E23F /* tmpAdsHome.png in Resources */ = {isa = PBXBuildFile; fileRef = D415586E1FB42E6B0031E23F /* tmpAdsHome.png */; };
 		D41558721FB461A60031E23F /* AdsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41558711FB461A60031E23F /* AdsDetailViewController.m */; };
 		D41558751FB4E9590031E23F /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41558741FB4E9590031E23F /* ChangePasswordViewController.m */; };
+		D415CB1120513D5F005866C6 /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CB1020513D5F005866C6 /* ChatListViewController.m */; };
 		D41B6AAC1FDAC3A400E1F312 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6A9A1FDAC3A400E1F312 /* ActionSheetDatePicker.m */; };
 		D41B6AAD1FDAC3A400E1F312 /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6A9C1FDAC3A400E1F312 /* ActionSheetLocalePicker.m */; };
 		D41B6AAE1FDAC3A400E1F312 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6AA01FDAC3A400E1F312 /* ActionSheetDistancePicker.m */; };
@@ -508,6 +509,8 @@
 		D41558711FB461A60031E23F /* AdsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsDetailViewController.m; sourceTree = "<group>"; };
 		D41558731FB4E9590031E23F /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
 		D41558741FB4E9590031E23F /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		D415CB0F20513D5F005866C6 /* ChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListViewController.h; sourceTree = "<group>"; };
+		D415CB1020513D5F005866C6 /* ChatListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListViewController.m; sourceTree = "<group>"; };
 		D41B6A981FDAC3A400E1F312 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
 		D41B6A991FDAC3A400E1F312 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
 		D41B6A9A1FDAC3A400E1F312 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
@@ -1609,6 +1612,8 @@
 				D4041C2C1FC0DFFC001F312E /* ChatViewController.m */,
 				D46D63C3204BF07700BB69C7 /* ChatStartViewController.h */,
 				D46D63C4204BF07700BB69C7 /* ChatStartViewController.m */,
+				D415CB0F20513D5F005866C6 /* ChatListViewController.h */,
+				D415CB1020513D5F005866C6 /* ChatListViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -2161,6 +2166,7 @@
 				D41B6AAD1FDAC3A400E1F312 /* ActionSheetLocalePicker.m in Sources */,
 				D4041C1D1FC0DEF5001F312E /* QMChatCollectionViewFlowLayout.m in Sources */,
 				D4041C2D1FC0DFFC001F312E /* ChatViewController.m in Sources */,
+				D415CB1120513D5F005866C6 /* ChatListViewController.m in Sources */,
 				D48EE4B61F9B2A2C00CB43A0 /* LGSideMenuController.m in Sources */,
 				D4041C031FC0DEF5001F312E /* QMVideoOutgoingCell.m in Sources */,
 				D4041C641FC0E157001F312E /* README.md in Sources */,

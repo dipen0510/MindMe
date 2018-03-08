@@ -400,7 +400,7 @@
 - (void) messagesViewTapped {
     
     if (![[SharedClass sharedInstance] isGuestUser]) {
-        [self performSegueWithIdentifier:@"showChatSegue" sender:nil];
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ChatListViewController" forSideMenuController:self.sideMenuController];
     }
     else {
         [self.sideMenuController.navigationController popViewControllerAnimated:YES];
