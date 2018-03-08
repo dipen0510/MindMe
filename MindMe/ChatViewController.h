@@ -11,6 +11,8 @@
 
 @interface ChatViewController : QMChatViewController
 
+@property (strong, nonatomic) NSMutableDictionary* chatInfoDict;
+
 - (IBAction)backButtonTapped:(id)sender;
 
 @end

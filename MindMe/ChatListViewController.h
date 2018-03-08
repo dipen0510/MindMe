@@ -12,6 +12,7 @@
 @interface ChatListViewController : UIViewController <DataSyncManagerDelegate> {
     NSMutableArray* msgListArr;
     int selectedIndex;
+    NSMutableDictionary* selectedChatDict;
 }
 
 @property (weak, nonatomic) IBOutlet UIView *favoritesView;

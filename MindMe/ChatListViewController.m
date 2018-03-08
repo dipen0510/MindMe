@@ -8,6 +8,7 @@
 
 #import "ChatListViewController.h"
 #import "ChatListTableViewCell.h"
+#import "ChatViewController.h"
 
 @interface ChatListViewController ()
 
@@ -44,15 +45,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"showChatSegue"]) {
+        
+        ChatViewController* controller = (ChatViewController *)[segue destinationViewController];
+        controller.chatInfoDict = selectedChatDict;
+        
+    }
+    
 }
-*/
+
 
 #pragma mark - User Interaction Methods
 
@@ -174,6 +183,9 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    selectedChatDict = [[NSMutableDictionary alloc] initWithDictionary:[msgListArr objectAtIndex:indexPath.row]];
+    [self performSegueWithIdentifier:@"showChatSegue" sender:nil];
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -197,6 +209,24 @@
     NSDate* date = [dateformatter dateFromString:[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"date_sent"]];
     
     cell.dateLabel.text = [date dateTimeAgo];
+    
+    if (![[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqualToString:@""]) {
+        __weak UIImageView* weakImageView = cell.profileImgView;
+        [cell.profileImgView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceURL,[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"image_path"]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
+                                                                     cachePolicy:NSURLRequestReturnCacheDataElseLoad
+                                                                 timeoutInterval:60.0] placeholderImage:[UIImage imageNamed:@"profile_icon"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+            
+            weakImageView.alpha = 0.0;
+            weakImageView.image = image;
+            [UIView animateWithDuration:0.25
+                             animations:^{
+                                 weakImageView.alpha = 1.0;
+                             }];
+        } failure:NULL];
+    }
+    else {
+        cell.profileImgView.image = [UIImage imageNamed:@"profile_icon"];
+    }
     
 }
 

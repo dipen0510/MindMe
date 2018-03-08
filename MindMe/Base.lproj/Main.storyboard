@@ -541,7 +541,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="58" y="533.5" width="260" height="29.5"/>
+                                <rect key="frame" x="58" y="533.5" width="260" height="41"/>
                                 <string key="text">By pressing Sign Up you agree with the
 Terms of Services and Privacy Policy</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
@@ -11322,6 +11322,7 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="searchView" destination="lu3-Hf-KLG" id="1lS-mz-3CL"/>
                         <outlet property="sentButton" destination="lJ6-32-Toh" id="Cg0-Qz-lok"/>
                         <segue destination="T7W-9q-owI" kind="show" identifier="showFavoritesSegue" id="rbF-Jg-9rI"/>
+                        <segue destination="AJO-Ph-pca" kind="show" identifier="showChatSegue" id="y8Y-3Z-5Nq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="db2-NP-BN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -11392,10 +11393,10 @@ We may send emails to existing customers or prospective customers who have enqui
     <inferredMetricsTieBreakers>
         <segue reference="p8p-Lv-PZS"/>
         <segue reference="rbF-Jg-9rI"/>
+        <segue reference="y8Y-3Z-5Nq"/>
         <segue reference="kMe-Y4-Jvu"/>
         <segue reference="4Bd-9L-l1d"/>
         <segue reference="biN-AH-pt4"/>
-        <segue reference="1mT-Qk-sm6"/>
         <segue reference="eOh-mb-7xJ"/>
     </inferredMetricsTieBreakers>
 </document>
