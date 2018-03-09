@@ -582,7 +582,7 @@ NS_ENUM(NSUInteger, QMMessageType) {
         
         [self.chatDataSource addMessage:message];
         
-        if (message.senderID!=self.senderID) {
+        if (message.senderID==self.senderID) {
             if (![[dict valueForKey:@"image_path"] isEqual:[NSNull null]]) {
                 if (![[dict valueForKey:@"image_path"] isEqualToString:@""]) {
                     receiverImgUrlStr = [dict valueForKey:@"image_path"];
