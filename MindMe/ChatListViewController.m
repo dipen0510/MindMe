@@ -38,6 +38,8 @@
     msgListArr = [[NSMutableArray alloc] init];
     [self startSendMessageService];
     
+    self.listTableView.allowsMultipleSelectionDuringEditing = NO;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -195,6 +197,29 @@
     
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return YES if you want the specified item to be editable.
+    
+    if (selectedIndex == 0) {
+        return YES;
+    }
+    
+    return NO;
+    
+}
+
+-(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Archive"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
+        //insert your archive Action here
+        
+        selectedChatDict = [[NSMutableDictionary alloc] initWithDictionary:[msgListArr objectAtIndex:indexPath.row]];
+        [self startArchiveMessageService];
+        
+    }];
+    deleteAction.backgroundColor = [UIColor colorWithRed:238./255. green:128./255. blue:30./255. alpha:1.0];
+    return @[deleteAction];
+}
 
 - (void) populateContentForAdsCell:(ChatListTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
     
@@ -210,23 +235,29 @@
     
     cell.dateLabel.text = [date dateTimeAgo];
     
-    if (![[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqualToString:@""]) {
-        __weak UIImageView* weakImageView = cell.profileImgView;
-        [cell.profileImgView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceURL,[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"image_path"]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
-                                                                     cachePolicy:NSURLRequestReturnCacheDataElseLoad
-                                                                 timeoutInterval:60.0] placeholderImage:[UIImage imageNamed:@"profile_icon"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-            
-            weakImageView.alpha = 0.0;
-            weakImageView.image = image;
-            [UIView animateWithDuration:0.25
-                             animations:^{
-                                 weakImageView.alpha = 1.0;
-                             }];
-        } failure:NULL];
+    if (![[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqual:[NSNull null]]) {
+        if (![[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqualToString:@""]) {
+            __weak UIImageView* weakImageView = cell.profileImgView;
+            [cell.profileImgView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceURL,[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"image_path"]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
+                                                                         cachePolicy:NSURLRequestReturnCacheDataElseLoad
+                                                                     timeoutInterval:60.0] placeholderImage:[UIImage imageNamed:@"profile_icon"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                
+                weakImageView.alpha = 0.0;
+                weakImageView.image = image;
+                [UIView animateWithDuration:0.25
+                                 animations:^{
+                                     weakImageView.alpha = 1.0;
+                                 }];
+            } failure:NULL];
+        }
+        else {
+            cell.profileImgView.image = [UIImage imageNamed:@"profile_icon"];
+        }
     }
     else {
         cell.profileImgView.image = [UIImage imageNamed:@"profile_icon"];
     }
+    
     
 }
 
@@ -240,6 +271,17 @@
     manager.serviceKey = GetAllMessageList;
     manager.delegate = self;
     [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForSendMesssage]];
+    
+}
+
+- (void) startArchiveMessageService {
+    
+    [SVProgressHUD showWithStatus:@"Archiving Message"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = ArchiveMessage;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForArchiveMesssage]];
     
 }
 
@@ -259,6 +301,12 @@
         }
         
         [_listTableView reloadData];
+        
+    }
+    if ([requestServiceKey isEqualToString:ArchiveMessage]) {
+        
+        [SVProgressHUD showSuccessWithStatus:@"Message archived successfully"];
+        [self startSendMessageService];
         
     }
     
@@ -321,6 +369,25 @@
         break;
         
     }
+    
+    return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForArchiveMesssage {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    [dict setObject:[selectedChatDict valueForKey:@"refer_id"] forKey:@"refer_id"];
+    [dict setObject:[selectedChatDict valueForKey:@"from"] forKey:@"from"];
+    [dict setObject:[selectedChatDict valueForKey:@"sender_profile_id"] forKey:@"sender_profile_id"];
     
     return dict;
     

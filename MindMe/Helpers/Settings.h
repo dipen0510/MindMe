@@ -45,6 +45,7 @@
 
 #define SendMessage @"conversations/sendsms"
 #define GetAllMessageList @"conversations/index"
+#define ArchiveMessage @"conversations/archive"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"
