@@ -355,11 +355,14 @@ NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
 }
 
 static inline QBChatMessage *dateDividerMessage(NSDate *date, BOOL isCustom) {
-    QBChatMessage *dividerMessage = [QBChatMessage new];
-    dividerMessage.text = isCustom ? [QMDateUtils formattedLastSeenString:date withTimePrefix:nil] : [QMDateUtils formattedStringFromDate:date];
-    dividerMessage.dateSent = date;
-    dividerMessage.isDateDividerMessage = YES;
-    return dividerMessage;
+//    QBChatMessage *dividerMessage = [QBChatMessage new];
+//    dividerMessage.text = isCustom ? [QMDateUtils formattedLastSeenString:date withTimePrefix:nil] : [QMDateUtils formattedStringFromDate:date];
+//    dividerMessage.dateSent = date;
+//    dividerMessage.isDateDividerMessage = YES;
+//    return dividerMessage;
+    
+    return nil;
+    
 }
 
 - (void)handleMessage:(QBChatMessage *)message forUpdateType:(QMDataSourceActionType)updateType dividerMessage:(QBChatMessage **)dividerMessage removedDivider:(NSDate **)removedDivider {

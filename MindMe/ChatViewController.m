@@ -43,9 +43,23 @@ NS_ENUM(NSUInteger, QMMessageType) {
     
     self.view.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
     
-    self.senderID = 2000;
+    self.senderID = [[_chatInfoDict valueForKey:@"from"] intValue];
+    
+    if (!_isSentMessage) {
+        self.senderID = [[_chatInfoDict valueForKey:@"Userid"] intValue];
+    }
+    
     self.senderDisplayName = [NSString stringWithFormat:@"%@ %@.",[_chatInfoDict valueForKey:@"first_name"],[[_chatInfoDict valueForKey:@"second_name"] substringToIndex:1]];
     self.title = @"Chat";
+    
+    senderImgUrlStr = @"";
+    receiverImgUrlStr = @"";
+    if (![[_chatInfoDict valueForKey:@"image_path"] isEqual:[NSNull null]]) {
+        if (![[_chatInfoDict valueForKey:@"image_path"] isEqualToString:@""]) {
+            senderImgUrlStr = [_chatInfoDict valueForKey:@"image_path"];
+        }
+    }
+
     
     [QBSettings setAuthKey:@"xxx"];
     [QBSettings setAccountKey:@"xxx"];
@@ -56,19 +70,19 @@ NS_ENUM(NSUInteger, QMMessageType) {
 //    message1.text = @"IGNALY\nwould like to chat with you";
 //    message1.dateSent = [NSDate dateWithTimeInterval:-12.0f sinceDate:[NSDate date]];
     //
-    QBChatMessage *message2 = [QBChatMessage message];
-    message2.senderID = self.senderID;
-    message2.text = @"Why Q-municate is a right choice?";
-    message2.dateSent = [NSDate dateWithTimeInterval:-9.0f sinceDate:[NSDate date]];
-    //
-    QBChatMessage *message3 = [QBChatMessage message];
-    message3.senderID = 20001;
-    message3.text = @"Q-municate comes with powerful instant messaging right out of the box. Powered by the flexible XMPP protocol and Quickblox signalling technologies, with compatibility for server-side chat history, group chats, attachments and user avatars, it's pretty powerful. It also has chat bubbles and user presence (online/offline).";
-    message3.dateSent = [NSDate dateWithTimeInterval:-6.0f sinceDate:[NSDate date]];
-    // message with an attachment
-    QBChatMessage *message4 = [QBChatMessage message];
-    message4.ID = @"4";
-    message4.senderID = 20001;
+//    QBChatMessage *message2 = [QBChatMessage message];
+//    message2.senderID = self.senderID;
+//    message2.text = @"Why Q-municate is a right choice?";
+//    message2.dateSent = [NSDate dateWithTimeInterval:-9.0f sinceDate:[NSDate date]];
+//    //
+//    QBChatMessage *message3 = [QBChatMessage message];
+//    message3.senderID = 20001;
+//    message3.text = @"Q-municate comes with powerful instant messaging right out of the box. Powered by the flexible XMPP protocol and Quickblox signalling technologies, with compatibility for server-side chat history, group chats, attachments and user avatars, it's pretty powerful. It also has chat bubbles and user presence (online/offline).";
+//    message3.dateSent = [NSDate dateWithTimeInterval:-6.0f sinceDate:[NSDate date]];
+//    // message with an attachment
+//    QBChatMessage *message4 = [QBChatMessage message];
+//    message4.ID = @"4";
+//    message4.senderID = 20001;
     
 //    QBChatAttachment *attachment = [QBChatAttachment new];
 //    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"quickblox-image" ofType:@"png"];
@@ -76,7 +90,10 @@ NS_ENUM(NSUInteger, QMMessageType) {
 //    message4.attachments = @[attachment];
 //    message4.dateSent = [NSDate dateWithTimeInterval:-3.0f sinceDate:[NSDate date]];
     
-    [self.chatDataSource addMessages:@[message2, message3]];
+//    [self.chatDataSource addMessages:@[message2, message3]];
+    
+    [self startGetMessageService];
+    
 }
 
 #pragma mark Tool bar Actions
@@ -86,7 +103,7 @@ NS_ENUM(NSUInteger, QMMessageType) {
                   senderId:(NSUInteger)senderId
          senderDisplayName:(NSString *)senderDisplayName
                       date:(NSDate *)date {
-    
+//    
     QBChatMessage *message = [QBChatMessage message];
     message.text = text;
     message.senderID = senderId;
@@ -95,6 +112,9 @@ NS_ENUM(NSUInteger, QMMessageType) {
     [self.chatDataSource addMessage:message];
     
     [self finishSendingMessageAnimated:YES];
+    
+    [self startSendMessageServiceForMessage:text];
+    
 }
 
 - (void)didPickAttachmentImage:(UIImage *)image {
@@ -223,12 +243,29 @@ NS_ENUM(NSUInteger, QMMessageType) {
     }
     
     QMChatCell* cell1 = (QMChatCell *)cell;
-    if (message.senderID == 2000) {
-        cell1.avatarView.image = [UIImage imageNamed:@"baby_pic"];
+    
+    NSString* avatarImgStr = @"";
+    
+    if (message.senderID == [[_chatInfoDict valueForKey:@"from"] intValue]) {
+        avatarImgStr = senderImgUrlStr;
     }
     else {
-        cell1.avatarView.image = [UIImage imageNamed:@"homelogin"];
+        avatarImgStr = receiverImgUrlStr;
     }
+    
+    __weak UIImageView* weakImageView = cell1.avatarView;
+    [cell1.avatarView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceURL,avatarImgStr] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
+                                                              cachePolicy:NSURLRequestReturnCacheDataElseLoad
+                                                          timeoutInterval:60.0] placeholderImage:[UIImage imageNamed:@"profile_icon"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        
+        weakImageView.alpha = 0.0;
+        weakImageView.image = image;
+        [UIView animateWithDuration:0.25
+                         animations:^{
+                             weakImageView.alpha = 1.0;
+                         }];
+    } failure:NULL];
+    
     cell1.avatarView.layer.cornerRadius = cell1.avatarView.frame.size.height/2.;
     cell1.avatarView.layer.masksToBounds = YES;
     
@@ -349,4 +386,212 @@ NS_ENUM(NSUInteger, QMMessageType) {
 - (IBAction)backButtonTapped:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+#pragma mark - API Helpers
+
+- (void) startGetMessageService {
+    
+    [SVProgressHUD showWithStatus:@"Refreshing List"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GetAllConversations;
+    manager.delegate = self;
+    
+    if (_isSentMessage) {
+        [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForGetSentMessage]];
+    }
+    else {
+        [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForGetInboxMessage]];
+    }
+    
+    
+}
+
+- (void) startSendMessageServiceForMessage:(NSString *)message {
+    
+//    [SVProgressHUD showWithStatus:@"Sending Message"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = SendMessage;
+    manager.delegate = nil;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForSendMesssage:message]];
+    
+}
+
+
+#pragma mark - DATASYNCMANAGER Delegates
+
+-(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
+    
+    if ([requestServiceKey isEqualToString:GetAllConversations]) {
+        
+        [SVProgressHUD showSuccessWithStatus:@"List refreshed successfully"];
+        
+        if ([[responseData valueForKey:@"message"] isKindOfClass:[NSArray class]]) {
+            
+            messagesArr = [[NSMutableArray alloc] initWithArray:[responseData valueForKey:@"message"]];
+            [self setupMessageDataSource];
+            
+        }
+        
+//        [_listTableView reloadData];
+        
+    }
+    if ([requestServiceKey isEqualToString:SendMessage]) {
+        
+        [SVProgressHUD showSuccessWithStatus:@"Message sent successfully"];
+        [self startGetMessageService];
+        
+    }
+    
+}
+
+
+- (void) didFinishServiceWithFailure:(NSString *)errorMsg {
+    
+    
+    [SVProgressHUD dismiss];
+    
+    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:nil
+                                                  message:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)
+                                                 delegate:self
+                                        cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                        otherButtonTitles: nil];
+    
+    if (![errorMsg isEqualToString:@""]) {
+        [alert setMessage:errorMsg];
+    }
+    
+    if ([errorMsg isEqualToString:NSLocalizedString(@"Verify your internet connection and try again", nil)]) {
+        [alert setTitle:NSLocalizedString(@"Connection unsuccessful", nil)];
+    }
+    
+    [alert show];
+    
+    return;
+    
+}
+
+
+
+
+#pragma mark - Modalobject
+
+- (NSMutableDictionary *) prepareDictionaryForGetInboxMessage {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:[_chatInfoDict valueForKey:@"sender_profile_id"] forKey:@"parent_advert_id"];
+        [dict setObject:[_chatInfoDict valueForKey:@"refer_id"] forKey:@"carer_advert_id"];
+        [dict setObject:[_chatInfoDict valueForKey:@"Userid"] forKey:@"carer_id"];
+        [dict setObject:[_chatInfoDict valueForKey:@"from"] forKey:@"parent_id"];
+    }
+    else {
+        [dict setObject:[_chatInfoDict valueForKey:@"refer_id"] forKey:@"parent_advert_id"];
+        [dict setObject:[_chatInfoDict valueForKey:@"sender_profile_id"] forKey:@"carer_advert_id"];
+        [dict setObject:[_chatInfoDict valueForKey:@"from"] forKey:@"carer_id"];
+        [dict setObject:[_chatInfoDict valueForKey:@"Userid"] forKey:@"parent_id"];
+    }
+    
+    return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForGetSentMessage {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:[_chatInfoDict valueForKey:@"sender_profile_id"] forKey:@"parent_advert_id"];
+        [dict setObject:[_chatInfoDict valueForKey:@"refer_id"] forKey:@"carer_advert_id"];
+        [dict setObject:[_chatInfoDict valueForKey:@"Userid"] forKey:@"carer_id"];
+        [dict setObject:[_chatInfoDict valueForKey:@"from"] forKey:@"parent_id"];
+    }
+    else {
+        [dict setObject:[_chatInfoDict valueForKey:@"refer_id"] forKey:@"parent_advert_id"];
+        [dict setObject:[_chatInfoDict valueForKey:@"sender_profile_id"] forKey:@"carer_advert_id"];
+        [dict setObject:[_chatInfoDict valueForKey:@"from"] forKey:@"carer_id"];
+        [dict setObject:[_chatInfoDict valueForKey:@"Userid"] forKey:@"parent_id"];
+    }
+    
+    return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForSendMesssage:(NSString *)message {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"user_type"];
+        if (_isSentMessage) {
+            [dict setObject:[_chatInfoDict valueForKey:@"refer_id"] forKey:@"refer_id"];
+            [dict setObject:[_chatInfoDict valueForKey:@"sender_profile_id"] forKey:@"sender_profile_id"];
+            [dict setObject:[_chatInfoDict valueForKey:@"Userid"] forKey:@"Userid"];
+            [dict setObject:[NSString stringWithFormat:@"%@",[[SharedClass sharedInstance] userId]] forKey:@"from"];
+        }
+        else {
+            [dict setObject:[_chatInfoDict valueForKey:@"sender_profile_id"] forKey:@"refer_id"];
+            [dict setObject:[_chatInfoDict valueForKey:@"refer_id"] forKey:@"sender_profile_id"];
+            [dict setObject:[_chatInfoDict valueForKey:@"from"] forKey:@"Userid"];
+            [dict setObject:[NSString stringWithFormat:@"%@",[[SharedClass sharedInstance] userId]] forKey:@"from"];
+        }
+
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"user_type"];
+        if (_isSentMessage) {
+            [dict setObject:[_chatInfoDict valueForKey:@"refer_id"] forKey:@"refer_id"];
+            [dict setObject:[_chatInfoDict valueForKey:@"sender_profile_id"] forKey:@"sender_profile_id"];
+            [dict setObject:[_chatInfoDict valueForKey:@"Userid"] forKey:@"Userid"];
+            [dict setObject:[NSString stringWithFormat:@"%@",[[SharedClass sharedInstance] userId]] forKey:@"from"];
+        }
+        else {
+            [dict setObject:[_chatInfoDict valueForKey:@"sender_profile_id"] forKey:@"refer_id"];
+            [dict setObject:[_chatInfoDict valueForKey:@"refer_id"] forKey:@"sender_profile_id"];
+            [dict setObject:[_chatInfoDict valueForKey:@"from"] forKey:@"Userid"];
+            [dict setObject:[NSString stringWithFormat:@"%@",[[SharedClass sharedInstance] userId]] forKey:@"from"];
+        }
+
+    }
+    
+    [dict setObject:message forKey:@"message"];
+    [dict setObject:[_chatInfoDict valueForKey:@"message_title"] forKey:@"message_title"];
+    
+    
+    return dict;
+    
+}
+
+- (void) setupMessageDataSource {
+    
+    [self.chatDataSource deleteMessages:[self.chatDataSource allMessages]];
+    
+    for (NSMutableDictionary* dict in messagesArr) {
+        
+        QBChatMessage *message = [QBChatMessage message];
+        message.text = [dict valueForKey:@"message1"];
+        message.senderID = [[dict valueForKey:@"from"] intValue];
+        
+        NSDateFormatter* dateformatter = [[NSDateFormatter alloc] init];
+        [dateformatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        NSDate* date = [dateformatter dateFromString:[dict valueForKey:@"created"]];
+        
+        message.dateSent = date;
+        
+        [self.chatDataSource addMessage:message];
+        
+        if (message.senderID!=self.senderID) {
+            if (![[dict valueForKey:@"image_path"] isEqual:[NSNull null]]) {
+                if (![[dict valueForKey:@"image_path"] isEqualToString:@""]) {
+                    receiverImgUrlStr = [dict valueForKey:@"image_path"];
+                }
+            }
+        }
+        
+    }
+    
+}
+
 @end

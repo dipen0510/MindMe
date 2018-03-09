@@ -60,6 +60,10 @@
         ChatViewController* controller = (ChatViewController *)[segue destinationViewController];
         controller.chatInfoDict = selectedChatDict;
         
+        if (selectedIndex == 1) {
+            controller.isSentMessage = YES;
+        }
+        
     }
     
 }

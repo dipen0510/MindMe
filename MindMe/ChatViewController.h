@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "QMChatViewController.h"
 
-@interface ChatViewController : QMChatViewController
+@interface ChatViewController : QMChatViewController <DataSyncManagerDelegate> {
+    NSMutableArray* messagesArr;
+    NSString* senderImgUrlStr;
+    NSString* receiverImgUrlStr;
+}
 
+@property BOOL isSentMessage;
 @property (strong, nonatomic) NSMutableDictionary* chatInfoDict;
 
 - (IBAction)backButtonTapped:(id)sender;
