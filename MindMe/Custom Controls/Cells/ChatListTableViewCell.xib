@@ -43,7 +43,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKB-MB-9u0">
-                        <rect key="frame" x="109" y="61" width="197" height="18.5"/>
+                        <rect key="frame" x="109" y="61" width="174" height="18.5"/>
                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -61,14 +61,22 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="359-5E-PdO">
+                        <rect key="frame" x="286" y="60.5" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="4sV-zW-u7u"/>
+                            <constraint firstAttribute="width" constant="20" id="GPd-5g-luH"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="r4A-Rq-jNZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="06i-Ys-8XP"/>
                     <constraint firstAttribute="trailing" secondItem="r4A-Rq-jNZ" secondAttribute="trailing" id="74C-Yf-1n8"/>
                     <constraint firstItem="eo0-f8-Sam" firstAttribute="leading" secondItem="8cQ-vB-MXr" secondAttribute="trailing" constant="16" id="Jr4-tl-Sdy"/>
                     <constraint firstAttribute="trailing" secondItem="izD-u1-NiO" secondAttribute="trailing" constant="14" id="QlB-sq-P3L"/>
-                    <constraint firstAttribute="trailing" secondItem="nKB-MB-9u0" secondAttribute="trailing" constant="14" id="RIp-N5-OGz"/>
+                    <constraint firstAttribute="trailing" secondItem="nKB-MB-9u0" secondAttribute="trailing" constant="37" id="RIp-N5-OGz"/>
                     <constraint firstItem="8cQ-vB-MXr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="WAh-PZ-NVB"/>
+                    <constraint firstItem="359-5E-PdO" firstAttribute="centerY" secondItem="nKB-MB-9u0" secondAttribute="centerY" id="Xjb-e8-ux5"/>
                     <constraint firstItem="nKB-MB-9u0" firstAttribute="top" secondItem="eo0-f8-Sam" secondAttribute="bottom" constant="8" id="fRf-v8-S6v"/>
                     <constraint firstItem="8cQ-vB-MXr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="hn1-NG-8H6"/>
                     <constraint firstItem="izD-u1-NiO" firstAttribute="centerY" secondItem="eo0-f8-Sam" secondAttribute="centerY" id="iyN-Le-1jT"/>
@@ -76,12 +84,14 @@
                     <constraint firstItem="nKB-MB-9u0" firstAttribute="leading" secondItem="8cQ-vB-MXr" secondAttribute="trailing" constant="16.5" id="kMy-5V-6P2"/>
                     <constraint firstAttribute="bottom" secondItem="r4A-Rq-jNZ" secondAttribute="bottom" id="kwr-SC-Cqu"/>
                     <constraint firstItem="eo0-f8-Sam" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="32" id="mHI-ol-aLt"/>
+                    <constraint firstAttribute="trailing" secondItem="359-5E-PdO" secondAttribute="trailing" constant="14" id="ut2-6T-oK6"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="dateLabel" destination="izD-u1-NiO" id="aYP-0n-BWI"/>
                 <outlet property="descriptionLabel" destination="nKB-MB-9u0" id="23k-uy-8EN"/>
                 <outlet property="profileImgView" destination="8cQ-vB-MXr" id="FsF-gO-KqS"/>
+                <outlet property="statusImgView" destination="359-5E-PdO" id="PQH-qN-y3D"/>
                 <outlet property="titleLabel" destination="eo0-f8-Sam" id="RFf-5W-Ocr"/>
             </connections>
             <point key="canvasLocation" x="35" y="77.5"/>

@@ -259,6 +259,27 @@
     }
     
     
+    switch ([[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"status"] intValue]) {
+        
+        case 0:
+        cell.statusImgView.image = [UIImage imageNamed:@"singleTick"];
+        break;
+        
+        case 1:
+        cell.statusImgView.image = [UIImage imageNamed:@"blackDoubleTick"];
+        break;
+        
+        case 2:
+        cell.statusImgView.image = [UIImage imageNamed:@"greenDoubleTick"];
+        break;
+        
+        default:
+        cell.statusImgView.image = [UIImage imageNamed:@"block"];
+        break;
+        
+    }
+    
+    
 }
 
 #pragma mark - API Helpers
