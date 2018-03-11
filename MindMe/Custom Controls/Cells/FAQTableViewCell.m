@@ -13,6 +13,10 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    _headerTitle.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    _bodyTitle.font = [UIFont fontWithName:@"Montserrat-Light" size:(12./667)*kScreenHeight];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

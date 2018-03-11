@@ -87,6 +87,15 @@
         }
     }
     
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
+    
+    _weeklyHeaderLabel.font = _firstCollectionViewTitle.font = _secondCollectionViewTitle.font = _thirdCollectionViewTitle.font = _fourthCollectionViewTitle.font = _fifthCollectionViewTitle.font = _sixthCollectionViewTitle.font = _seventhCollectionViewTitle.font = _uploadCVStaticLabel.font = _otherRelevantInfoStaticLabel.font = _IsAdvertActiveStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    
+    _isAdvertActiveLabel.font = _uploadCVDescLabel.font = _otherRelevantInfoTextView.font = [UIFont fontWithName:@"Montserrat-Light" size:(14./667)*kScreenHeight];
+    
+    _nextButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    
+    
 }
 
 - (void) setupAvailibilityArr {

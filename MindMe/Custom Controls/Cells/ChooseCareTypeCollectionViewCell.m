@@ -14,6 +14,8 @@
     [super awakeFromNib];
     // Initialization code
     
+    _titleLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(14./667)*kScreenHeight];
+    
 }
 
 - (IBAction)toggleButtonTapped:(UIButton *)sender {

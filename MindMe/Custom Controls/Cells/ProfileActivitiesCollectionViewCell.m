@@ -17,6 +17,8 @@
     _activityLabel.layer.cornerRadius = 5.;
     _activityLabel.layer.masksToBounds = YES;
     
+    _activityLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(13./667)*kScreenHeight];
+    
 }
 
 @end

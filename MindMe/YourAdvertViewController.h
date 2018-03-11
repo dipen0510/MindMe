@@ -48,6 +48,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *weeklyHeaderLabel;
 @property (weak, nonatomic) IBOutlet UITextField *isAdvertActiveLabel;
 @property (weak, nonatomic) IBOutlet UILabel *headerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *IsAdvertActiveStaticLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *secondCollectionViewTitle;
 @property (weak, nonatomic) IBOutlet UILabel *firstCollectionViewTitle;

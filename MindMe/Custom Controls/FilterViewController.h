@@ -32,6 +32,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *availabilityStaticLabel;
 @property (weak, nonatomic) IBOutlet UIView *availabilitySeparatorView;
 @property (weak, nonatomic) IBOutlet UILabel *carerAgeStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *selectCareTypeStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distanceStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearsOfExStaticLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *experienceStaticLabelTopConstraint;
 
 - (IBAction)refineSearchButtonTapped:(id)sender;

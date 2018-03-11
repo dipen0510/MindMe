@@ -10,8 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="VisbyRoundCF-Regular.otf">
-            <string>VisbyRoundCF-Regular</string>
+        <array key="Montserrat-Light.otf">
+            <string>Montserrat-Light</string>
         </array>
     </customFonts>
     <objects>
@@ -26,7 +26,7 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="nHr-K3-cLV">
                         <rect key="frame" x="8" y="0.0" width="312" height="30"/>
-                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="14"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>

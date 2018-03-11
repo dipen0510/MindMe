@@ -10,11 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="VisbyRoundCF-DemiBold.otf">
-            <string>VisbyRoundCF-DemiBold</string>
+        <array key="Montserrat-Light.otf">
+            <string>Montserrat-Light</string>
         </array>
-        <array key="VisbyRoundCF-Regular.otf">
-            <string>VisbyRoundCF-Regular</string>
+        <array key="Montserrat-Medium.otf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-SemiBold.otf">
+            <string>Montserrat-SemiBold</string>
         </array>
     </customFonts>
     <objects>
@@ -28,6 +31,7 @@
                 <outlet property="careTypeTextField" destination="CFK-eP-4af" id="Hly-XO-rmZ"/>
                 <outlet property="carerAgeStaticLabel" destination="E7r-Lg-2XT" id="YfD-BF-Sqf"/>
                 <outlet property="contentScrollView" destination="9Xl-MW-tUW" id="xHF-AL-RCi"/>
+                <outlet property="distanceStaticLabel" destination="CUZ-4A-TXc" id="Gkl-H1-L2e"/>
                 <outlet property="distanceTextField" destination="6P4-XN-ZNU" id="OHg-Wu-w4t"/>
                 <outlet property="experienceSlider" destination="BNE-Hs-VWx" id="qvy-O8-6FY"/>
                 <outlet property="experienceStaticLabelTopConstraint" destination="zxZ-yK-2G3" id="Ezx-p7-xtU"/>
@@ -35,7 +39,9 @@
                 <outlet property="miscTblView" destination="o1d-vT-EHA" id="1w5-U6-QqO"/>
                 <outlet property="primaryApplyButton" destination="xl4-05-SDC" id="PqN-ei-YZg"/>
                 <outlet property="refineSearchButton" destination="SCM-La-qB3" id="rlN-uv-6OH"/>
+                <outlet property="selectCareTypeStaticLabel" destination="3Hg-cW-XtV" id="Gfx-eO-TGk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yearsOfExStaticLabel" destination="q7Z-N9-dAp" id="RpT-7s-jQP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -49,7 +55,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="wl2-uI-Qf4"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="18"/>
+                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -57,75 +63,69 @@
                     <rect key="frame" x="0.0" y="40" width="375" height="1260"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Care Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hg-cW-XtV">
-                            <rect key="frame" x="26" y="34" width="115" height="18"/>
-                            <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="15"/>
+                            <rect key="frame" x="26" y="34" width="122" height="18"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="All" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CFK-eP-4af">
-                            <rect key="frame" x="37" y="68" width="301" height="17"/>
-                            <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="14"/>
+                            <rect key="frame" x="37" y="68" width="301" height="18"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAV-pu-1kz">
-                            <rect key="frame" x="26" y="93" width="325" height="1"/>
+                            <rect key="frame" x="26" y="94" width="325" height="1"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="Hbj-bk-3Hb"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUZ-4A-TXc">
-                            <rect key="frame" x="26" y="118" width="59" height="18"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="59" id="bgq-AJ-cqa"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="15"/>
+                            <rect key="frame" x="26" y="119" width="64" height="18"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carer Age 16 to 75 years old" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7r-Lg-2XT">
-                            <rect key="frame" x="26" y="202" width="192" height="18"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="192" id="m92-eM-7wp"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="15"/>
+                            <rect key="frame" x="26" y="204" width="208" height="18"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0-20 Km" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6P4-XN-ZNU">
-                            <rect key="frame" x="37" y="152" width="301" height="17"/>
-                            <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="14"/>
+                            <rect key="frame" x="37" y="153" width="301" height="18"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLk-WB-QaG">
-                            <rect key="frame" x="26" y="177" width="325" height="1"/>
+                            <rect key="frame" x="26" y="179" width="325" height="1"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="SgV-t6-7tz"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Availability" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Up-ms-cWb">
-                            <rect key="frame" x="26" y="491" width="71" height="18"/>
-                            <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="15"/>
+                            <rect key="frame" x="26" y="493" width="79" height="18"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbC-8G-Xml">
-                            <rect key="frame" x="26" y="517" width="325" height="1"/>
+                            <rect key="frame" x="26" y="519" width="325" height="1"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="ig2-mg-Yqp"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgb-3b-l7j">
-                            <rect key="frame" x="26" y="692" width="325" height="1"/>
+                            <rect key="frame" x="26" y="694" width="325" height="1"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="Z8Q-5J-mSL"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nV-Z7-gb3" customClass="TTRangeSlider">
-                            <rect key="frame" x="26" y="232" width="310" height="65"/>
+                            <rect key="frame" x="26" y="234" width="310" height="65"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.98077088594436646" green="0.81499117612838745" blue="0.52634710073471069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -156,13 +156,13 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Years of experience 0 to 5+ years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="q7Z-N9-dAp">
-                            <rect key="frame" x="26" y="321" width="280" height="18"/>
-                            <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="15"/>
+                            <rect key="frame" x="26" y="323" width="280" height="18"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNE-Hs-VWx" customClass="TTRangeSlider">
-                            <rect key="frame" x="26" y="351" width="310" height="65"/>
+                            <rect key="frame" x="26" y="353" width="310" height="65"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.98077088589999994" green="0.81499117610000005" blue="0.52634710070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -199,7 +199,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCM-La-qB3">
-                            <rect key="frame" x="103" y="436" width="170" height="45"/>
+                            <rect key="frame" x="103" y="438" width="170" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="Idi-0Z-i0V"/>
                                 <constraint firstAttribute="width" constant="170" id="prp-wl-80o"/>
@@ -211,7 +211,7 @@
                             </connections>
                         </button>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rr5-KL-W5z">
-                            <rect key="frame" x="26" y="534" width="310" height="150"/>
+                            <rect key="frame" x="26" y="536" width="310" height="150"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="150" id="Vsc-2n-aMA"/>
@@ -228,7 +228,7 @@
                             </connections>
                         </collectionView>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o1d-vT-EHA">
-                            <rect key="frame" x="26" y="717" width="310" height="250"/>
+                            <rect key="frame" x="26" y="719" width="310" height="250"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="250" id="mA1-V9-p8v"/>
@@ -239,39 +239,39 @@
                             </connections>
                         </tableView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zeh-7T-8fU">
-                            <rect key="frame" x="112" y="992" width="150" height="30"/>
+                            <rect key="frame" x="112" y="994" width="150" height="30"/>
                             <color key="backgroundColor" red="1" green="0.5346016884" blue="0.0298230648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="150" id="0en-Cc-d4L"/>
                                 <constraint firstAttribute="height" constant="30" id="0vJ-Qa-x6o"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="16"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                             <state key="normal" title="Apply">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_drop_down_grey_192x192" translatesAutoresizingMaskIntoConstraints="NO" id="SbP-vn-JTK">
-                            <rect key="frame" x="316" y="59" width="35" height="35"/>
+                            <rect key="frame" x="316" y="59.5" width="35" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="35" id="5Pb-9Q-eXx"/>
                                 <constraint firstAttribute="height" constant="35" id="OXw-MF-Cls"/>
                             </constraints>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_drop_down_grey_192x192" translatesAutoresizingMaskIntoConstraints="NO" id="epi-2j-iUd">
-                            <rect key="frame" x="316" y="143" width="35" height="35"/>
+                            <rect key="frame" x="316" y="144.5" width="35" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="joA-4o-RoV"/>
                                 <constraint firstAttribute="width" constant="35" id="x8V-wa-qLc"/>
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xl4-05-SDC">
-                            <rect key="frame" x="113" y="489" width="150" height="30"/>
+                            <rect key="frame" x="113" y="491" width="150" height="30"/>
                             <color key="backgroundColor" red="1" green="0.5346016884" blue="0.0298230648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="Jaz-h3-A86"/>
                                 <constraint firstAttribute="width" constant="150" id="mVg-Xr-0pb"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="16"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                             <state key="normal" title="Apply">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -346,7 +346,7 @@
                 <constraint firstItem="9Xl-MW-tUW" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="zaa-N3-gVp"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="57.5" y="53"/>
+            <point key="canvasLocation" x="50" y="-27"/>
         </view>
     </objects>
     <resources>

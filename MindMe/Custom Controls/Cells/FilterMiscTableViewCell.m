@@ -17,6 +17,8 @@
     [_miscLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(miscButtonTapped:)]];
     _miscLabel.userInteractionEnabled = YES;
     
+    _miscLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

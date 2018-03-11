@@ -35,6 +35,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *requiredRegularlyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *requiredOccasionallyLabel;
 @property (weak, nonatomic) IBOutlet UITextField *numberOfExperienceStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
+@property (weak, nonatomic) IBOutlet UITextField *bioStaticLabel;
+@property (weak, nonatomic) IBOutlet UITextField *rateStaticLabel;
+@property (weak, nonatomic) IBOutlet UITextField *languageStaticLabel;
 
 - (IBAction)requiredOccassionalyButtonTapped:(UIButton *)sender;
 - (IBAction)requiredRegulartlyButtonTapped:(UIButton *)sender;

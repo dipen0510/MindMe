@@ -48,6 +48,14 @@
         _ageSlider.hidden = YES;
     }
     
+    _selectCareTypeStaticLabel.font = _distanceStaticLabel.font = _carerAgeStaticLabel.font = _availabilityStaticLabel.font = _yearsOfExStaticLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    
+    _careTypeTextField.font = _distanceTextField.font = [UIFont fontWithName:@"Montserrat-Light" size:(14./667)*kScreenHeight];
+    
+    _applyButton.titleLabel.font = _primaryApplyButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    
+    _filterLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
+    
 }
 
 - (void) setupAvailibilityArr {
