@@ -10,6 +10,7 @@
 
 @interface ForgotPasswordViewController : UIViewController <DataSyncManagerDelegate, UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 @property (weak, nonatomic) IBOutlet UIButton *resetPasswordButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;

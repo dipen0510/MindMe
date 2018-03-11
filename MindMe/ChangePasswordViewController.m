@@ -24,10 +24,10 @@
 
 - (void) setupInitialUI {
     
-    _resetPasswordButton.layer.cornerRadius = 21;
+    _resetPasswordButton.layer.cornerRadius = (21./667)*kScreenHeight;
     _resetPasswordButton.layer.masksToBounds = NO;
     
-    _cancelButton.layer.cornerRadius = 21;
+    _cancelButton.layer.cornerRadius = (21./667)*kScreenHeight;
     _cancelButton.layer.masksToBounds = NO;
     _cancelButton.layer.borderWidth = 1.0;
     _cancelButton.layer.borderColor = _cancelButton.titleLabel.textColor.CGColor;
@@ -39,6 +39,13 @@
     _currentPwdTextField.secureTextEntry = NO;
     _nPwdTextField.secureTextEntry = NO;
     _confirmNPwdTextField.secureTextEntry = NO;
+    
+    _resetPasswordButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    
+    _currentPwdTextField.font = _nPwdTextField.font = _confirmNPwdTextField.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    _infoLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(13./667)*kScreenHeight];
+    
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(19./667)*kScreenHeight];
     
 }
 
