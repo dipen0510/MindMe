@@ -305,6 +305,8 @@
         header.menuTitle.textColor = [UIColor colorWithRed:253./255. green:137./255. blue:8./155. alpha:1.0];
     }
     
+    header.menuTitle.font = [UIFont fontWithName:@"Montserrat-Regular" size:(17./667)*kScreenHeight];
+    
     return header;
 }
 
