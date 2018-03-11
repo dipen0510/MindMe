@@ -541,7 +541,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="58" y="533.5" width="260" height="29.5"/>
+                                <rect key="frame" x="58" y="533.5" width="260" height="41"/>
                                 <string key="text">By pressing Sign Up you agree with the
 Terms of Services and Privacy Policy</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
@@ -2005,6 +2005,8 @@ Terms of Services and Privacy Policy</string>
                         <outlet property="editSectionHeaderLabel" destination="Qiq-0j-4fC" id="bEY-lx-NZd"/>
                         <outlet property="firstCollectionView" destination="BQc-zo-dzO" id="tBk-qJ-PIl"/>
                         <outlet property="firstCollectionViewHeightConstraint" destination="DLx-2G-jSR" id="clJ-co-hxe"/>
+                        <outlet property="headerLabel" destination="YEd-iw-jgR" id="KH6-WN-ero"/>
+                        <outlet property="nSectionHeaderLabel" destination="uSq-Y4-XPJ" id="vcy-YE-jwk"/>
                         <outlet property="nextButton" destination="Wye-HT-NHn" id="HqV-VU-nw8"/>
                         <outlet property="secondCollectionView" destination="sK9-DP-4K5" id="1mC-7x-GFk"/>
                         <outlet property="secondCollectionViewHeightConstraint" destination="Mba-5e-sSJ" id="K49-qE-9ip"/>
@@ -8372,64 +8374,61 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <rect key="frame" x="0.0" y="84" width="375" height="1066"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3d-wH-OuQ">
-                                        <rect key="frame" x="16" y="56" width="343" height="1"/>
+                                        <rect key="frame" x="16" y="58" width="342.5" height="1"/>
                                         <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="OJP-Pc-zpR"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUY PLAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQj-HW-hOs">
-                                        <rect key="frame" x="150" y="20" width="76" height="19"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="75.5" id="aYI-JY-Lrf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
+                                        <rect key="frame" x="143" y="20" width="89" height="21"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
                                         <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SILVER PLAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1i-Ng-51t">
-                                        <rect key="frame" x="128" y="170" width="119" height="24"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="20"/>
+                                        <rect key="frame" x="124.5" y="174.5" width="127.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="19"/>
                                         <color key="textColor" red="0.48610168695449829" green="0.49017071723937988" blue="0.49426180124282837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voucher Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aym-iT-mWu">
-                                        <rect key="frame" x="16" y="77" width="87.5" height="16"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="13"/>
+                                        <rect key="frame" x="16" y="79" width="105.5" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRS-vE-8md">
-                                        <rect key="frame" x="16" y="137" width="343" height="1"/>
+                                        <rect key="frame" x="16" y="141.5" width="342.5" height="1"/>
                                         <color key="backgroundColor" red="0.89390325550000005" green="0.89803808929999995" blue="0.90205961469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="wwC-QT-cg7"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1V-ld-kjB">
-                                        <rect key="frame" x="16" y="214" width="343" height="1"/>
+                                        <rect key="frame" x="16" y="218" width="342.5" height="1"/>
                                         <color key="backgroundColor" red="0.89390325550000005" green="0.89803808929999995" blue="0.90205961469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="3Cu-4i-P2t"/>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Voucher Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIQ-a1-hPa">
-                                        <rect key="frame" x="29" y="109" width="262" height="20"/>
+                                        <rect key="frame" x="29" y="113.5" width="251.5" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="WMO-3Y-yjv"/>
                                         </constraints>
                                         <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlC-lR-LkN">
-                                        <rect key="frame" x="299" y="109" width="60" height="20"/>
+                                        <rect key="frame" x="288.5" y="108.5" width="70" height="25"/>
                                         <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="SvQ-n7-KNs"/>
-                                            <constraint firstAttribute="height" constant="20" id="U5m-L0-fph"/>
+                                            <constraint firstAttribute="width" constant="70" id="SvQ-n7-KNs"/>
+                                            <constraint firstAttribute="height" constant="25" id="U5m-L0-fph"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                         <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="2"/>
                                         <state key="normal" title="Apply">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -8439,39 +8438,22 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tsy-U3-XIO">
-                                        <rect key="frame" x="24" y="226" width="153" height="101"/>
+                                        <rect key="frame" x="24" y="230" width="153" height="101"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjI-nO-NQi">
-                                                <rect key="frame" x="26" y="16" width="101.5" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="Rt0-2T-1Wy"/>
-                                                </constraints>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="           ">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="17" name="VisbyRoundCF-DemiBold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="Monthly*">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.38807234168052673" green="0.39212557673454285" blue="0.39623329043388367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjI-nO-NQi">
+                                                <rect key="frame" x="44" y="40" width="65.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYn-Z0-DEQ">
-                                                <rect key="frame" x="46" y="57" width="61" height="24"/>
+                                                <rect key="frame" x="41.5" y="68.5" width="70" height="24"/>
                                                 <color key="backgroundColor" red="0.38807234169999999" green="0.39212557669999998" blue="0.39623329039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="61" id="6sk-ZZ-EZ8"/>
+                                                    <constraint firstAttribute="width" constant="70" id="6sk-ZZ-EZ8"/>
                                                     <constraint firstAttribute="height" constant="24" id="m7M-O4-TdP"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -8480,54 +8462,40 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3h-MA-tAR">
-                                                <rect key="frame" x="26" y="16" width="43.5" height="20"/>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
-                                                <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="56" y="16" width="41.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="jYn-Z0-DEQ" firstAttribute="centerX" secondItem="Tsy-U3-XIO" secondAttribute="centerX" id="9NH-8c-5WS"/>
-                                            <constraint firstItem="jYn-Z0-DEQ" firstAttribute="top" secondItem="yjI-nO-NQi" secondAttribute="bottom" constant="20" id="DDm-1G-YXN"/>
-                                            <constraint firstItem="u3h-MA-tAR" firstAttribute="leading" secondItem="yjI-nO-NQi" secondAttribute="leading" id="Mu7-SI-3lN"/>
-                                            <constraint firstItem="u3h-MA-tAR" firstAttribute="top" secondItem="yjI-nO-NQi" secondAttribute="top" id="bxc-lr-HYA"/>
-                                            <constraint firstItem="yjI-nO-NQi" firstAttribute="top" secondItem="Tsy-U3-XIO" secondAttribute="top" constant="16" id="grJ-PM-1R9"/>
+                                            <constraint firstItem="jYn-Z0-DEQ" firstAttribute="top" secondItem="yjI-nO-NQi" secondAttribute="bottom" constant="10" id="DDm-1G-YXN"/>
+                                            <constraint firstItem="u3h-MA-tAR" firstAttribute="top" secondItem="Tsy-U3-XIO" secondAttribute="top" constant="16" id="Gwr-bV-rio"/>
+                                            <constraint firstItem="u3h-MA-tAR" firstAttribute="centerX" secondItem="Tsy-U3-XIO" secondAttribute="centerX" id="bfp-Ur-1eH"/>
+                                            <constraint firstItem="yjI-nO-NQi" firstAttribute="top" secondItem="Tsy-U3-XIO" secondAttribute="top" constant="40" id="grJ-PM-1R9"/>
                                             <constraint firstItem="yjI-nO-NQi" firstAttribute="centerX" secondItem="Tsy-U3-XIO" secondAttribute="centerX" id="iik-li-asV"/>
                                             <constraint firstAttribute="height" constant="101" id="xfO-U4-Rq7"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BT3-c0-mMH">
-                                        <rect key="frame" x="198" y="226" width="153" height="101"/>
+                                        <rect key="frame" x="198" y="230" width="152.5" height="101"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jq1-AF-ZfD">
-                                                <rect key="frame" x="19.5" y="16" width="114.5" height="20"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="            ">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.99302000000000001" green="0.53866999999999998" blue="0.03099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="17" name="VisbyRoundCF-DemiBold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="Quarterly*">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.38807234168052673" green="0.39212557673454285" blue="0.39623329043388367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quarterly*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jq1-AF-ZfD">
+                                                <rect key="frame" x="40" y="40" width="73.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mD9-Es-FON">
-                                                <rect key="frame" x="46" y="56" width="61" height="24"/>
+                                                <rect key="frame" x="41.5" y="68.5" width="70" height="24"/>
                                                 <color key="backgroundColor" red="0.38807234169999999" green="0.39212557669999998" blue="0.39623329039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="FLR-FG-bSA"/>
-                                                    <constraint firstAttribute="width" constant="61" id="Xsi-em-aed"/>
+                                                    <constraint firstAttribute="width" constant="70" id="Xsi-em-aed"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -8536,25 +8504,25 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4J-hi-gdh">
-                                                <rect key="frame" x="19" y="16" width="43.5" height="20"/>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
-                                                <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="55.5" y="16" width="41.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="jq1-AF-ZfD" firstAttribute="leading" secondItem="Y4J-hi-gdh" secondAttribute="leading" id="4Oy-Jc-3wD"/>
                                             <constraint firstItem="mD9-Es-FON" firstAttribute="centerX" secondItem="BT3-c0-mMH" secondAttribute="centerX" id="E0p-pT-6kP"/>
                                             <constraint firstAttribute="height" constant="101" id="KI0-dX-pEL"/>
-                                            <constraint firstItem="jq1-AF-ZfD" firstAttribute="top" secondItem="Y4J-hi-gdh" secondAttribute="top" id="Zoy-lD-tJF"/>
-                                            <constraint firstItem="jq1-AF-ZfD" firstAttribute="top" secondItem="BT3-c0-mMH" secondAttribute="top" constant="16" id="eHT-2S-z0c"/>
-                                            <constraint firstItem="mD9-Es-FON" firstAttribute="top" secondItem="jq1-AF-ZfD" secondAttribute="bottom" constant="20" id="k9a-u0-rWd"/>
+                                            <constraint firstItem="jq1-AF-ZfD" firstAttribute="top" secondItem="BT3-c0-mMH" secondAttribute="top" constant="40" id="eHT-2S-z0c"/>
+                                            <constraint firstItem="Y4J-hi-gdh" firstAttribute="top" secondItem="BT3-c0-mMH" secondAttribute="top" constant="16" id="f72-7D-WAe"/>
+                                            <constraint firstItem="mD9-Es-FON" firstAttribute="top" secondItem="jq1-AF-ZfD" secondAttribute="bottom" constant="10" id="k9a-u0-rWd"/>
                                             <constraint firstItem="jq1-AF-ZfD" firstAttribute="centerX" secondItem="BT3-c0-mMH" secondAttribute="centerX" id="qOu-KM-gwg"/>
+                                            <constraint firstItem="Y4J-hi-gdh" firstAttribute="centerX" secondItem="BT3-c0-mMH" secondAttribute="centerX" id="xg7-lA-djI"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7E4-Vq-yWo">
-                                        <rect key="frame" x="185" y="224" width="5" height="100"/>
+                                        <rect key="frame" x="185" y="228" width="5" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="gEE-94-lsM"/>
@@ -8562,36 +8530,22 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rZ-7e-cIm">
-                                        <rect key="frame" x="111" y="343" width="153" height="101"/>
+                                        <rect key="frame" x="111.5" y="347" width="152.5" height="101"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5l9-JC-rA2">
-                                                <rect key="frame" x="23.5" y="16" width="106" height="20"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="             ">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.99302000000000001" green="0.53866999999999998" blue="0.03099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="17" name="VisbyRoundCF-DemiBold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="Annual*">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.38807234168052673" green="0.39212557673454285" blue="0.39623329043388367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annual*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5l9-JC-rA2">
+                                                <rect key="frame" x="48" y="40" width="58" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oxe-aD-ttJ">
-                                                <rect key="frame" x="46" y="56" width="61" height="24"/>
+                                                <rect key="frame" x="41" y="68.5" width="70" height="24"/>
                                                 <color key="backgroundColor" red="0.38807234169999999" green="0.39212557669999998" blue="0.39623329039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="eqW-l2-yB3"/>
-                                                    <constraint firstAttribute="width" constant="61" id="wDR-Vw-ayV"/>
+                                                    <constraint firstAttribute="width" constant="70" id="wDR-Vw-ayV"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -8600,66 +8554,52 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYf-ac-KeX">
-                                                <rect key="frame" x="23" y="16" width="43.5" height="20"/>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
-                                                <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="55.5" y="16" width="41.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="5l9-JC-rA2" firstAttribute="centerX" secondItem="0rZ-7e-cIm" secondAttribute="centerX" id="Fe8-ko-L60"/>
-                                            <constraint firstItem="Oxe-aD-ttJ" firstAttribute="top" secondItem="5l9-JC-rA2" secondAttribute="bottom" constant="20" id="Is6-Wt-Nsm"/>
-                                            <constraint firstItem="5l9-JC-rA2" firstAttribute="top" secondItem="TYf-ac-KeX" secondAttribute="top" id="LQZ-lC-UB8"/>
+                                            <constraint firstItem="Oxe-aD-ttJ" firstAttribute="top" secondItem="5l9-JC-rA2" secondAttribute="bottom" constant="10" id="Is6-Wt-Nsm"/>
                                             <constraint firstAttribute="height" constant="101" id="Ooe-9c-CbI"/>
-                                            <constraint firstItem="5l9-JC-rA2" firstAttribute="top" secondItem="0rZ-7e-cIm" secondAttribute="top" constant="16" id="SWm-rm-hgt"/>
+                                            <constraint firstItem="5l9-JC-rA2" firstAttribute="top" secondItem="0rZ-7e-cIm" secondAttribute="top" constant="40" id="SWm-rm-hgt"/>
+                                            <constraint firstItem="TYf-ac-KeX" firstAttribute="top" secondItem="0rZ-7e-cIm" secondAttribute="top" constant="16" id="UIh-zD-9rg"/>
                                             <constraint firstItem="Oxe-aD-ttJ" firstAttribute="centerX" secondItem="0rZ-7e-cIm" secondAttribute="centerX" id="X1s-rM-qES"/>
-                                            <constraint firstItem="5l9-JC-rA2" firstAttribute="leading" secondItem="TYf-ac-KeX" secondAttribute="leading" id="oJO-tH-7Jh"/>
+                                            <constraint firstItem="TYf-ac-KeX" firstAttribute="centerX" secondItem="0rZ-7e-cIm" secondAttribute="centerX" id="onS-Qg-z1p"/>
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmp1" translatesAutoresizingMaskIntoConstraints="NO" id="NEg-fQ-IJs">
-                                        <rect key="frame" x="0.0" y="504" width="375" height="74"/>
+                                        <rect key="frame" x="0.0" y="511" width="374.5" height="82"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="NEg-fQ-IJs" secondAttribute="height" multiplier="375:74" id="VoJ-3u-y8e"/>
+                                            <constraint firstAttribute="width" secondItem="NEg-fQ-IJs" secondAttribute="height" multiplier="1241:272" id="VoJ-3u-y8e"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* All subscriptions are automatically renewed until cancelled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOb-t7-lHz">
-                                        <rect key="frame" x="51.5" y="476" width="272.5" height="12"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="10"/>
+                                        <rect key="frame" x="10" y="480" width="356" height="15"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
                                         <color key="textColor" red="0.486101687" green="0.49017071719999999" blue="0.49426180120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAV-JA-u9i">
-                                        <rect key="frame" x="24" y="674" width="153" height="101"/>
+                                        <rect key="frame" x="24" y="688.5" width="153" height="101"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Q6-4r-RB5">
-                                                <rect key="frame" x="23.5" y="16" width="106" height="20"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="            ">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.99302000000000001" green="0.53866999999999998" blue="0.03099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="17" name="VisbyRoundCF-DemiBold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="Monthly*">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.38807234168052673" green="0.39212557673454285" blue="0.39623329043388367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Q6-4r-RB5">
+                                                <rect key="frame" x="44.5" y="40" width="65.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTP-uT-VpZ">
-                                                <rect key="frame" x="46" y="56" width="61" height="24"/>
+                                                <rect key="frame" x="41.5" y="68.5" width="70" height="24"/>
                                                 <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="61" id="90v-ot-5J1"/>
+                                                    <constraint firstAttribute="width" constant="70" id="90v-ot-5J1"/>
                                                     <constraint firstAttribute="height" constant="24" id="YPz-NO-q2d"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -8668,9 +8608,9 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOC-v4-au0">
-                                                <rect key="frame" x="23" y="16" width="43.5" height="20"/>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
-                                                <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="56" y="16" width="41.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -8678,44 +8618,30 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <constraints>
                                             <constraint firstItem="9Q6-4r-RB5" firstAttribute="centerX" secondItem="XAV-JA-u9i" secondAttribute="centerX" id="6Oz-4e-aHP"/>
                                             <constraint firstAttribute="height" constant="101" id="6W7-eo-EYX"/>
-                                            <constraint firstItem="9Q6-4r-RB5" firstAttribute="top" secondItem="WOC-v4-au0" secondAttribute="top" id="Bhp-wa-i14"/>
-                                            <constraint firstItem="9Q6-4r-RB5" firstAttribute="top" secondItem="XAV-JA-u9i" secondAttribute="top" constant="16" id="I5W-qC-cGR"/>
+                                            <constraint firstItem="WOC-v4-au0" firstAttribute="top" secondItem="XAV-JA-u9i" secondAttribute="top" constant="16" id="8bI-SL-nbO"/>
+                                            <constraint firstItem="9Q6-4r-RB5" firstAttribute="top" secondItem="XAV-JA-u9i" secondAttribute="top" constant="40" id="I5W-qC-cGR"/>
                                             <constraint firstItem="eTP-uT-VpZ" firstAttribute="centerX" secondItem="XAV-JA-u9i" secondAttribute="centerX" id="OTC-OF-j3e"/>
-                                            <constraint firstItem="eTP-uT-VpZ" firstAttribute="top" secondItem="9Q6-4r-RB5" secondAttribute="bottom" constant="20" id="gta-23-sxl"/>
-                                            <constraint firstItem="9Q6-4r-RB5" firstAttribute="leading" secondItem="WOC-v4-au0" secondAttribute="leading" id="wTj-SP-jWS"/>
+                                            <constraint firstItem="WOC-v4-au0" firstAttribute="centerX" secondItem="XAV-JA-u9i" secondAttribute="centerX" id="P5q-sZ-Zgo"/>
+                                            <constraint firstItem="eTP-uT-VpZ" firstAttribute="top" secondItem="9Q6-4r-RB5" secondAttribute="bottom" constant="10" id="gta-23-sxl"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKu-WR-7si">
-                                        <rect key="frame" x="111" y="791" width="153" height="101"/>
+                                        <rect key="frame" x="111.5" y="805.5" width="152.5" height="101"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9e-Yv-h87">
-                                                <rect key="frame" x="24" y="16" width="106" height="20"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="             ">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.99302000000000001" green="0.53866999999999998" blue="0.03099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="17" name="VisbyRoundCF-DemiBold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="Annual*">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.38807234168052673" green="0.39212557673454285" blue="0.39623329043388367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annual*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9e-Yv-h87">
+                                                <rect key="frame" x="47.5" y="40" width="58" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LM-Na-91h">
-                                                <rect key="frame" x="46" y="56" width="61" height="24"/>
+                                                <rect key="frame" x="41" y="68.5" width="70" height="24"/>
                                                 <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="61" id="azq-tZ-Hbj"/>
+                                                    <constraint firstAttribute="width" constant="70" id="azq-tZ-Hbj"/>
                                                     <constraint firstAttribute="height" constant="24" id="xrk-aV-pL3"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -8724,25 +8650,25 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkG-8s-AUz">
-                                                <rect key="frame" x="24" y="16" width="43.5" height="20"/>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
-                                                <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="55.5" y="16" width="41.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="PkG-8s-AUz" firstAttribute="leading" secondItem="t9e-Yv-h87" secondAttribute="leading" id="1xw-9p-Kgz"/>
-                                            <constraint firstItem="t9e-Yv-h87" firstAttribute="top" secondItem="AKu-WR-7si" secondAttribute="top" constant="16" id="Clr-TN-UZI"/>
+                                            <constraint firstItem="t9e-Yv-h87" firstAttribute="top" secondItem="AKu-WR-7si" secondAttribute="top" constant="40" id="Clr-TN-UZI"/>
                                             <constraint firstItem="1LM-Na-91h" firstAttribute="centerX" secondItem="AKu-WR-7si" secondAttribute="centerX" id="QLE-6J-ef7"/>
                                             <constraint firstAttribute="height" constant="101" id="Qt6-ZU-qYe"/>
-                                            <constraint firstItem="PkG-8s-AUz" firstAttribute="top" secondItem="t9e-Yv-h87" secondAttribute="top" id="UtJ-Er-IMd"/>
+                                            <constraint firstItem="PkG-8s-AUz" firstAttribute="centerX" secondItem="AKu-WR-7si" secondAttribute="centerX" id="m34-P0-ZRA"/>
                                             <constraint firstItem="t9e-Yv-h87" firstAttribute="centerX" secondItem="AKu-WR-7si" secondAttribute="centerX" id="qgu-M0-xz7"/>
-                                            <constraint firstItem="1LM-Na-91h" firstAttribute="top" secondItem="t9e-Yv-h87" secondAttribute="bottom" constant="20" id="zhl-q9-WZc"/>
+                                            <constraint firstItem="PkG-8s-AUz" firstAttribute="top" secondItem="AKu-WR-7si" secondAttribute="top" constant="16" id="qzz-gi-Pez"/>
+                                            <constraint firstItem="1LM-Na-91h" firstAttribute="top" secondItem="t9e-Yv-h87" secondAttribute="bottom" constant="10" id="zhl-q9-WZc"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CiU-iB-v51">
-                                        <rect key="frame" x="185" y="672" width="5" height="100"/>
+                                        <rect key="frame" x="185" y="686.5" width="5" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="5" id="OZM-tT-l2x"/>
@@ -8750,42 +8676,28 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOLD PLAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBQ-oq-nuo">
-                                        <rect key="frame" x="132" y="618" width="111" height="24"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="20"/>
+                                        <rect key="frame" x="131" y="633" width="113.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="19"/>
                                         <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzx-St-hly">
-                                        <rect key="frame" x="198" y="674" width="153" height="101"/>
+                                        <rect key="frame" x="198" y="688.5" width="152.5" height="101"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPN-eA-abM">
-                                                <rect key="frame" x="19.5" y="16" width="114.5" height="20"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="            ">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.99302000000000001" green="0.53866999999999998" blue="0.03099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="17" name="VisbyRoundCF-DemiBold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="Quarterly*">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.38807234168052673" green="0.39212557673454285" blue="0.39623329043388367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quarterly*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPN-eA-abM">
+                                                <rect key="frame" x="40" y="40" width="73.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2e-pK-Xnd">
-                                                <rect key="frame" x="46" y="56" width="61" height="24"/>
+                                                <rect key="frame" x="41.5" y="68.5" width="70" height="24"/>
                                                 <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="61" id="Opx-Px-Aas"/>
+                                                    <constraint firstAttribute="width" constant="70" id="Opx-Px-Aas"/>
                                                     <constraint firstAttribute="height" constant="24" id="sID-lS-lEg"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -8794,44 +8706,41 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPA-6Z-4uL">
-                                                <rect key="frame" x="19" y="16" width="43.5" height="20"/>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
-                                                <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="55.5" y="16" width="41.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="LPN-eA-abM" firstAttribute="top" secondItem="UPA-6Z-4uL" secondAttribute="top" id="9y8-5m-Lbt"/>
-                                            <constraint firstItem="LPN-eA-abM" firstAttribute="top" secondItem="uzx-St-hly" secondAttribute="top" constant="16" id="HMD-5v-s6J"/>
-                                            <constraint firstItem="K2e-pK-Xnd" firstAttribute="top" secondItem="LPN-eA-abM" secondAttribute="bottom" constant="20" id="M7X-ES-g88"/>
+                                            <constraint firstItem="UPA-6Z-4uL" firstAttribute="centerX" secondItem="uzx-St-hly" secondAttribute="centerX" id="8qa-GE-kaZ"/>
+                                            <constraint firstItem="UPA-6Z-4uL" firstAttribute="top" secondItem="uzx-St-hly" secondAttribute="top" constant="16" id="FY5-Ab-GiM"/>
+                                            <constraint firstItem="LPN-eA-abM" firstAttribute="top" secondItem="uzx-St-hly" secondAttribute="top" constant="40" id="HMD-5v-s6J"/>
+                                            <constraint firstItem="K2e-pK-Xnd" firstAttribute="top" secondItem="LPN-eA-abM" secondAttribute="bottom" constant="10" id="M7X-ES-g88"/>
                                             <constraint firstAttribute="height" constant="101" id="a4o-eU-c72"/>
                                             <constraint firstItem="K2e-pK-Xnd" firstAttribute="centerX" secondItem="uzx-St-hly" secondAttribute="centerX" id="gd3-Zr-by3"/>
                                             <constraint firstItem="LPN-eA-abM" firstAttribute="centerX" secondItem="uzx-St-hly" secondAttribute="centerX" id="w7B-TF-6KS"/>
-                                            <constraint firstItem="LPN-eA-abM" firstAttribute="leading" secondItem="UPA-6Z-4uL" secondAttribute="leading" id="yim-iI-cng"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z29-Q8-4Gi">
-                                        <rect key="frame" x="16" y="662" width="343" height="1"/>
+                                        <rect key="frame" x="16" y="676.5" width="342.5" height="1"/>
                                         <color key="backgroundColor" red="0.89390325550000005" green="0.89803808929999995" blue="0.90205961469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="qdu-Fd-PVg"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* All subscriptions are automatically renewed until cancelled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZY-Sr-XSA">
-                                        <rect key="frame" x="51.5" y="924" width="272.5" height="12"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="10"/>
+                                        <rect key="frame" x="10" y="938.5" width="356" height="15"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
                                         <color key="textColor" red="0.486101687" green="0.49017071719999999" blue="0.49426180120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmp2" translatesAutoresizingMaskIntoConstraints="NO" id="slX-26-Hl1">
-                                        <rect key="frame" x="0.0" y="956" width="375" height="74"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="slX-26-Hl1" secondAttribute="height" multiplier="375:74" id="QZj-Rs-AGZ"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="973.5" width="374.5" height="82"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="uzx-St-hly" firstAttribute="leading" secondItem="CiU-iB-v51" secondAttribute="trailing" constant="8" id="1CE-IQ-Bwr"/>
                                     <constraint firstItem="uzx-St-hly" firstAttribute="height" secondItem="XAV-JA-u9i" secondAttribute="height" id="1tg-eP-xdm"/>
@@ -8875,7 +8784,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="q3d-wH-OuQ" firstAttribute="leading" secondItem="tYv-Ed-QV6" secondAttribute="leading" constant="16" id="fuB-zp-Z9Y"/>
                                     <constraint firstItem="LRS-vE-8md" firstAttribute="top" secondItem="AlC-lR-LkN" secondAttribute="bottom" constant="8" id="gCf-Gq-DnO"/>
                                     <constraint firstItem="AKu-WR-7si" firstAttribute="width" secondItem="uzx-St-hly" secondAttribute="width" id="gPD-1e-FHc"/>
-                                    <constraint firstItem="slX-26-Hl1" firstAttribute="width" secondItem="slX-26-Hl1" secondAttribute="height" multiplier="375:74" id="hTc-Of-9XC"/>
+                                    <constraint firstItem="slX-26-Hl1" firstAttribute="width" secondItem="slX-26-Hl1" secondAttribute="height" multiplier="1239:272" id="hTc-Of-9XC"/>
                                     <constraint firstItem="NEg-fQ-IJs" firstAttribute="leading" secondItem="slX-26-Hl1" secondAttribute="leading" id="hbt-94-h3L"/>
                                     <constraint firstItem="NEg-fQ-IJs" firstAttribute="leading" secondItem="tYv-Ed-QV6" secondAttribute="leading" id="iQF-ou-xZJ"/>
                                     <constraint firstItem="Aym-iT-mWu" firstAttribute="leading" secondItem="q3d-wH-OuQ" secondAttribute="leading" id="mAA-Ik-ipW"/>
@@ -8913,22 +8822,34 @@ We may send emails to existing customers or prospective customers who have enqui
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1150"/>
                     <connections>
+                        <outlet property="couvherStaticLabel" destination="Aym-iT-mWu" id="4nj-1T-nYu"/>
                         <outlet property="goldAnnualLabel" destination="PkG-8s-AUz" id="6iW-mc-Hm5"/>
+                        <outlet property="goldAnnualStaticLabel" destination="5l9-JC-rA2" id="GqD-EK-80w"/>
                         <outlet property="goldMonthlyLabel" destination="WOC-v4-au0" id="rnC-i5-UdI"/>
                         <outlet property="goldMonthlySelectButton" destination="eTP-uT-VpZ" id="n5H-AT-5Kn"/>
+                        <outlet property="goldMonthlyStaticLabel" destination="yjI-nO-NQi" id="trf-2d-KLu"/>
                         <outlet property="goldMonthlyView" destination="XAV-JA-u9i" id="OZw-KG-E5d"/>
                         <outlet property="goldQuarterlyLabel" destination="UPA-6Z-4uL" id="Fo4-zu-Gaa"/>
                         <outlet property="goldQuarterlySelectButton" destination="K2e-pK-Xnd" id="bhZ-ZB-H3U"/>
+                        <outlet property="goldQuarterlyStaticLabel" destination="jq1-AF-ZfD" id="ic8-uZ-QBz"/>
                         <outlet property="goldQuarterlyView" destination="uzx-St-hly" id="jJu-bP-8dk"/>
+                        <outlet property="goldStaticLabel" destination="EBQ-oq-nuo" id="g4q-IX-HmY"/>
                         <outlet property="goldYearlySelectButton" destination="1LM-Na-91h" id="MpL-Df-Cbh"/>
                         <outlet property="goldYearlyView" destination="AKu-WR-7si" id="sRc-Ef-VK8"/>
+                        <outlet property="headerLabel" destination="SQj-HW-hOs" id="Ppq-sb-0aT"/>
+                        <outlet property="infoLabel1" destination="yOb-t7-lHz" id="spW-kX-ybu"/>
+                        <outlet property="infoLabel2" destination="WZY-Sr-XSA" id="iHQ-sO-abH"/>
                         <outlet property="silverAnnualLabel" destination="TYf-ac-KeX" id="oIA-Yn-iiX"/>
+                        <outlet property="silverAnnualStaticLabel" destination="t9e-Yv-h87" id="QHi-W5-qQA"/>
                         <outlet property="silverMonthlyLabel" destination="u3h-MA-tAR" id="Gda-f9-dS0"/>
                         <outlet property="silverMonthlySelectButton" destination="jYn-Z0-DEQ" id="DgT-ag-G2t"/>
+                        <outlet property="silverMonthlyStaticLabel" destination="9Q6-4r-RB5" id="le3-rh-7CY"/>
                         <outlet property="silverMonthlyView" destination="Tsy-U3-XIO" id="8fG-lj-pNa"/>
                         <outlet property="silverQuaretlyView" destination="BT3-c0-mMH" id="TKS-D0-z2v"/>
                         <outlet property="silverQuarterlyLabel" destination="Y4J-hi-gdh" id="7Sz-5H-wwY"/>
                         <outlet property="silverQuarterlySelectButton" destination="mD9-Es-FON" id="C7I-q7-EQW"/>
+                        <outlet property="silverQuarterlyStaticLabel" destination="LPN-eA-abM" id="Itu-bv-etr"/>
+                        <outlet property="silverStaticLabel" destination="S1i-Ng-51t" id="eqa-AS-m2q"/>
                         <outlet property="silverYearlySelectButton" destination="Oxe-aD-ttJ" id="xvc-4j-bRR"/>
                         <outlet property="silverYearlyView" destination="0rZ-7e-cIm" id="nZI-Ro-kjZ"/>
                         <outlet property="voucherApplyButton" destination="AlC-lR-LkN" id="o5b-d4-AVN"/>
@@ -9231,51 +9152,48 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <rect key="frame" x="0.0" y="84" width="375" height="583"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90w-Bf-lr1">
-                                        <rect key="frame" x="16" y="56" width="343" height="1"/>
+                                        <rect key="frame" x="16" y="58" width="343" height="1"/>
                                         <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="hrK-lN-gle"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUY PLAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMo-w4-bCG">
-                                        <rect key="frame" x="150" y="20" width="76" height="19"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="75.5" id="wXN-qG-ChE"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
+                                        <rect key="frame" x="143.5" y="20" width="89" height="21"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
                                         <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voucher Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjO-fd-vhl">
-                                        <rect key="frame" x="16" y="77" width="87.5" height="16"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="13"/>
+                                        <rect key="frame" x="16" y="79" width="105.5" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OpG-BI-YCM">
-                                        <rect key="frame" x="16" y="137" width="343" height="1"/>
+                                        <rect key="frame" x="16" y="141.5" width="343" height="1"/>
                                         <color key="backgroundColor" red="0.89390325550000005" green="0.89803808929999995" blue="0.90205961469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="22f-KB-aWN"/>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Voucher Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5i-eR-6U5">
-                                        <rect key="frame" x="29" y="109" width="262" height="20"/>
+                                        <rect key="frame" x="29" y="113.5" width="252" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="N9h-Uz-qSM"/>
                                         </constraints>
-                                        <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="12"/>
+                                        <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMD-4w-XZG">
-                                        <rect key="frame" x="299" y="109" width="60" height="20"/>
+                                        <rect key="frame" x="289" y="108.5" width="70" height="25"/>
                                         <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="IzC-nF-Wik"/>
-                                            <constraint firstAttribute="height" constant="20" id="Ocb-Ds-4xg"/>
+                                            <constraint firstAttribute="width" constant="70" id="IzC-nF-Wik"/>
+                                            <constraint firstAttribute="height" constant="25" id="Ocb-Ds-4xg"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                         <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="2"/>
                                         <state key="normal" title="Apply">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -9285,7 +9203,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUs-zh-BLj">
-                                        <rect key="frame" x="185" y="224" width="5" height="100"/>
+                                        <rect key="frame" x="185" y="228.5" width="5" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="5" id="14C-hr-NsD"/>
@@ -9293,55 +9211,41 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOLD PLAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCl-hf-4XJ">
-                                        <rect key="frame" x="132" y="170" width="111" height="24"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="20"/>
+                                        <rect key="frame" x="131" y="174.5" width="113.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="19"/>
                                         <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAP-l3-6t2">
-                                        <rect key="frame" x="16" y="214" width="343" height="1"/>
+                                        <rect key="frame" x="16" y="218.5" width="343" height="1"/>
                                         <color key="backgroundColor" red="0.89390325550000005" green="0.89803808929999995" blue="0.90205961469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="F2u-f8-NEL"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* All subscriptions are automatically renewed until cancelled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cr5-Te-9e4">
-                                        <rect key="frame" x="51.5" y="476" width="272.5" height="12"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="10"/>
-                                        <color key="textColor" red="0.486101687" green="0.49017071719999999" blue="0.49426180120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="25" y="480.5" width="326.5" height="13.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="11"/>
+                                        <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWA-KK-Gme">
-                                        <rect key="frame" x="24" y="234" width="153" height="101"/>
+                                        <rect key="frame" x="24" y="238.5" width="153" height="101"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwp-fy-FqW">
-                                                <rect key="frame" x="26.5" y="16" width="101.5" height="20"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="           ">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.99302000000000001" green="0.53866999999999998" blue="0.03099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="17" name="VisbyRoundCF-DemiBold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="Monthly*">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.38807234168052673" green="0.39212557673454285" blue="0.39623329043388367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwp-fy-FqW">
+                                                <rect key="frame" x="44.5" y="40" width="65.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMY-Pa-jL6">
-                                                <rect key="frame" x="46" y="56" width="61" height="24"/>
+                                                <rect key="frame" x="41.5" y="68.5" width="70" height="24"/>
                                                 <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="61" id="9HI-Xq-1ih"/>
+                                                    <constraint firstAttribute="width" constant="70" id="9HI-Xq-1ih"/>
                                                     <constraint firstAttribute="height" constant="24" id="QH5-mN-uno"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -9351,54 +9255,39 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRz-jg-T0D">
-                                                <rect key="frame" x="26.5" y="16" width="43.5" height="20"/>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
-                                                <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="56.5" y="16" width="41" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="AMY-Pa-jL6" firstAttribute="centerX" secondItem="uWA-KK-Gme" secondAttribute="centerX" id="5Ze-ev-QGm"/>
-                                            <constraint firstItem="Hwp-fy-FqW" firstAttribute="top" secondItem="QRz-jg-T0D" secondAttribute="top" id="Bbi-cI-Ioo"/>
-                                            <constraint firstItem="AMY-Pa-jL6" firstAttribute="top" secondItem="Hwp-fy-FqW" secondAttribute="bottom" constant="20" id="Bou-PQ-a87"/>
-                                            <constraint firstItem="Hwp-fy-FqW" firstAttribute="top" secondItem="uWA-KK-Gme" secondAttribute="top" constant="16" id="PtQ-hC-sVR"/>
-                                            <constraint firstItem="Hwp-fy-FqW" firstAttribute="leading" secondItem="QRz-jg-T0D" secondAttribute="leading" id="c9L-OM-Ook"/>
+                                            <constraint firstItem="AMY-Pa-jL6" firstAttribute="top" secondItem="Hwp-fy-FqW" secondAttribute="bottom" constant="10" id="Bou-PQ-a87"/>
+                                            <constraint firstItem="Hwp-fy-FqW" firstAttribute="top" secondItem="uWA-KK-Gme" secondAttribute="top" constant="40" id="PtQ-hC-sVR"/>
+                                            <constraint firstItem="QRz-jg-T0D" firstAttribute="centerX" secondItem="uWA-KK-Gme" secondAttribute="centerX" id="cdu-nW-Tbe"/>
+                                            <constraint firstItem="QRz-jg-T0D" firstAttribute="top" secondItem="uWA-KK-Gme" secondAttribute="top" constant="16" id="kGT-i4-VJe"/>
                                             <constraint firstAttribute="height" constant="101" id="npM-uj-lf6"/>
                                             <constraint firstItem="Hwp-fy-FqW" firstAttribute="centerX" secondItem="uWA-KK-Gme" secondAttribute="centerX" id="psq-uI-Rtk"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="idp-aQ-w0l">
-                                        <rect key="frame" x="198" y="234" width="153" height="101"/>
+                                        <rect key="frame" x="198" y="238.5" width="153" height="101"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="do3-ac-Pes">
-                                                <rect key="frame" x="16" y="16" width="121" height="20"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="            ">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.99302000000000001" green="0.53866999999999998" blue="0.03099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="17" name="VisbyRoundCF-DemiBold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="Half Yearly*">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.38807234168052673" green="0.39212557673454285" blue="0.39623329043388367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Half Yearly*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="do3-ac-Pes">
+                                                <rect key="frame" x="36" y="40" width="82.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBo-w6-DR4">
-                                                <rect key="frame" x="46" y="56" width="61" height="24"/>
+                                                <rect key="frame" x="41.5" y="68.5" width="70" height="24"/>
                                                 <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="61" id="e9S-yH-KPw"/>
+                                                    <constraint firstAttribute="width" constant="70" id="e9S-yH-KPw"/>
                                                     <constraint firstAttribute="height" constant="24" id="tCS-vz-Rad"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -9408,60 +9297,44 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSG-Bi-y9j">
-                                                <rect key="frame" x="16" y="16" width="43.5" height="20"/>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
-                                                <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="56.5" y="16" width="41" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="rBo-w6-DR4" firstAttribute="centerX" secondItem="idp-aQ-w0l" secondAttribute="centerX" id="30n-zh-NBp"/>
-                                            <constraint firstItem="do3-ac-Pes" firstAttribute="top" secondItem="idp-aQ-w0l" secondAttribute="top" constant="16" id="5Qa-GF-Gu8"/>
+                                            <constraint firstItem="do3-ac-Pes" firstAttribute="top" secondItem="idp-aQ-w0l" secondAttribute="top" constant="40" id="5Qa-GF-Gu8"/>
                                             <constraint firstItem="do3-ac-Pes" firstAttribute="centerX" secondItem="idp-aQ-w0l" secondAttribute="centerX" id="GNR-uF-MX7"/>
-                                            <constraint firstItem="xSG-Bi-y9j" firstAttribute="leading" secondItem="do3-ac-Pes" secondAttribute="leading" id="ZMT-nc-1fg"/>
+                                            <constraint firstItem="xSG-Bi-y9j" firstAttribute="top" secondItem="idp-aQ-w0l" secondAttribute="top" constant="16" id="M1I-5t-EWf"/>
                                             <constraint firstAttribute="height" constant="101" id="gLq-dI-vo8"/>
-                                            <constraint firstItem="xSG-Bi-y9j" firstAttribute="top" secondItem="do3-ac-Pes" secondAttribute="top" id="nIp-4r-SLg"/>
-                                            <constraint firstItem="rBo-w6-DR4" firstAttribute="top" secondItem="do3-ac-Pes" secondAttribute="bottom" constant="20" id="zaz-zo-Ju6"/>
+                                            <constraint firstItem="xSG-Bi-y9j" firstAttribute="centerX" secondItem="idp-aQ-w0l" secondAttribute="centerX" id="j4V-Kn-NC4"/>
+                                            <constraint firstItem="rBo-w6-DR4" firstAttribute="top" secondItem="do3-ac-Pes" secondAttribute="bottom" constant="10" id="zaz-zo-Ju6"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Fi-DX-iKa">
-                                        <rect key="frame" x="24" y="351" width="153" height="101"/>
+                                        <rect key="frame" x="24" y="355.5" width="153" height="101"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aza-kF-YIU">
-                                                <rect key="frame" x="19.5" y="16" width="114.5" height="20"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="            ">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.99302000000000001" green="0.53866999999999998" blue="0.03099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="17" name="VisbyRoundCF-DemiBold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="Quarterly*">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.38807234168052673" green="0.39212557673454285" blue="0.39623329043388367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quarterly*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aza-kF-YIU">
+                                                <rect key="frame" x="40" y="40" width="73.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BT8-aJ-YGq">
-                                                <rect key="frame" x="19.5" y="16" width="43.5" height="20"/>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
-                                                <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="56.5" y="16" width="41" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5V-ls-38W">
-                                                <rect key="frame" x="46" y="56" width="61" height="24"/>
+                                                <rect key="frame" x="41.5" y="68.5" width="70" height="24"/>
                                                 <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="HGP-1T-aPM"/>
-                                                    <constraint firstAttribute="width" constant="61" id="rc7-5d-7jM"/>
+                                                    <constraint firstAttribute="width" constant="70" id="rc7-5d-7jM"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -9473,46 +9346,32 @@ We may send emails to existing customers or prospective customers who have enqui
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="aza-kF-YIU" firstAttribute="top" secondItem="4Fi-DX-iKa" secondAttribute="top" constant="16" id="Ezp-xC-bR8"/>
+                                            <constraint firstItem="aza-kF-YIU" firstAttribute="top" secondItem="4Fi-DX-iKa" secondAttribute="top" constant="40" id="Ezp-xC-bR8"/>
                                             <constraint firstItem="aza-kF-YIU" firstAttribute="centerX" secondItem="4Fi-DX-iKa" secondAttribute="centerX" id="Sdp-EQ-VhC"/>
-                                            <constraint firstItem="BT8-aJ-YGq" firstAttribute="top" secondItem="aza-kF-YIU" secondAttribute="top" id="Uw2-yB-cmy"/>
-                                            <constraint firstItem="h5V-ls-38W" firstAttribute="top" secondItem="aza-kF-YIU" secondAttribute="bottom" constant="20" id="V9t-Cw-a5a"/>
+                                            <constraint firstItem="h5V-ls-38W" firstAttribute="top" secondItem="aza-kF-YIU" secondAttribute="bottom" constant="10" id="V9t-Cw-a5a"/>
+                                            <constraint firstItem="BT8-aJ-YGq" firstAttribute="top" secondItem="4Fi-DX-iKa" secondAttribute="top" constant="16" id="aaq-jV-JVw"/>
                                             <constraint firstAttribute="height" constant="101" id="gQa-Qb-1eH"/>
-                                            <constraint firstItem="BT8-aJ-YGq" firstAttribute="leading" secondItem="aza-kF-YIU" secondAttribute="leading" id="rr2-Vh-IM1"/>
+                                            <constraint firstItem="BT8-aJ-YGq" firstAttribute="centerX" secondItem="4Fi-DX-iKa" secondAttribute="centerX" id="nvw-Rz-MXE"/>
                                             <constraint firstItem="h5V-ls-38W" firstAttribute="centerX" secondItem="4Fi-DX-iKa" secondAttribute="centerX" id="ubB-sQ-yqe"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORc-ke-Zs1">
-                                        <rect key="frame" x="198" y="351" width="153" height="101"/>
+                                        <rect key="frame" x="198" y="355.5" width="153" height="101"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJB-2S-Ejk">
-                                                <rect key="frame" x="26" y="16" width="101" height="20"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="            ">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.99302000000000001" green="0.53866999999999998" blue="0.03099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="17" name="VisbyRoundCF-DemiBold"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="Annual*">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.38807234168052673" green="0.39212557673454285" blue="0.39623329043388367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="12" name="VisbyRoundCF-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annual*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJB-2S-Ejk">
+                                                <rect key="frame" x="48" y="40" width="58" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                                <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqZ-dr-pbv">
-                                                <rect key="frame" x="46" y="56" width="61" height="24"/>
+                                                <rect key="frame" x="41.5" y="68.5" width="70" height="24"/>
                                                 <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="61" id="1O1-Yk-pTS"/>
+                                                    <constraint firstAttribute="width" constant="70" id="1O1-Yk-pTS"/>
                                                     <constraint firstAttribute="height" constant="24" id="CrD-q3-anA"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                                 <state key="normal" title="Select">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -9522,25 +9381,25 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMe-zv-bIE">
-                                                <rect key="frame" x="26" y="16" width="43.5" height="20"/>
-                                                <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="17"/>
-                                                <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="56.5" y="16" width="41" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="LqZ-dr-pbv" firstAttribute="centerX" secondItem="ORc-ke-Zs1" secondAttribute="centerX" id="DDw-12-z7K"/>
-                                            <constraint firstItem="BJB-2S-Ejk" firstAttribute="top" secondItem="OMe-zv-bIE" secondAttribute="top" id="MNe-kU-dTX"/>
-                                            <constraint firstItem="BJB-2S-Ejk" firstAttribute="top" secondItem="ORc-ke-Zs1" secondAttribute="top" constant="16" id="X5t-iv-aqO"/>
-                                            <constraint firstItem="BJB-2S-Ejk" firstAttribute="leading" secondItem="OMe-zv-bIE" secondAttribute="leading" id="h4H-m4-xeX"/>
+                                            <constraint firstItem="OMe-zv-bIE" firstAttribute="centerX" secondItem="ORc-ke-Zs1" secondAttribute="centerX" id="UpJ-fv-gDc"/>
+                                            <constraint firstItem="BJB-2S-Ejk" firstAttribute="top" secondItem="ORc-ke-Zs1" secondAttribute="top" constant="40" id="X5t-iv-aqO"/>
+                                            <constraint firstItem="OMe-zv-bIE" firstAttribute="top" secondItem="ORc-ke-Zs1" secondAttribute="top" constant="16" id="adh-yP-xFw"/>
                                             <constraint firstItem="BJB-2S-Ejk" firstAttribute="centerX" secondItem="ORc-ke-Zs1" secondAttribute="centerX" id="vPL-Vf-zGi"/>
                                             <constraint firstAttribute="height" constant="101" id="wep-40-PMB"/>
-                                            <constraint firstItem="LqZ-dr-pbv" firstAttribute="top" secondItem="BJB-2S-Ejk" secondAttribute="bottom" constant="20" id="xv4-b6-Imh"/>
+                                            <constraint firstItem="LqZ-dr-pbv" firstAttribute="top" secondItem="BJB-2S-Ejk" secondAttribute="bottom" constant="10" id="xv4-b6-Imh"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96852236989999996" green="0.96868795159999999" blue="0.96851199870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="OCl-hf-4XJ" firstAttribute="top" secondItem="OpG-BI-YCM" secondAttribute="bottom" constant="32" id="0u5-nc-gGV"/>
                                     <constraint firstItem="OpG-BI-YCM" firstAttribute="leading" secondItem="MpS-Y4-SXd" secondAttribute="leading" constant="16" id="2gd-NI-ipa"/>
@@ -9598,18 +9457,26 @@ We may send emails to existing customers or prospective customers who have enqui
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="couvherStaticLabel" destination="KjO-fd-vhl" id="egl-0K-vjm"/>
                         <outlet property="goldAnnualLabel" destination="OMe-zv-bIE" id="9sK-cr-EVu"/>
+                        <outlet property="goldAnnualStaticLabel" destination="BJB-2S-Ejk" id="x5a-qR-UAR"/>
                         <outlet property="goldHalfAnnualLabel" destination="xSG-Bi-y9j" id="TM7-Mu-xsy"/>
+                        <outlet property="goldHalfAnnualStaticLabel" destination="do3-ac-Pes" id="jLu-KF-HxL"/>
                         <outlet property="goldHalfYearlySelectButton" destination="rBo-w6-DR4" id="U1d-jY-6vt"/>
                         <outlet property="goldMonthlyLabel" destination="QRz-jg-T0D" id="W1y-HP-Sh8"/>
                         <outlet property="goldMonthlySelectButton" destination="AMY-Pa-jL6" id="wAj-5F-gPo"/>
+                        <outlet property="goldMonthlyStaticLabel" destination="Hwp-fy-FqW" id="uaI-9k-Fzu"/>
                         <outlet property="goldMonthlyView" destination="uWA-KK-Gme" id="pSR-5r-IED"/>
                         <outlet property="goldQuarterlyLabel" destination="BT8-aJ-YGq" id="498-Gn-yfh"/>
                         <outlet property="goldQuarterlySelectButton" destination="h5V-ls-38W" id="sLe-zF-wZX"/>
+                        <outlet property="goldQuarterlyStaticLabel" destination="aza-kF-YIU" id="IsB-gF-4JU"/>
                         <outlet property="goldQuarterlyView" destination="4Fi-DX-iKa" id="yP4-z5-eHe"/>
+                        <outlet property="goldStaticLabel" destination="OCl-hf-4XJ" id="grQ-Zc-ZuF"/>
                         <outlet property="goldYearlySelectButton" destination="LqZ-dr-pbv" id="hBI-EQ-Ze2"/>
                         <outlet property="goldYearlyView" destination="ORc-ke-Zs1" id="4Kr-sx-mMV"/>
                         <outlet property="goldhalfYearlyView" destination="idp-aQ-w0l" id="GNh-FD-ejj"/>
+                        <outlet property="headerLabel" destination="xMo-w4-bCG" id="aSc-Bn-zm0"/>
+                        <outlet property="infoLabel" destination="cr5-Te-9e4" id="SR7-sb-E0i"/>
                         <outlet property="voucherApplyButton" destination="eMD-4w-XZG" id="qva-A4-VIS"/>
                         <outlet property="vouchertextField" destination="G5i-eR-6U5" id="g3W-Qp-DRJ"/>
                         <segue destination="hmz-cn-QTg" kind="show" identifier="showPaymentSegue" id="eOh-mb-7xJ"/>
@@ -11402,8 +11269,8 @@ We may send emails to existing customers or prospective customers who have enqui
         <image name="starFilled" width="25" height="27"/>
         <image name="starUnfilled" width="25" height="27"/>
         <image name="time_box" width="326" height="390"/>
-        <image name="tmp1" width="1242" height="236"/>
-        <image name="tmp2" width="1242" height="236"/>
+        <image name="tmp1" width="1241" height="272"/>
+        <image name="tmp2" width="1239" height="272"/>
         <image name="twitter_logo" width="66" height="66"/>
         <image name="unchecked" width="76" height="76"/>
     </resources>
@@ -11413,7 +11280,7 @@ We may send emails to existing customers or prospective customers who have enqui
         <segue reference="1mT-Qk-sm6"/>
         <segue reference="84t-sz-c2d"/>
         <segue reference="ViG-EI-YVQ"/>
-        <segue reference="eOh-mb-7xJ"/>
-        <segue reference="f1d-Wb-gFu"/>
+        <segue reference="9pm-1v-sJv"/>
+        <segue reference="p8p-Lv-PZS"/>
     </inferredMetricsTieBreakers>
 </document>

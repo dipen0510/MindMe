@@ -26,7 +26,7 @@
 
 - (void) setupInitialUI {
     
-    _voucherApplyButton.layer.cornerRadius = 10.0;
+    _voucherApplyButton.layer.cornerRadius = 12.5;
     _voucherApplyButton.layer.masksToBounds = NO;
     
     _silverMonthlySelectButton.layer.cornerRadius = 12.0;
@@ -75,6 +75,21 @@
     _silverMonthlyLabel.text = @"";
     _silverQuarterlyLabel.text = @"";
     _silverAnnualLabel.text = @"";
+    
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
+    _goldStaticLabel.font = _silverStaticLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(19./667)*kScreenHeight];
+    
+    _couvherStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    
+    _vouchertextField.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    
+    _voucherApplyButton.titleLabel.font = _goldMonthlySelectButton.titleLabel.font = _goldQuarterlySelectButton.titleLabel.font = _goldYearlySelectButton.titleLabel.font = _silverMonthlySelectButton.titleLabel.font = _silverQuarterlySelectButton.titleLabel.font = _silverYearlySelectButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(14./667)*kScreenHeight];
+    
+    _goldMonthlyLabel.font = _goldAnnualLabel.font = _goldQuarterlyLabel.font = _silverMonthlyLabel.font = _silverQuarterlyLabel.font = _silverAnnualLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    
+    _goldMonthlyStaticLabel.font = _goldAnnualStaticLabel.font = _goldQuarterlyStaticLabel.font = _silverMonthlyStaticLabel.font = _silverQuarterlyStaticLabel.font = _silverAnnualStaticLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    
+    _infoLabel1.font = _infoLabel2.font =  [UIFont fontWithName:@"Montserrat-Light" size:(12./667)*kScreenHeight];
     
 }
 

@@ -45,6 +45,21 @@
 @property (weak, nonatomic) IBOutlet UILabel *goldAnnualLabel;
 @property (weak, nonatomic) IBOutlet UITextField *vouchertextField;
 
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *couvherStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *goldStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *silverStaticLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *goldMonthlyStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *goldQuarterlyStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *goldAnnualStaticLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *silverMonthlyStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *silverQuarterlyStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *silverAnnualStaticLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel1;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel2;
 
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)selectButtonTapped:(id)sender;

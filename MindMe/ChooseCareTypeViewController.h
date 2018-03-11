@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *firstCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *secondCollectionView;
 @property (weak, nonatomic) IBOutlet UILabel *editSectionHeaderLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nSectionHeaderLabel;
 
 - (IBAction)backButtonTapped:(id)sender;
 
