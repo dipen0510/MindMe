@@ -23,6 +23,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *fifthStar;
 @property (weak, nonatomic) IBOutlet UILabel *reviewNameLabel;
 @property (weak, nonatomic) IBOutlet UITextField *reviewTitleTextField;
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *staticLabel1;
+@property (weak, nonatomic) IBOutlet UILabel *staticLabel2;
+@property (weak, nonatomic) IBOutlet UILabel *staticLabel3;
+@property (weak, nonatomic) IBOutlet UILabel *reviewTitleStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *reviewStaticLabel;
 
 - (IBAction)firstStarButtonTapped:(id)sender;
 - (IBAction)secondStarButtonTapped:(id)sender;

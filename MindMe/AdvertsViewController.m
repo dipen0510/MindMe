@@ -60,6 +60,14 @@
     _upgradedLabel.layer.borderColor = _createAdvertButton.backgroundColor.CGColor;
     _upgradedLabel.layer.borderWidth = 1.0;
     
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
+    _nameLabel.font = _tableViewheaderLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    
+    _liveAdvertValueLabel.font = _subscribedValueLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    _mailLabel.font = _upgradedLabel.font = _advertLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(14./667)*kScreenHeight];
+    
+    _createAdvertButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    
     if (![[SharedClass sharedInstance] isUserCarer]) {
         
         _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"Subscribed\n"];

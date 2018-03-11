@@ -541,7 +541,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="58" y="533.5" width="260" height="41"/>
+                                <rect key="frame" x="58" y="533.5" width="260" height="29.5"/>
                                 <string key="text">By pressing Sign Up you agree with the
 Terms of Services and Privacy Policy</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
@@ -1666,24 +1666,11 @@ Terms of Services and Privacy Policy</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ3-ae-r04">
                                 <rect key="frame" x="25" y="214" width="88" height="80"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="New Mail">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="Montserrat-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
                                     <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
+                                        <string key="content">New Mail
+2</string>
                                         <attributes>
-                                            <font key="NSFont" size="14" name="VisbyRoundCF-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="2">
-                                        <attributes>
-                                            <font key="NSFont" size="15" name="VisbyRoundCF-Medium"/>
+                                            <font key="NSFont" size="15" name="Montserrat-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -1696,18 +1683,11 @@ Cg
                                     <constraint firstAttribute="height" constant="80" id="2CV-Yb-moI"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="Upgraded">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="Montserrat-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
                                     <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
+                                        <string key="content">Upgraded
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="14" name="VisbyRoundCF-Regular"/>
+                                            <font key="NSFont" size="15" name="Montserrat-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -1717,18 +1697,11 @@ Cg
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRE-bQ-fzp">
                                 <rect key="frame" x="261.5" y="214" width="88" height="80"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Live Advert">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="Montserrat-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
                                     <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
+                                        <string key="content">Live Advert
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="14" name="VisbyRoundCF-Regular"/>
+                                            <font key="NSFont" size="15" name="Montserrat-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -6008,7 +5981,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hiw-te-9Ps">
-                                <rect key="frame" x="137" y="391.5" width="238" height="1"/>
+                                <rect key="frame" x="126.5" y="387.5" width="248.5" height="1"/>
                                 <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="SgS-AJ-9ff"/>
@@ -6033,25 +6006,25 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Rate Me :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kv6-xc-ycF">
-                                <rect key="frame" x="122.5" y="240" width="130.5" height="20"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                <rect key="frame" x="127" y="240" width="122" height="18.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review : Serpil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE5-W0-Tks">
-                                <rect key="frame" x="127.5" y="318.5" width="120.5" height="21"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                <rect key="frame" x="134.5" y="317" width="106.5" height="18.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review Title :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSE-QS-5gi">
-                                <rect key="frame" x="16" y="362.5" width="108.5" height="21"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                <rect key="frame" x="16" y="361" width="98" height="18.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIr-55-Oyh">
-                                <rect key="frame" x="174.5" y="275.5" width="25" height="27"/>
+                                <rect key="frame" x="174.5" y="274" width="25" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="0fk-1w-4Oc"/>
                                     <constraint firstAttribute="height" constant="27" id="CZH-CP-kQF"/>
@@ -6062,7 +6035,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JI-tB-Z1C">
-                                <rect key="frame" x="207" y="275.5" width="25" height="27"/>
+                                <rect key="frame" x="207" y="274" width="25" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="B27-dJ-Tq3"/>
                                     <constraint firstAttribute="height" constant="27" id="LLC-EE-9nk"/>
@@ -6073,7 +6046,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeg-P2-CPY">
-                                <rect key="frame" x="141" y="275.5" width="25" height="27"/>
+                                <rect key="frame" x="141" y="274" width="25" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="5L7-tK-lDV"/>
                                     <constraint firstAttribute="height" constant="27" id="zsz-Zm-fnn"/>
@@ -6084,7 +6057,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCk-Rc-IbD">
-                                <rect key="frame" x="240" y="275.5" width="25" height="27"/>
+                                <rect key="frame" x="240" y="274" width="25" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="1kR-ZL-giw"/>
                                     <constraint firstAttribute="width" constant="25" id="GBm-Zc-jDe"/>
@@ -6095,7 +6068,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcc-IM-6Bb">
-                                <rect key="frame" x="108" y="275.5" width="25" height="27"/>
+                                <rect key="frame" x="108" y="274" width="25" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="5YJ-uJ-f1a"/>
                                     <constraint firstAttribute="height" constant="27" id="Llf-ru-RbX"/>
@@ -6106,17 +6079,17 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRU-TD-gLm">
-                                <rect key="frame" x="137" y="364.5" width="222" height="17"/>
+                                <rect key="frame" x="126.5" y="361" width="232.5" height="19"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Maf-Jy-gtq" id="P1v-6Y-nqI"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nz-fb-13t">
-                                <rect key="frame" x="153.5" y="412.5" width="68" height="21"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                <rect key="frame" x="157" y="408.5" width="61.5" height="18.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -6136,7 +6109,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please ensure your review is correct and accurate..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SbG-NK-l2w">
-                                <rect key="frame" x="16" y="445.5" width="343" height="154.5"/>
+                                <rect key="frame" x="16" y="439" width="343" height="161"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="13"/>
@@ -6206,11 +6179,17 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="fifthStar" destination="ZCk-Rc-IbD" id="I5h-Cu-s7I"/>
                         <outlet property="firstStar" destination="Mcc-IM-6Bb" id="MSF-x9-5wu"/>
                         <outlet property="fourthStar" destination="7JI-tB-Z1C" id="2KQ-h5-zRh"/>
+                        <outlet property="headerLabel" destination="FHV-hO-kpM" id="QY1-Pm-eFc"/>
                         <outlet property="postReviewButton" destination="iez-ac-tb1" id="iA1-IZ-D8h"/>
                         <outlet property="reviewNameLabel" destination="DE5-W0-Tks" id="Hke-h8-JjB"/>
+                        <outlet property="reviewStaticLabel" destination="4nz-fb-13t" id="awC-0J-VIk"/>
                         <outlet property="reviewTextView" destination="SbG-NK-l2w" id="izV-NY-izE"/>
+                        <outlet property="reviewTitleStaticLabel" destination="bSE-QS-5gi" id="EOz-Uh-VEA"/>
                         <outlet property="reviewTitleTextField" destination="SRU-TD-gLm" id="dBM-yV-DmT"/>
                         <outlet property="secondStar" destination="zeg-P2-CPY" id="wut-Ua-LJH"/>
+                        <outlet property="staticLabel1" destination="QWY-t7-n8d" id="MfK-0A-sbL"/>
+                        <outlet property="staticLabel2" destination="ImO-Cp-K3c" id="gZH-5j-xs3"/>
+                        <outlet property="staticLabel3" destination="kv6-xc-ycF" id="VJd-VI-zNJ"/>
                         <outlet property="thordStar" destination="CIr-55-Oyh" id="vLm-1H-LpV"/>
                     </connections>
                 </viewController>
@@ -8305,7 +8284,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstAttribute="height" constant="40" id="DTS-P1-GMJ"/>
                                     <constraint firstAttribute="width" constant="240" id="tbI-27-WwO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                 <state key="normal" title="Become a Featured Carer">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -8334,6 +8313,8 @@ We may send emails to existing customers or prospective customers who have enqui
                     </view>
                     <connections>
                         <outlet property="becomeFeaturedButton" destination="KAA-RK-wmC" id="INa-OO-OHv"/>
+                        <outlet property="descTextView" destination="2rb-dd-uY0" id="Aqp-04-KKs"/>
+                        <outlet property="headerLabel" destination="Dku-5C-3Sl" id="mZd-ul-gqZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4z-pu-rtX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -11433,6 +11414,6 @@ We may send emails to existing customers or prospective customers who have enqui
         <segue reference="84t-sz-c2d"/>
         <segue reference="ViG-EI-YVQ"/>
         <segue reference="eOh-mb-7xJ"/>
-        <segue reference="p8p-Lv-PZS"/>
+        <segue reference="f1d-Wb-gFu"/>
     </inferredMetricsTieBreakers>
 </document>

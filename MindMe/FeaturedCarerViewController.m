@@ -27,6 +27,10 @@
     _becomeFeaturedButton.layer.cornerRadius = 20.0;
     _becomeFeaturedButton.layer.masksToBounds = NO;
     
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
+    _descTextView.font = [UIFont fontWithName:@"Montserrat-Light" size:(12./667)*kScreenHeight];
+    _becomeFeaturedButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    
 }
 
 
