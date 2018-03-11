@@ -30,6 +30,17 @@
 @property (weak, nonatomic) IBOutlet UIView *addressView;
 @property (weak, nonatomic) IBOutlet UITableView *addressTblView;
 @property (weak, nonatomic) IBOutlet UIButton *menuButton;
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
+@property (weak, nonatomic) IBOutlet UITextField *genderStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *maleStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *femaleStaticLabel;
+@property (weak, nonatomic) IBOutlet UITextField *dobStaticLabel;
+@property (weak, nonatomic) IBOutlet UITextField *eircodeStaticLabel;
+@property (weak, nonatomic) IBOutlet UITextField *cityStaticLabel;
+@property (weak, nonatomic) IBOutlet UITextField *addressStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *option1StaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *option2StaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *option3StaticLabel;
 
 - (IBAction)menuButtonTapped:(id)sender;
 - (IBAction)maleButtonTapped:(id)sender;
