@@ -26,6 +26,8 @@
     
     [self startGetFavoritesService];
     
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *contactNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextView *enquireyDescTextView;
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
 - (IBAction)menuButtonTapped:(id)sender;
 

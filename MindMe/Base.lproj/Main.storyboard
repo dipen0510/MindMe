@@ -541,7 +541,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="58" y="533.5" width="260" height="29.5"/>
+                                <rect key="frame" x="58" y="533.5" width="260" height="41"/>
                                 <string key="text">By pressing Sign Up you agree with the
 Terms of Services and Privacy Policy</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
@@ -1049,7 +1049,7 @@ Terms of Services and Privacy Policy</string>
                                     <constraint firstAttribute="height" constant="40" id="7Tp-11-zhT"/>
                                     <constraint firstAttribute="width" constant="130" id="s5Q-IN-aU2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                 <state key="normal" title="Send">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1130,6 +1130,8 @@ Terms of Services and Privacy Policy</string>
                         <outlet property="emailTextField" destination="OkD-19-yZr" id="i0V-wf-6qt"/>
                         <outlet property="enquireyDescTextView" destination="YUn-dW-gNW" id="QbJ-5V-Pa2"/>
                         <outlet property="enquiryTypeTextField" destination="mhE-Fl-oQw" id="pe4-wl-B74"/>
+                        <outlet property="headerLabel" destination="zFY-5C-hrp" id="lAz-hR-DCh"/>
+                        <outlet property="infoLabel" destination="Gou-HT-Dku" id="jF7-qb-vq8"/>
                         <outlet property="nameTextField" destination="1ax-FO-YcA" id="w7m-iN-4cS"/>
                         <outlet property="sendButton" destination="fyo-Ub-4dq" id="z7s-xC-WnL"/>
                     </connections>
@@ -1548,20 +1550,20 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6V2-ZB-46L">
-                                <rect key="frame" x="16" y="140" width="343" height="1"/>
+                                <rect key="frame" x="16" y="142" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Bz7-CE-FY3"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIKED CARE PROVIDERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuX-6v-qTx">
-                                <rect key="frame" x="99.5" y="104" width="176" height="19"/>
-                                <fontDescription key="fontDescription" name="VisbyRoundCF-DemiBold" family="Visby Round CF" pointSize="16"/>
+                                <rect key="frame" x="81.5" y="104" width="213" height="21"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D88-tq-SJr">
-                                <rect key="frame" x="0.0" y="149" width="375" height="518"/>
+                                <rect key="frame" x="0.0" y="151" width="375" height="516"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="T7W-9q-owI" id="fwJ-Vt-Mk5"/>
@@ -11428,8 +11430,8 @@ We may send emails to existing customers or prospective customers who have enqui
         <segue reference="kMe-Y4-Jvu"/>
         <segue reference="4Bd-9L-l1d"/>
         <segue reference="1mT-Qk-sm6"/>
-        <segue reference="biN-AH-pt4"/>
         <segue reference="84t-sz-c2d"/>
+        <segue reference="ViG-EI-YVQ"/>
         <segue reference="eOh-mb-7xJ"/>
         <segue reference="p8p-Lv-PZS"/>
     </inferredMetricsTieBreakers>
