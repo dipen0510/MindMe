@@ -38,10 +38,10 @@
 
 - (void) setupInitialUI {
     
-    _doneButton.layer.cornerRadius = 22.5;
+    _doneButton.layer.cornerRadius = 17.5;
     _doneButton.layer.masksToBounds = NO;
     
-    _cancelButton.layer.cornerRadius = 22.5;
+    _cancelButton.layer.cornerRadius = 17.5;
     _cancelButton.layer.masksToBounds = NO;
     _cancelButton.layer.borderWidth = 1.0;
     _cancelButton.layer.borderColor = _cancelButton.titleLabel.textColor.CGColor;
@@ -68,7 +68,7 @@
     
     _regionStaticLabel.font = _eircodeStaticLabel.font = _cityStaticLabel.font = _addressStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
     
-    _firstNameTextField.font = _lastNameTextField.font = _emailTextField.font = _eirCodeTextField.font = _addressTextField.font = _option1StaticLabel.font = _option2StaticLabel.font = _option3StaticLabel.font = _option4StaticLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    _firstNameTextField.font = _lastNameTextField.font = _phonetextField.font = _emailTextField.font = _eirCodeTextField.font = _addressTextField.font = _option1StaticLabel.font = _option2StaticLabel.font = _option3StaticLabel.font = _option4StaticLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
     
     _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
     

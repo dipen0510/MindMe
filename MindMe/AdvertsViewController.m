@@ -42,7 +42,7 @@
 
 - (void) setupInitialUI {
     
-    _createAdvertButton.layer.cornerRadius = 20.0;
+    _createAdvertButton.layer.cornerRadius = 17.5;
     _createAdvertButton.layer.masksToBounds = NO;
     
     _mailLabel.layer.cornerRadius = 5;
