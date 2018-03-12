@@ -27,6 +27,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tableViewheaderLabel;
 @property (weak, nonatomic) IBOutlet UIButton *menuButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *boxesHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *boxLabelTopConstraint;
 
 - (IBAction)menuButtonTapped:(id)sender;
 

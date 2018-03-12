@@ -81,7 +81,7 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gHp-ev-2Et">
-                                <rect key="frame" x="70" y="241" width="74" height="20"/>
+                                <rect key="frame" x="70" y="241" width="241" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Rg6-ur-waw"/>
                                 </constraints>
@@ -241,6 +241,7 @@
                             <constraint firstItem="CTV-km-ppo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="17" id="SZL-jD-h95"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uBO-9o-LOi" secondAttribute="bottom" id="T8m-l3-OVE"/>
                             <constraint firstAttribute="trailing" secondItem="CbB-Bj-uF0" secondAttribute="trailing" id="TDW-YQ-aEH"/>
+                            <constraint firstItem="gHp-ev-2Et" firstAttribute="width" secondItem="eq2-he-EpN" secondAttribute="width" id="WSY-AE-IVP"/>
                             <constraint firstItem="li9-HZ-CbJ" firstAttribute="top" secondItem="6jA-Q2-OxQ" secondAttribute="bottom" constant="46" id="YLG-ka-u90"/>
                             <constraint firstItem="WmD-53-v1j" firstAttribute="centerY" secondItem="2Ld-wf-eOs" secondAttribute="centerY" id="bRo-Ef-52x"/>
                             <constraint firstItem="cYa-Ya-Vfa" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="60/667" id="cbL-le-wOL"/>
@@ -541,7 +542,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="58" y="533.5" width="260" height="41"/>
+                                <rect key="frame" x="58" y="533.5" width="260" height="29.5"/>
                                 <string key="text">By pressing Sign Up you agree with the
 Terms of Services and Privacy Policy</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
@@ -1802,6 +1803,8 @@ Terms of Services and Privacy Policy</string>
                     <connections>
                         <outlet property="advertLabel" destination="YRE-bQ-fzp" id="4d9-Wg-F0N"/>
                         <outlet property="advertTblView" destination="UEk-AS-NLb" id="Xft-cg-xLy"/>
+                        <outlet property="boxLabelTopConstraint" destination="Qop-hw-Kjz" id="ryP-de-jkn"/>
+                        <outlet property="boxesHeightConstraint" destination="2CV-Yb-moI" id="fYK-mz-cIx"/>
                         <outlet property="createAdvertButton" destination="aUB-XM-AVg" id="BOS-bC-ZQX"/>
                         <outlet property="headerLabel" destination="y2t-34-g3B" id="bRp-t4-qYy"/>
                         <outlet property="liveAdvertValueLabel" destination="4bN-du-Xne" id="rIu-6M-8qg"/>
@@ -11265,7 +11268,7 @@ We may send emails to existing customers or prospective customers who have enqui
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kMe-Y4-Jvu"/>
-        <segue reference="4Bd-9L-l1d"/>
+        <segue reference="6aR-De-M3m"/>
         <segue reference="9pm-1v-sJv"/>
         <segue reference="f1d-Wb-gFu"/>
         <segue reference="rbF-Jg-9rI"/>

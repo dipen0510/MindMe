@@ -98,6 +98,10 @@
         else {
             _subscribedValueLabel.text = @"Upgrade\nNow ";
         }
+        
+        _boxesHeightConstraint.constant = 80;
+        _boxLabelTopConstraint.constant = (85.+12);
+        
     }
     
 }
