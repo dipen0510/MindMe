@@ -29,10 +29,10 @@
 
 - (void) setupInitialUI {
     
-    _nextButton.layer.cornerRadius = 20.;
+    _nextButton.layer.cornerRadius = 17.5;
     _nextButton.layer.masksToBounds = NO;
     
-    _cancelButton.layer.cornerRadius = 20.;
+    _cancelButton.layer.cornerRadius = 17.5;
     _cancelButton.layer.masksToBounds = NO;
     _cancelButton.layer.borderWidth = 1.0;
     _cancelButton.layer.borderColor = _cancelButton.titleLabel.textColor.CGColor;

@@ -85,9 +85,9 @@
     
     _bioStaticLabel.font = _rateStaticLabel.font = _numberOfExperienceStaticLabel.font = _languageStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
     
-    _addYourBioTextView.font = _preferredRateTextField.font = [UIFont fontWithName:@"Montserrat-Light" size:(14./667)*kScreenHeight];
+    _addYourBioTextView.font = _preferredRateTextField.font = _requiredRegularlyLabel.font = _requiredOccasionallyLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(14./667)*kScreenHeight];
     
-    _requiredRegularlyLabel.font = _requiredOccasionallyLabel.font = _experienceLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(12./667)*kScreenHeight];
+    _experienceLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(14./667)*kScreenHeight];
     
     _nextButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
     
@@ -382,7 +382,7 @@
 {
     
     if (collectionView == _miscCollectionView) {
-        return CGSizeMake((collectionView.frame.size.width)/2., 30);
+        return CGSizeMake((collectionView.frame.size.width) - 50., 30);
     }
     
     return CGSizeMake(100.,44.);
@@ -416,7 +416,7 @@
     
     switch (indexPath.row) {
         case 0:
-            cell.leadingConstraint.constant = 20;
+            cell.leadingConstraint.constant = 8;
             cell.trailingConstraint.constant = 0;
             cell.titleLabel.text = @"Accept online payments";
             
@@ -448,7 +448,7 @@
             break;
             
         case 2:
-            cell.leadingConstraint.constant = 20;
+            cell.leadingConstraint.constant = 8;
             cell.trailingConstraint.constant = 0;
             cell.titleLabel.text = @"Have a car";
             
@@ -483,6 +483,8 @@
             break;
     }
     
+    cell.titleLabel.textColor = _requiredRegularlyLabel.textColor;
+    
     
 }
 
@@ -491,6 +493,7 @@
     cell.activityLabel.text = [selectedLanguageArr objectAtIndex:indexPath.row];
     cell.deleteButton.tag = indexPath.row;
     [cell.deleteButton addTarget:self action:@selector(languageCollectionViewDeleteButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    cell.activityLabel.textColor = _requiredRegularlyLabel.textColor;
     
 }
 

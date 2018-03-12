@@ -30,6 +30,8 @@
     [self.bgTapView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideDrivingLicenseInfo:)]];
     self.bgTapView.userInteractionEnabled = YES;
     
+    _languageTextField.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    
 }
 
 - (void) hideDrivingLicenseInfo:(id)sender {
