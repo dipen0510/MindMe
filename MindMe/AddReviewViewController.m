@@ -32,18 +32,18 @@
     _reviewTextView.layer.borderWidth = 1.0;
     _reviewTextView.layer.borderColor = _reviewTextView.textColor.CGColor;
     
-    [_firstStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
-    [_secondStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
-    [_thordStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
-    [_fourthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
-    [_fifthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_firstStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_secondStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_thordStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_fourthStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_fifthStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
     
     _reviewNameLabel.text = [NSString stringWithFormat:@"Review : %@ %@.",[_advertDict valueForKey:@"first_name"],[[_advertDict valueForKey:@"second_name"] substringToIndex:1]];
     
     _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
     _staticLabel1.font = _staticLabel2.font = _reviewNameLabel.font = _reviewTitleTextField.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
     
-    _reviewTextView.font = [UIFont fontWithName:@"Montserrat-Light" size:(13./667)*kScreenHeight];
+    _reviewTextView.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
     
     _staticLabel3.font = _reviewTitleStaticLabel.font = _reviewStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
     
@@ -70,11 +70,11 @@
     
     rating = 1;
     
-    [_firstStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
-    [_secondStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
-    [_thordStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
-    [_fourthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
-    [_fifthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_firstStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_secondStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_thordStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_fourthStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_fifthStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
     
 }
 
@@ -82,11 +82,11 @@
     
     rating = 2;
     
-    [_firstStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
-    [_secondStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
-    [_thordStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
-    [_fourthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
-    [_fifthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_firstStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_secondStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_thordStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_fourthStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_fifthStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
     
 }
 
@@ -94,11 +94,11 @@
     
     rating = 3;
     
-    [_firstStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
-    [_secondStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
-    [_thordStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
-    [_fourthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
-    [_fifthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_firstStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_secondStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_thordStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_fourthStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_fifthStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
     
 }
 
@@ -106,11 +106,11 @@
     
     rating = 4;
     
-    [_firstStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
-    [_secondStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
-    [_thordStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
-    [_fourthStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
-    [_fifthStar setImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [_firstStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_secondStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_thordStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_fourthStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_fifthStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
     
 }
 
@@ -118,11 +118,11 @@
     
     rating = 5;
     
-    [_firstStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
-    [_secondStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
-    [_thordStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
-    [_fourthStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
-    [_fifthStar setImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_firstStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_secondStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_thordStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_fourthStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    [_fifthStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
     
 }
 
