@@ -1020,7 +1020,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gvi-gJ-evZ">
-                                <rect key="frame" x="16" y="498" width="343" height="1"/>
+                                <rect key="frame" x="16" y="495.5" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="JNN-ie-Y8R"/>
@@ -1036,17 +1036,17 @@ Terms of Services and Privacy Policy</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type your Enquiry" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YUn-dW-gNW">
-                                <rect key="frame" x="25" y="351" width="325" height="139"/>
+                                <rect key="frame" x="25" y="351" width="325" height="136.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.68627450980000004" green="0.68627450980000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyo-Ub-4dq">
-                                <rect key="frame" x="122.5" y="595" width="130" height="40"/>
-                                <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="122.5" y="614" width="130" height="35"/>
+                                <color key="backgroundColor" red="0.97184199090000001" green="0.63312035799999999" blue="0.35435462000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="7Tp-11-zhT"/>
+                                    <constraint firstAttribute="height" constant="35" id="7Tp-11-zhT"/>
                                     <constraint firstAttribute="width" constant="130" id="s5Q-IN-aU2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
@@ -1054,13 +1054,13 @@ Terms of Services and Privacy Policy</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Gou-HT-Dku">
-                                <rect key="frame" x="25" y="519" width="325" height="52"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gou-HT-Dku">
+                                <rect key="frame" x="25" y="516.5" width="325" height="79.5"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">We respond to all support requests within a "24/48 hour period", Monday to Friday. To ensure a quick response please provide as much details as possible.</string>
                                         <attributes>
-                                            <font key="NSFont" size="13" name="Montserrat-Light"/>
+                                            <font key="NSFont" size="15" name="Montserrat-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="2" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -1082,7 +1082,7 @@ Terms of Services and Privacy Policy</string>
                             <constraint firstItem="zFY-5C-hrp" firstAttribute="centerX" secondItem="wtR-Pb-Am2" secondAttribute="centerX" id="65W-uu-rt5"/>
                             <constraint firstItem="RaW-D5-pXA" firstAttribute="leading" secondItem="wtR-Pb-Am2" secondAttribute="leading" id="6Rr-U7-0bW"/>
                             <constraint firstItem="mhE-Fl-oQw" firstAttribute="top" secondItem="gpO-Ml-vmP" secondAttribute="bottom" constant="24" id="6l5-ho-6e9"/>
-                            <constraint firstItem="fyo-Ub-4dq" firstAttribute="top" secondItem="Gou-HT-Dku" secondAttribute="bottom" constant="24" id="6wh-pV-uqb"/>
+                            <constraint firstItem="fyo-Ub-4dq" firstAttribute="top" secondItem="Gou-HT-Dku" secondAttribute="bottom" constant="18" id="6wh-pV-uqb"/>
                             <constraint firstItem="OkD-19-yZr" firstAttribute="top" secondItem="dCN-HE-qi4" secondAttribute="bottom" constant="20" id="8Yf-Vh-c3U"/>
                             <constraint firstAttribute="trailing" secondItem="ONw-Me-lgt" secondAttribute="trailing" constant="16" id="AYp-Pb-b7h"/>
                             <constraint firstItem="zFY-5C-hrp" firstAttribute="top" secondItem="RaW-D5-pXA" secondAttribute="bottom" constant="20" id="DAB-dE-ogq"/>
@@ -1099,7 +1099,7 @@ Terms of Services and Privacy Policy</string>
                             <constraint firstItem="RaW-D5-pXA" firstAttribute="top" secondItem="wtR-Pb-Am2" secondAttribute="top" id="TfJ-eW-gog"/>
                             <constraint firstItem="Tmw-wG-zpH" firstAttribute="centerY" secondItem="mhE-Fl-oQw" secondAttribute="centerY" id="Ut2-ef-No1"/>
                             <constraint firstItem="Gou-HT-Dku" firstAttribute="leading" secondItem="wtR-Pb-Am2" secondAttribute="leading" constant="25" id="WTm-Qb-jbP"/>
-                            <constraint firstItem="Ngp-RN-14P" firstAttribute="top" secondItem="fyo-Ub-4dq" secondAttribute="bottom" constant="32" id="WcP-vg-5Ye"/>
+                            <constraint firstItem="Ngp-RN-14P" firstAttribute="top" secondItem="fyo-Ub-4dq" secondAttribute="bottom" constant="18" id="WcP-vg-5Ye"/>
                             <constraint firstAttribute="trailing" secondItem="7Vu-VQ-5RP" secondAttribute="trailing" constant="16" id="aB2-sC-msD"/>
                             <constraint firstItem="ONw-Me-lgt" firstAttribute="top" secondItem="pAj-Az-Z9G" secondAttribute="bottom" constant="8" id="aNv-Y1-v8C"/>
                             <constraint firstAttribute="trailing" secondItem="pAj-Az-Z9G" secondAttribute="trailing" constant="25" id="al2-ry-X8J"/>
@@ -8251,7 +8251,7 @@ We may however share commercial and technical data with our partners where a cus
 We may send emails to existing customers or prospective customers who have enquired or registered with us, regarding products or services directly provided by us.
 </mutableString>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="Montserrat-Light"/>
+                                            <font key="NSFont" size="15" name="Montserrat-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -8260,7 +8260,7 @@ We may send emails to existing customers or prospective customers who have enqui
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAA-RK-wmC">
                                 <rect key="frame" x="67.5" y="607" width="240" height="40"/>
-                                <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.97184199090000001" green="0.63312035799999999" blue="0.35435462000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="DTS-P1-GMJ"/>
                                     <constraint firstAttribute="width" constant="240" id="tbI-27-WwO"/>

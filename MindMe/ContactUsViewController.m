@@ -25,7 +25,7 @@
 
 - (void) setupInitialUI {
     
-    _sendButton.layer.cornerRadius = 20.0;
+    _sendButton.layer.cornerRadius = 17.5;
     _sendButton.layer.masksToBounds = NO;
     
     _enquiryTypeTextField.delegate = self;
@@ -50,7 +50,7 @@
     
     _nameTextField.font = _enquiryTypeTextField.font = _emailTextField.font = _contactNumberTextField.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
     
-    _enquireyDescTextView.font = _infoLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(13./667)*kScreenHeight];
+    _enquireyDescTextView.font = _infoLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
     
     _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
     
