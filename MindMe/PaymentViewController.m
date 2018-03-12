@@ -25,10 +25,7 @@
 
 - (void) setupInitialUI {
     
-    _payButton.layer.cornerRadius = 22.5;
-    _payButton.layer.masksToBounds = NO;
-    
-    _cancelButton.layer.cornerRadius = 22.5;
+    _cancelButton.layer.cornerRadius = 14.5;
     _cancelButton.layer.masksToBounds = NO;
     _cancelButton.layer.borderWidth = 1.0;
     _cancelButton.layer.borderColor = _cancelButton.titleLabel.textColor.CGColor;
@@ -38,9 +35,9 @@
     _yearTextField.keyboardType = UIKeyboardTypeNumberPad;
     _cvvTextField.keyboardType = UIKeyboardTypeNumberPad;
     
-    if ([UIScreen mainScreen].bounds.size.height<667) {
+    /*if ([UIScreen mainScreen].bounds.size.height<667) {
         _monthTextField.font = _yearTextField.font = _cvvTextField.font = [UIFont fontWithName:@"VisbyRoundCF-Regular" size:10.0];
-    }
+    }*/
     
     _cardNumberTextField.delegate = self;
     
