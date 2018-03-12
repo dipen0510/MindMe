@@ -11,8 +11,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Montserrat-Light.otf">
-            <string>Montserrat-Light</string>
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -26,9 +26,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Qh4-rf-zgU">
-                        <rect key="frame" x="24" y="16" width="206" height="17.5"/>
+                        <rect key="frame" x="24" y="16" width="198.5" height="17.5"/>
                         <attributedString key="attributedText">
-                            <fragment content="Elderly Care advert (0 views)">
+                            <fragment content="Elderly Care">
+                                <attributes>
+                                    <font key="NSFont" size="14" name="Montserrat-Medium"/>
+                                </attributes>
+                            </fragment>
+                            <fragment content=" advert (0 views)">
                                 <attributes>
                                     <font key="NSFont" size="14" name="Montserrat-Light"/>
                                 </attributes>
@@ -37,31 +42,31 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBy-PY-eF8">
-                        <rect key="frame" x="238" y="12" width="60" height="26"/>
+                        <rect key="frame" x="230.5" y="12" width="67.5" height="29"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="OEx-z0-psV"/>
-                            <constraint firstAttribute="height" constant="26" id="tAY-jE-gHl"/>
+                            <constraint firstAttribute="width" secondItem="nBy-PY-eF8" secondAttribute="height" multiplier="30:13" id="IjU-cE-Pcd"/>
+                            <constraint firstAttribute="height" constant="29" id="tAY-jE-gHl"/>
                         </constraints>
                         <state key="normal" image="on_off"/>
                         <state key="selected" image="off_on"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zn1-BL-pWK">
-                        <rect key="frame" x="24" y="64.5" width="173" height="37"/>
+                        <rect key="frame" x="24" y="61" width="185" height="45.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="173" id="XVa-7Q-EsT"/>
-                            <constraint firstAttribute="width" secondItem="zn1-BL-pWK" secondAttribute="height" multiplier="173:37" id="vDA-oq-juI"/>
+                            <constraint firstAttribute="width" constant="185" id="XVa-7Q-EsT"/>
+                            <constraint firstAttribute="width" secondItem="zn1-BL-pWK" secondAttribute="height" multiplier="756:186" id="vDA-oq-juI"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="13"/>
-                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="12"/>
                         <state key="normal" title="aa" backgroundImage="edit_carer_advert_icon-1">
-                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIt-YL-dAZ">
-                        <rect key="frame" x="273" y="64" width="25" height="35"/>
+                        <rect key="frame" x="269" y="61" width="29" height="41"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="jIt-YL-dAZ" secondAttribute="height" multiplier="5:7" id="bqy-qz-BML"/>
-                            <constraint firstAttribute="width" constant="25" id="gtt-oa-oTX"/>
+                            <constraint firstAttribute="width" constant="29" id="gtt-oa-oTX"/>
                         </constraints>
                         <inset key="imageEdgeInsets" minX="4" minY="4" maxX="4" maxY="9"/>
                         <state key="normal" image="trash_icon"/>
@@ -81,11 +86,11 @@
                     <constraint firstItem="Qh4-rf-zgU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="VB8-dU-0JC"/>
                     <constraint firstAttribute="trailing" secondItem="gFy-1l-uLx" secondAttribute="trailing" constant="12" id="cqw-9h-vIv"/>
                     <constraint firstAttribute="bottom" secondItem="gFy-1l-uLx" secondAttribute="bottom" id="fXD-hd-RBs"/>
-                    <constraint firstItem="jIt-YL-dAZ" firstAttribute="top" secondItem="nBy-PY-eF8" secondAttribute="bottom" constant="26" id="hQo-Bu-HJq"/>
+                    <constraint firstItem="jIt-YL-dAZ" firstAttribute="top" secondItem="nBy-PY-eF8" secondAttribute="bottom" constant="20" id="hQo-Bu-HJq"/>
                     <constraint firstItem="Qh4-rf-zgU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="hyk-es-WpJ"/>
                     <constraint firstAttribute="trailingMargin" secondItem="jIt-YL-dAZ" secondAttribute="trailing" constant="14" id="mxG-20-QWQ"/>
                     <constraint firstItem="nBy-PY-eF8" firstAttribute="leading" secondItem="Qh4-rf-zgU" secondAttribute="trailing" constant="8" id="nD3-G0-uZs"/>
-                    <constraint firstItem="gFy-1l-uLx" firstAttribute="top" secondItem="zn1-BL-pWK" secondAttribute="bottom" constant="17" id="rnN-B8-2fr"/>
+                    <constraint firstItem="gFy-1l-uLx" firstAttribute="top" secondItem="zn1-BL-pWK" secondAttribute="bottom" constant="12" id="rnN-B8-2fr"/>
                     <constraint firstItem="zn1-BL-pWK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="uoD-ym-Xtz"/>
                 </constraints>
             </tableViewCellContentView>
@@ -98,7 +103,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="edit_carer_advert_icon-1" width="546" height="112"/>
+        <image name="edit_carer_advert_icon-1" width="756" height="186"/>
         <image name="off_on" width="207" height="87"/>
         <image name="on_off" width="198" height="87"/>
         <image name="trash_icon" width="46" height="62"/>

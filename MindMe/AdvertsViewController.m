@@ -198,12 +198,39 @@
     if (![[SharedClass sharedInstance] isUserCarer]) {
         cell.careTypeLabel.text = [NSString stringWithFormat:@"%@ advert [%@ views]",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"],[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"viewed"]];
         [cell.editButton setTitle:[NSString stringWithFormat:@"Edit %@ Advert",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]] forState:UIControlStateNormal];
+        
+        
+        NSMutableAttributedString *strText = [[NSMutableAttributedString alloc] initWithString:cell.careTypeLabel.text];
+        
+        [strText addAttribute:NSFontAttributeName
+                        value:[UIFont fontWithName:@"Montserrat-Medium" size:(14./667.)*kScreenHeight]
+                        range:[cell.careTypeLabel.text rangeOfString:[NSString stringWithFormat:@"%@",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]]]];
+        
+        [strText addAttribute:NSFontAttributeName
+                        value:[UIFont fontWithName:@"Montserrat-Light" size:(14./667.)*kScreenHeight]
+                        range:[cell.careTypeLabel.text rangeOfString:[NSString stringWithFormat:@"advert [%@ views]",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"viewed"]]]];
+        
+        cell.careTypeLabel.attributedText = strText;
+        
     }
     else {
         cell.careTypeLabel.text = [NSString stringWithFormat:@"%@ profile [%@ views]",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"],[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"viewed"]];
         [cell.editButton setTitle:[NSString stringWithFormat:@"Edit %@ Profile",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]] forState:UIControlStateNormal];
+        
+        
+        NSMutableAttributedString *strText = [[NSMutableAttributedString alloc] initWithString:cell.careTypeLabel.text];
+        
+        [strText addAttribute:NSFontAttributeName
+                        value:[UIFont fontWithName:@"Montserrat-Medium" size:(14./667.)*kScreenHeight]
+                        range:[cell.careTypeLabel.text rangeOfString:[NSString stringWithFormat:@"%@",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]]]];
+        
+        [strText addAttribute:NSFontAttributeName
+                        value:[UIFont fontWithName:@"Montserrat-Light" size:(14./667.)*kScreenHeight]
+                        range:[cell.careTypeLabel.text rangeOfString:[NSString stringWithFormat:@"profile [%@ views]",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"viewed"]]]];
+        
+        cell.careTypeLabel.attributedText = strText;
+        
     }
-    
     
     cell.toggleButton.tag = indexPath.row;
     [cell.toggleButton addTarget:self action:@selector(advertToggleButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
