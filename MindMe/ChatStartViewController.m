@@ -33,13 +33,17 @@
     
     _titleLabel.font =  _messageLabel.font = _selectActiveProfStaticLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
     
-    _messageTextField.font =  _titleTextField.font = _selectActiveProfStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+     _selectActiveProfStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
     
-    _footerLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(13./667)*kScreenHeight];
+    _messageTextField.font =  _titleTextField.font = _footerLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
     
     _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
     
     selectedCareType = @"";
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _selectActiveProfStaticLabel.text = @"Select an Active Advert for which you want to start a conversation";
+    }
     
 }
 
@@ -125,7 +129,7 @@
     
     cell.titleLabel.text = [[allCareTypesArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
     [cell.titleLabel setFont:_footerLabel.font];
-    cell.titleLabel.textColor = [UIColor blackColor];
+    cell.titleLabel.textColor = _titleTextField.textColor;
     
     if ([[[allCareTypesArr objectAtIndex:indexPath.row] valueForKey:@"care_type"] isEqualToString:selectedCareType]) {
         cell.toggleButton.selected = YES;

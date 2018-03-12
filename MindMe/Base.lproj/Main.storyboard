@@ -10784,62 +10784,59 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ks8-Ad-f1l">
-                                <rect key="frame" x="37" y="171" width="33" height="18.5"/>
+                                <rect key="frame" x="37" y="163" width="33" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
-                                <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMt-zr-SMl">
-                                <rect key="frame" x="37" y="229" width="338" height="1"/>
+                                <rect key="frame" x="37" y="221" width="338" height="1"/>
                                 <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Fke-1I-8au"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Message Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Db7-dr-PiF">
-                                <rect key="frame" x="37" y="203" width="322" height="19"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <rect key="frame" x="37" y="195" width="322" height="19"/>
+                                <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Maf-Jy-gtq" id="rvr-0v-YUp"/>
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mK3-0J-84E">
-                                <rect key="frame" x="37" y="312" width="338" height="1"/>
+                                <rect key="frame" x="37" y="304" width="338" height="1"/>
                                 <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="j9I-v1-5LZ"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type your Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zcn-hw-wYq">
-                                <rect key="frame" x="37" y="286" width="322" height="19"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <rect key="frame" x="37" y="278" width="322" height="19"/>
+                                <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Maf-Jy-gtq" id="ihc-67-7Iq"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwk-uw-DIu">
-                                <rect key="frame" x="37" y="254" width="65" height="18.5"/>
+                                <rect key="frame" x="37" y="246" width="65" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
-                                <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select an active profile for which you want to start a conversation" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asC-nH-odM">
-                                <rect key="frame" x="21" y="334" width="333" height="37"/>
+                                <rect key="frame" x="21" y="326" width="333" height="37"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
-                                <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you do not see your profile listed above kindly make sure its active and then try again" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkY-d9-qgc">
-                                <rect key="frame" x="21" y="550" width="333" height="32"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you do not see your profile listed above kindly make sure its active and then try again" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkY-d9-qgc">
+                                <rect key="frame" x="21" y="530" width="333" height="55"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P34-vr-Xg9">
-                                <rect key="frame" x="21" y="387" width="333" height="147"/>
+                                <rect key="frame" x="21" y="379" width="333" height="135"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gag-Ia-5wz">
                                     <size key="itemSize" width="50" height="50"/>
@@ -10863,14 +10860,13 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNd-w9-Oi8">
-                                <rect key="frame" x="118" y="612" width="140.5" height="35"/>
-                                <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="114" y="606" width="148.5" height="49"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140.5" id="V4G-1R-S79"/>
-                                    <constraint firstAttribute="height" constant="35" id="fau-3q-jeo"/>
+                                    <constraint firstAttribute="height" constant="49" id="fau-3q-jeo"/>
+                                    <constraint firstAttribute="width" secondItem="eNd-w9-Oi8" secondAttribute="height" multiplier="564:186" id="kBy-jh-tJX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
-                                <state key="normal" title="Send">
+                                <state key="normal" backgroundImage="send message btn">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -10889,20 +10885,20 @@ We may send emails to existing customers or prospective customers who have enqui
                             <constraint firstItem="mK3-0J-84E" firstAttribute="leading" secondItem="zcn-hw-wYq" secondAttribute="leading" id="AdL-Kw-lFu"/>
                             <constraint firstItem="P34-vr-Xg9" firstAttribute="leading" secondItem="5Oe-vv-ibc" secondAttribute="leading" constant="21" id="DEd-EN-S63"/>
                             <constraint firstAttribute="trailing" secondItem="mK3-0J-84E" secondAttribute="trailing" id="FSi-23-n6P"/>
-                            <constraint firstItem="Ks8-Ad-f1l" firstAttribute="top" secondItem="tMQ-o5-vTy" secondAttribute="bottom" constant="28" id="HiC-OQ-BJE"/>
+                            <constraint firstItem="Ks8-Ad-f1l" firstAttribute="top" secondItem="tMQ-o5-vTy" secondAttribute="bottom" constant="20" id="HiC-OQ-BJE"/>
                             <constraint firstItem="asC-nH-odM" firstAttribute="top" secondItem="mK3-0J-84E" secondAttribute="bottom" constant="21" id="J9s-wc-1q0"/>
                             <constraint firstAttribute="trailing" secondItem="zcn-hw-wYq" secondAttribute="trailing" constant="16" id="LSm-V5-MQA"/>
                             <constraint firstAttribute="trailing" secondItem="HjX-Dj-Mqe" secondAttribute="trailing" id="NzE-S3-kqV"/>
                             <constraint firstItem="bwk-uw-DIu" firstAttribute="leading" secondItem="Ks8-Ad-f1l" secondAttribute="leading" id="VDl-HR-JF1"/>
                             <constraint firstItem="P34-vr-Xg9" firstAttribute="top" secondItem="asC-nH-odM" secondAttribute="bottom" constant="16" id="VEQ-vb-RfO"/>
-                            <constraint firstItem="zga-Sf-QVI" firstAttribute="top" secondItem="eNd-w9-Oi8" secondAttribute="bottom" constant="20" id="Vks-av-fxT"/>
+                            <constraint firstItem="zga-Sf-QVI" firstAttribute="top" secondItem="eNd-w9-Oi8" secondAttribute="bottom" constant="12" id="Vks-av-fxT"/>
                             <constraint firstItem="HjX-Dj-Mqe" firstAttribute="top" secondItem="5Oe-vv-ibc" secondAttribute="top" id="YFB-F2-8ix"/>
                             <constraint firstItem="Db7-dr-PiF" firstAttribute="leading" secondItem="Ks8-Ad-f1l" secondAttribute="leading" id="aWj-oY-cDt"/>
                             <constraint firstItem="eNd-w9-Oi8" firstAttribute="centerX" secondItem="5Oe-vv-ibc" secondAttribute="centerX" id="bor-3g-44p"/>
                             <constraint firstItem="zcn-hw-wYq" firstAttribute="leading" secondItem="bwk-uw-DIu" secondAttribute="leading" id="dTW-xc-ofI"/>
                             <constraint firstItem="Db7-dr-PiF" firstAttribute="top" secondItem="Ks8-Ad-f1l" secondAttribute="bottom" constant="13.5" id="dZe-sa-vGC"/>
                             <constraint firstItem="XkY-d9-qgc" firstAttribute="top" secondItem="P34-vr-Xg9" secondAttribute="bottom" constant="16" id="fSz-CS-MHf"/>
-                            <constraint firstItem="eNd-w9-Oi8" firstAttribute="top" secondItem="XkY-d9-qgc" secondAttribute="bottom" constant="30" id="gGm-ve-F3O"/>
+                            <constraint firstItem="eNd-w9-Oi8" firstAttribute="top" secondItem="XkY-d9-qgc" secondAttribute="bottom" constant="21" id="gGm-ve-F3O"/>
                             <constraint firstItem="zcn-hw-wYq" firstAttribute="top" secondItem="bwk-uw-DIu" secondAttribute="bottom" constant="13.5" id="jJp-sT-Pyr"/>
                             <constraint firstItem="bwk-uw-DIu" firstAttribute="top" secondItem="oMt-zr-SMl" secondAttribute="bottom" constant="24" id="m4T-0F-Xp7"/>
                             <constraint firstItem="oMt-zr-SMl" firstAttribute="top" secondItem="Db7-dr-PiF" secondAttribute="bottom" constant="7" id="m5O-9v-IdV"/>
@@ -11268,6 +11264,7 @@ We may send emails to existing customers or prospective customers who have enqui
         <image name="profile_icon" width="512" height="511"/>
         <image name="register_new" width="564" height="186"/>
         <image name="review_btn" width="564" height="186"/>
+        <image name="send message btn" width="564" height="186"/>
         <image name="share" width="41" height="43"/>
         <image name="short_notice" width="113" height="113"/>
         <image name="smoke_icon" width="113" height="113"/>
@@ -11282,10 +11279,10 @@ We may send emails to existing customers or prospective customers who have enqui
     <inferredMetricsTieBreakers>
         <segue reference="kMe-Y4-Jvu"/>
         <segue reference="4Bd-9L-l1d"/>
-        <segue reference="1mT-Qk-sm6"/>
-        <segue reference="84t-sz-c2d"/>
+        <segue reference="eOh-mb-7xJ"/>
+        <segue reference="p8p-Lv-PZS"/>
+        <segue reference="rbF-Jg-9rI"/>
+        <segue reference="y8Y-3Z-5Nq"/>
         <segue reference="ViG-EI-YVQ"/>
-        <segue reference="9pm-1v-sJv"/>
-        <segue reference="f1d-Wb-gFu"/>
     </inferredMetricsTieBreakers>
 </document>
