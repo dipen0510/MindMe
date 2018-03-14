@@ -11,7 +11,7 @@
 #import "SideMenuSectionView.h"
 
 @interface SideMenuViewController ()<STCollapseTableViewDelegate, UITableViewDataSource, UITableViewDelegate> {
-    int sectionHeight;
+    float sectionHeight;
 }
 
 @end
@@ -23,41 +23,30 @@
     // Do any additional setup after loading the view.
     
     [self setupInitialUI];
-    
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    
-    [super viewWillAppear:animated];
-    
-    _sideMenuTableView.dataSource = self;
-    _sideMenuTableView.delegate = self;
-    
     [_sideMenuTableView reloadData];
     
 }
 
--(void)viewWillDisappear:(BOOL)animated {
-    
-    [super viewWillDisappear:animated];
-    
-    _sideMenuTableView.delegate = nil;
-    
-}
+//-(void)viewWillAppear:(BOOL)animated {
+//    
+//    [super viewWillAppear:animated];
+//    
+//    _sideMenuTableView.dataSource = self;
+//    _sideMenuTableView.delegate = self;
+//    
+//    
+//    
+//}
 
 - (void) setupInitialUI {
     
-    if ([UIScreen mainScreen].bounds.size.height<667) {
-        sectionHeight = 60;
-    }
-    else {
-        sectionHeight = 70;
-    }
+    sectionHeight = (60./667.) * kScreenHeight;
     
     lastOpenedIndex = -1;
-    menuItemsArray=[[NSArray alloc]initWithObjects:@"Account Details", @"Search for a Carer", @"Subscribe Now", @"Information", @"Contact Us", @"Logout", nil];
-    menuItemsArrayForCarer=[[NSArray alloc]initWithObjects:@"Account Details", @"Search Jobs", @"Upgrade", @"Information", @"Contact Us", @"Logout", nil];
-    menuImageArray = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_search",@"news_icon",@"info_icon",@"ic_email",@"logout",nil];
+    menuItemsArray=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Adverts", @"Search for a Carer", @"Featured Carer", @"Last Minute Care", @"Subscribe Now", @"Information", @"Contact Us", @"Logout", nil];
+    menuItemsArrayForCarer=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Profiles", @"Search Jobs", @"Upgrade", @"Information", @"Contact Us", @"Logout", nil];
+    menuImageArray = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"ic_search",@"ic_search",@"news_icon",@"info_icon",@"ic_email",@"logout",nil];
+    menuImageArrayForCarer = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"news_icon",@"info_icon",@"ic_email",@"logout",nil];
     sectionArr = [[NSMutableArray alloc] init];
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
@@ -66,11 +55,12 @@
             NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"SideMenuSectionView" owner:self options:nil];
             SideMenuSectionView *header = [topLevelObjects objectAtIndex:0];
             header.frame = CGRectMake(header.frame.origin.x, header.frame.origin.y, header.frame.size.width, sectionHeight);
-            header.menuImage.image = [UIImage imageNamed:[menuImageArray objectAtIndex:i]];
+            header.menuImage.image = [UIImage imageNamed:[menuImageArrayForCarer objectAtIndex:i]];
             header.menuTitle.text = [menuItemsArrayForCarer objectAtIndex:i];
             [sectionArr addObject:header];
             
         }
+        _tblViewHeightConstraint.constant = sectionHeight * menuItemsArrayForCarer.count;
     }
     else {
         for (int i = 0; i<menuItemsArray.count; i++) {
@@ -83,6 +73,7 @@
             [sectionArr addObject:header];
             
         }
+        _tblViewHeightConstraint.constant = sectionHeight * menuItemsArray.count;
     }
     
     _sideMenuTableView.delegate1 = self;
@@ -107,10 +98,7 @@
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
         switch (section) {
-            case 0:
-                return 2;
-                break;
-            case 3:
+            case 4:
                 return 3;
                 break;
             default:
@@ -119,13 +107,7 @@
     }
     else {
         switch (section) {
-            case 0:
-                return 2;
-                break;
-            case 1:
-                return 3;
-                break;
-            case 3:
+            case 6:
                 return 3;
                 break;
             default:
@@ -154,79 +136,6 @@
     
     return cell;
     
-    
-}
-
--(void)didTapOnSectionHeader:(NSInteger)section {
-    
-    SideMenuSectionView *header = [sectionArr objectAtIndex:section];
-    
-    if (lastOpenedIndex>-1 && lastOpenedIndex!=section) {
-        SideMenuSectionView *openedHeader = [sectionArr objectAtIndex:lastOpenedIndex];
-        [UIView animateWithDuration:0.3 animations:^{
-            openedHeader.chevronImgView.transform = CGAffineTransformRotate(openedHeader.chevronImgView.transform, M_PI);
-        }];
-    }
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        header.chevronImgView.transform = CGAffineTransformRotate(header.chevronImgView.transform, M_PI);
-    }];
-    
-    lastOpenedIndex = section;
-    
-    if ([[SharedClass sharedInstance] isUserCarer] && section == 1) {
-        if ([[SharedClass sharedInstance] isGuestUser]) {
-            [self.navigationController popViewControllerAnimated:YES];
-            return;
-        }
-        [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
-        [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
-        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
-    }
-    
-    if (section == 2) {
-        
-        if ([[SharedClass sharedInstance] isGuestUser]) {
-            [self.navigationController popViewControllerAnimated:YES];
-            return;
-        }
-        if ([[SharedClass sharedInstance] isUserCarer]) {
-            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FeaturedCarerViewController" forSideMenuController:self.sideMenuController];
-        }
-        else {
-            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"BuyPlansForParentsViewController" forSideMenuController:self.sideMenuController];
-        }
-    
-        
-    }
-    else if (section == 4) {
-        
-        if ([[SharedClass sharedInstance] isGuestUser]) {
-            [self.navigationController popViewControllerAnimated:YES];
-            return;
-        }
-        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ContactUsViewController" forSideMenuController:self.sideMenuController];
-        
-    }
-    else if (section == 5) {
-        
-        if ([[SharedClass sharedInstance] isGuestUser]) {
-            [self.navigationController popViewControllerAnimated:YES];
-        }
-        else {
-            [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Userid"];
-            [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"token"];
-            [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserCarer"];
-            [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
-            [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
-            [[SharedClass sharedInstance] setUserId:nil];
-            [[SharedClass sharedInstance] setAuthorizationKey:nil];
-            [[SharedClass sharedInstance] setIsUserCarer:NO];
-            [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isEditProfileMenuButtonHidden"];
-            [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isProfileUpdated"];
-            [self.navigationController popToRootViewControllerAnimated:YES];
-        }
-    }
     
 }
 
@@ -268,7 +177,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return 40.;
+    return 35.;
     
 }
 
@@ -283,26 +192,28 @@
     SideMenuSectionView *header = [sectionArr objectAtIndex:section];
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
-        if (section == 0 || section == 3) {
+        if (section == 4) {
             header.chevronImgView.hidden = NO;
         }
         else {
             header.chevronImgView.hidden = YES;
+        }
+        if (section == 3) {
+            header.menuTitle.textColor = [UIColor colorWithRed:253./255. green:137./255. blue:8./155. alpha:1.0];
         }
         
     }
     else {
-        if (section == 0 || section == 1 || section == 3) {
+        if (section == 6) {
             header.chevronImgView.hidden = NO;
         }
         else {
             header.chevronImgView.hidden = YES;
         }
+        if (section == 5) {
+            header.menuTitle.textColor = [UIColor colorWithRed:253./255. green:137./255. blue:8./155. alpha:1.0];
+        }
         
-    }
-    
-    if (section == 2) {
-        header.menuTitle.textColor = [UIColor colorWithRed:253./255. green:137./255. blue:8./155. alpha:1.0];
     }
     
     header.menuTitle.font = [UIFont fontWithName:@"Montserrat-Regular" size:(17./667)*kScreenHeight];
@@ -320,45 +231,179 @@
     cell.tag = (indexPath.section*100) + indexPath.row;
     [cell addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(childCellTapped:)]];
     
-    switch (indexPath.section) {
-        case 0:
-            if (indexPath.row == 0) {
-                cell.menuTitle.text = @"Personal Details";
-            }
-            else {
-                if ([[SharedClass sharedInstance] isUserCarer]) {
-                    cell.menuTitle.text = @"Profiles";
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        switch (indexPath.section) {
+            case 4:
+                if (indexPath.row == 0) {
+                    cell.menuTitle.text = @"Information";
+                }
+                else if (indexPath.row == 1) {
+                    cell.menuTitle.text = @"Membership";
                 }
                 else {
-                    cell.menuTitle.text = @"Adverts";
+                    cell.menuTitle.text = @"Password";
                 }
-                
+                break;
+            default:
+                break;
+        }
+    }
+    else {
+        switch (indexPath.section) {
+            case 6:
+                if (indexPath.row == 0) {
+                    cell.menuTitle.text = @"Information";
+                }
+                else if (indexPath.row == 1) {
+                    cell.menuTitle.text = @"Membership";
+                }
+                else {
+                    cell.menuTitle.text = @"Password";
+                }
+                break;
+            default:
+                break;
+        }
+    }
+    
+}
+
+-(void)didTapOnSectionHeader:(NSInteger)section {
+    
+    SideMenuSectionView *header = [sectionArr objectAtIndex:section];
+    
+    if (lastOpenedIndex>-1 && lastOpenedIndex!=section) {
+        SideMenuSectionView *openedHeader = [sectionArr objectAtIndex:lastOpenedIndex];
+        [UIView animateWithDuration:0.3 animations:^{
+            openedHeader.chevronImgView.transform = CGAffineTransformRotate(openedHeader.chevronImgView.transform, M_PI);
+        }];
+    }
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        header.chevronImgView.transform = CGAffineTransformRotate(header.chevronImgView.transform, M_PI);
+    }];
+    
+    lastOpenedIndex = section;
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        
+        if (section == 0) {
+            if ([[SharedClass sharedInstance] isGuestUser]) {
+                [self.navigationController popViewControllerAnimated:YES];
+                return;
             }
-            break;
-        case 1:
-            if (indexPath.row == 0) {
-                cell.menuTitle.text = @"Carers";
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
+        }
+        else if (section == 1) {
+            if ([[SharedClass sharedInstance] isGuestUser]) {
+                [self.navigationController popViewControllerAnimated:YES];
+                return;
             }
-            else if (indexPath.row == 1) {
-                cell.menuTitle.text = @"Featured Carers";
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
+        }
+        else if (section == 2) {
+            [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
+            [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+        }
+        else if (section == 3) {
+            if ([[SharedClass sharedInstance] isGuestUser]) {
+                [self.navigationController popViewControllerAnimated:YES];
+                return;
+            }
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FeaturedCarerViewController" forSideMenuController:self.sideMenuController];
+        }
+        else if (section == 5) {
+            if ([[SharedClass sharedInstance] isGuestUser]) {
+                [self.navigationController popViewControllerAnimated:YES];
+                return;
+            }
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ContactUsViewController" forSideMenuController:self.sideMenuController];
+        }
+        else if (section == 6) {
+            if ([[SharedClass sharedInstance] isGuestUser]) {
+                [self.navigationController popViewControllerAnimated:YES];
             }
             else {
-                cell.menuTitle.text = @"Last Minute Care";
+                [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Userid"];
+                [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"token"];
+                [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserCarer"];
+                [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
+                [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
+                [[SharedClass sharedInstance] setUserId:nil];
+                [[SharedClass sharedInstance] setAuthorizationKey:nil];
+                [[SharedClass sharedInstance] setIsUserCarer:NO];
+                [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isEditProfileMenuButtonHidden"];
+                [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isProfileUpdated"];
+                [self.navigationController popToRootViewControllerAnimated:YES];
             }
-            break;
-        case 3:
-            if (indexPath.row == 0) {
-                cell.menuTitle.text = @"Information";
+        }
+        
+    }
+    else {
+        
+        if (section == 0) {
+            if ([[SharedClass sharedInstance] isGuestUser]) {
+                [self.navigationController popViewControllerAnimated:YES];
+                return;
             }
-            else if (indexPath.row == 1) {
-                cell.menuTitle.text = @"Membership";
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileParentViewController" forSideMenuController:self.sideMenuController];
+        }
+        else if (section == 1) {
+            if ([[SharedClass sharedInstance] isGuestUser]) {
+                [self.navigationController popViewControllerAnimated:YES];
+                return;
+            }
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
+        }
+        else if (section == 2) {
+            [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
+            [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+        }
+        else if (section == 3) {
+            [[SharedClass sharedInstance] setIsFeaturedFilterApplied:YES];
+            [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+        }
+        else if (section == 4) {
+            [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
+            [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:YES];
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+        }
+        else if (section == 5) {
+            if ([[SharedClass sharedInstance] isGuestUser]) {
+                [self.navigationController popViewControllerAnimated:YES];
+                return;
+            }
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"BuyPlansForParentsViewController" forSideMenuController:self.sideMenuController];
+        }
+        else if (section == 7) {
+            if ([[SharedClass sharedInstance] isGuestUser]) {
+                [self.navigationController popViewControllerAnimated:YES];
+                return;
+            }
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ContactUsViewController" forSideMenuController:self.sideMenuController];
+        }
+        else if (section == 8) {
+            if ([[SharedClass sharedInstance] isGuestUser]) {
+                [self.navigationController popViewControllerAnimated:YES];
             }
             else {
-                cell.menuTitle.text = @"Password";
+                [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Userid"];
+                [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"token"];
+                [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserCarer"];
+                [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
+                [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
+                [[SharedClass sharedInstance] setUserId:nil];
+                [[SharedClass sharedInstance] setAuthorizationKey:nil];
+                [[SharedClass sharedInstance] setIsUserCarer:NO];
+                [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isEditProfileMenuButtonHidden"];
+                [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isProfileUpdated"];
+                [self.navigationController popToRootViewControllerAnimated:YES];
             }
-            break;
-        default:
-            break;
+        }
+        
     }
     
 }
@@ -374,54 +419,18 @@
         
         NSIndexPath* indexPath = [NSIndexPath indexPathForRow:(tag%100) inSection:(tag/100)];
         
-        if (indexPath.row == 0 && indexPath.section == 0) {
-            
-            if ([[SharedClass sharedInstance] isUserCarer]) {
-                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
-            }
-            else {
-                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileParentViewController" forSideMenuController:self.sideMenuController];
-            }
-            
-            
-        }
-        else if (indexPath.row == 1 && indexPath.section == 0) {
-            
-            //        if (![[SharedClass sharedInstance] isUserCarer]) {
-            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
-            //        }
-            
-            
-        }
-        else if (indexPath.section == 1) {
-            
-            if (indexPath.row == 1) {
-                [[SharedClass sharedInstance] setIsFeaturedFilterApplied:YES];
-                [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
-            }
-            else if (indexPath.row == 2) {
-                [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
-                [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:YES];
-            }
-            else {
-                [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
-                [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
-            }
-            
-            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
-            
-        }
-        else if (indexPath.row == 0 && indexPath.section == 3) {
+        
+        if (indexPath.row == 0 ) {
             
             [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FAQViewController" forSideMenuController:self.sideMenuController];
             
         }
-        else if (indexPath.row == 1 && indexPath.section == 3) {
+        else if (indexPath.row == 1 ) {
             
             [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"MembershipFAQViewController" forSideMenuController:self.sideMenuController];
             
         }
-        else if (indexPath.row == 2 && indexPath.section == 3) {
+        else if (indexPath.row == 2 ) {
             
             [[SharedClass sharedInstance] setIsChangePasswordOpenedFromSideMenu:YES];
             [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ChangePasswordViewController" forSideMenuController:self.sideMenuController];

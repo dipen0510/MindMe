@@ -13,9 +13,11 @@
     NSArray *menuItemsArray;
     NSArray *menuItemsArrayForCarer;
     NSArray *menuImageArray;
+    NSArray *menuImageArrayForCarer;
     NSMutableArray* sectionArr;
     NSInteger lastOpenedIndex;
 }
 
 @property (weak, nonatomic) IBOutlet STCollapseTableView *sideMenuTableView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tblViewHeightConstraint;
 @end
