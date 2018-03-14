@@ -168,7 +168,7 @@
 - (void) setupValueLayoutForAdvert {
     
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[_advertDict valueForKey:@"first_name"],[[_advertDict valueForKey:@"second_name"] substringToIndex:1]];
-    _locationLabel.text = [_advertDict valueForKey:@"address1"];
+    _locationLabel.text = [NSString stringWithFormat:@"%0.2f km Away",[[_advertDict valueForKey:@"distance"] floatValue]];
     
     
     if ([[SharedClass sharedInstance] isUserCarer]) {

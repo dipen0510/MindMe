@@ -243,7 +243,7 @@
         return 30.0;
     }
     
-    return (200./568)*kScreenHeight;
+    return (250./568)*kScreenHeight;
     
 }
 
@@ -271,6 +271,7 @@
     
     cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
     cell.locationLabel.text = [NSString stringWithFormat:@"%d km Away",[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"distance"] intValue]];
+    cell.addressLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"];
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
         cell.careTypeLabel.text = [NSString stringWithFormat:@"%@ Required",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]];
