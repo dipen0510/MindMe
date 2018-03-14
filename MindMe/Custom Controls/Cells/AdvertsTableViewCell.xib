@@ -51,9 +51,9 @@
                         <state key="selected" image="off_on"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zn1-BL-pWK">
-                        <rect key="frame" x="19" y="61.5" width="200" height="49"/>
+                        <rect key="frame" x="19" y="61.5" width="220" height="54"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="200" id="XVa-7Q-EsT"/>
+                            <constraint firstAttribute="width" constant="220" id="XVa-7Q-EsT"/>
                             <constraint firstAttribute="width" secondItem="zn1-BL-pWK" secondAttribute="height" multiplier="756:186" id="vDA-oq-juI"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
@@ -90,7 +90,7 @@
                     <constraint firstItem="Qh4-rf-zgU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="hyk-es-WpJ"/>
                     <constraint firstAttribute="trailingMargin" secondItem="jIt-YL-dAZ" secondAttribute="trailing" constant="14" id="mxG-20-QWQ"/>
                     <constraint firstItem="nBy-PY-eF8" firstAttribute="leading" secondItem="Qh4-rf-zgU" secondAttribute="trailing" constant="8" id="nD3-G0-uZs"/>
-                    <constraint firstItem="gFy-1l-uLx" firstAttribute="top" secondItem="zn1-BL-pWK" secondAttribute="bottom" constant="8" id="rnN-B8-2fr"/>
+                    <constraint firstItem="gFy-1l-uLx" firstAttribute="top" secondItem="zn1-BL-pWK" secondAttribute="bottom" constant="3" id="rnN-B8-2fr"/>
                     <constraint firstItem="zn1-BL-pWK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="11" id="uoD-ym-Xtz"/>
                 </constraints>
             </tableViewCellContentView>
