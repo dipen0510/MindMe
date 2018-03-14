@@ -1299,6 +1299,7 @@
     if (indexPath.row%8 == 0 || indexPath.row<8) {
         cell.backgroundColor = [UIColor colorWithRed:41./255 green:73./255. blue:97./255. alpha:1.0];
         cell.availabilityLabel.hidden = NO;
+        cell.availabilityImgView.hidden = YES;
         
         switch (indexPath.row) {
             case 0:
@@ -1347,11 +1348,12 @@
         
     }
     else {
+        cell.backgroundColor = [UIColor whiteColor];
         if ([[availabilityArr objectAtIndex:indexPath.row] intValue]) {
-            cell.backgroundColor = [UIColor colorWithRed:41./255 green:73./255. blue:97./255. alpha:1.0];
+            cell.availabilityImgView.hidden = NO;
         }
         else {
-            cell.backgroundColor = [UIColor clearColor];
+            cell.availabilityImgView.hidden = YES;
         }
         cell.availabilityLabel.hidden = YES;
     }
