@@ -39,19 +39,19 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby_pic" translatesAutoresizingMaskIntoConstraints="NO" id="0G2-n3-lEo">
-                                <rect key="frame" x="14" y="77" width="65" height="65"/>
+                                <rect key="frame" x="14" y="76.5" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0G2-n3-lEo" secondAttribute="height" multiplier="1:1" id="jiQ-2K-UK7"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0 yrs minimum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZED-zr-0ti">
-                                <rect key="frame" x="134.5" y="143.5" width="114.5" height="18.5"/>
+                                <rect key="frame" x="134.5" y="143" width="114.5" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 Years Old" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeI-JH-dcg">
-                                <rect key="frame" x="14" y="44" width="340" height="19"/>
+                                <rect key="frame" x="14" y="44" width="340" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -69,49 +69,49 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circular-line-with-word-age-in-the-center" translatesAutoresizingMaskIntoConstraints="NO" id="sjw-97-eIE">
-                                <rect key="frame" x="107.5" y="77" width="19" height="19"/>
+                                <rect key="frame" x="107.5" y="76.5" width="19" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sjw-97-eIE" secondAttribute="height" multiplier="25:24" id="SoB-Ew-gLP"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Pho-gF-mR7">
-                                <rect key="frame" x="107.5" y="108" width="17" height="21"/>
+                                <rect key="frame" x="107.5" y="107.5" width="17" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Pho-gF-mR7" secondAttribute="height" multiplier="45:56" id="H54-FB-ORk"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="experience" translatesAutoresizingMaskIntoConstraints="NO" id="NZj-0x-3in">
-                                <rect key="frame" x="107.5" y="141" width="15" height="22.5"/>
+                                <rect key="frame" x="107.5" y="140.5" width="15" height="22.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NZj-0x-3in" secondAttribute="height" multiplier="40:59" id="rQo-WM-Som"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 Years Old" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xr5-vR-Dgw">
-                                <rect key="frame" x="134.5" y="77.5" width="94" height="18.5"/>
+                                <rect key="frame" x="134.5" y="77" width="94" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 km Away" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="v0i-dw-yRP">
-                                <rect key="frame" x="134.5" y="109" width="92.5" height="18.5"/>
+                                <rect key="frame" x="134.5" y="108.5" width="92.5" height="18.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We are looking for an experienced Carer for our Mother. Good companion..." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nL-7i-lkX">
-                                <rect key="frame" x="14" y="176" width="340" height="46"/>
+                                <rect key="frame" x="14" y="175.5" width="340" height="46"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                 <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shape 2" translatesAutoresizingMaskIntoConstraints="NO" id="Hk4-c6-FWe">
-                                <rect key="frame" x="10" y="150" width="88" height="22"/>
+                                <rect key="frame" x="10" y="149.5" width="88" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Hk4-c6-FWe" secondAttribute="height" multiplier="4:1" id="bLA-32-JIC"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0R-yg-qQN">
-                                <rect key="frame" x="22" y="152.5" width="63" height="17.5"/>
+                                <rect key="frame" x="22" y="152" width="63" height="17.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>

@@ -250,7 +250,13 @@
         return 30.0;
     }
     
-    return (250./568)*kScreenHeight;
+    if ([self height:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"]] > 20) {
+        return (250./568)*kScreenHeight;
+    }
+    else {
+        return (210./568)*kScreenHeight;
+    }
+    
     
 }
 
@@ -279,6 +285,10 @@
     cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
     cell.locationLabel.text = [NSString stringWithFormat:@"%d km Away",[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"distance"] intValue]];
     cell.addressLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"];
+    
+    if ([self height:cell.addressLabel.text] <= 20) {
+        cell.profileImgView.layer.cornerRadius = (27.25/568.)*kScreenHeight;
+    }
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
         cell.careTypeLabel.text = [NSString stringWithFormat:@"%@ Required",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]];
@@ -954,6 +964,32 @@
     
     return @"Sunday";
     
+}
+
+-(float)height :(NSString*)string
+{
+    /*
+     NSString *stringToSize = [NSString stringWithFormat:@"%@", string];
+     // CGSize constraint = CGSizeMake(LABEL_WIDTH - (LABEL_MARGIN *2), 2000.f);
+     CGSize maxSize = CGSizeMake(280, MAXFLOAT);//set max height //set the constant width, hear MAXFLOAT gives the maximum height
+     
+     CGSize size = [stringToSize sizeWithFont:[UIFont systemFontOfSize:20.0f] constrainedToSize:maxSize lineBreakMode:NSLineBreakByWordWrapping];
+     return size.height; //finally u get the correct height
+     */
+    //commenting the above code because "sizeWithFont: constrainedToSize:maxSize: lineBreakMode: " has been deprecated to avoid above code use below
+    
+    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:string
+                                                                         attributes:@
+                                          {
+                                          NSFontAttributeName: [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight]
+                                          }];
+    
+    
+    CGRect rect = [attributedText boundingRectWithSize:(CGSize){kScreenWidth - 60, MAXFLOAT}
+                                               options:NSStringDrawingUsesLineFragmentOrigin
+                                               context:nil];//you need to specify the some width, height will be calculated
+    CGSize requiredSize = rect.size;
+    return (requiredSize.height); //finally u return your height
 }
 
 @end

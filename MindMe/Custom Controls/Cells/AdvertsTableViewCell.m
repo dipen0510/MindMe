@@ -19,6 +19,9 @@
     _careTypeLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(14./667)*kScreenHeight];
     _editButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(14./667)*kScreenHeight];
     
+    _editButtonWidthConstraint.constant = (220./320) * kScreenWidth;
+//    _editButtonBottomConstraint.constant = (3./568.) * kScreenHeight;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

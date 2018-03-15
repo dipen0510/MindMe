@@ -98,6 +98,8 @@
                 <outlet property="careTypeLabel" destination="Qh4-rf-zgU" id="qqA-m5-DZd"/>
                 <outlet property="deleteButton" destination="jIt-YL-dAZ" id="HvA-Dp-wQW"/>
                 <outlet property="editButton" destination="zn1-BL-pWK" id="VQF-zq-Wgp"/>
+                <outlet property="editButtonBottomConstraint" destination="rnN-B8-2fr" id="N2h-ZI-Jjx"/>
+                <outlet property="editButtonWidthConstraint" destination="XVa-7Q-EsT" id="j4v-jK-YSk"/>
                 <outlet property="toggleButton" destination="nBy-PY-eF8" id="Nj0-4s-1Ez"/>
             </connections>
         </tableViewCell>
