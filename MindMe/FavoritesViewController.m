@@ -7,7 +7,7 @@
 //
 
 #import "FavoritesViewController.h"
-#import "FavoritesTableViewCell.h"
+#import "AdsHomeTableViewCell.h"
 #import "AdsDetailViewController.h"
 
 @interface FavoritesViewController ()
@@ -74,12 +74,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"FavoritesTableViewCell";
-    FavoritesTableViewCell *cell = (FavoritesTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"AdsHomeTableViewCell";
+    AdsHomeTableViewCell *cell = (AdsHomeTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
         // Load the top-level objects from the custom cell XIB.
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"FavoritesTableViewCell" owner:self options:nil];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"AdsHomeTableViewCell" owner:self options:nil];
         // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
         cell = [topLevelObjects objectAtIndex:0];
     }
@@ -110,44 +110,62 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return 200;
+    if ([self height:[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"address1"]] > 20) {
+        return (250./568)*kScreenHeight;
+    }
+    else {
+        return (210./568)*kScreenHeight;
+    }
     
 }
 
 
-- (void) populateContentForAdsCell:(FavoritesTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
+- (void) populateContentForAdsCell:(AdsHomeTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
     
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.drivingLicenseImgView.hidden = YES;
-    cell.euImgView.hidden = YES;
-    cell.lastLoginLabel.hidden = YES;
-    
-    if ([[SharedClass sharedInstance] isUserCarer]) {
-        cell.yearsExperienceStaticLabel.text = @"Years of Experience needed :";
-        cell.featuredImgView.hidden = YES;
-        cell.featuredLabel.hidden = YES;
-    }
-    else {
-        cell.yearsExperienceStaticLabel.text = @"Years of Experience ";
-        
-        if ([[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"Sub_active"] && [[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"Sub_active"] intValue] == 1) {
-            cell.featuredImgView.hidden = NO;
-            cell.featuredLabel.hidden = NO;
-        }
-        else {
-            cell.featuredImgView.hidden = YES;
-            cell.featuredLabel.hidden = YES;
-        }
-        
-    }
+    cell.profileImgView.layer.cornerRadius = (32.5/568.)*kScreenHeight;
+    cell.profileImgView.layer.masksToBounds = YES;
     
     cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
-    cell.locationLabel.text = [[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"address1"];
-    cell.careTypeLabel.text = [[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
-    cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ years",[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
+    cell.locationLabel.text = [NSString stringWithFormat:@"%d km Away",[[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"distance"] intValue]];
+    cell.addressLabel.text = [[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"address1"];
+    
+    if ([self height:cell.addressLabel.text] <= 20) {
+        cell.profileImgView.layer.cornerRadius = (27.25/568.)*kScreenHeight;
+    }
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        cell.careTypeLabel.text = [NSString stringWithFormat:@"%@ Required",[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]];
+        cell.ageLabel.hidden = YES;
+        cell.ageImgView.hidden = YES;
+        cell.ageImgViewTopConstraint.constant = -13.5;
+    }
+    else {
+        cell.careTypeLabel.text = [[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
+        cell.ageLabel.text = [NSString stringWithFormat:@"%ld Years Old",[self ageFromYear:[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"birth_year"] Month:[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"birth_month"] day:[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"birth_day"]]];
+        cell.ageLabel.hidden = NO;
+        cell.ageImgView.hidden = NO;
+        cell.ageImgViewTopConstraint.constant = 12.;
+    }
+    
+    
     cell.descLabel.text = [[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"about_you"];
+    cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ Years of Experience",[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
+    
+    
+    if ([[SharedClass sharedInstance] isFeaturedFilterApplied] || [[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"Sub_active"] intValue] == 1) {
+        cell.featuredLabel.hidden = NO;
+        cell.featuredImgView.hidden = NO;
+        cell.gradientView.hidden = NO;
+        [self addFeaturedGradientToView:cell.gradientView];
+    }
+    else {
+        cell.featuredLabel.hidden = YES;
+        cell.featuredImgView.hidden = YES;
+        cell.gradientView.hidden = YES;
+    }
     
     if (![[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqualToString:@""]) {
         __weak UIImageView* weakImageView = cell.profileImgView;
@@ -243,8 +261,67 @@
         [dict setObject:@"parent" forKey:@"flag"];
     }
     
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
+    NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
+    
+    [dict setObject:[responseData valueForKey:@"latitude"] forKey:@"lat"];
+    [dict setObject:[responseData valueForKey:@"longitude"] forKey:@"long"];
+    [dict setObject:[responseData valueForKey:@"address1"] forKey:@"address"];
+    
     return dict;
     
+}
+
+- (NSInteger)ageFromYear:(NSString *)year Month:(NSString *)month day:(NSString *)day {
+    
+    NSString* dobStr = [NSString stringWithFormat:@"%@/%@/%@",day,month,year];
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"dd/MM/yyyy";
+    NSDate* userDoB = [dateFormatter dateFromString:dobStr];
+    
+    NSDate *today = [NSDate date];
+    NSDateComponents *ageComponents = [[NSCalendar currentCalendar]
+                                       components:NSCalendarUnitYear
+                                       fromDate:userDoB
+                                       toDate:today
+                                       options:0];
+    return ageComponents.year;
+}
+
+- (void) addFeaturedGradientToView:(UIView *)view {
+    
+    CAGradientLayer* gradient = [CAGradientLayer new];
+    gradient.colors = @[(id)[UIColor colorWithRed:0.9765 green:0.8745 blue:0.7451 alpha:1.0].CGColor, (id)[UIColor colorWithRed:0.9882 green:0.9373 blue:0.8706 alpha:1.0].CGColor, (id)[UIColor whiteColor].CGColor];
+    gradient.frame = view.bounds;
+    gradient.locations = @[@0.0, @0.6, @1.0];
+    [view.layer insertSublayer:gradient atIndex:0];
+    
+}
+
+-(float)height :(NSString*)string
+{
+    /*
+     NSString *stringToSize = [NSString stringWithFormat:@"%@", string];
+     // CGSize constraint = CGSizeMake(LABEL_WIDTH - (LABEL_MARGIN *2), 2000.f);
+     CGSize maxSize = CGSizeMake(280, MAXFLOAT);//set max height //set the constant width, hear MAXFLOAT gives the maximum height
+     
+     CGSize size = [stringToSize sizeWithFont:[UIFont systemFontOfSize:20.0f] constrainedToSize:maxSize lineBreakMode:NSLineBreakByWordWrapping];
+     return size.height; //finally u get the correct height
+     */
+    //commenting the above code because "sizeWithFont: constrainedToSize:maxSize: lineBreakMode: " has been deprecated to avoid above code use below
+    
+    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:string
+                                                                         attributes:@
+                                          {
+                                          NSFontAttributeName: [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight]
+                                          }];
+    
+    
+    CGRect rect = [attributedText boundingRectWithSize:(CGSize){kScreenWidth - 60, MAXFLOAT}
+                                               options:NSStringDrawingUsesLineFragmentOrigin
+                                               context:nil];//you need to specify the some width, height will be calculated
+    CGSize requiredSize = rect.size;
+    return (requiredSize.height); //finally u return your height
 }
 
 @end
