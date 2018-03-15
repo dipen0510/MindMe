@@ -125,7 +125,7 @@
     _nameLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(21./667)*kScreenHeight];
     _careTypeLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
     _ageLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
-    _locationLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    _locationLabel.font = _addressLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
     _experienceValueLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
     _rateLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
     _rateStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
@@ -169,6 +169,7 @@
     
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[_advertDict valueForKey:@"first_name"],[[_advertDict valueForKey:@"second_name"] substringToIndex:1]];
     _locationLabel.text = [NSString stringWithFormat:@"%0.2f km Away",[[_advertDict valueForKey:@"distance"] floatValue]];
+    _addressLabel.text = [_advertDict valueForKey:@"address1"];
     
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
@@ -176,7 +177,7 @@
         _careTypeLabel.text = [NSString stringWithFormat:@"%@ Required",[_advertDict valueForKey:@"care_type"]];
     }
     else {
-        _experienceValueLabel.text = [NSString stringWithFormat:@"%@ years of Experience",[_advertDict valueForKey:@"experience"]];
+        _experienceValueLabel.text = [NSString stringWithFormat:@"%@ years Experience",[_advertDict valueForKey:@"experience"]];
         _careTypeLabel.text = [_advertDict valueForKey:@"care_type"];
     }
     

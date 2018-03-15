@@ -42,7 +42,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    if ([segue.identifier isEqualToString:@"showAdsDetailSegue"]) {
+    if ([segue.identifier isEqualToString:@"showAdsDetailSegue"] || [segue.identifier isEqualToString:@"showParentAdsDetailSegue"]) {
         
         AdsDetailViewController* controller = (AdsDetailViewController *)[segue destinationViewController];
         controller.advertDict = selectedAdvertDict;
@@ -98,7 +98,12 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     selectedAdvertDict = [[NSMutableDictionary alloc] initWithDictionary:[favoritesArr objectAtIndex:indexPath.row]];
-    [self performSegueWithIdentifier:@"showAdsDetailSegue" sender:nil];
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [self performSegueWithIdentifier:@"showAdsDetailSegue" sender:nil];
+    }
+    else {
+        [self performSegueWithIdentifier:@"showParentAdsDetailSegue" sender:nil];
+    }
     
 }
 

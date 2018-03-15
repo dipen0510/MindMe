@@ -27,16 +27,22 @@
     
 }
 
-//-(void)viewWillAppear:(BOOL)animated {
-//    
-//    [super viewWillAppear:animated];
-//    
-//    _sideMenuTableView.dataSource = self;
-//    _sideMenuTableView.delegate = self;
-//    
-//    
-//    
-//}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+     _sideMenuTableView.delegate1 = self;
+    _sideMenuTableView.dataSource = self;
+    
+}
+
+-(void) viewWillDisappear:(BOOL) animated
+{
+    [super viewWillDisappear:animated];
+
+    _sideMenuTableView.delegate1 = nil;
+    _sideMenuTableView.dataSource = nil;
+    
+}
 
 - (void) setupInitialUI {
     
