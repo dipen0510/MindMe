@@ -49,7 +49,7 @@
     sectionHeight = (60./667.) * kScreenHeight;
     
     lastOpenedIndex = -1;
-    menuItemsArray=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Adverts", @"Search for a Carer", @"Featured Carer", @"Last Minute Care", @"Subscribe Now", @"Information", @"Contact Us", @"Logout", nil];
+    menuItemsArray=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Adverts", @"Search for a Carer", @"Featured Carers", @"Last Minute Care", @"Subscribe Now", @"Information", @"Contact Us", @"Logout", nil];
     menuItemsArrayForCarer=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Profiles", @"Search Jobs", @"Upgrade", @"Information", @"Contact Us", @"Logout", nil];
     menuImageArray = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"ic_search",@"ic_search",@"news_icon",@"info_icon",@"ic_email",@"logout",nil];
     menuImageArrayForCarer = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"news_icon",@"info_icon",@"ic_email",@"logout",nil];
