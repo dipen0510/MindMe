@@ -233,9 +233,12 @@
         [SVProgressHUD showErrorWithStatus:@"Please accept Terms & Conditions to continue"];
         
     }
-    else if (!latLong || [latLong isEqualToString:@""]) {
-        [SVProgressHUD showErrorWithStatus:@"Please enter a valid address or Eircode to continue"];
+    else if (!latLong || [latLong isEqualToString:@""] || [_addressTextField.text isEqualToString:@""]) {
+        [SVProgressHUD showErrorWithStatus:@"Please enter a valid Eircode or Address"];
         
+    }
+    else if ([_phonetextField.text isEqualToString:@""]) {
+        [SVProgressHUD showErrorWithStatus:@"Please enter a valid Phone Number"];
     }
     else {
        [self startUpdateProfileService];

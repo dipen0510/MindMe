@@ -250,13 +250,16 @@
         [SVProgressHUD showErrorWithStatus:@"Please accept Terms & Conditions to continue"];
         
     }
-    else if (!latLong || [latLong isEqualToString:@""]) {
-        [SVProgressHUD showErrorWithStatus:@"Please enter a valid address or Eircode to continue"];
+    else if (!latLong || [latLong isEqualToString:@""] || [_addressTextField.text isEqualToString:@""]) {
+        [SVProgressHUD showErrorWithStatus:@"Please enter a valid Eircode or Address"];
         
     }
     else if ([self calculateAgeFromDateString:_dobTextField.text] < 16) {
         [SVProgressHUD showErrorWithStatus:@"You should be more than 16 years to continue"];
         
+    }
+    else if ([_phoneTextField.text isEqualToString:@""]) {
+        [SVProgressHUD showErrorWithStatus:@"Please enter a valid Phone Number"];
     }
     else {
         [self startUpdateProfileService];
