@@ -1249,11 +1249,24 @@ Terms of Services and Privacy Policy</string>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKY-cH-auc">
+                                                <rect key="frame" x="53" y="4" width="20" height="20"/>
+                                                <color key="backgroundColor" red="0.97184199090000001" green="0.63312035799999999" blue="0.35435462000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="JQ5-wm-dao"/>
+                                                    <constraint firstAttribute="width" constant="20" id="gaA-6P-apF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.15940248970000001" green="0.28466475009999997" blue="0.38037025930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="sKY-cH-auc" secondAttribute="trailing" constant="20" id="E10-Zn-LjM"/>
                                             <constraint firstItem="nuw-aG-o5E" firstAttribute="centerX" secondItem="kyF-4A-gdF" secondAttribute="centerX" id="LQ4-Cb-Nql"/>
                                             <constraint firstItem="nuw-aG-o5E" firstAttribute="top" secondItem="GrE-Pw-Uhh" secondAttribute="bottom" constant="4" id="NqD-jb-d3g"/>
+                                            <constraint firstItem="sKY-cH-auc" firstAttribute="top" secondItem="kyF-4A-gdF" secondAttribute="top" constant="4" id="kAo-qb-LRx"/>
                                             <constraint firstItem="GrE-Pw-Uhh" firstAttribute="centerX" secondItem="kyF-4A-gdF" secondAttribute="centerX" id="vuR-Z3-bS0"/>
                                             <constraint firstItem="GrE-Pw-Uhh" firstAttribute="top" secondItem="kyF-4A-gdF" secondAttribute="top" constant="8" id="wz3-sw-r4z"/>
                                         </constraints>
@@ -1495,6 +1508,7 @@ Terms of Services and Privacy Policy</string>
                         <outlet property="messagesView" destination="kyF-4A-gdF" id="Aj0-6c-cp6"/>
                         <outlet property="noAdsFoundsLabel" destination="PGz-03-WTZ" id="6sQ-OW-FsQ"/>
                         <outlet property="profileView" destination="aON-ZX-tTJ" id="0ZA-TI-3lQ"/>
+                        <outlet property="unreadMessageLabel" destination="sKY-cH-auc" id="r6T-cV-pNQ"/>
                         <segue destination="T7W-9q-owI" kind="show" identifier="showFavoritesSegue" id="84t-sz-c2d"/>
                         <segue destination="AJO-Ph-pca" kind="show" identifier="showChatSegue" id="1mT-Qk-sm6"/>
                         <segue destination="Dbs-ec-zZ7" kind="show" identifier="showAdsDetailSegue" id="biN-AH-pt4"/>
@@ -12357,10 +12371,10 @@ We may send emails to existing customers or prospective customers who have enqui
         <segue reference="f1d-Wb-gFu"/>
         <segue reference="4Bd-9L-l1d"/>
         <segue reference="kMe-Y4-Jvu"/>
-        <segue reference="tzj-il-TQz"/>
-        <segue reference="Wle-C2-fcQ"/>
-        <segue reference="5gg-cR-2zY"/>
-        <segue reference="ViG-EI-YVQ"/>
+        <segue reference="1mT-Qk-sm6"/>
+        <segue reference="biN-AH-pt4"/>
+        <segue reference="84t-sz-c2d"/>
+        <segue reference="YrY-OZ-7Vc"/>
         <segue reference="c0C-43-uaq"/>
         <segue reference="ySN-N9-Qfu"/>
         <segue reference="9pm-1v-sJv"/>

@@ -47,6 +47,7 @@
 #define GetAllMessageList @"conversations/index"
 #define ArchiveMessage @"conversations/archive"
 #define GetAllConversations @"conversations/getAllMessagesInConversations"
+#define GetUnreadMessageCount @"conversations/total_count"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"

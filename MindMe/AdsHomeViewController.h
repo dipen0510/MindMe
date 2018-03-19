@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *noAdsFoundsLabel;
 @property (weak, nonatomic) IBOutlet UIView *careTypeContainerView;
 @property (weak, nonatomic) IBOutlet UIView *locationContainerView;
+@property (weak, nonatomic) IBOutlet UILabel *unreadMessageLabel;
 
 - (IBAction)carerTypeButtonTapped:(id)sender;
 - (IBAction)menuButtonTapped:(id)sender;

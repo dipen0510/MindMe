@@ -111,11 +111,16 @@
         NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
         NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
         _addressTextField.text = [responseData valueForKey:@"address1"];
+        
+        [self startGetUnreadMessageCount];
+        
     }
     else {
         _addressTextField.text = @"Dublin";
     }
     
+    _unreadMessageLabel.layer.cornerRadius = 10;
+    _unreadMessageLabel.layer.masksToBounds = YES;
     
 }
 
@@ -524,6 +529,15 @@
     
 }
 
+- (void) startGetUnreadMessageCount {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GetUnreadMessageCount;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForGetUnreadMessageCount]];
+    
+}
+
 #pragma mark - DATASYNCMANAGER Delegates
 
 -(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
@@ -567,7 +581,12 @@
         
         
     }
-    
+    if ([requestServiceKey isEqualToString:GetUnreadMessageCount]) {
+        
+        int total = [[[[responseData valueForKey:@"message"] objectAtIndex:0] valueForKey:@"total"] intValue];
+        _unreadMessageLabel.text = [NSString stringWithFormat:@"%d",total];
+        
+    }
     
     
 }
@@ -630,6 +649,21 @@
         [dict setObject:[responseData valueForKey:@"longitude"] forKey:@"long"];
         [dict setObject:[responseData valueForKey:@"address1"] forKey:@"address"];
         
+    }
+    
+    return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForGetUnreadMessageCount {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
     }
     
     return dict;
