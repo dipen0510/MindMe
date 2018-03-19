@@ -45,6 +45,8 @@
         _selectActiveProfStaticLabel.text = @"Select an Active Advert for which you want to start a conversation";
     }
     
+    _headerLabel.text = [NSString stringWithFormat:@"Send a message to %@ %@.",[_advertDict valueForKey:@"first_name"],[[_advertDict valueForKey:@"second_name"] substringToIndex:1]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
