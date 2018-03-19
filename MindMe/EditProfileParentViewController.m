@@ -72,6 +72,18 @@
     
     _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
     
+    [_option1StaticLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(option1StaticLabelTapped)]];
+    _option1StaticLabel.userInteractionEnabled = YES;
+    
+    [_option2StaticLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(option2StaticLabelTapped)]];
+    _option2StaticLabel.userInteractionEnabled = YES;
+    
+    [_option3StaticLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(option3StaticLabelTapped)]];
+    _option3StaticLabel.userInteractionEnabled = YES;
+    
+    [_option4StaticLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(option4StaticLabelTapped)]];
+    _option4StaticLabel.userInteractionEnabled = YES;
+    
 }
 
 - (void) setupProfileDetails {
@@ -188,6 +200,30 @@
     
     UIButton* tappedButton = (UIButton *)sender;
     tappedButton.selected = !tappedButton.isSelected;
+    
+}
+
+- (void) option1StaticLabelTapped {
+    
+    _receiveEmailButton.selected = !_receiveEmailButton.isSelected;
+    
+}
+
+- (void) option2StaticLabelTapped {
+    
+    _mailNotifButton.selected = !_mailNotifButton.isSelected;
+    
+}
+
+- (void) option3StaticLabelTapped {
+    
+    _tncButton.selected = !_tncButton.isSelected;
+    
+}
+
+- (void) option4StaticLabelTapped {
+    
+    _receiveSMSButton.selected = !_receiveSMSButton.isSelected;
     
 }
 

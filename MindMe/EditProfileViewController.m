@@ -79,6 +79,15 @@
     
     _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
     
+    [_option1StaticLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(option1StaticLabelTapped)]];
+    _option1StaticLabel.userInteractionEnabled = YES;
+    
+    [_option2StaticLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(option2StaticLabelTapped)]];
+    _option2StaticLabel.userInteractionEnabled = YES;
+    
+    [_option3StaticLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(option3StaticLabelTapped)]];
+    _option3StaticLabel.userInteractionEnabled = YES;
+    
 }
 
 - (void) setupProfileDetails {
@@ -214,6 +223,24 @@
     
     UIButton* tappedButton = (UIButton *)sender;
     tappedButton.selected = !tappedButton.isSelected;
+    
+}
+
+- (void) option1StaticLabelTapped {
+    
+    _emailPromotionsButton.selected = !_emailPromotionsButton.isSelected;
+    
+}
+
+- (void) option2StaticLabelTapped {
+    
+    _receiveEmailsButton.selected = !_receiveEmailsButton.isSelected;
+    
+}
+
+- (void) option3StaticLabelTapped {
+    
+    _tncButton.selected = !_tncButton.isSelected;
     
 }
 
