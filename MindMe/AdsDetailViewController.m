@@ -430,8 +430,16 @@
         
     }
     
-    [self performSegueWithIdentifier:@"showChatStartSegue" sender:nil];
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
+    NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
     
+    if (![[SharedClass sharedInstance] isUserCarer] && [[responseData valueForKey:@"Sub_active"] intValue] != 1) {
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"BuyPlansForParentsViewController" forSideMenuController:self.sideMenuController];
+    }
+    else {
+        [self performSegueWithIdentifier:@"showChatStartSegue" sender:nil];
+    }
+
 }
 
 #pragma mark - CollectionView Datasource
