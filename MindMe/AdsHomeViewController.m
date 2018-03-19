@@ -107,6 +107,16 @@
     }
     
     
+    if (![[SharedClass sharedInstance] isGuestUser]) {
+        NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
+        NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
+        _addressTextField.text = [responseData valueForKey:@"address1"];
+    }
+    else {
+        _addressTextField.text = @"Dublin";
+    }
+    
+    
 }
 
 - (void) dismissKeyboard {
