@@ -129,6 +129,9 @@
         selectedLanguageArr = [[NSMutableArray alloc] initWithArray:[[_advertDictToBeEdited valueForKey:@"languages"] componentsSeparatedByString:@","]];
         
     }
+    else {
+        selectedLanguageArr = [[NSMutableArray alloc] initWithObjects:@"English", nil];
+    }
     
 }
 
