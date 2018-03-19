@@ -229,7 +229,7 @@
     if ([requestServiceKey isEqualToString:SendMessage]) {
         
         [SVProgressHUD showSuccessWithStatus:@"Message sent successfully"];
-        [self.navigationController popViewControllerAnimated:YES];
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
         
     }
     
