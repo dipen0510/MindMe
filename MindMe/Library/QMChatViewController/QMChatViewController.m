@@ -701,7 +701,7 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
 #pragma mark - UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 1) {
+    if (buttonIndex == 1 && alertView.tag!=100) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
     }
 }
@@ -1045,6 +1045,27 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
 
 - (IBAction)backButtonTapped:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)blockButtonTapped:(id)sender {
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:@"Are you sure you want to Decline this message ?" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+    alert.tag = 100;
+    [alert show];
+}
+
+-(void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 1 && alertView.tag == 100) {
+        
+        if ([[SharedClass sharedInstance] isUserCarer]) {
+            [self didPressSendButton:[self sendButtonItem] withMessageText:@"Thank you for viewing my profile and taking the time to contact me. However I have chosen to pursue another interview request on MindMe.ie. I hope you find the Caregiver you are looking for...." senderId:self.senderID senderDisplayName:self.senderDisplayName date:[NSDate date]];
+        }
+        else {
+            [self didPressSendButton:[self sendButtonItem] withMessageText:@"We have reviewed your application but have chosen to pursue other applicants on MindMe.ie We would like to thank you for the time you took to apply to this job and we wish you success in the future...." senderId:self.senderID senderDisplayName:self.senderDisplayName date:[NSDate date]];
+        }
+        
+    }
+    
 }
 
 @end

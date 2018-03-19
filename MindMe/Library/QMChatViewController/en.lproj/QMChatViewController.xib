@@ -52,6 +52,20 @@
                                 <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="Leo-AG-IdW"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMC-HH-LMS">
+                            <rect key="frame" x="306" y="37" width="61" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="IOu-KB-Yoa"/>
+                                <constraint firstAttribute="width" constant="61" id="Wms-f7-CYe"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="15"/>
+                            <state key="normal" title="Block">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="blockButtonTapped:" destination="-1" eventType="touchUpInside" id="ZVJ-ZM-Bbu"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.15940248970000001" green="0.28466475009999997" blue="0.38037025930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -60,6 +74,8 @@
                         <constraint firstItem="c3x-wE-VGj" firstAttribute="leading" secondItem="XS1-xK-ToQ" secondAttribute="leading" constant="8" id="Gp9-Eq-Xet"/>
                         <constraint firstItem="hps-pg-cs2" firstAttribute="centerX" secondItem="XS1-xK-ToQ" secondAttribute="centerX" id="MC7-yc-KWy"/>
                         <constraint firstItem="c3x-wE-VGj" firstAttribute="top" secondItem="XS1-xK-ToQ" secondAttribute="top" constant="37" id="VLI-cM-CaL"/>
+                        <constraint firstAttribute="bottom" secondItem="dMC-HH-LMS" secondAttribute="bottom" constant="17" id="bsK-KT-J8n"/>
+                        <constraint firstAttribute="trailing" secondItem="dMC-HH-LMS" secondAttribute="trailing" constant="8" id="xCR-xX-CYU"/>
                     </constraints>
                 </view>
                 <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l9u-2b-4LK" customClass="QMChatCollectionView">

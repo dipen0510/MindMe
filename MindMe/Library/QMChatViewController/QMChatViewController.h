@@ -38,7 +38,7 @@
 #import "QMChatIncomingLinkPreviewCell.h"
 #import "QMChatOutgoingLinkPreviewCell.h"
 
-@interface QMChatViewController : UIViewController <QMChatCollectionViewDataSource, QMChatCollectionViewDelegateFlowLayout, UITextViewDelegate>
+@interface QMChatViewController : UIViewController <QMChatCollectionViewDataSource, QMChatCollectionViewDelegateFlowLayout, UITextViewDelegate, UIAlertViewDelegate>
 
 
 @property (strong, nonatomic) QMChatDataSource *chatDataSource;
@@ -267,6 +267,7 @@
  */
 - (void)hideKeyboard:(BOOL)animated;
 - (IBAction)backButtonTapped:(id)sender;
+- (IBAction)blockButtonTapped:(id)sender;
 
 #pragma mark - Methods requiring super
 
