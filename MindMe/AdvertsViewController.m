@@ -32,7 +32,19 @@
     _menuButton.hidden = [[NSUserDefaults standardUserDefaults] boolForKey:@"isEditProfileMenuButtonHidden"];
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isEditProfileMenuButtonHidden"]) {
-        [self performSegueWithIdentifier:@"showChooseCareTypeSegue" sender:nil];
+        
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isProfileUpdated"]) {
+            [self performSegueWithIdentifier:@"showChooseCareTypeSegue" sender:nil];
+        }
+        else {
+            if ([[SharedClass sharedInstance] isUserCarer]) {
+                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
+            }
+            else {
+                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileParentViewController" forSideMenuController:self.sideMenuController];
+            }
+        }
+        
     }
     else {
         [self startGetAdvertsService];
