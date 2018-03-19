@@ -189,8 +189,16 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    selectedChatDict = [[NSMutableDictionary alloc] initWithDictionary:[msgListArr objectAtIndex:indexPath.row]];
-    [self performSegueWithIdentifier:@"showChatSegue" sender:nil];
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
+    NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
+    
+    if (![[SharedClass sharedInstance] isUserCarer] && [[responseData valueForKey:@"Sub_active"] intValue] != 1) {
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"BuyPlansForParentsViewController" forSideMenuController:self.sideMenuController];
+    }
+    else {
+        selectedChatDict = [[NSMutableDictionary alloc] initWithDictionary:[msgListArr objectAtIndex:indexPath.row]];
+        [self performSegueWithIdentifier:@"showChatSegue" sender:nil];
+    }
     
 }
 
