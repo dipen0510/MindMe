@@ -280,9 +280,9 @@
         
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isProfileUpdated"];
         
-        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isEditProfileMenuButtonHidden"]) {
+//        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isEditProfileMenuButtonHidden"]) {
             [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
-        }
+//        }
         
     }
     
