@@ -11020,7 +11020,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                                     <constraint firstAttribute="width" constant="52" id="Sbl-4V-yS3"/>
                                                     <constraint firstAttribute="height" constant="17" id="ZoK-az-v3M"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -11044,12 +11044,11 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hN-sL-lBg">
-                                                <rect key="frame" x="17" y="42" width="58" height="17"/>
+                                                <rect key="frame" x="13.5" y="42" width="65.5" height="17"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="58" id="FIi-To-NIk"/>
                                                     <constraint firstAttribute="height" constant="17" id="mbC-Zh-9Q3"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -11073,12 +11072,11 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rl-Kq-bi9">
-                                                <rect key="frame" x="16.5" y="42" width="59" height="17"/>
+                                                <rect key="frame" x="12" y="42" width="68" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="KGf-KK-hmM"/>
-                                                    <constraint firstAttribute="width" constant="59" id="lB4-xv-EzK"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -11102,12 +11100,11 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w57-E7-2tu">
-                                                <rect key="frame" x="20" y="42" width="52" height="17"/>
+                                                <rect key="frame" x="16" y="42" width="60" height="17"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="52" id="7Iz-Tm-cGV"/>
                                                     <constraint firstAttribute="height" constant="17" id="FoF-2H-Itq"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -11155,7 +11152,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fk0-Bi-UoC">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="55"/>
                                         <color key="backgroundColor" red="0.52716547250747681" green="0.75903218984603882" blue="0.27375465631484985" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                         <state key="normal" title="Inbox">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -11166,7 +11163,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECy-jE-ICk">
                                         <rect key="frame" x="250" y="0.0" width="125" height="55"/>
                                         <color key="backgroundColor" red="0.19008368249999999" green="0.33141440150000001" blue="0.44373852009999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                         <state key="normal" title="Archived">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -11177,7 +11174,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJ6-32-Toh">
                                         <rect key="frame" x="125" y="0.0" width="125" height="55"/>
                                         <color key="backgroundColor" red="0.19008368253707886" green="0.33141440153121948" blue="0.44373852014541626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                         <state key="normal" title="Sent">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -12364,12 +12361,12 @@ We may send emails to existing customers or prospective customers who have enqui
         <segue reference="4Bd-9L-l1d"/>
         <segue reference="kMe-Y4-Jvu"/>
         <segue reference="f1d-Wb-gFu"/>
-        <segue reference="1mT-Qk-sm6"/>
+        <segue reference="y8Y-3Z-5Nq"/>
+        <segue reference="rbF-Jg-9rI"/>
+        <segue reference="9pm-1v-sJv"/>
         <segue reference="YrY-OZ-7Vc"/>
         <segue reference="biN-AH-pt4"/>
-        <segue reference="84t-sz-c2d"/>
         <segue reference="c0C-43-uaq"/>
         <segue reference="ySN-N9-Qfu"/>
-        <segue reference="9pm-1v-sJv"/>
     </inferredMetricsTieBreakers>
 </document>

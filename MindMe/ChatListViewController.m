@@ -205,7 +205,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return (125./667.)*kScreenHeight;
+    return (140./667.)*kScreenHeight;
     
 }
 
@@ -246,6 +246,9 @@
     NSDate* date = [dateformatter dateFromString:[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"date_sent"]];
     
     cell.dateLabel.text = [date dateTimeAgo];
+    
+    cell.profileImgView.layer.cornerRadius = (((140./667.)*kScreenHeight) - 60)/2.;
+    cell.profileImgView.layer.masksToBounds = YES;
     
     if (![[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqual:[NSNull null]]) {
         if (![[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqualToString:@""]) {
