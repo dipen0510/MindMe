@@ -59,6 +59,7 @@
         _firstNameTopConstraint.constant = (25./667) * kScreenHeight;
         _signUpButtonTopConstraint.constant = (25./667.) * kScreenHeight;
         _legalLabelTopConstraint.constant = (10./667.) * kScreenHeight;
+        _fbButtonTopConstraint.constant = (10./667.) * kScreenHeight;
     }
     
     [_backTapView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backButtonTapped:)]];

@@ -536,7 +536,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="38" y="547.5" width="300" height="49"/>
+                                <rect key="frame" x="18" y="547.5" width="340" height="40"/>
                                 <string key="text">By pressing Sign Up you agree with the
 Terms of Services and Privacy Policy</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="20"/>
@@ -6342,7 +6342,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstAttribute="height" constant="20" id="75f-AD-hoh"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uxq-jJ-v3D">
@@ -6383,7 +6383,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstAttribute="height" constant="20" id="eua-Wz-t3v"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqc-wi-9E9">
@@ -6401,37 +6401,36 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGQ-OE-3vA">
-                                <rect key="frame" x="39.5" y="437" width="140" height="42"/>
+                                <rect key="frame" x="12.5" y="437" width="170" height="42"/>
                                 <color key="backgroundColor" red="0.97184199090000001" green="0.63312035799999999" blue="0.35435462000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="19"/>
                                 <state key="normal" title="Reset Password"/>
                                 <connections>
                                     <action selector="resetPwdButtonTapped:" destination="noW-MQ-IaA" eventType="touchUpInside" id="nIw-RM-IPC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdW-NJ-Add">
-                                <rect key="frame" x="194.5" y="437" width="140" height="42"/>
+                                <rect key="frame" x="191.5" y="437" width="170" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="B1D-E2-Wrx"/>
-                                    <constraint firstAttribute="width" constant="140" id="pVo-jH-ABv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="19"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancelButtonTapped:" destination="noW-MQ-IaA" eventType="touchUpInside" id="fT4-Jt-q45"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lP-Gs-yxB">
-                                <rect key="frame" x="183.5" y="308" width="8" height="128"/>
+                                <rect key="frame" x="186.5" y="308" width="2" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="ZW7-eY-cR5"/>
-                                    <constraint firstAttribute="width" constant="8" id="gnt-fJ-yy9"/>
+                                    <constraint firstAttribute="width" constant="2" id="gnt-fJ-yy9"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a password of at least 5 characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-dk-e66">
-                                <rect key="frame" x="36.5" y="327" width="303" height="16"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a password of at least 5 characters" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-dk-e66">
+                                <rect key="frame" x="13.5" y="327" width="349.5" height="44"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -6441,22 +6440,23 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstAttribute="height" constant="20" id="mFx-C4-VQV"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANGE PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uO1-Nc-ncy">
-                                <rect key="frame" x="86" y="51" width="203.5" height="23.5"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="19"/>
+                                <rect key="frame" x="70" y="51" width="236" height="27"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Bev-Sa-IIc" firstAttribute="leading" secondItem="EfL-AO-RPh" secondAttribute="leading" id="0Lb-yt-h7L"/>
+                            <constraint firstItem="IGi-dk-e66" firstAttribute="leading" secondItem="UZ3-OR-HdL" secondAttribute="leading" constant="13.5" id="0UG-MS-ewX"/>
                             <constraint firstItem="Bev-Sa-IIc" firstAttribute="top" secondItem="uen-nB-oMu" secondAttribute="bottom" constant="35" id="2Gs-Gx-cWS"/>
                             <constraint firstItem="uO1-Nc-ncy" firstAttribute="top" secondItem="etJ-UB-bu3" secondAttribute="bottom" constant="31" id="3G9-AN-iGw"/>
                             <constraint firstItem="IGi-dk-e66" firstAttribute="top" secondItem="tqc-wi-9E9" secondAttribute="bottom" constant="40" id="3Wk-9M-YW7"/>
-                            <constraint firstItem="TGQ-OE-3vA" firstAttribute="width" secondItem="UZ3-OR-HdL" secondAttribute="width" multiplier="140/375" id="6cT-Ff-oYN"/>
+                            <constraint firstItem="TGQ-OE-3vA" firstAttribute="width" secondItem="UZ3-OR-HdL" secondAttribute="width" multiplier="170/375" id="6cT-Ff-oYN"/>
                             <constraint firstItem="n5e-qg-3lS" firstAttribute="leading" secondItem="UZ3-OR-HdL" secondAttribute="leading" constant="37" id="6jY-RI-LFh"/>
                             <constraint firstAttribute="trailing" secondItem="tqc-wi-9E9" secondAttribute="trailing" id="7db-TZ-XU1"/>
                             <constraint firstItem="uen-nB-oMu" firstAttribute="top" secondItem="LuM-js-kt0" secondAttribute="bottom" constant="4" id="8Lw-vR-hUr"/>
@@ -6490,6 +6490,7 @@ We may send emails to existing customers or prospective customers who have enqui
                             <constraint firstItem="D1h-2x-Z2W" firstAttribute="trailing" secondItem="Bev-Sa-IIc" secondAttribute="trailing" id="iM2-UP-31H"/>
                             <constraint firstItem="ivO-fp-f7f" firstAttribute="top" secondItem="Uxq-jJ-v3D" secondAttribute="bottom" constant="36" id="iVe-od-1Wa"/>
                             <constraint firstItem="pjI-Qa-ifx" firstAttribute="leading" secondItem="UZ3-OR-HdL" secondAttribute="leading" id="m1r-WZ-1mf"/>
+                            <constraint firstAttribute="trailing" secondItem="IGi-dk-e66" secondAttribute="trailing" constant="12" id="piy-QL-kwm"/>
                             <constraint firstItem="tqc-wi-9E9" firstAttribute="leading" secondItem="UZ3-OR-HdL" secondAttribute="leading" constant="32" id="rre-Ot-1zZ"/>
                             <constraint firstItem="tqc-wi-9E9" firstAttribute="top" secondItem="ivO-fp-f7f" secondAttribute="bottom" constant="4" id="rw4-hU-QHd"/>
                             <constraint firstItem="D1h-2x-Z2W" firstAttribute="leading" secondItem="ivO-fp-f7f" secondAttribute="trailing" constant="13" id="taA-Gl-4jo"/>
@@ -9603,7 +9604,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstAttribute="height" constant="20" id="LWf-mX-hMS"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fi-Vr-C6G">
@@ -9621,33 +9622,33 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptM-8H-X8Z">
-                                <rect key="frame" x="39.5" y="346" width="140" height="42"/>
+                                <rect key="frame" x="11.5" y="346" width="174" height="42"/>
                                 <color key="backgroundColor" red="0.97184199090000001" green="0.63312035799999999" blue="0.35435462000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="19"/>
                                 <state key="normal" title="Reset Password"/>
                                 <connections>
                                     <action selector="resetPasswordButtonTapped:" destination="eQV-bx-wSG" eventType="touchUpInside" id="wsh-kJ-ddi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAA-b8-HrB">
-                                <rect key="frame" x="194.5" y="346" width="140" height="42"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <rect key="frame" x="189.5" y="346" width="174" height="42"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="19"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancelButtonTapped:" destination="eQV-bx-wSG" eventType="touchUpInside" id="Pzg-Cf-0Iy"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgK-yP-8Qv">
-                                <rect key="frame" x="183.5" y="278" width="8" height="128"/>
+                                <rect key="frame" x="186.5" y="278" width="2" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="1Vv-wB-7A2"/>
-                                    <constraint firstAttribute="width" constant="8" id="Cy2-3U-AFH"/>
+                                    <constraint firstAttribute="width" constant="2" id="Cy2-3U-AFH"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANGE PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYm-rl-zya">
-                                <rect key="frame" x="85.5" y="51" width="203.5" height="23.5"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="19"/>
+                                <rect key="frame" x="69.5" y="51" width="236" height="27"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -9657,12 +9658,12 @@ We may send emails to existing customers or prospective customers who have enqui
                             <constraint firstItem="mAA-b8-HrB" firstAttribute="width" secondItem="ptM-8H-X8Z" secondAttribute="width" id="394-ga-r9G"/>
                             <constraint firstItem="0Pf-zc-kPw" firstAttribute="leading" secondItem="JEP-um-1K4" secondAttribute="trailing" constant="13" id="52M-ty-000"/>
                             <constraint firstItem="0Mi-sx-rLe" firstAttribute="leading" secondItem="afe-bv-iNs" secondAttribute="leading" id="78O-HP-VH8"/>
-                            <constraint firstItem="ptM-8H-X8Z" firstAttribute="width" secondItem="afe-bv-iNs" secondAttribute="width" multiplier="140/375" id="AFz-zR-mJT"/>
+                            <constraint firstItem="ptM-8H-X8Z" firstAttribute="width" secondItem="afe-bv-iNs" secondAttribute="width" multiplier="174/375" id="AFz-zR-mJT"/>
                             <constraint firstItem="ptM-8H-X8Z" firstAttribute="top" secondItem="9fi-Vr-C6G" secondAttribute="bottom" constant="150" id="Ai6-K6-y6E"/>
                             <constraint firstItem="JEP-um-1K4" firstAttribute="leading" secondItem="afe-bv-iNs" secondAttribute="leading" constant="37" id="BDd-Bc-sUG"/>
-                            <constraint firstItem="mAA-b8-HrB" firstAttribute="leading" secondItem="dgK-yP-8Qv" secondAttribute="trailing" constant="3" id="Je9-hV-1I4"/>
+                            <constraint firstItem="mAA-b8-HrB" firstAttribute="leading" secondItem="dgK-yP-8Qv" secondAttribute="trailing" constant="1" id="Je9-hV-1I4"/>
                             <constraint firstItem="dgK-yP-8Qv" firstAttribute="top" secondItem="9fi-Vr-C6G" secondAttribute="bottom" constant="82" id="JfG-Vb-FQB"/>
-                            <constraint firstItem="dgK-yP-8Qv" firstAttribute="leading" secondItem="ptM-8H-X8Z" secondAttribute="trailing" constant="4" id="KAE-9z-i59"/>
+                            <constraint firstItem="dgK-yP-8Qv" firstAttribute="leading" secondItem="ptM-8H-X8Z" secondAttribute="trailing" constant="1" id="KAE-9z-i59"/>
                             <constraint firstItem="9fi-Vr-C6G" firstAttribute="leading" secondItem="afe-bv-iNs" secondAttribute="leading" constant="32" id="N1e-CI-gHS"/>
                             <constraint firstItem="0Pf-zc-kPw" firstAttribute="top" secondItem="mvw-q3-W8O" secondAttribute="bottom" constant="150" id="Q3p-CS-fNb"/>
                             <constraint firstItem="rYm-rl-zya" firstAttribute="centerX" secondItem="afe-bv-iNs" secondAttribute="centerX" id="T2d-xy-cBC"/>

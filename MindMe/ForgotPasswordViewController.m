@@ -34,11 +34,11 @@
     
     _emailTextField.delegate = self;
     
-    _resetPasswordButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    _resetPasswordButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(19./667)*kScreenHeight];
     
-    _emailTextField.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    _emailTextField.font = [UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight];
     
-    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(19./667)*kScreenHeight];
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
     
 }
 
