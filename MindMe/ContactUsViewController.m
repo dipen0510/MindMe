@@ -46,13 +46,15 @@
     _emailTextField.text = [responseData valueForKey:@"user_email"];
     _contactNumberTextField.text = [responseData valueForKey:@"mobile_number"];
     
-    _sendButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    _sendButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(20./667)*kScreenHeight];
     
-    _nameTextField.font = _enquiryTypeTextField.font = _emailTextField.font = _contactNumberTextField.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    _nameTextField.font = _enquiryTypeTextField.font = _emailTextField.font = _contactNumberTextField.font = [UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight];
     
-    _enquireyDescTextView.font = _infoLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
-    
-    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
+    _enquireyDescTextView.font = [UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight];
+
+    _infoLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(18./667)*kScreenHeight];
+
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
     
 }
 
