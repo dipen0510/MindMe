@@ -21,10 +21,10 @@
     _containerView.layer.shadowOpacity = 0.2f;
     _containerView.layer.shadowRadius = 3.5;
     
-    _nameLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(19./667)*kScreenHeight];
-    _locationLabel.font = _ageLabel.font = _experienceValueLabel.font = _careTypeLabel.font = _addressLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
-    _featuredLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(14./667)*kScreenHeight];
-    _descLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    _nameLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
+    _locationLabel.font = _ageLabel.font = _experienceValueLabel.font = _careTypeLabel.font = _addressLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight];
+    _featuredLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(17./667)*kScreenHeight];
+    _descLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight];
     
     _profileImgViewTopCOnstraint.constant = (14./667.)*kScreenHeight;
     _featuredImgViewTopConstraint.constant = (8./667.)*kScreenHeight;

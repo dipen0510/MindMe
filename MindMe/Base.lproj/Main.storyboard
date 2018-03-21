@@ -1210,7 +1210,7 @@ Terms of Services and Privacy Policy</string>
                                                     <constraint firstAttribute="width" constant="52" id="aGp-tq-ZUb"/>
                                                     <constraint firstAttribute="height" constant="17" id="yfT-hx-YBe"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1234,12 +1234,12 @@ Terms of Services and Privacy Policy</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuw-aG-o5E">
-                                                <rect key="frame" x="17" y="42" width="58" height="17"/>
+                                                <rect key="frame" x="12" y="42" width="68" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="XwG-5c-M2r"/>
-                                                    <constraint firstAttribute="width" constant="58" id="bcV-pv-vD0"/>
+                                                    <constraint firstAttribute="width" constant="68" id="bcV-pv-vD0"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1276,12 +1276,11 @@ Terms of Services and Privacy Policy</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-4y-1Ah">
-                                                <rect key="frame" x="16.5" y="42" width="59" height="17"/>
+                                                <rect key="frame" x="12.5" y="42" width="68" height="17"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="59" id="g63-cH-FV5"/>
                                                     <constraint firstAttribute="height" constant="17" id="rxY-q5-pQh"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1305,12 +1304,11 @@ Terms of Services and Privacy Policy</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JC3-UU-uad">
-                                                <rect key="frame" x="20" y="42" width="52" height="17"/>
+                                                <rect key="frame" x="16" y="42" width="60" height="17"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="52" id="Op1-Zl-Inz"/>
                                                     <constraint firstAttribute="height" constant="17" id="XkB-lh-fsK"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1395,7 +1393,7 @@ Terms of Services and Privacy Policy</string>
                                         <rect key="frame" x="12" y="0.0" width="121" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Polygon 1" translatesAutoresizingMaskIntoConstraints="NO" id="9du-EV-ruS">
@@ -1424,7 +1422,7 @@ Terms of Services and Privacy Policy</string>
                                         <rect key="frame" x="34" y="0.0" width="111" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maps-and-flags" translatesAutoresizingMaskIntoConstraints="NO" id="j1s-XM-4Ck">
@@ -6288,7 +6286,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yhj-ON-ojt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yAc-9C-3no">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yAc-9C-3no">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -6307,7 +6305,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wg9-Nn-sTY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="etA-fm-vvl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="etA-fm-vvl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

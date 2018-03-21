@@ -64,7 +64,7 @@
     _locationContainerView.layer.shadowOpacity = 0.2f;
     _locationContainerView.layer.shadowRadius = 3.5;
     
-    _carerTypeTextField.font = _addressTextField.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    _carerTypeTextField.font = _addressTextField.font = [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight];
     
 //    if ([[SharedClass sharedInstance] isFeaturedFilterApplied] || [[SharedClass sharedInstance] isLastMinuiteCareFilterApplied]) {
 //        _advertTblViewTopConstraint.constant = 0.0;
@@ -265,11 +265,11 @@
         return 30.0;
     }
     
-    if ([self height:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"]] > 20) {
-        return (250./568)*kScreenHeight;
+    if ([self height:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"]] > 25) {
+        return (280./568)*kScreenHeight;
     }
     else {
-        return (210./568)*kScreenHeight;
+        return (240./568)*kScreenHeight;
     }
     
     
@@ -294,7 +294,7 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.profileImgView.layer.cornerRadius = (32.5/568.)*kScreenHeight;
+    cell.profileImgView.layer.cornerRadius = (39.25/568.)*kScreenHeight;
     cell.profileImgView.layer.masksToBounds = YES;
     
     cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
@@ -302,7 +302,7 @@
     cell.addressLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"];
     
     if ([self height:cell.addressLabel.text] <= 20) {
-        cell.profileImgView.layer.cornerRadius = (27.25/568.)*kScreenHeight;
+        cell.profileImgView.layer.cornerRadius = (30/568.)*kScreenHeight;
     }
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
@@ -1025,7 +1025,7 @@
     NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:string
                                                                          attributes:@
                                           {
-                                          NSFontAttributeName: [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight]
+                                          NSFontAttributeName: [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight]
                                           }];
     
     
