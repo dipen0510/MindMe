@@ -81,15 +81,15 @@
         
     }
     
-    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
     
-    _bioStaticLabel.font = _rateStaticLabel.font = _numberOfExperienceStaticLabel.font = _languageStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    _bioStaticLabel.font = _rateStaticLabel.font = _numberOfExperienceStaticLabel.font = _languageStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight];
     
-    _addYourBioTextView.font = _preferredRateTextField.font = _requiredRegularlyLabel.font = _requiredOccasionallyLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(14./667)*kScreenHeight];
+    _addYourBioTextView.font = _preferredRateTextField.font = _requiredRegularlyLabel.font = _requiredOccasionallyLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight];
     
-    _experienceLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(14./667)*kScreenHeight];
+    _experienceLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight];
     
-    _nextButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    _nextButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(20./667)*kScreenHeight];
     
     
 }

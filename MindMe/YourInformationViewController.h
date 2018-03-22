@@ -34,7 +34,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *experienceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *requiredRegularlyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *requiredOccasionallyLabel;
-@property (weak, nonatomic) IBOutlet UITextField *numberOfExperienceStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfExperienceStaticLabel;
 @property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 @property (weak, nonatomic) IBOutlet UITextField *bioStaticLabel;
 @property (weak, nonatomic) IBOutlet UITextField *rateStaticLabel;
