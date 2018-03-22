@@ -1880,26 +1880,26 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE CARE TYPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEd-iw-jgR">
-                                <rect key="frame" x="99.5" y="104" width="177.5" height="21"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
+                                <rect key="frame" x="73.5" y="104" width="229.5" height="27"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A3g-N6-JXE">
-                                <rect key="frame" x="16" y="142" width="343" height="1"/>
+                                <rect key="frame" x="16" y="148" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="twl-AI-IXb"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit your existing job profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qiq-0j-4fC">
-                                <rect key="frame" x="16" y="163" width="211.5" height="18.5"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <rect key="frame" x="16" y="161" width="281.5" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BQc-zo-dzO">
-                                <rect key="frame" x="0.0" y="193.5" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="197.5" width="375" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="DLx-2G-jSR"/>
@@ -1925,14 +1925,14 @@ Terms of Services and Privacy Policy</string>
                                     <outlet property="delegate" destination="zZh-KK-C69" id="hHJ-B8-kpw"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the type of job you're looking for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSq-Y4-XPJ">
-                                <rect key="frame" x="16" y="273.5" width="295" height="18.5"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the type of job you're looking for" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSq-Y4-XPJ">
+                                <rect key="frame" x="16" y="270" width="343" height="49"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sK9-DP-4K5">
-                                <rect key="frame" x="0.0" y="304" width="375" height="180"/>
+                                <rect key="frame" x="0.0" y="330.5" width="375" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="Mba-5e-sSJ"/>
@@ -1964,7 +1964,7 @@ Terms of Services and Privacy Policy</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="79S-CK-Z9G"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1974,7 +1974,7 @@ Terms of Services and Privacy Policy</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63z-TR-EKo">
                                 <rect key="frame" x="200" y="612" width="138" height="35"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.33709710840000001" green="0.34114208820000003" blue="0.34525841470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -1994,7 +1994,7 @@ Terms of Services and Privacy Policy</string>
                             <constraint firstItem="YEd-iw-jgR" firstAttribute="top" secondItem="JMi-BJ-KRy" secondAttribute="bottom" constant="20" id="A3X-nV-XH6"/>
                             <constraint firstItem="JMi-BJ-KRy" firstAttribute="top" secondItem="kfT-LP-c3j" secondAttribute="top" id="G13-BP-cFB"/>
                             <constraint firstAttribute="trailing" secondItem="63z-TR-EKo" secondAttribute="trailing" constant="37" id="IcD-1a-5Cn"/>
-                            <constraint firstItem="uSq-Y4-XPJ" firstAttribute="top" secondItem="BQc-zo-dzO" secondAttribute="bottom" constant="20" id="JnI-6V-3bc"/>
+                            <constraint firstItem="uSq-Y4-XPJ" firstAttribute="top" secondItem="BQc-zo-dzO" secondAttribute="bottom" constant="12" id="JnI-6V-3bc"/>
                             <constraint firstItem="uSq-Y4-XPJ" firstAttribute="leading" secondItem="Qiq-0j-4fC" secondAttribute="leading" id="OFr-LX-gxZ"/>
                             <constraint firstItem="BQc-zo-dzO" firstAttribute="top" secondItem="Qiq-0j-4fC" secondAttribute="bottom" constant="12" id="Pti-Wy-1mK"/>
                             <constraint firstItem="63z-TR-EKo" firstAttribute="height" secondItem="Wye-HT-NHn" secondAttribute="height" id="QOX-WW-D5l"/>
@@ -2005,10 +2005,11 @@ Terms of Services and Privacy Policy</string>
                             <constraint firstAttribute="trailing" secondItem="BQc-zo-dzO" secondAttribute="trailing" id="bhR-ZP-AUi"/>
                             <constraint firstItem="63z-TR-EKo" firstAttribute="width" secondItem="Wye-HT-NHn" secondAttribute="width" id="d6x-EM-Ut4"/>
                             <constraint firstAttribute="trailing" secondItem="sK9-DP-4K5" secondAttribute="trailing" id="iXu-qr-2o7"/>
-                            <constraint firstItem="Qiq-0j-4fC" firstAttribute="top" secondItem="A3g-N6-JXE" secondAttribute="bottom" constant="20" id="jo3-3C-Cfi"/>
+                            <constraint firstItem="Qiq-0j-4fC" firstAttribute="top" secondItem="A3g-N6-JXE" secondAttribute="bottom" constant="12" id="jo3-3C-Cfi"/>
                             <constraint firstItem="A3g-N6-JXE" firstAttribute="leading" secondItem="kfT-LP-c3j" secondAttribute="leading" constant="16" id="rGQ-SS-iuD"/>
                             <constraint firstItem="sK9-DP-4K5" firstAttribute="leading" secondItem="kfT-LP-c3j" secondAttribute="leading" id="v8R-aH-Hkc"/>
                             <constraint firstItem="YEd-iw-jgR" firstAttribute="centerX" secondItem="kfT-LP-c3j" secondAttribute="centerX" id="y2y-e0-Uly"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uSq-Y4-XPJ" secondAttribute="trailing" id="yDv-WG-fZp"/>
                             <constraint firstItem="BQc-zo-dzO" firstAttribute="leading" secondItem="kfT-LP-c3j" secondAttribute="leading" id="zDo-e9-bP6"/>
                         </constraints>
                     </view>
@@ -12372,7 +12373,7 @@ We may send emails to existing customers or prospective customers who have enqui
         <segue reference="eOh-mb-7xJ"/>
         <segue reference="kMe-Y4-Jvu"/>
         <segue reference="4Bd-9L-l1d"/>
-        <segue reference="f1d-Wb-gFu"/>
+        <segue reference="p8p-Lv-PZS"/>
         <segue reference="bY5-41-xfJ"/>
         <segue reference="Wle-C2-fcQ"/>
         <segue reference="5gg-cR-2zY"/>

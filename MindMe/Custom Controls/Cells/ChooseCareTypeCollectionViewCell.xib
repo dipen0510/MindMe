@@ -24,13 +24,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="xuU-YA-OxK">
-                        <rect key="frame" x="46" y="0.0" width="96" height="30"/>
+                        <rect key="frame" x="38" y="0.0" width="104" height="30"/>
                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                         <color key="textColor" red="0.52923458810000001" green="0.53331053260000005" blue="0.53739434480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcX-wr-l8X">
-                        <rect key="frame" x="20" y="6" width="18" height="18"/>
+                        <rect key="frame" x="12" y="6" width="18" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="JGG-pJ-3VC"/>
                             <constraint firstAttribute="width" constant="18" id="YTQ-Da-Nmt"/>
@@ -48,7 +48,7 @@
                 <constraint firstItem="xuU-YA-OxK" firstAttribute="leading" secondItem="CcX-wr-l8X" secondAttribute="trailing" constant="8" id="H8a-k9-5r6"/>
                 <constraint firstAttribute="trailing" secondItem="xuU-YA-OxK" secondAttribute="trailing" constant="8" id="fl7-wk-ajh"/>
                 <constraint firstItem="xuU-YA-OxK" firstAttribute="top" secondItem="lZV-FY-xIJ" secondAttribute="top" id="ieQ-fp-SKn"/>
-                <constraint firstItem="CcX-wr-l8X" firstAttribute="leading" secondItem="lZV-FY-xIJ" secondAttribute="leading" constant="20" id="rzY-8s-XVt"/>
+                <constraint firstItem="CcX-wr-l8X" firstAttribute="leading" secondItem="lZV-FY-xIJ" secondAttribute="leading" constant="12" id="rzY-8s-XVt"/>
                 <constraint firstItem="xuU-YA-OxK" firstAttribute="centerY" secondItem="CcX-wr-l8X" secondAttribute="centerY" id="v2H-bg-Op2"/>
                 <constraint firstItem="CcX-wr-l8X" firstAttribute="centerY" secondItem="lZV-FY-xIJ" secondAttribute="centerY" id="yN3-Qn-lVq"/>
             </constraints>

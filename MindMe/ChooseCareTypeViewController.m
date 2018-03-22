@@ -46,11 +46,11 @@
         
     }
     
-    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
     
-    _editSectionHeaderLabel.font = _nSectionHeaderLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    _editSectionHeaderLabel.font = _nSectionHeaderLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight];
     
-    _nextButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    _nextButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(20./667)*kScreenHeight];
     
 }
 
@@ -72,8 +72,8 @@
         
     }
     
-    _firstCollectionViewHeightConstraint.constant = (30 * (existingAdvertsArr.count%2)) + (30 * (existingAdvertsArr.count/2));
-    _secondCollectionViewHeightConstraint.constant = (30 * (newAdvertsArr.count%2)) + (30 * (newAdvertsArr.count/2));
+    _firstCollectionViewHeightConstraint.constant = (40 * (existingAdvertsArr.count%2)) + (40 * (existingAdvertsArr.count/2));
+    _secondCollectionViewHeightConstraint.constant = (40 * (newAdvertsArr.count%2)) + (40 * (newAdvertsArr.count/2));
                                                                                            
     
 }
@@ -124,7 +124,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return CGSizeMake(([UIScreen mainScreen].bounds.size.width)/2., 30);
+    return CGSizeMake(([UIScreen mainScreen].bounds.size.width)/2., 40);
     
     
 }
