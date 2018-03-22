@@ -61,20 +61,20 @@
     _goldAnnualLabel.text = @"";
     _goldHalfAnnualLabel.text = @"";
     
-    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
-    _goldStaticLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(19./667)*kScreenHeight];
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
+    _goldStaticLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
     
-    _couvherStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    _couvherStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight];
     
-    _vouchertextField.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    _vouchertextField.font = [UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight];
     
-    _voucherApplyButton.titleLabel.font = _goldMonthlySelectButton.titleLabel.font = _goldHalfYearlySelectButton.titleLabel.font = _goldQuarterlySelectButton.titleLabel.font = _goldYearlySelectButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(14./667)*kScreenHeight];
+    _voucherApplyButton.titleLabel.font = _goldMonthlySelectButton.titleLabel.font = _goldHalfYearlySelectButton.titleLabel.font = _goldQuarterlySelectButton.titleLabel.font = _goldYearlySelectButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(19./667)*kScreenHeight];
     
-    _goldMonthlyLabel.font = _goldAnnualLabel.font = _goldQuarterlyLabel.font = _goldHalfAnnualLabel.font =  [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    _goldMonthlyLabel.font = _goldAnnualLabel.font = _goldQuarterlyLabel.font = _goldHalfAnnualLabel.font =  [UIFont fontWithName:@"Montserrat-Medium" size:(20./667)*kScreenHeight];
     
-    _goldMonthlyStaticLabel.font = _goldAnnualStaticLabel.font = _goldQuarterlyStaticLabel.font = _goldHalfAnnualStaticLabel.font =  [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    _goldMonthlyStaticLabel.font = _goldAnnualStaticLabel.font = _goldQuarterlyStaticLabel.font = _goldHalfAnnualStaticLabel.font =  [UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight];
     
-    _infoLabel.font =  [UIFont fontWithName:@"Montserrat-Light" size:(12./667)*kScreenHeight];
+    _infoLabel.font =  [UIFont fontWithName:@"Montserrat-Light" size:(16./667)*kScreenHeight];
     
 }
 
