@@ -87,13 +87,13 @@
         }
     }
     
-    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
     
-    _weeklyHeaderLabel.font = _firstCollectionViewTitle.font = _secondCollectionViewTitle.font = _thirdCollectionViewTitle.font = _fourthCollectionViewTitle.font = _fifthCollectionViewTitle.font = _sixthCollectionViewTitle.font = _seventhCollectionViewTitle.font = _uploadCVStaticLabel.font = _otherRelevantInfoStaticLabel.font = _IsAdvertActiveStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    _weeklyHeaderLabel.font = _firstCollectionViewTitle.font = _secondCollectionViewTitle.font = _thirdCollectionViewTitle.font = _fourthCollectionViewTitle.font = _fifthCollectionViewTitle.font = _sixthCollectionViewTitle.font = _seventhCollectionViewTitle.font = _uploadCVStaticLabel.font = _otherRelevantInfoStaticLabel.font = _IsAdvertActiveStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight];
     
-    _isAdvertActiveLabel.font = _uploadCVDescLabel.font = _otherRelevantInfoTextView.font = [UIFont fontWithName:@"Montserrat-Light" size:(14./667)*kScreenHeight];
+    _isAdvertActiveLabel.font = _uploadCVDescLabel.font = _otherRelevantInfoTextView.font = [UIFont fontWithName:@"Montserrat-Light" size:(19./667)*kScreenHeight];
     
-    _nextButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    _nextButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(20./667)*kScreenHeight];
     
     
 }
@@ -478,10 +478,10 @@
     
     _thirdCollectionViewTitleTopConstraint.constant = -44 - _secondCollectionViewHeightConstraint.constant;
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Bathroom Cleaning", @"Dishes", @"Plant Care", @"Kitchen Cleaning", @"Oven Cleaning", @"Window Washing", @"Pet Cleanup", @"General Room Cleaning", @"Surface Polishing", @"Packing and Unpacking", @"Bed Changing", @"Carpet Cleaning", @"Attic Cleaning", @"Furniture Treatment", @"Basement Cleaning", @"Refrigerator Cleaning", @"Wall Washing", @"House Sitting", @"Cabinet Cleaning", @"Laundry", @"Organization", @"External Cleaning", nil];
-    _thirdCollectionViewHeightConstraint.constant = 330;
+    _thirdCollectionViewHeightConstraint.constant = 550;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Garda Vetting", @"Work Visa", @"References", @"Driving Licence", nil];
-    _fourthCollectionViewHeightConstraint.constant = 60.;
+    _fourthCollectionViewHeightConstraint.constant = 100.;
     
     _fifthCollectionViewTitle.hidden = YES;
     _fifthCollectionView.hidden = YES;
@@ -491,7 +491,7 @@
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -168 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Creche", @"Dog walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -534,10 +534,10 @@
     
     _thirdCollectionViewTitleTopConstraint.constant = -44 - _secondCollectionViewHeightConstraint.constant;
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Dogs", @"Cats", @"Birds", @"Fish", @"Amphibians", @"Mammals", @"Horses", @"Farm Animals", @"Exotic Pets", @"Other Pets", nil];
-    _thirdCollectionViewHeightConstraint.constant = 150;
+    _thirdCollectionViewHeightConstraint.constant = 250;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Play & Exercise", @"First Aid", @"Training", @"Boarding", @"Waste Cleanup", @"Overnight Care", @"Walking", @"Feeding", nil];
-    _fourthCollectionViewHeightConstraint.constant = 120.;
+    _fourthCollectionViewHeightConstraint.constant = 200.;
     
     _fifthCollectionViewTitle.hidden = YES;
     _fifthCollectionView.hidden = YES;
@@ -547,7 +547,7 @@
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -168 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -592,19 +592,19 @@
     
     _thirdCollectionViewTitleTopConstraint.constant = -44 - _secondCollectionViewHeightConstraint.constant;
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"55 - 65 Years", @"65 to 75 Years", @"75 to 85 Years", @"85+ Years", nil];
-    _thirdCollectionViewHeightConstraint.constant = 60.;
+    _thirdCollectionViewHeightConstraint.constant = 100.;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Special Needs Certification", nil];
-    _fourthCollectionViewHeightConstraint.constant = 120.;
+    _fourthCollectionViewHeightConstraint.constant = 200.;
     
     fifthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Companion Services", @"Home Nursing Care", @"Home Help Services", @"Transportation", @"Live-in Care", @"Homecare Services", @"Meal Preparation", @"Personal Care (e.g. Bathing, Grooming)", nil];
-    _fifthCollectionViewHeightConstraint.constant = 120.;
+    _fifthCollectionViewHeightConstraint.constant = 200.;
     
     _sixthCollectionViewTitle.hidden = YES;
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -44 - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -74 - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -649,10 +649,10 @@
     
     _thirdCollectionViewTitleTopConstraint.constant = -44 - _secondCollectionViewHeightConstraint.constant;
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Bathroom Cleaning", @"Dishes", @"Plant Care", @"Kitchen Cleaning", @"Oven Cleaning", @"Window Washing", @"Pet Cleanup", @"General Room Cleaning", @"Surface Polishing", @"Packing and Unpacking", @"Bed Changing",@"Carpet Cleaning", @"Attic Cleaning", @"Furniture Treatment", @"Basement Cleaning", @"Refrigerator Cleaning", @"Wall Washing", @"House Sitting", @"Cabinet Cleaning", @"Laundry", @"Organization", @"External Cleaning", nil];
-    _thirdCollectionViewHeightConstraint.constant = 330;
+    _thirdCollectionViewHeightConstraint.constant = 550;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Garda Vetting", @"Work Visa", @"References", @"Driving Licence", nil];
-    _fourthCollectionViewHeightConstraint.constant = 60.;
+    _fourthCollectionViewHeightConstraint.constant = 100.;
     
     _fifthCollectionViewTitle.hidden = YES;
     _fifthCollectionView.hidden = YES;
@@ -662,7 +662,7 @@
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -168 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -705,10 +705,10 @@
     _thirdCollectionView.hidden = YES;
     _thirdCollectionSeparatorView.hidden = YES;
     
-    _fourthCollectionViewTitleTopConstraint.constant = -108 - _secondCollectionViewHeightConstraint.constant - _thirdCollectionViewHeightConstraint.constant;
+    _fourthCollectionViewTitleTopConstraint.constant = -148 - _secondCollectionViewHeightConstraint.constant - _thirdCollectionViewHeightConstraint.constant;
     _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Special Needs Certification", nil];
-    _fourthCollectionViewHeightConstraint.constant = 120.;
+    _fourthCollectionViewHeightConstraint.constant = 200.;
     
     _fifthCollectionViewTitle.hidden = YES;
     _fifthCollectionView.hidden = YES;
@@ -718,7 +718,7 @@
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -168 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -759,10 +759,10 @@
     
     _thirdCollectionViewTitleTopConstraint.constant = -44 - _secondCollectionViewHeightConstraint.constant;
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Dogs", @"Cats", @"Birds", @"Fish", @"Amphibians", @"Mammals", @"Horses", @"Farm Animals", @"Exotic Pets", @"Other Pets", nil];
-    _thirdCollectionViewHeightConstraint.constant = 150;
+    _thirdCollectionViewHeightConstraint.constant = 250;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Play & Exercise", @"First Aid", @"Training", @"Boarding", @"Waste Cleanup", @"Overnight Care", @"Walking", @"Feeding", nil];
-    _fourthCollectionViewHeightConstraint.constant = 120.;
+    _fourthCollectionViewHeightConstraint.constant = 200;
     
     _fifthCollectionViewTitle.hidden = YES;
     _fifthCollectionView.hidden = YES;
@@ -772,7 +772,7 @@
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -168 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -815,9 +815,9 @@
     _thirdCollectionView.hidden = YES;
     _thirdCollectionSeparatorView.hidden = YES;
     
-    _fourthCollectionViewTitleTopConstraint.constant = -108 - _secondCollectionViewHeightConstraint.constant - _thirdCollectionViewHeightConstraint.constant;
+    _fourthCollectionViewTitleTopConstraint.constant = -148 - _secondCollectionViewHeightConstraint.constant - _thirdCollectionViewHeightConstraint.constant;
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Special Needs Certification", nil];
-    _fourthCollectionViewHeightConstraint.constant = 120.;
+    _fourthCollectionViewHeightConstraint.constant = 200.;
     
     _fifthCollectionViewTitle.hidden = YES;
     _fifthCollectionView.hidden = YES;
@@ -827,7 +827,7 @@
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -168 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -869,10 +869,10 @@
     
     _thirdCollectionViewTitleTopConstraint.constant = -44 - _secondCollectionViewHeightConstraint.constant;
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Infants (0-1 year of age)", @"Toddlers (1-3 years of age)", @"Preschoolers (3-5 years of age)", @"Middle Childhood (6-12 years of age)", @"Teenagers (15-19 years of age)", @"Adult", @"Elderly", @"Special Needs (wheel chair access)", nil];
-    _thirdCollectionViewHeightConstraint.constant = 120.;
+    _thirdCollectionViewHeightConstraint.constant = 200;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Special Needs Certification", nil];
-    _fourthCollectionViewHeightConstraint.constant = 120.;
+    _fourthCollectionViewHeightConstraint.constant = 200.;
     
     _fifthCollectionViewTitle.hidden = YES;
     _fifthCollectionView.hidden = YES;
@@ -882,7 +882,7 @@
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -168 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"Special Needs Care", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -927,19 +927,19 @@
     
     _thirdCollectionViewTitleTopConstraint.constant = -44 - _secondCollectionViewHeightConstraint.constant;
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Infant (up to 12 months)", @"Youth (2-12 years)", @"Teen (13-19 years)", @"Adult (20-64 years)", @"Elderly Person (65+)", nil];
-    _thirdCollectionViewHeightConstraint.constant = 90.;
+    _thirdCollectionViewHeightConstraint.constant = 150.;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Special Needs Certification", nil];
-    _fourthCollectionViewHeightConstraint.constant = 120.;
+    _fourthCollectionViewHeightConstraint.constant = 200.;
     
     fifthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"ADD", @"ADHD", @"Aspergers", @"Asthma", @"Autism", @"Autism Spectrum Disorder", @"Blindness/Visual Impairment", @"Cancer", @"Celiac", @"Central Auditory Disorder", @"Cerebral Palsy", @"Cognitive Disabilities", @"Cystic Fibrosis", @"Deafness", @"Developmental Delays", @"Diabetes", @"Down Syndrome", @"Dwarfism", @"Dyslexia", @"Epilepsy", @"Fetal Alcohol Syndrome", @"Food Allergies", @"Fragile X", @"Heart Defects", @"Hydrocephaly", @"Mental Illness", @"Mobility Challenges", @"Multiple Sclerosis", @"Muscular Dystrophy", @"Obesity", @"Pervasive Developmental Disorder", @"Polymicrogyria", @"Prader Willi", @"Rett Syndrome", @"Seizure Disorder", @"Sensory Integration Disorder", @"Speech Delay", @"Spinal Cord Injury", @"Thyroid Condition", @"Tourette Syndrome", nil];
-    _fifthCollectionViewHeightConstraint.constant = 600;
+    _fifthCollectionViewHeightConstraint.constant = 1000;
     
     _sixthCollectionViewTitle.hidden = YES;
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -44 - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -74 - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -976,13 +976,13 @@
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Ancient Greek", @"Art - Craft - Design", @"Business Studies", @"Civic - Social and Political Education", @"Classical Studies", @"English", @"Environmental and Social Studies (ESS)", @"French", @"Geography", @"German", @"Hebrew Studies", @"History", @"Home Economics", @"Irish", @"Italian", @"Latin", @"Materials Technology (Wood)", @"Mathematics", @"Metalwork", @"Music", @"Physical Education", @"Religious Education", @"Science", @"Social - Personal and Health Education", @"Spanish", @"Technical Graphics", @"Technology", @"Typewriting", nil];
-    _secondCollectionViewHeightConstraint.constant = 420.;
+    _secondCollectionViewHeightConstraint.constant = 700.;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Accounting", @"Agricultural Economics", @"Agricultural Science", @"Ancient Greek", @"Applied Mathematics", @"Arabic", @"Art", @"Biology", @"Business", @"Chemistry", @"Classical Studies", @"Construction Studies", @"Design and Communication Graphics", @"Economics", @"Engineering", @"English", @"French", @"Gaeilge", @"Geography", @"German", @"Hebrew Studies", @"History", @"Home Economics", @"Italian", @"Japanese", @"Latin", @"Mathematics", @"Music", @"Physics", @"Religious Education", @"Russian", @"Spanish", @"Technology", @"Chemistry", nil];
-    _thirdCollectionViewHeightConstraint.constant = 510.;
+    _thirdCollectionViewHeightConstraint.constant = 850.;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Garda Vetting", @"Work Visa", @"References", @"Driving Licence", nil];
-    _fourthCollectionViewHeightConstraint.constant = 60.;
+    _fourthCollectionViewHeightConstraint.constant = 100.;
     
     _fifthCollectionViewTitle.hidden = YES;
     _fifthCollectionView.hidden = YES;
@@ -992,7 +992,7 @@
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -108 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -168 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", nil];
     
     if (_isAdvertInEditingMode) {
@@ -1160,7 +1160,7 @@
         return CGSizeMake(80, 44.);
     }
  
-    return CGSizeMake((collectionView.frame.size.width)/2., 30);
+    return CGSizeMake((collectionView.frame.size.width)/2., 50.);
     
 }
 
@@ -1202,7 +1202,7 @@
     
     cell.titleLabel.text = [firstCollectionViewArr objectAtIndex:indexPath.row];
 
-    UIView* cellTapView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    UIView* cellTapView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
     cellTapView.userInteractionEnabled = YES;
     cellTapView.tag = indexPath.row;
     [cellTapView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapOnEMERCell:)]];

@@ -45,7 +45,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UICollectionView *cvCollectionView;
-@property (weak, nonatomic) IBOutlet UITextField *weeklyHeaderLabel;
+@property (weak, nonatomic) IBOutlet UILabel *weeklyHeaderLabel;
 @property (weak, nonatomic) IBOutlet UITextField *isAdvertActiveLabel;
 @property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *IsAdvertActiveStaticLabel;
