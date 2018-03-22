@@ -16,8 +16,8 @@
     
     _editButton.layer.cornerRadius = (18.5/568) * [UIScreen mainScreen].bounds.size.height;
     
-    _careTypeLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(14./667)*kScreenHeight];
-    _editButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(14./667)*kScreenHeight];
+    _careTypeLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(19./667)*kScreenHeight];
+    _editButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(19./667)*kScreenHeight];
     
     _editButtonWidthConstraint.constant = (220./320) * kScreenWidth;
 //    _editButtonBottomConstraint.constant = (3./568.) * kScreenHeight;

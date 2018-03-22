@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -19,23 +20,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdvertsTableViewCell" id="KGk-i7-Jjw" customClass="AdvertsTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="149.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Qh4-rf-zgU">
-                        <rect key="frame" x="24" y="16" width="198.5" height="17.5"/>
+                        <rect key="frame" x="24" y="16" width="198.5" height="49"/>
                         <attributedString key="attributedText">
-                            <fragment content="Elderly Care">
+                            <fragment content="Elderly Care advert (0 views)">
                                 <attributes>
-                                    <font key="NSFont" size="14" name="Montserrat-Medium"/>
-                                </attributes>
-                            </fragment>
-                            <fragment content=" advert (0 views)">
-                                <attributes>
-                                    <font key="NSFont" size="14" name="Montserrat-Light"/>
+                                    <font key="NSFont" size="20" name="Montserrat-Light"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
@@ -51,19 +47,18 @@
                         <state key="selected" image="off_on"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zn1-BL-pWK">
-                        <rect key="frame" x="19" y="61.5" width="220" height="54"/>
+                        <rect key="frame" x="12" y="86.5" width="240" height="59"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="220" id="XVa-7Q-EsT"/>
                             <constraint firstAttribute="width" secondItem="zn1-BL-pWK" secondAttribute="height" multiplier="756:186" id="vDA-oq-juI"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                         <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="12"/>
                         <state key="normal" title="aa" backgroundImage="edit_carer_advert_icon-1">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIt-YL-dAZ">
-                        <rect key="frame" x="269" y="61" width="29" height="41"/>
+                        <rect key="frame" x="269" y="88.5" width="29" height="41"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="jIt-YL-dAZ" secondAttribute="height" multiplier="5:7" id="bqy-qz-BML"/>
                             <constraint firstAttribute="width" constant="29" id="gtt-oa-oTX"/>
@@ -72,7 +67,7 @@
                         <state key="normal" image="trash_icon"/>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFy-1l-uLx">
-                        <rect key="frame" x="12" y="118.5" width="296" height="1"/>
+                        <rect key="frame" x="12" y="148.5" width="296" height="1"/>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="lEP-X0-WjO"/>
@@ -86,20 +81,22 @@
                     <constraint firstItem="Qh4-rf-zgU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="VB8-dU-0JC"/>
                     <constraint firstAttribute="trailing" secondItem="gFy-1l-uLx" secondAttribute="trailing" constant="12" id="cqw-9h-vIv"/>
                     <constraint firstAttribute="bottom" secondItem="gFy-1l-uLx" secondAttribute="bottom" id="fXD-hd-RBs"/>
-                    <constraint firstItem="jIt-YL-dAZ" firstAttribute="top" secondItem="nBy-PY-eF8" secondAttribute="bottom" constant="20" id="hQo-Bu-HJq"/>
                     <constraint firstItem="Qh4-rf-zgU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="hyk-es-WpJ"/>
                     <constraint firstAttribute="trailingMargin" secondItem="jIt-YL-dAZ" secondAttribute="trailing" constant="14" id="mxG-20-QWQ"/>
                     <constraint firstItem="nBy-PY-eF8" firstAttribute="leading" secondItem="Qh4-rf-zgU" secondAttribute="trailing" constant="8" id="nD3-G0-uZs"/>
+                    <constraint firstItem="jIt-YL-dAZ" firstAttribute="centerY" secondItem="zn1-BL-pWK" secondAttribute="centerY" constant="-7" id="ptg-cT-ByP"/>
                     <constraint firstItem="gFy-1l-uLx" firstAttribute="top" secondItem="zn1-BL-pWK" secondAttribute="bottom" constant="3" id="rnN-B8-2fr"/>
-                    <constraint firstItem="zn1-BL-pWK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="11" id="uoD-ym-Xtz"/>
+                    <constraint firstItem="zn1-BL-pWK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="4" id="uoD-ym-Xtz"/>
                 </constraints>
             </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="zn1-BL-pWK" firstAttribute="width" secondItem="KGk-i7-Jjw" secondAttribute="width" multiplier="240/320" id="Hcc-ZT-UEZ"/>
+            </constraints>
             <connections>
                 <outlet property="careTypeLabel" destination="Qh4-rf-zgU" id="qqA-m5-DZd"/>
                 <outlet property="deleteButton" destination="jIt-YL-dAZ" id="HvA-Dp-wQW"/>
                 <outlet property="editButton" destination="zn1-BL-pWK" id="VQF-zq-Wgp"/>
                 <outlet property="editButtonBottomConstraint" destination="rnN-B8-2fr" id="N2h-ZI-Jjx"/>
-                <outlet property="editButtonWidthConstraint" destination="XVa-7Q-EsT" id="j4v-jK-YSk"/>
                 <outlet property="toggleButton" destination="nBy-PY-eF8" id="Nj0-4s-1Ez"/>
             </connections>
         </tableViewCell>

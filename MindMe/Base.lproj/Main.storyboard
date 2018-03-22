@@ -1654,32 +1654,32 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADVERT CONTROL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2t-34-g3B">
-                                <rect key="frame" x="107.5" y="104" width="161.5" height="21"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
+                                <rect key="frame" x="83" y="104" width="209" height="27"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syI-k5-4sO">
-                                <rect key="frame" x="16" y="142" width="343" height="1"/>
+                                <rect key="frame" x="16" y="148" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="9IB-ys-zTS"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Jill Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkx-y5-Eqe">
-                                <rect key="frame" x="16" y="162" width="91.5" height="18.5"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <rect key="frame" x="16" y="168" width="121.5" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ3-ae-r04">
-                                <rect key="frame" x="25" y="199" width="92" height="54"/>
+                                <rect key="frame" x="16" y="205" width="109" height="58"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">New Mail
 2</string>
                                         <attributes>
-                                            <font key="NSFont" size="15" name="Montserrat-Light"/>
+                                            <font key="NSFont" size="19" name="Montserrat-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -1687,16 +1687,16 @@ Terms of Services and Privacy Policy</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="666-kz-rQH">
-                                <rect key="frame" x="141" y="199" width="92.5" height="54"/>
+                                <rect key="frame" x="133" y="205" width="108.5" height="58"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="2CV-Yb-moI"/>
+                                    <constraint firstAttribute="height" constant="58" id="2CV-Yb-moI"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Upgraded
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="15" name="Montserrat-Light"/>
+                                            <font key="NSFont" size="19" name="Montserrat-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -1704,13 +1704,13 @@ Terms of Services and Privacy Policy</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRE-bQ-fzp">
-                                <rect key="frame" x="257.5" y="199" width="92" height="54"/>
+                                <rect key="frame" x="249.5" y="205" width="109" height="58"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Live Advert
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="15" name="Montserrat-Light"/>
+                                            <font key="NSFont" size="19" name="Montserrat-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -1718,13 +1718,13 @@ Terms of Services and Privacy Policy</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUB-XM-AVg">
-                                <rect key="frame" x="114.5" y="267" width="145" height="35"/>
+                                <rect key="frame" x="107" y="277" width="160" height="35"/>
                                 <color key="backgroundColor" red="0.97184199090000001" green="0.63312035799999999" blue="0.35435462000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="145" id="1Sj-28-zMa"/>
+                                    <constraint firstAttribute="width" constant="160" id="1Sj-28-zMa"/>
                                     <constraint firstAttribute="height" constant="35" id="Qmx-CK-Wss"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                 <state key="normal" title="Create Advert">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1733,7 +1733,7 @@ Terms of Services and Privacy Policy</string>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UEk-AS-NLb">
-                                <rect key="frame" x="0.0" y="356.5" width="375" height="310.5"/>
+                                <rect key="frame" x="0.0" y="372.5" width="375" height="294.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="1yn-np-7Rc" id="cDQ-E2-dkl"/>
@@ -1741,27 +1741,27 @@ Terms of Services and Privacy Policy</string>
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWY-k9-wQT">
-                                <rect key="frame" x="16" y="316" width="343" height="1"/>
+                                <rect key="frame" x="16" y="326" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="ap9-L5-zwn"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profiles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bR8-7J-8pN">
-                                <rect key="frame" x="16" y="326" width="55.5" height="18.5"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                <rect key="frame" x="16" y="336" width="73.5" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bN-du-Xne">
-                                <rect key="frame" x="257.5" y="228" width="92" height="17"/>
-                                <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="14"/>
+                                <rect key="frame" x="249.5" y="234" width="109" height="23"/>
+                                <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62e-1e-0b2">
-                                <rect key="frame" x="141" y="228" width="92" height="17"/>
-                                <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="14"/>
+                                <rect key="frame" x="133" y="234" width="109" height="23"/>
+                                <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1785,14 +1785,14 @@ Terms of Services and Privacy Policy</string>
                             <constraint firstItem="bR8-7J-8pN" firstAttribute="leading" secondItem="Bkx-y5-Eqe" secondAttribute="leading" id="XqM-Da-c33"/>
                             <constraint firstItem="UEk-AS-NLb" firstAttribute="leading" secondItem="K9z-ds-PBr" secondAttribute="leading" id="YdH-0M-Uuu"/>
                             <constraint firstItem="aUB-XM-AVg" firstAttribute="top" secondItem="YRE-bQ-fzp" secondAttribute="bottom" constant="14" id="bYC-3U-fYe"/>
-                            <constraint firstItem="YRE-bQ-fzp" firstAttribute="leading" secondItem="666-kz-rQH" secondAttribute="trailing" constant="24" id="dzG-aV-31Q"/>
+                            <constraint firstItem="YRE-bQ-fzp" firstAttribute="leading" secondItem="666-kz-rQH" secondAttribute="trailing" constant="8" id="dzG-aV-31Q"/>
                             <constraint firstItem="syI-k5-4sO" firstAttribute="top" secondItem="y2t-34-g3B" secondAttribute="bottom" constant="17" id="eWs-4d-YYj"/>
                             <constraint firstAttribute="trailing" secondItem="gTd-xC-4lw" secondAttribute="trailing" id="efi-LY-t1D"/>
                             <constraint firstAttribute="trailing" secondItem="UEk-AS-NLb" secondAttribute="trailing" id="iEB-Iy-rlE"/>
                             <constraint firstItem="syI-k5-4sO" firstAttribute="leading" secondItem="K9z-ds-PBr" secondAttribute="leading" constant="16" id="jWQ-oC-opm"/>
-                            <constraint firstItem="jZ3-ae-r04" firstAttribute="leading" secondItem="K9z-ds-PBr" secondAttribute="leading" constant="25" id="k2N-RB-HwA"/>
+                            <constraint firstItem="jZ3-ae-r04" firstAttribute="leading" secondItem="K9z-ds-PBr" secondAttribute="leading" constant="16" id="k2N-RB-HwA"/>
                             <constraint firstItem="Bkx-y5-Eqe" firstAttribute="top" secondItem="syI-k5-4sO" secondAttribute="bottom" constant="19" id="kZ8-JT-frI"/>
-                            <constraint firstItem="666-kz-rQH" firstAttribute="leading" secondItem="jZ3-ae-r04" secondAttribute="trailing" constant="24" id="ku7-HS-td7"/>
+                            <constraint firstItem="666-kz-rQH" firstAttribute="leading" secondItem="jZ3-ae-r04" secondAttribute="trailing" constant="8" id="ku7-HS-td7"/>
                             <constraint firstItem="666-kz-rQH" firstAttribute="height" secondItem="jZ3-ae-r04" secondAttribute="height" id="l61-O8-bho"/>
                             <constraint firstItem="EWY-k9-wQT" firstAttribute="top" secondItem="aUB-XM-AVg" secondAttribute="bottom" constant="14" id="lCR-DY-sEJ"/>
                             <constraint firstItem="yup-Tv-sqO" firstAttribute="top" secondItem="UEk-AS-NLb" secondAttribute="bottom" id="lWg-un-wuA"/>
@@ -8240,24 +8240,24 @@ Cg
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BE A FEATURED CARER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dku-5C-3Sl">
-                                <rect key="frame" x="85.5" y="104" width="205.5" height="21"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
+                                <rect key="frame" x="54.5" y="104" width="266" height="27"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rl2-X0-73z">
-                                <rect key="frame" x="16" y="142" width="343" height="1"/>
+                                <rect key="frame" x="16" y="148" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="H9U-ea-Ae1"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2rb-dd-uY0">
-                                <rect key="frame" x="16" y="151" width="343" height="426"/>
+                                <rect key="frame" x="16" y="157" width="343" height="420"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">MindMe.ie complies with the principles of the Data Protection Act 1998 when dealing with all data received from visitors to the site. We only hold the data necessary to offer services provided on our website namely to allow users of the service to buy and sell and also message one another. We also keep user data to allow us to contact you in the advent of account withdrawal or new passwords being provided.
+                                        <mutableString key="content">MindMe.ie complies with the principles of the Data Protection Act 1998 when dealing with all data received from visitors to the site. We only hold the data necessary to offer services provided on our website namely to allow users of the service to buy and sell and also message one another. We also keep user data to allow us to contact you in the advent of account withdrawal or new passwords being provided.
 
 We only hold personal data for as long as necessary. Once data is no longer needed it is deleted from our files. If you delete your account then all your personal data will be deleted too.
 
@@ -8267,9 +8267,9 @@ We never sell, rent or exchange mailing lists.
 We may however share commercial and technical data with our partners where a customer has accessed and used our website. This data would not be personal data but would be anonymised In accordance with the Privacy and Electronic Communications (EC Directive) Regulations 2003, we never send bulk unsolicited emails, (popularly known as Spam) to email addresses.
 
 We may send emails to existing customers or prospective customers who have enquired or registered with us, regarding products or services directly provided by us.
-</string>
+</mutableString>
                                         <attributes>
-                                            <font key="NSFont" size="15" name="Montserrat-Light"/>
+                                            <font key="NSFont" size="20" name="Montserrat-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -8277,13 +8277,13 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAA-RK-wmC">
-                                <rect key="frame" x="67.5" y="607" width="240" height="40"/>
+                                <rect key="frame" x="47.5" y="607" width="280" height="40"/>
                                 <color key="backgroundColor" red="0.97184199090000001" green="0.63312035799999999" blue="0.35435462000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="DTS-P1-GMJ"/>
-                                    <constraint firstAttribute="width" constant="240" id="tbI-27-WwO"/>
+                                    <constraint firstAttribute="width" constant="280" id="tbI-27-WwO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
                                 <state key="normal" title="Become a Featured Carer">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
