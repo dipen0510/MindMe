@@ -71,13 +71,13 @@
     
     activeField = [[UITextField alloc] init];
     
-    _doneButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(15./667)*kScreenHeight];
+    _doneButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(20./667)*kScreenHeight];
     
-    _genderStaticLabel.font = _dobStaticLabel.font = _eircodeStaticLabel.font = _cityStaticLabel.font = _addressStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(15./667)*kScreenHeight];
+    _genderStaticLabel.font = _dobStaticLabel.font = _eircodeStaticLabel.font = _cityStaticLabel.font = _addressStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight];
     
-    _firstNameTextField.font = _lastNameTextField.font = _phoneTextField.font = _emailTextField.font = _maleStaticLabel.font = _femaleStaticLabel.font = _dobTextField.font = _eirCodeTextField.font = _addressTextField.font = _option1StaticLabel.font = _option2StaticLabel.font = _option3StaticLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
+    _firstNameTextField.font = _lastNameTextField.font = _phoneTextField.font = _emailTextField.font = _maleStaticLabel.font = _femaleStaticLabel.font = _dobTextField.font = _eirCodeTextField.font = _addressTextField.font = _option1StaticLabel.font = _option2StaticLabel.font = _option3StaticLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight];
     
-    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17./667)*kScreenHeight];
+    _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
     
     [_option1StaticLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(option1StaticLabelTapped)]];
     _option1StaticLabel.userInteractionEnabled = YES;
