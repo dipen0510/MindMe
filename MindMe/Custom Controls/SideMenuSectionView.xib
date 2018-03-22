@@ -29,7 +29,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Aa-ls-9al">
-                    <rect key="frame" x="61.5" y="12" width="257.5" height="32"/>
+                    <rect key="frame" x="61.5" y="12" width="283.5" height="32"/>
                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="22"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -45,7 +45,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="lD7-BT-EVf" secondAttribute="trailing" constant="32" id="HUg-lV-2Go"/>
-                <constraint firstAttribute="trailing" secondItem="3Aa-ls-9al" secondAttribute="trailing" constant="56" id="Jep-qf-9QX"/>
+                <constraint firstAttribute="trailing" secondItem="3Aa-ls-9al" secondAttribute="trailing" constant="30" id="Jep-qf-9QX"/>
                 <constraint firstAttribute="bottom" secondItem="3Aa-ls-9al" secondAttribute="bottom" constant="11" id="Jzl-zz-y0B"/>
                 <constraint firstItem="3Aa-ls-9al" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="Lnl-Wq-KeN"/>
                 <constraint firstItem="3Aa-ls-9al" firstAttribute="leading" secondItem="b6c-dZ-gzF" secondAttribute="trailing" constant="16" id="OMS-hC-Hho"/>

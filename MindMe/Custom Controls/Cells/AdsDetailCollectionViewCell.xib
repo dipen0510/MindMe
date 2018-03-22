@@ -25,7 +25,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="nHr-K3-cLV">
-                        <rect key="frame" x="8" y="0.0" width="312" height="30"/>
+                        <rect key="frame" x="31" y="0.0" width="289" height="30"/>
                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -34,6 +34,8 @@
                         <rect key="frame" x="8" y="7.5" width="15" height="15"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="yYF-Zx-Bfg" secondAttribute="height" multiplier="1:1" id="Dfj-If-CsJ"/>
+                            <constraint firstAttribute="height" constant="15" id="U8A-hr-s6u"/>
+                            <constraint firstAttribute="width" constant="15" id="kYt-jj-xdy"/>
                         </constraints>
                     </imageView>
                 </subviews>
@@ -41,15 +43,13 @@
             <constraints>
                 <constraint firstItem="nHr-K3-cLV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2HL-Ha-bms"/>
                 <constraint firstAttribute="trailing" secondItem="nHr-K3-cLV" secondAttribute="trailing" id="ELx-AG-SiI"/>
+                <constraint firstItem="nHr-K3-cLV" firstAttribute="leading" secondItem="yYF-Zx-Bfg" secondAttribute="trailing" constant="8" id="RxW-hK-cae"/>
                 <constraint firstItem="yYF-Zx-Bfg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="T6P-PZ-xcN"/>
                 <constraint firstAttribute="bottom" secondItem="nHr-K3-cLV" secondAttribute="bottom" id="adg-pL-IuG"/>
-                <constraint firstItem="yYF-Zx-Bfg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="7.5" id="bEO-SC-NOv"/>
-                <constraint firstItem="nHr-K3-cLV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="mov-MT-sL8"/>
-                <constraint firstAttribute="bottom" secondItem="yYF-Zx-Bfg" secondAttribute="bottom" constant="7.5" id="rfX-dp-QUH"/>
+                <constraint firstItem="yYF-Zx-Bfg" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="oHH-xP-h8Q"/>
             </constraints>
             <connections>
                 <outlet property="detailsTextLabel" destination="nHr-K3-cLV" id="jjb-Ck-5tX"/>
-                <outlet property="detailsTextLabelLeadingConstraint" destination="mov-MT-sL8" id="c5I-Ia-5FK"/>
                 <outlet property="detailsTickImgView" destination="yYF-Zx-Bfg" id="fe4-Eb-qYA"/>
             </connections>
         </collectionViewCell>
