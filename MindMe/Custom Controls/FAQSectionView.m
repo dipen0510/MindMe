@@ -16,7 +16,7 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     
-    _menuTitle.font = [UIFont fontWithName:@"Montserrat-Regular" size:(17./667)*kScreenHeight];
+    _menuTitle.font = [UIFont fontWithName:@"Montserrat-Regular" size:(22.5/667)*kScreenHeight];
     
 }
 

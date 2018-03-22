@@ -3243,7 +3243,7 @@ our Android App from the Google Play Store</string>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.75" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLJ-VV-Arw">
-                                <rect key="frame" x="77" y="258" width="220" height="150"/>
+                                <rect key="frame" x="77" y="233" width="220" height="200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wBV-aT-sId">
                                         <rect key="frame" x="8" y="48" width="204" height="1"/>
@@ -3253,35 +3253,35 @@ our Android App from the Google Play Store</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9s7-2N-tF5">
-                                        <rect key="frame" x="20" y="95" width="180" height="1"/>
+                                        <rect key="frame" x="20" y="98" width="180" height="1"/>
                                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="aHV-no-Ogy"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Language" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tK9-ja-Gqg">
-                                        <rect key="frame" x="45" y="20" width="130" height="20"/>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Language" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tK9-ja-Gqg">
+                                        <rect key="frame" x="24" y="20" width="172" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="t0q-bQ-piK"/>
                                         </constraints>
                                         <color key="textColor" red="0.8579067588" green="0.51972180599999995" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="English" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tt9-rG-2ST">
-                                        <rect key="frame" x="20" y="69" width="180" height="18"/>
+                                        <rect key="frame" x="20" y="69" width="180" height="21"/>
                                         <color key="textColor" red="0.486101687" green="0.49017071719999999" blue="0.49426180120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="VisbyRoundCF-Regular" family="Visby Round CF" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecW-Ru-DOA">
-                                        <rect key="frame" x="60" y="113" width="100.5" height="25"/>
+                                        <rect key="frame" x="60" y="163" width="100.5" height="25"/>
                                         <color key="backgroundColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Vc2-gG-tPa"/>
                                             <constraint firstAttribute="width" secondItem="ecW-Ru-DOA" secondAttribute="height" multiplier="4:1" id="u0U-pM-CDR"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <state key="normal" title="Add">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -3293,7 +3293,7 @@ our Android App from the Google Play Store</string>
                                     <constraint firstAttribute="trailing" secondItem="9s7-2N-tF5" secondAttribute="trailing" constant="20" id="PpP-hr-AS6"/>
                                     <constraint firstItem="ecW-Ru-DOA" firstAttribute="centerX" secondItem="jLJ-VV-Arw" secondAttribute="centerX" id="UDB-tl-mbw"/>
                                     <constraint firstItem="tK9-ja-Gqg" firstAttribute="top" secondItem="jLJ-VV-Arw" secondAttribute="top" constant="20" id="Ws4-fn-9Ga"/>
-                                    <constraint firstAttribute="height" constant="150" id="XHH-dg-Y8a"/>
+                                    <constraint firstAttribute="height" constant="200" id="XHH-dg-Y8a"/>
                                     <constraint firstItem="9s7-2N-tF5" firstAttribute="top" secondItem="Tt9-rG-2ST" secondAttribute="bottom" constant="8" id="bHC-ua-qG7"/>
                                     <constraint firstAttribute="trailing" secondItem="wBV-aT-sId" secondAttribute="trailing" constant="8" id="d31-MV-zDJ"/>
                                     <constraint firstAttribute="width" constant="220" id="eEZ-OO-SC7"/>

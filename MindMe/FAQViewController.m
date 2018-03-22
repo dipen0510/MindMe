@@ -1249,7 +1249,7 @@
     NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
     CGSize boundingBox = [text boundingRectWithSize:constraint
                                             options:NSStringDrawingUsesLineFragmentOrigin
-                                         attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight]}
+                                         attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight]}
                                             context:context].size;
     
     size = CGSizeMake(ceil(boundingBox.width), ceil(boundingBox.height));
@@ -1265,7 +1265,7 @@
     NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
     CGSize boundingBox = [text boundingRectWithSize:constraint
                                             options:NSStringDrawingUsesLineFragmentOrigin
-                                         attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Montserrat-Regular" size:15.0]}
+                                         attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Montserrat-Regular" size:20.]}
                                             context:context].size;
     
     size = CGSizeMake(ceil(boundingBox.width), ceil(boundingBox.height));
