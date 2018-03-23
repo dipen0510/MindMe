@@ -11622,29 +11622,29 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Castleknock, Ireland" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27g-1x-PDy">
-                                        <rect key="frame" x="38" y="302" width="140" height="24.5"/>
+                                        <rect key="frame" x="41" y="302" width="140" height="24.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location_icon" translatesAutoresizingMaskIntoConstraints="NO" id="bKY-pF-OB5">
-                                        <rect key="frame" x="21" y="306.5" width="11" height="14"/>
+                                        <rect key="frame" x="21" y="304.5" width="14" height="18"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="11" id="phe-iy-5r1"/>
-                                            <constraint firstAttribute="height" constant="14" id="t1R-Sj-qaO"/>
+                                            <constraint firstAttribute="width" secondItem="bKY-pF-OB5" secondAttribute="height" multiplier="11:14" id="gXE-TB-QZp"/>
+                                            <constraint firstAttribute="width" constant="14" id="phe-iy-5r1"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="4 Years of Experience" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udq-4Q-39A">
-                                        <rect key="frame" x="210" y="302" width="157" height="25"/>
+                                        <rect key="frame" x="202" y="302" width="165" height="25"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="experience" translatesAutoresizingMaskIntoConstraints="NO" id="zmj-C7-amE">
-                                        <rect key="frame" x="193" y="306" width="11" height="16"/>
+                                        <rect key="frame" x="182" y="304" width="14" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="11" id="0Ud-bm-3mL"/>
-                                            <constraint firstAttribute="height" constant="16" id="Kua-3h-kxW"/>
+                                            <constraint firstAttribute="width" secondItem="zmj-C7-amE" secondAttribute="height" multiplier="11:16" id="0CE-1w-QJT"/>
+                                            <constraint firstAttribute="width" constant="14" id="0Ud-bm-3mL"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VlS-2B-m7V">
@@ -11983,14 +11983,14 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Negotiable" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbw-iU-Kqr">
-                                        <rect key="frame" x="255.5" y="270" width="110" height="24.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Negotiable" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbw-iU-Kqr">
+                                        <rect key="frame" x="244.5" y="270" width="121" height="24.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                         <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNd-ow-gfZ">
-                                        <rect key="frame" x="193" y="270" width="62.5" height="24.5"/>
+                                        <rect key="frame" x="182" y="270" width="62.5" height="24.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="62.5" id="4eI-NW-fhe"/>
                                         </constraints>
@@ -12153,7 +12153,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="HYi-W6-IPk" firstAttribute="top" secondItem="JFp-xk-qR9" secondAttribute="bottom" constant="24" id="kvy-9X-4Dr"/>
                                     <constraint firstItem="5LO-cO-fzb" firstAttribute="leading" secondItem="oSs-PP-Ba0" secondAttribute="leading" id="lXw-Eh-Sos"/>
                                     <constraint firstAttribute="trailing" secondItem="Fyv-H2-n9l" secondAttribute="trailing" constant="16" id="liY-LV-Tj5"/>
-                                    <constraint firstItem="VNd-ow-gfZ" firstAttribute="leading" secondItem="lg5-ri-z09" secondAttribute="trailing" constant="35" id="ltR-TL-Ebb"/>
+                                    <constraint firstItem="VNd-ow-gfZ" firstAttribute="leading" secondItem="lg5-ri-z09" secondAttribute="trailing" constant="24" id="ltR-TL-Ebb"/>
                                     <constraint firstAttribute="trailing" secondItem="CH1-Ld-G9j" secondAttribute="trailing" constant="24" id="mF7-Y7-ZUJ"/>
                                     <constraint firstItem="Fcd-0M-dkI" firstAttribute="leading" secondItem="9Oo-lw-RUT" secondAttribute="leading" constant="16" id="mRl-q9-8Yy"/>
                                     <constraint firstItem="UAB-a3-LUV" firstAttribute="top" secondItem="9Oo-lw-RUT" secondAttribute="top" id="mTA-Th-AsS"/>
