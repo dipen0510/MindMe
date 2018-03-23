@@ -29,6 +29,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *menuButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *boxesHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *boxLabelTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *subscribedValueTopConstraint;
 
 - (IBAction)menuButtonTapped:(id)sender;
 

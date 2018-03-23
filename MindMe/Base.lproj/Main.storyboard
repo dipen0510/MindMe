@@ -1673,7 +1673,7 @@ Terms of Services and Privacy Policy</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZ3-ae-r04">
-                                <rect key="frame" x="16" y="205" width="109" height="58"/>
+                                <rect key="frame" x="16" y="205" width="109" height="65"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">New Mail
@@ -1687,9 +1687,9 @@ Terms of Services and Privacy Policy</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="666-kz-rQH">
-                                <rect key="frame" x="133" y="205" width="108.5" height="58"/>
+                                <rect key="frame" x="133" y="205" width="108.5" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="2CV-Yb-moI"/>
+                                    <constraint firstAttribute="height" constant="65" id="2CV-Yb-moI"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -1704,7 +1704,7 @@ Terms of Services and Privacy Policy</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRE-bQ-fzp">
-                                <rect key="frame" x="249.5" y="205" width="109" height="58"/>
+                                <rect key="frame" x="249.5" y="205" width="109" height="65"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Live Advert
@@ -1718,7 +1718,7 @@ Terms of Services and Privacy Policy</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUB-XM-AVg">
-                                <rect key="frame" x="107" y="277" width="160" height="35"/>
+                                <rect key="frame" x="107" y="284" width="160" height="35"/>
                                 <color key="backgroundColor" red="0.97184199090000001" green="0.63312035799999999" blue="0.35435462000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="1Sj-28-zMa"/>
@@ -1733,7 +1733,7 @@ Terms of Services and Privacy Policy</string>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UEk-AS-NLb">
-                                <rect key="frame" x="0.0" y="372.5" width="375" height="294.5"/>
+                                <rect key="frame" x="0.0" y="379.5" width="375" height="287.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="1yn-np-7Rc" id="cDQ-E2-dkl"/>
@@ -1741,26 +1741,26 @@ Terms of Services and Privacy Policy</string>
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWY-k9-wQT">
-                                <rect key="frame" x="16" y="326" width="343" height="1"/>
+                                <rect key="frame" x="16" y="333" width="343" height="1"/>
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="ap9-L5-zwn"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profiles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bR8-7J-8pN">
-                                <rect key="frame" x="16" y="336" width="73.5" height="24.5"/>
+                                <rect key="frame" x="16" y="343" width="73.5" height="24.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bN-du-Xne">
-                                <rect key="frame" x="249.5" y="234" width="109" height="23"/>
+                                <rect key="frame" x="249.5" y="237" width="109" height="23"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62e-1e-0b2">
-                                <rect key="frame" x="133" y="234" width="109" height="23"/>
+                                <rect key="frame" x="133" y="237" width="109" height="23"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1770,6 +1770,7 @@ Terms of Services and Privacy Policy</string>
                         <constraints>
                             <constraint firstItem="EWY-k9-wQT" firstAttribute="leading" secondItem="K9z-ds-PBr" secondAttribute="leading" constant="16" id="2lP-JW-1sy"/>
                             <constraint firstItem="4bN-du-Xne" firstAttribute="width" secondItem="YRE-bQ-fzp" secondAttribute="width" id="6MI-mE-01r"/>
+                            <constraint firstItem="62e-1e-0b2" firstAttribute="top" secondItem="Bkx-y5-Eqe" secondAttribute="bottom" constant="44.5" id="7fM-0o-6Nk"/>
                             <constraint firstItem="YRE-bQ-fzp" firstAttribute="height" secondItem="jZ3-ae-r04" secondAttribute="height" id="C7V-6V-adA"/>
                             <constraint firstItem="666-kz-rQH" firstAttribute="centerX" secondItem="K9z-ds-PBr" secondAttribute="centerX" id="CrP-rt-5Lw"/>
                             <constraint firstItem="4bN-du-Xne" firstAttribute="width" secondItem="62e-1e-0b2" secondAttribute="width" id="Dfg-0z-hUa"/>
@@ -1777,9 +1778,8 @@ Terms of Services and Privacy Policy</string>
                             <constraint firstItem="y2t-34-g3B" firstAttribute="top" secondItem="gTd-xC-4lw" secondAttribute="bottom" constant="20" id="GWa-TR-Ucw"/>
                             <constraint firstItem="bR8-7J-8pN" firstAttribute="top" secondItem="aUB-XM-AVg" secondAttribute="bottom" constant="24" id="Hxa-n4-Rlm"/>
                             <constraint firstItem="aUB-XM-AVg" firstAttribute="centerX" secondItem="K9z-ds-PBr" secondAttribute="centerX" id="Hy6-AX-Hg0"/>
-                            <constraint firstItem="4bN-du-Xne" firstAttribute="top" secondItem="62e-1e-0b2" secondAttribute="top" id="Lj2-8r-dq6"/>
                             <constraint firstItem="666-kz-rQH" firstAttribute="width" secondItem="jZ3-ae-r04" secondAttribute="width" id="Phw-35-f5p"/>
-                            <constraint firstItem="4bN-du-Xne" firstAttribute="top" secondItem="syI-k5-4sO" secondAttribute="bottom" constant="85" id="Qop-hw-Kjz"/>
+                            <constraint firstItem="4bN-du-Xne" firstAttribute="top" secondItem="syI-k5-4sO" secondAttribute="bottom" constant="88" id="Qop-hw-Kjz"/>
                             <constraint firstItem="4bN-du-Xne" firstAttribute="leading" secondItem="YRE-bQ-fzp" secondAttribute="leading" id="TlH-uL-CWb"/>
                             <constraint firstItem="62e-1e-0b2" firstAttribute="leading" secondItem="666-kz-rQH" secondAttribute="leading" id="U0m-vG-QSc"/>
                             <constraint firstItem="bR8-7J-8pN" firstAttribute="leading" secondItem="Bkx-y5-Eqe" secondAttribute="leading" id="XqM-Da-c33"/>
@@ -1821,6 +1821,7 @@ Terms of Services and Privacy Policy</string>
                         <outlet property="menuButton" destination="Ev2-Yp-QNs" id="EXU-ie-SHe"/>
                         <outlet property="nameLabel" destination="Bkx-y5-Eqe" id="TOT-XU-fYF"/>
                         <outlet property="subscribedValueLabel" destination="62e-1e-0b2" id="2hP-y7-nJk"/>
+                        <outlet property="subscribedValueTopConstraint" destination="7fM-0o-6Nk" id="ygj-WF-gmM"/>
                         <outlet property="tableViewheaderLabel" destination="bR8-7J-8pN" id="3Hr-c1-nw1"/>
                         <outlet property="upgradedLabel" destination="666-kz-rQH" id="dxq-j5-7bj"/>
                         <segue destination="AH4-6F-Px0" kind="show" identifier="showYourInfoSegue" id="f1d-Wb-gFu"/>
@@ -12384,7 +12385,7 @@ We may send emails to existing customers or prospective customers who have enqui
         <segue reference="eOh-mb-7xJ"/>
         <segue reference="kMe-Y4-Jvu"/>
         <segue reference="4Bd-9L-l1d"/>
-        <segue reference="p8p-Lv-PZS"/>
+        <segue reference="f1d-Wb-gFu"/>
         <segue reference="bY5-41-xfJ"/>
         <segue reference="Wle-C2-fcQ"/>
         <segue reference="5gg-cR-2zY"/>

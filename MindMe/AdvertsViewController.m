@@ -110,10 +110,14 @@
     }
     else {
         if (![[SharedClass sharedInstance] isUserCarer]) {
-            _subscribedValueLabel.text = @"Subscribe\nNow ";
+            _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"Subscribed\n\n"];
+            _subscribedValueLabel.text = @"Subscribe\nNow";
+            _subscribedValueTopConstraint.constant = 40.;
         }
         else {
-            _subscribedValueLabel.text = @"Upgrade\nNow ";
+            _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"Upgraded\n\n"];
+            _subscribedValueLabel.text = @"Upgrade\nNow";
+            _subscribedValueTopConstraint.constant = 40.;
         }
         
         _boxesHeightConstraint.constant = 80;
