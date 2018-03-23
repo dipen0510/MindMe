@@ -18,25 +18,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="253" height="74"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7u5-rz-uqE" userLabel="Avatar Container">
-                        <rect key="frame" x="209" y="29" width="44" height="45"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ef-cm-mUT" userLabel="Avatar Image View" customClass="QMImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="44" height="45"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" priority="999" constant="45" identifier="outgCellAvaHeight" id="G4o-g5-Qyf"/>
-                            <constraint firstItem="7Ef-cm-mUT" firstAttribute="leading" secondItem="7u5-rz-uqE" secondAttribute="leading" priority="999" identifier="outgCellAvaImgLeadingToAvaContainerLeading" id="Wga-7S-eKb"/>
-                            <constraint firstItem="7Ef-cm-mUT" firstAttribute="top" secondItem="7u5-rz-uqE" secondAttribute="top" identifier="outgCellAvaImgTopToAvaContainerTop" id="eaa-3k-eZK"/>
-                            <constraint firstAttribute="trailing" secondItem="7Ef-cm-mUT" secondAttribute="trailing" priority="999" identifier="outgCellAvaContainerTrailingToAvaImgTrailing" id="ekS-9J-vKn"/>
-                            <constraint firstAttribute="bottom" secondItem="7Ef-cm-mUT" secondAttribute="bottom" identifier="outgCellAvaBottom" id="u8k-EY-O50"/>
-                            <constraint firstAttribute="width" priority="999" constant="44" identifier="outgCellAvaContainerWidth" id="uct-ao-DdW"/>
-                        </constraints>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHn-aU-joG" userLabel="ContainerView" customClass="QMChatContainerView">
-                        <rect key="frame" x="26" y="0.0" width="181" height="74"/>
+                        <rect key="frame" x="68" y="0.0" width="181" height="74"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGA-Lo-mbI" userLabel="Message Container">
                                 <rect key="frame" x="0.0" y="0.0" width="166" height="74"/>
@@ -112,17 +95,12 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="7u5-rz-uqE" firstAttribute="trailing" secondItem="MUd-TY-LP8" secondAttribute="trailing" identifier="outgCellAvaTrailingToCellTrailing" id="Dl5-2o-5N4"/>
                 <constraint firstAttribute="bottom" secondItem="IHn-aU-joG" secondAttribute="bottom" identifier="outgCellContainerBottom" id="HI8-MG-YKY"/>
-                <constraint firstItem="7u5-rz-uqE" firstAttribute="leading" secondItem="IHn-aU-joG" secondAttribute="trailing" priority="750" constant="2" identifier="outgCellAvaContainerLeadingToContainerTrailing" id="hRe-dp-gde"/>
                 <constraint firstItem="IHn-aU-joG" firstAttribute="top" secondItem="MUd-TY-LP8" secondAttribute="top" identifier="outgCellContainerTop" id="kQX-PE-key"/>
-                <constraint firstAttribute="bottom" secondItem="7u5-rz-uqE" secondAttribute="bottom" identifier="outgCellContainerBottomToAvaBottom" id="wcc-4f-AaS"/>
+                <constraint firstAttribute="trailing" secondItem="IHn-aU-joG" secondAttribute="trailing" constant="4" id="mI9-Ec-xra"/>
             </constraints>
             <size key="customSize" width="253" height="74"/>
             <connections>
-                <outlet property="avatarContainerViewHeightConstraint" destination="G4o-g5-Qyf" id="68d-kl-qQw"/>
-                <outlet property="avatarContainerViewWidthConstraint" destination="uct-ao-DdW" id="jz8-Mx-YYV"/>
-                <outlet property="avatarView" destination="7Ef-cm-mUT" id="GM1-E5-DB9"/>
                 <outlet property="bottomLabel" destination="KM3-Oj-tba" id="nlu-fs-GAw"/>
                 <outlet property="bottomLabelHeightConstraint" destination="WU0-tf-mgf" id="cf4-8U-nj0"/>
                 <outlet property="containerView" destination="IHn-aU-joG" id="FxQ-jl-eL2"/>

@@ -294,7 +294,7 @@ NS_ENUM(NSUInteger, QMMessageType) {
 - (NSAttributedString *)attributedStringForItem:(QBChatMessage *)messageItem {
     
     UIColor *textColor = [messageItem senderID] == self.senderID ? [UIColor colorWithWhite:0.290 alpha:1.000] : [UIColor colorWithWhite:0.290 alpha:1.000];
-    UIFont *font = [UIFont fontWithName:@"VisbyRoundCF-Regular" size:14];
+    UIFont *font = [UIFont fontWithName:@"Montserrat-Light" size:14];
     
     NSDictionary *attributes = @{NSForegroundColorAttributeName : textColor,
                                  NSFontAttributeName : font};
@@ -311,7 +311,7 @@ NS_ENUM(NSUInteger, QMMessageType) {
 
 - (NSAttributedString *)topLabelAttributedStringForItem:(QBChatMessage *)messageItem {
     
-    UIFont *font = [UIFont fontWithName:@"VisbyRoundCF-Regular" size:12];
+    UIFont *font = [UIFont fontWithName:@"Montserrat-Light" size:12];
     
     if ([messageItem senderID] == self.senderID) {
         return nil;
@@ -327,7 +327,7 @@ NS_ENUM(NSUInteger, QMMessageType) {
 - (NSAttributedString *)bottomLabelAttributedStringForItem:(QBChatMessage *)messageItem {
     
     UIColor *textColor = [messageItem senderID] == self.senderID ? [UIColor colorWithWhite:0.000 alpha:0.490] : [UIColor colorWithWhite:0.000 alpha:0.490];
-    UIFont *font = [UIFont fontWithName:@"VisbyRoundCF-Regular" size:12];
+    UIFont *font = [UIFont fontWithName:@"Montserrat-Light" size:12];
     
     NSDictionary *attributes = @{ NSForegroundColorAttributeName:textColor, NSFontAttributeName:font};
     NSMutableAttributedString *attrStr =

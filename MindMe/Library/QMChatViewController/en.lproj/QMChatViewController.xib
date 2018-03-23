@@ -92,8 +92,17 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <items/>
                 </toolbar>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jim-JC-3tj">
+                    <rect key="frame" x="99.5" y="100" width="175" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="daw-cm-hVu"/>
+                        <constraint firstAttribute="width" secondItem="jim-JC-3tj" secondAttribute="height" multiplier="109:31" id="zo3-0I-28P"/>
+                    </constraints>
+                    <state key="normal" image="view advert btn"/>
+                </button>
             </subviews>
             <constraints>
+                <constraint firstItem="jim-JC-3tj" firstAttribute="top" secondItem="XS1-xK-ToQ" secondAttribute="bottom" constant="16" id="5wM-iy-K6W"/>
                 <constraint firstAttribute="trailing" secondItem="BoD-Az-3DM" secondAttribute="trailing" id="7xc-Ha-asg"/>
                 <constraint firstAttribute="trailing" secondItem="XS1-xK-ToQ" secondAttribute="trailing" id="8mn-5z-DRo"/>
                 <constraint firstItem="l9u-2b-4LK" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="Ao9-tY-M3L"/>
@@ -101,6 +110,7 @@
                 <constraint firstItem="XS1-xK-ToQ" firstAttribute="top" secondItem="mUa-cS-ru4" secondAttribute="top" id="Jwl-dF-7dM"/>
                 <constraint firstAttribute="trailing" secondItem="l9u-2b-4LK" secondAttribute="trailing" id="Z1j-5K-vju"/>
                 <constraint firstItem="XS1-xK-ToQ" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="ZUx-Do-Cnd"/>
+                <constraint firstItem="jim-JC-3tj" firstAttribute="centerX" secondItem="mUa-cS-ru4" secondAttribute="centerX" id="gyu-ox-1yu"/>
                 <constraint firstItem="BoD-Az-3DM" firstAttribute="top" secondItem="l9u-2b-4LK" secondAttribute="bottom" id="qcK-jo-Y2N"/>
                 <constraint firstAttribute="bottom" secondItem="BoD-Az-3DM" secondAttribute="bottom" id="rHs-6q-NX4"/>
                 <constraint firstItem="BoD-Az-3DM" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="ts7-8f-0lH"/>
@@ -112,5 +122,6 @@
     <resources>
         <image name="declined_icon" width="64" height="64"/>
         <image name="headline_mind_me" width="556" height="88"/>
+        <image name="view advert btn" width="654" height="186"/>
     </resources>
 </document>
