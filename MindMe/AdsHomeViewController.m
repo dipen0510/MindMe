@@ -860,7 +860,7 @@
         if ([filterViewController.careTypeTextField.text isEqualToString:@"All"]) {
             [filteredAdvertsArr addObject:advertDict];
         }
-        else if ([[advertDict valueForKey:@"care_type"] isEqualToString:filterViewController.careTypeTextField.text]) {
+        else if ([[[advertDict valueForKey:@"care_type"] lowercaseString] isEqualToString:[filterViewController.careTypeTextField.text lowercaseString]]) {
             [filteredAdvertsArr addObject:advertDict];
         }
         
