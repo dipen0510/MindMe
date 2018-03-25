@@ -159,6 +159,9 @@
                 if ([delegate respondsToSelector:@selector(didFinishServiceWithSuccess:andServiceKey:)]) {
                     [delegate didFinishServiceWithSuccess:[self prepareResponseObjectForServiceKey:self.serviceKey withData:responseObject] andServiceKey:self.serviceKey];
                 }
+                else {
+                    [self prepareResponseObjectForServiceKey:self.serviceKey withData:responseObject];
+                }
                 
             }
             else {
@@ -396,6 +399,46 @@
                 [[NSUserDefaults standardUserDefaults] setObject:data1 forKey:@"profileDetailsCopy"];
                 
             }
+        }
+        
+    }
+    
+    
+    
+    if ([responseServiceKey isEqualToString:GetUserPersonalDetails]) {
+        
+        if ([[responseObj valueForKey:@"flag"] isEqualToString:@"users"]) {
+            [[SharedClass sharedInstance] setIsUserCarer:NO];
+        }
+        else {
+            [[SharedClass sharedInstance] setIsUserCarer:YES];
+        }
+        
+        [[SharedClass sharedInstance] setIsGuestUser:NO];
+        
+        [[SharedClass sharedInstance] setUserId:[responseObj valueForKey:@"Userid"]];
+        [[SharedClass sharedInstance] setAuthorizationKey:[responseObj valueForKey:@"token"]];
+        [[SharedClass sharedInstance] setUserAuthId:[responseObj valueForKey:@"User_auth_id"]];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:[responseObj valueForKey:@"Userid"] forKey:@"Userid"];
+        [[NSUserDefaults standardUserDefaults] setObject:[responseObj valueForKey:@"token"] forKey:@"token"];
+        [[NSUserDefaults standardUserDefaults] setBool:[[SharedClass sharedInstance] isUserCarer] forKey:@"isUserCarer"];
+        [[NSUserDefaults standardUserDefaults] setObject:[responseObj valueForKey:@"User_auth_id"] forKey:@"User_auth_id"];
+        
+        
+        if ([responseObj valueForKey:@"data"] && ![[responseObj valueForKey:@"data"] isEqual:[NSNull null]]) {
+                
+                NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithDictionary:[responseObj valueForKey:@"data"]];
+                [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"user_email"] forKey:@"user_email"];
+                [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"Sub_active"] forKey:@"Sub_active"];
+                
+                
+                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dict];
+                [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"profileDetails"];
+                
+                NSData *data1 = [NSKeyedArchiver archivedDataWithRootObject:dict];
+                [[NSUserDefaults standardUserDefaults] setObject:data1 forKey:@"profileDetailsCopy"];
+                
         }
         
     }

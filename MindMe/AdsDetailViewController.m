@@ -215,7 +215,7 @@
         _jobActiveViewsLabel.text = [NSString stringWithFormat:@"Job Active %@ views",[_advertDict valueForKey:@"viewed"]];
     }
     
-    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetailsCopy"];
     NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
     
     if ([[responseData valueForKey:@"Sub_active"] intValue] == 1) {
@@ -430,7 +430,7 @@
         
     }
     
-    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetailsCopy"];
     NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
     
     if (![[SharedClass sharedInstance] isUserCarer] && [[responseData valueForKey:@"Sub_active"] intValue] != 1) {

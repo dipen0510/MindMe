@@ -189,7 +189,7 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetailsCopy"];
     NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
     
     if (![[SharedClass sharedInstance] isUserCarer] && [[responseData valueForKey:@"Sub_active"] intValue] != 1) {

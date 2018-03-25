@@ -169,6 +169,15 @@
     
 }
 
+- (void) startGetProfileDetailsService {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GetUserPersonalDetails;
+    manager.delegate = nil;
+    [manager startPOSTingFormDataForRefreshingUserToken:[self prepareDictionaryForGetProfileDetails]];
+    
+}
+
 #pragma mark - DATASYNCMANAGER Delegates
 
 -(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
@@ -183,6 +192,7 @@
     }
     if ([requestServiceKey isEqualToString:PostSubscriptionReceipt]) {
         [SVProgressHUD showSuccessWithStatus:@"Successfully Subscribed"];
+        [self startGetProfileDetailsService];
         [self performSelector:@selector(changeScreenToAdvertControl) withObject:nil afterDelay:1.5];
     }
     
@@ -265,6 +275,22 @@
     return dict;
     
 }
+
+- (NSMutableDictionary *) prepareDictionaryForGetProfileDetails {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    return dict;
+    
+}
+
 
 #pragma mark - UITextFieldDelegate
 
