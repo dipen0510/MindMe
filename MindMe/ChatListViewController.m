@@ -225,8 +225,19 @@
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Archive"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
         //insert your archive Action here
         
-        selectedChatDict = [[NSMutableDictionary alloc] initWithDictionary:[msgListArr objectAtIndex:indexPath.row]];
-        [self startArchiveMessageService];
+        NSData *dictionaryData1 = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetailsCopy"];
+        NSDictionary *responseData1 = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData1];
+        
+        if ([[responseData1 valueForKey:@"Sub_active"] intValue] == 1) {
+            selectedChatDict = [[NSMutableDictionary alloc] initWithDictionary:[msgListArr objectAtIndex:indexPath.row]];
+            [self startArchiveMessageService];
+        }
+        else {
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:@"Please subscribe to unlock this feature." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+        
+        
         
     }];
     deleteAction.backgroundColor = [UIColor colorWithRed:238./255. green:128./255. blue:30./255. alpha:1.0];
