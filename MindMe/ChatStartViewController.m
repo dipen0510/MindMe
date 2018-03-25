@@ -295,7 +295,7 @@
     [dict setObject:[_advertDict valueForKey:@"Userid"] forKey:@"Userid"];
     [dict setObject:[NSString stringWithFormat:@"%@",[[SharedClass sharedInstance] userId]] forKey:@"from"];
     [dict setObject:_messageTextField.text forKey:@"message"];
-    [dict setObject:_titleTextField.text forKey:@"message_title"];
+    [dict setObject:[[SharedClass sharedInstance] filterOutMobileAndEmail:_titleTextField.text] forKey:@"message_title"];
     
     if (_isOpenedFromFavorites) {
         [dict setObject:[_advertDict valueForKey:@"advert_id"] forKey:@"refer_id"];

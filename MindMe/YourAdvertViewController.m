@@ -1712,7 +1712,7 @@
     [dict setObject:love_optional forKey:@"love_optional"];
     
     if ([[dict valueForKey:@"love_optional"] isEqualToString:@""] && !_otherRelevantInfoTextView.hidden) {
-        [dict setObject:_otherRelevantInfoTextView.text forKey:@"love_optional"];
+        [dict setObject:[[SharedClass sharedInstance] filterOutMobileAndEmail:_otherRelevantInfoTextView.text] forKey:@"love_optional"];
     }
     
     

@@ -28,5 +28,6 @@
 @property BOOL isLastMinuiteCareFilterApplied;
 
 - (void) changeRootControllerForIdentifier:(NSString *)viewControllerId forSideMenuController:(LGSideMenuController *)sideMenuController;
+- (NSString *) filterOutMobileAndEmail:(NSString *) searchString;
 
 @end

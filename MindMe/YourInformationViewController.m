@@ -201,7 +201,7 @@
         [dict setObject:@"" forKey:@"image_path"];
     }
     
-    [dict setObject:_addYourBioTextView.text forKey:@"about_you"];
+    [dict setObject:[[SharedClass sharedInstance] filterOutMobileAndEmail:_addYourBioTextView.text] forKey:@"about_you"];
     [dict setObject:_preferredRateTextField.text forKey:@"pay"];
     [dict setObject:[[_experienceLabel.text componentsSeparatedByString:@" "] firstObject] forKey:@"experience"];
     
@@ -689,4 +689,5 @@
     return YES;
     
 }
+
 @end

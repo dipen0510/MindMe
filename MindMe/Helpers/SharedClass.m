@@ -48,4 +48,60 @@ static SharedClass *singletonObject = nil;
     
 }
 
+- (NSString *) filterOutMobileAndEmail:(NSString *) searchString {
+    
+    NSString* returnString = [[NSString alloc] initWithString:searchString];
+    
+    // regex string for emails
+    NSString *regexString = @"([A-Za-z0-9_\\-\\.\\+])+\\@([A-Za-z0-9_\\-\\.])+\\.([A-Za-z]+)";
+    
+    // track regex error
+    NSError *error = NULL;
+    
+    // create regular expression
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexString options:0 error:&error];
+    
+    // make sure there is no error
+    if (!error) {
+        
+        // get all matches for regex
+        NSArray *matches = [regex matchesInString:searchString options:0 range:NSMakeRange(0, searchString.length)];
+        
+        // loop through regex matches
+        for (NSTextCheckingResult *match in matches) {
+            
+            // get the current text
+            NSString *matchText = [searchString substringWithRange:match.range];
+            
+            returnString = [returnString stringByReplacingOccurrencesOfString:matchText withString:@"[removed]"];
+            
+            NSLog(@"Extracted: %@", matchText);
+            
+        }
+        
+    }
+    
+    
+    //PHONE VALIDATION
+    
+    NSError *error1 = NULL;
+    NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypePhoneNumber error:&error1];
+    NSArray *matches = [detector matchesInString:searchString options:0 range:NSMakeRange(0, [searchString length])];
+    if (matches != nil) {
+        for (NSTextCheckingResult *match in matches) {
+            if ([match resultType] == NSTextCheckingTypePhoneNumber) {
+                NSString *matchText = [searchString substringWithRange:match.range];
+                
+                returnString = [returnString stringByReplacingOccurrencesOfString:matchText withString:@"[removed]"];
+                
+                NSLog(@"Extracted: %@", matchText);
+            }
+        }
+    }
+    
+    
+    return returnString;
+    
+}
+
 @end
