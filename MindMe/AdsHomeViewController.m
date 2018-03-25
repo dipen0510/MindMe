@@ -282,7 +282,9 @@
     _addressTextField.text = [[[[googleResponseArr objectAtIndex:index] valueForKey:@"address_components"] valueForKey:@"short_name"] componentsJoinedByString:@", "];
     latLong = [NSString stringWithFormat:@"%@,%@",[[[[googleResponseArr objectAtIndex:index] valueForKey:@"geometry"] valueForKey:@"location"] valueForKey:@"lat"], [[[[googleResponseArr objectAtIndex:index] valueForKey:@"geometry"] valueForKey:@"location"] valueForKey:@"lng"]] ;
     
-    [self filterAdvertsForLocation];;
+    [self startGetAdvertsServiceForLocationFilter];
+    
+//    [self filterAdvertsForLocation];;
     
     [self dismissKeyboard];
     
@@ -301,7 +303,7 @@
     cell.locationLabel.text = [NSString stringWithFormat:@"%d km Away",[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"distance"] intValue]];
     cell.addressLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"];
     
-    if ([self height:cell.addressLabel.text] <= 20) {
+    if ([self height:cell.addressLabel.text] <= 25) {
         cell.profileImgView.layer.cornerRadius = (30/568.)*kScreenHeight;
     }
     
@@ -520,6 +522,17 @@
     
 }
 
+- (void) startGetAdvertsServiceForLocationFilter {
+    
+    [SVProgressHUD showWithStatus:@"Filtering data"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GetAllHomeAdverts;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForGetPostedAdvertsForLocationFilters]];
+    
+}
+
 - (void) startGoogleMapsGeocodeAPIWithAddressParam:(NSString *)params {
     
     DataSyncManager* manager = [[DataSyncManager alloc] init];
@@ -655,6 +668,27 @@
     
 }
 
+- (NSMutableDictionary *) prepareDictionaryForGetPostedAdvertsForLocationFilters {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    
+        [dict setObject:[[latLong componentsSeparatedByString:@","] firstObject] forKey:@"lat"];
+        [dict setObject:[[latLong componentsSeparatedByString:@","] lastObject] forKey:@"long"];
+        [dict setObject:_addressTextField.text forKey:@"address"];
+    
+    
+    return dict;
+    
+}
+
 - (NSMutableDictionary *) prepareDictionaryForGetUnreadMessageCount {
     
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
@@ -763,7 +797,7 @@
             if (textField.text.length<=1) {
                 [self dismissKeyboard];
                 textField.text = @"";
-                [self filterAdvertsForCareType];
+                [self startGetAdvertsService];
             }
             else {
                 [self resetAllAdvertsFilter];
