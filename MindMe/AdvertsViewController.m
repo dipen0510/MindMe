@@ -78,12 +78,12 @@
     _upgradedLabel.layer.borderWidth = 1.0;
     
     _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
-    _nameLabel.font = _tableViewheaderLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight];
+    _nameLabel.font = _tableViewheaderLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(17.5/667)*kScreenHeight];
     
-    _liveAdvertValueLabel.font = _subscribedValueLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(18./667)*kScreenHeight];
-    _mailLabel.font = _upgradedLabel.font = _advertLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(18./667)*kScreenHeight];
+    _liveAdvertValueLabel.font = _subscribedValueLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(17.5/667)*kScreenHeight];
+    _mailLabel.font = _upgradedLabel.font = _advertLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(17.5/667)*kScreenHeight];
     
-    _createAdvertButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(20./667)*kScreenHeight];
+    _createAdvertButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(17.5/667)*kScreenHeight];
     
     if (![[SharedClass sharedInstance] isUserCarer]) {
         
@@ -228,11 +228,11 @@
         NSMutableAttributedString *strText = [[NSMutableAttributedString alloc] initWithString:cell.careTypeLabel.text];
         
         [strText addAttribute:NSFontAttributeName
-                        value:[UIFont fontWithName:@"Montserrat-Medium" size:(19./667.)*kScreenHeight]
+                        value:[UIFont fontWithName:@"Montserrat-Medium" size:(17.5/667.)*kScreenHeight]
                         range:[cell.careTypeLabel.text rangeOfString:[NSString stringWithFormat:@"%@",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]]]];
         
         [strText addAttribute:NSFontAttributeName
-                        value:[UIFont fontWithName:@"Montserrat-Light" size:(19./667.)*kScreenHeight]
+                        value:[UIFont fontWithName:@"Montserrat-Light" size:(17.5/667.)*kScreenHeight]
                         range:[cell.careTypeLabel.text rangeOfString:[NSString stringWithFormat:@"advert [%@ views]",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"viewed"]]]];
         
         cell.careTypeLabel.attributedText = strText;
@@ -246,11 +246,11 @@
         NSMutableAttributedString *strText = [[NSMutableAttributedString alloc] initWithString:cell.careTypeLabel.text];
         
         [strText addAttribute:NSFontAttributeName
-                        value:[UIFont fontWithName:@"Montserrat-Medium" size:(19./667.)*kScreenHeight]
+                        value:[UIFont fontWithName:@"Montserrat-Medium" size:(17.5/667.)*kScreenHeight]
                         range:[cell.careTypeLabel.text rangeOfString:[NSString stringWithFormat:@"%@",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]]]];
         
         [strText addAttribute:NSFontAttributeName
-                        value:[UIFont fontWithName:@"Montserrat-Light" size:(19./667.)*kScreenHeight]
+                        value:[UIFont fontWithName:@"Montserrat-Light" size:(17.5/667.)*kScreenHeight]
                         range:[cell.careTypeLabel.text rangeOfString:[NSString stringWithFormat:@"profile [%@ views]",[[advertsArr objectAtIndex:indexPath.row] valueForKey:@"viewed"]]]];
         
         cell.careTypeLabel.attributedText = strText;

@@ -222,7 +222,7 @@
         
     }
     
-    header.menuTitle.font = [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight];
+    header.menuTitle.font = [UIFont fontWithName:@"Montserrat-Regular" size:(17.5/667)*kScreenHeight];
     
     return header;
 }

@@ -14,7 +14,7 @@
     [super awakeFromNib];
     // Initialization code
     
-    _menuTitle.font = [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight];
+    _menuTitle.font = [UIFont fontWithName:@"Montserrat-Regular" size:(17.5/667)*kScreenHeight];
     
 }
 

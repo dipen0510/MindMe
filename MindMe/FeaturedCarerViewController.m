@@ -28,8 +28,8 @@
     _becomeFeaturedButton.layer.masksToBounds = NO;
     
     _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
-    _descTextView.font = [UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight];
-    _becomeFeaturedButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(20./667)*kScreenHeight];
+    _descTextView.font = [UIFont fontWithName:@"Montserrat-Light" size:(17.5/667)*kScreenHeight];
+    _becomeFeaturedButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(17.5/667)*kScreenHeight];
     
     [_descTextView setContentOffset:CGPointZero animated:YES];
     

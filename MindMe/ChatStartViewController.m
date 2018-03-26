@@ -31,11 +31,11 @@
     
     [self.careTypeCollectionView registerNib:[UINib nibWithNibName:@"ChooseCareTypeCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ChooseCareTypeCollectionViewCell"];
     
-    _titleLabel.font =  _messageLabel.font = _selectActiveProfStaticLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(20./667)*kScreenHeight];
+    _titleLabel.font =  _messageLabel.font = _selectActiveProfStaticLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(17.5/667)*kScreenHeight];
     
-     _selectActiveProfStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight];
+     _selectActiveProfStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(17.5/667)*kScreenHeight];
     
-    _messageTextField.font =  _titleTextField.font = _footerLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight];
+    _messageTextField.font =  _titleTextField.font = _footerLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(17.5/667)*kScreenHeight];
     
     _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
     
@@ -96,7 +96,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return CGSizeMake((kScreenWidth-42)/2., 45);
+    return CGSizeMake((kScreenWidth-42)/2., 40);
     
     
 }
