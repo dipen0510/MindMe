@@ -48,10 +48,10 @@
     faqArr = [[NSMutableArray alloc] init];
     
     if ([UIScreen mainScreen].bounds.size.height<667) {
-        sectionHeight = 60;
+        sectionHeight = 50;
     }
     else {
-        sectionHeight = 70;
+        sectionHeight = 60;
     }
     
     lastOpenedIndex = -1;
@@ -1249,7 +1249,7 @@
     NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
     CGSize boundingBox = [text boundingRectWithSize:constraint
                                             options:NSStringDrawingUsesLineFragmentOrigin
-                                         attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight]}
+                                         attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Montserrat-Light" size:(17.5/667)*kScreenHeight]}
                                             context:context].size;
     
     size = CGSizeMake(ceil(boundingBox.width), ceil(boundingBox.height));
@@ -1265,7 +1265,7 @@
     NSStringDrawingContext *context = [[NSStringDrawingContext alloc] init];
     CGSize boundingBox = [text boundingRectWithSize:constraint
                                             options:NSStringDrawingUsesLineFragmentOrigin
-                                         attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Montserrat-Regular" size:20.]}
+                                         attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Montserrat-Regular" size:17.5]}
                                             context:context].size;
     
     size = CGSizeMake(ceil(boundingBox.width), ceil(boundingBox.height));

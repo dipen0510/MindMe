@@ -14,8 +14,8 @@
     [super awakeFromNib];
     // Initialization code
     
-    _headerTitle.font = [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight];
-    _bodyTitle.font = [UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight];
+    _headerTitle.font = [UIFont fontWithName:@"Montserrat-Regular" size:(17.5/667)*kScreenHeight];
+    _bodyTitle.font = [UIFont fontWithName:@"Montserrat-Light" size:(17.5/667)*kScreenHeight];
     
 }
 
