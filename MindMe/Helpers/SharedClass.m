@@ -104,4 +104,70 @@ static SharedClass *singletonObject = nil;
     
 }
 
+- (NSString *) filterNumbersAndPostCodeFromAddressString:(NSString *) text {
+    
+    NSString* retText = [[NSString alloc] initWithString:text];
+    int flag = 0;
+    
+    // regex string for emails
+    NSString *regexString = @"[A-Za-z]\\d{2}\\s[A-Za-z\\d]{4}";
+    
+    // track regex error
+    NSError *error = NULL;
+    
+    // create regular expression
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexString options:0 error:&error];
+    
+    // make sure there is no error
+    if (!error) {
+        
+        // get all matches for regex
+        NSArray *matches = [regex matchesInString:text options:0 range:NSMakeRange(0, text.length)];
+        
+        // loop through regex matches
+        for (NSTextCheckingResult *match in matches) {
+            
+            // get the current text
+            NSString *matchText = [text substringWithRange:match.range];
+            
+            retText = [retText stringByReplacingOccurrencesOfString:matchText withString:[matchText substringToIndex:3]];
+            
+            if (match.range.location == 0 || match.range.location == 1 || match.range.location == 2 || match.range.location == 3 || match.range.location == 4 || match.range.location == 5) {
+                flag = 1;
+            }
+            
+            NSLog(@"Extracted: %@", matchText);
+            
+        }
+        
+    }
+    
+    
+    NSString* newRetText = @"";
+    
+    
+    for(NSInteger i = 0; i < 6 && flag == 0; i++)
+    {
+        NSString *character = [retText substringWithRange:NSMakeRange(i, 1)];
+        if ([character rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"0123456789"]].location != NSNotFound) {
+            newRetText = [newRetText stringByAppendingString:@""];
+        }
+        else {
+            newRetText = [newRetText stringByAppendingString:character];
+        }
+    }
+    
+    if (flag == 0) {
+        newRetText = [newRetText stringByAppendingString:[retText substringWithRange:NSMakeRange(6, retText.length-6)]];
+        newRetText = [newRetText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    }
+    else {
+        return retText;
+    }
+    
+    return newRetText;
+    
+}
+
+
 @end

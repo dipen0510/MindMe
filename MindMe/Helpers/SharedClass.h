@@ -29,5 +29,6 @@
 
 - (void) changeRootControllerForIdentifier:(NSString *)viewControllerId forSideMenuController:(LGSideMenuController *)sideMenuController;
 - (NSString *) filterOutMobileAndEmail:(NSString *) searchString;
+- (NSString *) filterNumbersAndPostCodeFromAddressString:(NSString *) text;
 
 @end
