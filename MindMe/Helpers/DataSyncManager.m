@@ -376,8 +376,7 @@
     NSString* subId = [postData valueForKey:@"subId"];
     [postData removeObjectForKey:@"subId"];
     
-    
-    [manager POST:subId parameters:postData progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager DELETE:subId parameters:postData success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
             
@@ -406,6 +405,37 @@
         }
         
     }];
+    
+    
+//    [manager DELETE:subId parameters:postData progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        
+//        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+//            
+//            if ([[responseObject allKeys] containsObject:@"id"]) {
+//                if ([delegate respondsToSelector:@selector(didFinishServiceWithSuccess:andServiceKey:)]) {
+//                    [delegate didFinishServiceWithSuccess:[self prepareResponseObjectForServiceKey:self.serviceKey withData:responseObject] andServiceKey:self.serviceKey];
+//                }
+//            }
+//            else {
+//                if ([delegate respondsToSelector:@selector(didFinishServiceWithFailure:)]) {
+//                    [delegate didFinishServiceWithFailure:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)];
+//                }
+//            }
+//            
+//        }
+//        else {
+//            if ([delegate respondsToSelector:@selector(didFinishServiceWithFailure:)]) {
+//                [delegate didFinishServiceWithFailure:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)];
+//            }
+//        }
+//        
+//    } failure:^(NSURLSessionTask *task, NSError *error) {
+//        
+//        if ([delegate respondsToSelector:@selector(didFinishServiceWithFailure:)]) {
+//            [delegate didFinishServiceWithFailure:NSLocalizedString(@"Verify your internet connection and try again", nil)];
+//        }
+//        
+//    }];
     
     
 }

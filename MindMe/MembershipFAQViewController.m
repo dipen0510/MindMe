@@ -533,7 +533,7 @@
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
     
     [dict setObject:subKey forKey:@"subId"];
-//    [dict setObject:@"true" forKey:@"at_period_end"];
+    [dict setObject:@"true" forKey:@"at_period_end"];
     
     return dict;
     
