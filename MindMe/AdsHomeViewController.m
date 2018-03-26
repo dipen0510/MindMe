@@ -813,6 +813,19 @@
     
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    if (textField ==_addressTextField) {
+        
+        [self dismissKeyboard];
+        
+    }
+    
+    return YES;
+    
+}
+
+
 - (IBAction)filterCarerTypeButtonTapped {
     
     NSArray *colors = [NSArray arrayWithObjects:@"All", @"Au Pair", @"Babysitters", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
