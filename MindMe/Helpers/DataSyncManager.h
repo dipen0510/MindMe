@@ -33,4 +33,7 @@
 - (void) startStripeAPIWithsData:(id)postData;
 - (void) startGoogleAPIGeocodeWebService:(NSString *)param;
 
+- (void) startStripeAPIToFetchSubscriptionIdWithsData:(id)postData;
+- (void) startStripeAPIToDeleteSubscriptionWithsData:(id)postData;
+
 @end

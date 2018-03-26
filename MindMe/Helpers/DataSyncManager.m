@@ -309,6 +309,107 @@
 }
 
 
+- (void) startStripeAPIToFetchSubscriptionIdWithsData:(id)postData {
+    
+    NSURL* url;
+    url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/customers",StripeBaseURL]];
+    
+    
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
+    
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    [manager.requestSerializer setAuthorizationHeaderFieldWithUsername:@"sk_test_VgD8PsQ4E4DW9FB3Sdo0UnMu" password:@""];
+    [manager.requestSerializer setValue:@"application/x-www-form-urlencoded; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
+    manager.responseSerializer.acceptableStatusCodes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 300)];
+    manager.requestSerializer.timeoutInterval = 60;
+    
+    
+    [manager POST:[postData valueForKey:@"customer"] parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            
+            if ([[responseObject allKeys] containsObject:@"id"]) {
+                if ([delegate respondsToSelector:@selector(didFinishServiceWithSuccess:andServiceKey:)]) {
+                    [delegate didFinishServiceWithSuccess:[self prepareResponseObjectForServiceKey:self.serviceKey withData:responseObject] andServiceKey:self.serviceKey];
+                }
+            }
+            else {
+                if ([delegate respondsToSelector:@selector(didFinishServiceWithFailure:)]) {
+                    [delegate didFinishServiceWithFailure:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)];
+                }
+            }
+            
+        }
+        else {
+            if ([delegate respondsToSelector:@selector(didFinishServiceWithFailure:)]) {
+                [delegate didFinishServiceWithFailure:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)];
+            }
+        }
+        
+    } failure:^(NSURLSessionTask *task, NSError *error) {
+        
+        if ([delegate respondsToSelector:@selector(didFinishServiceWithFailure:)]) {
+            [delegate didFinishServiceWithFailure:NSLocalizedString(@"Verify your internet connection and try again", nil)];
+        }
+        
+    }];
+    
+    
+}
+
+- (void) startStripeAPIToDeleteSubscriptionWithsData:(id)postData {
+    
+    NSURL* url;
+    url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",StripeBaseURL,self.serviceKey]];
+    
+    
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
+    
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    [manager.requestSerializer setAuthorizationHeaderFieldWithUsername:@"sk_test_VgD8PsQ4E4DW9FB3Sdo0UnMu" password:@""];
+    [manager.requestSerializer setValue:@"application/x-www-form-urlencoded; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
+    manager.responseSerializer.acceptableStatusCodes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 300)];
+    manager.requestSerializer.timeoutInterval = 60;
+    
+    NSString* subId = [postData valueForKey:@"subId"];
+    [postData removeObjectForKey:@"subId"];
+    
+    
+    [manager POST:subId parameters:postData progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            
+            if ([[responseObject allKeys] containsObject:@"id"]) {
+                if ([delegate respondsToSelector:@selector(didFinishServiceWithSuccess:andServiceKey:)]) {
+                    [delegate didFinishServiceWithSuccess:[self prepareResponseObjectForServiceKey:self.serviceKey withData:responseObject] andServiceKey:self.serviceKey];
+                }
+            }
+            else {
+                if ([delegate respondsToSelector:@selector(didFinishServiceWithFailure:)]) {
+                    [delegate didFinishServiceWithFailure:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)];
+                }
+            }
+            
+        }
+        else {
+            if ([delegate respondsToSelector:@selector(didFinishServiceWithFailure:)]) {
+                [delegate didFinishServiceWithFailure:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)];
+            }
+        }
+        
+    } failure:^(NSURLSessionTask *task, NSError *error) {
+        
+        if ([delegate respondsToSelector:@selector(didFinishServiceWithFailure:)]) {
+            [delegate didFinishServiceWithFailure:NSLocalizedString(@"Verify your internet connection and try again", nil)];
+        }
+        
+    }];
+    
+    
+}
+
 
 - (void) startGoogleAPIGeocodeWebService:(NSString *)param
 {
@@ -375,6 +476,7 @@
                 NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithDictionary:[arr objectAtIndex:0]];
                 [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"user_email"] forKey:@"user_email"];
                 [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"Sub_active"] forKey:@"Sub_active"];
+                [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"sub_id"] forKey:@"sub_id"];
                 
                 NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dict];
                 [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"profileDetails"];
@@ -390,6 +492,7 @@
                 NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithDictionary:[responseObj valueForKey:@"data"]];
                 [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"user_email"] forKey:@"user_email"];
                 [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"Sub_active"] forKey:@"Sub_active"];
+                [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"sub_id"] forKey:@"sub_id"];
                 
                 
                 NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dict];
@@ -431,6 +534,7 @@
                 NSMutableDictionary* dict = [[NSMutableDictionary alloc] initWithDictionary:[responseObj valueForKey:@"data"]];
                 [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"user_email"] forKey:@"user_email"];
                 [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"Sub_active"] forKey:@"Sub_active"];
+            [dict setObject:[[responseObj valueForKey:@"userdata"] valueForKey:@"sub_id"] forKey:@"sub_id"];
                 
                 
                 NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dict];

@@ -14,6 +14,7 @@
 #define StripeBaseURL @"https://api.stripe.com/v1"
 
 #define StripeSubscriptionKey @"subscriptions"
+#define StripeGetSubscriptionKey @"getsubscriptions"
 #define StripeCustomerKey @"customers"
 
 #define RegisterServiceKey @"index.php/auth/register"

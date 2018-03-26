@@ -353,7 +353,7 @@
 
 - (void) deactivateSubscriptionButtonTapped {
     
-    
+    [self startGetStripeSubscriptionService];
     
 }
 
@@ -384,6 +384,26 @@
     manager.serviceKey = DeleteAccount;
     manager.delegate = self;
     [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForDowngradeAccount]];
+    
+}
+
+- (void) startGetStripeSubscriptionService {
+    
+    [SVProgressHUD showWithStatus:@"Deactivating subscription..."];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = StripeGetSubscriptionKey;
+    manager.delegate = self;
+    [manager startStripeAPIToFetchSubscriptionIdWithsData:[self prepareDictionaryForStripeSubscription]];
+    
+}
+
+- (void) startDeleteSubscriptionServiceForKey:(NSString *)subKey {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = StripeSubscriptionKey;
+    manager.delegate = self;
+    [manager startStripeAPIToDeleteSubscriptionWithsData:[self prepareDictionaryForDeleteStripeSubscription:subKey]];
     
 }
 
@@ -422,7 +442,30 @@
         [self.sideMenuController.navigationController popToRootViewControllerAnimated:YES];
         
     }
+    if ([requestServiceKey isEqualToString:StripeGetSubscriptionKey]) {
+        
+        NSMutableArray* subArr = [[NSMutableArray alloc] initWithArray:[[responseData valueForKey:@"subscriptions"] valueForKey:@"data"]];
+        
+        if (subArr.count>0) {
+            
+            NSString* subscriptionId = [[subArr objectAtIndex:0] valueForKey:@"id"];
+            [self startDeleteSubscriptionServiceForKey:subscriptionId];
+            
+        }
+        else {
+            
+            [SVProgressHUD showErrorWithStatus:@"No active subscription"];
+            
+        }
+        
+        
+    }
     
+    if ([requestServiceKey isEqualToString:StripeSubscriptionKey]) {
+        
+        [SVProgressHUD showSuccessWithStatus:@"Subscription deactivated successfully."];
+        
+    }
     
 }
 
@@ -467,6 +510,30 @@
     else {
         [dict setObject:@"parent" forKey:@"flag"];
     }
+    
+    return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForStripeSubscription {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetailsCopy"];
+    NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
+    
+    [dict setObject:[responseData valueForKey:@"sub_id"] forKey:@"customer"];
+    
+    return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForDeleteStripeSubscription:(NSString *)subKey {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    [dict setObject:subKey forKey:@"subId"];
+//    [dict setObject:@"true" forKey:@"at_period_end"];
     
     return dict;
     
