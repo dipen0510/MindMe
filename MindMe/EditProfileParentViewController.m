@@ -64,11 +64,11 @@
         _tncButton.selected = YES;
     }
     
-    _doneButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(20./667)*kScreenHeight];
+    _doneButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(17.5/667)*kScreenHeight];
     
-    _regionStaticLabel.font = _eircodeStaticLabel.font = _cityStaticLabel.font = _addressStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight];
+    _regionStaticLabel.font = _eircodeStaticLabel.font = _cityStaticLabel.font = _addressStaticLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(17.5/667)*kScreenHeight];
     
-    _firstNameTextField.font = _lastNameTextField.font = _phonetextField.font = _emailTextField.font = _eirCodeTextField.font = _addressTextField.font = _option1StaticLabel.font = _option2StaticLabel.font = _option3StaticLabel.font = _option4StaticLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight];
+    _firstNameTextField.font = _lastNameTextField.font = _phonetextField.font = _emailTextField.font = _eirCodeTextField.font = _addressTextField.font = _option1StaticLabel.font = _option2StaticLabel.font = _option3StaticLabel.font = _option4StaticLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(17.5/667)*kScreenHeight];
     
     _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
     
