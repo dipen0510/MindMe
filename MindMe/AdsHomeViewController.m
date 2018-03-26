@@ -857,10 +857,10 @@
     
     for (NSMutableDictionary* advertDict in advertsArr) {
         
-        if ([filterViewController.careTypeTextField.text isEqualToString:@"All"]) {
+        if ([_carerTypeTextField.text containsString:@"All"]) {
             [filteredAdvertsArr addObject:advertDict];
         }
-        else if ([[[advertDict valueForKey:@"care_type"] lowercaseString] isEqualToString:[filterViewController.careTypeTextField.text lowercaseString]]) {
+        else if ([[[advertDict valueForKey:@"care_type"] lowercaseString] isEqualToString:[_carerTypeTextField.text lowercaseString]]) {
             [filteredAdvertsArr addObject:advertDict];
         }
         
@@ -885,8 +885,8 @@
         
         for (NSMutableDictionary* advertDict in tmpAdvertsArr) {
             
-            float selectedMax = filterViewController.ageSlider.selectedMaximum;
-            float selectedMin = filterViewController.ageSlider.selectedMinimum;
+            float selectedMax = ceil(filterViewController.ageSlider.selectedMaximum);
+            float selectedMin = ceil(filterViewController.ageSlider.selectedMinimum);
             
             NSInteger userAge = [self ageFromYear:[advertDict valueForKey:@"birth_year"] Month:[advertDict valueForKey:@"birth_month"] day:[advertDict valueForKey:@"birth_day"]];
             
@@ -904,8 +904,8 @@
     
     for (NSMutableDictionary* advertDict in tmpAdvertsArr) {
         
-        float selectedMax = filterViewController.experienceSlider.selectedMaximum;
-        float selectedMin = filterViewController.experienceSlider.selectedMinimum;
+        int selectedMax = ceil(filterViewController.experienceSlider.selectedMaximum);
+        int selectedMin = ceil(filterViewController.experienceSlider.selectedMinimum);
         
         int userExp = [[advertDict valueForKey:@"experience"] intValue];
         

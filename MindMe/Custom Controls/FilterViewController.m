@@ -38,6 +38,14 @@
     _primaryApplyButton.layer.masksToBounds = NO;
     _primaryApplyButton.hidden = YES;
     
+//    NSNumberFormatter* numberFormat = [[NSNumberFormatter alloc] init];
+//    numberFormat.numberStyle = NSNumberFormatterDecimalStyle;
+//    numberFormat.maximumFractionDigits = 0;
+//    numberFormat.generatesDecimalNumbers = NO;
+//    
+//    _experienceSlider.numberFormatterOverride = numberFormat;
+//    _ageSlider.numberFormatterOverride = numberFormat;
+                                       
     [self.availabilityCollectionView registerNib:[UINib nibWithNibName:@"ProfileAvailabilityCollectionViewCell" bundle:nil]   forCellWithReuseIdentifier: @"ProfileAvailabilityCollectionViewCell"];
     
     caretypeArr = [NSArray arrayWithObjects:@"Childcare Qualifications", @"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Visa", @"Eu Passport", @"Reference", @"Driving Licence", @"Fetac Childcare Certification", @"Has Own Transport", nil];
