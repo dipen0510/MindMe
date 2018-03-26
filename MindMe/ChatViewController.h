@@ -13,11 +13,13 @@
     NSMutableArray* messagesArr;
     NSString* senderImgUrlStr;
     NSString* receiverImgUrlStr;
+    NSMutableDictionary* selectedAdvertDict;
 }
 
 @property BOOL isSentMessage;
 @property (strong, nonatomic) NSMutableDictionary* chatInfoDict;
 
 - (IBAction)backButtonTapped:(id)sender;
+- (IBAction)viewAdvertsButtonTapped:(id)sender;
 
 @end

@@ -99,6 +99,9 @@
                         <constraint firstAttribute="width" secondItem="jim-JC-3tj" secondAttribute="height" multiplier="109:31" id="zo3-0I-28P"/>
                     </constraints>
                     <state key="normal" image="view advert btn"/>
+                    <connections>
+                        <action selector="viewAdvertsButtonTapped:" destination="-1" eventType="touchUpInside" id="ZHB-04-VWw"/>
+                    </connections>
                 </button>
             </subviews>
             <constraints>

@@ -49,6 +49,8 @@
 #define GetAllConversations @"conversations/getAllMessagesInConversations"
 #define GetUnreadMessageCount @"conversations/total_count"
 
+#define GetSingleAdvertDetails @"advert/getDetailsOfSingleAdvert"
+
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"
 

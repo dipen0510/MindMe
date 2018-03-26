@@ -1053,6 +1053,12 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
     [alert show];
 }
 
+- (IBAction)viewAdvertsButtonTapped:(id)sender {
+    
+    
+    
+}
+
 -(void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex {
     
     if (buttonIndex == 1 && alertView.tag == 100) {

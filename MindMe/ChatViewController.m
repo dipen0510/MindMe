@@ -11,6 +11,7 @@
 #import "UIColor+QM.h"
 #import "UIImage+QM.h"
 #import "UIImage+fixOrientation.h"
+#import "AdsDetailViewController.h"
 
 @interface ChatViewController ()
 
@@ -418,6 +419,17 @@ NS_ENUM(NSUInteger, QMMessageType) {
     
 }
 
+- (void) startGetSingleAdvertDetailsService {
+    
+    [SVProgressHUD showWithStatus:@"Fetching details"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GetSingleAdvertDetails;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForGetSingleAdvertDetails]];
+    
+}
+
 
 #pragma mark - DATASYNCMANAGER Delegates
 
@@ -441,6 +453,27 @@ NS_ENUM(NSUInteger, QMMessageType) {
         
         [SVProgressHUD showSuccessWithStatus:@"Message sent successfully"];
         [self startGetMessageService];
+        
+    }
+    
+    if ([requestServiceKey isEqualToString:GetSingleAdvertDetails]) {
+        
+        [SVProgressHUD showSuccessWithStatus:@"Details fetched successfully"];
+        
+        if (((NSMutableArray *)[responseData valueForKey:@"message"]).count>0) {
+            selectedAdvertDict = [[NSMutableDictionary alloc] initWithDictionary:[[responseData valueForKey:@"message"] objectAtIndex:0]];
+            
+            if ([[SharedClass sharedInstance] isUserCarer]) {
+                [self performSegueWithIdentifier:@"showAdsDetailSegue" sender:nil];
+            }
+            else {
+                [self performSegueWithIdentifier:@"showParentAdsDetailSegue" sender:nil];
+            }
+        }
+        else {
+            [SVProgressHUD showErrorWithStatus:@"No details found."];
+        }
+        
         
     }
     
@@ -564,6 +597,31 @@ NS_ENUM(NSUInteger, QMMessageType) {
     
 }
 
+- (NSMutableDictionary *) prepareDictionaryForGetSingleAdvertDetails {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+        
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+        
+    }
+    
+    if (_isSentMessage) {
+        [dict setObject:[_chatInfoDict valueForKey:@"refer_id"] forKey:@"ad_id"];
+    }
+    else {
+        [dict setObject:[_chatInfoDict valueForKey:@"sender_profile_id"] forKey:@"ad_id"];
+    }
+    
+    
+    return dict;
+    
+}
+
 - (void) setupMessageDataSource {
     
     [self.chatDataSource deleteMessages:[self.chatDataSource allMessages]];
@@ -589,6 +647,29 @@ NS_ENUM(NSUInteger, QMMessageType) {
                 }
             }
         }
+        
+    }
+    
+}
+
+
+- (IBAction)viewAdvertsButtonTapped:(id)sender {
+    
+    [self startGetSingleAdvertDetailsService];
+    
+}
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"showAdsDetailSegue"] || [segue.identifier isEqualToString:@"showParentAdsDetailSegue"]) {
+        
+        AdsDetailViewController* controller = (AdsDetailViewController *)[segue destinationViewController];
+        controller.advertDict = selectedAdvertDict;
         
     }
     

@@ -268,6 +268,7 @@
 - (void)hideKeyboard:(BOOL)animated;
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)blockButtonTapped:(id)sender;
+- (IBAction)viewAdvertsButtonTapped:(id)sender;
 
 #pragma mark - Methods requiring super
 
