@@ -23,8 +23,8 @@
     _profileImgView.layer.cornerRadius = _profileImgView.frame.size.height/2.;
     _profileImgView.layer.masksToBounds = YES;
     
-    _titleLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
-    _descriptionLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight];
+    _titleLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17.5/667)*kScreenHeight];
+    _descriptionLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(17.5/667)*kScreenHeight];
     _dateLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(15./667)*kScreenHeight];
     
 }

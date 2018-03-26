@@ -110,11 +110,11 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    if ([self height:[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"address1"]] > 25) {
-        return (280./568)*kScreenHeight;
+    if ([self height:[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"address1"]] > 23) {
+        return (260./568)*kScreenHeight;
     }
     else {
-        return (240./568)*kScreenHeight;
+        return (220./568)*kScreenHeight;
     }
     
 }
@@ -125,15 +125,15 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.profileImgView.layer.cornerRadius = (39.25/568.)*kScreenHeight;
+    cell.profileImgView.layer.cornerRadius = (36.5/568.)*kScreenHeight;
     cell.profileImgView.layer.masksToBounds = YES;
     
     cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
     cell.locationLabel.text = [NSString stringWithFormat:@"%d km Away",[[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"distance"] intValue]];
     cell.addressLabel.text = [[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"address1"];
     
-    if ([self height:cell.addressLabel.text] <= 20) {
-        cell.profileImgView.layer.cornerRadius = (30/568.)*kScreenHeight;
+    if ([self height:cell.addressLabel.text] <= 23) {
+        cell.profileImgView.layer.cornerRadius = (30.75/568.)*kScreenHeight;
     }
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
@@ -313,7 +313,7 @@
     NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:string
                                                                          attributes:@
                                           {
-                                          NSFontAttributeName: [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight]
+                                          NSFontAttributeName: [UIFont fontWithName:@"Montserrat-Regular" size:(17.5/667)*kScreenHeight]
                                           }];
     
     

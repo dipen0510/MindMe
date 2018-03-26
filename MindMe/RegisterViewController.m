@@ -38,9 +38,9 @@
     [_findACaregiverStaticLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(careGiverButtonTapped:)]];
     [_findACarejobStaticLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(careNeededButtonTapped:)]];
     
-    _findACarejobStaticLabel.font =  _findACaregiverStaticLabel.font = _orStaticLabel.font = _fbButton.titleLabel.font = _signInLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(20./667)*kScreenHeight];
+    _findACarejobStaticLabel.font =  _findACaregiverStaticLabel.font = _orStaticLabel.font = _fbButton.titleLabel.font = _signInLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(17.5/667)*kScreenHeight];
     
-    _emailTextField.font = _passwordTextField.font = _firstNameTextField.font = _lastNameTextField.font = _alreadyHaveAccountStaticLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(20./667)*kScreenHeight];
+    _emailTextField.font = _passwordTextField.font = _firstNameTextField.font = _lastNameTextField.font = _alreadyHaveAccountStaticLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(17.5/667)*kScreenHeight];
     
     _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
     

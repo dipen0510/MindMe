@@ -64,7 +64,7 @@
     _locationContainerView.layer.shadowOpacity = 0.2f;
     _locationContainerView.layer.shadowRadius = 3.5;
     
-    _carerTypeTextField.font = _addressTextField.font = [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight];
+    _carerTypeTextField.font = _addressTextField.font = [UIFont fontWithName:@"Montserrat-Regular" size:(17.5/667)*kScreenHeight];
     
 //    if ([[SharedClass sharedInstance] isFeaturedFilterApplied] || [[SharedClass sharedInstance] isLastMinuiteCareFilterApplied]) {
 //        _advertTblViewTopConstraint.constant = 0.0;
@@ -265,11 +265,11 @@
         return 30.0;
     }
     
-    if ([self height:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"]] > 25) {
-        return (280./568)*kScreenHeight;
+    if ([self height:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"]] > 23) {
+        return (260./568)*kScreenHeight;
     }
     else {
-        return (240./568)*kScreenHeight;
+        return (220./568)*kScreenHeight;
     }
     
     
@@ -296,15 +296,15 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.profileImgView.layer.cornerRadius = (39.25/568.)*kScreenHeight;
+    cell.profileImgView.layer.cornerRadius = (36.5/568.)*kScreenHeight;
     cell.profileImgView.layer.masksToBounds = YES;
     
     cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
     cell.locationLabel.text = [NSString stringWithFormat:@"%d km Away",[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"distance"] intValue]];
     cell.addressLabel.text = [[SharedClass sharedInstance] filterNumbersAndPostCodeFromAddressString:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"]];
     
-    if ([self height:cell.addressLabel.text] <= 25) {
-        cell.profileImgView.layer.cornerRadius = (30/568.)*kScreenHeight;
+    if ([self height:cell.addressLabel.text] <= 23) {
+        cell.profileImgView.layer.cornerRadius = (30.75/568.)*kScreenHeight;
     }
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
@@ -323,7 +323,7 @@
     
     
     cell.descLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"about_you"];
-    cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ Years of Experience",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
+    cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ Years Experience",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
     
     
     if ([[SharedClass sharedInstance] isFeaturedFilterApplied] || [[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"Sub_active"] intValue] == 1) {
@@ -1072,7 +1072,7 @@
     NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:string
                                                                          attributes:@
                                           {
-                                          NSFontAttributeName: [UIFont fontWithName:@"Montserrat-Regular" size:(20./667)*kScreenHeight]
+                                          NSFontAttributeName: [UIFont fontWithName:@"Montserrat-Regular" size:(17.5/667)*kScreenHeight]
                                           }];
     
     
