@@ -347,6 +347,7 @@
         _primaryApplyButton.hidden = YES;
         _availabilityStaticLabel.hidden = NO;
         _availabilitySeparatorView.hidden = NO;
+        _availabilityCollectionView.hidden = NO;
         [_refineSearchButton setBackgroundImage:[UIImage imageNamed:@"refine_your_search2_btn"] forState:UIControlStateNormal];
         
     }
@@ -356,6 +357,7 @@
         _primaryApplyButton.hidden = NO;
         _availabilityStaticLabel.hidden = YES;
         _availabilitySeparatorView.hidden = YES;
+        _availabilityCollectionView.hidden = YES;
         [_refineSearchButton setBackgroundImage:[UIImage imageNamed:@"refine_your_search_btn"] forState:UIControlStateNormal];
         
     }
