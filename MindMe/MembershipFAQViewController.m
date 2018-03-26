@@ -9,6 +9,7 @@
 #import "MembershipFAQViewController.h"
 #import "FAQSectionView.h"
 #import "FAQTableViewCell.h"
+#import "MembershipDeleteAccountTableViewCell.h"
 
 @interface MembershipFAQViewController ()<STCollapseTableViewDelegate> {
     int sectionHeight;
@@ -83,6 +84,13 @@
         
     }
     
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetailsCopy"];
+    NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
+    
+    if ([[responseData valueForKey:@"Sub_active"] intValue] == 1) {
+        [self startDowngradeAccountService];
+    }
+    
     
     
 }
@@ -127,12 +135,62 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
+    if (section == sectionArr.count-1) {
+        return ((NSMutableArray *)[faqArr objectAtIndex:section]).count + 1;
+    }
+    
     return ((NSMutableArray *)[faqArr objectAtIndex:section]).count;
     
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if ((indexPath.section == sectionArr.count-1) && (indexPath.row == ((NSMutableArray *)[faqArr objectAtIndex:indexPath.section]).count)) {
+        
+        static NSString *CellIdentifier = @"MembershipDeleteAccountTableViewCell";
+        MembershipDeleteAccountTableViewCell *cell = (MembershipDeleteAccountTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        
+        if (cell == nil) {
+            // Load the top-level objects from the custom cell XIB.
+            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"MembershipDeleteAccountTableViewCell" owner:self options:nil];
+            // Grab a pointer to the first object (presumably the custom cell, as that's all the XIB should contain).
+            cell = [topLevelObjects objectAtIndex:0];
+        }
+        
+        
+        NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetailsCopy"];
+        NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
+        
+        if ([[responseData valueForKey:@"Sub_active"] intValue] == 1) {
+            
+            if (isSubscriptionCancelled) {
+                cell.deactivateButton.hidden = YES;
+                cell.subscriptionLabel.hidden = NO;
+            }
+            else {
+                cell.deactivateButton.hidden = NO;
+                cell.subscriptionLabel.hidden = YES;
+            }
+            
+            [cell.deactivateButton addTarget:self action:@selector(deactivateSubscriptionButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+            
+        }
+        else {
+            
+            [cell.deactivateButton setTitle:@"Delete Account" forState:UIControlStateNormal];
+            cell.deactivateButton.hidden = NO;
+            cell.subscriptionLabel.hidden = YES;
+            
+            [cell.deactivateButton addTarget:self action:@selector(deleteAccountButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+            
+        }
+        
+        
+        
+        return cell;
+        
+    }
     
     static NSString *CellIdentifier = @"FAQTableViewCell";
     FAQTableViewCell *cell = (FAQTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -207,6 +265,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    if ((indexPath.section == sectionArr.count-1) && (indexPath.row == ((NSMutableArray *)[faqArr objectAtIndex:indexPath.section]).count)) {
+        
+        return 90;
+        
+    }
     
     return ([self getLabelHeight:[[[faqArr objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] valueForKey:@"ans"]] + [self getHeaderLabelHeight:[[[faqArr objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] valueForKey:@"ques"]] + 37.);
     
@@ -285,6 +349,135 @@
     size = CGSizeMake(ceil(boundingBox.width), ceil(boundingBox.height));
     
     return size.height;
+}
+
+- (void) deactivateSubscriptionButtonTapped {
+    
+    
+    
+}
+
+- (void) deleteAccountButtonTapped {
+    
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:@"Are you sure you want to deactivate this account?" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+    [alert show];
+    
+}
+
+
+#pragma mark - API Helpers
+
+- (void) startDowngradeAccountService {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = DowngradeAccount;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForDowngradeAccount]];
+    
+}
+
+- (void) startDeleteAccountService {
+    
+    [SVProgressHUD showWithStatus:@"Deactivating account..."];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = DeleteAccount;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForDowngradeAccount]];
+    
+}
+
+#pragma mark - DATASYNCMANAGER Delegates
+
+-(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
+    
+    if ([requestServiceKey isEqualToString:DowngradeAccount]) {
+        
+        NSMutableArray* tmpArr = (NSMutableArray *)[responseData valueForKey:@"message"];
+        if (tmpArr.count == 0) {
+            isSubscriptionCancelled = NO;
+        }
+        else {
+            isSubscriptionCancelled = YES;
+        }
+        
+        [_faqTableView reloadData];
+        
+    }
+    if ([requestServiceKey isEqualToString:DeleteAccount]) {
+        
+        [SVProgressHUD showSuccessWithStatus:@"Account deactivated successfully."];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Userid"];
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"token"];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isUserCarer"];
+        [[SharedClass sharedInstance] setIsFeaturedFilterApplied:NO];
+        [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
+        [[SharedClass sharedInstance] setUserId:nil];
+        [[SharedClass sharedInstance] setAuthorizationKey:nil];
+        [[SharedClass sharedInstance] setIsUserCarer:NO];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isEditProfileMenuButtonHidden"];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isProfileUpdated"];
+        
+        [self.sideMenuController.navigationController popToRootViewControllerAnimated:YES];
+        
+    }
+    
+    
+}
+
+
+- (void) didFinishServiceWithFailure:(NSString *)errorMsg {
+    
+    
+    [SVProgressHUD dismiss];
+    
+    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:nil
+                                                  message:NSLocalizedString(@"An issue occured while processing your request. Please try again later.", nil)
+                                                 delegate:self
+                                        cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                        otherButtonTitles: nil];
+    
+    if (![errorMsg isEqualToString:@""]) {
+        [alert setMessage:errorMsg];
+    }
+    
+    if ([errorMsg isEqualToString:NSLocalizedString(@"Verify your internet connection and try again", nil)]) {
+        [alert setTitle:NSLocalizedString(@"Connection unsuccessful", nil)];
+    }
+    
+    [alert show];
+    
+    return;
+    
+}
+
+
+
+
+#pragma mark - Modalobject
+
+- (NSMutableDictionary *) prepareDictionaryForDowngradeAccount {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    return dict;
+    
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 1) {
+        [self startDeleteAccountService];
+    }
+    
 }
 
 @end

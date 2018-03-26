@@ -169,6 +169,8 @@
 		D43143CA1F98E02B00FE0406 /* VisbyRoundCF-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C21F98E02B00FE0406 /* VisbyRoundCF-ExtraLight.otf */; };
 		D43143CB1F98E02B00FE0406 /* VisbyRoundCF-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C31F98E02B00FE0406 /* VisbyRoundCF-Regular.otf */; };
 		D43143CC1F98E02B00FE0406 /* VisbyRoundCF-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D43143C41F98E02B00FE0406 /* VisbyRoundCF-Bold.otf */; };
+		D43AA5FC2069082300B33815 /* MembershipDeleteAccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D43AA5FA2069082300B33815 /* MembershipDeleteAccountTableViewCell.m */; };
+		D43AA5FD2069082300B33815 /* MembershipDeleteAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D43AA5FB2069082300B33815 /* MembershipDeleteAccountTableViewCell.xib */; };
 		D43EE8CE1FB30AF100BE7E08 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43EE8CD1FB30AF100BE7E08 /* ContactUsViewController.m */; };
 		D45B85321FE4E70600074689 /* DataSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D45B85311FE4E70600074689 /* DataSyncManager.m */; };
 		D46D63C5204BF07700BB69C7 /* ChatStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D46D63C4204BF07700BB69C7 /* ChatStartViewController.m */; };
@@ -561,6 +563,9 @@
 		D43143C21F98E02B00FE0406 /* VisbyRoundCF-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-ExtraLight.otf"; sourceTree = "<group>"; };
 		D43143C31F98E02B00FE0406 /* VisbyRoundCF-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-Regular.otf"; sourceTree = "<group>"; };
 		D43143C41F98E02B00FE0406 /* VisbyRoundCF-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VisbyRoundCF-Bold.otf"; sourceTree = "<group>"; };
+		D43AA5F92069082300B33815 /* MembershipDeleteAccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MembershipDeleteAccountTableViewCell.h; sourceTree = "<group>"; };
+		D43AA5FA2069082300B33815 /* MembershipDeleteAccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MembershipDeleteAccountTableViewCell.m; sourceTree = "<group>"; };
+		D43AA5FB2069082300B33815 /* MembershipDeleteAccountTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembershipDeleteAccountTableViewCell.xib; sourceTree = "<group>"; };
 		D43EE8CC1FB30AF100BE7E08 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
 		D43EE8CD1FB30AF100BE7E08 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
 		D45B85301FE4E70600074689 /* DataSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSyncManager.h; sourceTree = "<group>"; };
@@ -1734,6 +1739,9 @@
 				D415CB1220519C1C005866C6 /* ChatListTableViewCell.h */,
 				D415CB1320519C1C005866C6 /* ChatListTableViewCell.m */,
 				D415CB1420519C1C005866C6 /* ChatListTableViewCell.xib */,
+				D43AA5F92069082300B33815 /* MembershipDeleteAccountTableViewCell.h */,
+				D43AA5FA2069082300B33815 /* MembershipDeleteAccountTableViewCell.m */,
+				D43AA5FB2069082300B33815 /* MembershipDeleteAccountTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1898,6 +1906,7 @@
 				D4041BDA1FC0DEF5001F312E /* video-thumbnail.png in Resources */,
 				D4041BE01FC0DEF5001F312E /* cancel_icon.png in Resources */,
 				D4041BF81FC0DEF5001F312E /* QMAudioIncomingCell.xib in Resources */,
+				D43AA5FD2069082300B33815 /* MembershipDeleteAccountTableViewCell.xib in Resources */,
 				D4A019C41F850F0200E311B7 /* LaunchScreen.storyboard in Resources */,
 				D4041C181FC0DEF5001F312E /* QMAudioRecordView.xib in Resources */,
 				D43143CB1F98E02B00FE0406 /* VisbyRoundCF-Regular.otf in Resources */,
@@ -2121,6 +2130,7 @@
 				D4041C1C1FC0DEF5001F312E /* QMCollectionViewFlowLayoutInvalidationContext.m in Sources */,
 				D4041BD11FC0DEF5001F312E /* QMChatViewController.m in Sources */,
 				D4041BFC1FC0DEF5001F312E /* QMVideoIncomingCell.m in Sources */,
+				D43AA5FC2069082300B33815 /* MembershipDeleteAccountTableViewCell.m in Sources */,
 				D41B6AB01FDAC3A400E1F312 /* SWActionSheet.m in Sources */,
 				D4041C1E1FC0DEF5001F312E /* QMChatCollectionView.m in Sources */,
 				D4041C6D1FC0E157001F312E /* SDWebImageCompat.m in Sources */,

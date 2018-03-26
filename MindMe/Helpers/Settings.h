@@ -50,6 +50,8 @@
 #define GetUnreadMessageCount @"conversations/total_count"
 
 #define GetSingleAdvertDetails @"advert/getDetailsOfSingleAdvert"
+#define DowngradeAccount @"auth/downgradeRequest"
+#define DeleteAccount @"auth/accountDeactivate"
 
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"

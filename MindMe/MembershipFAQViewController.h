@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "STCollapseTableView.h"
 
-@interface MembershipFAQViewController : UIViewController {
+@interface MembershipFAQViewController : UIViewController <DataSyncManagerDelegate, UIAlertViewDelegate> {
     NSArray *menuItemsArray;
     NSMutableArray* sectionArr;
     NSMutableArray* faqArr;
     NSInteger lastOpenedIndex;
+    
+    BOOL isSubscriptionCancelled;
+    
 }
 
 
