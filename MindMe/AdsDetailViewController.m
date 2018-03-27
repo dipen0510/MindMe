@@ -111,6 +111,11 @@
         _cvStaticLabel.hidden = YES;
         _cvValueLabel.hidden = YES;
         
+        _genderStaticLabel.hidden = YES;
+        _genderValueLabel.hidden = YES;
+        
+        _genderSeparatorViewTopConstraint.constant = -50.;
+        
         _ageLabel.hidden = YES;
         _locationTopConstraint.constant = -15;
     
