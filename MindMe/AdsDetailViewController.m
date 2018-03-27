@@ -83,6 +83,9 @@
         [_doneButton setBackgroundImage:[UIImage imageNamed:@"like_btn"] forState:UIControlStateNormal];
         [_cancelButton setBackgroundImage:[UIImage imageNamed:@"review_btn"] forState:UIControlStateNormal];
         _doneButtonHeightConstraint.constant = (([UIScreen mainScreen].bounds.size.width - 84)/2.) * (47./180.);
+        
+        _ageLabel.text = [NSString stringWithFormat:@"%ld Years Old",[self ageFromYear:[_advertDict valueForKey:@"birth_year"] Month:[_advertDict valueForKey:@"birth_month"] day:[_advertDict valueForKey:@"birth_day"]]];
+        
         [self startIncrementAdvertsViewService];
     }
     else {
@@ -1685,6 +1688,22 @@
             break;
     }
     
+}
+
+- (NSInteger)ageFromYear:(NSString *)year Month:(NSString *)month day:(NSString *)day {
+    
+    NSString* dobStr = [NSString stringWithFormat:@"%@/%@/%@",day,month,year];
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"dd/MM/yyyy";
+    NSDate* userDoB = [dateFormatter dateFromString:dobStr];
+    
+    NSDate *today = [NSDate date];
+    NSDateComponents *ageComponents = [[NSCalendar currentCalendar]
+                                       components:NSCalendarUnitYear
+                                       fromDate:userDoB
+                                       toDate:today
+                                       options:0];
+    return ageComponents.year;
 }
 
 @end
