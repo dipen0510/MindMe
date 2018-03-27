@@ -145,7 +145,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTV-km-ppo">
-                                <rect key="frame" x="192" y="458.5" width="26.5" height="21"/>
+                                <rect key="frame" x="191.5" y="458.5" width="26.5" height="21"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -326,7 +326,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caV-wn-xkl">
-                                <rect key="frame" x="174.5" y="454" width="26.5" height="21"/>
+                                <rect key="frame" x="175" y="454" width="26.5" height="21"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -492,7 +492,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a Caregiver" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x16-Aa-ugF">
-                                <rect key="frame" x="57" y="319" width="124.5" height="41.5"/>
+                                <rect key="frame" x="57" y="319.5" width="124.5" height="41.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -510,7 +510,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a Care Job" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzO-UG-Bef">
-                                <rect key="frame" x="226.5" y="319" width="124.5" height="41.5"/>
+                                <rect key="frame" x="226.5" y="319.5" width="124.5" height="41.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -528,7 +528,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCh-dc-usd">
-                                <rect key="frame" x="183.5" y="368.5" width="8" height="99"/>
+                                <rect key="frame" x="183.5" y="369" width="8" height="99"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="8" id="Roq-5r-44V"/>
@@ -536,7 +536,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="18" y="540" width="340" height="41.5"/>
+                                <rect key="frame" x="18" y="540" width="340" height="40"/>
                                 <string key="text">By pressing Sign Up you agree with the
 Terms of Services and Privacy Policy</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
@@ -948,7 +948,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT US" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFY-5C-hrp">
-                                <rect key="frame" x="116" y="104" width="144" height="27"/>
+                                <rect key="frame" x="116.5" y="104" width="144" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1276,7 +1276,7 @@ Terms of Services and Privacy Policy</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ww-4y-1Ah">
-                                                <rect key="frame" x="12.5" y="42" width="68" height="17"/>
+                                                <rect key="frame" x="13" y="42" width="68" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="rxY-q5-pQh"/>
                                                 </constraints>
@@ -1304,7 +1304,7 @@ Terms of Services and Privacy Policy</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JC3-UU-uad">
-                                                <rect key="frame" x="17" y="42" width="60" height="17"/>
+                                                <rect key="frame" x="17.5" y="42" width="60" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="XkB-lh-fsK"/>
                                                 </constraints>
@@ -1380,7 +1380,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGz-03-WTZ">
-                                <rect key="frame" x="27" y="281.5" width="320" height="104"/>
+                                <rect key="frame" x="27" y="282" width="320" height="104"/>
                                 <string key="text">We are sorry but there are no Adverts currently in your area that match with you preferences. Kindly change your preferences or check back again later !</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1565,7 +1565,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIKED CARE PROVIDERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuX-6v-qTx">
-                                <rect key="frame" x="50" y="104" width="275.5" height="27"/>
+                                <rect key="frame" x="50.5" y="104" width="275.5" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1654,7 +1654,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADVERT CONTROL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2t-34-g3B">
-                                <rect key="frame" x="83.5" y="104" width="209" height="27"/>
+                                <rect key="frame" x="84" y="104" width="209" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1754,13 +1754,13 @@ Terms of Services and Privacy Policy</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bN-du-Xne">
-                                <rect key="frame" x="249.5" y="239" width="109" height="20.5"/>
+                                <rect key="frame" x="249.5" y="239" width="109" height="20"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62e-1e-0b2">
-                                <rect key="frame" x="133" y="236.5" width="109" height="20.5"/>
+                                <rect key="frame" x="133" y="236.5" width="109" height="20"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2091,7 +2091,7 @@ Terms of Services and Privacy Policy</string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR INFORMATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDf-IA-FMl">
-                                        <rect key="frame" x="71" y="20" width="233" height="27"/>
+                                        <rect key="frame" x="71.5" y="20" width="233" height="27"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                         <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2140,13 +2140,13 @@ Terms of Services and Privacy Policy</string>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oZs-hu-QgD">
-                                        <rect key="frame" x="37" y="458.5" width="152.5" height="19"/>
+                                        <rect key="frame" x="37" y="458" width="152.5" height="19"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select your Primary languages" placeholder="Email" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="23c-jw-3Ze">
-                                        <rect key="frame" x="37" y="530.5" width="263" height="21"/>
+                                        <rect key="frame" x="37" y="530" width="263" height="21"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -2168,7 +2168,7 @@ Terms of Services and Privacy Policy</string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Required Occasionally" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="x7Y-Bn-Q34">
-                                        <rect key="frame" x="228" y="393" width="131" height="41.5"/>
+                                        <rect key="frame" x="228" y="392.5" width="131" height="41.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                         <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2188,7 +2188,7 @@ Terms of Services and Privacy Policy</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Required Regularly" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruJ-pK-iig">
-                                        <rect key="frame" x="63" y="393" width="131" height="41.5"/>
+                                        <rect key="frame" x="63" y="392.5" width="131" height="41.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                         <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2208,7 +2208,7 @@ Terms of Services and Privacy Policy</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8A-YW-EDC">
-                                        <rect key="frame" x="343" y="469.5" width="20" height="20"/>
+                                        <rect key="frame" x="343" y="468.5" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="V0c-vi-5jS"/>
                                             <constraint firstAttribute="width" constant="20" id="phT-1z-gOO"/>
@@ -2219,7 +2219,7 @@ Terms of Services and Privacy Policy</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UV8-zN-Dih">
-                                        <rect key="frame" x="197.5" y="469.5" width="20" height="20"/>
+                                        <rect key="frame" x="197.5" y="468.5" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Pdp-fC-zyi"/>
                                             <constraint firstAttribute="width" constant="20" id="pEq-Gy-DL8"/>
@@ -2230,20 +2230,20 @@ Terms of Services and Privacy Policy</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 years" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcV-eK-Ukh">
-                                        <rect key="frame" x="221.5" y="469.5" width="117.5" height="21"/>
+                                        <rect key="frame" x="221.5" y="468.5" width="117.5" height="21"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                         <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLb-sQ-NIG">
-                                        <rect key="frame" x="37" y="509.5" width="338" height="1"/>
+                                        <rect key="frame" x="37" y="509" width="338" height="1"/>
                                         <color key="backgroundColor" red="0.89390325550000005" green="0.89803808929999995" blue="0.90205961469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="fNH-La-0Dr"/>
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0CI-vT-ijd">
-                                        <rect key="frame" x="37" y="567.5" width="270" height="44"/>
+                                        <rect key="frame" x="37" y="567" width="270" height="44"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="dWr-Qe-5Ec"/>
@@ -2270,7 +2270,7 @@ Terms of Services and Privacy Policy</string>
                                         </connections>
                                     </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHm-jB-bXu">
-                                        <rect key="frame" x="315" y="575.5" width="36" height="32"/>
+                                        <rect key="frame" x="315" y="575" width="36" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="OHm-jB-bXu" secondAttribute="height" multiplier="9:8" id="C2l-4w-3qy"/>
                                             <constraint firstAttribute="height" constant="32" id="Xl7-hI-Hv9"/>
@@ -2282,14 +2282,14 @@ Terms of Services and Privacy Policy</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P8O-1D-0yu">
-                                        <rect key="frame" x="37" y="627.5" width="338" height="1"/>
+                                        <rect key="frame" x="37" y="627" width="338" height="1"/>
                                         <color key="backgroundColor" red="0.89390325550000005" green="0.89803808929999995" blue="0.90205961469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="q1e-Hx-pnL"/>
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jZY-I1-I64">
-                                        <rect key="frame" x="19" y="648.5" width="356" height="120"/>
+                                        <rect key="frame" x="19" y="648" width="356" height="120"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="LDa-SN-HrG"/>
@@ -2316,7 +2316,7 @@ Terms of Services and Privacy Policy</string>
                                         </connections>
                                     </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZP-gF-Ve0">
-                                        <rect key="frame" x="197.5" y="793.5" width="140.5" height="35"/>
+                                        <rect key="frame" x="197.5" y="793" width="140.5" height="35"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" red="0.33709710840000001" green="0.34114208820000003" blue="0.34525841470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2326,7 +2326,7 @@ Terms of Services and Privacy Policy</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sj3-4g-Bad">
-                                        <rect key="frame" x="37" y="793.5" width="140.5" height="35"/>
+                                        <rect key="frame" x="37" y="793" width="140.5" height="35"/>
                                         <color key="backgroundColor" red="0.97184199090000001" green="0.63312035799999999" blue="0.35435462000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="a9D-H0-x1c"/>
@@ -2354,7 +2354,7 @@ Terms of Services and Privacy Policy</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of years experience" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13D-ep-gVs">
-                                        <rect key="frame" x="37" y="458.5" width="146" height="41.5"/>
+                                        <rect key="frame" x="37" y="458" width="146" height="41.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -3530,7 +3530,7 @@ our Android App from the Google Play Store</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHo-L4-otW">
-                                <rect key="frame" x="81.5" y="374" width="212.5" height="61"/>
+                                <rect key="frame" x="82" y="374" width="212.5" height="61"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">YOUR CV IS UNDER
@@ -3732,7 +3732,7 @@ APPROVAL</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIVACY POLICY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhV-SY-4Fw">
-                                <rect key="frame" x="94.5" y="104" width="187" height="27"/>
+                                <rect key="frame" x="95" y="104" width="187" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -3749,7 +3749,7 @@ APPROVAL</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <mutableString key="content">MindMe.ie complies with the principles of the Data Protection Act 1998 when dealing with all data received from visitors to the site. We only hold the data necessary to offer services provided on our website namely to allow users of the service to buy and sell and also message one another. We also keep user data to allow us to contact you in the advent of account withdrawal or new passwords being provided.
+                                        <string key="content">MindMe.ie complies with the principles of the Data Protection Act 1998 when dealing with all data received from visitors to the site. We only hold the data necessary to offer services provided on our website namely to allow users of the service to buy and sell and also message one another. We also keep user data to allow us to contact you in the advent of account withdrawal or new passwords being provided.
 
 We only hold personal data for as long as necessary. Once data is no longer needed it is deleted from our files. If you delete your account then all your personal data will be deleted too.
 
@@ -3759,7 +3759,7 @@ We never sell, rent or exchange mailing lists.
 We may however share commercial and technical data with our partners where a customer has accessed and used our website. This data would not be personal data but would be anonymised In accordance with the Privacy and Electronic Communications (EC Directive) Regulations 2003, we never send bulk unsolicited emails, (popularly known as Spam) to email addresses.
 
 We may send emails to existing customers or prospective customers who have enquired or registered with us, regarding products or services directly provided by us.
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
@@ -6020,7 +6020,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD A REVIEW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHV-hO-kpM">
-                                <rect key="frame" x="101.5" y="104" width="172" height="27"/>
+                                <rect key="frame" x="102" y="104" width="172" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -6032,19 +6032,19 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews only - No Contact Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImO-Cp-K3c">
-                                <rect key="frame" x="41.5" y="210" width="293" height="21"/>
+                                <rect key="frame" x="42" y="210" width="293" height="21"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Rate Me :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kv6-xc-ycF">
-                                <rect key="frame" x="119" y="251" width="138.5" height="21"/>
+                                <rect key="frame" x="118.5" y="251" width="138.5" height="21"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review : Serpil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE5-W0-Tks">
-                                <rect key="frame" x="128" y="336.5" width="120.5" height="21"/>
+                                <rect key="frame" x="127.5" y="336.5" width="120.5" height="21"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -6105,7 +6105,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nz-fb-13t">
-                                <rect key="frame" x="153" y="430.5" width="69.5" height="21"/>
+                                <rect key="frame" x="153.5" y="430.5" width="69.5" height="21"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -6445,7 +6445,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANGE PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uO1-Nc-ncy">
-                                <rect key="frame" x="70" y="51" width="236" height="27"/>
+                                <rect key="frame" x="70.5" y="51" width="236" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -6563,7 +6563,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TERMS &amp; CONDITIONS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6H4-BP-R0h">
-                                <rect key="frame" x="63" y="104" width="249.5" height="27"/>
+                                <rect key="frame" x="63.5" y="104" width="249.5" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -6630,7 +6630,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">http://www.SeniorAndElderlyCare.ie.acts as an online portal to introduce Care Seeker or Care providers to each other. When you enter into a contract for the supply of services and/or any goods with a Care Seeker or a Care Provider advertised on our site, the contract will be between the Care Seeker and the Care Provider.</mutableString>
+                                        <string key="content">http://www.SeniorAndElderlyCare.ie.acts as an online portal to introduce Care Seeker or Care providers to each other. When you enter into a contract for the supply of services and/or any goods with a Care Seeker or a Care Provider advertised on our site, the contract will be between the Care Seeker and the Care Provider.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -6683,7 +6683,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">2.1 You need to register with us as a member (Member) in order to participate in the Services. A Member can be a care Provider (a person or organisation offering babysitting, elderly care, pet care, childminding, nanny care, nursery, private tutoring, midwifery or maternity nursing services) or a Care Seeker. Care Providers can advertise their services via our site and Care Seekers can search directories on our site to find a local Care Provider. </mutableString>
+                                        <string key="content">2.1 You need to register with us as a member (Member) in order to participate in the Services. A Member can be a care Provider (a person or organisation offering babysitting, elderly care, pet care, childminding, nanny care, nursery, private tutoring, midwifery or maternity nursing services) or a Care Seeker. Care Providers can advertise their services via our site and Care Seekers can search directories on our site to find a local Care Provider. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -6707,7 +6707,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">2.2 Our site and our Services are only intended for use by people resident in the Republic Of Ireland and Northern Ireland and are not available to persons outside the these jurisdictions. By applying to be a Member, you warrant that you are based in the Republic Of Ireland or Northern Ireland and you are at least 18 years old. You agree that you will not create multiple accounts with us. We do not accept applications from care agencies without prior consent. </mutableString>
+                                        <string key="content">2.2 Our site and our Services are only intended for use by people resident in the Republic Of Ireland and Northern Ireland and are not available to persons outside the these jurisdictions. By applying to be a Member, you warrant that you are based in the Republic Of Ireland or Northern Ireland and you are at least 18 years old. You agree that you will not create multiple accounts with us. We do not accept applications from care agencies without prior consent. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -6803,7 +6803,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">2.6 If you choose to become a bronze, silver, gold or platinum member, your membership subscription will either be for a minimum duration of a one month period, three-month, six months or a twelve-month period. Your membership/subscription will automatically renew for successive periods of the same duration (that is, for a further month, three months, six months, or twelve months, as applicable) unless and until either party gives to the other not less than 7 days notice prior to the next renewal date that it does not wish to continue the subscription / membership and/or the contract between us is otherwise terminated in accordance with these Conditions. We reserve the right to suspend/terminate your membership earlier in accordance with the provisions of clause 13 below. </mutableString>
+                                        <string key="content">2.6 If you choose to become a bronze, silver, gold or platinum member, your membership subscription will either be for a minimum duration of a one month period, three-month, six months or a twelve-month period. Your membership/subscription will automatically renew for successive periods of the same duration (that is, for a further month, three months, six months, or twelve months, as applicable) unless and until either party gives to the other not less than 7 days notice prior to the next renewal date that it does not wish to continue the subscription / membership and/or the contract between us is otherwise terminated in accordance with these Conditions. We reserve the right to suspend/terminate your membership earlier in accordance with the provisions of clause 13 below. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -6827,7 +6827,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">2.7 Until we or you have given the not less than 7 days prior notice to terminate your subscription/ membership at or before the next renewal date, and/or the contract between us is otherwise terminated in accordance with these Conditions, you shall remain liable for the Membership Fee due on any automatic renewals at the then current rate. Subscriptions must be cancelled by you online via our contact us page. </mutableString>
+                                        <string key="content">2.7 Until we or you have given the not less than 7 days prior notice to terminate your subscription/ membership at or before the next renewal date, and/or the contract between us is otherwise terminated in accordance with these Conditions, you shall remain liable for the Membership Fee due on any automatic renewals at the then current rate. Subscriptions must be cancelled by you online via our contact us page. </string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -6874,7 +6874,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">2.9 Unlimited mail as referenced in our Gold membership plans refers to unlimited use of mail sent from Parents to caregivers in the normal interaction between Parent and Caregiver. Unlimited mail does not include bulk emailing whether personal or business. Bulk emailing is considered spam emailing and can result in account suspension.</mutableString>
+                                        <string key="content">2.9 Unlimited mail as referenced in our Gold membership plans refers to unlimited use of mail sent from Parents to caregivers in the normal interaction between Parent and Caregiver. Unlimited mail does not include bulk emailing whether personal or business. Bulk emailing is considered spam emailing and can result in account suspension.</string>
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -6926,7 +6926,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.offers various Services to help its users find, coordinate, and maintain quality care. The Services we offer include, among others: We enable individuals seeking care services (such as child care, senior care, special needs, pet care, tutoring and housekeeping services) and corporate care providers seeking individual care providers to hire (such as child centers, in-home care agencies, and senior living facilities) (each "Care Seekers") to post jobs on the Site, and we enable individuals and entities who provide care services ("Care Providers") to post profiles on the Site and apply to jobs. We provide search functionality on the Site to allow Care Seekers and individual Care Providers to narrow the pool of Care Seekers or Care Providers they are interested in meeting based on their needs and preferences, and we provide a communications platform that allows Care Seekers and Care Providers to communicate without sharing contact information. We may provide a directory of entity Care Providers such as child care centers, family child care centers, nanny agencies, au pairs agencies, summer camps, tutoring centers, in-home care agencies, senior care housing companies and housekeepers that users may contact or request information from. The Site enables Registered Users to communicate and share information with other Registered Users who share a common interest or bond. Our Services continue to grow and change. Please refer to our Site for further information about the Services we provide.  3.1. Limitations of our Services We offer a variety of Services to help our users find, coordinate, and maintain care for their families. However, we do not employ any Care Providers. Care Seekers are the potential employers of Care Providers and are responsible for compliance with all applicable employment and other laws in connection with any employment relationship they establish (such as applicable payroll, tax and minimum wage laws). We neither refer or recommend Care Seekers or Care Providers nor make any representations about the suitability, reliability, timeliness, and accuracy of the services provided by Care Providers or the integrity, responsibility or actions of Care Seekers or Care Providers whether in public, private or offline interactions. Care Seeker and Care Provider content is user generated, and we do not control or vet user generated content for accuracy. http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.does not assume any responsibility for the accuracy or reliability of any information provided by Care Providers or Care Seekers on or off these WebSites.  3.2. User Responsibilities Any screening of a Care Seeker or Care Provider and his, her or its information by http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.is limited and should not be taken as complete, accurate, up-to-date or conclusive of the individual's or entity's suitability as an employer or care provider. Registered Users are solely responsible for interviewing, performing background and reference checks on, verifying information provided by, and selecting an appropriate Care Seeker or Care Provider for themselves or their family. Each Care Seeker is responsible for complying with all applicable employment and other laws in connection with any employment relationship they establish, including verifying the age of the Care Provider they select as well as that Care Provider's eligibility to work in the Republic of Ireland.  3.3 We at http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.are not a party to the contractual relationship between the Care Seeker and Care provider (whether an oral, written or other contract). It is up to you to ensure that you are satisfied of the suitability of any engagement, to confirm the identity and the status of those involved and to check any credentials and we shall have no input or liability in that respect.  3.4 You acknowledge and agree that in making the site and any adverts or profiles placed by you available via the site we are not acting as an agent of any visitors to our website or as an agent of any Care seeker or Care provider  3.5 We do not assume any responsibility for services provided by or between Care seeker or Care provider or any other third party suppliers or any statements made by them and we make no representations or warranties, whether express or implied, about the suitability or quality of any services or goods which appear on our site or any statements made about them (including, but not limited to, any profiles or Care seeker' reviews of Care providers). In addition, we take no steps to verify the identity of any Care seeker or Care provider, any statement made about them or any relevant qualifications or experience.  3.6 We do not endorse any comments, opinions or reviews made by anyone on our site and we do not review their accuracy or content, but we reserve the right to remove any comments, opinions, reviews or other materials from our site which we believe do not comply with our acceptable use policy Without prejudice to the generality of the above:  (a) where you are a Care Provider, you will be solely responsible for the engagement of a Care Seeker on terms acceptable to you, for verification of its identity, qualifications, credentials and experience and for all necessary direction, supervision and control;  (b) Where you are a Care Provider, you acknowledge that we do not guarantee any recruitment or engagement of you by a Care Seeker and you must satisfy yourself of the suitability of any engagement and any arrangements between you.  3.7 We may also provide links on our site to the websites of other companies, whether affiliated with us or not. We cannot give any undertaking that products or services you purchase from third party sellers through our site, or from companies to whose website we have provided a link on our site, will be of satisfactory quality, and any such warranties are disclaimed by us absolutely. This disclaimer does not affect your statutory rights against the third party seller.  3.8 Nothing in these Conditions shall be deemed to constitute a partnership or an employment relationship between you and us, nor will anything be deemed to constitute one party the agent of the other for any purpose.  3.9 You shall indemnify us against all costs, claims, damages, losses and expenses arising as a result of any claim or action suffered by us in the event:  (a) That we are held to be acting as your agent in performing our obligations or any Services under these Conditions;  (b) Of any breach by you of these Conditions;  (c) Of any dispute between any Care seeker or Care provider.</mutableString>
+                                        <string key="content">http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.offers various Services to help its users find, coordinate, and maintain quality care. The Services we offer include, among others: We enable individuals seeking care services (such as child care, senior care, special needs, pet care, tutoring and housekeeping services) and corporate care providers seeking individual care providers to hire (such as child centers, in-home care agencies, and senior living facilities) (each "Care Seekers") to post jobs on the Site, and we enable individuals and entities who provide care services ("Care Providers") to post profiles on the Site and apply to jobs. We provide search functionality on the Site to allow Care Seekers and individual Care Providers to narrow the pool of Care Seekers or Care Providers they are interested in meeting based on their needs and preferences, and we provide a communications platform that allows Care Seekers and Care Providers to communicate without sharing contact information. We may provide a directory of entity Care Providers such as child care centers, family child care centers, nanny agencies, au pairs agencies, summer camps, tutoring centers, in-home care agencies, senior care housing companies and housekeepers that users may contact or request information from. The Site enables Registered Users to communicate and share information with other Registered Users who share a common interest or bond. Our Services continue to grow and change. Please refer to our Site for further information about the Services we provide.  3.1. Limitations of our Services We offer a variety of Services to help our users find, coordinate, and maintain care for their families. However, we do not employ any Care Providers. Care Seekers are the potential employers of Care Providers and are responsible for compliance with all applicable employment and other laws in connection with any employment relationship they establish (such as applicable payroll, tax and minimum wage laws). We neither refer or recommend Care Seekers or Care Providers nor make any representations about the suitability, reliability, timeliness, and accuracy of the services provided by Care Providers or the integrity, responsibility or actions of Care Seekers or Care Providers whether in public, private or offline interactions. Care Seeker and Care Provider content is user generated, and we do not control or vet user generated content for accuracy. http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.does not assume any responsibility for the accuracy or reliability of any information provided by Care Providers or Care Seekers on or off these WebSites.  3.2. User Responsibilities Any screening of a Care Seeker or Care Provider and his, her or its information by http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.is limited and should not be taken as complete, accurate, up-to-date or conclusive of the individual's or entity's suitability as an employer or care provider. Registered Users are solely responsible for interviewing, performing background and reference checks on, verifying information provided by, and selecting an appropriate Care Seeker or Care Provider for themselves or their family. Each Care Seeker is responsible for complying with all applicable employment and other laws in connection with any employment relationship they establish, including verifying the age of the Care Provider they select as well as that Care Provider's eligibility to work in the Republic of Ireland.  3.3 We at http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie.are not a party to the contractual relationship between the Care Seeker and Care provider (whether an oral, written or other contract). It is up to you to ensure that you are satisfied of the suitability of any engagement, to confirm the identity and the status of those involved and to check any credentials and we shall have no input or liability in that respect.  3.4 You acknowledge and agree that in making the site and any adverts or profiles placed by you available via the site we are not acting as an agent of any visitors to our website or as an agent of any Care seeker or Care provider  3.5 We do not assume any responsibility for services provided by or between Care seeker or Care provider or any other third party suppliers or any statements made by them and we make no representations or warranties, whether express or implied, about the suitability or quality of any services or goods which appear on our site or any statements made about them (including, but not limited to, any profiles or Care seeker' reviews of Care providers). In addition, we take no steps to verify the identity of any Care seeker or Care provider, any statement made about them or any relevant qualifications or experience.  3.6 We do not endorse any comments, opinions or reviews made by anyone on our site and we do not review their accuracy or content, but we reserve the right to remove any comments, opinions, reviews or other materials from our site which we believe do not comply with our acceptable use policy Without prejudice to the generality of the above:  (a) where you are a Care Provider, you will be solely responsible for the engagement of a Care Seeker on terms acceptable to you, for verification of its identity, qualifications, credentials and experience and for all necessary direction, supervision and control;  (b) Where you are a Care Provider, you acknowledge that we do not guarantee any recruitment or engagement of you by a Care Seeker and you must satisfy yourself of the suitability of any engagement and any arrangements between you.  3.7 We may also provide links on our site to the websites of other companies, whether affiliated with us or not. We cannot give any undertaking that products or services you purchase from third party sellers through our site, or from companies to whose website we have provided a link on our site, will be of satisfactory quality, and any such warranties are disclaimed by us absolutely. This disclaimer does not affect your statutory rights against the third party seller.  3.8 Nothing in these Conditions shall be deemed to constitute a partnership or an employment relationship between you and us, nor will anything be deemed to constitute one party the agent of the other for any purpose.  3.9 You shall indemnify us against all costs, claims, damages, losses and expenses arising as a result of any claim or action suffered by us in the event:  (a) That we are held to be acting as your agent in performing our obligations or any Services under these Conditions;  (b) Of any breach by you of these Conditions;  (c) Of any dispute between any Care seeker or Care provider.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -6977,7 +6977,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">4.1 Any rights regarding cancellation and refunds will be at our sole discretion and no such refunds will be given where you have breached these Conditions.  4.2 You are informed that you have a period of seven working days starting from the time of your first purchase on the Website to obtain a full refund of your purchase. However, this right is lost should you access and or use the element of the service you purchased. This right only applies to your first payment and not to subsequent auto-renewed subscriptions.</mutableString>
+                                        <string key="content">4.1 Any rights regarding cancellation and refunds will be at our sole discretion and no such refunds will be given where you have breached these Conditions.  4.2 You are informed that you have a period of seven working days starting from the time of your first purchase on the Website to obtain a full refund of your purchase. However, this right is lost should you access and or use the element of the service you purchased. This right only applies to your first payment and not to subsequent auto-renewed subscriptions.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7028,7 +7028,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">5.1 Access to our site is permitted on a temporary basis and we reserve the right to withdraw or amend the service we provide on our site without notice (see below). We will not be liable if for any reason our site is unavailable at any time or for any period.  5.2 From time to time, we may restrict access to some parts of our site, or our entire site, to users who have registered with us.  5.3 If you choose, or you are provided with, a user identification code, password or any other piece of information as part of our security procedures, you must treat such information as confidential, and you must not disclose it to any third party. We have the right to disable any user identification code or password, whether chosen by you or allocated by us, at any time, if in our opinion you have failed to comply with any of the provisions of these Conditions.  5.4 When using our site, you must comply with the provisions of our acceptable use policy set out in clauses 10 to 12 inclusive.</mutableString>
+                                        <string key="content">5.1 Access to our site is permitted on a temporary basis and we reserve the right to withdraw or amend the service we provide on our site without notice (see below). We will not be liable if for any reason our site is unavailable at any time or for any period.  5.2 From time to time, we may restrict access to some parts of our site, or our entire site, to users who have registered with us.  5.3 If you choose, or you are provided with, a user identification code, password or any other piece of information as part of our security procedures, you must treat such information as confidential, and you must not disclose it to any third party. We have the right to disable any user identification code or password, whether chosen by you or allocated by us, at any time, if in our opinion you have failed to comply with any of the provisions of these Conditions.  5.4 When using our site, you must comply with the provisions of our acceptable use policy set out in clauses 10 to 12 inclusive.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7090,7 +7090,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">6.1 You warrant that you shall comply with the requirements of the Data Protection Act and any other relevant legal requirements in respect of data protection.  6.2 You agree to indemnify us against any loss; damages, costs and expenses (including reasonable legal fees and costs) incurred by us a result of your breach of the above warranty.  6.3 We process information about you in accordance with our privacy policy. By using our site, you consent to such processing and you warrant that all data provided by you is accurate and complete.</mutableString>
+                                        <string key="content">6.1 You warrant that you shall comply with the requirements of the Data Protection Act and any other relevant legal requirements in respect of data protection.  6.2 You agree to indemnify us against any loss; damages, costs and expenses (including reasonable legal fees and costs) incurred by us a result of your breach of the above warranty.  6.3 We process information about you in accordance with our privacy policy. By using our site, you consent to such processing and you warrant that all data provided by you is accurate and complete.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7141,7 +7141,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">7.1 We are the owner or the licensee of all intellectual property rights in our site, and in the material published on it. Those works are protected by copyright laws and treaties around the world. All such rights are reserved.  7.2 You must not use any part of the materials on our site for commercial purposes without obtaining a licence to do so from us or our licensors.  7.3 http://www.mindme.ie is a trade mark and a domain name owned us.</mutableString>
+                                        <string key="content">7.1 We are the owner or the licensee of all intellectual property rights in our site, and in the material published on it. Those works are protected by copyright laws and treaties around the world. All such rights are reserved.  7.2 You must not use any part of the materials on our site for commercial purposes without obtaining a licence to do so from us or our licensors.  7.3 http://www.mindme.ie is a trade mark and a domain name owned us.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7192,7 +7192,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">8.1 Commentary and other materials posted on our site are for guidance purposes only. We therefore disclaim all liability and responsibility arising from any reliance placed on such materials by any visitor to our site, or by anyone who may be informed of any of its contents. You must make all appropriate investigations before entering into an engagement with a Care seeker or Care provider  8.2 We aim to update our site regularly, and may change the content at any time. If the need arises, we may suspend access to our site, or close it indefinitely. Any of the material on our site may be out of date at any given time, and we are under no obligation to verify or update such material.  8.3 Any information is provided for your personal use and it must not be used for any further commercial purpose, such as the resale or further distribution to a wider audience.</mutableString>
+                                        <string key="content">8.1 Commentary and other materials posted on our site are for guidance purposes only. We therefore disclaim all liability and responsibility arising from any reliance placed on such materials by any visitor to our site, or by anyone who may be informed of any of its contents. You must make all appropriate investigations before entering into an engagement with a Care seeker or Care provider  8.2 We aim to update our site regularly, and may change the content at any time. If the need arises, we may suspend access to our site, or close it indefinitely. Any of the material on our site may be out of date at any given time, and we are under no obligation to verify or update such material.  8.3 Any information is provided for your personal use and it must not be used for any further commercial purpose, such as the resale or further distribution to a wider audience.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7243,7 +7243,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">9.1 The material displayed on our site is provided without any guarantees, conditions or warranties as to its accuracy. To the extent permitted by law, we and third parties connected to us hereby expressly exclude:  (a) all conditions, warranties and other terms which might otherwise be implied by statute, common law or the law of equity.  (b) any liability for any direct, indirect or consequential loss or damage incurred by any user in connection with the Services, our site or in connection with the use, inability to use, or results of the use of our site, any websites linked to it and any materials posted on it, including, without limitation any liability for loss of income or revenue; loss of business; loss of profits or contracts; loss of anticipated savings; loss of data; loss of goodwill; wasted management or office time; and for any other loss or damage of any kind, however arising and whether caused by tort (including negligence), breach of contract or otherwise, even if foreseeable.  9.2 This does not affect our liability for death or personal injury arising from our negligence, nor our liability for fraudulent misrepresentation or misrepresentation as to a fundamental matter, nor any other liability which cannot be excluded or limited under applicable law.  9.3 Subject to clauses 9.1, 9.2 and 9.4, the Company's aggregate liability in respect of claims based on events arising out of or in connection with the Services, these Conditions or any collateral contract, whether in contract or tort (including negligence) or otherwise, shall in no circumstances exceed the total charges paid by you for Membership Fees in the calendar year in which the claim arises.  9.4 We will not be liable for any loss or damage caused by a distributed denial-of-service attack, viruses or other technologically harmful material that may infect your computer equipment, computer programs, data or other proprietary material due to your use of our site or to your downloading of any material posted on it, or on any website linked to it.</mutableString>
+                                        <string key="content">9.1 The material displayed on our site is provided without any guarantees, conditions or warranties as to its accuracy. To the extent permitted by law, we and third parties connected to us hereby expressly exclude:  (a) all conditions, warranties and other terms which might otherwise be implied by statute, common law or the law of equity.  (b) any liability for any direct, indirect or consequential loss or damage incurred by any user in connection with the Services, our site or in connection with the use, inability to use, or results of the use of our site, any websites linked to it and any materials posted on it, including, without limitation any liability for loss of income or revenue; loss of business; loss of profits or contracts; loss of anticipated savings; loss of data; loss of goodwill; wasted management or office time; and for any other loss or damage of any kind, however arising and whether caused by tort (including negligence), breach of contract or otherwise, even if foreseeable.  9.2 This does not affect our liability for death or personal injury arising from our negligence, nor our liability for fraudulent misrepresentation or misrepresentation as to a fundamental matter, nor any other liability which cannot be excluded or limited under applicable law.  9.3 Subject to clauses 9.1, 9.2 and 9.4, the Company's aggregate liability in respect of claims based on events arising out of or in connection with the Services, these Conditions or any collateral contract, whether in contract or tort (including negligence) or otherwise, shall in no circumstances exceed the total charges paid by you for Membership Fees in the calendar year in which the claim arises.  9.4 We will not be liable for any loss or damage caused by a distributed denial-of-service attack, viruses or other technologically harmful material that may infect your computer equipment, computer programs, data or other proprietary material due to your use of our site or to your downloading of any material posted on it, or on any website linked to it.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7294,7 +7294,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">10.1 Whenever you make use of a feature that allows you to upload material to our site, or to make contact with other users of our site, you must comply with the acceptable use policy set out in clauses 10 to 12 inclusive. You warrant that any such contributions (Contributions) do comply with that policy, and you indemnify us for any breach of that warranty.  10.2 Any material you upload to our site will be considered non-proprietary and we have the right to use, copy, distribute and disclose to third parties any such material in accordance with these Conditions and our Privacy Policy. We also have the right to disclose your identity to any third party who is claiming that any material posted or uploaded by you to our site constitutes a violation of their intellectual property or other rights.  10.3 We will not be responsible, or liable to any third party, for the content or accuracy of any materials posted by you or any other user of our site.  10.4 Contributions must be accurate (where they state facts), be genuinely held (where they state opinions) and comply with applicable law in the Republic of Ireland and in any country from which they are posted.  10.5 Contributions must not:  (a) Contain any material which is defamatory of any person;  (b) Contain any material which is obscene, offensive, hateful or inflammatory;  (c) Promote sexually explicit material;  (d) Promote violence.  (e) Promote discrimination based on race, sex, religion, nationality, disability, sexual orientation or age;  (f) Infringe any copyright, database right or trade mark of any other person;  (g) Be likely to deceive any person;  (h) Be made in breach of any legal duty owed to a third party, such as a contractual duty or a duty of confidence;  (I) promote any illegal activity;  (j) Be threatening, abuse or invade another's privacy, or cause annoyance, inconvenience or needless anxiety; (K) Be likely to harass, upset, embarrass alarm or annoy any other person;  (l) Be used to impersonate any person, or to misrepresent your identity or affiliation with any person;  (m) Give the impression that they emanate from us, if this is not the case; or  (n) Advocate, promote or assist any unlawful act such as (by way of example only) copyright infringement or computer misuse.  (o) contain any direct contact details including email addresses, phone numbers, web addresses, facebook pages or similar unless it is expressly stated that they are allowed.  10.6 We have the right to remove any material or posting you make on our site if, in our opinion, such material does not comply with our acceptable use policy set out in clauses 10 to 12 inclusive or as we believe in our sole discretion is prudent or necessary to minimise or eliminate our potential liability.  10.7 You shall be responsible for the accuracy and completeness of your Contributions and for ensuring that that they are current and up to date.  10.8 We have no obligation to you, and undertake no responsibility, to review your Contributions (including user-generated content) to determine whether they may result in any liability to any third party.  10.9 You shall indemnify us against all damages, losses and expenses arising as a result of any action or claim that any material posted, or linked to, our site by you constitutes a breach of our acceptable use policy set out in clauses 10 to 12 inclusive.</mutableString>
+                                        <string key="content">10.1 Whenever you make use of a feature that allows you to upload material to our site, or to make contact with other users of our site, you must comply with the acceptable use policy set out in clauses 10 to 12 inclusive. You warrant that any such contributions (Contributions) do comply with that policy, and you indemnify us for any breach of that warranty.  10.2 Any material you upload to our site will be considered non-proprietary and we have the right to use, copy, distribute and disclose to third parties any such material in accordance with these Conditions and our Privacy Policy. We also have the right to disclose your identity to any third party who is claiming that any material posted or uploaded by you to our site constitutes a violation of their intellectual property or other rights.  10.3 We will not be responsible, or liable to any third party, for the content or accuracy of any materials posted by you or any other user of our site.  10.4 Contributions must be accurate (where they state facts), be genuinely held (where they state opinions) and comply with applicable law in the Republic of Ireland and in any country from which they are posted.  10.5 Contributions must not:  (a) Contain any material which is defamatory of any person;  (b) Contain any material which is obscene, offensive, hateful or inflammatory;  (c) Promote sexually explicit material;  (d) Promote violence.  (e) Promote discrimination based on race, sex, religion, nationality, disability, sexual orientation or age;  (f) Infringe any copyright, database right or trade mark of any other person;  (g) Be likely to deceive any person;  (h) Be made in breach of any legal duty owed to a third party, such as a contractual duty or a duty of confidence;  (I) promote any illegal activity;  (j) Be threatening, abuse or invade another's privacy, or cause annoyance, inconvenience or needless anxiety; (K) Be likely to harass, upset, embarrass alarm or annoy any other person;  (l) Be used to impersonate any person, or to misrepresent your identity or affiliation with any person;  (m) Give the impression that they emanate from us, if this is not the case; or  (n) Advocate, promote or assist any unlawful act such as (by way of example only) copyright infringement or computer misuse.  (o) contain any direct contact details including email addresses, phone numbers, web addresses, facebook pages or similar unless it is expressly stated that they are allowed.  10.6 We have the right to remove any material or posting you make on our site if, in our opinion, such material does not comply with our acceptable use policy set out in clauses 10 to 12 inclusive or as we believe in our sole discretion is prudent or necessary to minimise or eliminate our potential liability.  10.7 You shall be responsible for the accuracy and completeness of your Contributions and for ensuring that that they are current and up to date.  10.8 We have no obligation to you, and undertake no responsibility, to review your Contributions (including user-generated content) to determine whether they may result in any liability to any third party.  10.9 You shall indemnify us against all damages, losses and expenses arising as a result of any action or claim that any material posted, or linked to, our site by you constitutes a breach of our acceptable use policy set out in clauses 10 to 12 inclusive.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7345,7 +7345,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">11.1 You may use our site only for lawful purposes. You may not use our site:  (a) In any way that breaches any applicable local, national or international law or regulation;  (b) In any way that is unlawful or fraudulent, or has any unlawful or fraudulent purpose or effect;  (c) For the purpose of harming or attempting to harm minors in any way;  (d) To send, knowingly receive, upload, download, use or re-use any material which does not comply with our acceptable use policy as set out in clauses 10 to 12 inclusive;  (e) To transmit or procure the sending of, any unsolicited or unauthorised advertising or promotional material or any other form of similar solicitation (spam);  (f) To knowingly transmit any data, send or upload any material that contains viruses, Trojan horses, worms, time-bombs, keystroke loggers, spyware, adware or any other harmful programs or similar computer code designed to adversely affect the operation of any computer software or hardware.  11.2 You also agree not to access without authority, interfere with, damage or disrupt:  (a) Any part of our site;  (b) Any equipment or network on which our site is stored;  (c) Any software used in the provision of our site; or  (d) Any equipment or network or software owned or used by any third party.</mutableString>
+                                        <string key="content">11.1 You may use our site only for lawful purposes. You may not use our site:  (a) In any way that breaches any applicable local, national or international law or regulation;  (b) In any way that is unlawful or fraudulent, or has any unlawful or fraudulent purpose or effect;  (c) For the purpose of harming or attempting to harm minors in any way;  (d) To send, knowingly receive, upload, download, use or re-use any material which does not comply with our acceptable use policy as set out in clauses 10 to 12 inclusive;  (e) To transmit or procure the sending of, any unsolicited or unauthorised advertising or promotional material or any other form of similar solicitation (spam);  (f) To knowingly transmit any data, send or upload any material that contains viruses, Trojan horses, worms, time-bombs, keystroke loggers, spyware, adware or any other harmful programs or similar computer code designed to adversely affect the operation of any computer software or hardware.  11.2 You also agree not to access without authority, interfere with, damage or disrupt:  (a) Any part of our site;  (b) Any equipment or network on which our site is stored;  (c) Any software used in the provision of our site; or  (d) Any equipment or network or software owned or used by any third party.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7396,7 +7396,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">12.1 We may from time to time provide interactive services on our site, including, without limitation, chat rooms and bulletin boards (Interactive Services). Where we do provide any Interactive Service, we will provide clear information to you about the kind of service offered, if it is moderated and what form of moderation is used (including whether it is human or technical).  12.2 We will do our best to assess any possible risks for users (and in particular, for children) from third parties when they use any Interactive Service provided on our site, and we will decide in each case whether it is appropriate to use moderation of the relevant service (including what kind of moderation to use) in the light of those risks. However, we are under no obligation to oversee, monitor or moderate any Interactive Service we provide on our site, and we expressly exclude our liability for any loss or damage arising from the use of any Interactive Service by a user in contravention of our content standards, whether the service is moderated or not.</mutableString>
+                                        <string key="content">12.1 We may from time to time provide interactive services on our site, including, without limitation, chat rooms and bulletin boards (Interactive Services). Where we do provide any Interactive Service, we will provide clear information to you about the kind of service offered, if it is moderated and what form of moderation is used (including whether it is human or technical).  12.2 We will do our best to assess any possible risks for users (and in particular, for children) from third parties when they use any Interactive Service provided on our site, and we will decide in each case whether it is appropriate to use moderation of the relevant service (including what kind of moderation to use) in the light of those risks. However, we are under no obligation to oversee, monitor or moderate any Interactive Service we provide on our site, and we expressly exclude our liability for any loss or damage arising from the use of any Interactive Service by a user in contravention of our content standards, whether the service is moderated or not.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7447,7 +7447,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">13.1 We will determine, in our discretion, whether there has been a breach of these Conditions through your use of our site. When a breach of these Conditions has occurred, we may take such action as we deem appropriate.  13.2 Failure to comply with these Conditions may result in our taking all or any of the following actions:  (a) Immediate, temporary or permanent withdrawal of your membership and the right to use our site;  (b) Immediate, temporary or permanent removal of any posting or material uploaded by you to our site;  (c) Issue of a warning to you;  (d) Legal proceedings against you for reimbursement of all costs on an indemnity basis (including, but not limited to, reasonable administrative and legal costs) resulting from the breach;  (e) Further legal action against you; or  (f) Disclosure of such information to law enforcement authorities as we reasonably feel is necessary.  13.3 We exclude liability for actions taken in response to breaches of these Conditions. The responses described above are not limited, and we may take any other action we reasonably deem appropriate.  13.4 You are responsible for cancelling your membership subscription and/or closing your account when you no longer require our services. Hiding your profile from public view will not cancel your subscription or close your account. To cancel your membership subscription and/or close your account goes to Help and Membership on your members menu</mutableString>
+                                        <string key="content">13.1 We will determine, in our discretion, whether there has been a breach of these Conditions through your use of our site. When a breach of these Conditions has occurred, we may take such action as we deem appropriate.  13.2 Failure to comply with these Conditions may result in our taking all or any of the following actions:  (a) Immediate, temporary or permanent withdrawal of your membership and the right to use our site;  (b) Immediate, temporary or permanent removal of any posting or material uploaded by you to our site;  (c) Issue of a warning to you;  (d) Legal proceedings against you for reimbursement of all costs on an indemnity basis (including, but not limited to, reasonable administrative and legal costs) resulting from the breach;  (e) Further legal action against you; or  (f) Disclosure of such information to law enforcement authorities as we reasonably feel is necessary.  13.3 We exclude liability for actions taken in response to breaches of these Conditions. The responses described above are not limited, and we may take any other action we reasonably deem appropriate.  13.4 You are responsible for cancelling your membership subscription and/or closing your account when you no longer require our services. Hiding your profile from public view will not cancel your subscription or close your account. To cancel your membership subscription and/or close your account goes to Help and Membership on your members menu</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7513,7 +7513,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">14.1 You may link to our home page, or any other public page on our website, provided you do so in a way that is fair and legal and does not damage our reputation or take advantage of it, but you must not establish a link in such a way as to suggest any form of association, approval or endorsement on our part where none exists. You must not establish a link from any website that is not owned by you.  14.2 Our site must not be framed on any other site, nor may you create a link to any part of our site other than the home page. We reserve the right to withdraw linking permission without notice. The website from which you are linking must comply in all respects with the content standards set out above.  14.3 If you wish to make any use of material on our site other than that set out above, please address your request to us via our website contact page  14.4 Where our site contains links to other sites and resources provided by third parties, these links are provided for your information only. We have no control over the contents of those sites or resources, and accept no responsibility for them or for any loss or damage that may arise from your use of them.</mutableString>
+                                        <string key="content">14.1 You may link to our home page, or any other public page on our website, provided you do so in a way that is fair and legal and does not damage our reputation or take advantage of it, but you must not establish a link in such a way as to suggest any form of association, approval or endorsement on our part where none exists. You must not establish a link from any website that is not owned by you.  14.2 Our site must not be framed on any other site, nor may you create a link to any part of our site other than the home page. We reserve the right to withdraw linking permission without notice. The website from which you are linking must comply in all respects with the content standards set out above.  14.3 If you wish to make any use of material on our site other than that set out above, please address your request to us via our website contact page  14.4 Where our site contains links to other sites and resources provided by third parties, these links are provided for your information only. We have no control over the contents of those sites or resources, and accept no responsibility for them or for any loss or damage that may arise from your use of them.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7568,7 +7568,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Applicable laws require that some of the information or communications we send to you should be in writing. When using our site, you accept that communication with us will be mainly electronic. We will contact you by e-mail or provide you with information by posting notices on our website. For contractual purposes, you agree to this electronic means of communication and you acknowledge that all contracts, notices, information and other communications that we provide to you electronically comply with any legal requirement that such communications be in writing. This condition does not affect your statutory rights.</mutableString>
+                                        <string key="content">Applicable laws require that some of the information or communications we send to you should be in writing. When using our site, you accept that communication with us will be mainly electronic. We will contact you by e-mail or provide you with information by posting notices on our website. For contractual purposes, you agree to this electronic means of communication and you acknowledge that all contracts, notices, information and other communications that we provide to you electronically comply with any legal requirement that such communications be in writing. This condition does not affect your statutory rights.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7623,7 +7623,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">All notices given by you to us must be given to http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie 93 Upper Georges Street, Dun Laoghaire, Co Dublin. We may give notice to you at either the e-mail or postal address you provide to us when you join or placing an order, or in any of the ways specified in clause15 above. Notice will be deemed received and properly served immediately when posted on our website, 24 hours after an e-mail is sent, or three days after the date of posting of any letter. In proving the service of any notice, it will be sufficient to prove, in the case of a letter, that such letter was properly addressed, stamped and placed in the post and, in the case of an e-mail, that such e-mail was sent to the specified e-mail address of the addressee.</mutableString>
+                                        <string key="content">All notices given by you to us must be given to http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie 93 Upper Georges Street, Dun Laoghaire, Co Dublin. We may give notice to you at either the e-mail or postal address you provide to us when you join or placing an order, or in any of the ways specified in clause15 above. Notice will be deemed received and properly served immediately when posted on our website, 24 hours after an e-mail is sent, or three days after the date of posting of any letter. In proving the service of any notice, it will be sufficient to prove, in the case of a letter, that such letter was properly addressed, stamped and placed in the post and, in the case of an e-mail, that such e-mail was sent to the specified e-mail address of the addressee.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7678,7 +7678,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">17.1 These Conditions are binding on you and us and on our respective successors and assignees.  17.2 You may not transfer, assign, charge or otherwise dispose of any of your rights or obligations arising under these Conditions without our prior written consent.  17.3 We may transfer, assign, charge, sub-contract or otherwise dispose of any of our rights or obligations arising under these Conditions at any time.</mutableString>
+                                        <string key="content">17.1 These Conditions are binding on you and us and on our respective successors and assignees.  17.2 You may not transfer, assign, charge or otherwise dispose of any of your rights or obligations arising under these Conditions without our prior written consent.  17.3 We may transfer, assign, charge, sub-contract or otherwise dispose of any of our rights or obligations arising under these Conditions at any time.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7733,7 +7733,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">18.1 We will not be liable or responsible for any failure to perform, or delay in performance of, any of our obligations under these Conditions that is caused by events outside our reasonable control (Force Majeure Event).  18.2 A Force Majeure Event includes any act, event, non-happening, omission or accident beyond our reasonable control and includes in particular (without limitation) the following: strikes, lock-outs or other industrial action; civil commotion, riot, invasion, terrorist attack or threat of terrorist attack, war (whether declared or not) or threat or preparation for war; fire, explosion, storm, flood, earthquake, subsidence, epidemic or other natural disaster; impossibility of the use of railways, shipping, aircraft, motor transport or other means of public or private transport; impossibility of the use of public or private telecommunications networks; and the acts, decrees, legislation, regulations or restrictions of any government.</mutableString>
+                                        <string key="content">18.1 We will not be liable or responsible for any failure to perform, or delay in performance of, any of our obligations under these Conditions that is caused by events outside our reasonable control (Force Majeure Event).  18.2 A Force Majeure Event includes any act, event, non-happening, omission or accident beyond our reasonable control and includes in particular (without limitation) the following: strikes, lock-outs or other industrial action; civil commotion, riot, invasion, terrorist attack or threat of terrorist attack, war (whether declared or not) or threat or preparation for war; fire, explosion, storm, flood, earthquake, subsidence, epidemic or other natural disaster; impossibility of the use of railways, shipping, aircraft, motor transport or other means of public or private transport; impossibility of the use of public or private telecommunications networks; and the acts, decrees, legislation, regulations or restrictions of any government.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7788,7 +7788,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">19.1 If we fail at any time to insist upon strict performance of any of your obligations under these Conditions, or if we fail to exercise any of the rights or remedies to which we are entitled, this will not constitute a waiver of such rights or remedies and will not relieve you from compliance with such obligations. A waiver by us of any default will not constitute a waiver of any subsequent default.  19.2 No waiver by us of any of these Conditions will be effective unless it is expressly stated to be a waiver and is communicated to you in writing in accordance with clause 15 above.</mutableString>
+                                        <string key="content">19.1 If we fail at any time to insist upon strict performance of any of your obligations under these Conditions, or if we fail to exercise any of the rights or remedies to which we are entitled, this will not constitute a waiver of such rights or remedies and will not relieve you from compliance with such obligations. A waiver by us of any default will not constitute a waiver of any subsequent default.  19.2 No waiver by us of any of these Conditions will be effective unless it is expressly stated to be a waiver and is communicated to you in writing in accordance with clause 15 above.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7843,7 +7843,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">If any of these terms and Conditions or any provisions of a Contract are determined by any competent authority to be invalid, unlawful or unenforceable to any extent, such term, condition or provision will to that extent be severed from the remaining terms, conditions and provisions which will continue to be valid to the fullest extent permitted by law.</mutableString>
+                                        <string key="content">If any of these terms and Conditions or any provisions of a Contract are determined by any competent authority to be invalid, unlawful or unenforceable to any extent, such term, condition or provision will to that extent be severed from the remaining terms, conditions and provisions which will continue to be valid to the fullest extent permitted by law.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7898,7 +7898,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">21.1 These Conditions and any document expressly referred to in them constitute the whole agreement between us and supersede all previous discussions, correspondence, negotiations, previous arrangement, understanding or agreement between us relating to their subject matter.  21.2 We each acknowledge that neither of us relies on, or will have any remedies in respect of, any representation or warranty (whether made innocently or negligently) that is not set out in these Conditions or the documents referred to in them.  21.3 Each of us agrees that our only liability in respect of those representations and warranties that are set out in this agreement (whether made innocently or negligently) will be for breach of contract.  21.4 Nothing in this clause limits or excludes any liability for fraud.</mutableString>
+                                        <string key="content">21.1 These Conditions and any document expressly referred to in them constitute the whole agreement between us and supersede all previous discussions, correspondence, negotiations, previous arrangement, understanding or agreement between us relating to their subject matter.  21.2 We each acknowledge that neither of us relies on, or will have any remedies in respect of, any representation or warranty (whether made innocently or negligently) that is not set out in these Conditions or the documents referred to in them.  21.3 Each of us agrees that our only liability in respect of those representations and warranties that are set out in this agreement (whether made innocently or negligently) will be for breach of contract.  21.4 Nothing in this clause limits or excludes any liability for fraud.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -7953,7 +7953,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">22.1 We have the right to revise and amend these Conditions from time to time to reflect changes in market conditions affecting our business, changes in technology, changes in payment methods, changes in relevant laws and regulatory requirements and changes in our system's capabilities.  22.2 You will be subject to the latest Conditions in force at the time that you become a Member or which are in force at the time you login to our website or when your membership is automatically renewed in accordance with clause 2.7 above, unless any change to these Conditions is required to be made by law or governmental authority.</mutableString>
+                                        <string key="content">22.1 We have the right to revise and amend these Conditions from time to time to reflect changes in market conditions affecting our business, changes in technology, changes in payment methods, changes in relevant laws and regulatory requirements and changes in our system's capabilities.  22.2 You will be subject to the latest Conditions in force at the time that you become a Member or which are in force at the time you login to our website or when your membership is automatically renewed in accordance with clause 2.7 above, unless any change to these Conditions is required to be made by law or governmental authority.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -8008,7 +8008,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">23.1 These Conditions and any dispute or claim arising out of or in connection with them or their subject matter or formation (including non-contractual disputes or claims) will be governed by law and will be subject to the non-exclusive jurisdiction of the courts of the Republic Of Ireland.</mutableString>
+                                        <string key="content">23.1 These Conditions and any dispute or claim arising out of or in connection with them or their subject matter or formation (including non-contractual disputes or claims) will be governed by law and will be subject to the non-exclusive jurisdiction of the courts of the Republic Of Ireland.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -8171,7 +8171,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">26.1 Members of the Website are permitted to search for Candidates. In order for Employers or other Members alike to contact Candidates on the Website the Employers will need to have an up to date paid for account (Subscription).  26.2 Employers can post on the Website, their need for and any roles they may have available to Candidates for free. In order for an Employer to access a reply from a Candidate; a valid Subscription is required.  26.3 In order to avoid interruption/disruption to your use of the Website; Subscriptions are made subject to automatic renewals. Should you wish to cancel your automatic renewal you may do so by contacting us via the Website. http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie. PAID MEMBERSHIP SUBSCRIPTIONS WILL CONTINUE INDEFINITELY UNTIL CANCELLED BY THE USER. AFTER YOUR INITIAL SUBSCRIPTION COMMITMENT PERIOD, AND AGAIN AFTER ANY SUBSEQUENT SUBSCRIPTION PERIOD, YOUR SUBSCRIPTION WILL AUTOMATICALLY RENEW FOR AN ADDITIONAL EQUIVALENT PERIOD AS THE SUBSCRIPTION TERM YOU ORIGINALLY SELECTED AND AT THE SUBSCRIPTION RATE AND FREQUENCY DISCLOSED TO YOU ON THE SITE WHEN YOU ORIGINALLY SUBSCRIBED, UNLESS OTHERWISE PROVIDED AT THE TIME YOU SUBSCRIBED. IF YOU SIGN UP FOR A PAYMENT PLAN THAT ALLOWS YOU TO BE CHARGED MONTHLY OVER THE SUBSCRIPTION PERIOD AND YOU DECIDE TO CANCEL YOUR SUBSCRIPTION DURING THE SUBSCRIPTION PERIOD, YOU ACKNOWLEDGE AND AGREE THAT YOU WILL CONTINUE TO BE BILLED FOR THE SUBSCRIPTION ON A MONTHLY BASIS UNTIL ITS ORIGINALLY SCHEDULED EXPIRATION DATE.</mutableString>
+                                        <string key="content">26.1 Members of the Website are permitted to search for Candidates. In order for Employers or other Members alike to contact Candidates on the Website the Employers will need to have an up to date paid for account (Subscription).  26.2 Employers can post on the Website, their need for and any roles they may have available to Candidates for free. In order for an Employer to access a reply from a Candidate; a valid Subscription is required.  26.3 In order to avoid interruption/disruption to your use of the Website; Subscriptions are made subject to automatic renewals. Should you wish to cancel your automatic renewal you may do so by contacting us via the Website. http://www.MindMe.ie and http://www.SeniorAndElderlyCare.ie. PAID MEMBERSHIP SUBSCRIPTIONS WILL CONTINUE INDEFINITELY UNTIL CANCELLED BY THE USER. AFTER YOUR INITIAL SUBSCRIPTION COMMITMENT PERIOD, AND AGAIN AFTER ANY SUBSEQUENT SUBSCRIPTION PERIOD, YOUR SUBSCRIPTION WILL AUTOMATICALLY RENEW FOR AN ADDITIONAL EQUIVALENT PERIOD AS THE SUBSCRIPTION TERM YOU ORIGINALLY SELECTED AND AT THE SUBSCRIPTION RATE AND FREQUENCY DISCLOSED TO YOU ON THE SITE WHEN YOU ORIGINALLY SUBSCRIBED, UNLESS OTHERWISE PROVIDED AT THE TIME YOU SUBSCRIBED. IF YOU SIGN UP FOR A PAYMENT PLAN THAT ALLOWS YOU TO BE CHARGED MONTHLY OVER THE SUBSCRIPTION PERIOD AND YOU DECIDE TO CANCEL YOUR SUBSCRIPTION DURING THE SUBSCRIPTION PERIOD, YOU ACKNOWLEDGE AND AGREE THAT YOU WILL CONTINUE TO BE BILLED FOR THE SUBSCRIPTION ON A MONTHLY BASIS UNTIL ITS ORIGINALLY SCHEDULED EXPIRATION DATE.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="17" name="Montserrat-Regular"/>
@@ -8274,7 +8274,7 @@ Cg
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <mutableString key="content">MindMe.ie complies with the principles of the Data Protection Act 1998 when dealing with all data received from visitors to the site. We only hold the data necessary to offer services provided on our website namely to allow users of the service to buy and sell and also message one another. We also keep user data to allow us to contact you in the advent of account withdrawal or new passwords being provided.
+                                        <string key="content">MindMe.ie complies with the principles of the Data Protection Act 1998 when dealing with all data received from visitors to the site. We only hold the data necessary to offer services provided on our website namely to allow users of the service to buy and sell and also message one another. We also keep user data to allow us to contact you in the advent of account withdrawal or new passwords being provided.
 
 We only hold personal data for as long as necessary. Once data is no longer needed it is deleted from our files. If you delete your account then all your personal data will be deleted too.
 
@@ -8284,7 +8284,7 @@ We never sell, rent or exchange mailing lists.
 We may however share commercial and technical data with our partners where a customer has accessed and used our website. This data would not be personal data but would be anonymised In accordance with the Privacy and Electronic Communications (EC Directive) Regulations 2003, we never send bulk unsolicited emails, (popularly known as Spam) to email addresses.
 
 We may send emails to existing customers or prospective customers who have enquired or registered with us, regarding products or services directly provided by us.
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="Montserrat-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
@@ -8401,7 +8401,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SILVER PLAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1i-Ng-51t">
-                                        <rect key="frame" x="114.5" y="183" width="147.5" height="27"/>
+                                        <rect key="frame" x="114" y="183" width="147.5" height="27"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                         <color key="textColor" red="0.48610168695449829" green="0.49017071723937988" blue="0.49426180124282837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -8547,7 +8547,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <rect key="frame" x="111.5" y="378" width="152.5" height="120"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annual*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5l9-JC-rA2">
-                                                <rect key="frame" x="43.5" y="40" width="66" height="21"/>
+                                                <rect key="frame" x="44" y="40" width="66" height="21"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                                 <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -8643,7 +8643,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <rect key="frame" x="111.5" y="904.5" width="152.5" height="120"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annual*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9e-Yv-h87">
-                                                <rect key="frame" x="44" y="40" width="66" height="21"/>
+                                                <rect key="frame" x="43.5" y="40" width="66" height="21"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                                 <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -8927,7 +8927,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAYMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJE-Fa-2fH">
-                                <rect key="frame" x="133" y="104" width="109.5" height="27"/>
+                                <rect key="frame" x="133.5" y="104" width="109.5" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -9282,7 +9282,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRz-jg-T0D">
-                                                <rect key="frame" x="53.5" y="16" width="46.5" height="21"/>
+                                                <rect key="frame" x="54" y="16" width="46.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -9324,7 +9324,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSG-Bi-y9j">
-                                                <rect key="frame" x="53.5" y="16" width="46.5" height="21"/>
+                                                <rect key="frame" x="54" y="16" width="46.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -9350,7 +9350,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BT8-aJ-YGq">
-                                                <rect key="frame" x="54" y="16" width="46.5" height="21"/>
+                                                <rect key="frame" x="53.5" y="16" width="46.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -9386,7 +9386,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <rect key="frame" x="198" y="386" width="153" height="120"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annual*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJB-2S-Ejk">
-                                                <rect key="frame" x="43.5" y="40" width="66" height="21"/>
+                                                <rect key="frame" x="44" y="40" width="66" height="21"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                                 <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -9408,7 +9408,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMe-zv-bIE">
-                                                <rect key="frame" x="53.5" y="16" width="46.5" height="21"/>
+                                                <rect key="frame" x="54" y="16" width="46.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -9653,7 +9653,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANGE PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYm-rl-zya">
-                                <rect key="frame" x="69.5" y="51" width="236" height="27"/>
+                                <rect key="frame" x="70" y="51" width="236" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -10048,19 +10048,19 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rosin Sara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkB-nN-KrJ">
-                                        <rect key="frame" x="129" y="160" width="118" height="27"/>
+                                        <rect key="frame" x="129.5" y="160" width="118" height="27"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Childminders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uu-AJ-zC1">
-                                        <rect key="frame" x="130" y="197" width="115" height="21"/>
+                                        <rect key="frame" x="130.5" y="197" width="115" height="21"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age : 44 years" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNA-8f-KRM">
-                                        <rect key="frame" x="129.5" y="228" width="116.5" height="21"/>
+                                        <rect key="frame" x="130" y="228" width="116.5" height="21"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -10819,7 +10819,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEND A MESSAGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32w-hU-fG1">
-                                <rect key="frame" x="86" y="104" width="203" height="27"/>
+                                <rect key="frame" x="86.5" y="104" width="203" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -11059,7 +11059,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hN-sL-lBg">
-                                                <rect key="frame" x="14.5" y="42" width="65.5" height="17"/>
+                                                <rect key="frame" x="14" y="42" width="65.5" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="mbC-Zh-9Q3"/>
                                                 </constraints>
@@ -11087,7 +11087,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rl-Kq-bi9">
-                                                <rect key="frame" x="13" y="42" width="68" height="17"/>
+                                                <rect key="frame" x="13.5" y="42" width="68" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="KGf-KK-hmM"/>
                                                 </constraints>
@@ -11115,7 +11115,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w57-E7-2tu">
-                                                <rect key="frame" x="17" y="42" width="60" height="17"/>
+                                                <rect key="frame" x="17.5" y="42" width="60" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="FoF-2H-Itq"/>
                                                 </constraints>
@@ -11603,13 +11603,13 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rosin Sara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sih-h6-EJo">
-                                        <rect key="frame" x="128.5" y="160" width="118" height="27"/>
+                                        <rect key="frame" x="129" y="160" width="118" height="27"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Childminders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2n-dE-71D">
-                                        <rect key="frame" x="130.5" y="197" width="115" height="21"/>
+                                        <rect key="frame" x="130" y="197" width="115" height="21"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -11627,7 +11627,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Castleknock, Ireland" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27g-1x-PDy">
-                                        <rect key="frame" x="41" y="282" width="140" height="41.5"/>
+                                        <rect key="frame" x="41" y="282.5" width="140" height="41.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -11636,7 +11636,6 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <rect key="frame" x="21" y="294" width="14" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bKY-pF-OB5" secondAttribute="height" multiplier="11:14" id="gXE-TB-QZp"/>
-                                            <constraint firstAttribute="width" constant="14" id="phe-iy-5r1"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="4 Years Experience" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udq-4Q-39A">
@@ -11649,7 +11648,6 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <rect key="frame" x="179.5" y="292.5" width="14" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="zmj-C7-amE" secondAttribute="height" multiplier="11:16" id="0CE-1w-QJT"/>
-                                            <constraint firstAttribute="width" constant="14" id="0Ud-bm-3mL"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VlS-2B-m7V">
@@ -11989,15 +11987,15 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Negotiable" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbw-iU-Kqr">
-                                        <rect key="frame" x="242" y="263.5" width="117" height="21"/>
+                                        <rect key="frame" x="231" y="263.5" width="128" height="21"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <color key="textColor" red="0.42299999999999999" green="0.55000000000000004" blue="0.65000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNd-ow-gfZ">
-                                        <rect key="frame" x="179.5" y="263.5" width="62.5" height="21"/>
+                                        <rect key="frame" x="179.5" y="263.5" width="51.5" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="62.5" id="4eI-NW-fhe"/>
+                                            <constraint firstAttribute="width" constant="51.5" id="4eI-NW-fhe"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -12049,6 +12047,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="Sr6-3L-NWL" firstAttribute="leading" secondItem="Nug-CT-cE7" secondAttribute="trailing" constant="8" id="DTp-Fr-wL5"/>
                                     <constraint firstItem="13s-1w-A2U" firstAttribute="centerX" secondItem="9Oo-lw-RUT" secondAttribute="centerX" id="Db6-fR-Jx5"/>
                                     <constraint firstItem="bKY-pF-OB5" firstAttribute="leading" secondItem="lg5-ri-z09" secondAttribute="leading" id="Dyw-km-6EH"/>
+                                    <constraint firstItem="zmj-C7-amE" firstAttribute="width" secondItem="bKY-pF-OB5" secondAttribute="width" id="EYs-r7-ehf"/>
                                     <constraint firstItem="qgF-0g-WXy" firstAttribute="top" secondItem="QyC-yv-Z9D" secondAttribute="top" id="FBo-Sz-Kkf"/>
                                     <constraint firstAttribute="trailing" secondItem="yUO-gG-aGx" secondAttribute="trailing" constant="16" id="FUP-Xd-eOR"/>
                                     <constraint firstItem="kUj-lf-LOv" firstAttribute="top" secondItem="oSs-PP-Ba0" secondAttribute="bottom" constant="24" id="Fes-aO-BqR"/>
@@ -12222,6 +12221,7 @@ We may send emails to existing customers or prospective customers who have enqui
                             <constraint firstAttribute="trailing" secondItem="9Oo-lw-RUT" secondAttribute="trailing" id="CF9-Bp-qvj"/>
                             <constraint firstItem="jly-Ek-QDy" firstAttribute="top" secondItem="LU0-vr-1u9" secondAttribute="top" id="Ts6-WP-o3l"/>
                             <constraint firstItem="9Oo-lw-RUT" firstAttribute="top" secondItem="jly-Ek-QDy" secondAttribute="bottom" id="Wbz-Tj-dPP"/>
+                            <constraint firstItem="bKY-pF-OB5" firstAttribute="width" secondItem="LU0-vr-1u9" secondAttribute="width" multiplier="14/375" id="Wgv-r2-kdQ"/>
                             <constraint firstAttribute="bottom" secondItem="9Oo-lw-RUT" secondAttribute="bottom" id="Yjx-KD-wI6"/>
                             <constraint firstItem="27g-1x-PDy" firstAttribute="width" secondItem="LU0-vr-1u9" secondAttribute="width" multiplier="140/375" id="ayS-Ve-tYs"/>
                             <constraint firstItem="jly-Ek-QDy" firstAttribute="leading" secondItem="LU0-vr-1u9" secondAttribute="leading" id="dtA-vO-dfW"/>
