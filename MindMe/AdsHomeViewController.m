@@ -312,6 +312,7 @@
         cell.ageLabel.hidden = YES;
         cell.ageImgView.hidden = YES;
         cell.ageImgViewTopConstraint.constant = -13.5;
+        cell.descTopConstraint.constant = -12;
     }
     else {
         cell.careTypeLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
