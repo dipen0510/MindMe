@@ -932,14 +932,18 @@
     }
     
     if (!filterViewController.isRefineSearchEnabled) {
+        
         tmpAdvertsArr = [[NSMutableArray alloc] initWithArray:filteredAdvertsArr];
         filteredAdvertsArr = [[NSMutableArray alloc] init];
+        
+        int availFlag = 0;
         
         for (NSMutableDictionary* advertDict in tmpAdvertsArr) {
             
             for (int i = 0; i<filterViewController.availabilityArr.count; i++) {
                 
                 if ([[filterViewController.availabilityArr objectAtIndex:i] intValue]) {
+                    availFlag = 1;
                     NSString* booking = [NSString stringWithFormat:@"%@ %@", [self fullNameForWeekdayAvailabilityIndex:i], [self fullNameForAvailabilityIndex:i]];
                     
                     if ([[advertDict valueForKey:@"booking"] containsString:booking]) {
@@ -954,9 +958,15 @@
             
         }
         
+        if (availFlag == 0) {
+            filteredAdvertsArr = [[NSMutableArray alloc] initWithArray:tmpAdvertsArr];
+        }
+        
         
         tmpAdvertsArr = [[NSMutableArray alloc] initWithArray:filteredAdvertsArr];
         filteredAdvertsArr = [[NSMutableArray alloc] init];
+        
+        int serviceFlag = 0;
         
         for (NSMutableDictionary* advertDict in tmpAdvertsArr) {
             
@@ -964,6 +974,7 @@
                 
                 FilterMiscTableViewCell* cell = (FilterMiscTableViewCell *)[filterViewController.miscTblView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
                 if ([[filterViewController.servicesArr objectAtIndex:i] intValue]) {
+                    serviceFlag = 1;
                     if ([[advertDict valueForKey:@"require"] containsString:cell.miscLabel.text]) {
                         if (![filteredAdvertsArr containsObject:advertDict]) {
                             [filteredAdvertsArr addObject:advertDict];
@@ -974,6 +985,11 @@
             }
             
         }
+        
+        if (serviceFlag == 0) {
+            filteredAdvertsArr = [[NSMutableArray alloc] initWithArray:tmpAdvertsArr];
+        }
+        
     }
     
     
