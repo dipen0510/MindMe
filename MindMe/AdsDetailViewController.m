@@ -177,34 +177,14 @@
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
         _experienceValueLabel.text = [NSString stringWithFormat:@"Experience Required : %@ years",[_advertDict valueForKey:@"experience"]];
-        
-        if ([[_advertDict valueForKey:@"care_type"] isEqualToString:@"Babysitters"]) {
-            _careTypeLabel.text = [NSString stringWithFormat:@"Babysitter Required"];
-        }
-        else if ([[_advertDict valueForKey:@"care_type"] isEqualToString:@"Childminders"]) {
-            _careTypeLabel.text = [NSString stringWithFormat:@"Childminder Required"];
-        }
-        else if ([[_advertDict valueForKey:@"care_type"] isEqualToString:@"Cleaners"]) {
-            _careTypeLabel.text = [NSString stringWithFormat:@"Cleaner Required"];
-        }
-        else if ([[_advertDict valueForKey:@"care_type"] isEqualToString:@"Dog Walkers"]) {
-            _careTypeLabel.text = [NSString stringWithFormat:@"Dog Walker Required"];
-        }
-        else if ([[_advertDict valueForKey:@"care_type"] isEqualToString:@"House Keepers"]) {
-            _careTypeLabel.text = [NSString stringWithFormat:@"House Keeper Required"];
-        }
-        else if ([[_advertDict valueForKey:@"care_type"] isEqualToString:@"Pet Minders"]) {
-            _careTypeLabel.text = [NSString stringWithFormat:@"Pet Minder Required"];
-        }
-        else  {
-            _careTypeLabel.text = [NSString stringWithFormat:@"%@ Required",[_advertDict valueForKey:@"care_type"]];
-        }
-        
+        _careTypeLabel.text = [NSString stringWithFormat:@"%@ Required",[_advertDict valueForKey:@"care_type"]];
     }
     else {
         _experienceValueLabel.text = [NSString stringWithFormat:@"%@ years Experience",[_advertDict valueForKey:@"experience"]];
         _careTypeLabel.text = [_advertDict valueForKey:@"care_type"];
     }
+    
+    [[SharedClass sharedInstance] removePluralsFromCareTypeLabel:_careTypeLabel];
     
     _aboutTextView.text = [_advertDict valueForKey:@"about_you"];
     

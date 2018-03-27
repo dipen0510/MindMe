@@ -321,6 +321,8 @@
         cell.ageImgViewTopConstraint.constant = 12.;
     }
     
+    [[SharedClass sharedInstance] removePluralsFromCareTypeLabel:cell.careTypeLabel];
+    
     
     cell.descLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"about_you"];
     cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ Years Experience",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
@@ -1082,5 +1084,6 @@
     CGSize requiredSize = rect.size;
     return (requiredSize.height); //finally u return your height
 }
+
 
 @end

@@ -170,4 +170,34 @@ static SharedClass *singletonObject = nil;
 }
 
 
+- (void) removePluralsFromCareTypeLabel:(UILabel *)label {
+    
+    if ([label.text containsString:@"Babysitters"]) {
+        
+        label.text = [label.text stringByReplacingOccurrencesOfString:@"Babysitters" withString:@"Babysitter"];
+        
+    }
+    
+    if ([label.text containsString:@"Childminders"]) {
+        label.text = [label.text stringByReplacingOccurrencesOfString:@"Childminders" withString:@"Childminder"];
+    }
+    
+    if ([label.text containsString:@"Cleaners"]) {
+        label.text = [label.text stringByReplacingOccurrencesOfString:@"Cleaners" withString:@"Cleaner"];
+    }
+    
+    if ([label.text containsString:@"Dog Walkers"]) {
+        label.text = [label.text stringByReplacingOccurrencesOfString:@"Dog Walkers" withString:@"Dog Walker"];
+    }
+    
+    if ([label.text containsString:@"House Keepers"]) {
+        label.text = [label.text stringByReplacingOccurrencesOfString:@"House Keepers" withString:@"House Keeper"];
+    }
+    
+    if ([label.text containsString:@"Pet Minders"]) {
+        label.text = [label.text stringByReplacingOccurrencesOfString:@"Pet Minders" withString:@"Pet Minder"];
+    }
+    
+}
+
 @end
