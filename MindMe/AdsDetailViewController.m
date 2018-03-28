@@ -797,21 +797,42 @@
     }
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+        if ([[firstCollectionViewArr lastObject] isEqualToString:@""]) {
+            [firstCollectionViewArr removeLastObject];
+        }
     _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (firstCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+        if ([[secondCollectionViewArr lastObject] isEqualToString:@""]) {
+            [secondCollectionViewArr removeLastObject];
+        }
     _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+        if ([[thirdCollectionViewArr lastObject] isEqualToString:@""]) {
+            [thirdCollectionViewArr removeLastObject];
+        }
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+        if ([[fourthCollectionViewArr lastObject] isEqualToString:@""]) {
+            [fourthCollectionViewArr removeLastObject];
+        }
+    
     _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (fourthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     fifthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+        if ([[fifthCollectionViewArr lastObject] isEqualToString:@""]) {
+            [fifthCollectionViewArr removeLastObject];
+        }
+    
     _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (fifthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        if ([[sixthCollectionViewArr lastObject] isEqualToString:@""]) {
+            [sixthCollectionViewArr removeLastObject];
+        }
+    
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
 }
@@ -836,21 +857,39 @@
     }
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+    if ([[firstCollectionViewArr lastObject] isEqualToString:@""]) {
+        [firstCollectionViewArr removeLastObject];
+    }
     _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (firstCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    if ([[secondCollectionViewArr lastObject] isEqualToString:@""]) {
+        [secondCollectionViewArr removeLastObject];
+    }
     _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    if ([[thirdCollectionViewArr lastObject] isEqualToString:@""]) {
+        [thirdCollectionViewArr removeLastObject];
+    }
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    if ([[fourthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [fourthCollectionViewArr removeLastObject];
+    }
     _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (fourthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     fifthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+    if ([[fifthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [fifthCollectionViewArr removeLastObject];
+    }
     _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (fifthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    if ([[sixthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [sixthCollectionViewArr removeLastObject];
+    }
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     
@@ -876,21 +915,39 @@
     }
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+    if ([[firstCollectionViewArr lastObject] isEqualToString:@""]) {
+        [firstCollectionViewArr removeLastObject];
+    }
     _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (firstCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    if ([[secondCollectionViewArr lastObject] isEqualToString:@""]) {
+        [secondCollectionViewArr removeLastObject];
+    }
     _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    if ([[thirdCollectionViewArr lastObject] isEqualToString:@""]) {
+        [thirdCollectionViewArr removeLastObject];
+    }
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    if ([[fourthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [fourthCollectionViewArr removeLastObject];
+    }
     _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (fourthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     fifthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+    if ([[fifthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [fifthCollectionViewArr removeLastObject];
+    }
     _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (fifthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    if ([[sixthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [sixthCollectionViewArr removeLastObject];
+    }
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     
@@ -916,21 +973,39 @@
     }
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"mind_loc"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+    if ([[firstCollectionViewArr lastObject] isEqualToString:@""]) {
+        [firstCollectionViewArr removeLastObject];
+    }
     _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (firstCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    if ([[secondCollectionViewArr lastObject] isEqualToString:@""]) {
+        [secondCollectionViewArr removeLastObject];
+    }
     _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    if ([[thirdCollectionViewArr lastObject] isEqualToString:@""]) {
+        [thirdCollectionViewArr removeLastObject];
+    }
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    if ([[fourthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [fourthCollectionViewArr removeLastObject];
+    }
     _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (fourthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     fifthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+    if ([[fifthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [fifthCollectionViewArr removeLastObject];
+    }
     _fifthCollectionViewHeightConstraint.constant = (fifthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (fifthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    if ([[sixthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [sixthCollectionViewArr removeLastObject];
+    }
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     
@@ -955,9 +1030,15 @@
     
     _secondCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _firstCollectionViewHeightConstraint.constant;
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    if ([[secondCollectionViewArr lastObject] isEqualToString:@""]) {
+        [secondCollectionViewArr removeLastObject];
+    }
     _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    if ([[thirdCollectionViewArr lastObject] isEqualToString:@""]) {
+        [thirdCollectionViewArr removeLastObject];
+    }
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
@@ -970,6 +1051,9 @@
     
     _sixthCollectionViewTitleTopConstraint.constant = (-120/568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    if ([[sixthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [sixthCollectionViewArr removeLastObject];
+    }
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
@@ -999,9 +1083,15 @@
     
     _secondCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _firstCollectionViewHeightConstraint.constant;
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    if ([[secondCollectionViewArr lastObject] isEqualToString:@""]) {
+        [secondCollectionViewArr removeLastObject];
+    }
     _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    if ([[thirdCollectionViewArr lastObject] isEqualToString:@""]) {
+        [thirdCollectionViewArr removeLastObject];
+    }
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
@@ -1014,6 +1104,9 @@
     
     _sixthCollectionViewTitleTopConstraint.constant = -(120./568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    if ([[sixthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [sixthCollectionViewArr removeLastObject];
+    }
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
 
 
@@ -1045,12 +1138,21 @@
     
     _secondCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _firstCollectionViewHeightConstraint.constant;
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    if ([[secondCollectionViewArr lastObject] isEqualToString:@""]) {
+        [secondCollectionViewArr removeLastObject];
+    }
     _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    if ([[thirdCollectionViewArr lastObject] isEqualToString:@""]) {
+        [thirdCollectionViewArr removeLastObject];
+    }
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    if ([[fourthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [fourthCollectionViewArr removeLastObject];
+    }
     _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (fourthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     
@@ -1060,6 +1162,9 @@
     
     _sixthCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    if ([[sixthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [sixthCollectionViewArr removeLastObject];
+    }
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
@@ -1088,9 +1193,15 @@
     
     _secondCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _firstCollectionViewHeightConstraint.constant;
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    if ([[secondCollectionViewArr lastObject] isEqualToString:@""]) {
+        [secondCollectionViewArr removeLastObject];
+    }
     _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    if ([[thirdCollectionViewArr lastObject] isEqualToString:@""]) {
+        [thirdCollectionViewArr removeLastObject];
+    }
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
@@ -1103,6 +1214,9 @@
     
     _sixthCollectionViewTitleTopConstraint.constant = -(120./568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    if ([[sixthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [sixthCollectionViewArr removeLastObject];
+    }
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
@@ -1133,6 +1247,9 @@
     
     _thirdCollectionViewTitleTopConstraint.constant = -(120./568.)*kScreenHeight - _secondCollectionViewHeightConstraint.constant - _firstCollectionViewHeightConstraint.constant;
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    if ([[thirdCollectionViewArr lastObject] isEqualToString:@""]) {
+        [thirdCollectionViewArr removeLastObject];
+    }
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
@@ -1145,6 +1262,9 @@
     
     _sixthCollectionViewTitleTopConstraint.constant = -(120./568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    if ([[sixthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [sixthCollectionViewArr removeLastObject];
+    }
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
@@ -1173,9 +1293,15 @@
     
     _secondCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _firstCollectionViewHeightConstraint.constant;
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    if ([[secondCollectionViewArr lastObject] isEqualToString:@""]) {
+        [secondCollectionViewArr removeLastObject];
+    }
     _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    if ([[thirdCollectionViewArr lastObject] isEqualToString:@""]) {
+        [thirdCollectionViewArr removeLastObject];
+    }
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
@@ -1187,6 +1313,9 @@
     _fifthCollectionViewSeparatorView.hidden = YES;
     
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    if ([[sixthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [sixthCollectionViewArr removeLastObject];
+    }
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
@@ -1217,6 +1346,9 @@
     
     _thirdCollectionViewTitleTopConstraint.constant = -140 - _secondCollectionViewHeightConstraint.constant - _firstCollectionViewHeightConstraint.constant;
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    if ([[thirdCollectionViewArr lastObject] isEqualToString:@""]) {
+        [thirdCollectionViewArr removeLastObject];
+    }
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
@@ -1229,6 +1361,9 @@
     
     _sixthCollectionViewTitleTopConstraint.constant = -140 - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    if ([[sixthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [sixthCollectionViewArr removeLastObject];
+    }
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
@@ -1257,10 +1392,16 @@
     
     _secondCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _firstCollectionViewHeightConstraint.constant;
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    if ([[secondCollectionViewArr lastObject] isEqualToString:@""]) {
+        [secondCollectionViewArr removeLastObject];
+    }
     _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    if ([[thirdCollectionViewArr lastObject] isEqualToString:@""]) {
+        [thirdCollectionViewArr removeLastObject];
+    }
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
@@ -1273,6 +1414,9 @@
     
     _sixthCollectionViewTitleTopConstraint.constant = -(120./568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    if ([[sixthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [sixthCollectionViewArr removeLastObject];
+    }
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
@@ -1303,12 +1447,21 @@
     
     _secondCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _firstCollectionViewHeightConstraint.constant;
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    if ([[secondCollectionViewArr lastObject] isEqualToString:@""]) {
+        [secondCollectionViewArr removeLastObject];
+    }
     _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    if ([[thirdCollectionViewArr lastObject] isEqualToString:@""]) {
+        [thirdCollectionViewArr removeLastObject];
+    }
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
+    if ([[fourthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [fourthCollectionViewArr removeLastObject];
+    }
     _fourthCollectionViewHeightConstraint.constant = (fourthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (fourthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _fifthCollectionViewTitle.hidden = YES;
@@ -1317,6 +1470,9 @@
     
     _sixthCollectionViewTitleTopConstraint.constant = (-52/568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    if ([[sixthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [sixthCollectionViewArr removeLastObject];
+    }
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _otherRelevantInfoStaticLabel.hidden = NO;
@@ -1342,12 +1498,21 @@
     }
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[[_advertDict valueForKey:@"additional_optional"] stringByReplacingOccurrencesOfString:@"Their" withString:@"Parent"] componentsSeparatedByString:@","]];
+    if ([[firstCollectionViewArr lastObject] isEqualToString:@""]) {
+        [firstCollectionViewArr removeLastObject];
+    }
     _firstCollectionViewHeightConstraint.constant = (firstCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (firstCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"love_optional"] componentsSeparatedByString:@","]];
+    if ([[secondCollectionViewArr lastObject] isEqualToString:@""]) {
+        [secondCollectionViewArr removeLastObject];
+    }
     _secondCollectionViewHeightConstraint.constant = (secondCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (secondCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
+    if ([[thirdCollectionViewArr lastObject] isEqualToString:@""]) {
+        [thirdCollectionViewArr removeLastObject];
+    }
     _thirdCollectionViewHeightConstraint.constant = (thirdCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (thirdCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
     _fourthCollectionViewTitle.hidden = YES;
@@ -1360,6 +1525,9 @@
     
     _sixthCollectionViewTitleTopConstraint.constant = -(120./568.)*kScreenHeight - _fifthCollectionViewHeightConstraint.constant - _fourthCollectionViewHeightConstraint.constant;
     sixthCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+    if ([[sixthCollectionViewArr lastObject] isEqualToString:@""]) {
+        [sixthCollectionViewArr removeLastObject];
+    }
     _sixthCollectionViewHeightConstraint.constant = (sixthCollectionViewArr.count/2)*(40./568.)*kScreenHeight + (sixthCollectionViewArr.count%2)*(40./568.)*kScreenHeight;
     
 }
