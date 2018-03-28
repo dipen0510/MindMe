@@ -72,8 +72,8 @@
         
     }
     
-    _firstCollectionViewHeightConstraint.constant = (40 * (existingAdvertsArr.count%2)) + (40 * (existingAdvertsArr.count/2));
-    _secondCollectionViewHeightConstraint.constant = (40 * (newAdvertsArr.count%2)) + (40 * (newAdvertsArr.count/2));
+    _firstCollectionViewHeightConstraint.constant = (((40./667)*kScreenHeight) * (existingAdvertsArr.count%2)) + (((40./667)*kScreenHeight) * (existingAdvertsArr.count/2));
+    _secondCollectionViewHeightConstraint.constant = (((40./667)*kScreenHeight) * (newAdvertsArr.count%2)) + (((40./667)*kScreenHeight) * (newAdvertsArr.count/2));
                                                                                            
     
 }
