@@ -53,7 +53,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nonSmokerLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *nonSmokerImgView;
 @property (weak, nonatomic) IBOutlet UIImageView *shortNoticeImgView;
-@property (weak, nonatomic) IBOutlet UITextField *otherRelevantInfoStaticLabel;
+@property (weak, nonatomic) IBOutlet UILabel *otherRelevantInfoStaticLabel;
 @property (weak, nonatomic) IBOutlet UITextView *otherRelevantInfoTextView;
 
 - (IBAction)backButtonTapped:(id)sender;

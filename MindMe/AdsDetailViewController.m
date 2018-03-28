@@ -140,9 +140,9 @@
     
     _memberSinceLabel.font = _memberSinceStaticLabel.font = _lastLoginLabel.font = _lastLoginStaticLabel.font = _genderValueLabel.font = _genderStaticLabel.font = _cvValueLabel.font = _cvStaticLabel.font = _haveACaerLabel.font = _comfortableWithpetsLabel.font = _shortNoticeLabel.font = _nonSmokerLabel.font = _languagesValueLabel.font = _eduLevelLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:(17.5/667)*kScreenHeight];
     
-     _aboutStaticLabel.font =  _mobileStaticLabel.font = _firstCollectionViewTitle.font = _secondCollectionViewTitle.font = _thirdCollectionViewTitle.font = _fourthCollectionViewTitle.font = _fifthCollectionViewTitle.font = _sixthCollectionViewTitle.font = _availabilityStaicLabel.font = _reviewStaticLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(17.5/667)*kScreenHeight];
+     _aboutStaticLabel.font =  _mobileStaticLabel.font = _firstCollectionViewTitle.font = _secondCollectionViewTitle.font = _thirdCollectionViewTitle.font = _fourthCollectionViewTitle.font = _fifthCollectionViewTitle.font = _sixthCollectionViewTitle.font = _availabilityStaicLabel.font = _reviewStaticLabel.font = _otherRelevantInfoStaticLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(17.5/667)*kScreenHeight];
     
-    _aboutTextView.font = _mobileValueLabel.font = _mobileStaticLabel2.font = _noReviewsLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(17.5/667)*kScreenHeight];
+    _aboutTextView.font = _mobileValueLabel.font = _mobileStaticLabel2.font = _noReviewsLabel.font = _otherRelevantInfoTextView.font = [UIFont fontWithName:@"Montserrat-Light" size:(17.5/667)*kScreenHeight];
     
     _footerContactButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(17.5/667)*kScreenHeight];
     
@@ -1059,7 +1059,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
+    _daysRequiredLabelTopConstraint.constant = (140./568.)*kScreenHeight;
     
     
 }
@@ -1113,7 +1113,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
+    _daysRequiredLabelTopConstraint.constant = (140./568.)*kScreenHeight;
     
 }
 
@@ -1170,7 +1170,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
+    _daysRequiredLabelTopConstraint.constant = (140./568.)*kScreenHeight;
     
 }
 
@@ -1222,7 +1222,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
+    _daysRequiredLabelTopConstraint.constant = (140./568.)*kScreenHeight;
     
 }
 
@@ -1270,7 +1270,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
+    _daysRequiredLabelTopConstraint.constant = (140./568.)*kScreenHeight;
     
 }
 
@@ -1321,7 +1321,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
+    _daysRequiredLabelTopConstraint.constant = (140./568.)*kScreenHeight;
     
 }
 
@@ -1369,7 +1369,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
+    _daysRequiredLabelTopConstraint.constant = (140./568.)*kScreenHeight;
     
 }
 
@@ -1422,7 +1422,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
+    _daysRequiredLabelTopConstraint.constant = (140./568.)*kScreenHeight;
     
 }
 
@@ -1478,7 +1478,7 @@
     _otherRelevantInfoStaticLabel.hidden = NO;
     _otherRelevantInfoTextView.hidden = NO;
     _otherRelevantInfoTextView.text = [_advertDict valueForKey:@"love_optional"];
-    _daysRequiredLabelTopConstraint.constant = (120./568.)*kScreenHeight;
+    _daysRequiredLabelTopConstraint.constant = (140./568.)*kScreenHeight;
     
 }
 

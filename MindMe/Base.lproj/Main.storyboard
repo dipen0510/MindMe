@@ -1760,7 +1760,7 @@ Terms of Services and Privacy Policy</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62e-1e-0b2">
-                                <rect key="frame" x="133" y="236.5" width="109" height="20"/>
+                                <rect key="frame" x="133" y="238.5" width="109" height="20"/>
                                 <fontDescription key="fontDescription" name="VisbyRoundCF-Medium" family="Visby Round CF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1770,7 +1770,7 @@ Terms of Services and Privacy Policy</string>
                         <constraints>
                             <constraint firstItem="EWY-k9-wQT" firstAttribute="leading" secondItem="K9z-ds-PBr" secondAttribute="leading" constant="16" id="2lP-JW-1sy"/>
                             <constraint firstItem="4bN-du-Xne" firstAttribute="width" secondItem="YRE-bQ-fzp" secondAttribute="width" id="6MI-mE-01r"/>
-                            <constraint firstItem="62e-1e-0b2" firstAttribute="top" secondItem="Bkx-y5-Eqe" secondAttribute="bottom" constant="47.5" id="7fM-0o-6Nk"/>
+                            <constraint firstItem="62e-1e-0b2" firstAttribute="top" secondItem="Bkx-y5-Eqe" secondAttribute="bottom" constant="49.5" id="7fM-0o-6Nk"/>
                             <constraint firstItem="YRE-bQ-fzp" firstAttribute="height" secondItem="jZ3-ae-r04" secondAttribute="height" id="C7V-6V-adA"/>
                             <constraint firstItem="666-kz-rQH" firstAttribute="centerX" secondItem="K9z-ds-PBr" secondAttribute="centerX" id="CrP-rt-5Lw"/>
                             <constraint firstItem="4bN-du-Xne" firstAttribute="width" secondItem="62e-1e-0b2" secondAttribute="width" id="Dfg-0z-hUa"/>
@@ -10448,6 +10448,24 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other relevant info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zp-05-wDT">
+                                        <rect key="frame" x="21" y="2031.5" width="161.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4n-Gm-rwe">
+                                        <rect key="frame" x="21" y="2068.5" width="333" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Tnw-0V-BSi"/>
+                                        </constraints>
+                                        <string key="text">Experienced flexible mature minder needed to work 3 full days a week. Duties include looking after two school going children ages 7 and 5.</string>
+                                        <color key="textColor" red="0.42310506110000001" green="0.54752999540000002" blue="0.64756429199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -10456,6 +10474,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="9Za-ZB-0ij" firstAttribute="leading" secondItem="Nje-IK-byY" secondAttribute="trailing" constant="8" id="14N-fa-u3v"/>
                                     <constraint firstItem="pNk-Et-xLZ" firstAttribute="leading" secondItem="boD-lo-72R" secondAttribute="leading" id="1Fq-Ji-Jle"/>
                                     <constraint firstItem="Lnd-MI-Uwa" firstAttribute="centerX" secondItem="JeE-f1-yC8" secondAttribute="centerX" id="1kp-Wv-eVD"/>
+                                    <constraint firstItem="G4n-Gm-rwe" firstAttribute="leading" secondItem="MBg-Z0-oT1" secondAttribute="leading" id="1yk-kt-Bah"/>
                                     <constraint firstItem="uh5-cK-aMc" firstAttribute="top" secondItem="TNA-8f-KRM" secondAttribute="bottom" constant="10" id="23a-Eb-hIn"/>
                                     <constraint firstItem="hX4-tg-gjo" firstAttribute="top" secondItem="gYr-Ha-HYz" secondAttribute="bottom" constant="8" id="24n-zz-16T"/>
                                     <constraint firstItem="a1Q-8O-C5J" firstAttribute="leading" secondItem="Z0r-8C-hZu" secondAttribute="leading" id="2ON-yI-9il"/>
@@ -10519,6 +10538,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="ZhR-Jy-Njo" firstAttribute="leading" secondItem="Eon-rM-G8e" secondAttribute="leading" id="MKI-QJ-4E2"/>
                                     <constraint firstItem="ajA-KN-RaE" firstAttribute="leading" secondItem="xfr-6R-Fgc" secondAttribute="leading" id="Mee-Ut-ZzB"/>
                                     <constraint firstItem="f9l-gh-G1h" firstAttribute="trailing" secondItem="HfW-ym-3KH" secondAttribute="trailing" id="Mgf-1M-VDA"/>
+                                    <constraint firstItem="4zp-05-wDT" firstAttribute="top" secondItem="a1Q-8O-C5J" secondAttribute="bottom" constant="24" id="MpQ-KY-Ay8"/>
                                     <constraint firstItem="bA2-qE-Ilh" firstAttribute="leading" secondItem="xfr-6R-Fgc" secondAttribute="leading" id="NOe-fd-1iu"/>
                                     <constraint firstItem="2vb-3m-EFt" firstAttribute="centerX" secondItem="JeE-f1-yC8" secondAttribute="centerX" id="Ncf-ui-ye5"/>
                                     <constraint firstItem="s59-a6-kpJ" firstAttribute="top" secondItem="Nsh-sP-OiN" secondAttribute="bottom" constant="20" id="NzK-40-Lny"/>
@@ -10619,10 +10639,12 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="Ecl-hF-p8A" firstAttribute="top" secondItem="jaf-5k-Npg" secondAttribute="bottom" constant="8" id="pWW-yy-Kj9"/>
                                     <constraint firstItem="gYr-Ha-HYz" firstAttribute="top" secondItem="jih-8e-55U" secondAttribute="bottom" constant="26" id="pbv-Bd-efF"/>
                                     <constraint firstItem="Clp-g1-IUK" firstAttribute="top" secondItem="ZhR-Jy-Njo" secondAttribute="bottom" constant="24" id="pkD-ei-nQl"/>
+                                    <constraint firstItem="G4n-Gm-rwe" firstAttribute="trailing" secondItem="MBg-Z0-oT1" secondAttribute="trailing" id="qGy-Iv-vpr"/>
                                     <constraint firstItem="iJC-Vh-ib3" firstAttribute="centerX" secondItem="JeE-f1-yC8" secondAttribute="centerX" id="qQb-UH-CTp"/>
                                     <constraint firstItem="H9c-UV-kuS" firstAttribute="centerX" secondItem="JeE-f1-yC8" secondAttribute="centerX" id="r4f-h4-eo1"/>
                                     <constraint firstItem="TNA-8f-KRM" firstAttribute="centerX" secondItem="JeE-f1-yC8" secondAttribute="centerX" id="rEb-yM-tc0"/>
                                     <constraint firstItem="s59-a6-kpJ" firstAttribute="leading" secondItem="Eon-rM-G8e" secondAttribute="leading" id="rRH-fu-s5v"/>
+                                    <constraint firstItem="G4n-Gm-rwe" firstAttribute="top" secondItem="4zp-05-wDT" secondAttribute="bottom" constant="16" id="rYl-rV-0US"/>
                                     <constraint firstItem="ei6-Nl-31t" firstAttribute="leading" secondItem="HfW-ym-3KH" secondAttribute="leading" id="s0m-QD-P7K"/>
                                     <constraint firstItem="HjC-Hd-ZWr" firstAttribute="centerY" secondItem="DUV-6p-AhE" secondAttribute="centerY" id="sAO-QO-wo0"/>
                                     <constraint firstItem="I00-ZB-mVK" firstAttribute="centerY" secondItem="j2B-Np-pDZ" secondAttribute="centerY" id="sHh-jE-8mV"/>
@@ -10641,6 +10663,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="Sfa-I0-reX" firstAttribute="width" secondItem="ivI-c0-EOw" secondAttribute="width" id="x0D-qI-9uL"/>
                                     <constraint firstItem="Sfa-I0-reX" firstAttribute="leading" secondItem="2vb-3m-EFt" secondAttribute="trailing" id="x3M-id-eJH"/>
                                     <constraint firstAttribute="trailing" secondItem="Zow-7l-Fg2" secondAttribute="trailing" constant="24" id="xD8-GZ-8eJ"/>
+                                    <constraint firstItem="4zp-05-wDT" firstAttribute="leading" secondItem="Z0r-8C-hZu" secondAttribute="leading" id="xMe-Mv-NV1"/>
                                     <constraint firstItem="BT4-VZ-88i" firstAttribute="top" secondItem="qJt-Me-6gg" secondAttribute="bottom" constant="24" id="xZE-vW-Mro"/>
                                     <constraint firstItem="cpa-az-6lB" firstAttribute="centerX" secondItem="JeE-f1-yC8" secondAttribute="centerX" constant="6" id="yI9-06-9Lk"/>
                                 </constraints>
@@ -10694,6 +10717,7 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="cvStaticLabel" destination="bA2-qE-Ilh" id="7cn-yB-33E"/>
                         <outlet property="cvValueLabel" destination="rSF-PU-IBU" id="lfX-Oe-yZN"/>
                         <outlet property="daysRequiredCollectionView" destination="Kz5-PM-JrO" id="CRB-Uv-1I1"/>
+                        <outlet property="daysRequiredLabelTopConstraint" destination="JiI-qI-RxC" id="SSG-FV-Nb1"/>
                         <outlet property="doneButton" destination="Sfa-I0-reX" id="dLf-sm-du8"/>
                         <outlet property="eduLevelLabel" destination="7C3-TC-ron" id="8vC-jn-VSg"/>
                         <outlet property="experienceValueLabel" destination="cpa-az-6lB" id="Ynj-ef-6kn"/>
@@ -10733,6 +10757,8 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="noReviewsLabel" destination="14B-Se-p9n" id="HRN-NL-PAO"/>
                         <outlet property="nonSmokerImgView" destination="j2B-Np-pDZ" id="Q98-8u-Ngq"/>
                         <outlet property="nonSmokerLabel" destination="I00-ZB-mVK" id="XwY-bq-Z2J"/>
+                        <outlet property="otherRelevantInfoStaticLabel" destination="4zp-05-wDT" id="s7T-En-pmx"/>
+                        <outlet property="otherRelevantInfoTextView" destination="G4n-Gm-rwe" id="g46-xw-HVN"/>
                         <outlet property="profileImgView" destination="Moc-Wh-iSm" id="d3m-Fi-aa5"/>
                         <outlet property="rateLabel" destination="cAX-C2-lMg" id="J1f-gF-aRp"/>
                         <outlet property="rateStaticLabel" destination="o5k-8z-wUg" id="q2h-6A-dui"/>
@@ -12001,6 +12027,24 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other relevant info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDQ-bD-FPw">
+                                        <rect key="frame" x="16" y="1991" width="161.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lF-LQ-hKp">
+                                        <rect key="frame" x="21" y="2028" width="333" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="5Tr-V1-8ao"/>
+                                        </constraints>
+                                        <string key="text">Experienced flexible mature minder needed to work 3 full days a week. Duties include looking after two school going children ages 7 and 5.</string>
+                                        <color key="textColor" red="0.42310506110000001" green="0.54752999540000002" blue="0.64756429199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -12042,6 +12086,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="MiT-Lb-dkF" firstAttribute="leading" secondItem="ZSk-L0-I4L" secondAttribute="trailing" constant="15" id="AOn-bO-lTL"/>
                                     <constraint firstItem="2Gr-t6-ELT" firstAttribute="top" secondItem="ztZ-Mh-ty4" secondAttribute="bottom" constant="30" id="ARU-xZ-mXx"/>
                                     <constraint firstItem="yUO-gG-aGx" firstAttribute="height" secondItem="1zT-Xv-vcj" secondAttribute="height" id="AYI-qc-m5j"/>
+                                    <constraint firstItem="7lF-LQ-hKp" firstAttribute="leading" secondItem="5LO-cO-fzb" secondAttribute="leading" id="AYm-fa-6pf"/>
                                     <constraint firstAttribute="trailing" secondItem="Fcd-0M-dkI" secondAttribute="trailing" constant="16" id="C4w-5I-kMU"/>
                                     <constraint firstItem="k5B-6v-GLo" firstAttribute="leading" secondItem="pov-16-Qs3" secondAttribute="trailing" constant="15" id="CqR-MW-tL7"/>
                                     <constraint firstItem="Sr6-3L-NWL" firstAttribute="leading" secondItem="Nug-CT-cE7" secondAttribute="trailing" constant="8" id="DTp-Fr-wL5"/>
@@ -12049,9 +12094,11 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="bKY-pF-OB5" firstAttribute="leading" secondItem="lg5-ri-z09" secondAttribute="leading" id="Dyw-km-6EH"/>
                                     <constraint firstItem="zmj-C7-amE" firstAttribute="width" secondItem="bKY-pF-OB5" secondAttribute="width" id="EYs-r7-ehf"/>
                                     <constraint firstItem="qgF-0g-WXy" firstAttribute="top" secondItem="QyC-yv-Z9D" secondAttribute="top" id="FBo-Sz-Kkf"/>
+                                    <constraint firstItem="7lF-LQ-hKp" firstAttribute="trailing" secondItem="5LO-cO-fzb" secondAttribute="trailing" id="FN6-42-rNf"/>
                                     <constraint firstAttribute="trailing" secondItem="yUO-gG-aGx" secondAttribute="trailing" constant="16" id="FUP-Xd-eOR"/>
                                     <constraint firstItem="kUj-lf-LOv" firstAttribute="top" secondItem="oSs-PP-Ba0" secondAttribute="bottom" constant="24" id="Fes-aO-BqR"/>
                                     <constraint firstItem="jpc-U4-JFk" firstAttribute="leading" secondItem="x5J-rw-3wz" secondAttribute="trailing" constant="8" id="G1F-Ne-XHz"/>
+                                    <constraint firstItem="YDQ-bD-FPw" firstAttribute="leading" secondItem="JNl-6t-H7H" secondAttribute="leading" id="GDR-DJ-3Oq"/>
                                     <constraint firstItem="Nug-CT-cE7" firstAttribute="centerY" secondItem="uv8-4d-hJ8" secondAttribute="centerY" id="Gze-8i-WaF"/>
                                     <constraint firstItem="ZSk-L0-I4L" firstAttribute="leading" secondItem="uv8-4d-hJ8" secondAttribute="leading" id="H37-ew-NNO"/>
                                     <constraint firstItem="eqe-dj-ZKY" firstAttribute="top" secondItem="QyC-yv-Z9D" secondAttribute="bottom" constant="8" id="H4p-I0-mn2"/>
@@ -12097,6 +12144,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="1zT-Xv-vcj" firstAttribute="top" secondItem="BRo-MS-Igi" secondAttribute="bottom" constant="42" id="SuG-ZO-y1w"/>
                                     <constraint firstItem="yUO-gG-aGx" firstAttribute="leading" secondItem="13s-1w-A2U" secondAttribute="trailing" id="UBS-dP-Hqw"/>
                                     <constraint firstItem="Udq-4Q-39A" firstAttribute="centerY" secondItem="27g-1x-PDy" secondAttribute="centerY" id="Ufj-jf-xQe"/>
+                                    <constraint firstItem="7lF-LQ-hKp" firstAttribute="top" secondItem="YDQ-bD-FPw" secondAttribute="bottom" constant="16" id="Uxb-gP-3K0"/>
                                     <constraint firstItem="aGl-iT-VSZ" firstAttribute="top" secondItem="pov-16-Qs3" secondAttribute="bottom" constant="20" id="V9l-MR-8cc"/>
                                     <constraint firstItem="aGl-iT-VSZ" firstAttribute="leading" secondItem="uv8-4d-hJ8" secondAttribute="leading" id="VjT-0w-1AD"/>
                                     <constraint firstItem="8uv-4K-24X" firstAttribute="leading" secondItem="QyC-yv-Z9D" secondAttribute="leading" id="Vwl-bq-DZ4"/>
@@ -12154,6 +12202,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="fG5-cb-LY9" firstAttribute="centerX" secondItem="9Oo-lw-RUT" secondAttribute="centerX" id="jHI-97-3fE"/>
                                     <constraint firstItem="6ub-Cz-HvP" firstAttribute="top" secondItem="aGl-iT-VSZ" secondAttribute="bottom" constant="20" id="jLu-fb-UTF"/>
                                     <constraint firstItem="x5J-rw-3wz" firstAttribute="centerY" secondItem="6ub-Cz-HvP" secondAttribute="centerY" id="jhW-ki-ZS3"/>
+                                    <constraint firstItem="YDQ-bD-FPw" firstAttribute="top" secondItem="45N-1F-rZ1" secondAttribute="bottom" constant="23.5" id="kJW-uz-gcD"/>
                                     <constraint firstItem="pbw-iU-Kqr" firstAttribute="leading" secondItem="VNd-ow-gfZ" secondAttribute="trailing" id="kP5-ya-b9a"/>
                                     <constraint firstItem="HYi-W6-IPk" firstAttribute="top" secondItem="JFp-xk-qR9" secondAttribute="bottom" constant="24" id="kvy-9X-4Dr"/>
                                     <constraint firstItem="5LO-cO-fzb" firstAttribute="leading" secondItem="oSs-PP-Ba0" secondAttribute="leading" id="lXw-Eh-Sos"/>
@@ -12252,6 +12301,7 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="cvStaticLabel" destination="qgF-0g-WXy" id="8PP-KK-WlL"/>
                         <outlet property="cvValueLabel" destination="1gy-s0-qlE" id="o5c-S2-oa2"/>
                         <outlet property="daysRequiredCollectionView" destination="2Gr-t6-ELT" id="9rC-Qb-W0O"/>
+                        <outlet property="daysRequiredLabelTopConstraint" destination="QoH-rM-zTm" id="Xli-qT-ZzP"/>
                         <outlet property="doneButton" destination="yUO-gG-aGx" id="wzf-OO-4D7"/>
                         <outlet property="eduLevelLabel" destination="ocd-mq-arf" id="Hl6-tE-ea8"/>
                         <outlet property="experienceValueLabel" destination="Udq-4Q-39A" id="GV1-oQ-XmN"/>
@@ -12289,6 +12339,8 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="noReviewsLabel" destination="SI1-Sm-ojr" id="5Wq-BY-xRM"/>
                         <outlet property="nonSmokerImgView" destination="sFk-ag-QZb" id="ckL-uS-gjo"/>
                         <outlet property="nonSmokerLabel" destination="ZgZ-um-HSG" id="23l-os-cP6"/>
+                        <outlet property="otherRelevantInfoStaticLabel" destination="YDQ-bD-FPw" id="Wxg-5D-Ecx"/>
+                        <outlet property="otherRelevantInfoTextView" destination="7lF-LQ-hKp" id="gKH-Gq-MFU"/>
                         <outlet property="profileImgView" destination="VUS-Qk-XTq" id="9e3-gd-6mO"/>
                         <outlet property="rateLabel" destination="pbw-iU-Kqr" id="a5i-62-7TL"/>
                         <outlet property="rateStaticLabel" destination="VNd-ow-gfZ" id="mPq-M2-1zf"/>
@@ -12388,7 +12440,7 @@ We may send emails to existing customers or prospective customers who have enqui
     <inferredMetricsTieBreakers>
         <segue reference="6aR-De-M3m"/>
         <segue reference="kMe-Y4-Jvu"/>
-        <segue reference="p8p-Lv-PZS"/>
+        <segue reference="f1d-Wb-gFu"/>
         <segue reference="biN-AH-pt4"/>
         <segue reference="YrY-OZ-7Vc"/>
         <segue reference="tzj-il-TQz"/>

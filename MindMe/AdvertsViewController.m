@@ -120,6 +120,10 @@
             _subscribedValueTopConstraint.constant = 40.;
         }
         
+        if (kScreenHeight == 568) {
+            _subscribedValueTopConstraint.constant = 50;
+        }
+        
         _boxesHeightConstraint.constant = 80;
         _boxLabelTopConstraint.constant = (85.+12);
         
