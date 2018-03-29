@@ -948,7 +948,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTACT US" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFY-5C-hrp">
-                                <rect key="frame" x="116.5" y="104" width="144" height="27"/>
+                                <rect key="frame" x="115.5" y="104" width="144" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1304,7 +1304,7 @@ Terms of Services and Privacy Policy</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JC3-UU-uad">
-                                                <rect key="frame" x="17.5" y="42" width="60" height="17"/>
+                                                <rect key="frame" x="16.5" y="42" width="60" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="XkB-lh-fsK"/>
                                                 </constraints>
@@ -1654,7 +1654,7 @@ Terms of Services and Privacy Policy</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADVERT CONTROL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2t-34-g3B">
-                                <rect key="frame" x="84" y="104" width="209" height="27"/>
+                                <rect key="frame" x="83" y="104" width="209" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -3732,7 +3732,7 @@ APPROVAL</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIVACY POLICY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhV-SY-4Fw">
-                                <rect key="frame" x="95" y="104" width="187" height="27"/>
+                                <rect key="frame" x="94" y="104" width="187" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" red="0.99301582570000002" green="0.5386695266" blue="0.030994832520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -6111,7 +6111,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iez-ac-tb1">
-                                <rect key="frame" x="111" y="600" width="153.5" height="55"/>
+                                <rect key="frame" x="111.5" y="600" width="152.5" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iez-ac-tb1" secondAttribute="height" multiplier="482:174" id="Djx-2x-JcJ"/>
                                     <constraint firstAttribute="height" constant="55" id="THv-2m-hUC"/>
@@ -6289,7 +6289,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yhj-ON-ojt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yAc-9C-3no">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yAc-9C-3no">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -6308,7 +6308,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wg9-Nn-sTY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="etA-fm-vvl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="etA-fm-vvl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -6445,7 +6445,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANGE PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uO1-Nc-ncy">
-                                <rect key="frame" x="70.5" y="51" width="236" height="27"/>
+                                <rect key="frame" x="69.5" y="51" width="236" height="27"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -8963,7 +8963,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Card Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1YQ-Fw-pcn">
-                                <rect key="frame" x="69.5" y="226" width="100" height="20"/>
+                                <rect key="frame" x="69.5" y="226" width="289.5" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="EYk-Mz-pDy"/>
                                 </constraints>
@@ -9110,6 +9110,7 @@ We may send emails to existing customers or prospective customers who have enqui
                             <constraint firstItem="9Aj-ox-5Ex" firstAttribute="leading" secondItem="Pl9-YU-NSL" secondAttribute="trailing" constant="8" id="v02-v2-oij"/>
                             <constraint firstItem="kJE-Fa-2fH" firstAttribute="centerX" secondItem="6QH-7O-4Qn" secondAttribute="centerX" id="xjx-nB-rmb"/>
                             <constraint firstAttribute="trailing" secondItem="9II-Gd-mue" secondAttribute="trailing" id="xkp-2T-yRt"/>
+                            <constraint firstItem="1YQ-Fw-pcn" firstAttribute="width" secondItem="qUK-ol-fKL" secondAttribute="width" id="yVa-vX-Gek"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -11113,7 +11114,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rl-Kq-bi9">
-                                                <rect key="frame" x="13.5" y="42" width="68" height="17"/>
+                                                <rect key="frame" x="12.5" y="42" width="68" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="KGf-KK-hmM"/>
                                                 </constraints>
@@ -11141,7 +11142,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w57-E7-2tu">
-                                                <rect key="frame" x="17.5" y="42" width="60" height="17"/>
+                                                <rect key="frame" x="16.5" y="42" width="60" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="FoF-2H-Itq"/>
                                                 </constraints>
