@@ -49,6 +49,7 @@
 #define ArchiveMessage @"conversations/archive"
 #define GetAllConversations @"conversations/getAllMessagesInConversations"
 #define GetUnreadMessageCount @"conversations/total_count"
+#define UpdateStatus @"conversations/statusupdate"
 
 #define GetSingleAdvertDetails @"advert/getDetailsOfSingleAdvert"
 #define DowngradeAccount @"auth/downgradeRequest"

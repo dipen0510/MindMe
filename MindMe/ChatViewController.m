@@ -430,6 +430,17 @@ NS_ENUM(NSUInteger, QMMessageType) {
     
 }
 
+- (void) startUpdateMessageStatusService {
+    
+    //    [SVProgressHUD showWithStatus:@"Sending Message"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = UpdateStatus;
+    manager.delegate = nil;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForUpdateMessageStatus]];
+    
+}
+
 
 #pragma mark - DATASYNCMANAGER Delegates
 
@@ -443,6 +454,8 @@ NS_ENUM(NSUInteger, QMMessageType) {
             
             messagesArr = [[NSMutableArray alloc] initWithArray:[responseData valueForKey:@"message"]];
             [self setupMessageDataSource];
+            
+            [self startUpdateMessageStatusService];
             
         }
         
@@ -596,6 +609,34 @@ NS_ENUM(NSUInteger, QMMessageType) {
     return dict;
     
 }
+
+- (NSMutableDictionary *) prepareDictionaryForUpdateMessageStatus {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    NSMutableArray* tmpArr = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary* msg in messagesArr) {
+        if ([[msg valueForKey:@"from"] intValue]!=self.senderID) {
+            [tmpArr addObject:[msg valueForKey:@"ID"]];
+        }
+    }
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:tmpArr forKey:@"parent"];
+        [dict setObject:[[NSMutableArray alloc] init] forKey:@"carer"];
+    }
+    else {
+        [dict setObject:[[NSMutableArray alloc] init] forKey:@"parent"];
+        [dict setObject:tmpArr forKey:@"carer"];
+    }
+    
+    [dict setObject:@"2" forKey:@"status"];
+    
+    return dict;
+    
+}
+
 
 - (NSMutableDictionary *) prepareDictionaryForGetSingleAdvertDetails {
     
