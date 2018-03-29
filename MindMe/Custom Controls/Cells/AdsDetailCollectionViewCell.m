@@ -14,7 +14,7 @@
     [super awakeFromNib];
     // Initialization code
     
-    _detailsTextLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(19./667)*kScreenHeight];
+    _detailsTextLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(17.5/667)*kScreenHeight];
     
 }
 

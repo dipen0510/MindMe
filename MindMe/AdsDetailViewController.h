@@ -126,5 +126,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *carImgViewTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *locationTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *genderSeparatorViewTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *otherRelevantInfoHeightConstraint;
 
 @end

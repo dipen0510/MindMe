@@ -536,7 +536,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="18" y="540" width="340" height="40"/>
+                                <rect key="frame" x="18" y="540" width="340" height="41.5"/>
                                 <string key="text">By pressing Sign Up you agree with the
 Terms of Services and Privacy Policy</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
@@ -10758,6 +10758,7 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="noReviewsLabel" destination="14B-Se-p9n" id="HRN-NL-PAO"/>
                         <outlet property="nonSmokerImgView" destination="j2B-Np-pDZ" id="Q98-8u-Ngq"/>
                         <outlet property="nonSmokerLabel" destination="I00-ZB-mVK" id="XwY-bq-Z2J"/>
+                        <outlet property="otherRelevantInfoHeightConstraint" destination="Tnw-0V-BSi" id="GyJ-VW-vHa"/>
                         <outlet property="otherRelevantInfoStaticLabel" destination="4zp-05-wDT" id="s7T-En-pmx"/>
                         <outlet property="otherRelevantInfoTextView" destination="G4n-Gm-rwe" id="g46-xw-HVN"/>
                         <outlet property="profileImgView" destination="Moc-Wh-iSm" id="d3m-Fi-aa5"/>
@@ -11349,7 +11350,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x67-jn-t9T">
-                                        <rect key="frame" x="21" y="1238.5" width="333" height="54"/>
+                                        <rect key="frame" x="16" y="1238.5" width="343" height="54"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="Uv7-Kg-fei"/>
@@ -11389,7 +11390,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oSs-PP-Ba0">
-                                        <rect key="frame" x="21" y="1378.5" width="333" height="54"/>
+                                        <rect key="frame" x="16" y="1378.5" width="343" height="54"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="yGT-y9-QVN"/>
@@ -11429,7 +11430,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qTu-Kp-yLr">
-                                        <rect key="frame" x="21" y="1518.5" width="333" height="33"/>
+                                        <rect key="frame" x="16" y="1518.5" width="343" height="33"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="S97-a4-HpR"/>
@@ -11470,7 +11471,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="owN-Ct-XWd">
-                                        <rect key="frame" x="21" y="1637.5" width="333" height="25"/>
+                                        <rect key="frame" x="16" y="1637.5" width="343" height="25"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="RQN-hK-kqf"/>
@@ -11510,7 +11511,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="F5Z-ZC-Rub">
-                                        <rect key="frame" x="21" y="1748.5" width="333" height="29"/>
+                                        <rect key="frame" x="16" y="1748.5" width="343" height="29"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="98s-0r-D2j"/>
@@ -11550,7 +11551,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5LO-cO-fzb">
-                                        <rect key="frame" x="21" y="1863.5" width="333" height="79"/>
+                                        <rect key="frame" x="16" y="1863.5" width="343" height="79"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="79" id="C7c-V9-uAw"/>
@@ -12035,7 +12036,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lF-LQ-hKp">
-                                        <rect key="frame" x="21" y="2028" width="333" height="80"/>
+                                        <rect key="frame" x="16" y="2028" width="343" height="80"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="5Tr-V1-8ao"/>
@@ -12060,7 +12061,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="6fR-nC-xu1" firstAttribute="leading" secondItem="JNl-6t-H7H" secondAttribute="leading" id="3iG-70-jV3"/>
                                     <constraint firstItem="b3s-yb-5Yv" firstAttribute="leading" secondItem="iwB-JM-TEx" secondAttribute="leading" id="3zl-by-aKa"/>
                                     <constraint firstItem="VUS-Qk-XTq" firstAttribute="centerX" secondItem="9Oo-lw-RUT" secondAttribute="centerX" id="4Rl-MA-S5P"/>
-                                    <constraint firstAttribute="trailing" secondItem="x67-jn-t9T" secondAttribute="trailing" constant="21" id="4XV-WU-nPp"/>
+                                    <constraint firstAttribute="trailing" secondItem="x67-jn-t9T" secondAttribute="trailing" constant="16" id="4XV-WU-nPp"/>
                                     <constraint firstItem="UAB-a3-LUV" firstAttribute="leading" secondItem="9Oo-lw-RUT" secondAttribute="leading" id="4Zo-KZ-OH8"/>
                                     <constraint firstAttribute="trailing" secondItem="Udq-4Q-39A" secondAttribute="trailing" constant="8" id="4gZ-AI-yAi"/>
                                     <constraint firstItem="5LO-cO-fzb" firstAttribute="top" secondItem="JNl-6t-H7H" secondAttribute="bottom" constant="16" id="59s-wR-zld"/>
@@ -12220,7 +12221,7 @@ We may send emails to existing customers or prospective customers who have enqui
                                     <constraint firstItem="8uv-4K-24X" firstAttribute="top" secondItem="ak7-1y-dvP" secondAttribute="bottom" constant="24" id="ofN-iY-wQU"/>
                                     <constraint firstItem="oSs-PP-Ba0" firstAttribute="trailing" secondItem="x67-jn-t9T" secondAttribute="trailing" id="qFv-1h-vBd"/>
                                     <constraint firstItem="p2n-dE-71D" firstAttribute="centerX" secondItem="9Oo-lw-RUT" secondAttribute="centerX" id="qMl-1y-emR"/>
-                                    <constraint firstItem="x67-jn-t9T" firstAttribute="leading" secondItem="9Oo-lw-RUT" secondAttribute="leading" constant="21" id="qZm-c0-3hG"/>
+                                    <constraint firstItem="x67-jn-t9T" firstAttribute="leading" secondItem="9Oo-lw-RUT" secondAttribute="leading" constant="16" id="qZm-c0-3hG"/>
                                     <constraint firstItem="Cvd-VT-Fxn" firstAttribute="centerX" secondItem="9Oo-lw-RUT" secondAttribute="centerX" id="r0p-Kf-dOd"/>
                                     <constraint firstItem="CH1-Ld-G9j" firstAttribute="leading" secondItem="9Oo-lw-RUT" secondAttribute="leading" constant="24" id="r8F-My-VWV"/>
                                     <constraint firstItem="jy7-w3-Rpz" firstAttribute="leading" secondItem="MiT-Lb-dkF" secondAttribute="trailing" constant="8" id="rcP-vf-CWK"/>
@@ -12340,6 +12341,7 @@ We may send emails to existing customers or prospective customers who have enqui
                         <outlet property="noReviewsLabel" destination="SI1-Sm-ojr" id="5Wq-BY-xRM"/>
                         <outlet property="nonSmokerImgView" destination="sFk-ag-QZb" id="ckL-uS-gjo"/>
                         <outlet property="nonSmokerLabel" destination="ZgZ-um-HSG" id="23l-os-cP6"/>
+                        <outlet property="otherRelevantInfoHeightConstraint" destination="5Tr-V1-8ao" id="sE3-5n-OGb"/>
                         <outlet property="otherRelevantInfoStaticLabel" destination="YDQ-bD-FPw" id="Wxg-5D-Ecx"/>
                         <outlet property="otherRelevantInfoTextView" destination="7lF-LQ-hKp" id="gKH-Gq-MFU"/>
                         <outlet property="profileImgView" destination="VUS-Qk-XTq" id="9e3-gd-6mO"/>
@@ -12440,15 +12442,15 @@ We may send emails to existing customers or prospective customers who have enqui
         <image name="unchecked" width="76" height="76"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6aR-De-M3m"/>
-        <segue reference="kMe-Y4-Jvu"/>
-        <segue reference="f1d-Wb-gFu"/>
+        <segue reference="jWM-TZ-0OS"/>
         <segue reference="biN-AH-pt4"/>
         <segue reference="YrY-OZ-7Vc"/>
         <segue reference="ER4-wA-VwG"/>
-        <segue reference="DZM-SZ-u2d"/>
-        <segue reference="jWM-TZ-0OS"/>
         <segue reference="rOb-Cg-ZKt"/>
+        <segue reference="DZM-SZ-u2d"/>
+        <segue reference="f1d-Wb-gFu"/>
+        <segue reference="6aR-De-M3m"/>
+        <segue reference="kMe-Y4-Jvu"/>
         <segue reference="9pm-1v-sJv"/>
     </inferredMetricsTieBreakers>
 </document>
