@@ -13,4 +13,6 @@
  */
 @interface QMChatOutgoingCell : QMChatCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *statusImgView;
+
 @end

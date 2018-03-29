@@ -42,7 +42,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16:44" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KM3-Oj-tba" customClass="TTTAttributedLabel">
-                                        <rect key="frame" x="0.0" y="53" width="166" height="21"/>
+                                        <rect key="frame" x="0.0" y="53" width="145" height="21"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" identifier="outgCellBottomLabelHeight" id="WU0-tf-mgf"/>
@@ -51,15 +51,24 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenDoubleTick" translatesAutoresizingMaskIntoConstraints="NO" id="6DJ-v0-689">
+                                        <rect key="frame" x="151" y="61" width="15" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="15" id="FV2-DF-FPx"/>
+                                            <constraint firstAttribute="height" constant="15" id="WaT-Nh-3f3"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="h8u-4h-IEt" firstAttribute="leading" secondItem="UGA-Lo-mbI" secondAttribute="leading" priority="100" identifier="outgCellTopLabelLeading" id="2hL-wa-XL0"/>
                                     <constraint firstItem="KM3-Oj-tba" firstAttribute="top" secondItem="gwl-pf-rea" secondAttribute="bottom" id="BQZ-mi-zJi"/>
                                     <constraint firstAttribute="trailing" secondItem="gwl-pf-rea" secondAttribute="trailing" identifier="outgCellMessageTextLabelTrailing" id="C4J-58-vtD"/>
-                                    <constraint firstAttribute="trailing" secondItem="KM3-Oj-tba" secondAttribute="trailing" id="Cnr-Ch-k1c"/>
+                                    <constraint firstAttribute="trailing" secondItem="KM3-Oj-tba" secondAttribute="trailing" constant="21" id="Cnr-Ch-k1c"/>
                                     <constraint firstItem="h8u-4h-IEt" firstAttribute="top" secondItem="UGA-Lo-mbI" secondAttribute="top" id="E1C-0z-mfn"/>
+                                    <constraint firstAttribute="bottom" secondItem="6DJ-v0-689" secondAttribute="bottom" constant="-2" id="Ja6-pR-GGG"/>
                                     <constraint firstAttribute="trailing" secondItem="h8u-4h-IEt" secondAttribute="trailing" identifier="outgCellTopLabelTrailing" id="KrN-Zw-ZY1"/>
+                                    <constraint firstAttribute="trailing" secondItem="6DJ-v0-689" secondAttribute="trailing" id="Q6k-cL-CAQ"/>
                                     <constraint firstAttribute="bottom" secondItem="KM3-Oj-tba" secondAttribute="bottom" identifier="outgCellBottomLabelBottom" id="Qq4-nq-W8i"/>
                                     <constraint firstItem="KM3-Oj-tba" firstAttribute="leading" secondItem="UGA-Lo-mbI" secondAttribute="leading" id="UGl-WW-1AM"/>
                                     <constraint firstItem="gwl-pf-rea" firstAttribute="top" secondItem="h8u-4h-IEt" secondAttribute="bottom" id="mbp-Hv-6Tq"/>
@@ -110,6 +119,7 @@
                 <outlet property="messageContainerLeftInsetConstraint" destination="mRm-gl-BUZ" id="Ydv-Yj-jUS"/>
                 <outlet property="messageContainerRightInsetConstraint" destination="UcN-qd-Nxu" id="8Mn-ym-bz2"/>
                 <outlet property="messageContainerTopInsetConstraint" destination="Oep-MV-D9j" id="3nI-aa-1UH"/>
+                <outlet property="statusImgView" destination="6DJ-v0-689" id="4pA-qb-Ewp"/>
                 <outlet property="textView" destination="gwl-pf-rea" id="y5I-qm-hyU"/>
                 <outlet property="textViewBottomLabelVerticalSpaceConstraint" destination="BQZ-mi-zJi" id="dBa-7K-cFG"/>
                 <outlet property="topLabel" destination="h8u-4h-IEt" id="hdo-Lk-tvT"/>
@@ -119,4 +129,7 @@
             <point key="canvasLocation" x="257" y="361"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="greenDoubleTick" width="48" height="48"/>
+    </resources>
 </document>

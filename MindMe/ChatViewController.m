@@ -206,6 +206,17 @@ NS_ENUM(NSUInteger, QMMessageType) {
                                          limitedToNumberOfLines:0];
     }
     
+    if (viewClass == [QMChatOutgoingCell class] && size.width < 50) {
+        
+        if (size.width>30) {
+            size.width = size.width + 25;
+        }
+        else {
+            size.width = size.width + 45;
+        }
+        
+    }
+    
     return size;
 }
 
@@ -254,6 +265,30 @@ NS_ENUM(NSUInteger, QMMessageType) {
         avatarImgStr = receiverImgUrlStr;
     }
     
+    if ([cell1 isKindOfClass:[QMChatOutgoingCell class]]) {
+        
+        switch (message.recipientID) {
+                
+            case 0:
+                ((QMChatOutgoingCell*)cell1).statusImgView.image = [UIImage imageNamed:@"singleTick"];
+                break;
+                
+            case 1:
+                ((QMChatOutgoingCell*)cell1).statusImgView.image = [UIImage imageNamed:@"blackDoubleTick"];
+                break;
+                
+            case 2:
+                ((QMChatOutgoingCell*)cell1).statusImgView.image = [UIImage imageNamed:@"greenDoubleTick"];
+                break;
+                
+            default:
+                ((QMChatOutgoingCell*)cell1).statusImgView.image = [UIImage imageNamed:@"block"];
+                break;
+                
+        }
+        
+    }
+    
     __weak UIImageView* weakImageView = cell1.avatarView;
     [cell1.avatarView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceURL,avatarImgStr] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
                                                               cachePolicy:NSURLRequestReturnCacheDataElseLoad
@@ -269,6 +304,8 @@ NS_ENUM(NSUInteger, QMMessageType) {
     
     cell1.avatarView.layer.cornerRadius = cell1.avatarView.frame.size.height/2.;
     cell1.avatarView.layer.masksToBounds = YES;
+    
+    
     
     [super collectionView:collectionView configureCell:cell forIndexPath:indexPath];
 }
@@ -672,6 +709,8 @@ NS_ENUM(NSUInteger, QMMessageType) {
         QBChatMessage *message = [QBChatMessage message];
         message.text = [dict valueForKey:@"message1"];
         message.senderID = [[dict valueForKey:@"from"] intValue];
+        
+        message.recipientID = [[dict valueForKey:@"status"] intValue]; //For delivery status
         
         NSDateFormatter* dateformatter = [[NSDateFormatter alloc] init];
         [dateformatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
