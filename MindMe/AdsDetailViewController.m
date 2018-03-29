@@ -221,7 +221,7 @@
     NSDateFormatter* dateFormatter1 = [[NSDateFormatter alloc] init];
     [dateFormatter1 setDateStyle:NSDateFormatterMediumStyle];
     
-    _lastLoginLabel.text = [dateFormatter1 stringFromDate:[dateFormatter dateFromString:[_advertDict valueForKey:@"posted"]]];
+    _lastLoginLabel.text = [self getStringFromMillisecondsDate:[[_advertDict valueForKey:@"ctime"] doubleValue]];
     _memberSinceLabel.text = [dateFormatter1 stringFromDate:[dateFormatter dateFromString:[_advertDict valueForKey:@"date"]]];
     
     if ([[_advertDict valueForKey:@"additionals"] containsString:@"Have a car"]) {
@@ -1857,6 +1857,23 @@
                                        toDate:today
                                        options:0];
     return ageComponents.year;
+}
+
+-(NSString *)getStringFromMillisecondsDate:(double)interval
+{
+    if (interval == 0)
+    {
+        return @"";
+    }
+    double seconds = interval;
+    NSTimeInterval timeInterval = (NSTimeInterval)seconds;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+    
+    NSDateFormatter* df_utc = [[NSDateFormatter alloc] init];
+    [df_utc setTimeZone:[NSTimeZone localTimeZone]];
+    [df_utc setDateStyle:NSDateFormatterMediumStyle];
+    NSString *Date=[df_utc stringFromDate:date];
+    return Date;
 }
 
 @end
