@@ -30,6 +30,14 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *boxesHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *boxLabelTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *subscribedValueTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *liveAdvertValueTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *advertTblViewHeightConstraint;
+
+@property (weak, nonatomic) IBOutlet UIView *favoritesView;
+@property (weak, nonatomic) IBOutlet UIView *searchView;
+@property (weak, nonatomic) IBOutlet UIView *profileView;
+@property (weak, nonatomic) IBOutlet UIView *messagesView;
+@property (weak, nonatomic) IBOutlet UILabel *unreadMessageLabel;
 
 - (IBAction)menuButtonTapped:(id)sender;
 

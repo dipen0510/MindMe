@@ -47,7 +47,7 @@
                         <state key="selected" image="off_on"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zn1-BL-pWK">
-                        <rect key="frame" x="12" y="86.5" width="240" height="59"/>
+                        <rect key="frame" x="12" y="79.5" width="240" height="59"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="zn1-BL-pWK" secondAttribute="height" multiplier="756:186" id="vDA-oq-juI"/>
                         </constraints>
@@ -58,7 +58,7 @@
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIt-YL-dAZ">
-                        <rect key="frame" x="269" y="88.5" width="29" height="41"/>
+                        <rect key="frame" x="269" y="81.5" width="29" height="41"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="jIt-YL-dAZ" secondAttribute="height" multiplier="5:7" id="bqy-qz-BML"/>
                             <constraint firstAttribute="width" constant="29" id="gtt-oa-oTX"/>
@@ -85,7 +85,7 @@
                     <constraint firstAttribute="trailingMargin" secondItem="jIt-YL-dAZ" secondAttribute="trailing" constant="14" id="mxG-20-QWQ"/>
                     <constraint firstItem="nBy-PY-eF8" firstAttribute="leading" secondItem="Qh4-rf-zgU" secondAttribute="trailing" constant="8" id="nD3-G0-uZs"/>
                     <constraint firstItem="jIt-YL-dAZ" firstAttribute="centerY" secondItem="zn1-BL-pWK" secondAttribute="centerY" constant="-7" id="ptg-cT-ByP"/>
-                    <constraint firstItem="gFy-1l-uLx" firstAttribute="top" secondItem="zn1-BL-pWK" secondAttribute="bottom" constant="3" id="rnN-B8-2fr"/>
+                    <constraint firstItem="gFy-1l-uLx" firstAttribute="top" secondItem="zn1-BL-pWK" secondAttribute="bottom" constant="10" id="rnN-B8-2fr"/>
                     <constraint firstItem="zn1-BL-pWK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="4" id="uoD-ym-Xtz"/>
                 </constraints>
             </tableViewCellContentView>

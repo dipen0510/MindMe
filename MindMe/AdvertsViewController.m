@@ -52,6 +52,7 @@
         }
         else {
             [self startGetAdvertsService];
+            [self startGetUnreadMessageCount];
         }
     }
     
@@ -112,22 +113,39 @@
         if (![[SharedClass sharedInstance] isUserCarer]) {
             _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"Subscribed\n\n"];
             _subscribedValueLabel.text = @"Subscribe\nNow";
-            _subscribedValueTopConstraint.constant = 40.;
+            _subscribedValueTopConstraint.constant = 85.;
         }
         else {
             _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"Upgraded\n\n"];
             _subscribedValueLabel.text = @"Upgrade\nNow";
-            _subscribedValueTopConstraint.constant = 40.;
+            _subscribedValueTopConstraint.constant = 85.;
         }
         
         if (kScreenHeight == 568) {
-            _subscribedValueTopConstraint.constant = 50;
+            _subscribedValueTopConstraint.constant = 90;
         }
         
         _boxesHeightConstraint.constant = 80;
-        _boxLabelTopConstraint.constant = (85.+12);
+        _liveAdvertValueTopConstraint.constant = 95.;
+//        _boxLabelTopConstraint.constant = (85.+12);
         
     }
+    
+    
+    _favoritesView.userInteractionEnabled = YES;
+    [_favoritesView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(favoritesViewTapped)]];
+    
+    _searchView.userInteractionEnabled = YES;
+    [_searchView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(searchViewTapped)]];
+    
+    _profileView.userInteractionEnabled = YES;
+    [_profileView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(profileViewTapped)]];
+    
+    _messagesView.userInteractionEnabled = YES;
+    [_messagesView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(messagesViewTapped)]];
+    
+    _unreadMessageLabel.layer.cornerRadius = 10;
+    _unreadMessageLabel.layer.masksToBounds = YES;
     
 }
 
@@ -142,6 +160,56 @@
     [self.sideMenuController showLeftViewAnimated];
     
 }
+
+- (void) searchViewTapped {
+    
+    if (![[SharedClass sharedInstance] isGuestUser]) {
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+    }
+    else {
+        [self.sideMenuController.navigationController popViewControllerAnimated:YES];
+    }
+    
+}
+
+- (void) favoritesViewTapped {
+    
+    if (![[SharedClass sharedInstance] isGuestUser]) {
+        [self performSegueWithIdentifier:@"showFavoritesSegue" sender:nil];
+    }
+    else {
+        [self.sideMenuController.navigationController popViewControllerAnimated:YES];
+    }
+    
+}
+
+- (void) messagesViewTapped {
+    
+    if (![[SharedClass sharedInstance] isGuestUser]) {
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ChatListViewController" forSideMenuController:self.sideMenuController];
+    }
+    else {
+        [self.sideMenuController.navigationController popViewControllerAnimated:YES];
+    }
+    
+}
+
+- (void) profileViewTapped {
+    
+    if (![[SharedClass sharedInstance] isGuestUser]) {
+        if ([[SharedClass sharedInstance] isUserCarer]) {
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileViewController" forSideMenuController:self.sideMenuController];
+        }
+        else {
+            [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"EditProfileParentViewController" forSideMenuController:self.sideMenuController];
+        }
+    }
+    else {
+        [self.sideMenuController.navigationController popViewControllerAnimated:YES];
+    }
+    
+}
+
 
 
 #pragma mark - Navigation
@@ -343,6 +411,15 @@
     
 }
 
+- (void) startGetUnreadMessageCount {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GetUnreadMessageCount;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForGetUnreadMessageCount]];
+    
+}
+
 
 #pragma mark - DATASYNCMANAGER Delegates
 
@@ -355,9 +432,11 @@
         if ([[responseData valueForKey:@"message"] isKindOfClass:[NSArray class]]) {
             advertsArr = [[NSMutableArray alloc] initWithArray:[responseData valueForKey:@"message"]];
             [self updateLiveAdvertsValueLabel];
+            _advertTblViewHeightConstraint.constant = 150*advertsArr.count;
         }
         else {
             _liveAdvertValueLabel.text = @"0";
+            _advertTblViewHeightConstraint.constant = 0;
         }
         
         [_advertTblView reloadData];
@@ -369,7 +448,12 @@
         [self startGetAdvertsService];
         
     }
-    
+    if ([requestServiceKey isEqualToString:GetUnreadMessageCount]) {
+        
+        int total = [[[[responseData valueForKey:@"message"] objectAtIndex:0] valueForKey:@"total"] intValue];
+        _unreadMessageLabel.text = [NSString stringWithFormat:@"%d",total];
+        
+    }
     
     
 }
@@ -456,6 +540,22 @@
     return dict;
     
 }
+
+- (NSMutableDictionary *) prepareDictionaryForGetUnreadMessageCount {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    return dict;
+    
+}
+
 
 - (void) updateLiveAdvertsValueLabel {
     
