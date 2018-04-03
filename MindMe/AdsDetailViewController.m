@@ -1291,7 +1291,7 @@
     _firstCollectionView.hidden = YES;
     _firstCollectionViewSeparatorView.hidden = YES;
     
-    _thirdCollectionViewTitleTopConstraint.constant = -(80./568.)*kScreenHeight - _secondCollectionViewHeightConstraint.constant - _firstCollectionViewHeightConstraint.constant;
+    _thirdCollectionViewTitleTopConstraint.constant = -(40./568.)*kScreenHeight - _secondCollectionViewHeightConstraint.constant - _firstCollectionViewHeightConstraint.constant;
     thirdCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"require"] componentsSeparatedByString:@","]];
     if ([[thirdCollectionViewArr lastObject] isEqualToString:@""]) {
         [thirdCollectionViewArr removeLastObject];
