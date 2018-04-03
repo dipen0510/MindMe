@@ -470,6 +470,10 @@
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
     _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
     
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant + 100.;
+    }
+    
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
     _secondCollectionViewTitle.hidden = YES;
@@ -491,7 +495,7 @@
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -168 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -140 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Childminders", @"Creche", @"Dog Walkers", @"Elderly Care", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -501,6 +505,8 @@
         fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
         
         seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+        _otherRelevantInfoTextView.text = [_advertDetailsDict valueForKey:@"love_optional"];
         
     }
     
@@ -526,6 +532,10 @@
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
     _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
     
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant + 100.;
+    }
+    
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
     _secondCollectionViewTitle.hidden = YES;
@@ -547,7 +557,7 @@
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -168 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -140 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -557,6 +567,8 @@
         fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
         
         seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+        _otherRelevantInfoTextView.text = [_advertDetailsDict valueForKey:@"love_optional"];
         
     }
     
@@ -583,6 +595,10 @@
     _otherRelevantInfoTextView.hidden = NO;
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
     _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant + 100.;
+    }
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
@@ -617,6 +633,8 @@
         
         seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
         
+        _otherRelevantInfoTextView.text = [_advertDetailsDict valueForKey:@"love_optional"];
+        
     }
     
 }
@@ -641,6 +659,10 @@
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
     _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
     
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant + 100.;
+    }
+    
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
     _secondCollectionViewTitle.hidden = YES;
@@ -662,7 +684,7 @@
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -168 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -140 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -672,6 +694,8 @@
         fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
         
         seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+        _otherRelevantInfoTextView.text = [_advertDetailsDict valueForKey:@"love_optional"];
         
     }
     
@@ -694,6 +718,10 @@
     _otherRelevantInfoTextView.hidden = NO;
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
     _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant + 100.;
+    }
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
@@ -718,7 +746,7 @@
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -168 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -140 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Nanny", @"Pet Minders", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -726,6 +754,8 @@
         fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
         
         seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+        _otherRelevantInfoTextView.text = [_advertDetailsDict valueForKey:@"love_optional"];
         
     }
     
@@ -751,6 +781,10 @@
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
     _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
     
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant + 100.;
+    }
+    
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
     _secondCollectionViewTitle.hidden = YES;
@@ -772,7 +806,7 @@
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -168 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -140 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Private Midwife", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -782,6 +816,8 @@
         fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
         
         seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+        _otherRelevantInfoTextView.text = [_advertDetailsDict valueForKey:@"love_optional"];
         
     }
     
@@ -805,6 +841,10 @@
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
     _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
     
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant + 100.;
+    }
+    
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
     _secondCollectionViewTitle.hidden = YES;
@@ -815,7 +855,7 @@
     _thirdCollectionView.hidden = YES;
     _thirdCollectionSeparatorView.hidden = YES;
     
-    _fourthCollectionViewTitleTopConstraint.constant = -148 - _secondCollectionViewHeightConstraint.constant - _thirdCollectionViewHeightConstraint.constant;
+    _fourthCollectionViewTitleTopConstraint.constant = -120 - _secondCollectionViewHeightConstraint.constant - _thirdCollectionViewHeightConstraint.constant;
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Special Needs Certification", nil];
     _fourthCollectionViewHeightConstraint.constant = 200.;
     
@@ -827,7 +867,7 @@
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -168 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -140 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"School Run", @"Special Needs Care", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -835,6 +875,8 @@
         fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
         
         seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+        _otherRelevantInfoTextView.text = [_advertDetailsDict valueForKey:@"love_optional"];
         
     }
     
@@ -860,6 +902,10 @@
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
     _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
     
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant + 100.;
+    }
+    
     _firstCollectionViewTitle.text = @"Can you provide Last Minute / Emergency Cover:";
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
@@ -882,7 +928,7 @@
     _sixthCollectionView.hidden = YES;
     _sixthCollectionSeparatorView.hidden = YES;
     
-    _seventhCollectionViewTitleTopConstraint.constant = -168 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
+    _seventhCollectionViewTitleTopConstraint.constant = -140 - _fifthCollectionViewHeightConstraint.constant - _sixthCollectionViewHeightConstraint.constant;
     seventhCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Au Pair", @"Babysitters", @"Elderly Care", @"Childminders", @"Cleaners", @"Creche", @"Dog Walkers", @"House Keepers", @"Maternity Nurse", @"Nanny", @"Pet Minders", @"Private Midwife", @"Special Needs Care", @"Tutor", nil];
     
     if (_isAdvertInEditingMode) {
@@ -892,6 +938,8 @@
         fourthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"require"] componentsSeparatedByString:@","]];
         
         seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+        _otherRelevantInfoTextView.text = [_advertDetailsDict valueForKey:@"love_optional"];
         
     }
     
@@ -918,6 +966,10 @@
     _otherRelevantInfoTextView.hidden = NO;
     _advertIsActiveLabelTopConstraint.constant = _advertIsActiveLabelTopConstraint.constant + 120;
     _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 100;
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant + 100.;
+    }
     
     firstCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Yes", @"No", nil];
     
@@ -951,6 +1003,8 @@
         fifthPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
         
         seventhPreselectedArr = [[NSMutableArray alloc] initWithArray:[[_advertDetailsDict valueForKey:@"services"] componentsSeparatedByString:@","]];
+        
+        _otherRelevantInfoTextView.text = [_advertDetailsDict valueForKey:@"love_optional"];
         
     }
     
