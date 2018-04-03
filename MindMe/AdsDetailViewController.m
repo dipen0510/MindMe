@@ -1338,7 +1338,7 @@
     _firstCollectionViewSeparatorView.hidden = YES;
     
     _secondCollectionViewTitleTopConstraint.constant = (-10/568.)*kScreenHeight - _firstCollectionViewHeightConstraint.constant;
-    secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"age_group"] componentsSeparatedByString:@","]];
+    secondCollectionViewArr = [[NSMutableArray alloc] initWithArray:[[_advertDict valueForKey:@"additional_optional"] componentsSeparatedByString:@","]];
     if ([[secondCollectionViewArr lastObject] isEqualToString:@""]) {
         [secondCollectionViewArr removeLastObject];
     }
