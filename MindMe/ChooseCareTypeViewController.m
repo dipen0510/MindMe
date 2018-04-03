@@ -74,6 +74,13 @@
     
     _firstCollectionViewHeightConstraint.constant = (((40./667)*kScreenHeight) * (existingAdvertsArr.count%2)) + (((40./667)*kScreenHeight) * (existingAdvertsArr.count/2));
     _secondCollectionViewHeightConstraint.constant = (((40./667)*kScreenHeight) * (newAdvertsArr.count%2)) + (((40./667)*kScreenHeight) * (newAdvertsArr.count/2));
+    
+    if (existingAdvertsArr.count<=0) {
+        _editSectionHeaderLabel.hidden = YES;
+    }
+    else {
+        _editSectionHeaderLabel.hidden = NO;
+    }
                                                                                            
     
 }
