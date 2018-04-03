@@ -309,6 +309,11 @@
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
         cell.careTypeLabel.text = [NSString stringWithFormat:@"%@ Required",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"care_type"]];
+        
+        if ([cell.careTypeLabel.text containsString:@"Maternity Nurse"] || [cell.careTypeLabel.text containsString:@"House Keeper"] || [cell.careTypeLabel.text containsString:@"Special Needs Care"]) {
+            cell.careTypeLabel.text = [cell.careTypeLabel.text stringByReplacingOccurrencesOfString:@" Required" withString:@""];
+        }
+        
         cell.ageLabel.hidden = YES;
         cell.ageImgView.hidden = YES;
         cell.ageImgViewTopConstraint.constant = -13.5;
