@@ -578,6 +578,7 @@
             }
             else {
                 filteredAdvertsArr = [[NSMutableArray alloc] initWithArray:advertsArr];
+                [self filterAdvertsForCareType];
             }
             
         }
