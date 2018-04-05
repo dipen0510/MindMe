@@ -2325,6 +2325,8 @@ rightViewBackgroundImageFinalScale = _rightViewBackgroundImageFinalScale;
         (self.isRightViewAlwaysVisibleForCurrentOrientation && self.leftViewPresentationStyle != LGSideMenuPresentationStyleSlideAbove)) {
         return;
     }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SideMenuOpened" object:nil];
 
     [self showLeftViewPrepareWithGesture:NO];
     [self showLeftViewAnimatedActions:animated completionHandler:completionHandler];

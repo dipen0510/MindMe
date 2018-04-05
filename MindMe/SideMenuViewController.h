@@ -16,6 +16,9 @@
     NSArray *menuImageArrayForCarer;
     NSMutableArray* sectionArr;
     NSInteger lastOpenedIndex;
+    
+    BOOL isUserSubscribed;
+    
 }
 
 @property (weak, nonatomic) IBOutlet STCollapseTableView *sideMenuTableView;
