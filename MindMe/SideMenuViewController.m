@@ -328,6 +328,7 @@
         }
         else if (section == 6) {
             if ([[SharedClass sharedInstance] isGuestUser]) {
+                [[SharedClass sharedInstance] setIsGuestUser:NO];
                 [self.navigationController popViewControllerAnimated:YES];
             }
             else {
@@ -393,6 +394,7 @@
         }
         else if (section == 8) {
             if ([[SharedClass sharedInstance] isGuestUser]) {
+                [[SharedClass sharedInstance] setIsGuestUser:NO];
                 [self.navigationController popViewControllerAnimated:YES];
             }
             else {
