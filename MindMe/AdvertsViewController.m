@@ -393,9 +393,11 @@
 
 - (void) startToggleAdvertsServiceForAdvert:(NSMutableDictionary *)advertDict {
     
+    [SVProgressHUD showWithStatus:@"Updating status"];
+    
     DataSyncManager* manager = [[DataSyncManager alloc] init];
     manager.serviceKey = ToggleAdvertActive;
-    manager.delegate = nil;
+    manager.delegate = self;
     [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForToggleAdverts:advertDict]];
     
 }
@@ -443,7 +445,7 @@
 
     }
     
-    if ([requestServiceKey isEqualToString:DeleteAdvert]) {
+    if ([requestServiceKey isEqualToString:DeleteAdvert] || [requestServiceKey isEqualToString:ToggleAdvertActive]) {
         
         [self startGetAdvertsService];
         
