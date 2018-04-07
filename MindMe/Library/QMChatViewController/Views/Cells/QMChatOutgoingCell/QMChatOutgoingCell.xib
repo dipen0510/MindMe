@@ -18,8 +18,25 @@
                 <rect key="frame" x="0.0" y="0.0" width="253" height="74"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQ1-cK-8od" userLabel="Avatar Container">
+                        <rect key="frame" x="218" y="39" width="35" height="35"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jpR-fQ-e5B" userLabel="Avatar Image View" customClass="QMImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jpR-fQ-e5B" secondAttribute="trailing" id="0HB-21-nJn"/>
+                            <constraint firstAttribute="bottom" secondItem="jpR-fQ-e5B" secondAttribute="bottom" id="CuT-mP-k5j"/>
+                            <constraint firstItem="jpR-fQ-e5B" firstAttribute="leading" secondItem="sQ1-cK-8od" secondAttribute="leading" id="DSz-Pt-8Ep"/>
+                            <constraint firstAttribute="height" constant="35" id="Xd5-dh-UcJ"/>
+                            <constraint firstItem="jpR-fQ-e5B" firstAttribute="top" secondItem="sQ1-cK-8od" secondAttribute="top" id="chg-p3-cBq"/>
+                            <constraint firstAttribute="width" constant="35" id="t8N-UN-SRV"/>
+                        </constraints>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHn-aU-joG" userLabel="ContainerView" customClass="QMChatContainerView">
-                        <rect key="frame" x="68" y="0.0" width="181" height="74"/>
+                        <rect key="frame" x="35" y="0.0" width="181" height="74"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGA-Lo-mbI" userLabel="Message Container">
                                 <rect key="frame" x="0.0" y="0.0" width="166" height="74"/>
@@ -105,11 +122,14 @@
             </view>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="IHn-aU-joG" secondAttribute="bottom" identifier="outgCellContainerBottom" id="HI8-MG-YKY"/>
+                <constraint firstAttribute="trailing" secondItem="sQ1-cK-8od" secondAttribute="trailing" id="XAH-Sr-8ID"/>
+                <constraint firstAttribute="bottom" secondItem="sQ1-cK-8od" secondAttribute="bottom" id="Xvn-6s-O8b"/>
                 <constraint firstItem="IHn-aU-joG" firstAttribute="top" secondItem="MUd-TY-LP8" secondAttribute="top" identifier="outgCellContainerTop" id="kQX-PE-key"/>
-                <constraint firstAttribute="trailing" secondItem="IHn-aU-joG" secondAttribute="trailing" constant="4" id="mI9-Ec-xra"/>
+                <constraint firstItem="sQ1-cK-8od" firstAttribute="leading" secondItem="IHn-aU-joG" secondAttribute="trailing" constant="2" id="xq3-mr-Os7"/>
             </constraints>
             <size key="customSize" width="253" height="74"/>
             <connections>
+                <outlet property="avatarView" destination="jpR-fQ-e5B" id="oag-XX-JX3"/>
                 <outlet property="bottomLabel" destination="KM3-Oj-tba" id="nlu-fs-GAw"/>
                 <outlet property="bottomLabelHeightConstraint" destination="WU0-tf-mgf" id="cf4-8U-nj0"/>
                 <outlet property="containerView" destination="IHn-aU-joG" id="FxQ-jl-eL2"/>
@@ -126,7 +146,7 @@
                 <outlet property="topLabelHeightConstraint" destination="VYw-Ld-ar1" id="SGp-H8-Qeb"/>
                 <outlet property="topLabelTextViewVerticalSpaceConstraint" destination="mbp-Hv-6Tq" id="OJk-NT-Qbw"/>
             </connections>
-            <point key="canvasLocation" x="257" y="361"/>
+            <point key="canvasLocation" x="256.5" y="361"/>
         </collectionViewCell>
     </objects>
     <resources>
