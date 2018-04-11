@@ -56,6 +56,8 @@
         }
     }
     
+    _mailLabel.text = @"New Mail\n0";
+    
 }
 
 - (void) setupInitialUI {
@@ -124,6 +126,9 @@
         if (kScreenHeight == 568) {
             _subscribedValueTopConstraint.constant = 90;
         }
+        
+        [_upgradedLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(subscribeNowTapped)]];
+        _upgradedLabel.userInteractionEnabled = YES;
         
         _boxesHeightConstraint.constant = 80;
         _liveAdvertValueTopConstraint.constant = 95.;
@@ -206,6 +211,17 @@
     }
     else {
         [self.sideMenuController.navigationController popViewControllerAnimated:YES];
+    }
+    
+}
+
+- (void) subscribeNowTapped {
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FeaturedCarerViewController" forSideMenuController:self.sideMenuController];
+    }
+    else {
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"BuyPlansForParentsViewController" forSideMenuController:self.sideMenuController];
     }
     
 }
@@ -454,6 +470,7 @@
         
         int total = [[[[responseData valueForKey:@"message"] objectAtIndex:0] valueForKey:@"total"] intValue];
         _unreadMessageLabel.text = [NSString stringWithFormat:@"%d",total];
+        _mailLabel.text = [NSString stringWithFormat:@"New Mail\n%d",total];
         
     }
     

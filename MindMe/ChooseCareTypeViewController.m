@@ -43,6 +43,7 @@
     if (![[SharedClass sharedInstance] isUserCarer]) {
         
         _editSectionHeaderLabel.text = @"Edit your existing Advert";
+        _nSectionHeaderLabel.text = @"Select the type of care you require";
         
     }
     
