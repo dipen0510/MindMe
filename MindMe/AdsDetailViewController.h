@@ -68,7 +68,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *secondCollectionViewTitle;
 @property (weak, nonatomic) IBOutlet UITextField *thirdCollectionViewTitle;
 @property (weak, nonatomic) IBOutlet UITextField *fourthCollectionViewTitle;
-@property (weak, nonatomic) IBOutlet UITextField *fifthCollectionViewTitle;
+@property (weak, nonatomic) IBOutlet UILabel *fifthCollectionViewTitle;
 @property (weak, nonatomic) IBOutlet UITextField *sixthCollectionViewTitle;
 @property (weak, nonatomic) IBOutlet UITextField *reviewStaticLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mobileStaticLabel;
