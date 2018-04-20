@@ -127,5 +127,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *locationTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *genderSeparatorViewTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *otherRelevantInfoHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *otherRelevantInfoTopConstraint;
 
 @end

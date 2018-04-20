@@ -347,6 +347,57 @@
         [self setupUIForTutorForm];
     }
     
+    [self hideSectionsIfNoContent];
+    
+}
+
+- (void) hideSectionsIfNoContent {
+    
+    if (firstCollectionViewArr.count == 0 && !_firstCollectionView.hidden) {
+        _firstCollectionViewTitle.hidden = YES;
+        _firstCollectionView.hidden = YES;
+        _firstCollectionViewSeparatorView.hidden = YES;
+        _secondCollectionViewTitleTopConstraint.constant = _secondCollectionViewTitleTopConstraint.constant - 80;
+    }
+    if (secondCollectionViewArr.count == 0 && !_secondCollectionView.hidden) {
+        _secondCollectionViewTitle.hidden = YES;
+        _secondCollectionView.hidden = YES;
+        _secondCollectionViewSeparatorView.hidden = YES;
+        _thirdCollectionViewTitleTopConstraint.constant = _thirdCollectionViewTitleTopConstraint.constant - 80;
+    }
+    if (thirdCollectionViewArr.count == 0 && !_thirdCollectionView.hidden) {
+        _thirdCollectionViewTitle.hidden = YES;
+        _thirdCollectionView.hidden = YES;
+        _thirdCollectionViewSeparatorView.hidden = YES;
+        _fourthCollectionViewTitleTopConstraint.constant = _fourthCollectionViewTitleTopConstraint.constant - 80;
+    }
+    if (fourthCollectionViewArr.count == 0 && !_fourthCollectionView.hidden) {
+        _fourthCollectionViewTitle.hidden = YES;
+        _fourthCollectionView.hidden = YES;
+        _fourthCollectionViewSeparatorView.hidden = YES;
+        _fifthCollectionViewTitleTopConstraint.constant = _fifthCollectionViewTitleTopConstraint.constant - 80;
+    }
+    if (fifthCollectionViewArr.count == 0 && !_fifthCollectionView.hidden) {
+        _fifthCollectionViewTitle.hidden = YES;
+        _fifthCollectionView.hidden = YES;
+        _fifthCollectionViewSeparatorView.hidden = YES;
+        _sixthCollectionViewTitleTopConstraint.constant = _sixthCollectionViewTitleTopConstraint.constant - 80;
+    }
+    if (sixthCollectionViewArr.count == 0 && !_sixthCollectionView.hidden) {
+        _sixthCollectionViewTitle.hidden = YES;
+        _sixthCollectionView.hidden = YES;
+        _sixthCollectionViewSeparatorView.hidden = YES;
+        
+        if (!_otherRelevantInfoTextView.hidden) {
+            _otherRelevantInfoTopConstraint.constant = _otherRelevantInfoTopConstraint.constant - 80;
+        }
+        
+        _daysRequiredLabelTopConstraint.constant = _daysRequiredLabelTopConstraint.constant - 80;
+        
+        
+    }
+    
+    
 }
 
 
