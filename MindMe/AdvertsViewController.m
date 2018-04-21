@@ -152,6 +152,9 @@
     _unreadMessageLabel.layer.cornerRadius = 10;
     _unreadMessageLabel.layer.masksToBounds = YES;
     
+    [_mailLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(newMailTapped)]];
+    _mailLabel.userInteractionEnabled = YES;
+    
 }
 
 
@@ -219,6 +222,20 @@
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
         [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FeaturedCarerViewController" forSideMenuController:self.sideMenuController];
+    }
+    else {
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"BuyPlansForParentsViewController" forSideMenuController:self.sideMenuController];
+    }
+    
+}
+
+- (void) newMailTapped {
+    
+    NSData *dictionaryData1 = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetailsCopy"];
+    NSDictionary *responseData1 = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData1];
+    
+    if ([[responseData1 valueForKey:@"Sub_active"] intValue] == 1) {
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ChatListViewController" forSideMenuController:self.sideMenuController];
     }
     else {
         [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"BuyPlansForParentsViewController" forSideMenuController:self.sideMenuController];
