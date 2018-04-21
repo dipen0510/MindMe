@@ -147,10 +147,10 @@
     else if ([_lastNameTextField.text isEqualToString:@""]) {
         return @"Please enter last name to proceed";
     }
-    else if ([_emailTextField.text isEqualToString:@""]) {
+    else if ([[_emailTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""]) {
         return @"Please enter email to proceed";
     }
-    else if(![self validateEmailWithString:_emailTextField.text]) {
+    else if(![self validateEmailWithString:[_emailTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]]) {
         return @"Please enter a valid email to proceed";
     }
     else if ([_passwordTextField.text isEqualToString:@""]) {
@@ -284,7 +284,7 @@
     
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
     
-    [dict setObject:_emailTextField.text forKey:@"username"];
+    [dict setObject:[_emailTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forKey:@"username"];
     [dict setObject:_passwordTextField.text forKey:@"password"];
     [dict setObject:@"1" forKey:@"device"];
     [dict setObject:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forKey:@"version"];
