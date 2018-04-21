@@ -113,18 +113,18 @@
     }
     else {
         if (![[SharedClass sharedInstance] isUserCarer]) {
-            _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"Subscribed\n\n"];
+            _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"\n\n"];
             _subscribedValueLabel.text = @"Subscribe\nNow";
-            _subscribedValueTopConstraint.constant = 85.;
+            _subscribedValueTopConstraint.constant = 70.;
         }
         else {
-            _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"Upgraded\n\n"];
+            _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"\n\n"];
             _subscribedValueLabel.text = @"Upgrade\nNow";
-            _subscribedValueTopConstraint.constant = 85.;
+            _subscribedValueTopConstraint.constant = 70.;
         }
         
         if (kScreenHeight == 568) {
-            _subscribedValueTopConstraint.constant = 90;
+            _subscribedValueTopConstraint.constant = 75;
         }
         
         [_upgradedLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(subscribeNowTapped)]];
