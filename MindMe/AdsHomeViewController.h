@@ -14,6 +14,8 @@
     NSMutableArray* filteredAdvertsArr;
     NSMutableDictionary* selectedAdvertDict;
     
+    NSTimer* messageRefreshTImer;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UIView *favoritesView;

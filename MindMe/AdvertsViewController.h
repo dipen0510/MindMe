@@ -14,6 +14,8 @@
     NSMutableDictionary* editAdvertDict;
     NSMutableDictionary* deleteAdvertDict;
     
+    NSTimer* messageRefreshTImer;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *mailLabel;

@@ -58,6 +58,22 @@
     
     _mailLabel.text = @"New Mail\n0";
     
+    if (!messageRefreshTImer && ![[SharedClass sharedInstance] isGuestUser]) {
+        messageRefreshTImer = [NSTimer scheduledTimerWithTimeInterval:10*60 target:self selector:@selector(startGetUnreadMessageCount) userInfo:nil repeats:YES];
+    }
+    
+}
+
+
+-(void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    if (messageRefreshTImer) {
+        [messageRefreshTImer invalidate];
+        messageRefreshTImer = nil;
+    }
+    
 }
 
 - (void) setupInitialUI {

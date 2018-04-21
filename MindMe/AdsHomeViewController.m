@@ -35,6 +35,28 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    if (!messageRefreshTImer && ![[SharedClass sharedInstance] isGuestUser]) {
+        messageRefreshTImer = [NSTimer scheduledTimerWithTimeInterval:10*60 target:self selector:@selector(startGetUnreadMessageCount) userInfo:nil repeats:YES];
+    }
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    if (messageRefreshTImer) {
+        [messageRefreshTImer invalidate];
+        messageRefreshTImer = nil;
+    }
+    
+    
+}
+
 - (void) setupInitialUI {
     
     _favoritesView.userInteractionEnabled = YES;
