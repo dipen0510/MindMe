@@ -69,6 +69,7 @@
     
     if (![[SharedClass sharedInstance] isUserCarer]) {
         _numberOfExperienceStaticLabel.text = @"Experience in years required";
+        _bioStaticLabel.text = @"Job Description";
     }
     else {
         
@@ -78,6 +79,9 @@
         _requiredOcassionalyButton.hidden = YES;
         
         _numberOfExperienceStaticLabelTopConstraint.constant = -20.;
+        
+        _bioStaticLabel.text = @"Enter Bio";
+        _addYourBioTextView.text = [NSString stringWithFormat:@"Your description should tell your story and why you would make a great %@. Be friendly but professional.",_selectedCareType];
         
     }
     
@@ -90,7 +94,6 @@
     _experienceLabel.font = [UIFont fontWithName:@"Montserrat-Light" size:(17.5/667)*kScreenHeight];
     
     _nextButton.titleLabel.font = _cancelButton.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:(17.5/667)*kScreenHeight];
-    
     
 }
 
@@ -684,7 +687,7 @@
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
     
-    if (textView == _addYourBioTextView && [textView.text containsString:@"Experienced flexible mature minder needed to work 3 full days a week"]) {
+    if (textView == _addYourBioTextView && ([textView.text containsString:@"Experienced flexible mature minder needed to work 3 full days a week"] || [textView.text containsString:@"Your description should tell your story"])) {
         textView.text = @"";
     }
     
