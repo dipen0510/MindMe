@@ -1033,6 +1033,9 @@
         [self filterDistanceButtonTapped];
         return NO;
     }
+    if (textField ==_addressTextField) {
+        _addressTextField.text = @"";
+    }
     
     return YES;
     
