@@ -70,6 +70,9 @@
     if (![[SharedClass sharedInstance] isUserCarer]) {
         _numberOfExperienceStaticLabel.text = @"Experience in years required";
         _bioStaticLabel.text = @"Job Description";
+        
+        _addYourBioTextView.text = [NSString stringWithFormat:@"Your description should tell the %@ your general requirements",_selectedCareType];
+        
     }
     else {
         
@@ -82,6 +85,7 @@
         
         _bioStaticLabel.text = @"Enter Bio";
         _addYourBioTextView.text = [NSString stringWithFormat:@"Your description should tell your story and why you would make a great %@. Be friendly but professional.",_selectedCareType];
+        _rateStaticLabel.text = @"Preferred hourly rate required.";
         
     }
     
@@ -687,7 +691,7 @@
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
     
-    if (textView == _addYourBioTextView && ([textView.text containsString:@"Experienced flexible mature minder needed to work 3 full days a week"] || [textView.text containsString:@"Your description should tell your story"])) {
+    if (textView == _addYourBioTextView && ([textView.text containsString:@"Experienced flexible mature minder needed to work 3 full days a week"] || [textView.text containsString:@"Your description should tell"])) {
         textView.text = @"";
     }
     
