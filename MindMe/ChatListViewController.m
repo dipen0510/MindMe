@@ -24,6 +24,14 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self startSendMessageService];
+    
+}
+
 - (void) setupInitialUI {
     
     _favoritesView.userInteractionEnabled = YES;
@@ -36,7 +44,6 @@
     [_profileView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(profileViewTapped)]];
     
     msgListArr = [[NSMutableArray alloc] init];
-    [self startSendMessageService];
     
     self.listTableView.allowsMultipleSelectionDuringEditing = NO;
     
