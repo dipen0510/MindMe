@@ -72,6 +72,7 @@
         _bioStaticLabel.text = @"Job Description";
         
         _addYourBioTextView.text = [NSString stringWithFormat:@"Your description should tell the %@ your general requirements",_selectedCareType];
+        _languageStaticLabel.text = @"Languages required";
         
     }
     else {
