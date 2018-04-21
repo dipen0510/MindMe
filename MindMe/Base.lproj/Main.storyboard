@@ -509,7 +509,7 @@
                                     <action selector="careNeededButtonTapped:" destination="3Aj-jd-xlR" eventType="touchUpInside" id="NtK-uH-rE2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a Care Job" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzO-UG-Bef">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want a care job" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzO-UG-Bef">
                                 <rect key="frame" x="226.5" y="319.5" width="124.5" height="41.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -693,7 +693,7 @@ Terms of Services and Privacy Policy</string>
                                     <constraint firstAttribute="height" constant="60" id="A4A-MP-zUs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
-                                <state key="normal" title="FIND A CARE JOB">
+                                <state key="normal" title="I WANT A CARE JOB">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -6458,7 +6458,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yhj-ON-ojt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yAc-9C-3no">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yAc-9C-3no">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -6477,7 +6477,7 @@ We may send emails to existing customers or prospective customers who have enqui
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wg9-Nn-sTY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="etA-fm-vvl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="etA-fm-vvl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -12617,15 +12617,15 @@ Cg
         <image name="unchecked" width="76" height="76"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f1d-Wb-gFu"/>
-        <segue reference="6aR-De-M3m"/>
-        <segue reference="kMe-Y4-Jvu"/>
         <segue reference="5gg-cR-2zY"/>
         <segue reference="YrY-OZ-7Vc"/>
         <segue reference="biN-AH-pt4"/>
         <segue reference="ySN-N9-Qfu"/>
         <segue reference="tzj-il-TQz"/>
         <segue reference="bY5-41-xfJ"/>
+        <segue reference="kMe-Y4-Jvu"/>
+        <segue reference="4Bd-9L-l1d"/>
+        <segue reference="f1d-Wb-gFu"/>
         <segue reference="9pm-1v-sJv"/>
     </inferredMetricsTieBreakers>
 </document>
