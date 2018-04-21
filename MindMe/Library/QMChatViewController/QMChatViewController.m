@@ -1048,7 +1048,7 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
 }
 
 - (IBAction)blockButtonTapped:(id)sender {
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:@"Are you sure you want to Decline this message ?" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil message:@"Are you sure you want to decline this message ?" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
     alert.tag = 100;
     [alert show];
 }
