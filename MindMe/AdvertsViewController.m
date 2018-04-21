@@ -497,7 +497,11 @@
         [alert setTitle:NSLocalizedString(@"Connection unsuccessful", nil)];
     }
     
-    [alert show];
+    if (![errorMsg containsString:@"Unauthorized"]) {
+        [alert show];
+    }
+    
+    
     
     return;
     

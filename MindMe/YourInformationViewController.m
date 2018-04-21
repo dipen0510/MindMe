@@ -290,6 +290,8 @@
 
 - (void) hourlyRateFieldTapped {
     
+    [self.view endEditing:YES];
+    
     [ActionSheetStringPicker showPickerWithTitle:@"Select Rate" rows:[NSArray arrayWithObjects:@"Negotiable", @"5 to 10 Euro", @"10 to 20 Euro", @"20 to 30 Euro", @"30 to 40 Euro", @"40 to 50 Euro", @"50+ Euro", nil] initialSelection:0 doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
         
         _preferredRateTextField.text = selectedValue;
