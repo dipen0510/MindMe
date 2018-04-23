@@ -135,7 +135,8 @@
         }
         else {
             _upgradedLabel.attributedText = [self attributedTextForUpgradedLabel:@"\n\n"];
-            _subscribedValueLabel.text = @"Upgrade\nNow";
+//            _subscribedValueLabel.text = @"Upgrade\nNow";
+            _subscribedValueLabel.text = @"Subscribe\nNow";
             _subscribedValueTopConstraint.constant = 70.;
         }
         

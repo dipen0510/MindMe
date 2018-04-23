@@ -210,7 +210,7 @@
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Live In", @"Live Out", nil];
     
-    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"New Born", @"0 - 6 Months", @"6 Months - 2 years", @"2 years - 5 years", @"5 Years +", @"Teenagers", nil];
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"New Born", @"0 to 6 Months", @"6 Months to 2 years", @"2 years to 5 years", @"5 Years +", @"Teenagers", nil];
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Childcare Qualifications", @"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Childcare Certification", @"Fetac Special Needs Certification", @"Tusla Registered", nil];
     
@@ -263,7 +263,7 @@
 
     secondCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Parent Home", @"Carers Home", nil];
     
-    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"New Born", @"0 - 6 Months", @"6 Months - 2 years", @"2 years - 5 years", @"5 Years +", @"Teenagers", nil];
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"New Born", @"0 to 6 Months", @"6 Months to 2 years", @"2 years to 5 years", @"5 Years +", @"Teenagers", nil];
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Childcare Qualifications", @"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Childcare Certification", @"Fetac Special Needs Certification", @"Tusla Registered", nil];
     
@@ -316,7 +316,7 @@
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Parent Home", @"Carers Home", nil];
     
-    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"New Born", @"0 - 6 Months", @"6 Months - 2 years", @"2 years - 5 years", @"5 Years +", @"Teenagers", nil];
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"New Born", @"0 to 6 Months", @"6 Months to 2 years", @"2 years to 5 years", @"5 Years +", @"Teenagers", nil];
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Childcare Qualifications", @"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Childcare Certification", @"Fetac Special Needs Certification", @"Tusla Registered", nil];
     
@@ -369,7 +369,7 @@
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Parent Home", @"Carers Home", nil];
     
-    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"New Born", @"0 - 6 Months", @"6 Months - 2 years", @"2 years - 5 years", @"5 Years +", @"Teenagers", nil];
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"New Born", @"0 to 6 Months", @"6 Months to 2 years", @"2 years to 5 years", @"5 Years +", @"Teenagers", nil];
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Childcare Qualifications", @"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Childcare Certification", @"Fetac Special Needs Certification", @"Tusla Registered", nil];
     
@@ -422,7 +422,7 @@
     
     secondCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Parent Home", @"Carers Home", nil];
     
-    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"New Born", @"0 - 6 Months", @"6 Months - 2 years", @"2 years - 5 years", @"5 Years +", @"Teenagers", nil];
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"New Born", @"0 to 6 Months", @"6 Months to 2 years", @"2 years to 5 years", @"5 Years +", @"Teenagers", nil];
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Childcare Qualifications", @"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Childcare Certification", @"Fetac Special Needs Certification", @"Tusla Registered", nil];
     
@@ -607,7 +607,7 @@
     _secondCollectionSeparatorView.hidden = YES;
     
     _thirdCollectionViewTitleTopConstraint.constant = -44 - _secondCollectionViewHeightConstraint.constant;
-    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"55 - 65 Years", @"65 to 75 Years", @"75 to 85 Years", @"85+ Years", nil];
+    thirdCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"55 to 65 Years", @"65 to 75 Years", @"75 to 85 Years", @"85+ Years", nil];
     _thirdCollectionViewHeightConstraint.constant = 100.;
     
     fourthCollectionViewArr = [[NSMutableArray alloc] initWithObjects:@"Special Needs Experience", @"First Aid", @"Garda Vetting", @"Work Visa", @"Eu Passport", @"References", @"Driving Licence", @"Fetac Special Needs Certification", nil];
