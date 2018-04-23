@@ -193,7 +193,7 @@
         _thirdCollectionViewTitle.text = @"Age Group Experience";
         _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
         _fifthCollectionViewTitle.text = @"Additional Requirements: (optional)";
-        _sixthCollectionViewTitle.text = @"I Like To Do : (select up to 3)";
+        _sixthCollectionViewTitle.text = @"I like to do: (optional)";
         _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
     }
     else {
@@ -246,7 +246,7 @@
         _thirdCollectionViewTitle.text = @"Age Group Experience";
         _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
         _fifthCollectionViewTitle.text = @"Additional Requirements: (optional)";
-        _sixthCollectionViewTitle.text = @"I Like To Do : (select up to 3)";
+        _sixthCollectionViewTitle.text = @"I like to do: (optional)";
         _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
     }
     else {
@@ -299,7 +299,7 @@
         _thirdCollectionViewTitle.text = @"Age Group Experience";
         _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
         _fifthCollectionViewTitle.text = @"Additional Requirements: (optional)";
-        _sixthCollectionViewTitle.text = @"I Like To Do : (select up to 3)";
+        _sixthCollectionViewTitle.text = @"I like to do: (optional)";
         _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
     }
     else {
@@ -352,7 +352,7 @@
         _thirdCollectionViewTitle.text = @"Age Group Experience";
         _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
         _fifthCollectionViewTitle.text = @"Additional Requirements: (optional)";
-        _sixthCollectionViewTitle.text = @"I Like To Do : (select up to 3)";
+        _sixthCollectionViewTitle.text = @"I like to do: (optional)";
         _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
     }
     else {
@@ -405,7 +405,7 @@
         _thirdCollectionViewTitle.text = @"Age Group Experience";
         _fourthCollectionViewTitle.text = @"Do You Have Qualifications";
         _fifthCollectionViewTitle.text = @"Additional Requirements: (optional)";
-        _sixthCollectionViewTitle.text = @"I Like To Do : (select up to 3)";
+        _sixthCollectionViewTitle.text = @"I like to do: (optional)";
         _seventhCollectionViewTitle.text = @"Other Services I Can Offer";
     }
     else {
