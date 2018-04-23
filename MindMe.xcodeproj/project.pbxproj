@@ -218,6 +218,7 @@
 		D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */; };
 		D4CA348B201F698700D54051 /* AdsDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CA3489201F698700D54051 /* AdsDetailCollectionViewCell.m */; };
 		D4CA348C201F698700D54051 /* AdsDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4CA348A201F698700D54051 /* AdsDetailCollectionViewCell.xib */; };
+		D4D01C20208E1091001653E0 /* CopyableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D01C1F208E1091001653E0 /* CopyableLabel.m */; };
 		D4D42377204025870068BBDA /* ReviewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D42375204025870068BBDA /* ReviewsTableViewCell.m */; };
 		D4D42378204025870068BBDA /* ReviewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4D42376204025870068BBDA /* ReviewsTableViewCell.xib */; };
 		D4D4237D20402E760068BBDA /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4D4237920402E760068BBDA /* Montserrat-Light.otf */; };
@@ -652,6 +653,8 @@
 		D4CA3488201F698700D54051 /* AdsDetailCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsDetailCollectionViewCell.h; sourceTree = "<group>"; };
 		D4CA3489201F698700D54051 /* AdsDetailCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsDetailCollectionViewCell.m; sourceTree = "<group>"; };
 		D4CA348A201F698700D54051 /* AdsDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdsDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		D4D01C1E208E1091001653E0 /* CopyableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyableLabel.h; sourceTree = "<group>"; };
+		D4D01C1F208E1091001653E0 /* CopyableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyableLabel.m; sourceTree = "<group>"; };
 		D4D42374204025870068BBDA /* ReviewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsTableViewCell.h; sourceTree = "<group>"; };
 		D4D42375204025870068BBDA /* ReviewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsTableViewCell.m; sourceTree = "<group>"; };
 		D4D42376204025870068BBDA /* ReviewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewsTableViewCell.xib; sourceTree = "<group>"; };
@@ -1684,6 +1687,8 @@
 				D4F05F3A1FBEFD65002024F6 /* FAQSectionView.h */,
 				D4F05F3B1FBEFD65002024F6 /* FAQSectionView.m */,
 				D4F05F381FBEFD47002024F6 /* FAQSectionView.xib */,
+				D4D01C1E208E1091001653E0 /* CopyableLabel.h */,
+				D4D01C1F208E1091001653E0 /* CopyableLabel.m */,
 			);
 			path = "Custom Controls";
 			sourceTree = "<group>";
@@ -2260,6 +2265,7 @@
 				D41C5E321FF36323007A2AA3 /* FBLoginHelper.m in Sources */,
 				D4041C711FC0E157001F312E /* NSData+ImageContentType.m in Sources */,
 				D4041C6F1FC0E157001F312E /* SDImageCache.m in Sources */,
+				D4D01C20208E1091001653E0 /* CopyableLabel.m in Sources */,
 				D4041C171FC0DEF5001F312E /* QMAudioRecordView.m in Sources */,
 				D41558751FB4E9590031E23F /* ChangePasswordViewController.m in Sources */,
 				D4041C1F1FC0DEF5001F312E /* QMKVOView.m in Sources */,

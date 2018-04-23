@@ -144,6 +144,9 @@
     
     [_footerContactButton addTarget:self action:@selector(contactMeButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
+    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self.mobileValueLabel action:@selector(tapDetected)];
+    [self.view addGestureRecognizer:tgr];
+    
 }
 
 - (void) setupPixelPerfectUI {

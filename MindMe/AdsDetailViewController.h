@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CopyableLabel.h"
 
 @interface AdsDetailViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, DataSyncManagerDelegate> {
     
@@ -72,7 +73,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *sixthCollectionViewTitle;
 @property (weak, nonatomic) IBOutlet UITextField *reviewStaticLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mobileStaticLabel;
-@property (weak, nonatomic) IBOutlet UILabel *mobileValueLabel;
+@property (weak, nonatomic) IBOutlet CopyableLabel *mobileValueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mobileStaticLabel2;
 @property (weak, nonatomic) IBOutlet UIView *mobileSeparatorView;
 @property (weak, nonatomic) IBOutlet UILabel *rateStaticLabel;
