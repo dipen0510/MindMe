@@ -51,10 +51,10 @@
     sectionHeight = (60./667.) * kScreenHeight;
     
     lastOpenedIndex = -1;
-    menuItemsArray=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Adverts", @"Search for a Carer", @"Featured Carers", @"Last Minute Care", @"Subscribe Now", @"Information", @"Contact Us", @"Logout", nil];
-    menuItemsArrayForCarer=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Profiles", @"Search Jobs", @"Upgrade", @"Information", @"Contact Us", @"Logout", nil];
-    menuImageArray = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"ic_search",@"ic_search",@"news_icon",@"info_icon",@"ic_email",@"logout",nil];
-    menuImageArrayForCarer = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"news_icon",@"info_icon",@"ic_email",@"logout",nil];
+    menuItemsArray=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Adverts", @"Search for a Carer", @"Featured Carers", @"Last Minute Care", @"Messages", @"Subscribe Now", @"Information", @"Contact Us", @"Logout", nil];
+    menuItemsArrayForCarer=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Profiles", @"Search Jobs", @"Upgrade", @"Messages", @"Information", @"Contact Us", @"Logout", nil];
+    menuImageArray = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"ic_search",@"ic_search",@"news_icon",@"ic_email",@"info_icon",@"ic_email",@"logout",nil];
+    menuImageArrayForCarer = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"news_icon",@"ic_email",@"info_icon",@"ic_email",@"logout",nil];
     sectionArr = [[NSMutableArray alloc] init];
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
@@ -98,10 +98,10 @@
     if (isUserSubscribed) {
         
         
-        menuItemsArray=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Adverts", @"Search for a Carer", @"Featured Carers", @"Last Minute Care", @"Information", @"Contact Us", @"Logout", nil];
-        menuItemsArrayForCarer=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Profiles", @"Search Jobs", @"Information", @"Contact Us", @"Logout", nil];
-        menuImageArray = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"ic_search",@"ic_search",@"info_icon",@"ic_email",@"logout",nil];
-        menuImageArrayForCarer = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"info_icon",@"ic_email",@"logout",nil];
+        menuItemsArray=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Adverts", @"Search for a Carer", @"Featured Carers", @"Last Minute Care", @"Messages", @"Information", @"Contact Us", @"Logout", nil];
+        menuItemsArrayForCarer=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Profiles", @"Search Jobs", @"Messages", @"Information", @"Contact Us", @"Logout", nil];
+        menuImageArray = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"ic_search",@"ic_search",@"ic_email",@"info_icon",@"ic_email",@"logout",nil];
+        menuImageArrayForCarer = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"ic_email",@"info_icon",@"ic_email",@"logout",nil];
         sectionArr = [[NSMutableArray alloc] init];
         
         if ([[SharedClass sharedInstance] isUserCarer]) {
@@ -134,10 +134,10 @@
         
     }
     else {
-        menuItemsArray=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Adverts", @"Search for a Carer", @"Featured Carers", @"Last Minute Care", @"Subscribe Now", @"Information", @"Contact Us", @"Logout", nil];
-        menuItemsArrayForCarer=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Profiles", @"Search Jobs", @"Upgrade", @"Information", @"Contact Us", @"Logout", nil];
-        menuImageArray = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"ic_search",@"ic_search",@"news_icon",@"info_icon",@"ic_email",@"logout",nil];
-        menuImageArrayForCarer = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"news_icon",@"info_icon",@"ic_email",@"logout",nil];
+        menuItemsArray=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Adverts", @"Search for a Carer", @"Featured Carers", @"Last Minute Care", @"Subscribe Now", @"Messages", @"Information", @"Contact Us", @"Logout", nil];
+        menuItemsArrayForCarer=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Profiles", @"Search Jobs", @"Upgrade", @"Messages", @"Information", @"Contact Us", @"Logout", nil];
+        menuImageArray = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"ic_search",@"ic_search",@"news_icon",@"ic_email",@"info_icon",@"ic_email",@"logout",nil];
+        menuImageArrayForCarer = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"news_icon",@"ic_email",@"info_icon",@"ic_email",@"logout",nil];
         sectionArr = [[NSMutableArray alloc] init];
         
         if ([[SharedClass sharedInstance] isUserCarer]) {
@@ -192,26 +192,6 @@
     if (isUserSubscribed) {
         if ([[SharedClass sharedInstance] isUserCarer]) {
             switch (section) {
-                case 3:
-                    return 3;
-                    break;
-                default:
-                    break;
-            }
-        }
-        else {
-            switch (section) {
-                case 5:
-                    return 3;
-                    break;
-                default:
-                    break;
-            }
-        }
-    }
-    else {
-        if ([[SharedClass sharedInstance] isUserCarer]) {
-            switch (section) {
                 case 4:
                     return 3;
                     break;
@@ -222,6 +202,26 @@
         else {
             switch (section) {
                 case 6:
+                    return 3;
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+    else {
+        if ([[SharedClass sharedInstance] isUserCarer]) {
+            switch (section) {
+                case 5:
+                    return 3;
+                    break;
+                default:
+                    break;
+            }
+        }
+        else {
+            switch (section) {
+                case 7:
                     return 3;
                     break;
                 default:
@@ -309,7 +309,7 @@
     
     if (isUserSubscribed) {
         if ([[SharedClass sharedInstance] isUserCarer]) {
-            if (section == 3) {
+            if (section == 4) {
                 header.chevronImgView.hidden = NO;
             }
             else {
@@ -318,7 +318,7 @@
             
         }
         else {
-            if (section == 5) {
+            if (section == 6) {
                 header.chevronImgView.hidden = NO;
             }
             else {
@@ -330,7 +330,7 @@
     }
     else {
         if ([[SharedClass sharedInstance] isUserCarer]) {
-            if (section == 4) {
+            if (section == 5) {
                 header.chevronImgView.hidden = NO;
             }
             else {
@@ -342,7 +342,7 @@
             
         }
         else {
-            if (section == 6) {
+            if (section == 7) {
                 header.chevronImgView.hidden = NO;
             }
             else {
@@ -375,7 +375,7 @@
     if (isUserSubscribed) {
         if ([[SharedClass sharedInstance] isUserCarer]) {
             switch (indexPath.section) {
-                case 3:
+                case 4:
                     if (indexPath.row == 0) {
                         cell.menuTitle.text = @"Information";
                     }
@@ -392,7 +392,7 @@
         }
         else {
             switch (indexPath.section) {
-                case 5:
+                case 6:
                     if (indexPath.row == 0) {
                         cell.menuTitle.text = @"Information";
                     }
@@ -412,7 +412,7 @@
     else {
         if ([[SharedClass sharedInstance] isUserCarer]) {
             switch (indexPath.section) {
-                case 4:
+                case 5:
                     if (indexPath.row == 0) {
                         cell.menuTitle.text = @"Information";
                     }
@@ -429,7 +429,7 @@
         }
         else {
             switch (indexPath.section) {
-                case 6:
+                case 7:
                     if (indexPath.row == 0) {
                         cell.menuTitle.text = @"Information";
                     }
@@ -488,14 +488,21 @@
                 [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:NO];
                 [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
             }
-            else if (section == 4) {
+            else if (section == 3) {
+                if ([[SharedClass sharedInstance] isGuestUser]) {
+                    [self.navigationController popViewControllerAnimated:YES];
+                    return;
+                }
+                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ChatListViewController" forSideMenuController:self.sideMenuController];
+            }
+            else if (section == 5) {
                 if ([[SharedClass sharedInstance] isGuestUser]) {
                     [self.navigationController popViewControllerAnimated:YES];
                     return;
                 }
                 [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ContactUsViewController" forSideMenuController:self.sideMenuController];
             }
-            else if (section == 5) {
+            else if (section == 6) {
                 if ([[SharedClass sharedInstance] isGuestUser]) {
                     [[SharedClass sharedInstance] setIsGuestUser:NO];
                     [self.navigationController popViewControllerAnimated:YES];
@@ -547,14 +554,21 @@
                 [[SharedClass sharedInstance] setIsLastMinuiteCareFilterApplied:YES];
                 [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
             }
-            else if (section == 6) {
+            else if (section == 5) {
+                if ([[SharedClass sharedInstance] isGuestUser]) {
+                    [self.navigationController popViewControllerAnimated:YES];
+                    return;
+                }
+                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ChatListViewController" forSideMenuController:self.sideMenuController];
+            }
+            else if (section == 7) {
                 if ([[SharedClass sharedInstance] isGuestUser]) {
                     [self.navigationController popViewControllerAnimated:YES];
                     return;
                 }
                 [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ContactUsViewController" forSideMenuController:self.sideMenuController];
             }
-            else if (section == 7) {
+            else if (section == 8) {
                 if ([[SharedClass sharedInstance] isGuestUser]) {
                     [[SharedClass sharedInstance] setIsGuestUser:NO];
                     [self.navigationController popViewControllerAnimated:YES];
@@ -606,14 +620,21 @@
                 }
                 [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"FeaturedCarerViewController" forSideMenuController:self.sideMenuController];
             }
-            else if (section == 5) {
+            else if (section == 4) {
+                if ([[SharedClass sharedInstance] isGuestUser]) {
+                    [self.navigationController popViewControllerAnimated:YES];
+                    return;
+                }
+                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ChatListViewController" forSideMenuController:self.sideMenuController];
+            }
+            else if (section == 6) {
                 if ([[SharedClass sharedInstance] isGuestUser]) {
                     [self.navigationController popViewControllerAnimated:YES];
                     return;
                 }
                 [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ContactUsViewController" forSideMenuController:self.sideMenuController];
             }
-            else if (section == 6) {
+            else if (section == 7) {
                 if ([[SharedClass sharedInstance] isGuestUser]) {
                     [[SharedClass sharedInstance] setIsGuestUser:NO];
                     [self.navigationController popViewControllerAnimated:YES];
@@ -672,14 +693,21 @@
                 }
                 [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"BuyPlansForParentsViewController" forSideMenuController:self.sideMenuController];
             }
-            else if (section == 7) {
+            else if (section == 6) {
+                if ([[SharedClass sharedInstance] isGuestUser]) {
+                    [self.navigationController popViewControllerAnimated:YES];
+                    return;
+                }
+                [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ChatListViewController" forSideMenuController:self.sideMenuController];
+            }
+            else if (section == 8) {
                 if ([[SharedClass sharedInstance] isGuestUser]) {
                     [self.navigationController popViewControllerAnimated:YES];
                     return;
                 }
                 [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"ContactUsViewController" forSideMenuController:self.sideMenuController];
             }
-            else if (section == 8) {
+            else if (section == 9) {
                 if ([[SharedClass sharedInstance] isGuestUser]) {
                     [[SharedClass sharedInstance] setIsGuestUser:NO];
                     [self.navigationController popViewControllerAnimated:YES];
