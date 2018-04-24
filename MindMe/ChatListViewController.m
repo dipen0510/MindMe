@@ -29,6 +29,7 @@
     [super viewWillAppear:animated];
     
     [self startSendMessageService];
+    [self startGetUnreadMessageCount];
     
 }
 
@@ -46,6 +47,9 @@
     msgListArr = [[NSMutableArray alloc] init];
     
     self.listTableView.allowsMultipleSelectionDuringEditing = NO;
+    
+    _unreadMessageCountLabel.layer.cornerRadius = 10;
+    _unreadMessageCountLabel.layer.masksToBounds = YES;
     
 }
 
@@ -261,6 +265,7 @@
     
     NSDateFormatter* dateformatter = [[NSDateFormatter alloc] init];
     [dateformatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [dateformatter setTimeZone:[NSTimeZone systemTimeZone]];
     NSDate* date = [dateformatter dateFromString:[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"date_sent"]];
     
     cell.dateLabel.text = [date dateTimeAgo];
@@ -339,6 +344,15 @@
     
 }
 
+- (void) startGetUnreadMessageCount {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GetUnreadMessageCount;
+    manager.delegate = self;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForGetUnreadMessageCount]];
+    
+}
+
 
 #pragma mark - DATASYNCMANAGER Delegates
 
@@ -361,6 +375,12 @@
         
         [SVProgressHUD showSuccessWithStatus:@"Message archived successfully"];
         [self startSendMessageService];
+        
+    }
+    if ([requestServiceKey isEqualToString:GetUnreadMessageCount]) {
+        
+        int total = [[[[responseData valueForKey:@"message"] objectAtIndex:0] valueForKey:@"total"] intValue];
+        _unreadMessageCountLabel.text = [NSString stringWithFormat:@"%d",total];
         
     }
     
@@ -442,6 +462,21 @@
     [dict setObject:[selectedChatDict valueForKey:@"refer_id"] forKey:@"refer_id"];
     [dict setObject:[selectedChatDict valueForKey:@"from"] forKey:@"from"];
     [dict setObject:[selectedChatDict valueForKey:@"sender_profile_id"] forKey:@"sender_profile_id"];
+    
+    return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForGetUnreadMessageCount {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
     
     return dict;
     

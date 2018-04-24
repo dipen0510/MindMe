@@ -13,6 +13,7 @@
     NSMutableArray* msgListArr;
     int selectedIndex;
     NSMutableDictionary* selectedChatDict;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UIView *favoritesView;
@@ -22,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *sentButton;
 @property (weak, nonatomic) IBOutlet UIButton *archivedButton;
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
+@property (weak, nonatomic) IBOutlet UILabel *unreadMessageCountLabel;
 
 - (IBAction)menuButtonTapped:(id)sender;
 - (IBAction)inboxButtonTapped:(id)sender;
