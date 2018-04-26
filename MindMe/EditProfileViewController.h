@@ -41,6 +41,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *option1StaticLabel;
 @property (weak, nonatomic) IBOutlet UILabel *option2StaticLabel;
 @property (weak, nonatomic) IBOutlet UILabel *option3StaticLabel;
+@property (weak, nonatomic) IBOutlet UIView *phoneSeparatorView;
+@property (weak, nonatomic) IBOutlet UIView *addressSeparatorView;
 
 - (IBAction)menuButtonTapped:(id)sender;
 - (IBAction)maleButtonTapped:(id)sender;
