@@ -115,7 +115,23 @@ NS_ENUM(NSUInteger, QMMessageType) {
     [self finishSendingMessageAnimated:YES];
     
     [self startSendMessageServiceForMessage:text];
-    [self startUpdateMessageStatusServiceWhileSendingMessage];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        if ([text containsString:@"Thank you for viewing my profile and taking the time to contact me."]) {
+            [self startUpdateMessageStatusServiceWhileDecliningMessage];
+        }
+        else {
+            [self startUpdateMessageStatusServiceWhileSendingMessage];
+        }
+    }
+    else {
+        if ([text containsString:@"We have reviewed your application but have chosen to pursue other applicants"]) {
+            [self startUpdateMessageStatusServiceWhileDecliningMessage];
+        }
+        else {
+            [self startUpdateMessageStatusServiceWhileSendingMessage];
+        }
+    }
     
 }
 
@@ -490,6 +506,17 @@ NS_ENUM(NSUInteger, QMMessageType) {
     
 }
 
+- (void) startUpdateMessageStatusServiceWhileDecliningMessage {
+    
+    //    [SVProgressHUD showWithStatus:@"Sending Message"];
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = UpdateStatus;
+    manager.delegate = nil;
+    [manager startPOSTingFormDataAfterLogin:[self prepareDictionaryForUpdateMessageStatusWhileDecliningMessage]];
+    
+}
+
 
 #pragma mark - DATASYNCMANAGER Delegates
 
@@ -714,6 +741,36 @@ NS_ENUM(NSUInteger, QMMessageType) {
     }
     
     [dict setObject:[NSNumber numberWithInt:2] forKey:@"status"];
+    
+    return dict;
+    
+}
+
+- (NSMutableDictionary *) prepareDictionaryForUpdateMessageStatusWhileDecliningMessage {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    NSMutableArray* tmpArr = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary* msg in messagesArr) {
+        if ([[msg valueForKey:@"from"] intValue]!=self.senderID) {
+            [tmpArr addObject:[msg valueForKey:@"ID"]];
+        }
+    }
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:tmpArr options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+    if (![[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:jsonString forKey:@"parent"];
+        [dict setObject:@"[]" forKey:@"carer"];
+    }
+    else {
+        [dict setObject:@"[]" forKey:@"parent"];
+        [dict setObject:jsonString forKey:@"carer"];
+    }
+    
+    [dict setObject:[NSNumber numberWithInt:3] forKey:@"status"];
     
     return dict;
     
