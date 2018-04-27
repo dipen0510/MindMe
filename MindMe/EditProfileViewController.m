@@ -67,10 +67,12 @@
         _tncButton.selected = YES;
         _phoneSeparatorView.backgroundColor = [UIColor colorWithRed:228./255 green:229./255. blue:230./255. alpha:1.0];
         _addressSeparatorView.backgroundColor = [UIColor colorWithRed:228./255 green:229./255. blue:230./255. alpha:1.0];
+        _dobSeparatorView.backgroundColor = [UIColor colorWithRed:228./255 green:229./255. blue:230./255. alpha:1.0];
     }
     else {
         _phoneSeparatorView.backgroundColor = [UIColor colorWithRed:255./255 green:73./255. blue:73./255. alpha:1.0];
         _addressSeparatorView.backgroundColor = [UIColor colorWithRed:255./255 green:73./255. blue:73./255. alpha:1.0];
+        _dobSeparatorView.backgroundColor = [UIColor colorWithRed:255./255 green:73./255. blue:73./255. alpha:1.0];
     }
     
     _dobTextField.delegate = self;

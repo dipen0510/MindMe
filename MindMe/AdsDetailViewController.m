@@ -225,7 +225,7 @@
     NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetailsCopy"];
     NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
     
-    if ([[responseData valueForKey:@"Sub_active"] intValue] == 1) {
+    if ([[responseData valueForKey:@"Sub_active"] intValue] == 1 && ![[SharedClass sharedInstance] isGuestUser]) {
         _mobileValueLabel.text = [_advertDict valueForKey:@"mobile_number"];
     }
     else {
