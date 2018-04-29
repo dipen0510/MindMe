@@ -223,6 +223,7 @@
             
         }
         
+        _collectionViewHeightConstraint.constant = (allCareTypesArr.count/2)*40 + (allCareTypesArr.count%2)*40;
         [_careTypeCollectionView reloadData];
         
     }
@@ -315,4 +316,17 @@
     
 }
 
+
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
+    
+    if ([textView.text containsString:@"Type your Message"]) {
+        
+        textView.text = @"";
+        textView.textColor = [UIColor colorWithRed:108./255. green:140./255. blue:166./255. alpha:1.];
+        
+    }
+    
+    return YES;
+    
+}
 @end

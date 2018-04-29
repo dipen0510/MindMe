@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChatStartViewController : UIViewController <DataSyncManagerDelegate> {
+@interface ChatStartViewController : UIViewController <DataSyncManagerDelegate, UITextViewDelegate> {
     NSString* selectedCareType;
     NSMutableArray* allCareTypesArr;
 }
@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
-@property (weak, nonatomic) IBOutlet UITextField *messageTextField;
+@property (weak, nonatomic) IBOutlet UITextView *messageTextField;
 @property (weak, nonatomic) IBOutlet UILabel *selectActiveProfStaticLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *careTypeCollectionView;
 @property (weak, nonatomic) IBOutlet UILabel *footerLabel;
@@ -29,4 +29,5 @@
 - (IBAction)sendButtonTapped:(id)sender;
 - (IBAction)backButtonTapped:(id)sender;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewHeightConstraint;
 @end
