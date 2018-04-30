@@ -51,8 +51,8 @@
     sectionHeight = (60./667.) * kScreenHeight;
     
     lastOpenedIndex = -1;
-    menuItemsArray=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Adverts", @"Search for a Carer", @"Featured Carers", @"Last Minute Care", @"Messages", @"Subscribe Now", @"Information", @"Contact Us", @"Logout", nil];
-    menuItemsArrayForCarer=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Profiles", @"Search Jobs", @"Upgrade", @"Messages", @"Information", @"Contact Us", @"Logout", nil];
+    menuItemsArray=[[NSArray alloc]initWithObjects:@"My Details", @"My Adverts", @"Search for a Carer", @"Featured Carers", @"Last Minute Care", @"Messages", @"Subscribe Now", @"Information", @"Contact Us", @"Logout", nil];
+    menuItemsArrayForCarer=[[NSArray alloc]initWithObjects:@"My Details", @"My Profiles", @"Search Jobs", @"Upgrade", @"Messages", @"Information", @"Contact Us", @"Logout", nil];
     menuImageArray = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"ic_search",@"ic_search",@"news_icon",@"ic_email",@"info_icon",@"ic_email",@"logout",nil];
     menuImageArrayForCarer = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"news_icon",@"ic_email",@"info_icon",@"ic_email",@"logout",nil];
     sectionArr = [[NSMutableArray alloc] init];
@@ -98,8 +98,8 @@
     if (isUserSubscribed) {
         
         
-        menuItemsArray=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Adverts", @"Search for a Carer", @"Featured Carers", @"Last Minute Care", @"Messages", @"Information", @"Contact Us", @"Logout", nil];
-        menuItemsArrayForCarer=[[NSArray alloc]initWithObjects:@"Your Details", @"Your Profiles", @"Search Jobs", @"Messages", @"Information", @"Contact Us", @"Logout", nil];
+        menuItemsArray=[[NSArray alloc]initWithObjects:@"My Details", @"My Adverts", @"Search for a Carer", @"Featured Carers", @"Last Minute Care", @"Messages", @"Information", @"Contact Us", @"Logout", nil];
+        menuItemsArrayForCarer=[[NSArray alloc]initWithObjects:@"My Details", @"My Profiles", @"Search Jobs", @"Messages", @"Information", @"Contact Us", @"Logout", nil];
         menuImageArray = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"ic_search",@"ic_search",@"ic_email",@"info_icon",@"ic_email",@"logout",nil];
         menuImageArrayForCarer = [[NSArray alloc]initWithObjects:@"ic_avatar",@"ic_avatar",@"ic_search",@"ic_email",@"info_icon",@"ic_email",@"logout",nil];
         sectionArr = [[NSMutableArray alloc] init];
