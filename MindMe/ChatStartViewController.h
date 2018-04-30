@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *careTypeCollectionView;
 @property (weak, nonatomic) IBOutlet UILabel *footerLabel;
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
+@property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
 
 - (IBAction)sendButtonTapped:(id)sender;
 - (IBAction)backButtonTapped:(id)sender;

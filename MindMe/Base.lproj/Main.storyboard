@@ -536,7 +536,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-7h-qnC" customClass="TTTAttributedLabel">
-                                <rect key="frame" x="18" y="540" width="340" height="40"/>
+                                <rect key="frame" x="18" y="540" width="340" height="41.5"/>
                                 <string key="text">By pressing Sign Up you agree with the
 Terms of Services and Privacy Policy</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
@@ -11192,6 +11192,7 @@ Cg
                     <connections>
                         <outlet property="careTypeCollectionView" destination="P34-vr-Xg9" id="MXU-cm-bMM"/>
                         <outlet property="collectionViewHeightConstraint" destination="D1W-bL-RCR" id="eqE-k2-mLz"/>
+                        <outlet property="contentScrollView" destination="0mO-8G-DaH" id="6au-Fk-irG"/>
                         <outlet property="footerLabel" destination="XkY-d9-qgc" id="5mq-nA-gig"/>
                         <outlet property="headerLabel" destination="32w-hU-fG1" id="PUh-Y6-pgu"/>
                         <outlet property="messageLabel" destination="bwk-uw-DIu" id="unI-Et-bR5"/>
