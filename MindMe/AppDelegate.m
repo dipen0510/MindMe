@@ -82,11 +82,74 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     [FBSDKAppEvents activateApp];
+    
+    NSDate* currentDate = [NSDate date];
+    NSDate* lastActiveDate = (NSDate *)[[NSUserDefaults standardUserDefaults] objectForKey:@"LastActiveDate"];
+    
+    if (lastActiveDate) {
+        
+        NSTimeInterval interval = [currentDate timeIntervalSinceDate:lastActiveDate];
+        
+        if (interval > 2*60*60) {
+            
+            NSString* userid = [[NSUserDefaults standardUserDefaults] valueForKey:@"Userid"];
+            NSString* token = [[NSUserDefaults standardUserDefaults] valueForKey:@"token"];
+            BOOL isUserCarer = [[NSUserDefaults standardUserDefaults] boolForKey:@"isUserCarer"];
+            NSString* userAutId = [[NSUserDefaults standardUserDefaults] objectForKey:@"User_auth_id"];
+            
+            if (userid && token) {
+                
+                [[SharedClass sharedInstance] setUserId:userid];
+                [[SharedClass sharedInstance] setAuthorizationKey:token];
+                [[SharedClass sharedInstance] setIsUserCarer:isUserCarer];
+                [[SharedClass sharedInstance] setUserAuthId:userAutId];
+                
+                [self startGetProfileDetailsService];
+                
+            }
+            
+        }
+        
+    }
+    
+    
+    [[NSUserDefaults standardUserDefaults] setObject:currentDate forKey:@"LastActiveDate"];
+    
+    
 }
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+#pragma mark - API Helpers
+
+- (void) startGetProfileDetailsService {
+    
+    DataSyncManager* manager = [[DataSyncManager alloc] init];
+    manager.serviceKey = GetUserPersonalDetails;
+    manager.delegate = nil;
+    [manager startPOSTingFormDataForRefreshingUserToken:[self prepareDictionaryForGetProfileDetails]];
+    
+}
+
+#pragma mark - Modalobject
+
+- (NSMutableDictionary *) prepareDictionaryForGetProfileDetails {
+    
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    
+    if ([[SharedClass sharedInstance] isUserCarer]) {
+        [dict setObject:@"carer" forKey:@"flag"];
+    }
+    else {
+        [dict setObject:@"parent" forKey:@"flag"];
+    }
+    
+    return dict;
+    
 }
 
 
