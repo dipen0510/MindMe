@@ -291,7 +291,7 @@
         return (260./568)*kScreenHeight;
     }
     else {
-        return (220./568)*kScreenHeight;
+        return (230./568)*kScreenHeight;
     }
     
     
@@ -356,11 +356,16 @@
     cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ Years Experience",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
     
     
-    if ([[SharedClass sharedInstance] isFeaturedFilterApplied] || [[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"Sub_active"] intValue] == 1) {
+    if ([[SharedClass sharedInstance] isFeaturedFilterApplied] || [[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"Sub_active"] intValue] == 1 || [[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"featured_advert"] intValue] == 1) {
         cell.featuredLabel.hidden = NO;
         cell.featuredImgView.hidden = NO;
         cell.gradientView.hidden = NO;
         [self addFeaturedGradientToView:cell.gradientView];
+        
+        if ([[SharedClass sharedInstance] isUserCarer]) {
+            cell.descTopConstraint.constant = 0;
+        }
+        
     }
     else {
         cell.featuredLabel.hidden = YES;

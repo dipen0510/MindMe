@@ -269,7 +269,8 @@
     }
     
     [dict setObject:[_subscriptionDict valueForKey:@"id"] forKey:@"plan_id"];
-    [dict setObject:subscriptionId forKey:@"sub_id"];
+    //[dict setObject:subscriptionId forKey:@"sub_id"]; AS PER DISCUSSION WITH SWAPNIL ON 10/05/2018
+    [dict setObject:customerId forKey:@"sub_id"];
     [dict setObject:customerId forKey:@"ref_id"];
     
     return dict;

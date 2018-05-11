@@ -114,7 +114,7 @@
         return (260./568)*kScreenHeight;
     }
     else {
-        return (220./568)*kScreenHeight;
+        return (230./568)*kScreenHeight;
     }
     
 }
@@ -141,6 +141,7 @@
         cell.ageLabel.hidden = YES;
         cell.ageImgView.hidden = YES;
         cell.ageImgViewTopConstraint.constant = -13.5;
+        cell.descTopConstraint.constant = -12;
     }
     else {
         cell.careTypeLabel.text = [[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"care_type"];
@@ -155,11 +156,14 @@
     cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ Years of Experience",[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
     
     
-    if ([[SharedClass sharedInstance] isFeaturedFilterApplied] || [[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"Sub_active"] intValue] == 1) {
+    if ([[SharedClass sharedInstance] isFeaturedFilterApplied] || [[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"Sub_active"] intValue] == 1 || [[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"featured_advert"] intValue] == 1) {
         cell.featuredLabel.hidden = NO;
         cell.featuredImgView.hidden = NO;
         cell.gradientView.hidden = NO;
         [self addFeaturedGradientToView:cell.gradientView];
+        if ([[SharedClass sharedInstance] isUserCarer]) {
+            cell.descTopConstraint.constant = 0;
+        }
     }
     else {
         cell.featuredLabel.hidden = YES;
