@@ -92,6 +92,16 @@
     }
     
     
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    
+    if (menuItemsArray.count == 1) {
+        [self didTapOnSectionHeader:0];
+        [_faqTableView openSection:0 animated:NO];
+    }
     
 }
 
