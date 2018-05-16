@@ -104,34 +104,58 @@ NS_ENUM(NSUInteger, QMMessageType) {
                   senderId:(NSUInteger)senderId
          senderDisplayName:(NSString *)senderDisplayName
                       date:(NSDate *)date {
-//    
-    QBChatMessage *message = [QBChatMessage message];
-    message.text = text;
-    message.senderID = senderId;
-    message.dateSent = [NSDate date];
+//
     
-    [self.chatDataSource addMessage:message];
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetailsCopy"];
+    NSMutableDictionary *responseData = [[NSMutableDictionary alloc] initWithDictionary:[NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData]];
     
-    [self finishSendingMessageAnimated:YES];
+    int mailCounter = [[responseData valueForKey:@"mail_counter"] intValue];
     
-    [self startSendMessageServiceForMessage:text];
-    
-    if ([[SharedClass sharedInstance] isUserCarer]) {
-        if ([text containsString:@"Thank you for viewing my profile and taking the time to contact me."]) {
-            [self startUpdateMessageStatusServiceWhileDecliningMessage];
+    if (mailCounter <= 2/*[[responseData valueForKey:@"free_limit"] intValue]*/) {
+        
+        mailCounter++;
+        [responseData setObject:[NSNumber numberWithInt:mailCounter] forKey:@"mail_counter"];
+        NSData *data1 = [NSKeyedArchiver archivedDataWithRootObject:responseData];
+        [[NSUserDefaults standardUserDefaults] setObject:data1 forKey:@"profileDetailsCopy"];
+        
+        
+        QBChatMessage *message = [QBChatMessage message];
+        message.text = text;
+        message.senderID = senderId;
+        message.dateSent = [NSDate date];
+        
+        [self.chatDataSource addMessage:message];
+        
+        [self finishSendingMessageAnimated:YES];
+        
+        [self startSendMessageServiceForMessage:text];
+        
+        if ([[SharedClass sharedInstance] isUserCarer]) {
+            if ([text containsString:@"Thank you for viewing my profile and taking the time to contact me."]) {
+                [self startUpdateMessageStatusServiceWhileDecliningMessage];
+            }
+            else {
+                [self startUpdateMessageStatusServiceWhileSendingMessage];
+            }
         }
         else {
-            [self startUpdateMessageStatusServiceWhileSendingMessage];
+            if ([text containsString:@"We have reviewed your application but have chosen to pursue other applicants"]) {
+                [self startUpdateMessageStatusServiceWhileDecliningMessage];
+            }
+            else {
+                [self startUpdateMessageStatusServiceWhileSendingMessage];
+            }
         }
+
+        
     }
     else {
-        if ([text containsString:@"We have reviewed your application but have chosen to pursue other applicants"]) {
-            [self startUpdateMessageStatusServiceWhileDecliningMessage];
-        }
-        else {
-            [self startUpdateMessageStatusServiceWhileSendingMessage];
-        }
+        
+        [self performSegueWithIdentifier:@"showMobileVerificationSegue" sender:nil];
+        
     }
+    
+    
     
 }
 

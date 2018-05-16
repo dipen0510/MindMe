@@ -146,6 +146,7 @@
 		D415CB1620519C1C005866C6 /* ChatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D415CB1420519C1C005866C6 /* ChatListTableViewCell.xib */; };
 		D415CB212051A4FB005866C6 /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CB1F2051A4FB005866C6 /* NSDate+TimeAgo.m */; };
 		D415CB222051A4FB005866C6 /* NSDateTimeAgo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D415CB202051A4FB005866C6 /* NSDateTimeAgo.bundle */; };
+		D417598420AC202000965FF7 /* PhoneVerificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D417598320AC202000965FF7 /* PhoneVerificationViewController.m */; };
 		D41B6AAC1FDAC3A400E1F312 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6A9A1FDAC3A400E1F312 /* ActionSheetDatePicker.m */; };
 		D41B6AAD1FDAC3A400E1F312 /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6A9C1FDAC3A400E1F312 /* ActionSheetLocalePicker.m */; };
 		D41B6AAE1FDAC3A400E1F312 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D41B6AA01FDAC3A400E1F312 /* ActionSheetDistancePicker.m */; };
@@ -524,6 +525,8 @@
 		D415CB1E2051A4FB005866C6 /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
 		D415CB1F2051A4FB005866C6 /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
 		D415CB202051A4FB005866C6 /* NSDateTimeAgo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NSDateTimeAgo.bundle; sourceTree = "<group>"; };
+		D417598220AC202000965FF7 /* PhoneVerificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneVerificationViewController.h; sourceTree = "<group>"; };
+		D417598320AC202000965FF7 /* PhoneVerificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneVerificationViewController.m; sourceTree = "<group>"; };
 		D41B6A981FDAC3A400E1F312 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
 		D41B6A991FDAC3A400E1F312 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
 		D41B6A9A1FDAC3A400E1F312 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
@@ -1643,6 +1646,8 @@
 				D46D63C4204BF07700BB69C7 /* ChatStartViewController.m */,
 				D415CB0F20513D5F005866C6 /* ChatListViewController.h */,
 				D415CB1020513D5F005866C6 /* ChatListViewController.m */,
+				D417598220AC202000965FF7 /* PhoneVerificationViewController.h */,
+				D417598320AC202000965FF7 /* PhoneVerificationViewController.m */,
 			);
 			path = MindMe;
 			sourceTree = "<group>";
@@ -2232,6 +2237,7 @@
 				D4041BF71FC0DEF5001F312E /* QMBaseMediaCell.m in Sources */,
 				D410BBEC201146C60038A017 /* ForgotPasswordViewController.m in Sources */,
 				D46D63C5204BF07700BB69C7 /* ChatStartViewController.m in Sources */,
+				D417598420AC202000965FF7 /* PhoneVerificationViewController.m in Sources */,
 				D41B6AAC1FDAC3A400E1F312 /* ActionSheetDatePicker.m in Sources */,
 				D4041C061FC0DEF5001F312E /* QMChatAttachmentIncomingCell.m in Sources */,
 				D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */,
