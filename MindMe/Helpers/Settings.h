@@ -55,6 +55,9 @@
 #define DowngradeAccount @"auth/downgradeRequest"
 #define DeleteAccount @"auth/accountDeactivate"
 
+#define SendOTP @"ValidatePhone/send_sms"
+#define VerifyOTP @"ValidatePhone/verify_code"
+
 #define GoogleAPIGeocode @"GoogleAPIGeocode"
 #define GoogleAPIAddressGeocode @"GoogleAPIAddressGeocode"
 

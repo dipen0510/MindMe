@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhoneVerificationViewController : UIViewController
+@interface PhoneVerificationViewController : UIViewController<DataSyncManagerDelegate> {
+    
+    NSMutableArray* phoneArr;
+    NSMutableArray* codeArr;
+    
+    NSString* selectedPrefix;
+    
+}
 
 @property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *subHeaderLabel;
@@ -19,6 +26,12 @@
 @property (weak, nonatomic) IBOutlet UIView *enterCodeContentView;
 @property (weak, nonatomic) IBOutlet UITextField *enterCodeTextField;
 @property (weak, nonatomic) IBOutlet UIButton *validateAccountButton;
+@property (weak, nonatomic) IBOutlet UIImageView *codeSuccessImgView;
+@property (weak, nonatomic) IBOutlet UILabel *codeSuccessLabel;
+@property (weak, nonatomic) IBOutlet UILabel *codeSuccessMobileLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *accountValidatedImgView;
+@property (weak, nonatomic) IBOutlet UILabel *accountValidatedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *accountValidatedSuccessfullyLabel;
 
 - (IBAction)backButtonTapped:(id)sender;
 - (IBAction)sendSmsButtonTapped:(id)sender;

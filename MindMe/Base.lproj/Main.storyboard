@@ -11368,15 +11368,56 @@ Cg
                                     <action selector="validateAccountButtonTapped:" destination="WZl-cc-7K6" eventType="touchUpInside" id="yWb-pS-ZeA"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message-sent" translatesAutoresizingMaskIntoConstraints="NO" id="Hgh-Ja-EPK">
+                                <rect key="frame" x="163" y="212" width="48" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Nx2-3O-FsS"/>
+                                    <constraint firstAttribute="width" constant="48" id="UQC-6Z-wx9"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code sent to IE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFE-8d-G2O">
+                                <rect key="frame" x="73" y="307" width="129.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <color key="textColor" red="0.16470588235294117" green="0.28235294117647058" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="012345678" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfD-Rj-aaX">
+                                <rect key="frame" x="206.5" y="307" width="94.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <color key="textColor" red="0.33725490196078434" green="0.75686274509803919" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guarantee" translatesAutoresizingMaskIntoConstraints="NO" id="IWM-di-TXS">
+                                <rect key="frame" x="163" y="448" width="48" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="JQj-ZO-8ch"/>
+                                    <constraint firstAttribute="width" constant="48" id="u7A-Ja-qVM"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Validate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5T-Vi-zDn">
+                                <rect key="frame" x="65" y="542" width="145" height="21"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <color key="textColor" red="0.1647058824" green="0.28235294119999998" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Successfully" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpJ-Xq-S23">
+                                <rect key="frame" x="213.5" y="542" width="102.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <color key="textColor" red="0.33725490200000002" green="0.75686274509999996" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ivd-TW-PCf" firstAttribute="top" secondItem="7e7-qR-2e6" secondAttribute="bottom" constant="16" id="2si-Wp-WGl"/>
+                            <constraint firstItem="JfD-Rj-aaX" firstAttribute="leading" secondItem="oFE-8d-G2O" secondAttribute="trailing" constant="4" id="3Zi-YM-bju"/>
                             <constraint firstItem="xuN-Sl-ldO" firstAttribute="leading" secondItem="qQV-Js-bCB" secondAttribute="leading" constant="20" id="4cH-cI-cIw"/>
                             <constraint firstItem="naa-dv-Kbi" firstAttribute="centerX" secondItem="qQV-Js-bCB" secondAttribute="centerX" id="4wI-DG-DKS"/>
                             <constraint firstItem="ZnL-BG-6dU" firstAttribute="leading" secondItem="qQV-Js-bCB" secondAttribute="leading" id="4y6-gI-zqN"/>
+                            <constraint firstItem="Hgh-Ja-EPK" firstAttribute="centerX" secondItem="qQV-Js-bCB" secondAttribute="centerX" id="6dx-aU-mbd"/>
                             <constraint firstItem="9rc-ac-zpc" firstAttribute="centerX" secondItem="qQV-Js-bCB" secondAttribute="centerX" id="6nb-NU-qVc"/>
                             <constraint firstAttribute="trailing" secondItem="ZnL-BG-6dU" secondAttribute="trailing" id="84m-8a-ZbE"/>
+                            <constraint firstItem="JfD-Rj-aaX" firstAttribute="centerY" secondItem="oFE-8d-G2O" secondAttribute="centerY" id="C2Y-tF-cpM"/>
                             <constraint firstAttribute="trailing" secondItem="FL2-bq-M6L" secondAttribute="trailing" constant="16" id="CWJ-GG-T6V"/>
                             <constraint firstAttribute="trailing" secondItem="Ivd-TW-PCf" secondAttribute="trailing" constant="16" id="Cuf-1i-DVN"/>
                             <constraint firstItem="YoQ-di-sQe" firstAttribute="top" secondItem="DRK-Sb-N3g" secondAttribute="bottom" constant="40" id="FjM-xC-pSP"/>
@@ -11384,17 +11425,26 @@ Cg
                             <constraint firstItem="9rc-ac-zpc" firstAttribute="top" secondItem="xuN-Sl-ldO" secondAttribute="bottom" constant="34" id="KiM-gv-Pns"/>
                             <constraint firstItem="veX-I6-BGY" firstAttribute="centerX" secondItem="qQV-Js-bCB" secondAttribute="centerX" id="NGO-9d-Ee7"/>
                             <constraint firstItem="YoQ-di-sQe" firstAttribute="leading" secondItem="qQV-Js-bCB" secondAttribute="leading" constant="20" id="OiJ-Ee-dkv"/>
+                            <constraint firstItem="Hgh-Ja-EPK" firstAttribute="top" secondItem="naa-dv-Kbi" secondAttribute="bottom" constant="20" id="OpC-F5-Wrb"/>
                             <constraint firstItem="veX-I6-BGY" firstAttribute="width" secondItem="veX-I6-BGY" secondAttribute="height" multiplier="511:135" id="QIZ-4B-xbQ"/>
+                            <constraint firstItem="JpJ-Xq-S23" firstAttribute="leading" secondItem="p5T-Vi-zDn" secondAttribute="trailing" constant="4" id="V2H-vl-jks"/>
+                            <constraint firstItem="p5T-Vi-zDn" firstAttribute="centerX" secondItem="qQV-Js-bCB" secondAttribute="centerX" constant="-50" id="VDO-KD-Xsg"/>
                             <constraint firstItem="DRK-Sb-N3g" firstAttribute="centerX" secondItem="qQV-Js-bCB" secondAttribute="centerX" id="VED-G6-ynD"/>
                             <constraint firstItem="veX-I6-BGY" firstAttribute="height" secondItem="9rc-ac-zpc" secondAttribute="height" id="Vsi-jE-OhF"/>
+                            <constraint firstItem="oFE-8d-G2O" firstAttribute="top" secondItem="xuN-Sl-ldO" secondAttribute="bottom" constant="46" id="W9y-hf-1K0"/>
                             <constraint firstItem="7e7-qR-2e6" firstAttribute="centerX" secondItem="qQV-Js-bCB" secondAttribute="centerX" id="Xgn-86-zac"/>
+                            <constraint firstItem="IWM-di-TXS" firstAttribute="centerX" secondItem="qQV-Js-bCB" secondAttribute="centerX" id="Xsf-ec-ZHv"/>
                             <constraint firstItem="7e7-qR-2e6" firstAttribute="top" secondItem="ZnL-BG-6dU" secondAttribute="bottom" constant="24" id="Z4G-9X-8TA"/>
                             <constraint firstAttribute="trailing" secondItem="YoQ-di-sQe" secondAttribute="trailing" constant="20" id="Ztq-3u-pdA"/>
                             <constraint firstItem="Ivd-TW-PCf" firstAttribute="leading" secondItem="qQV-Js-bCB" secondAttribute="leading" constant="16" id="cHh-Eu-zIQ"/>
                             <constraint firstItem="DRK-Sb-N3g" firstAttribute="width" secondItem="9rc-ac-zpc" secondAttribute="width" id="cUZ-X9-nhz"/>
+                            <constraint firstItem="p5T-Vi-zDn" firstAttribute="top" secondItem="IWM-di-TXS" secondAttribute="bottom" constant="48" id="gtA-3S-kAh"/>
+                            <constraint firstItem="oFE-8d-G2O" firstAttribute="centerX" secondItem="qQV-Js-bCB" secondAttribute="centerX" constant="-50" id="h9o-aE-w0J"/>
+                            <constraint firstItem="JpJ-Xq-S23" firstAttribute="centerY" secondItem="p5T-Vi-zDn" secondAttribute="centerY" id="jLb-ys-gCc"/>
                             <constraint firstItem="FL2-bq-M6L" firstAttribute="leading" secondItem="qQV-Js-bCB" secondAttribute="leading" constant="16" id="kls-fZ-krY"/>
                             <constraint firstItem="FL2-bq-M6L" firstAttribute="centerY" secondItem="DRK-Sb-N3g" secondAttribute="centerY" id="oLc-yb-gqF"/>
                             <constraint firstItem="veX-I6-BGY" firstAttribute="top" secondItem="YoQ-di-sQe" secondAttribute="bottom" constant="34" id="oOn-Xa-t1v"/>
+                            <constraint firstItem="IWM-di-TXS" firstAttribute="top" secondItem="DRK-Sb-N3g" secondAttribute="bottom" constant="36" id="ocv-dP-nVF"/>
                             <constraint firstAttribute="trailing" secondItem="xuN-Sl-ldO" secondAttribute="trailing" constant="20" id="qjl-L0-hVv"/>
                             <constraint firstItem="naa-dv-Kbi" firstAttribute="top" secondItem="Ivd-TW-PCf" secondAttribute="bottom" constant="24" id="syG-lW-XOI"/>
                             <constraint firstItem="9rc-ac-zpc" firstAttribute="height" secondItem="qQV-Js-bCB" secondAttribute="height" multiplier="45/667" id="tO5-dX-jiZ"/>
@@ -11403,6 +11453,12 @@ Cg
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="accountValidatedImgView" destination="IWM-di-TXS" id="NcS-BL-kF6"/>
+                        <outlet property="accountValidatedLabel" destination="p5T-Vi-zDn" id="wQk-hQ-xqh"/>
+                        <outlet property="accountValidatedSuccessfullyLabel" destination="JpJ-Xq-S23" id="kFc-dy-5Eg"/>
+                        <outlet property="codeSuccessImgView" destination="Hgh-Ja-EPK" id="6z0-o3-0b8"/>
+                        <outlet property="codeSuccessLabel" destination="oFE-8d-G2O" id="E52-YC-fP7"/>
+                        <outlet property="codeSuccessMobileLabel" destination="JfD-Rj-aaX" id="GgJ-T1-DJf"/>
                         <outlet property="enterCodeContentView" destination="YoQ-di-sQe" id="A6Q-Jf-VQr"/>
                         <outlet property="enterCodeTextField" destination="oDi-bj-I9y" id="5L5-cq-vvx"/>
                         <outlet property="enterMobileContentView" destination="xuN-Sl-ldO" id="IaC-iu-eeZ"/>
@@ -12830,6 +12886,7 @@ Cg
         <image name="experience" width="40" height="59"/>
         <image name="facebook" width="68" height="68"/>
         <image name="fb_logo" width="66" height="66"/>
+        <image name="guarantee" width="165" height="164"/>
         <image name="headline_mind_me" width="556" height="88"/>
         <image name="home_screen_bg" width="1242" height="2208"/>
         <image name="homelogin" width="253" height="260"/>
@@ -12856,6 +12913,7 @@ Cg
         <image name="login_new" width="564" height="186"/>
         <image name="login_page_background" width="1242" height="2392"/>
         <image name="maps-and-flags" width="28" height="38"/>
+        <image name="message-sent" width="144" height="138"/>
         <image name="minus" width="65" height="65"/>
         <image name="online_payment_icon" width="113" height="113"/>
         <image name="pets_icon" width="113" height="113"/>
