@@ -2465,7 +2465,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.MindMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a41cf120-ae03-4e8f-b7fe-e24048a8ede0";
+				PROVISIONING_PROFILE = "65541b8c-3aa8-4b4f-847b-9d64506ae692";
 				PROVISIONING_PROFILE_SPECIFIER = "Mind Me Ad-Hoc";
 			};
 			name = Debug;
@@ -2487,7 +2487,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.MindMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a41cf120-ae03-4e8f-b7fe-e24048a8ede0";
+				PROVISIONING_PROFILE = "65541b8c-3aa8-4b4f-847b-9d64506ae692";
 				PROVISIONING_PROFILE_SPECIFIER = "Mind Me Ad-Hoc";
 			};
 			name = Release;
