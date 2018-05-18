@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhoneVerificationViewController : UIViewController<DataSyncManagerDelegate> {
+@interface PhoneVerificationViewController : UIViewController<DataSyncManagerDelegate, UITextFieldDelegate> {
     
     NSMutableArray* phoneArr;
     NSMutableArray* codeArr;

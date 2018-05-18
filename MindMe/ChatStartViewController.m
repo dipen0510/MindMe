@@ -149,7 +149,29 @@
     
     NSString* formValid = [self isFormValid];
     if (!formValid) {
-        [self startSendMessageService];
+        
+        
+        NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetailsCopy"];
+        NSMutableDictionary *responseData = [[NSMutableDictionary alloc] initWithDictionary:[NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData]];
+        
+        int mailCounter = [[responseData valueForKey:@"mail_counter"] intValue];
+        
+        if (mailCounter <= 5/*[[responseData valueForKey:@"free_limit"] intValue]*/) {
+            
+            mailCounter++;
+            [responseData setObject:[NSNumber numberWithInt:mailCounter] forKey:@"mail_counter"];
+            NSData *data1 = [NSKeyedArchiver archivedDataWithRootObject:responseData];
+            [[NSUserDefaults standardUserDefaults] setObject:data1 forKey:@"profileDetailsCopy"];
+            
+            [self startSendMessageService];
+            
+        }
+        else {
+            
+            [self performSegueWithIdentifier:@"showMobileVerificationSegue" sender:nil];
+            
+        }
+
     }
     else {
         [SVProgressHUD showErrorWithStatus:formValid];

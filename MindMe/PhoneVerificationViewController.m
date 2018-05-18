@@ -42,6 +42,8 @@
     
     selectedPrefix = @"IE";
     
+    _enterCodeTextField.delegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -142,6 +144,7 @@
 
 - (void) startSendOTPService {
     
+    [self.view endEditing:YES];
     [SVProgressHUD showWithStatus:@"Sending OTP on your mobile number"];
     
     DataSyncManager* manager = [[DataSyncManager alloc] init];
@@ -153,6 +156,7 @@
 
 - (void) startCodeValidationService {
     
+    [self.view endEditing:YES];
     [SVProgressHUD showWithStatus:@"Validating OTP"];
     
     DataSyncManager* manager = [[DataSyncManager alloc] init];
@@ -262,6 +266,37 @@
     
     
     return dict;
+    
+}
+
+#pragma mark - UITextField Delegates
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    
+    if (textField == _enterCodeTextField) {
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:.3];
+        [UIView setAnimationBeginsFromCurrentState:TRUE];
+        self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y -250., self.view.frame.size.width, self.view.frame.size.height);
+        
+        [UIView commitAnimations];
+    }
+    
+}
+
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
+    if (textField == _enterCodeTextField) {
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:.3];
+        [UIView setAnimationBeginsFromCurrentState:TRUE];
+        self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y +250., self.view.frame.size.width, self.view.frame.size.height);
+        
+        [UIView commitAnimations];
+    }
     
 }
 
