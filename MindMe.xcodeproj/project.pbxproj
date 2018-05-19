@@ -572,6 +572,7 @@
 		D43AA5FB2069082300B33815 /* MembershipDeleteAccountTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembershipDeleteAccountTableViewCell.xib; sourceTree = "<group>"; };
 		D43EE8CC1FB30AF100BE7E08 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
 		D43EE8CD1FB30AF100BE7E08 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
+		D4542BD820B08DE700013637 /* MindMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MindMe.entitlements; sourceTree = "<group>"; };
 		D45B85301FE4E70600074689 /* DataSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSyncManager.h; sourceTree = "<group>"; };
 		D45B85311FE4E70600074689 /* DataSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSyncManager.m; sourceTree = "<group>"; };
 		D46D63C3204BF07700BB69C7 /* ChatStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatStartViewController.h; sourceTree = "<group>"; };
@@ -1569,6 +1570,7 @@
 		D4A019B31F850F0200E311B7 /* MindMe */ = {
 			isa = PBXGroup;
 			children = (
+				D4542BD820B08DE700013637 /* MindMe.entitlements */,
 				D4AD69271F9335FA009D57A7 /* Custom Controls */,
 				D4A019B71F850F0200E311B7 /* AppDelegate.h */,
 				D4A019B81F850F0200E311B7 /* AppDelegate.m */,
@@ -1844,6 +1846,14 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = CZA6DXR72T;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					D4A019C91F850F0200E311B7 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -2453,6 +2463,7 @@
 			baseConfigurationReference = 9BBDB4267CF4EBF87CF48ADF /* Pods-MindMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MindMe/MindMe.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Swapnil Harkanth (CZA6DXR72T)";
 				DEVELOPMENT_TEAM = CZA6DXR72T;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2465,7 +2476,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.MindMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "65541b8c-3aa8-4b4f-847b-9d64506ae692";
+				PROVISIONING_PROFILE = "ad52c3de-c9f0-4b80-a662-a5e5974d1a59";
 				PROVISIONING_PROFILE_SPECIFIER = "Mind Me Ad-Hoc";
 			};
 			name = Debug;
@@ -2475,6 +2486,7 @@
 			baseConfigurationReference = 561D057C0986020658421775 /* Pods-MindMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MindMe/MindMe.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Swapnil Harkanth (CZA6DXR72T)";
 				DEVELOPMENT_TEAM = CZA6DXR72T;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2487,7 +2499,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.MindMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "65541b8c-3aa8-4b4f-847b-9d64506ae692";
+				PROVISIONING_PROFILE = "ad52c3de-c9f0-4b80-a662-a5e5974d1a59";
 				PROVISIONING_PROFILE_SPECIFIER = "Mind Me Ad-Hoc";
 			};
 			name = Release;

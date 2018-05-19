@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <Stripe/Stripe.h>
+#import <OneSignal/OneSignal.h>
 
 @interface AppDelegate ()
 
@@ -29,6 +30,8 @@
                              didFinishLaunchingWithOptions:launchOptions];
     
     [[STPPaymentConfiguration sharedConfiguration] setPublishableKey:@"pk_test_rFhihoAilbwnqvKfLRRTE3c8"];
+    
+    [OneSignal initWithLaunchOptions:launchOptions appId:@"93689775-ff90-4eea-aec2-8cf67d1d9446"];
     
     return YES;
     

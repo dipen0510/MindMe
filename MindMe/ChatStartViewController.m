@@ -156,7 +156,7 @@
         
         int mailCounter = [[responseData valueForKey:@"mail_counter"] intValue];
         
-        if (mailCounter <= 5/*[[responseData valueForKey:@"free_limit"] intValue]*/) {
+        if (mailCounter <= [[responseData valueForKey:@"free_limit"] intValue]) {
             
             mailCounter++;
             [responseData setObject:[NSNumber numberWithInt:mailCounter] forKey:@"mail_counter"];
