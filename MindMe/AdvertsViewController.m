@@ -432,7 +432,7 @@
 
 - (void) startGetAdvertsService {
     
-    [SVProgressHUD showWithStatus:@"Fetching data"];
+    [SVProgressHUD showWithStatus:@"Please wait..."];
     
     DataSyncManager* manager = [[DataSyncManager alloc] init];
     manager.serviceKey = GetPostedAdverts;

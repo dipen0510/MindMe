@@ -499,7 +499,7 @@ NS_ENUM(NSUInteger, QMMessageType) {
 
 - (void) startGetSingleAdvertDetailsService {
     
-    [SVProgressHUD showWithStatus:@"Fetching details"];
+    [SVProgressHUD showWithStatus:@"Please wait..."];
     
     DataSyncManager* manager = [[DataSyncManager alloc] init];
     manager.serviceKey = GetSingleAdvertDetails;

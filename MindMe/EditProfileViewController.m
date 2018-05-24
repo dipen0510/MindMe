@@ -303,7 +303,7 @@
 
 - (void) startGetProfileDetailsService {
     
-    [SVProgressHUD showWithStatus:@"Fetching Profile Details"];
+    [SVProgressHUD showWithStatus:@"Please wait..."];
     
     DataSyncManager* manager = [[DataSyncManager alloc] init];
     manager.serviceKey = GetUserPersonalDetails;

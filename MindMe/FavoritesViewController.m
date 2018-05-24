@@ -196,7 +196,7 @@
 
 - (void) startGetFavoritesService {
     
-    [SVProgressHUD showWithStatus:@"Fetching Favorites"];
+    [SVProgressHUD showWithStatus:@"Please wait..."];
     
     DataSyncManager* manager = [[DataSyncManager alloc] init];
     manager.serviceKey = GetFavoriteAdverts;

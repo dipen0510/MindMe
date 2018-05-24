@@ -197,7 +197,7 @@
 
 - (void) startGetSubscriptionsService {
     
-    [SVProgressHUD showWithStatus:@"Fetching Subscriptions"];
+    [SVProgressHUD showWithStatus:@"Please wait..."];
     
     DataSyncManager* manager = [[DataSyncManager alloc] init];
     manager.serviceKey = GetSubscriptions;
