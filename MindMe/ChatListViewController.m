@@ -276,7 +276,7 @@
     if (![[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqual:[NSNull null]]) {
         if (![[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"image_path"] isEqualToString:@""]) {
             __weak UIImageView* weakImageView = cell.profileImgView;
-            [cell.profileImgView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceURL,[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"image_path"]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
+            [cell.profileImgView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceImageURL,[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"image_path"]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
                                                                          cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                                                      timeoutInterval:60.0] placeholderImage:[UIImage imageNamed:@"profile_icon"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
                 

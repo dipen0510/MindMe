@@ -108,7 +108,7 @@
         
         if (![[_advertDictToBeEdited valueForKey:@"image_path"] isEqualToString:@""]) {
             __weak UIImageView* weakImageView = _profileImgView;
-            [_profileImgView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceURL,[_advertDictToBeEdited valueForKey:@"image_path"]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
+            [_profileImgView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceImageURL,[_advertDictToBeEdited valueForKey:@"image_path"]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
                                                                      cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                                                  timeoutInterval:60.0] placeholderImage:[UIImage imageNamed:@"profile_icon"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
                 

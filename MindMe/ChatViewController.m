@@ -331,7 +331,7 @@ NS_ENUM(NSUInteger, QMMessageType) {
     }
     
     __weak UIImageView* weakImageView = cell1.avatarView;
-    [cell1.avatarView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceURL,avatarImgStr] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
+    [cell1.avatarView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[NSString stringWithFormat:@"%@/%@",WebServiceImageURL,avatarImgStr] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
                                                               cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                                           timeoutInterval:60.0] placeholderImage:[UIImage imageNamed:@"profile_icon"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         

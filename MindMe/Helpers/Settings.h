@@ -9,7 +9,8 @@
 #ifndef Settings_h
 #define Settings_h
 
-#define WebServiceURL @"http://epmay.com/CIRESTAPI"
+#define WebServiceURL @"https://mindme.ie/appapi"
+#define WebServiceImageURL @"https://mindme.ie"
 
 #define StripeBaseURL @"https://api.stripe.com/v1"
 
