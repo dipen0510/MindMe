@@ -122,7 +122,13 @@
             } failure:NULL];
         }
         
-        _addYourBioTextView.text = [_advertDictToBeEdited valueForKey:@"about_you"];
+        if (![[_advertDictToBeEdited valueForKey:@"about_you"] isEqual:[NSNull null]]) {
+            _addYourBioTextView.text = [_advertDictToBeEdited valueForKey:@"about_you"];
+        }
+        else {
+            _addYourBioTextView.text = @"";
+        }
+        
         _preferredRateTextField.text = [_advertDictToBeEdited valueForKey:@"pay"];
         
         if ([[_advertDictToBeEdited valueForKey:@"frequency"] isEqualToString:@"Ocassional"]) {

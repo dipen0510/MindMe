@@ -151,8 +151,13 @@
         cell.ageImgViewTopConstraint.constant = 12.;
     }
     
+    if (![[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"about_you"] isEqual:[NSNull null]]) {
+        cell.descLabel.text = [[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"about_you"];
+    }
+    else {
+        cell.descLabel.text = @"";
+    }
     
-    cell.descLabel.text = [[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"about_you"];
     cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ Years of Experience",[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
     
     

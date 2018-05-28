@@ -212,7 +212,13 @@
     
     [[SharedClass sharedInstance] removePluralsFromCareTypeLabel:_careTypeLabel];
     
-    _aboutTextView.text = [_advertDict valueForKey:@"about_you"];
+    
+    if (![[_advertDict valueForKey:@"about_you"] isEqual:[NSNull null]]) {
+        _aboutTextView.text = [_advertDict valueForKey:@"about_you"];
+    }
+    else {
+        _aboutTextView.text = @"";
+    }
     
     if ([[SharedClass sharedInstance] isUserCarer]) {
         _jobActiveViewsLabel.hidden = YES;

@@ -352,7 +352,14 @@
     [[SharedClass sharedInstance] removePluralsFromCareTypeLabel:cell.careTypeLabel];
     
     
-    cell.descLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"about_you"];
+    if (![[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"about_you"] isEqual:[NSNull null]]) {
+        cell.descLabel.text = [[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"about_you"];
+    }
+    else {
+        cell.descLabel.text = @"";
+    }
+    
+    
     cell.experienceValueLabel.text = [NSString stringWithFormat:@"%@ Years Experience",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"experience"]];
     
     
