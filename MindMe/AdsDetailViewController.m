@@ -356,7 +356,43 @@
         [self setupUIForTutorForm];
     }
     
+    [self removeEmptyStrings];
     [self hideSectionsIfNoContent];
+    
+}
+
+- (void) removeEmptyStrings {
+    
+    if (firstCollectionViewArr.count == 1) {
+        if ([[firstCollectionViewArr objectAtIndex:0] isEqualToString:@""]) {
+            [firstCollectionViewArr removeObjectAtIndex:0];
+        }
+    }
+    if (secondCollectionViewArr.count == 1) {
+        if ([[secondCollectionViewArr objectAtIndex:0] isEqualToString:@""]) {
+            [secondCollectionViewArr removeObjectAtIndex:0];
+        }
+    }
+    if (thirdCollectionViewArr.count == 1) {
+        if ([[thirdCollectionViewArr objectAtIndex:0] isEqualToString:@""]) {
+            [thirdCollectionViewArr removeObjectAtIndex:0];
+        }
+    }
+    if (fourthCollectionViewArr.count == 1) {
+        if ([[fourthCollectionViewArr objectAtIndex:0] isEqualToString:@""]) {
+            [fourthCollectionViewArr removeObjectAtIndex:0];
+        }
+    }
+    if (fifthCollectionViewArr.count == 1) {
+        if ([[fifthCollectionViewArr objectAtIndex:0] isEqualToString:@""]) {
+            [fifthCollectionViewArr removeObjectAtIndex:0];
+        }
+    }
+    if (sixthCollectionViewArr.count == 1) {
+        if ([[sixthCollectionViewArr objectAtIndex:0] isEqualToString:@""]) {
+            [sixthCollectionViewArr removeObjectAtIndex:0];
+        }
+    }
     
 }
 
