@@ -146,7 +146,7 @@ static SharedClass *singletonObject = nil;
     NSString* newRetText = @"";
     
     
-    for(NSInteger i = 0; i < 6 && flag == 0; i++)
+    for(NSInteger i = 0; i < 6 && flag == 0 && retText.length>=6; i++)
     {
         NSString *character = [retText substringWithRange:NSMakeRange(i, 1)];
         if ([character rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"0123456789"]].location != NSNotFound) {
@@ -157,7 +157,7 @@ static SharedClass *singletonObject = nil;
         }
     }
     
-    if (flag == 0) {
+    if (flag == 0 && retText.length>=6) {
         newRetText = [newRetText stringByAppendingString:[retText substringWithRange:NSMakeRange(6, retText.length-6)]];
         newRetText = [newRetText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     }
