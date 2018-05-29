@@ -38,7 +38,14 @@
     [_fourthStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
     [_fifthStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
     
-    _reviewNameLabel.text = [NSString stringWithFormat:@"Review : %@ %@.",[_advertDict valueForKey:@"first_name"],[[_advertDict valueForKey:@"second_name"] substringToIndex:1]];
+    if ([[_advertDict valueForKey:@"first_name"] isEqual:[NSNull null]] && [[_advertDict valueForKey:@"second_name"] isEqual:[NSNull null]]) {
+        _reviewNameLabel.text = @"Review : .";
+    }
+    else {
+        _reviewNameLabel.text = [NSString stringWithFormat:@"Review : %@ %@.",[_advertDict valueForKey:@"first_name"],[[_advertDict valueForKey:@"second_name"] substringToIndex:1]];
+    }
+    
+    
     
     _headerLabel.font = [UIFont fontWithName:@"Montserrat-SemiBold" size:(22.5/667)*kScreenHeight];
     _staticLabel1.font = _staticLabel2.font = _reviewNameLabel.font = _reviewTitleTextField.font = [UIFont fontWithName:@"Montserrat-Light" size:(17.5/667)*kScreenHeight];

@@ -260,7 +260,14 @@
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.titleLabel.text = [NSString stringWithFormat:@"%@ %@.",[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
+    if ([[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"first_name"] isEqual:[NSNull null]] && [[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] isEqual:[NSNull null]]) {
+        cell.titleLabel.text = @".";
+    }
+    else {
+        cell.titleLabel.text = [NSString stringWithFormat:@"%@ %@.",[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[msgListArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
+    }
+    
+    
     cell.descriptionLabel.text = [[msgListArr objectAtIndex:indexPath.row] valueForKey:@"message_title"];
     
     NSDateFormatter* dateformatter = [[NSDateFormatter alloc] init];

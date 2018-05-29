@@ -128,7 +128,14 @@
     cell.profileImgView.layer.cornerRadius = (36.5/568.)*kScreenHeight;
     cell.profileImgView.layer.masksToBounds = YES;
     
-    cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
+    if ([[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"first_name"] isEqual:[NSNull null]] && [[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] isEqual:[NSNull null]]) {
+        cell.nameLabel.text = @".";
+    }
+    else {
+        cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
+    }
+    
+    
     cell.locationLabel.text = [NSString stringWithFormat:@"%d km Away",[[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"distance"] intValue]];
     cell.addressLabel.text = [[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"address1"];
     

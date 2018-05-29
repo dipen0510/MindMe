@@ -50,7 +50,14 @@ NS_ENUM(NSUInteger, QMMessageType) {
         self.senderID = [[_chatInfoDict valueForKey:@"Userid"] intValue];
     }
     
-    self.senderDisplayName = [NSString stringWithFormat:@"%@ %@.",[_chatInfoDict valueForKey:@"first_name"],[[_chatInfoDict valueForKey:@"second_name"] substringToIndex:1]];
+    if ([[_chatInfoDict valueForKey:@"first_name"] isEqual:[NSNull null]] && [[_chatInfoDict valueForKey:@"second_name"] isEqual:[NSNull null]]) {
+        self.senderDisplayName =@".";
+    }
+    else {
+        self.senderDisplayName = [NSString stringWithFormat:@"%@ %@.",[_chatInfoDict valueForKey:@"first_name"],[[_chatInfoDict valueForKey:@"second_name"] substringToIndex:1]];
+    }
+    
+    
     self.title = @"Chat";
     
     senderImgUrlStr = @"";
@@ -398,7 +405,14 @@ NS_ENUM(NSUInteger, QMMessageType) {
     
     NSDictionary *attributes = @{ NSForegroundColorAttributeName:[UIColor colorWithRed:0.184 green:0.467 blue:0.733 alpha:1.000], NSFontAttributeName:font};
     
-    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ %@.",[_chatInfoDict valueForKey:@"first_name"],[[_chatInfoDict valueForKey:@"second_name"] substringToIndex:1]] attributes:attributes];
+    NSMutableAttributedString *attrStr;
+    
+    if ([[_chatInfoDict valueForKey:@"first_name"] isEqual:[NSNull null]] && [[_chatInfoDict valueForKey:@"second_name"] isEqual:[NSNull null]]) {
+        attrStr = [[NSMutableAttributedString alloc] initWithString:@"."];
+    }
+    else {
+        attrStr = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ %@.",[_chatInfoDict valueForKey:@"first_name"],[[_chatInfoDict valueForKey:@"second_name"] substringToIndex:1]] attributes:attributes];
+    }
     
     return attrStr;
 }
