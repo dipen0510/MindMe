@@ -142,6 +142,12 @@
         
         selectedLanguageArr = [[NSMutableArray alloc] initWithArray:[[_advertDictToBeEdited valueForKey:@"languages"] componentsSeparatedByString:@","]];
         
+        if (selectedLanguageArr.count==1) {
+            if ([[selectedLanguageArr objectAtIndex:0] isEqualToString:@""]) {
+                [selectedLanguageArr removeLastObject];
+            }
+        }
+        
     }
     else {
         selectedLanguageArr = [[NSMutableArray alloc] initWithObjects:@"English", nil];
