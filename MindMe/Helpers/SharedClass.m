@@ -186,8 +186,8 @@ static SharedClass *singletonObject = nil;
         label.text = [label.text stringByReplacingOccurrencesOfString:@"Cleaners" withString:@"Cleaner"];
     }
     
-    if ([label.text containsString:@"Dog Walkers"]) {
-        label.text = [label.text stringByReplacingOccurrencesOfString:@"Dog Walkers" withString:@"Dog Walker"];
+    if ([label.text containsString:@"Dog walkers"]) {
+        label.text = [label.text stringByReplacingOccurrencesOfString:@"Dog walkers" withString:@"Dog walker"];
     }
     
     if ([label.text containsString:@"House Keepers"]) {

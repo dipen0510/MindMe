@@ -335,7 +335,7 @@
     else if ([careType isEqualToString:@"Cleaners"]) {
         [self setupUIForCleanersForm];
     }
-    else if ([careType isEqualToString:@"Dog Walkers"]) {
+    else if ([careType isEqualToString:@"Dog walkers"]) {
         [self setupUIForDayWalkersForm];
     }
     else if ([careType isEqualToString:@"Elderly Care"]) {
