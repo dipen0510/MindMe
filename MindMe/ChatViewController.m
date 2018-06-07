@@ -847,7 +847,13 @@ NS_ENUM(NSUInteger, QMMessageType) {
     for (NSMutableDictionary* dict in messagesArr) {
         
         QBChatMessage *message = [QBChatMessage message];
-        message.text = [dict valueForKey:@"message1"];
+        
+        NSString* messageStr = [dict valueForKey:@"message1"];
+        messageStr = [messageStr stringByReplacingOccurrencesOfString:@"\'" withString:@"\\"];
+        messageStr = [messageStr stringByReplacingOccurrencesOfString:@"&amp;" withString:@"&"];
+        messageStr = [messageStr stringByReplacingOccurrencesOfString:@"&rsquo;" withString:@"'"];
+        
+        message.text = [messageStr stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         message.senderID = [[dict valueForKey:@"from"] intValue];
         
         message.recipientID = [[dict valueForKey:@"status"] intValue]; //For delivery status
