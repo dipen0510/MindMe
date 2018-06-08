@@ -48,6 +48,12 @@
     if ([[_advertDict valueForKey:@"first_name"] isEqual:[NSNull null]] && [[_advertDict valueForKey:@"second_name"] isEqual:[NSNull null]]) {
         _headerLabel.text = @".";
     }
+    else if ([[_advertDict valueForKey:@"first_name"] isEqual:[NSNull null]]) {
+        _headerLabel.text = [NSString stringWithFormat:@"%@.",[[_advertDict valueForKey:@"second_name"] substringToIndex:1]];;
+    }
+    else if ([[_advertDict valueForKey:@"second_name"] isEqual:[NSNull null]]) {
+        _headerLabel.text = [NSString stringWithFormat:@"%@ .",[_advertDict valueForKey:@"first_name"]];
+    }
     else {
         _headerLabel.text = [NSString stringWithFormat:@"Send a message to %@ %@.",[_advertDict valueForKey:@"first_name"],[[_advertDict valueForKey:@"second_name"] substringToIndex:1]];
     }

@@ -131,6 +131,12 @@
     if ([[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"first_name"] isEqual:[NSNull null]] && [[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] isEqual:[NSNull null]]) {
         cell.nameLabel.text = @".";
     }
+    else if ([[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"first_name"] isEqual:[NSNull null]]) {
+        cell.nameLabel.text = [NSString stringWithFormat:@"%@.",[[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];;
+    }
+    else if ([[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] isEqual:[NSNull null]]) {
+        cell.nameLabel.text = [NSString stringWithFormat:@"%@ .",[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"first_name"]];
+    }
     else {
         cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[favoritesArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
     }

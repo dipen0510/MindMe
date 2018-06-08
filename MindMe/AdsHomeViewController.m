@@ -324,6 +324,12 @@
     if ([[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"first_name"] isEqual:[NSNull null]] && [[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] isEqual:[NSNull null]]) {
         cell.nameLabel.text = @".";
     }
+    else if ([[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"first_name"] isEqual:[NSNull null]]) {
+        cell.nameLabel.text = [NSString stringWithFormat:@"%@.",[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];;
+    }
+    else if ([[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] isEqual:[NSNull null]]) {
+        cell.nameLabel.text = [NSString stringWithFormat:@"%@ .",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"first_name"]];
+    }
     else {
         cell.nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"first_name"],[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"second_name"] substringToIndex:1]];
     }

@@ -53,6 +53,12 @@ NS_ENUM(NSUInteger, QMMessageType) {
     if ([[_chatInfoDict valueForKey:@"first_name"] isEqual:[NSNull null]] && [[_chatInfoDict valueForKey:@"second_name"] isEqual:[NSNull null]]) {
         self.senderDisplayName =@".";
     }
+    else if ([[_chatInfoDict valueForKey:@"first_name"] isEqual:[NSNull null]]) {
+        self.senderDisplayName = [NSString stringWithFormat:@"%@.",[[_chatInfoDict valueForKey:@"second_name"] substringToIndex:1]];;
+    }
+    else if ([[_chatInfoDict valueForKey:@"second_name"] isEqual:[NSNull null]]) {
+        self.senderDisplayName = [NSString stringWithFormat:@"%@ .",[_chatInfoDict valueForKey:@"first_name"]];
+    }
     else {
         self.senderDisplayName = [NSString stringWithFormat:@"%@ %@.",[_chatInfoDict valueForKey:@"first_name"],[[_chatInfoDict valueForKey:@"second_name"] substringToIndex:1]];
     }
@@ -409,6 +415,12 @@ NS_ENUM(NSUInteger, QMMessageType) {
     
     if ([[_chatInfoDict valueForKey:@"first_name"] isEqual:[NSNull null]] && [[_chatInfoDict valueForKey:@"second_name"] isEqual:[NSNull null]]) {
         attrStr = [[NSMutableAttributedString alloc] initWithString:@"."];
+    }
+    else if ([[_chatInfoDict valueForKey:@"first_name"] isEqual:[NSNull null]]) {
+        attrStr = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@.",[[_chatInfoDict valueForKey:@"second_name"] substringToIndex:1]]];
+    }
+    else if ([[_chatInfoDict valueForKey:@"second_name"] isEqual:[NSNull null]]) {
+        attrStr = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ .",[_chatInfoDict valueForKey:@"first_name"]]];
     }
     else {
         attrStr = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ %@.",[_chatInfoDict valueForKey:@"first_name"],[[_chatInfoDict valueForKey:@"second_name"] substringToIndex:1]] attributes:attributes];

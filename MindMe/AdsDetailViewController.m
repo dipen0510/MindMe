@@ -199,6 +199,12 @@
     if ([[_advertDict valueForKey:@"first_name"] isEqual:[NSNull null]] && [[_advertDict valueForKey:@"second_name"] isEqual:[NSNull null]]) {
         _nameLabel.text = @".";
     }
+    else if ([[_advertDict valueForKey:@"first_name"] isEqual:[NSNull null]]) {
+        _nameLabel.text = [NSString stringWithFormat:@"%@.",[[_advertDict valueForKey:@"second_name"] substringToIndex:1]];;
+    }
+    else if ([[_advertDict valueForKey:@"second_name"] isEqual:[NSNull null]]) {
+        _nameLabel.text = [NSString stringWithFormat:@"%@ .",[_advertDict valueForKey:@"first_name"]];
+    }
     else {
         _nameLabel.text = [NSString stringWithFormat:@"%@ %@.",[_advertDict valueForKey:@"first_name"],[[_advertDict valueForKey:@"second_name"] substringToIndex:1]];
     }
