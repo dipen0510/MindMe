@@ -703,8 +703,8 @@
     
     if ([[SharedClass sharedInstance] isGuestUser]) {
         
-        [dict setObject:@"53.3664257" forKey:@"lat"];
-        [dict setObject:@"-6.0769125" forKey:@"long"];
+        [dict setObject:@"53.3498053" forKey:@"lat"];
+        [dict setObject:@"-6.260309699999993" forKey:@"long"];
         [dict setObject:@"Dublin, Ireland" forKey:@"address"];
         
     }

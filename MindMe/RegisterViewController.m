@@ -141,10 +141,10 @@
 }
 
 - (NSString*) isFormValid {
-    if ([_firstNameTextField.text isEqualToString:@""]) {
+    if ([_firstNameTextField.text isEqualToString:@""] || [_firstNameTextField.text isEqualToString:@"First Name"]) {
         return @"Please enter first name to proceed";
     }
-    else if ([_lastNameTextField.text isEqualToString:@""]) {
+    else if ([_lastNameTextField.text isEqualToString:@""] || [_lastNameTextField.text isEqualToString:@"Last Name"]) {
         return @"Please enter last name to proceed";
     }
     else if ([[_emailTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""]) {
