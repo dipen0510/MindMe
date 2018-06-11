@@ -23,5 +23,6 @@
 #import "SVProgressHUD.h"
 #import "FBLoginHelper.h"
 #import <UIImageView+AFNetworking.h>
+#import "NSString+HTML.h"
 
 #endif /* PrefixHeader_pch */

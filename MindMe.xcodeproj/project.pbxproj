@@ -181,6 +181,8 @@
 		D4736B551FBC50A3004A51A2 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B541FBC50A3004A51A2 /* FavoritesViewController.m */; };
 		D4736B591FBC60B6004A51A2 /* FavoritesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4736B571FBC60B6004A51A2 /* FavoritesTableViewCell.m */; };
 		D4736B5A1FBC60B6004A51A2 /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4736B581FBC60B6004A51A2 /* FavoritesTableViewCell.xib */; };
+		D47DDBFD20CE8CB900BF9F60 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = D47DDBFC20CE8CB900BF9F60 /* NSString+HTML.m */; };
+		D47DDC0020CE8CF000BF9F60 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = D47DDBFF20CE8CF000BF9F60 /* GTMNSString+HTML.m */; };
 		D48AE2402014BC3F00C2F165 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D48AE2312014BC3F00C2F165 /* LICENSE */; };
 		D48AE2412014BC3F00C2F165 /* PEPhotoCropEditor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D48AE2332014BC3F00C2F165 /* PEPhotoCropEditor.bundle */; };
 		D48AE2422014BC3F00C2F165 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D48AE2342014BC3F00C2F165 /* README.md */; };
@@ -588,6 +590,10 @@
 		D4736B561FBC60B6004A51A2 /* FavoritesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesTableViewCell.h; sourceTree = "<group>"; };
 		D4736B571FBC60B6004A51A2 /* FavoritesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesTableViewCell.m; sourceTree = "<group>"; };
 		D4736B581FBC60B6004A51A2 /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
+		D47DDBFB20CE8CB900BF9F60 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		D47DDBFC20CE8CB900BF9F60 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		D47DDBFE20CE8CF000BF9F60 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		D47DDBFF20CE8CF000BF9F60 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		D48AE2312014BC3F00C2F165 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D48AE2332014BC3F00C2F165 /* PEPhotoCropEditor.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PEPhotoCropEditor.bundle; sourceTree = "<group>"; };
 		D48AE2342014BC3F00C2F165 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -1496,6 +1502,10 @@
 		D48EE4A31F9B2A2400CB43A0 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D47DDBFE20CE8CF000BF9F60 /* GTMNSString+HTML.h */,
+				D47DDBFF20CE8CF000BF9F60 /* GTMNSString+HTML.m */,
+				D47DDBFB20CE8CB900BF9F60 /* NSString+HTML.h */,
+				D47DDBFC20CE8CB900BF9F60 /* NSString+HTML.m */,
 				D415CB172051A4E5005866C6 /* Categories */,
 				D48AE2302014BC3F00C2F165 /* PEPhotoCropEditor */,
 				D41B6A971FDAC3A400E1F312 /* Pickers */,
@@ -2149,6 +2159,7 @@
 			files = (
 				D4041C1C1FC0DEF5001F312E /* QMCollectionViewFlowLayoutInvalidationContext.m in Sources */,
 				D4041BD11FC0DEF5001F312E /* QMChatViewController.m in Sources */,
+				D47DDBFD20CE8CB900BF9F60 /* NSString+HTML.m in Sources */,
 				D4041BFC1FC0DEF5001F312E /* QMVideoIncomingCell.m in Sources */,
 				D43AA5FC2069082300B33815 /* MembershipDeleteAccountTableViewCell.m in Sources */,
 				D41B6AB01FDAC3A400E1F312 /* SWActionSheet.m in Sources */,
@@ -2306,6 +2317,7 @@
 				D4E34B2A1FCEF92A00D53EDC /* StartViewController.m in Sources */,
 				D4041AFD1FC0C601001F312E /* UploadDocumentsCollectionViewCell.m in Sources */,
 				D4041AF51FC031AD001F312E /* AdvertPDFCollectionViewCell.m in Sources */,
+				D47DDC0020CE8CF000BF9F60 /* GTMNSString+HTML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

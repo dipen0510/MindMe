@@ -337,6 +337,8 @@
     cell.locationLabel.text = [NSString stringWithFormat:@"%d km Away",[[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"distance"] intValue]];
     cell.addressLabel.text = [[SharedClass sharedInstance] filterNumbersAndPostCodeFromAddressString:[[filteredAdvertsArr objectAtIndex:indexPath.row] valueForKey:@"address1"]];
     
+    cell.addressLabel.text = [cell.addressLabel.text stringByDecodingHTMLEntities];
+    
     if ([self height:cell.addressLabel.text] <= 23) {
         cell.profileImgView.layer.cornerRadius = (30.75/568.)*kScreenHeight;
     }
