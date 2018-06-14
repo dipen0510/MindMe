@@ -266,7 +266,14 @@
     if ([requestServiceKey isEqualToString:SendMessage]) {
         
         [SVProgressHUD showSuccessWithStatus:@"Message sent successfully"];
-        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+        //[[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+        
+        NSMutableArray* navArr = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
+        [navArr removeLastObject];
+        [navArr removeLastObject];
+        
+        [self.navigationController setViewControllers:navArr animated:YES];
+        
         
     }
     
