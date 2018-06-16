@@ -210,7 +210,7 @@
     
     UIImage* profileImage;
     
-    if ([postData valueForKey:@"image_path"] && ![[postData valueForKey:@"image_path"] isEqualToString:@""]) {
+    if ([postData valueForKey:@"image_path"] && ![[postData valueForKey:@"image_path"] isKindOfClass:[NSString class]]) {
         profileImage = [self compressImage:[postData valueForKey:@"image_path"]];
         [postData removeObjectForKey:@"image_path"];
     }
