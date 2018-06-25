@@ -12,6 +12,8 @@
 #define WebServiceURL @"https://mindme.ie/appapi"
 #define WebServiceImageURL @"https://mindme.ie"
 
+#define HomeAdvertsBaseURL @"http://mindmecare.com/appapi"
+
 #define StripeBaseURL @"https://api.stripe.com/v1"
 
 #define StripeSubscriptionKey @"subscriptions"

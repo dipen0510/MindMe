@@ -23,8 +23,8 @@
     
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
-    [SVProgressHUD setMinimumDismissTimeInterval:2.0];
-    [SVProgressHUD setMaximumDismissTimeInterval:2.0];
+    [SVProgressHUD setMinimumDismissTimeInterval:0.1];
+    [SVProgressHUD setMaximumDismissTimeInterval:0.1];
     
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];

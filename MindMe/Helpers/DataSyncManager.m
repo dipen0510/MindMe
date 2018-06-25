@@ -73,6 +73,10 @@
     NSURL* url;
     url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",WebServiceURL]];
     
+    if ([self.serviceKey isEqualToString:GetAllHomeAdverts]) {
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",HomeAdvertsBaseURL]];
+    }
+    
     
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
     
