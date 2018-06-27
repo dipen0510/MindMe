@@ -1854,7 +1854,7 @@
 				TargetAttributes = {
 					D4A019B01F850F0200E311B7 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = CZA6DXR72T;
+						DevelopmentTeam = 232XF699U8;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -2476,8 +2476,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MindMe/MindMe.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Swapnil Harkanth (CZA6DXR72T)";
-				DEVELOPMENT_TEAM = CZA6DXR72T;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ken Wickham (232XF699U8)";
+				DEVELOPMENT_TEAM = 232XF699U8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MindMe/Library/QMChatViewController/QuickBlox",
@@ -2486,10 +2486,10 @@
 				INFOPLIST_FILE = MindMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.MindMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alphasolutions.mindme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ad52c3de-c9f0-4b80-a662-a5e5974d1a59";
-				PROVISIONING_PROFILE_SPECIFIER = "Mind Me Ad-Hoc";
+				PROVISIONING_PROFILE = "d5fc5243-4859-4822-a0e3-cc33f95a69bf";
+				PROVISIONING_PROFILE_SPECIFIER = MindMe_AdHoc;
 			};
 			name = Debug;
 		};
@@ -2499,8 +2499,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MindMe/MindMe.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Swapnil Harkanth (CZA6DXR72T)";
-				DEVELOPMENT_TEAM = CZA6DXR72T;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ken Wickham (232XF699U8)";
+				DEVELOPMENT_TEAM = 232XF699U8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MindMe/Library/QMChatViewController/QuickBlox",
@@ -2509,10 +2509,10 @@
 				INFOPLIST_FILE = MindMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stardeep.MindMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alphasolutions.mindme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ad52c3de-c9f0-4b80-a662-a5e5974d1a59";
-				PROVISIONING_PROFILE_SPECIFIER = "Mind Me Ad-Hoc";
+				PROVISIONING_PROFILE = "d5fc5243-4859-4822-a0e3-cc33f95a69bf";
+				PROVISIONING_PROFILE_SPECIFIER = MindMe_AdHoc;
 			};
 			name = Release;
 		};

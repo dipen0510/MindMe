@@ -21,16 +21,16 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb137445036916148</string>
+				<string>fb244180303026070</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>137445036916148</string>
+	<string>244180303026070</string>
 	<key>FacebookDisplayName</key>
-	<string>MindMe</string>
+	<string>MindmeApp-Android</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
