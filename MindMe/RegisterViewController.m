@@ -7,6 +7,7 @@
 //
 
 #import "RegisterViewController.h"
+#import <OneSignal/OneSignal.h>
 
 @interface RegisterViewController ()
 
@@ -286,7 +287,7 @@
     
     [dict setObject:[_emailTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forKey:@"username"];
     [dict setObject:_passwordTextField.text forKey:@"password"];
-    [dict setObject:@"1" forKey:@"device"];
+    [dict setObject:[[[OneSignal getPermissionSubscriptionState] subscriptionStatus] userId] forKey:@"device"];
     [dict setObject:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forKey:@"version"];
     [dict setObject:@"iOS" forKey:@"type"];
     [dict setObject:_firstNameTextField.text forKey:@"first_name"];
@@ -312,7 +313,7 @@
     
     [dict setObject:[[FBLoginHelper sharedInstance] emailId] forKey:@"username"];
     [dict setObject:[[FBLoginHelper sharedInstance] socialId] forKey:@"facebook_id"];
-    [dict setObject:@"1" forKey:@"device"];
+    [dict setObject:[[[OneSignal getPermissionSubscriptionState] subscriptionStatus] userId] forKey:@"device"];
     [dict setObject:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forKey:@"version"];
     [dict setObject:@"iOS" forKey:@"type"];
     [dict setObject:[[FBLoginHelper sharedInstance] firstName] forKey:@"first_name"];
