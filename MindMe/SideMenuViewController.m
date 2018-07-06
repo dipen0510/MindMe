@@ -306,9 +306,11 @@
 {
     
     SideMenuSectionView *header = [sectionArr objectAtIndex:section];
+    header.messageCounterLabel.hidden = YES;
     
     if (isUserSubscribed) {
         if ([[SharedClass sharedInstance] isUserCarer]) {
+            
             if (section == 4) {
                 header.chevronImgView.hidden = NO;
             }
@@ -316,8 +318,16 @@
                 header.chevronImgView.hidden = YES;
             }
             
+            if (section == 3) {
+                header.messageCounterLabel.hidden = NO;
+            }
+            else {
+                header.messageCounterLabel.hidden = YES;
+            }
+            
         }
         else {
+            
             if (section == 6) {
                 header.chevronImgView.hidden = NO;
             }
@@ -325,11 +335,19 @@
                 header.chevronImgView.hidden = YES;
             }
             
+            if (section == 5) {
+                header.messageCounterLabel.hidden = NO;
+            }
+            else {
+                header.messageCounterLabel.hidden = YES;
+            }
+            
         }
 
     }
     else {
         if ([[SharedClass sharedInstance] isUserCarer]) {
+            
             if (section == 5) {
                 header.chevronImgView.hidden = NO;
             }
@@ -340,8 +358,16 @@
                 header.menuTitle.textColor = [UIColor colorWithRed:253./255. green:137./255. blue:8./155. alpha:1.0];
             }
             
+            if (section == 4) {
+                header.messageCounterLabel.hidden = NO;
+            }
+            else {
+                header.messageCounterLabel.hidden = YES;
+            }
+            
         }
         else {
+            
             if (section == 7) {
                 header.chevronImgView.hidden = NO;
             }
@@ -352,12 +378,23 @@
                 header.menuTitle.textColor = [UIColor colorWithRed:253./255. green:137./255. blue:8./155. alpha:1.0];
             }
             
+            if (section == 6) {
+                header.messageCounterLabel.hidden = NO;
+            }
+            else {
+                header.messageCounterLabel.hidden = YES;
+            }
+            
         }
 
     }
     
     
     header.menuTitle.font = [UIFont fontWithName:@"Montserrat-Regular" size:(17.5/667)*kScreenHeight];
+    
+    header.messageCounterLabel.text = [[SharedClass sharedInstance] unreadMessageCount];
+    header.messageCounterLabel.layer.cornerRadius = 10;
+    header.messageCounterLabel.layer.masksToBounds = YES;
     
     return header;
 }

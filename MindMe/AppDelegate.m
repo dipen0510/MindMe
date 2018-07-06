@@ -33,6 +33,8 @@
     
     [OneSignal initWithLaunchOptions:launchOptions appId:@"93689775-ff90-4eea-aec2-8cf67d1d9446"];
     
+    [[SharedClass sharedInstance] setUnreadMessageCount:@"0"];
+    
     return YES;
     
 }

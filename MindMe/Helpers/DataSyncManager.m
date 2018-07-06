@@ -609,6 +609,12 @@
         
     }
     
+    if ([responseServiceKey isEqualToString:GetUnreadMessageCount]) {
+        
+        [[SharedClass sharedInstance] setUnreadMessageCount:[[[responseObj valueForKey:@"message"] objectAtIndex:0] valueForKey:@"total"]];
+        
+    }
+    
     return responseObj;
     
 }
