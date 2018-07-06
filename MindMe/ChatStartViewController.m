@@ -58,6 +58,8 @@
         _headerLabel.text = [NSString stringWithFormat:@"Send a message to %@ %@.",[_advertDict valueForKey:@"first_name"],[[_advertDict valueForKey:@"second_name"] substringToIndex:1]];
     }
     
+    _footerLabel.hidden = YES;
+    
     
     [self registerForKeyboardNotifications];
     
@@ -261,6 +263,14 @@
         
         _collectionViewHeightConstraint.constant = (allCareTypesArr.count/2)*40 + (allCareTypesArr.count%2)*40;
         [_careTypeCollectionView reloadData];
+        
+        if (allCareTypesArr.count == 0) {
+            _footerLabel.hidden = NO;
+        }
+        else {
+            _footerLabel.hidden = YES;
+            _footerLabelHeightConstraint.constant = 0;
+        }
         
     }
     if ([requestServiceKey isEqualToString:SendMessage]) {

@@ -31,4 +31,5 @@
 - (IBAction)backButtonTapped:(id)sender;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *footerLabelHeightConstraint;
 @end
