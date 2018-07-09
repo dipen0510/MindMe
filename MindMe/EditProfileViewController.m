@@ -328,7 +328,7 @@
     DataSyncManager* manager = [[DataSyncManager alloc] init];
     manager.serviceKey = GoogleAPIGeocode;
     manager.delegate = self;
-    [manager startGoogleAPIGeocodeWebService:params];
+    [manager startGoogleAPIGeocodeWebServiceForEIRCode:params];
     
 }
 

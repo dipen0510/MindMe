@@ -488,6 +488,41 @@
     
 }
 
+- (void) startGoogleAPIGeocodeWebServiceForEIRCode:(NSString *)param
+{
+    
+    NSURL* url;
+    url = [NSURL URLWithString:@"https://maps.googleapis.com/maps/api/geocode"];
+    
+    NSString* finalParams = [NSString stringWithFormat:@"json?address=postal_code:%@&key=AIzaSyDr_kpZrjTFwpVwZ3PYpjxVhcJiKFcfnD8&components=country:IE",param];
+    
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
+    manager.requestSerializer = [AFJSONRequestSerializer serializerWithWritingOptions:NSJSONWritingPrettyPrinted];
+    manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
+    manager.requestSerializer.timeoutInterval = 30;
+    
+    [manager GET:finalParams parameters:nil progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        if ([[responseObject valueForKey:@"status"] isEqualToString:@"OK"]) {
+            if ([delegate respondsToSelector:@selector(didFinishServiceWithSuccess:andServiceKey:)]) {
+                [delegate didFinishServiceWithSuccess:[self prepareResponseObjectForServiceKey:self.serviceKey withData:responseObject] andServiceKey:self.serviceKey];
+            }
+            
+        }
+        else {
+            
+            NSLog(@"%@",responseObject);
+            
+        }
+        
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@",error.localizedDescription);
+    }];
+    
+    
+}
+
 - (id) prepareResponseObjectForServiceKey:(NSString *) responseServiceKey withData:(id)responseObj {
     
     if ([responseServiceKey isEqualToString:RegisterServiceKey] || [responseServiceKey isEqualToString:LoginServiceKey]  || [responseServiceKey isEqualToString:FBRegisterServiceKey]  || [responseServiceKey isEqualToString:FBLoginServiceKey]) {
