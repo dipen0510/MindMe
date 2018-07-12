@@ -41,8 +41,9 @@
     
     selectedCareType = @"";
     
-    if ([[SharedClass sharedInstance] isUserCarer]) {
+    if (![[SharedClass sharedInstance] isUserCarer]) {
         _selectActiveProfStaticLabel.text = @"Select an Active Advert for which you want to start a conversation";
+        _footerLabel.text = @"If you do not see your advert listed above kindly make sure its active and then try again";
     }
     
     if ([[_advertDict valueForKey:@"first_name"] isEqual:[NSNull null]] && [[_advertDict valueForKey:@"second_name"] isEqual:[NSNull null]]) {
@@ -59,7 +60,8 @@
     }
     
     _footerLabel.hidden = YES;
-    
+    [_footerLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(footerLabelTapped)]];
+    _footerLabel.userInteractionEnabled = YES;
     
     [self registerForKeyboardNotifications];
     
@@ -155,6 +157,12 @@
     else {
         cell.toggleButton.selected = NO;
     }
+    
+}
+
+- (void) footerLabelTapped {
+    
+    [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
     
 }
 
