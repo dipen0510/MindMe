@@ -847,6 +847,12 @@ NS_ENUM(NSUInteger, QMMessageType) {
         [dict setObject:[_chatInfoDict valueForKey:@"sender_profile_id"] forKey:@"ad_id"];
     }
     
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetails"];
+    NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
+    
+    [dict setObject:[responseData valueForKey:@"latitude"] forKey:@"latitude"];
+    [dict setObject:[responseData valueForKey:@"longitude"] forKey:@"longitude"];
+    
     
     return dict;
     
