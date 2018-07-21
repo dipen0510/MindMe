@@ -27,6 +27,8 @@
 @property BOOL isFeaturedFilterApplied;
 @property BOOL isLastMinuiteCareFilterApplied;
 
+@property BOOL isMobileNumberVerified;
+
 @property (strong, nonatomic) NSString* unreadMessageCount;
 
 - (void) changeRootControllerForIdentifier:(NSString *)viewControllerId forSideMenuController:(LGSideMenuController *)sideMenuController;

@@ -189,6 +189,8 @@
             AppDelegate *appDelegate=( AppDelegate* )[UIApplication sharedApplication].delegate;
             [appDelegate startGetProfileDetailsService];
             
+            [[SharedClass sharedInstance] setIsMobileNumberVerified:YES];
+            
             [self updateUIForAccountValidated];
         }
         
