@@ -67,7 +67,7 @@
 - (IBAction)cancelButtonTapped:(id)sender {
     if ([[SharedClass sharedInstance] isChangePasswordOpenedFromSideMenu]) {
         [[SharedClass sharedInstance] setIsChangePasswordOpenedFromSideMenu:NO];
-        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdsHomeViewController" forSideMenuController:self.sideMenuController];
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"AdvertsViewController" forSideMenuController:self.sideMenuController];
     }
     else {
         [self.navigationController popViewControllerAnimated:YES];
