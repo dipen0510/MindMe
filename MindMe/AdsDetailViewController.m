@@ -568,7 +568,22 @@
 
 - (void) cvValueTapped {
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",WebServiceImageURL,[_advertDict valueForKey:@"questions"]]]];
+    if ([[SharedClass sharedInstance] isGuestUser]) {
+        
+        [self.sideMenuController.navigationController popViewControllerAnimated:YES];
+        return;
+        
+    }
+    NSData *dictionaryData = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileDetailsCopy"];
+    NSDictionary *responseData = [NSKeyedUnarchiver unarchiveObjectWithData:dictionaryData];
+    
+    if (![[SharedClass sharedInstance] isUserCarer] && [[responseData valueForKey:@"Sub_active"] intValue] != 1) {
+        [[SharedClass sharedInstance] changeRootControllerForIdentifier:@"BuyPlansForParentsViewController" forSideMenuController:self.sideMenuController];
+    }
+    else {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",WebServiceImageURL,[_advertDict valueForKey:@"questions"]]]];
+    }
+    
     
 }
 
