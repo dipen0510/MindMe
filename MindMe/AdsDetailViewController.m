@@ -104,6 +104,17 @@
         
         _ageLabel.text = [NSString stringWithFormat:@"%ld Years Old",[self ageFromYear:[_advertDict valueForKey:@"birth_year"] Month:[_advertDict valueForKey:@"birth_month"] day:[_advertDict valueForKey:@"birth_day"]]];
         
+        if ([_advertDict valueForKey:@"questions"] && ![[_advertDict valueForKey:@"questions"] isEqual:[NSNull null]] && ![@"" isEqual:[_advertDict valueForKey:@"questions"]]) {
+            [_cvValueLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cvValueTapped)]];
+            _cvValueLabel.userInteractionEnabled = YES;
+            NSMutableAttributedString* string = [[NSMutableAttributedString alloc]initWithString:@"Download"];
+            [string addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Montserrat-Regular" size:(17.5/667)*kScreenHeight] range:NSMakeRange(0, string.length)];
+            [string addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.991 green:0.5319 blue:0.031 alpha:1.0] range:NSMakeRange(0, string.length)];//TextColor
+            [string addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInt:1] range:NSMakeRange(0, string.length)];//Underline color
+            [string addAttribute:NSUnderlineColorAttributeName value:[UIColor colorWithRed:0.991 green:0.5319 blue:0.031 alpha:1.0] range:NSMakeRange(0, string.length)];//TextColor
+            _cvValueLabel.attributedText = string;
+        }
+        
         [self startIncrementAdvertsViewService];
     }
     else {
@@ -553,6 +564,12 @@
         [self performSegueWithIdentifier:@"showChatStartSegue" sender:nil];
     }
 
+}
+
+- (void) cvValueTapped {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",WebServiceImageURL,[_advertDict valueForKey:@"questions"]]]];
+    
 }
 
 #pragma mark - CollectionView Datasource
