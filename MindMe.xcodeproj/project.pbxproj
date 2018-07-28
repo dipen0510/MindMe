@@ -216,6 +216,7 @@
 		D4A019DA1F850F0200E311B7 /* MindMeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019D91F850F0200E311B7 /* MindMeUITests.m */; };
 		D4A019E91F85386C00E311B7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019E81F85386C00E311B7 /* LoginViewController.m */; };
 		D4A019EC1F85482800E311B7 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A019EB1F85482800E311B7 /* RegisterViewController.m */; };
+		D4A9FF14210C602700975207 /* GoogleAnalyticsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A9FF13210C602700975207 /* GoogleAnalyticsHelper.m */; };
 		D4AD692B1F93363B009D57A7 /* AdsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AD692A1F93363B009D57A7 /* AdsHomeViewController.m */; };
 		D4AD692F1F933668009D57A7 /* AdsHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AD692D1F933668009D57A7 /* AdsHomeTableViewCell.m */; };
 		D4AD69301F933668009D57A7 /* AdsHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4AD692E1F933668009D57A7 /* AdsHomeTableViewCell.xib */; };
@@ -655,6 +656,8 @@
 		D4A019E81F85386C00E311B7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D4A019EA1F85482800E311B7 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		D4A019EB1F85482800E311B7 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		D4A9FF12210C602700975207 /* GoogleAnalyticsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleAnalyticsHelper.h; sourceTree = "<group>"; };
+		D4A9FF13210C602700975207 /* GoogleAnalyticsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleAnalyticsHelper.m; sourceTree = "<group>"; };
 		D4AD69291F93363B009D57A7 /* AdsHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsHomeViewController.h; sourceTree = "<group>"; };
 		D4AD692A1F93363B009D57A7 /* AdsHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsHomeViewController.m; sourceTree = "<group>"; };
 		D4AD692C1F933668009D57A7 /* AdsHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsHomeTableViewCell.h; sourceTree = "<group>"; };
@@ -1544,6 +1547,8 @@
 		D49BFE881F9C6F60000D6638 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D4A9FF12210C602700975207 /* GoogleAnalyticsHelper.h */,
+				D4A9FF13210C602700975207 /* GoogleAnalyticsHelper.m */,
 				D41C5E301FF36323007A2AA3 /* FBLoginHelper.h */,
 				D41C5E311FF36323007A2AA3 /* FBLoginHelper.m */,
 				D45B85301FE4E70600074689 /* DataSyncManager.h */,
@@ -1789,7 +1794,6 @@
 				D4A019AE1F850F0200E311B7 /* Frameworks */,
 				D4A019AF1F850F0200E311B7 /* Resources */,
 				D4041C7D1FC0E2B1001F312E /* Embed Frameworks */,
-				0DFD8E6BA549C2F61CD83CB1 /* [CP] Embed Pods Frameworks */,
 				59F39201617D6B790558CB10 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1809,8 +1813,6 @@
 				D4A019C61F850F0200E311B7 /* Sources */,
 				D4A019C71F850F0200E311B7 /* Frameworks */,
 				D4A019C81F850F0200E311B7 /* Resources */,
-				92454EF914E88D7331C8C122 /* [CP] Embed Pods Frameworks */,
-				05ACDF505FC80A78F65CF071 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1830,8 +1832,6 @@
 				D4A019D11F850F0200E311B7 /* Sources */,
 				D4A019D21F850F0200E311B7 /* Frameworks */,
 				D4A019D31F850F0200E311B7 /* Resources */,
-				EDAC40E0E720F5EA712A667E /* [CP] Embed Pods Frameworks */,
-				255E1A1F30E0A112006854B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2001,36 +2001,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05ACDF505FC80A78F65CF071 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindMeTests/Pods-MindMeTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0DFD8E6BA549C2F61CD83CB1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindMe/Pods-MindMe-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		20B64AF9CBD648BC752AC82D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2049,21 +2019,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		255E1A1F30E0A112006854B5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindMeUITests/Pods-MindMeUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		59F39201617D6B790558CB10 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2073,11 +2028,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MindMe/Pods-MindMe-resources.sh",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
-				$PODS_CONFIGURATION_BUILD_DIR/Stripe/Stripe.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/Stripe/Stripe.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Stripe.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2102,21 +2059,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		92454EF914E88D7331C8C122 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindMeTests/Pods-MindMeTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DC7FEE7AE6196C324EAAABBE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2133,21 +2075,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EDAC40E0E720F5EA712A667E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindMeUITests/Pods-MindMeUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2294,6 +2221,7 @@
 				D4041C6F1FC0E157001F312E /* SDImageCache.m in Sources */,
 				D4D01C20208E1091001653E0 /* CopyableLabel.m in Sources */,
 				D4041C171FC0DEF5001F312E /* QMAudioRecordView.m in Sources */,
+				D4A9FF14210C602700975207 /* GoogleAnalyticsHelper.m in Sources */,
 				D41558751FB4E9590031E23F /* ChangePasswordViewController.m in Sources */,
 				D4041C1F1FC0DEF5001F312E /* QMKVOView.m in Sources */,
 				D41B6AB21FDAC3A400E1F312 /* DistancePickerView.m in Sources */,

@@ -10,6 +10,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <Stripe/Stripe.h>
 #import <OneSignal/OneSignal.h>
+#import "GoogleAnalyticsHelper.h"
 
 @interface AppDelegate ()
 
@@ -34,6 +35,8 @@
     [OneSignal initWithLaunchOptions:launchOptions appId:@"93689775-ff90-4eea-aec2-8cf67d1d9446"];
     
     [[SharedClass sharedInstance] setUnreadMessageCount:@"0"];
+    
+    [GoogleAnalyticsHelper sharedInstance];
     
     return YES;
     
