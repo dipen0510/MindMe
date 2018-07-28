@@ -28,7 +28,7 @@
     
     [super viewWillAppear:animated];
     
-    [self startSendMessageService];
+    [self startSendMessageService:NO];
     [self startGetUnreadMessageCount];
     
 }
@@ -51,11 +51,21 @@
     _unreadMessageCountLabel.layer.cornerRadius = 10;
     _unreadMessageCountLabel.layer.masksToBounds = YES;
     
+    refreshControl = [[UIRefreshControl alloc]init];
+    [self.listTableView addSubview:refreshControl];
+    [refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) refreshTable {
+    
+    [self startSendMessageService:YES];
+    
 }
 
 
@@ -95,7 +105,7 @@
     _archivedButton.backgroundColor = [UIColor colorWithRed:0.190  green:0.331 blue:0.444 alpha:1.0];
     
     selectedIndex = 0;
-    [self startSendMessageService];
+    [self startSendMessageService:NO];
     
 }
 
@@ -106,7 +116,7 @@
     _archivedButton.backgroundColor = [UIColor colorWithRed:0.190  green:0.331 blue:0.444 alpha:1.0];
     
     selectedIndex = 1;
-    [self startSendMessageService];
+    [self startSendMessageService:NO];
     
 }
 
@@ -117,7 +127,7 @@
     _archivedButton.backgroundColor = [UIColor colorWithRed:0.527 green:0.759 blue:0.274 alpha:1.0];
     
     selectedIndex = 2;
-    [self startSendMessageService];
+    [self startSendMessageService:NO];
     
 }
 
@@ -335,9 +345,11 @@
 
 #pragma mark - API Helpers
 
-- (void) startSendMessageService {
+- (void) startSendMessageService:(BOOL) isHUDHidden {
     
-    [SVProgressHUD showWithStatus:@"Refreshing List"];
+    if (!isHUDHidden) {
+        [SVProgressHUD showWithStatus:@"Refreshing List"];
+    }
     
     DataSyncManager* manager = [[DataSyncManager alloc] init];
     manager.serviceKey = GetAllMessageList;
@@ -371,6 +383,8 @@
 
 -(void) didFinishServiceWithSuccess:(id)responseData andServiceKey:(NSString *)requestServiceKey {
     
+    [refreshControl endRefreshing];
+    
     if ([requestServiceKey isEqualToString:GetAllMessageList]) {
         
         [SVProgressHUD showSuccessWithStatus:@"List refreshed successfully"];
@@ -387,7 +401,7 @@
     if ([requestServiceKey isEqualToString:ArchiveMessage]) {
         
         [SVProgressHUD showSuccessWithStatus:@"Message archived successfully"];
-        [self startSendMessageService];
+        [self startSendMessageService:NO];
         
     }
     if ([requestServiceKey isEqualToString:GetUnreadMessageCount]) {
@@ -402,6 +416,7 @@
 
 - (void) didFinishServiceWithFailure:(NSString *)errorMsg {
     
+    [refreshControl endRefreshing];
     
     [SVProgressHUD dismiss];
     

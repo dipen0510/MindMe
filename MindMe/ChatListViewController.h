@@ -13,6 +13,7 @@
     NSMutableArray* msgListArr;
     int selectedIndex;
     NSMutableDictionary* selectedChatDict;
+    UIRefreshControl* refreshControl;
     
 }
 
