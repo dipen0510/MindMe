@@ -46,9 +46,9 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<string>$(PRODUCT_NAME) wants to access Camera</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string></string>
+	<string>$(PRODUCT_NAME) wants to access Photo Library</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

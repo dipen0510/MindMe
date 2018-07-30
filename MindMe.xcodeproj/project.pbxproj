@@ -135,7 +135,6 @@
 		D4041C761FC0E157001F312E /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041C5B1FC0E157001F312E /* UIView+WebCache.m */; };
 		D4041C771FC0E157001F312E /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041C5F1FC0E157001F312E /* UIButton+WebCache.m */; };
 		D4041C7A1FC0E228001F312E /* Quickblox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4041C291FC0DF15001F312E /* Quickblox.framework */; };
-		D4041C7C1FC0E2B1001F312E /* Quickblox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4041C291FC0DF15001F312E /* Quickblox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D40CDD6F1FAEE89100213855 /* DrivingLicenseInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40CDD6E1FAEE89100213855 /* DrivingLicenseInfoViewController.m */; };
 		D410BBEC201146C60038A017 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D410BBEB201146C60038A017 /* ForgotPasswordViewController.m */; };
 		D415586F1FB42E6B0031E23F /* tmpAdsHome.png in Resources */ = {isa = PBXBuildFile; fileRef = D415586E1FB42E6B0031E23F /* tmpAdsHome.png */; };
@@ -281,7 +280,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D4041C7C1FC0E2B1001F312E /* Quickblox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2416,8 +2414,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alphasolutions.mindme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d5fc5243-4859-4822-a0e3-cc33f95a69bf";
-				PROVISIONING_PROFILE_SPECIFIER = MindMe_AdHoc;
+				PROVISIONING_PROFILE = "789a0094-4b51-4a82-8894-8455a462ac54";
+				PROVISIONING_PROFILE_SPECIFIER = MindMe_AppStore;
 			};
 			name = Debug;
 		};
@@ -2439,8 +2437,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alphasolutions.mindme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d5fc5243-4859-4822-a0e3-cc33f95a69bf";
-				PROVISIONING_PROFILE_SPECIFIER = MindMe_AdHoc;
+				PROVISIONING_PROFILE = "789a0094-4b51-4a82-8894-8455a462ac54";
+				PROVISIONING_PROFILE_SPECIFIER = MindMe_AppStore;
 			};
 			name = Release;
 		};
