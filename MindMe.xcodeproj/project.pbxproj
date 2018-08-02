@@ -136,6 +136,7 @@
 		D4041C771FC0E157001F312E /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D4041C5F1FC0E157001F312E /* UIButton+WebCache.m */; };
 		D4041C7A1FC0E228001F312E /* Quickblox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4041C291FC0DF15001F312E /* Quickblox.framework */; };
 		D40CDD6F1FAEE89100213855 /* DrivingLicenseInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40CDD6E1FAEE89100213855 /* DrivingLicenseInfoViewController.m */; };
+		D40FC0BC2112E4F700BF235E /* Quickblox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4041C291FC0DF15001F312E /* Quickblox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D410BBEC201146C60038A017 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D410BBEB201146C60038A017 /* ForgotPasswordViewController.m */; };
 		D415586F1FB42E6B0031E23F /* tmpAdsHome.png in Resources */ = {isa = PBXBuildFile; fileRef = D415586E1FB42E6B0031E23F /* tmpAdsHome.png */; };
 		D41558721FB461A60031E23F /* AdsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41558711FB461A60031E23F /* AdsDetailViewController.m */; };
@@ -280,6 +281,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D40FC0BC2112E4F700BF235E /* Quickblox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1793,6 +1795,7 @@
 				D4A019AF1F850F0200E311B7 /* Resources */,
 				D4041C7D1FC0E2B1001F312E /* Embed Frameworks */,
 				59F39201617D6B790558CB10 /* [CP] Copy Pods Resources */,
+				D40FC0BD2112E6F600BF235E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -2056,6 +2059,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D40FC0BD2112E6F600BF235E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone";
 		};
 		DC7FEE7AE6196C324EAAABBE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
